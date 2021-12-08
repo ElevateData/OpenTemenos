@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Diagnostics;
+using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -8,4 +10,11 @@ public class UsCustomerSuffixServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
 
+    [TestMethod]
+    public void GetUsSuffixListAsync()
+    {
+        var result = _client.UsCustomerSuffixService.GetUsSuffixListAsync(null, null, null, null, null).Result;
+        Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"NameSuffix: {result.Body.First().NameSuffix}");
+    }
 }

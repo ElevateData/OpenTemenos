@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Diagnostics;
+using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -7,5 +9,13 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class UsSectorServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private const string CustomerType = "";
 
+    [TestMethod]
+    public void GetUsSectorListAsync()
+    {
+        var result = _client.UsSectorService.GetUsSectorlistAsync(CustomerType, null, null, null, null).Result;
+        Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"SectorId: {result.Body.First().SectorId}");
+    }
 }
