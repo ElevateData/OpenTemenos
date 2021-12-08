@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DataHub.AnalyticDataStore.Holding\DataHub.AnalyticDataStore.Holding.csproj" />
+	  <ProjectReference Include="..\DataHub.AnalyticDataStore.Party\DataHub.AnalyticDataStore.Party.csproj" />
+	  <ProjectReference Include="..\DataHub.AnalyticDataStore.Product\DataHub.AnalyticDataStore.Product.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <!--
+	  <OpenApiReference Include="..\..\OpenApis\fcm\Channel Integrations.json" CodeGenerator="NSwagCSharp" Namespace="FinancialCrimeMitigation">
+		  <SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fcm/Channel%20Integrations.json</SourceUri>
+		  <Options>/ContractsOutput:ChannelIntegrationsService.cs /ContractsNamespace:FinancialCrimeMitigation.ChannelIntegrations /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models</Options>
+		  <OutputPath>ChannelIntegrationsService.cs</OutputPath>
+		  <ClassName>ChannelIntegrationsService</ClassName>
+	  </OpenApiReference>
+-->
+	  <!--
+	  <OpenApiReference Include="..\..\OpenApis\fcm\Configuration.json" CodeGenerator="NSwagCSharp" Namespace="FinancialCrimeMitigation">
+		  <SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fcm/Configuration.json</SourceUri>
+		  <Options>/ContractsOutput:ConfigurationService.cs /ContractsNamespace:FinancialCrimeMitigation.Configuration /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models</Options>
+		  <OutputPath>ConfigurationService.cs</OutputPath>
+		  <ClassName>ConfigurationService</ClassName>
+	  </OpenApiReference>
+-->
+	  <!--
+	  <OpenApiReference Include="..\..\OpenApis\fcm\Fraud.json" CodeGenerator="NSwagCSharp" Namespace="FinancialCrimeMitigation">
+		  <SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fcm/Fraud.json</SourceUri>
+		  <Options>/ContractsOutput:FraudService.cs /ContractsNamespace:FinancialCrimeMitigation.Fraud /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models</Options>
+		  <OutputPath>FraudService.cs</OutputPath>
+		  <ClassName>FraudService</ClassName>
+	  </OpenApiReference>
+-->
+	  <!--
+	  <OpenApiReference Include="..\..\OpenApis\fcm\Know Customer Plus.json" CodeGenerator="NSwagCSharp" Namespace="FinancialCrimeMitigation">
+		  <SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fcm/Know%20Customer%20Plus.json</SourceUri>
+		  <Options>/ContractsOutput:KnowCustomerPlusService.cs /ContractsNamespace:FinancialCrimeMitigation.KnowCustomerPlus /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models</Options>
+		  <OutputPath>KnowCustomerPlusService.cs</OutputPath>
+		  <ClassName>KnowCustomerPlusService</ClassName>
+	  </OpenApiReference>
+-->
+	  <!--
+	  <OpenApiReference Include="..\..\OpenApis\fcm\Metering.json" CodeGenerator="NSwagCSharp" Namespace="FinancialCrimeMitigation">
+		  <SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fcm/Metering.json</SourceUri>
+		  <Options>/ContractsOutput:MeteringService.cs /ContractsNamespace:FinancialCrimeMitigation.Metering /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models</Options>
+		  <OutputPath>MeteringService.cs</OutputPath>
+		  <ClassName>MeteringService</ClassName>
+	  </OpenApiReference>
+-->
+	  <!--
+	  <OpenApiReference Include="..\..\OpenApis\fcm\Sanction Screening.json" CodeGenerator="NSwagCSharp" Namespace="FinancialCrimeMitigation">
+		  <SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fcm/Sanction%20Screening.json</SourceUri>
+		  <Options>/ContractsOutput:SanctionScreeningService.cs /ContractsNamespace:FinancialCrimeMitigation.SanctionScreening /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models</Options>
+		  <OutputPath>SanctionScreeningService.cs</OutputPath>
+		  <ClassName>SanctionScreeningService</ClassName>
+	  </OpenApiReference>
+-->
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataHub.AnalyticDataStore\DataHub.AnalyticDataStore.csproj" />
+    <ProjectReference Include="..\DataHub.OperationalDataStore\DataHub.OperationalDataStore.csproj" />
+    <ProjectReference Include="..\FinancialCrimeMitigation\FinancialCrimeMitigation.csproj" />
+    <ProjectReference Include="..\FundAdministration.GlobalAccounting\FundAdministration.GlobalAccounting.csproj" />
+    <ProjectReference Include="..\FundAdministration.GlobalInvestor\FundAdministration.GlobalInvestor.csproj" />
+    <ProjectReference Include="..\PortfolioManagement\PortfolioManagement.csproj" />
+    <ProjectReference Include="..\Transact\Transact.csproj" />
+  </ItemGroup>
+
+</Project>

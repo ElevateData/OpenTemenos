@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerSegmentationDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getAllCustomerSegmentationDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:AllCustomerSegmentationDetailsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Party.AllCustomerSegmentationDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AllCustomerSegmentationDetailsService.cs</OutputPath>
+			<ClassName>AllCustomerSegmentationDetailsService</ClassName>
+		</OpenApiReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>

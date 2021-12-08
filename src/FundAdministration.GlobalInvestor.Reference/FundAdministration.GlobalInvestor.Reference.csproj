@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-countryholidays-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Reference">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-countryholidays-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:CountryHolidaysService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Reference.CountryHolidays /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CountryHolidaysService.cs</OutputPath>
+			<ClassName>CountryHolidaysService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-currencyholidays-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Reference">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-currencyholidays-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:CurrencyHolidaysService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Reference.CurrencyHolidays /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CurrencyHolidaysService.cs</OutputPath>
+			<ClassName>CurrencyHolidaysService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-messages-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Reference">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-messages-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:MessagesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Reference.Messages /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>MessagesService.cs</OutputPath>
+			<ClassName>MessagesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-cities-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Reference">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-cities-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:CitiesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Reference.Cities /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CitiesService.cs</OutputPath>
+			<ClassName>CitiesService</ClassName>
+		</OpenApiReference>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+</Project>

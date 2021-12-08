@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getCustomerDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:CustomerDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.CustomerDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CustomerDetailsService.cs</OutputPath>
+			<ClassName>CustomerDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getExternalUserDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getExternalUserDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:ExternalUserDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.ExternalUserDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ExternalUserDetailsService.cs</OutputPath>
+			<ClassName>ExternalUserDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getParticipantList-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getParticipantList-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:ParticipantListService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.ParticipantList /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ParticipantListService.cs</OutputPath>
+			<ClassName>ParticipantListService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getUsCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getUsCustomerDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:UsCustomerDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.UsCustomerDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>UsCustomerDetailsService.cs</OutputPath>
+			<ClassName>UsCustomerDetailsService</ClassName>
+		</OpenApiReference>
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>

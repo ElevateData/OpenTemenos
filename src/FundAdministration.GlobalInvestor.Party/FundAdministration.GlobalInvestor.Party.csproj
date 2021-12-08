@@ -1,0 +1,253 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-addresses-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-addresses-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AddressesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Addresses /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AddressesService.cs</OutputPath>
+			<ClassName>AddressesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-amlblocks-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-amlblocks-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AmlBlocksService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AmlBlocks /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AmlBlocksService.cs</OutputPath>
+			<ClassName>AmlBlocksService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-amldocuments-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-amldocuments-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AmlDocumentsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AmlDocuments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AmlDocumentsService.cs</OutputPath>
+			<ClassName>AmlDocumentsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-amlmonitorblocks-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-amlmonitorblocks-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AmlMonitorBlocksService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AmlMonitorBlocks /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AmlMonitorBlocksService.cs</OutputPath>
+			<ClassName>AmlMonitorBlocksService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-bankaccounts-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-bankaccounts-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:BankAccountsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.BankAccounts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>BankAccountsService.cs</OutputPath>
+			<ClassName>BankAccountsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-centralregisters-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-centralregisters-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:CentralRegistersService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.CentralRegisters /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CentralRegistersService.cs</OutputPath>
+			<ClassName>CentralRegistersService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-contacthistory-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-contacthistory-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ContactHistoryService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.ContactHistory /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ContactHistoryService.cs</OutputPath>
+			<ClassName>ContactHistoryService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-distributionagreement-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-distributionagreement-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:DistributionAgreementService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.DistributionAgreement /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>DistributionAgreementService.cs</OutputPath>
+			<ClassName>DistributionAgreementService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-commissionpaymentcurrency-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-commissionpaymentcurrency-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:CommissionPaymentCurrencyService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.CommissionPaymentCurrency /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CommissionPaymentCurrencyService.cs</OutputPath>
+			<ClassName>CommissionPaymentCurrencyService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-agents-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-agents-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AgentsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Agents /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AgentsService.cs</OutputPath>
+			<ClassName>AgentsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-documentcopies-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-documentcopies-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:DocumentCopiesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.DocumentCopies /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>DocumentCopiesService.cs</OutputPath>
+			<ClassName>DocumentCopiesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-electronicaddresses-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-electronicaddresses-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ElectronicAddressesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.ElectronicAddresses /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ElectronicAddressesService.cs</OutputPath>
+			<ClassName>ElectronicAddressesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-agentexceptioncutofftimes-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-agentexceptioncutofftimes-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AgentExceptionCutoffTimesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AgentExceptionCutoffTimes /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AgentExceptionCutoffTimesService.cs</OutputPath>
+			<ClassName>AgentExceptionCutoffTimesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-agentvdexceptions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-agentvdexceptions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AgentVdExceptionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AgentVdExceptions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AgentVdExceptionsService.cs</OutputPath>
+			<ClassName>AgentVdExceptionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-agentcutoffexceptions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-agentcutoffexceptions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AgentCutoffExceptionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AgentCutoffExceptions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AgentCutoffExceptionsService.cs</OutputPath>
+			<ClassName>AgentCutoffExceptionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-fatcaCrsDocuments-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-fatcaCrsDocuments-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:FatcaCrsDocumentsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.FatcaCrsDocuments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>FatcaCrsDocumentsService.cs</OutputPath>
+			<ClassName>FatcaCrsDocumentsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-fatcaCrsStatuses-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-fatcaCrsStatuses-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:FatcaCrsStatusesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.FatcaCrsStatuses /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>FatcaCrsStatusesService.cs</OutputPath>
+			<ClassName>FatcaCrsStatusesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-fatcaCrsSubStatuses-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-fatcaCrsSubStatuses-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:FatcaCrsSubStatusesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.FatcaCrsSubStatuses /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>FatcaCrsSubStatusesService.cs</OutputPath>
+			<ClassName>FatcaCrsSubStatusesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-agentdistributions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-agentdistributions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:AgentDistributionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.AgentDistributions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>AgentDistributionsService.cs</OutputPath>
+			<ClassName>AgentDistributionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-imadetails-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-imadetails-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ImaDetailsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.ImaDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ImaDetailsService.cs</OutputPath>
+			<ClassName>ImaDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-registers-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-registers-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:RegistersService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Registers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>RegistersService.cs</OutputPath>
+			<ClassName>RegistersService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-clients-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-clients-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ClientsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Clients /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ClientsService.cs</OutputPath>
+			<ClassName>ClientsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-minlimitsexpiry-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-minlimitsexpiry-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:MinLimitsExpiryService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.MinLimitsExpiry /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>MinLimitsExpiryService.cs</OutputPath>
+			<ClassName>MinLimitsExpiryService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-jointaccounts-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-jointaccounts-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:JointAccountsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.JointAccounts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>JointAccountsService.cs</OutputPath>
+			<ClassName>JointAccountsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-tfparentsubagentlinks-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-tfparentsubagentlinks-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:TfParentSubAgentLinksService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.TfParentSubAgentLinks /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>TfParentSubAgentLinksService.cs</OutputPath>
+			<ClassName>TfParentSubAgentLinksService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-profiles-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-profiles-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ProfilesService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Profiles /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ProfilesService.cs</OutputPath>
+			<ClassName>ProfilesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-profilesecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-profilesecurity-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ProfileSecurityService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.ProfileSecurity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ProfileSecurityService.cs</OutputPath>
+			<ClassName>ProfileSecurityService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-instructions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-instructions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:InstructionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Instructions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>InstructionsService.cs</OutputPath>
+			<ClassName>InstructionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-reinvestpay-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-reinvestpay-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:ReinvestPayService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.ReinvestPay /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ReinvestPayService.cs</OutputPath>
+			<ClassName>ReinvestPayService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-relationships-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-relationships-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:RelationshipsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.Relationships /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>RelationshipsService.cs</OutputPath>
+			<ClassName>RelationshipsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-secclearingaccounts-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-secclearingaccounts-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:SecClearingAccountsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.SecClearingAccounts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>SecClearingAccountsService.cs</OutputPath>
+			<ClassName>SecClearingAccountsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-settlementexceptions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-settlementexceptions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:SettlementExceptionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.SettlementExceptions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>SettlementExceptionsService.cs</OutputPath>
+			<ClassName>SettlementExceptionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-taxIdDocuments-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-taxIdDocuments-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:TaxIdDocumentsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.TaxIdDocuments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>TaxIdDocumentsService.cs</OutputPath>
+			<ClassName>TaxIdDocumentsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-fatcataxid-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-fatcataxid-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:FatcaTaxIdService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.FatcaTaxId /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>FatcaTaxIdService.cs</OutputPath>
+			<ClassName>FatcaTaxIdService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-tfagentlinks-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-tfagentlinks-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:TfAgentLinksService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.TfAgentLinks /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>TfAgentLinksService.cs</OutputPath>
+			<ClassName>TfAgentLinksService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-commdistributions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-commdistributions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:CommDistributionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.CommDistributions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CommDistributionsService.cs</OutputPath>
+			<ClassName>CommDistributionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-groupcommdistributions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-groupcommdistributions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:GroupCommDistributionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.GroupCommDistributions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>GroupCommDistributionsService.cs</OutputPath>
+			<ClassName>GroupCommDistributionsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-ustaxoptions-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.Party">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-ustaxoptions-screen-swagger-v1.0.0.json</SourceUri>
+			<Options>/ContractsOutput:UsTaxOptionsService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.Party.UsTaxOptions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>UsTaxOptionsService.cs</OutputPath>
+			<ClassName>UsTaxOptionsService</ClassName>
+		</OpenApiReference>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+</Project>

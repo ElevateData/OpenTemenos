@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Transact.Enterprise\Transact.Enterprise.csproj" />
+    <ProjectReference Include="..\Transact.Holding\Transact.Holding.csproj" />
+    <ProjectReference Include="..\Transact.Loans\Transact.Loan.csproj" />
+    <ProjectReference Include="..\Transact.Meta\Transact.Meta.csproj" />
+    <ProjectReference Include="..\Transact.Microservice\Transact.Microservice.csproj" />
+    <ProjectReference Include="..\Transact.Order\Transact.Order.csproj" />
+    <ProjectReference Include="..\Transact.Party\Transact.Party.csproj" />
+    <ProjectReference Include="..\Transact.Product\Transact.Product.csproj" />
+    <ProjectReference Include="..\Transact.Reference\Transact.Reference.csproj" />
+    <ProjectReference Include="..\Transact.System\Transact.System.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCorporateLendingProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getCorporateLendingProductBalances-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:CorporateLendingProductBalancesService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>CorporateLendingProductBalancesService.cs</OutputPath>
+			<ClassName>CorporateLendingProductBalancesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailDepositProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getRetailDepositProductBalances-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:RetailDepositProductBalancesService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Product.RetailDepositProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>RetailDepositProductBalancesService.cs</OutputPath>
+			<ClassName>RetailDepositProductBalancesService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailLendingProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getRetailLendingProductBalances-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:RetailLendingProductBalancesService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Product.RetailLendingProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>RetailLendingProductBalancesService.cs</OutputPath>
+			<ClassName>RetailLendingProductBalancesService</ClassName>
+		</OpenApiReference>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>

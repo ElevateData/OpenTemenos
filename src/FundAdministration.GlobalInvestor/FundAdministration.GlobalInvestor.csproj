@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Order\FundAdministration.GlobalInvestor.Order.csproj" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Party\FundAdministration.GlobalInvestor.Party.csproj" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Product\FundAdministration.GlobalInvestor.Product.csproj" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Reference\FundAdministration.GlobalInvestor.Reference.csproj" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.System\FundAdministration.GlobalInvestor.System.csproj" />
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>

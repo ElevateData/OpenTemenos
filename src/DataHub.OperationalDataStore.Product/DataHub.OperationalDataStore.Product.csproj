@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getProductBuilderDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getProductBuilderDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:ProductBuilderDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductBuilderDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ProductBuilderDetailsService.cs</OutputPath>
+			<ClassName>ProductBuilderDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getprodConditionDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getprodConditionDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:ProductConditionDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductConditionDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ProductConditionDetailsService.cs</OutputPath>
+			<ClassName>ProductConditionDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getProductDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getProductDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:ProductDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ProductDetailsService.cs</OutputPath>
+			<ClassName>ProductDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getInterestCatalog-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getInterestCatalog-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:InterestCatalogService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.InterestCatalog /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>InterestCatalogService.cs</OutputPath>
+			<ClassName>InterestCatalogService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getInterestConditionDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getInterestConditionDetails-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:InterestConditionDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.InterestConditionDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>InterestConditionDetailsService.cs</OutputPath>
+			<ClassName>InterestConditionDetailsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getProductMarketingCatalogue-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Product">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getProductMarketingCatalogue-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:ProductMarketingCatalogueService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductMarketingCatalogue /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
+			<OutputPath>ProductMarketingCatalogueService.cs</OutputPath>
+			<ClassName>ProductMarketingCatalogueService</ClassName>
+		</OpenApiReference>
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>

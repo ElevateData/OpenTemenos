@@ -1,0 +1,1321 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Configuration",
+    "description": "\n\nConfigurable workflow management significantly reduces the total cost of ownership by providing highly efficient tools like:\n\n- Case management\n\n- Alert management\n- Report builder\n\nThis fully flexible solution satisfies all the operational needs of any financial institution.\n\n**Note**: To use this API, request an API key from apidocs.temenos.com. Create an account with the community to get started.\n\nThis is a snapshot of the Swagger document. The complete document is provided as part of a FCM release via the [FCM Team](https://www.temenos.com/contact-us/#contact).\n\nTo learn more about Temenos FCM visit [temenos.com](https://www.temenos.com/products/financial-crime-mitigation/) ",
+    "termsOfService": "http://api.temenos.com/terms/",
+    "license": {
+      "name": "Temenos API License 2.0"
+    },
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.temenos.com/api/v1.0.0/fcm/configuration",
+      "description": "MultiProduct API Sandbox"
+    }
+  ],
+  "paths": {
+    "/api/v1/resource/commons/preferences/system/{id}": {
+      "get": {
+        "tags": [
+          "System Preference"
+        ],
+        "operationId": "get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Key of the preference to be searched. Note that to comply with REST standards and Temenos conventions, all the normal \"/\" characters which are normally part of a preference key must be replaced by a \".\" dot.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "com.temenos.ingissa.alert.management.t24.adapter.scan.enabled"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Obtains the value of a preference, to get a glimpse of one aspect of the current configuration of the system.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonPreference"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "If the authenticated user is not authorized to examine the system preferences"
+          }
+        }
+      }
+    },
+    "/v1/system/preferences/{id}": {
+      "get": {
+        "tags": [
+          "System Preference"
+        ],
+        "operationId": "get_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Key of the preference to be searched. Note that to comply with REST standards and Temenos conventions, all the normal \"/\" characters which are normally part of a preference key must be replaced by a \".\" dot.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "com.temenos.ingissa.alert.management.t24.adapter.scan.enabled"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Obtains the value of a preference, to get a glimpse of one aspect of the current configuration of the system.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JsonPreference"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "If the authenticated user is not authorized to examine the system preferences"
+          }
+        }
+      }
+    },
+    "/api/v1/resource/framework/configuration-pack": {
+      "get": {
+        "tags": [
+          "Configuration Pack"
+        ],
+        "summary": "Get All Configuration Packs Summary",
+        "description": "Retrieve all the configuration packs details in this instance, this excludes the actual configuration content of the pack in the response",
+        "operationId": "getAllConfigurationPacks",
+        "responses": {
+          "200": {
+            "description": "List of Configuration Pack as successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigurationPack"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Configuration Pack Found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoResultsFound"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Configuration Pack"
+        ],
+        "summary": "Save Configuration Pack",
+        "description": "Stores the Configuration Pack with configurations.",
+        "operationId": "saveConfigurationPack",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationPackModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigPackSuccessResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Configuration Pack Found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoResultsFound"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/resource/framework/configuration-pack/{packId}": {
+      "get": {
+        "tags": [
+          "Configuration Pack"
+        ],
+        "summary": "Get configuration pack by configuration pack id",
+        "description": "Retrieve a Configuration Pack with configuration content by configuration pack id",
+        "operationId": "getConfigurationPackById",
+        "parameters": [
+          {
+            "name": "packId",
+            "in": "path",
+            "description": "Configuration pack id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "ab1cd0001"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigurationPack"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Configuration Pack Found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoResultsFound"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/resource/framework/configuration-pack/modules": {
+      "get": {
+        "tags": [
+          "Configuration Pack"
+        ],
+        "summary": "Get Active Configuration Pack",
+        "description": "Generates a configuration pack with active configurations configured at the time of service call, stores and returns in response. <br/><br/>The result can be filtered by using the optional parameter with list of modules for which configuration can be retrieved.<br/> By default, when the filter is empty the configuration pack will include all configurations.",
+        "operationId": "getConfigurationPackByModuleSpecific",
+        "parameters": [
+          {
+            "name": "moduleNames",
+            "in": "query",
+            "description": "Modules to filter. Possible values: FOUNDATION, SCREEN, PROFILE, SAP, KC_PLUS",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "example": "PROFILE,SAP"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigurationPackModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No Configuration Pack Found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NoResultsFound"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "JsonPreference": {
+        "required": [
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string",
+            "description": "Key of the preference (identifies which configuration aspect is controlled).",
+            "example": "/com/temenos/ingissa/alert/management/t24/adapter/scan/enabled"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of preference",
+            "example": "SYSTEM",
+            "enum": [
+              "SYSTEM",
+              "USER"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "description": "Actual value of the preference.",
+            "example": "true"
+          }
+        }
+      },
+      "ConfigurationPack": {
+        "type": "object",
+        "properties": {
+          "compared": {
+            "type": "boolean"
+          },
+          "validationError": {
+            "type": "string"
+          },
+          "configContent": {
+            "type": "string"
+          },
+          "configOrigin": {
+            "type": "string"
+          },
+          "configurationPackApplyRequests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConfigurationPackApplyRequest"
+            }
+          },
+          "creationDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "creationUser": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedUser": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "serializedId": {
+            "type": "object"
+          },
+          "idName": {
+            "type": "string"
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "quickLinkActionName": {
+            "type": "string"
+          },
+          "quickLinkUrl": {
+            "type": "string"
+          },
+          "validForUpdate": {
+            "type": "boolean"
+          },
+          "displayValue": {
+            "type": "string"
+          },
+          "quickLinkRuleBase": {
+            "type": "string"
+          },
+          "addable": {
+            "type": "boolean"
+          },
+          "compareKey": {
+            "type": "object"
+          }
+        }
+      },
+      "ConfigurationPackApplyRequest": {
+        "type": "object",
+        "properties": {
+          "compared": {
+            "type": "boolean"
+          },
+          "validationError": {
+            "type": "string"
+          },
+          "comments": {
+            "type": "string"
+          },
+          "configPackId": {
+            "type": "string"
+          },
+          "configurationPack": {
+            "$ref": "#/components/schemas/ConfigurationPack"
+          },
+          "id": {
+            "type": "string"
+          },
+          "installedBy": {
+            "type": "string"
+          },
+          "installedTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string"
+          },
+          "requestedBy": {
+            "type": "string"
+          },
+          "requestedTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "NEW",
+              "INSTALLED",
+              "REJECTED"
+            ]
+          },
+          "serializedId": {
+            "type": "object"
+          },
+          "idName": {
+            "type": "string"
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "quickLinkActionName": {
+            "type": "string"
+          },
+          "quickLinkUrl": {
+            "type": "string"
+          },
+          "validForUpdate": {
+            "type": "boolean"
+          },
+          "displayValue": {
+            "type": "string"
+          },
+          "quickLinkRuleBase": {
+            "type": "string"
+          },
+          "addable": {
+            "type": "boolean"
+          },
+          "compareKey": {
+            "type": "object"
+          }
+        }
+      },
+      "NoResultsFound": {
+        "type": "object"
+      },
+      "ActionRule": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvedBy": {
+            "type": "string"
+          },
+          "approvedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "conditionGroup": {
+            "$ref": "#/components/schemas/ConditionGroup"
+          },
+          "conditions": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "draft": {
+            "type": "boolean"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastEditUser": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "originalRuleId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ruleBase": {
+            "$ref": "#/components/schemas/RuleBase"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "actionName": {
+            "type": "string"
+          },
+          "new": {
+            "type": "boolean"
+          }
+        }
+      },
+      "BaseToStateLink": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/LinkId"
+          },
+          "lastEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastEditUser": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ruleBase": {
+            "$ref": "#/components/schemas/RuleBase"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          }
+        }
+      },
+      "Condition": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "ConditionGroup": {
+        "type": "object",
+        "properties": {
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            }
+          },
+          "groupType": {
+            "type": "string"
+          },
+          "parentGroup": {
+            "$ref": "#/components/schemas/ConditionGroup"
+          },
+          "ruleGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConditionGroup"
+            }
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "and": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ConfigurationItem": {
+        "type": "object",
+        "properties": {
+          "configContent": {
+            "$ref": "#/components/schemas/JsonElement"
+          },
+          "preferences": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Preference"
+            }
+          },
+          "ruleBases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RuleBase"
+            }
+          },
+          "subConfigurationItems": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ConfigurationItem"
+            }
+          }
+        }
+      },
+      "ConfigurationPackModel": {
+        "type": "object",
+        "properties": {
+          "configContent": {
+            "$ref": "#/components/schemas/ConfigurationItem"
+          },
+          "configOrigin": {
+            "type": "string"
+          },
+          "creationDate": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "description": "Configuration pack json"
+      },
+      "InterfaceRule": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvedBy": {
+            "type": "string"
+          },
+          "approvedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "conditionGroup": {
+            "$ref": "#/components/schemas/ConditionGroup"
+          },
+          "conditions": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "draft": {
+            "type": "boolean"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastEditUser": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "originalRuleId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ruleBase": {
+            "$ref": "#/components/schemas/RuleBase"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "elementName": {
+            "type": "string"
+          },
+          "new": {
+            "type": "boolean"
+          }
+        }
+      },
+      "JsonArray": {
+        "type": "object",
+        "properties": {
+          "asBoolean": {
+            "type": "boolean"
+          },
+          "asByte": {
+            "type": "string",
+            "format": "byte"
+          },
+          "asCharacter": {
+            "type": "string",
+            "deprecated": true
+          },
+          "asBigDecimal": {
+            "type": "number"
+          },
+          "asBigInteger": {
+            "type": "integer"
+          },
+          "asShort": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asString": {
+            "type": "string"
+          },
+          "asNumber": {
+            "type": "number"
+          },
+          "asDouble": {
+            "type": "number",
+            "format": "double"
+          },
+          "asFloat": {
+            "type": "number",
+            "format": "float"
+          },
+          "asLong": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "asInt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "jsonNull": {
+            "type": "boolean"
+          },
+          "asJsonObject": {
+            "$ref": "#/components/schemas/JsonObject"
+          },
+          "jsonArray": {
+            "type": "boolean"
+          },
+          "jsonPrimitive": {
+            "type": "boolean"
+          },
+          "asJsonArray": {
+            "$ref": "#/components/schemas/JsonArray"
+          },
+          "asJsonPrimitive": {
+            "$ref": "#/components/schemas/JsonPrimitive"
+          },
+          "asJsonNull": {
+            "$ref": "#/components/schemas/JsonNull"
+          },
+          "jsonObject": {
+            "type": "boolean"
+          }
+        }
+      },
+      "JsonElement": {
+        "type": "object",
+        "properties": {
+          "jsonNull": {
+            "type": "boolean"
+          },
+          "asJsonObject": {
+            "$ref": "#/components/schemas/JsonObject"
+          },
+          "jsonArray": {
+            "type": "boolean"
+          },
+          "jsonPrimitive": {
+            "type": "boolean"
+          },
+          "asJsonArray": {
+            "$ref": "#/components/schemas/JsonArray"
+          },
+          "asJsonPrimitive": {
+            "$ref": "#/components/schemas/JsonPrimitive"
+          },
+          "asBoolean": {
+            "type": "boolean"
+          },
+          "asByte": {
+            "type": "string",
+            "format": "byte"
+          },
+          "asCharacter": {
+            "type": "string",
+            "deprecated": true
+          },
+          "asBigDecimal": {
+            "type": "number"
+          },
+          "asBigInteger": {
+            "type": "integer"
+          },
+          "asShort": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asString": {
+            "type": "string"
+          },
+          "asJsonNull": {
+            "$ref": "#/components/schemas/JsonNull"
+          },
+          "asNumber": {
+            "type": "number"
+          },
+          "asDouble": {
+            "type": "number",
+            "format": "double"
+          },
+          "asFloat": {
+            "type": "number",
+            "format": "float"
+          },
+          "asLong": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "asInt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "jsonObject": {
+            "type": "boolean"
+          }
+        }
+      },
+      "JsonNull": {
+        "type": "object",
+        "properties": {
+          "jsonNull": {
+            "type": "boolean"
+          },
+          "asJsonObject": {
+            "$ref": "#/components/schemas/JsonObject"
+          },
+          "jsonArray": {
+            "type": "boolean"
+          },
+          "jsonPrimitive": {
+            "type": "boolean"
+          },
+          "asJsonArray": {
+            "$ref": "#/components/schemas/JsonArray"
+          },
+          "asJsonPrimitive": {
+            "$ref": "#/components/schemas/JsonPrimitive"
+          },
+          "asBoolean": {
+            "type": "boolean"
+          },
+          "asByte": {
+            "type": "string",
+            "format": "byte"
+          },
+          "asCharacter": {
+            "type": "string",
+            "deprecated": true
+          },
+          "asBigDecimal": {
+            "type": "number"
+          },
+          "asBigInteger": {
+            "type": "integer"
+          },
+          "asShort": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asString": {
+            "type": "string"
+          },
+          "asJsonNull": {
+            "$ref": "#/components/schemas/JsonNull"
+          },
+          "asNumber": {
+            "type": "number"
+          },
+          "asDouble": {
+            "type": "number",
+            "format": "double"
+          },
+          "asFloat": {
+            "type": "number",
+            "format": "float"
+          },
+          "asLong": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "asInt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "jsonObject": {
+            "type": "boolean"
+          }
+        }
+      },
+      "JsonObject": {
+        "type": "object",
+        "properties": {
+          "jsonNull": {
+            "type": "boolean"
+          },
+          "asJsonObject": {
+            "$ref": "#/components/schemas/JsonObject"
+          },
+          "jsonArray": {
+            "type": "boolean"
+          },
+          "jsonPrimitive": {
+            "type": "boolean"
+          },
+          "asJsonArray": {
+            "$ref": "#/components/schemas/JsonArray"
+          },
+          "asJsonPrimitive": {
+            "$ref": "#/components/schemas/JsonPrimitive"
+          },
+          "asBoolean": {
+            "type": "boolean"
+          },
+          "asByte": {
+            "type": "string",
+            "format": "byte"
+          },
+          "asCharacter": {
+            "type": "string",
+            "deprecated": true
+          },
+          "asBigDecimal": {
+            "type": "number"
+          },
+          "asBigInteger": {
+            "type": "integer"
+          },
+          "asShort": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asString": {
+            "type": "string"
+          },
+          "asJsonNull": {
+            "$ref": "#/components/schemas/JsonNull"
+          },
+          "asNumber": {
+            "type": "number"
+          },
+          "asDouble": {
+            "type": "number",
+            "format": "double"
+          },
+          "asFloat": {
+            "type": "number",
+            "format": "float"
+          },
+          "asLong": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "asInt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "jsonObject": {
+            "type": "boolean"
+          }
+        }
+      },
+      "JsonPrimitive": {
+        "type": "object",
+        "properties": {
+          "asBoolean": {
+            "type": "boolean"
+          },
+          "asByte": {
+            "type": "string",
+            "format": "byte"
+          },
+          "asCharacter": {
+            "type": "string",
+            "deprecated": true
+          },
+          "asBigDecimal": {
+            "type": "number"
+          },
+          "asBigInteger": {
+            "type": "integer"
+          },
+          "asShort": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "string": {
+            "type": "boolean"
+          },
+          "asString": {
+            "type": "string"
+          },
+          "asNumber": {
+            "type": "number"
+          },
+          "asDouble": {
+            "type": "number",
+            "format": "double"
+          },
+          "asFloat": {
+            "type": "number",
+            "format": "float"
+          },
+          "asLong": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "asInt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "number": {
+            "type": "boolean"
+          },
+          "boolean": {
+            "type": "boolean"
+          },
+          "jsonNull": {
+            "type": "boolean"
+          },
+          "asJsonObject": {
+            "$ref": "#/components/schemas/JsonObject"
+          },
+          "jsonArray": {
+            "type": "boolean"
+          },
+          "jsonPrimitive": {
+            "type": "boolean"
+          },
+          "asJsonArray": {
+            "$ref": "#/components/schemas/JsonArray"
+          },
+          "asJsonPrimitive": {
+            "$ref": "#/components/schemas/JsonPrimitive"
+          },
+          "asJsonNull": {
+            "$ref": "#/components/schemas/JsonNull"
+          },
+          "jsonObject": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LinkId": {
+        "type": "object",
+        "properties": {
+          "ruleBaseId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "stateId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "Preference": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "key": {
+            "type": "string"
+          },
+          "preferenceType": {
+            "type": "string",
+            "enum": [
+              "USER",
+              "SYSTEM"
+            ]
+          },
+          "rawValue": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "longValue": {
+            "type": "integer",
+            "format": "int64",
+            "writeOnly": true
+          },
+          "booleanValue": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "stringValue": {
+            "type": "string",
+            "writeOnly": true
+          },
+          "doubleValue": {
+            "type": "number",
+            "format": "double",
+            "writeOnly": true
+          },
+          "floatValue": {
+            "type": "number",
+            "format": "float",
+            "writeOnly": true
+          },
+          "intValue": {
+            "type": "integer",
+            "format": "int32",
+            "writeOnly": true
+          },
+          "empty": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RuleBase": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "actionRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActionRule"
+            }
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "approvedBy": {
+            "type": "string"
+          },
+          "approvedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "draft": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "interfaceRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InterfaceRule"
+            }
+          },
+          "lastEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastEditUser": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "ruleGroup": {
+            "type": "string"
+          },
+          "stateLinks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseToStateLink"
+            }
+          },
+          "transitionRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransitionRule"
+            }
+          }
+        }
+      },
+      "State": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastEditUser": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "outputState": {
+            "type": "boolean"
+          },
+          "stateId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "TransitionRule": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvedBy": {
+            "type": "string"
+          },
+          "approvedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "conditionGroup": {
+            "$ref": "#/components/schemas/ConditionGroup"
+          },
+          "conditions": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "draft": {
+            "type": "boolean"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastEditTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastEditUser": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "originalRuleId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ruleBase": {
+            "$ref": "#/components/schemas/RuleBase"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "nextState": {
+            "$ref": "#/components/schemas/State"
+          },
+          "new": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ConfigPackSuccessResponse": {
+        "type": "object",
+        "properties": {
+          "configPackName": {
+            "type": "string"
+          },
+          "creationTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "basicScheme": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  }
+}

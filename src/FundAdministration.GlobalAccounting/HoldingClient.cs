@@ -1,0 +1,111 @@
+﻿using FundAdministration.GlobalAccounting.Holding;
+using FundAdministration.GlobalAccounting.Holding.CallDepositTransactions;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseByNewSecurity;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseCollectionOfShares;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesDomesticShare;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesForeignShare;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesWithRealizedGain;
+using FundAdministration.GlobalAccounting.Holding.CapitalIIncreaseWithExerciseOfSubscriptionRights;
+using FundAdministration.GlobalAccounting.Holding.CapitalIncreaseWithoutIssueOfSubscriptionRights;
+using FundAdministration.GlobalAccounting.Holding.CashDividendAnnouncement;
+using FundAdministration.GlobalAccounting.Holding.CiaSubscriptionRight;
+using FundAdministration.GlobalAccounting.Holding.CouponDividendTransaction;
+using FundAdministration.GlobalAccounting.Holding.DebitCreditTransaction;
+using FundAdministration.GlobalAccounting.Holding.EosCashCompensation;
+using FundAdministration.GlobalAccounting.Holding.EosMultipleSecurity;
+using FundAdministration.GlobalAccounting.Holding.EosNewSecurityWithoutCash;
+using FundAdministration.GlobalAccounting.Holding.EosSameSecurity;
+using FundAdministration.GlobalAccounting.Holding.Equity;
+using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflow;
+using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashOutflow;
+using FundAdministration.GlobalAccounting.Holding.FixedBond;
+using FundAdministration.GlobalAccounting.Holding.FixedMbsIpb;
+using FundAdministration.GlobalAccounting.Holding.FloatingVariableBond;
+using FundAdministration.GlobalAccounting.Holding.FloatOrRateFactor;
+using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchange;
+using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchangeRepayment;
+using FundAdministration.GlobalAccounting.Holding.FundShareTransaction;
+using FundAdministration.GlobalAccounting.Holding.Future;
+using FundAdministration.GlobalAccounting.Holding.FutureFee;
+using FundAdministration.GlobalAccounting.Holding.FutureMaturity;
+using FundAdministration.GlobalAccounting.Holding.FutureTransaction;
+using FundAdministration.GlobalAccounting.Holding.FutureTransactionsRebooking;
+using FundAdministration.GlobalAccounting.Holding.IrsTransactions;
+using FundAdministration.GlobalAccounting.Holding.OptionExercise;
+using FundAdministration.GlobalAccounting.Holding.OptionFee;
+using FundAdministration.GlobalAccounting.Holding.OptionMaturity;
+using FundAdministration.GlobalAccounting.Holding.OptionTransaction;
+using FundAdministration.GlobalAccounting.Holding.OptionTransactionsRebooking;
+using FundAdministration.GlobalAccounting.Holding.PikBond;
+using FundAdministration.GlobalAccounting.Holding.ReverseStockSplit;
+using FundAdministration.GlobalAccounting.Holding.SecurityTransactionRebooking;
+using FundAdministration.GlobalAccounting.Holding.SpinOff;
+using FundAdministration.GlobalAccounting.Holding.SpotForeignExchange;
+using FundAdministration.GlobalAccounting.Holding.StockDividend;
+using FundAdministration.GlobalAccounting.Holding.StockExchangeTransactionFee;
+using FundAdministration.GlobalAccounting.Holding.StockSplit;
+using FundAdministration.GlobalAccounting.Holding.TermDepositTransaction;
+using FundAdministration.GlobalAccounting.Holding.VariableMbs;
+using FundAdministration.GlobalAccounting.Holding.ZeroCoupon;
+
+namespace FundAdministration.GlobalAccounting;
+
+public class HoldingClient : IHoldingClient
+{
+    private readonly HttpClient _httpClient;
+
+    public HoldingClient(HttpClient httpClient)
+    {
+        _httpClient = httpClient;
+    }
+    public ICallDepositTransactionsService CallDepositTransactionService => new CallDepositTransactionsService(_httpClient);
+    public ICapitalDecreaseByNewSecurityService CapitalDecreaseByNewSecurityService => new CapitalDecreaseByNewSecurityService(_httpClient);
+    public ICapitalDecreaseCollectionOfSharesService CapitalDecreaseCollectionOfShareService => new CapitalDecreaseCollectionOfSharesService(_httpClient);
+    public ICapitalDecreaseOfParValuesDomesticShareService CapitalDecreaseOfParValueDomesticShareService => new CapitalDecreaseOfParValuesDomesticShareService(_httpClient);
+    public ICapitalDecreaseOfParValuesForeignShareService CapitalDecreaseOfParValueForeignShareService => new CapitalDecreaseOfParValuesForeignShareService(_httpClient);
+    public ICapitalDecreaseOfParValuesWithRealizedGainService CapitalDecreaseOfParValueDomesticSharesTaxablePayment => new CapitalDecreaseOfParValuesWithRealizedGainService(_httpClient);
+    public ICapitalIIncreaseWithExerciseOfSubscriptionRightsService CapitalIIncreaseWithExerciseOfSubscriptionRightService => new CapitalIIncreaseWithExerciseOfSubscriptionRightsService(_httpClient);
+    public ICapitalIncreaseWithoutIssueOfSubscriptionRightsService CapitalIncreaseWithoutIssueOfSubscriptionRightService => new CapitalIncreaseWithoutIssueOfSubscriptionRightsService(_httpClient);
+    public ICashDividendAnnouncementService CashDividendAnnouncementService => new CashDividendAnnouncementService(_httpClient);
+    public ICiaSubscriptionRightService CapitalIncreaseAllotmentSubscriptionRightService => new CiaSubscriptionRightService(_httpClient);
+    public ICouponDividendTransactionService CouponDividendTransactionService => new CouponDividendTransactionService(_httpClient);
+    public IDebitCreditTransactionService DebitCreditTransactionService => new DebitCreditTransactionService(_httpClient);
+    public IEosCashCompensationService ExchangeOfSecurityNewSecurityWithCashCompensationService => new EosCashCompensationService(_httpClient);
+    public IEosMultipleSecurityService EosMultipleSecurityService => new EosMultipleSecurityService(_httpClient);
+    public IEosNewSecurityWithoutCashService ExchangeOfSecurityNewSecurityWithoutCashCompensationService => new EosNewSecurityWithoutCashService(_httpClient);
+    public IEosSameSecurityService ExchangeOfSecuritySameSecurityService => new EosSameSecurityService(_httpClient);
+    public IEquityService EquityService => new EquityService(_httpClient);
+    public IExchangeOfNewSecurityWithCashInflowService ExchangeOfNewSecurityWithCashInflowService => new ExchangeOfNewSecurityWithCashInflowService(_httpClient);
+    public IExchangeOfNewSecurityWithCashOutflowService ExchangeOfNewSecurityWithCashOutflowService => new ExchangeOfNewSecurityWithCashOutflowService(_httpClient);
+    public IFixedBondService FixedBondService => new FixedBondService(_httpClient);
+    public IFixedMbsIpbService FixedMortgageBackedSecurityOrInflationProtectedBondService => new FixedMbsIpbService(_httpClient);
+    public IFloatingVariableBondService FloatingVariableRateBondService => new FloatingVariableBondService(_httpClient);
+    public IFloatOrRateFactorService FloatingRateOrFactorLoadService => new FloatOrRateFactorService(_httpClient);
+    public IForwardForeignExchangeRepaymentService ForwardForeignExchangeRepaymentService => new ForwardForeignExchangeRepaymentService(_httpClient);
+    public IForwardForeignExchangeService ForwardForeignExchangeService => new ForwardForeignExchangeService(_httpClient);
+    public IFundShareTransactionService ShareholderService => new FundShareTransactionService(_httpClient);
+    public IFutureFeeService FutureFeeService => new FutureFeeService(_httpClient);
+    public IFutureMaturityService FutureMaturityService => new FutureMaturityService(_httpClient);
+    public IFutureService FutureService => new FutureService(_httpClient);
+    public IFutureTransactionService FutureTransactionService => new FutureTransactionService(_httpClient);
+    public IFutureTransactionsRebookingService FutureTransactionRebookingService => new FutureTransactionsRebookingService(_httpClient);
+    public IIrsTransactionsService SwapService => new IrsTransactionsService(_httpClient);
+    public IOptionExerciseService OptionExerciseService => new OptionExerciseService(_httpClient);
+    public IOptionFeeService OptionFeeService => new OptionFeeService(_httpClient);
+    public IOptionMaturityService OptionMaturityService => new OptionMaturityService(_httpClient);
+    public IOptionTransactionService OptionTransactionService => new OptionTransactionService(_httpClient);
+    public IOptionTransactionsRebookingService OptionTransactionRebookingService => new OptionTransactionsRebookingService(_httpClient);
+    public IPikBondService PikBondService => new PikBondService(_httpClient);
+    public IReverseStockSplitService ReverseStockSplitService => new ReverseStockSplitService(_httpClient);
+    public ISecurityTransactionRebookingService SecurityTransactionRebookingService => new SecurityTransactionRebookingService(_httpClient);
+    public ISpinOffService SpinOffService => new SpinOffService(_httpClient);
+    public ISpotForeignExchangeService SpotForeignExchangeService => new SpotForeignExchangeService(_httpClient);
+    public IStockDividendService StockDividendService => new StockDividendService(_httpClient);
+    public IStockExchangeTransactionFeeService StockExchangeFeeService => new StockExchangeTransactionFeeService(_httpClient);
+    public IStockSplitService StockSplitService => new StockSplitService(_httpClient);
+    public ITermDepositTransactionService TimeTermDepositService => new TermDepositTransactionService(_httpClient);
+    public IVariableMbsService VariableMortgageBackedSecurityService => new VariableMbsService(_httpClient);
+    public IZeroCouponService ZeroCouponService => new ZeroCouponService(_httpClient);
+
+    public IExchangeOfSecurity ExchangeOfSecurity => new ExchangeOfSecurity(_httpClient);
+}

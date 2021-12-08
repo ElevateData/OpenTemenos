@@ -1,0 +1,319 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Fraud",
+    "description": "\n\nUsing technology-enabled techniques, fraudulent attacks are becoming more sophisticated and their consequences more severe. Fraud can happen across multiple accounts and jurisdictions. Being able to accurately identify fraud in real-time, and before it occurs, is essential to protect customers’ assets and brands. Trust is ever more critical in a digital banking world.\n\nThis API enables you to:\n\n- Identify/prevent suspicious activity.\n- Retrieve the result of a scanned transaction by a customer.\n- Determine if a transaction is blocked.\n\n**Note**: To use this API, request an API key from apidocs.temenos.com. Create an account with the community to get started.\n\nThis is a snapshot of the Swagger document. The complete document is provided as part of a FCM release via the [FCM Team](https://www.temenos.com/contact-us/#contact).\n\nTo learn more about Temenos FCM visit [temenos.com](https://www.temenos.com/products/financial-crime-mitigation/) ",
+    "termsOfService": "http://api.temenos.com/terms/",
+    "license": {
+      "name": "Temenos API License 2.0"
+    },
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.temenos.com/api/v1.0.0/fcm/fraud",
+      "description": "MultiProduct API Sandbox"
+    }
+  ],
+  "paths": {
+    "/api/v1/resource/fraud/sap/xml": {
+      "post": {
+        "tags": [
+          "Suspicious activity prevention"
+        ],
+        "description": "Retrieves the result of a scanned transaction made by the customer",
+        "operationId": "postXml",
+        "requestBody": {
+          "content": {
+            "application/xml": {
+              "schema": {
+                "type": "string",
+                "description": "The request body. It's an XML representation."
+              },
+              "example": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<tns:FTNewFlow xmlns:tns=\"http://www.temenos.com/T24/event/AMLFundsTransfer/FTNewFlow\"\n        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n        xsi:schemaLocation=\"http://www.temenos.com/T24/event/AMLFundsTransfer/FTNewFlow AMLFundsTransfer-FTNewFlow.xsd\"\n        xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\"\n        xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\"\n        xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\"\n        xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">\n    <tns:eventCommon>\n        <ns0:application xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">FUNDS.TRANSFER</ns0:application>\n        <ns0:companyId xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">GB0010001</ns0:companyId>\n        <ns0:operator xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">INPUTTER</ns0:operator>\n        <ns0:today xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">2017-04-17</ns0:today>\n        <ns0:transactionStage xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">SERVICE-OPERATION</ns0:transactionStage>\n        <ns0:eventId xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">3b8c4aee-d13f-40a6-b040-9218527cad1f</ns0:eventId>\n        <ns0:creationTime xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">2017-09-01T08:26:02.333Z</ns0:creationTime>\n    </tns:eventCommon>\n    <tns:iftorderingdetails>\n        <ns1:debitAccountNo xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">11509</ns1:debitAccountNo>\n        <ns1:debitAccountName xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">ROBERT BRANSON</ns1:debitAccountName>\n        <ns1:orderingCustAcct xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">11509</ns1:orderingCustAcct>\n        <ns1:dbtCustStreet xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">120 CAMPDEN HILL ROAD</ns1:dbtCustStreet>\n        <ns1:dbtCusTownCon xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">KENSINGTON LONDON</ns1:dbtCusTownCon>\n        <ns1:dbtCusPostCd xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">W8 7AR</ns1:dbtCusPostCd>\n        <ns1:dbtCusCountry xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">UNITED KINGDOM</ns1:dbtCusCountry>\n        <ns1:dbtCusName1 xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">Mr Robert Branson</ns1:dbtCusName1>\n    </tns:iftorderingdetails>\n    <tns:iftbeneficiarydetails>\n        <ns2:creditAccountNo xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">15377</ns2:creditAccountNo>\n        <ns2:creditAccountName xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">CREDIT SUISSE</ns2:creditAccountName>\n        <ns2:benAccountNo xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">22200</ns2:benAccountNo>\n        <ns2:benCustomerNo xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">outside guy</ns2:benCustomerNo>\n        <ns2:accountWithBank xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">DEUTDEFF</ns2:accountWithBank>\n        <ns2:cdtCusCountry xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">UNITED KINGDOM</ns2:cdtCusCountry>\n    </tns:iftbeneficiarydetails>\n    <tns:iftintermediarydetails/>\n    <tns:ifttxndetails>\n        <ns4:txnType xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">OT03</ns4:txnType>\n        <ns4:debitCcy xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">CHF</ns4:debitCcy>\n        <ns4:dbtValueDate xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">20170417</ns4:dbtValueDate>\n        <ns4:creditCcy xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">CHF</ns4:creditCcy>\n        <ns4:amtDebited xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">5000.00</ns4:amtDebited>\n        <ns4:amtCredited xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">5000.00</ns4:amtCredited>\n        <ns4:id xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">FTTESTO000NE</ns4:id>\n    </tns:ifttxndetails>\n    <tns:iftcustomeraccountdetails/>\n</tns:FTNewFlow>"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body. It should be a valid xml message."
+          },
+          "403": {
+            "description": "The authenticated user is not authorized to call the SAP engine.."
+          },
+          "500": {
+            "description": "Something doesn't go well while communicating with the SAP engine."
+          }
+        }
+      }
+    },
+    "/api/v1/resource/fraud/sap/json": {
+      "post": {
+        "tags": [
+          "Suspicious activity prevention"
+        ],
+        "description": "Retrieves the result of a scanned transaction made by the customer",
+        "operationId": "postJson",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "description": "The request body. It's a JSON representation."
+              },
+              "example": {
+                "transactions": [
+                  {
+                    "company": "GB0010001",
+                    "executionDateString": "2017-04-17",
+                    "mandator": "GB0010001",
+                    "transactionId": "FTTESTO000NE",
+                    "orderingCustomerId": "",
+                    "beneficiaryCustomerId": "",
+                    "reversal": "",
+                    "ruleProperties": {
+                      "creditAccount": "15377",
+                      "creditAccountHolder": "DEUTDEFF",
+                      "currency": "CHF",
+                      "currencyAmount": "2000.00",
+                      "debitAccount": "11509",
+                      "debitAccountHolder": "",
+                      "localCurrencyAmount": "2000.00",
+                      "transactionType": "OT03",
+                      "valueDate": "20170417",
+                      "debitCountry": "UK",
+                      "creditCountry": "UK"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body. It should be a valid JSON."
+          },
+          "403": {
+            "description": "The authenticated user is not authorized to call the SAP engine."
+          },
+          "500": {
+            "description": "Something doesn't go well while communicating with the SAP engine."
+          }
+        }
+      }
+    },
+    "/api/v1/resource/fraud/profile/xml": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "description": "Retrieves the result of a scanned transaction made by the customer",
+        "operationId": "postXml_1",
+        "requestBody": {
+          "content": {
+            "application/xml": {
+              "schema": {
+                "type": "string",
+                "description": "The request body. It's an XML representation."
+              },
+              "example": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<tns:FTNewFlow xmlns:tns=\"http://www.temenos.com/T24/event/AMLFundsTransfer/FTNewFlow\"\n        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n        xsi:schemaLocation=\"http://www.temenos.com/T24/event/AMLFundsTransfer/FTNewFlow AMLFundsTransfer-FTNewFlow.xsd\"\n        xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\"\n        xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\"\n        xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\"\n        xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">\n    <tns:eventCommon>\n        <ns0:application xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">FUNDS.TRANSFER</ns0:application>\n        <ns0:companyId xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">GB0010001</ns0:companyId>\n        <ns0:operator xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">INPUTTER</ns0:operator>\n        <ns0:today xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">2017-04-17</ns0:today>\n        <ns0:transactionStage xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">SERVICE-OPERATION</ns0:transactionStage>\n        <ns0:eventId xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">3b8c4aee-d13f-40a6-b040-9218527cad1f</ns0:eventId>\n        <ns0:creationTime xmlns:ns0=\"http://www.temenos.com/T24/event/Common/EventCommon\">2017-09-01T08:26:02.333Z</ns0:creationTime>\n    </tns:eventCommon>\n    <tns:iftorderingdetails>\n        <ns1:debitAccountNo xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">11509</ns1:debitAccountNo>\n        <ns1:debitAccountName xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">ROBERT BRANSON</ns1:debitAccountName>\n        <ns1:orderingCustAcct xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">11509</ns1:orderingCustAcct>\n        <ns1:dbtCustStreet xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">120 CAMPDEN HILL ROAD</ns1:dbtCustStreet>\n        <ns1:dbtCusTownCon xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">KENSINGTON LONDON</ns1:dbtCusTownCon>\n        <ns1:dbtCusPostCd xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">W8 7AR</ns1:dbtCusPostCd>\n        <ns1:dbtCusCountry xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">UNITED KINGDOM</ns1:dbtCusCountry>\n        <ns1:dbtCusName1 xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtOrderingDetails\">Mr Robert Branson</ns1:dbtCusName1>\n    </tns:iftorderingdetails>\n    <tns:iftbeneficiarydetails>\n        <ns2:creditAccountNo xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">15377</ns2:creditAccountNo>\n        <ns2:creditAccountName xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">CREDIT SUISSE</ns2:creditAccountName>\n        <ns2:benAccountNo xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">22200</ns2:benAccountNo>\n        <ns2:benCustomerNo xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">outside guy</ns2:benCustomerNo>\n        <ns2:accountWithBank xmlns:ns2=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">DEUTDEFF</ns2:accountWithBank>\n        <ns2:cdtCusCountry xmlns:ns1=\"http://www.temenos.com/T24/AMLService/FtBeneficiaryDetails\">UNITED KINGDOM</ns2:cdtCusCountry>\n    </tns:iftbeneficiarydetails>\n    <tns:iftintermediarydetails/>\n    <tns:ifttxndetails>\n        <ns4:txnType xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">OT03</ns4:txnType>\n        <ns4:debitCcy xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">CHF</ns4:debitCcy>\n        <ns4:dbtValueDate xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">20170417</ns4:dbtValueDate>\n        <ns4:creditCcy xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">CHF</ns4:creditCcy>\n        <ns4:amtDebited xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">5000.00</ns4:amtDebited>\n        <ns4:amtCredited xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">5000.00</ns4:amtCredited>\n        <ns4:id xmlns:ns4=\"http://www.temenos.com/T24/AMLService/FtTxnDetails\">FTTESTO000NE</ns4:id>\n    </tns:ifttxndetails>\n    <tns:iftcustomeraccountdetails/>\n</tns:FTNewFlow>"
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body. It should be a valid xml message."
+          },
+          "403": {
+            "description": "The authenticated user is not authorized to call the profile engine."
+          },
+          "500": {
+            "description": "Something doesn't go well while communicating with the profile engine."
+          }
+        }
+      }
+    },
+    "/api/v1/resource/fraud/profile/json": {
+      "post": {
+        "tags": [
+          "Profile"
+        ],
+        "description": "Retrieves the result of a scanned transaction made by the customer",
+        "operationId": "postJson_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "description": "The request body. It's a JSON representation."
+              },
+              "example": {
+                "transactions": [
+                  {
+                    "company": "GB0010001",
+                    "executionDateString": "2017-04-17",
+                    "mandator": "GB0010001",
+                    "transactionId": "FTTESTO000NE",
+                    "orderingCustomerId": "",
+                    "beneficiaryCustomerId": "",
+                    "reversal": "",
+                    "ruleProperties": {
+                      "creditAccount": "15377",
+                      "creditAccountHolder": "DEUTDEFF",
+                      "currency": "CHF",
+                      "currencyAmount": "2000.00",
+                      "debitAccount": "11509",
+                      "debitAccountHolder": "",
+                      "localCurrencyAmount": "2000.00",
+                      "transactionType": "OT03",
+                      "valueDate": "20170417",
+                      "debitCountry": "UK",
+                      "creditCountry": "UK"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body. It should be a valid JSON."
+          },
+          "403": {
+            "description": "The authenticated user is not authorized to call the profile engine."
+          },
+          "500": {
+            "description": "Something doesn't go well while communicating with the profile engine."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Alert": {
+        "type": "object",
+        "properties": {
+          "reasonCode": {
+            "type": "string",
+            "description": "Reason Code",
+            "example": "101"
+          },
+          "ruleId": {
+            "type": "string",
+            "description": "Rule ID",
+            "example": "10"
+          }
+        },
+        "description": "List of the alerts generated.",
+        "xml": {
+          "name": "alert"
+        }
+      },
+      "Response": {
+        "type": "object",
+        "properties": {
+          "transactions": {
+            "type": "array",
+            "description": "List of scanned transactions",
+            "xml": {
+              "wrapped": true
+            },
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            }
+          }
+        },
+        "xml": {
+          "name": "response"
+        }
+      },
+      "Transaction": {
+        "type": "object",
+        "properties": {
+          "alerts": {
+            "type": "array",
+            "description": "List of the alerts generated.",
+            "xml": {
+              "wrapped": true
+            },
+            "items": {
+              "$ref": "#/components/schemas/Alert"
+            }
+          },
+          "blocked": {
+            "type": "string",
+            "description": "Whether the transaction is blocked or not. Possible values: YES, NO",
+            "example": "YES"
+          },
+          "id": {
+            "type": "string",
+            "description": "Internal ID",
+            "example": "0a8c055573531d878173574954030000"
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "Transaction ID",
+            "example": "TRN-101"
+          }
+        },
+        "description": "List of scanned transactions",
+        "xml": {
+          "name": "transaction"
+        }
+      }
+    },
+    "securitySchemes": {
+      "basicScheme": {
+        "type": "https",
+        "scheme": "basic"
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Metering",
+    "description": "Retrieve metering data from Financial Crime Mitigation (FCM) and pull or push it to the microservices metering API for billing purposes.\n\nThis API enables you to:\n\n- Calculate metering data\n\n- Pull FCM data\n\n- Push FCM data\n\n- Push metering events\n\n**Note**: To use this API, request an API key from apidocs.temenos.com. Create an account with the community to get started.\n\nThis is a snapshot of the Swagger document. The complete document is provided as part of a FCM release via the [FCM Team](https://www.temenos.com/contact-us/#contact).\n\nTo learn more about Temenos FCM visit [temenos.com](https://www.temenos.com/products/financial-crime-mitigation/) ",
+    "termsOfService": "http://api.temenos.com/terms/",
+    "license": {
+      "name": "Temenos API License 2.0"
+    },
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.temenos.com/api/v1.0.0/fcm/metering",
+      "description": "MultiProduct API Sandbox"
+    }
+  ],
+  "paths": {
+    "/api/v1/metering/metrics/currentdata": {
+      "get": {
+        "tags": [
+          "Metering Service"
+        ],
+        "summary": "Get the details metered information",
+        "description": "Fetches the metered information",
+        "operationId": "getCurrentMeteredData",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The authenticated user is not authorized to view the comparison of Databases"
+          }
+        }
+      }
+    },
+    "/api/v1/metering/metrics/data": {
+      "get": {
+        "tags": [
+          "Metering Service"
+        ],
+        "summary": "Get the details of metered information based on query date",
+        "description": "Fetches the metered information based on metered date",
+        "operationId": "getMeteredDataByDate",
+        "parameters": [
+          {
+            "name": "meteredDate",
+            "in": "query",
+            "description": "Metering date",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2020-10-03"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The authenticated user is not authorized to view the comparison of Databases"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "basicScheme": {
+        "type": "https",
+        "scheme": "basic"
+      }
+    }
+  }
+}
