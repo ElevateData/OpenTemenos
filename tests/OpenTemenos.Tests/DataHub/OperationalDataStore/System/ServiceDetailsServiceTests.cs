@@ -1,14 +1,13 @@
 ﻿using System;
 using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.System;
 
 [TestClass]
 public class ServiceDetailsServiceTests : CredentialManagement
 {
-    private readonly ISystemClient _client = new SystemClient(HttpClient);
     private readonly DateTimeOffset _batchDate = DateTimeOffset.Now.AddDays(-1);
+    private readonly ISystemClient _client = new SystemClient(HttpClient);
 
     [TestMethod]
     public void GetAllReportTimesAsync()

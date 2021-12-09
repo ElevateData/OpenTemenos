@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.System;
 
@@ -7,5 +6,4 @@ namespace OpenTemenos.Tests.Transact.System;
 public class ProcessWorkFlowServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient);
-
 }

@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Order.Order;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
@@ -10,7 +9,8 @@ public class OrderServiceTests : CredentialManagement
     private readonly IOrderClient _client = new OrderClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostOrdersAsync()
     {
         var payload = new _0BULKPayload();

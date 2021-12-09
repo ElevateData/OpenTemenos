@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
@@ -7,5 +6,4 @@ namespace OpenTemenos.Tests.Transact.Party;
 public class CustomerAdvertsServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient);
-
 }

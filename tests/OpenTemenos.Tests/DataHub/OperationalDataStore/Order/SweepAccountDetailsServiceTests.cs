@@ -1,14 +1,13 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 
 [TestClass]
 public class SweepAccountDetailsServiceTests : CredentialManagement
 {
-    private readonly IOrderClient _client = new OrderClient(HttpClient);
     private const string CreditAccount = "";
     private const string DebitAccount = "";
+    private readonly IOrderClient _client = new OrderClient(HttpClient);
 
     [TestMethod]
     public void GetSweepCreditAccountDetailsAsync()

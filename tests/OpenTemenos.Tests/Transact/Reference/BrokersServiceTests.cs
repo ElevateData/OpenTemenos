@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 

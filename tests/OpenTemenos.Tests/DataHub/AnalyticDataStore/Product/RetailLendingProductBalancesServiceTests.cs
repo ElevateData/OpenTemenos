@@ -1,5 +1,4 @@
 ﻿using DataHub.AnalyticDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Product;
 
@@ -12,7 +11,8 @@ public class RetailLendingProductBalancesServiceTests : CredentialManagement
     [TestMethod]
     public void GetRetailLendingProductBalancesAsync()
     {
-        var result = _client.RetailLendingProductBalanceService.GetRetailLendingProductBalancesAsync(null, null, null).Result;
+        var result = _client.RetailLendingProductBalanceService.GetRetailLendingProductBalancesAsync(null, null, null)
+            .Result;
         Assert.IsNotNull(result.Data);
     }
 }

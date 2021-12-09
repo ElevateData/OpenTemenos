@@ -1,5 +1,4 @@
 ﻿using DataHub.AnalyticDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Holding;
 
@@ -12,7 +11,8 @@ public class CustomerAccountBalanceOverdrawnServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerAccountBalanceOverdrawnAsync()
     {
-        var result = _client.CustomerOverdrawnAccountBalanceService.GetCustomerAccountBalanceOverdrawnAsync(null, null, null, null).Result;
+        var result = _client.CustomerOverdrawnAccountBalanceService
+            .GetCustomerAccountBalanceOverdrawnAsync(null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 }

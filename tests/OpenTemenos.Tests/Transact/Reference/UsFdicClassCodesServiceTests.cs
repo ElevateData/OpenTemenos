@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
 using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -15,7 +13,6 @@ public class UsFdicClassCodesServiceTests : CredentialManagement
     {
         var result = _client.UsFdicClassCodesService.GetFdicClassCodeAsync(null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"FdicDepositClassCode: {result.Body.First().FdicDepositClassCode}");
-        Debug.WriteLine($@"FdicDepositClassType: {result.Body.First().FdicDepositClassType}");
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 }

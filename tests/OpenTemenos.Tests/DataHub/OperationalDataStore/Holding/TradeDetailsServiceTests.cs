@@ -1,5 +1,4 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
@@ -28,7 +27,8 @@ public class TradeDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetActiveOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync(null, null, null, null, null,
+        var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync(null, null, null, null,
+            null,
             null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }

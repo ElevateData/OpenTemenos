@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DataHub.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
@@ -15,7 +13,7 @@ public class AccountListServiceTests : CredentialManagement
     {
         var result = _client.NostroVostroAccountListService.GetNostroAccountListAsync().Result;
         Assert.IsNotNull(result.Data);
-        Debug.WriteLine($@"s: {result.Data.AccountId}");
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Data)}");
     }
 
     [TestMethod]
@@ -23,6 +21,6 @@ public class AccountListServiceTests : CredentialManagement
     {
         var result = _client.NostroVostroAccountListService.GetVostroAccountListAsync(null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
-        Debug.WriteLine($@"s: {result.Data.AccountId}");
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Data)}");
     }
 }

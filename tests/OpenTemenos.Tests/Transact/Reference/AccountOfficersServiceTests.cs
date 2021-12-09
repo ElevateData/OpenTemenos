@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
 using Transact;
 using Transact.Reference.AccountOfficers;
 
@@ -9,8 +7,8 @@ namespace OpenTemenos.Tests.Transact.Reference;
 [TestClass]
 public class AccountOfficersServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
     private const string AccountOfficerId = "1";
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
 
     [TestMethod]
     public void GetAccountOfficersAsync()
@@ -18,8 +16,9 @@ public class AccountOfficersServiceTests : CredentialManagement
         var result = _client.AccountOfficersService
             .GetAccountOfficersAsync(null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"AccountOfficerId: {result.Body.First().AccountOfficerId}");
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
+
     [TestMethod]
     public void GetAccountOfficerDetailsAsync()
     {
@@ -27,16 +26,20 @@ public class AccountOfficersServiceTests : CredentialManagement
             .GetAccountOfficerDetailsAsync(AccountOfficerId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
-    [TestMethod, Ignore("POST method")]
+
+    [TestMethod]
+    [Ignore("POST method")]
     public void CreateAccountOfficerDetailsAsync()
     {
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerDetails();
         var result = _client.AccountOfficersService
-         .CreateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
+            .CreateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
-    [TestMethod, Ignore("PUT method")]
+
+    [TestMethod]
+    [Ignore("PUT method")]
     public void UpdateAccountOfficerDetailsAsync()
     {
         var accountOfficerId = string.Empty;
@@ -45,6 +48,7 @@ public class AccountOfficersServiceTests : CredentialManagement
             .UpdateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
+
     [TestMethod]
     public void GetAccountOfficerAlertSubscriptionAsync()
     {
@@ -52,7 +56,9 @@ public class AccountOfficersServiceTests : CredentialManagement
             .GetAccountOfficerAlertSubscriptionAsync(AccountOfficerId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
-    [TestMethod, Ignore("POST method")]
+
+    [TestMethod]
+    [Ignore("POST method")]
     public void CreateAccountOfficerAlertSubscriptionAsync()
     {
         var accountOfficerId = string.Empty;
@@ -61,7 +67,9 @@ public class AccountOfficersServiceTests : CredentialManagement
             .CreateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
-    [TestMethod, Ignore("PUT method")]
+
+    [TestMethod]
+    [Ignore("PUT method")]
     public void UpdateAccountOfficerAlertSubscriptionAsync()
     {
         var accountOfficerId = string.Empty;

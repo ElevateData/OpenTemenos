@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Order.Payments;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
@@ -10,7 +9,8 @@ public class PaymentsServiceTests : CredentialManagement
     private readonly IOrderClient _client = new OrderClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostPaymentsAsync()
     {
         var payload = new _0BULKPayload();

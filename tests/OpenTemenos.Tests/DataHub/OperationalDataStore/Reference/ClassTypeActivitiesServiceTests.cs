@@ -1,5 +1,4 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 
@@ -8,6 +7,7 @@ public class ClassTypeActivitiesServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
     private readonly string _entityTypeId = string.Empty;
+
     [TestMethod]
     public void GetClassTypeActivitiesAsync()
     {

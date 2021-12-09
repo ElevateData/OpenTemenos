@@ -1,13 +1,12 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
 [TestClass]
 public class ProductConditionDetailsServiceTests : CredentialManagement
 {
-    private readonly IProductClient _client = new ProductClient(HttpClient);
     private const string ProductId = "";
+    private readonly IProductClient _client = new ProductClient(HttpClient);
 
     [TestMethod]
     public void GetProtectionLimitConditionsAsync()

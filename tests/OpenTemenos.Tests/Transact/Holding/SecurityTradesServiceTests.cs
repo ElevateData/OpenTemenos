@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
@@ -7,5 +6,4 @@ namespace OpenTemenos.Tests.Transact.Holding;
 public class SecurityTradesServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
-
 }

@@ -1,23 +1,24 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Product.FundPromoters;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
 [TestClass]
 public class FundPromotersServiceTests : CredentialManagement
 {
-    private readonly IProductClient _client = new ProductClient(HttpClient);
     private const string NPromoter = "1";
+    private readonly IProductClient _client = new ProductClient(HttpClient);
 
     [TestMethod]
     public void GetFundPromoterAsync()
     {
-        var result = _client.FundPromoterService.GetFundpromoterAsync(null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.FundPromoterService
+            .GetFundpromoterAsync(null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostFundPromoterAsync()
     {
         var payload = new _0Payload();
@@ -25,7 +26,8 @@ public class FundPromotersServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutFundPromoterAsync()
     {
         var payload = new _0BULKPayload();
@@ -33,7 +35,8 @@ public class FundPromotersServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteFundPromoterAsync()
     {
         var payload = new _0BULKPayload();
@@ -44,25 +47,30 @@ public class FundPromotersServiceTests : CredentialManagement
     [TestMethod]
     public void GetFundPromoterByFPIdAsync()
     {
-        var result = _client.FundPromoterService.GetFundpromoterByFPIdAsync(null, null, null, null, null, null, null, null, null, null, NPromoter).Result;
+        var result = _client.FundPromoterService
+            .GetFundpromoterByFPIdAsync(null, null, null, null, null, null, null, null, null, null, NPromoter).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutFundPromoterByFPIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.FundPromoterService.PutFundpromoterByFPIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.FundPromoterService
+            .PutFundpromoterByFPIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteFundPromoterByFPIDAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.FundPromoterService.DeleteFundpromoterByFPIDAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.FundPromoterService
+            .DeleteFundpromoterByFPIDAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

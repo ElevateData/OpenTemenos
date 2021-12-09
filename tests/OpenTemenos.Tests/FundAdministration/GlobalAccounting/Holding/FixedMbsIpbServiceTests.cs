@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalAccounting;
 using FundAdministration.GlobalAccounting.Holding.FixedMbsIpb;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
@@ -10,7 +9,8 @@ public class FixedMbsIpbServiceTests : CredentialManagement
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void CreateFixedMbsOrIpbAsync()
     {
         var payload = new _0BULKPayload();

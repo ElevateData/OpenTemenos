@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalAccounting;
 using FundAdministration.GlobalAccounting.Holding.StockExchangeTransactionFee;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
@@ -10,11 +9,13 @@ public class StockExchangeTransactionFeeServiceTests : CredentialManagement
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void CreateStockExchangeTransactionFeeAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.StockExchangeFeeService.CreateStockExchangeTransactionFeeAsync(null, null, null, null, null, payload).Result;
+        var result = _client.StockExchangeFeeService
+            .CreateStockExchangeTransactionFeeAsync(null, null, null, null, null, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

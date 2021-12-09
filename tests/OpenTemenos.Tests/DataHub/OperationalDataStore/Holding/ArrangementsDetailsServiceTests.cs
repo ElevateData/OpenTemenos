@@ -1,33 +1,35 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
 [TestClass]
 public class ArrangementsDetailsServiceTests : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
     private const string CustomerId = "";
     private const string RecordId = "";
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
     [TestMethod]
     public void GetArrangementsForCustomersAsync()
     {
-        var result = _client.ArrangementsDetailService.GetArrangementsForCustomersAsync(CustomerId, null, null, null, null, null).Result;
+        var result = _client.ArrangementsDetailService
+            .GetArrangementsForCustomersAsync(CustomerId, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetArrangementAsync()
     {
-        var result = _client.ArrangementsDetailService.GetArrangementAsync(RecordId, null, null, null, null, null).Result;
+        var result = _client.ArrangementsDetailService.GetArrangementAsync(RecordId, null, null, null, null, null)
+            .Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetArrangementsForCustomerAsync()
     {
-        var result = _client.ArrangementsDetailService.GetArrangementsForCustomerAsync(CustomerId, RecordId, null, null, null, null).Result;
+        var result = _client.ArrangementsDetailService
+            .GetArrangementsForCustomerAsync(CustomerId, RecordId, null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 

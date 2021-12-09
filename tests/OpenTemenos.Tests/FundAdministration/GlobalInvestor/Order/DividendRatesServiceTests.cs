@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Order.DividendRates;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
@@ -10,7 +9,8 @@ public class DividendRatesServiceTests : CredentialManagement
     private readonly IOrderClient _client = new OrderClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostDividendRatesAsync()
     {
         var payload = new _0BULKPayload();

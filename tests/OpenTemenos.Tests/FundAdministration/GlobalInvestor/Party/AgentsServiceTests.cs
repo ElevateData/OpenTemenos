@@ -1,27 +1,26 @@
-﻿using System.Diagnostics;
-using System.Linq;
+﻿using System.Linq;
 using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Party.Agents;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
 [TestClass]
 public class AgentsServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
     private const string AgentId = "1";
+    private readonly IPartyClient _client = new PartyClient(HttpClient);
 
     [TestMethod]
     public void GetAgentAsync()
     {
-        var result = _client.DistributorService.GetAgentAsync(null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.DistributorService
+            .GetAgentAsync(null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"InternalId: {result.Body.Records?.First().InternalId}");
-        Debug.WriteLine($@"MainAgentId: {result.Body.Records?.First().MainAgentId}");
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.Records!.First())}");
     }
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostAgentAsync()
     {
         var payload = new _0Payload();
@@ -29,7 +28,8 @@ public class AgentsServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutAgentAsync()
     {
         var payload = new _0BULKPayload();
@@ -37,7 +37,8 @@ public class AgentsServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteAgentAsync()
     {
         var payload = new _0BULKPayload();
@@ -48,25 +49,30 @@ public class AgentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAgentByAgentIdAsync()
     {
-        var result = _client.DistributorService.GetAgentByagentIdAsync(null, null, null, null, null, null, null, null, null, null, AgentId).Result;
+        var result = _client.DistributorService
+            .GetAgentByagentIdAsync(null, null, null, null, null, null, null, null, null, null, AgentId).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutAgentByInternalIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.DistributorService.PutAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.DistributorService
+            .PutAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteAgentByInternalIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.DistributorService.DeleteAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.DistributorService
+            .DeleteAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

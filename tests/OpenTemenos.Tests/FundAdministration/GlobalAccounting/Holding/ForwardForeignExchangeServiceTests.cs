@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalAccounting;
 using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchange;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
@@ -10,11 +9,13 @@ public class ForwardForeignExchangeServiceTests : CredentialManagement
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void CreateForwardForeignExchangeAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ForwardForeignExchangeService.CreateForwardForeignExchangeAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ForwardForeignExchangeService
+            .CreateForwardForeignExchangeAsync(null, null, null, null, null, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

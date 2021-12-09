@@ -1,5 +1,4 @@
 ﻿using FundAdministration.GlobalInvestor;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Reference;
 
@@ -12,7 +11,8 @@ public class CountryHolidaysServiceTests : CredentialManagement
     [TestMethod]
     public void GetCountryHolidaysAsync()
     {
-        var result = _client.CountryHolidayService.GetCountryholidaysAsync(null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.CountryHolidayService
+            .GetCountryholidaysAsync(null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
 }

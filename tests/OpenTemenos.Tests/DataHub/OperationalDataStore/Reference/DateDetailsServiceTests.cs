@@ -1,5 +1,4 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 
@@ -15,6 +14,7 @@ public class DateDetailsServiceTests : CredentialManagement
         var result = _client.SystemBusinessDateService.GetDatesByCompanyAsync(_recordId, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetDatesAsync()
     {

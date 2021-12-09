@@ -1,5 +1,4 @@
 ﻿using DataHub.AnalyticDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Holding;
 
@@ -12,7 +11,8 @@ public class CustomerLoanDelinquency30DaysServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerLoanDelinquency30DaysAsync()
     {
-        var result = _client.CustomerLoanDelinquencyService.GetCustomerLoanDelinquency30DaysAsync(null, null, null).Result;
+        var result = _client.CustomerLoanDelinquencyService.GetCustomerLoanDelinquency30DaysAsync(null, null, null)
+            .Result;
         Assert.IsNotNull(result.Data);
     }
 }

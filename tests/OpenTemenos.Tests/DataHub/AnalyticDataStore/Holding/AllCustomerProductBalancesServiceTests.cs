@@ -1,8 +1,6 @@
 ﻿using DataHub.AnalyticDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Holding;
-
 
 [TestClass]
 public class AllCustomerProductBalancesServiceTests : CredentialManagement

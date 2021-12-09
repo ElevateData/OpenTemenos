@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Order.Announcements;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
@@ -10,11 +9,13 @@ public class AnnouncementsServiceTests : CredentialManagement
     private readonly IOrderClient _client = new OrderClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostDividendPaymentAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DividendPaymentService.PostDividendPaymentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DividendPaymentService.PostDividendPaymentAsync(null, null, null, null, null, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 }

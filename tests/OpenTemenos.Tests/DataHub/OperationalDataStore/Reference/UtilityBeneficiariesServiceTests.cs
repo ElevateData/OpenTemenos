@@ -1,5 +1,4 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 
@@ -11,7 +10,8 @@ public class UtilityBeneficiariesServiceTests : CredentialManagement
     [TestMethod]
     public void GetUtilityBeneficiariesAsync()
     {
-        var result = _client.UtilityBeneficiaryService.GetUtilityBeneficiariesAsync(null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.UtilityBeneficiaryService
+            .GetUtilityBeneficiariesAsync(null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 }

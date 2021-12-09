@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
@@ -7,5 +6,4 @@ namespace OpenTemenos.Tests.Transact.Microservice;
 public class ServiceOrchestratorServiceTests : CredentialManagement
 {
     private readonly IMicroserviceClient _client = new MicroserviceClient(HttpClient);
-
 }

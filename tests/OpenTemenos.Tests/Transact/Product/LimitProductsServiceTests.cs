@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Product;
 
@@ -7,5 +6,4 @@ namespace OpenTemenos.Tests.Transact.Product;
 public class LimitProductsServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient);
-
 }

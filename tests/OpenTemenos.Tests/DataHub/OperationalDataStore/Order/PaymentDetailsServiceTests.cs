@@ -1,5 +1,4 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 
@@ -33,7 +32,8 @@ public class PaymentDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPendingPaymentsAsync()
     {
-        var result = _client.PaymentService.GetPendingPaymentsAsync(null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.PaymentService
+            .GetPendingPaymentsAsync(null, null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 

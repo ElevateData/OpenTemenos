@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Product.FundCutoffTimes;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
@@ -9,11 +8,13 @@ public class FundCutoffTimesServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient);
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostFundCutOffTimeAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundCutoffTimeService.PostFundCutOffTimeAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundCutoffTimeService.PostFundCutOffTimeAsync(null, null, null, null, null, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -1,16 +1,16 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Product.Holidays;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
 [TestClass]
 public class HolidaysServiceTests : CredentialManagement
 {
-    private readonly IProductClient _client = new ProductClient(HttpClient);
     private const string InternalId = "1";
+    private readonly IProductClient _client = new ProductClient(HttpClient);
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostHolidaysByParentAsync()
     {
         var payload = new _0Payload();
@@ -18,7 +18,8 @@ public class HolidaysServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostHolidaysAsync()
     {
         var payload = new _0Payload();
@@ -26,7 +27,8 @@ public class HolidaysServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutHolidaysAsync()
     {
         var payload = new _0BULKPayload();
@@ -34,7 +36,8 @@ public class HolidaysServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteHolidaysAsync()
     {
         var payload = new _0BULKPayload();
@@ -45,25 +48,31 @@ public class HolidaysServiceTests : CredentialManagement
     [TestMethod]
     public void GetHolidaysByInternalIdAsync()
     {
-        var result = _client.HolidayService.GetHolidaysByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId).Result;
+        var result = _client.HolidayService
+            .GetHolidaysByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutHolidaysByIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.HolidayService.PutHolidaysByIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.HolidayService.PutHolidaysByIdAsync(null, null, null, null, null, internalId, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteHolidaysByIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.HolidayService.DeleteHolidaysByIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.HolidayService.DeleteHolidaysByIdAsync(null, null, null, null, null, internalId, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 }

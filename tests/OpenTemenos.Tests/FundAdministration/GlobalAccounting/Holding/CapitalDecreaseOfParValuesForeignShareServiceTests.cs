@@ -1,6 +1,5 @@
 ﻿using FundAdministration.GlobalAccounting;
 using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesForeignShare;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
@@ -10,7 +9,8 @@ public class CapitalDecreaseOfParValuesForeignShareServiceTests : CredentialMana
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void CreateCapitalDecreaseOfParValueForeignWithCostAdjustmentAsync()
     {
         var payload = new _0BULKPayload();

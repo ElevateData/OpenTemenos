@@ -1,16 +1,16 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Party.Profiles;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
 [TestClass]
 public class ProfileServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
     private const string InternalId = "1";
+    private readonly IPartyClient _client = new PartyClient(HttpClient);
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostProfilesByParentAsync()
     {
         var payload = new _0Payload();
@@ -18,7 +18,8 @@ public class ProfileServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostProfilesAsync()
     {
         var payload = new _0Payload();
@@ -26,7 +27,8 @@ public class ProfileServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutProfilesAsync()
     {
         var payload = new _0BULKPayload();
@@ -34,7 +36,8 @@ public class ProfileServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteProfilesAsync()
     {
         var payload = new _0BULKPayload();
@@ -45,25 +48,31 @@ public class ProfileServiceTests : CredentialManagement
     [TestMethod]
     public void GetProfilesByInternalIdAsync()
     {
-        var result = _client.ProfileService.GetProfilesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId).Result;
+        var result = _client.ProfileService
+            .GetProfilesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutProfilesByIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ProfileService.PutProfilesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.ProfileService.PutProfilesByIdAsync(null, null, null, null, null, internalId, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteProfilesByIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ProfileService.DeleteProfilesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.ProfileService.DeleteProfilesByIdAsync(null, null, null, null, null, internalId, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 }

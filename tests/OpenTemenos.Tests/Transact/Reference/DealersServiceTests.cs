@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
 using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -15,6 +13,6 @@ public class DealersServiceTests : CredentialManagement
     {
         var result = _client.DealersService.GetDealersAsync(null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"CurrentWorkingDate: {result.Body.First().DealerId}");
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 }

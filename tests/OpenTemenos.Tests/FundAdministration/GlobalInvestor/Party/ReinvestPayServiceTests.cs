@@ -1,24 +1,26 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Party.ReinvestPay;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
 [TestClass]
 public class ReinvestPayServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
     private const string InternalId = "1";
+    private readonly IPartyClient _client = new PartyClient(HttpClient);
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostReinvestPayByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ReinvestOrPayService.PostReinvestpayByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ReinvestOrPayService.PostReinvestpayByParentAsync(null, null, null, null, null, payload)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostReinvestPayAsync()
     {
         var payload = new _0Payload();
@@ -26,7 +28,8 @@ public class ReinvestPayServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutReinvestPayAsync()
     {
         var payload = new _0BULKPayload();
@@ -34,7 +37,8 @@ public class ReinvestPayServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteReinvestPayAsync()
     {
         var payload = new _0BULKPayload();
@@ -45,25 +49,31 @@ public class ReinvestPayServiceTests : CredentialManagement
     [TestMethod]
     public void GetReinvestPayByInternalIdAsync()
     {
-        var result = _client.ReinvestOrPayService.GetReinvestpayByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId).Result;
+        var result = _client.ReinvestOrPayService
+            .GetReinvestpayByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutReinvestPayByIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ReinvestOrPayService.PutReinvestpayByIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.ReinvestOrPayService
+            .PutReinvestpayByIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteReinvestPayByIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ReinvestOrPayService.DeleteReinvestpayByIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.ReinvestOrPayService
+            .DeleteReinvestpayByIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -1,15 +1,14 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Party;
 
 [TestClass]
 public class CustomerDetailsServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
     private const string RecordId = "";
     private const string FromCustomerId = "";
     private const string CutomerId = "";
+    private readonly IPartyClient _client = new PartyClient(HttpClient);
 
     [TestMethod]
     public void GetCustomerKycDetailsAsync()
@@ -49,7 +48,8 @@ public class CustomerDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetSecureMessagesForCustomerAsync()
     {
-        var result = _client.CustomerDetailService.GetSecureMessagesForCustomerAsync(FromCustomerId, null, null, null, null).Result;
+        var result = _client.CustomerDetailService
+            .GetSecureMessagesForCustomerAsync(FromCustomerId, null, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -74,7 +74,8 @@ public class CustomerDetailsServiceTests : CredentialManagement
         Assert.IsNotNull(result.Data);
     }
 
-    [TestMethod, Ignore("Invalid request object")]
+    [TestMethod]
+    [Ignore("Invalid request object")]
     public void GetCustomerDeliveryPreferencesAsync()
     {
         var result = _client.CustomerDetailService.GetCustomerDeliveryPreferencesAsync(new object(), null).Result;

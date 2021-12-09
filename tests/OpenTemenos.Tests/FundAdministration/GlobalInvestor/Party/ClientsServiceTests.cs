@@ -1,23 +1,24 @@
 ﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Party.Clients;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
 [TestClass]
 public class ClientsServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
     private const string ClientId = "1";
+    private readonly IPartyClient _client = new PartyClient(HttpClient);
 
     [TestMethod]
     public void GetClientAsync()
     {
-        var result = _client.InvestorService.GetClientAsync(null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.InvestorService.GetClientAsync(null, null, null, null, null, null, null, null, null, null)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("POST method")]
+    [TestMethod]
+    [Ignore("POST method")]
     public void PostClientAsync()
     {
         var payload = new _0Payload();
@@ -25,7 +26,8 @@ public class ClientsServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutClientAsync()
     {
         var payload = new _0BULKPayload();
@@ -33,7 +35,8 @@ public class ClientsServiceTests : CredentialManagement
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteClientAsync()
     {
         var payload = new _0BULKPayload();
@@ -44,25 +47,30 @@ public class ClientsServiceTests : CredentialManagement
     [TestMethod]
     public void GetClientByClientIdAsync()
     {
-        var result = _client.InvestorService.GetClientByClientIdAsync(null, null, null, null, null, null, null, null, null, null, ClientId).Result;
+        var result = _client.InvestorService
+            .GetClientByClientIdAsync(null, null, null, null, null, null, null, null, null, null, ClientId).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("PUT method")]
+    [TestMethod]
+    [Ignore("PUT method")]
     public void PutClientByInternalIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.InvestorService.PutClientByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.InvestorService
+            .PutClientByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
-    [TestMethod, Ignore("DELETE method")]
+    [TestMethod]
+    [Ignore("DELETE method")]
     public void DeleteClientByClientIdAsync()
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.InvestorService.DeleteClientByClientIDAsync(null, null, null, null, null, internalId, payload).Result;
+        var result = _client.InvestorService
+            .DeleteClientByClientIDAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

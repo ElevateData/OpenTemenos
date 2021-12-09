@@ -1,5 +1,4 @@
 ﻿using DataHub.OperationalDataStore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 
@@ -15,48 +14,56 @@ public class DealerDeskDetailsServiceTests : CredentialManagement
         var result = _client.TreasuryDealerDeskService.GetForexAgreementTypeAsync(_recordId, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetForexDealMethodAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetForexDealMethodAsync(_recordId).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetForexRevaluationTypeAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetForexRevaluationTypeAsync(_recordId, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetAgreementTypeAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetAgreementTypeAsync(_recordId, null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetDealersListAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetDealersListAsync(null, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetForexAgreementTypesAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetForexAgreementTypesAsync(null, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetForexDealMethodsAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetForexDealMethodsAsync(null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetForexRevaluationTypesAsync()
     {
         var result = _client.TreasuryDealerDeskService.GetForexRevaluationTypesAsync(null, null, null).Result;
         Assert.IsNotNull(result.Data);
     }
+
     [TestMethod]
     public void GetAgreementTypesAsync()
     {
