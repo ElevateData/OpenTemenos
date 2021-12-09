@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 

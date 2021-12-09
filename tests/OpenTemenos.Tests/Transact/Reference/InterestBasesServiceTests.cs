@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.InterestBases;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -25,6 +24,7 @@ public class InterestBasesServiceTests : CredentialManagement
         var result = _client.InterestBasesService
             .GetInterestDayBasisDetailsAsync(InterestBasisId, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 
     [TestMethod]

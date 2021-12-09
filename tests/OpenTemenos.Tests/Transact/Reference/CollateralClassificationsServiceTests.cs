@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
@@ -24,5 +23,6 @@ public class CollateralClassificationsServiceTests : CredentialManagement
         var result = _client.CollateralClassificationsService
             .GetCollateralSubTypesAsync(CollateralTypeId, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.AccountOfficers;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -25,6 +24,7 @@ public class AccountOfficersServiceTests : CredentialManagement
         var result = _client.AccountOfficersService
             .GetAccountOfficerDetailsAsync(AccountOfficerId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -55,6 +55,7 @@ public class AccountOfficersServiceTests : CredentialManagement
         var result = _client.AccountOfficersService
             .GetAccountOfficerAlertSubscriptionAsync(AccountOfficerId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

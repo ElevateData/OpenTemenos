@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.Currencies;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -7,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 [TestClass]
 public class CurrenciesServiceTests : CredentialManagement
 {
-    private const string CurrencyId = "";
+    private const string CurrencyId = "USD";
     private const string CurrencyMarketId = "";
     private const string NumericCurrencyCode = "";
     private const string Year = "2020";

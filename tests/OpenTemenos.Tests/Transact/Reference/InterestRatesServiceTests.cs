@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.InterestRates;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -8,7 +7,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class InterestRatesServiceTests : CredentialManagement
 {
     private const string RateId = "1";
-    private const string Date = "";
+    private const string Date = "20201209";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
 
     [TestMethod]
@@ -109,6 +108,7 @@ public class InterestRatesServiceTests : CredentialManagement
     {
         var result = _client.InterestRatesService.GetBasicInterestNameAsync(RateId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

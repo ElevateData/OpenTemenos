@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
@@ -108,5 +107,6 @@ public class TreasuryServiceTests : CredentialManagement
         var result = _client.TreasuryService
             .GetAgreementTypeAsync(AgreementTypeId, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 }

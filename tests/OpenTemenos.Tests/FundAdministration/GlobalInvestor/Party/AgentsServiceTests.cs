@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FundAdministration.GlobalInvestor;
+﻿using FundAdministration.GlobalInvestor;
 using FundAdministration.GlobalInvestor.Party.Agents;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;

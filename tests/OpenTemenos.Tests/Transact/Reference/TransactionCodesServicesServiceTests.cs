@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.TransactionCodesServices;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -16,6 +15,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
         var result = _client.TransactionCodesServicesService
             .GetTransactionCodeAsync(TransactionCode, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

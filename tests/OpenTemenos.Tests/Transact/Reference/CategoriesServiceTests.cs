@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.Categories;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -24,6 +23,7 @@ public class CategoriesServiceTests : CredentialManagement
     {
         var result = _client.CategoriesService.GetCategoryDetailsAsync(CategoryId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

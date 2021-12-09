@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Holding.Alerts;
 
 namespace OpenTemenos.Tests.Transact.Holding;

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Holding.Accounts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
@@ -8,9 +7,9 @@ namespace OpenTemenos.Tests.Transact.Holding;
 public class AccountsServiceTests : CredentialManagement
 {
     private const string AccountId = "101125";
-    private const string BookingDate = "2020-12-09";
-    private const string CurrencyId = "UDS";
-    private const string ValueDate = "2020-12-09";
+    private const string BookingDate = "20201209";
+    private const string CurrencyId = "USD";
+    private const string ValueDate = "20201209";
     private const string AccountCompany = "";
     private const string PaymentCurrency = "";
     private const string AccountSwitch = "";
@@ -152,6 +151,7 @@ public class AccountsServiceTests : CredentialManagement
             .GetNostroBalancesAsync(CurrencyId, null, null, null, null, null, null, null, null, null)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 
     [TestMethod]
@@ -197,6 +197,7 @@ public class AccountsServiceTests : CredentialManagement
             .GetActiveProxyIdentifierAsync(null, null, null, null, null, null, null, null, null, null, null, null)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 
     [TestMethod]
@@ -246,6 +247,7 @@ public class AccountsServiceTests : CredentialManagement
             .GetContractBalancesAsync(ContractBalanceId, null, null, null, null, null, null, null, null)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 
     [TestMethod]

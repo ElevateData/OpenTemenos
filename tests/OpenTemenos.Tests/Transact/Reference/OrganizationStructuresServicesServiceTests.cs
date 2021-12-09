@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.OrganizationStructuresServices;
 
 namespace OpenTemenos.Tests.Transact.Reference;

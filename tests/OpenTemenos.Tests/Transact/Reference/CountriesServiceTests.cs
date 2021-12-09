@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Transact;
+﻿using Transact;
 using Transact.Reference.Countries;
 
 namespace OpenTemenos.Tests.Transact.Reference;
@@ -35,6 +34,7 @@ public class CountriesServiceTests : CredentialManagement
     {
         var result = _client.CountriesService.GetCountryDetailsAsync(CountryId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -64,6 +64,7 @@ public class CountriesServiceTests : CredentialManagement
     {
         var result = _client.CountriesService.GetCountryGroupAsync(GroupId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

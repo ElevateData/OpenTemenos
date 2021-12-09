@@ -13,5 +13,6 @@ public class BeneficiariesServiceTests : CredentialManagement
         var result = _client.BeneficiariesService.GetUtilityBeneficiariesAsync(null, null, null, null, null, null, null,
             null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
 }
