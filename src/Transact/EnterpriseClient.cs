@@ -13,5 +13,5 @@ public class EnterpriseClient : IEnterpriseClient
         _httpClient = httpClient;
     }
 
-    public IPricingService EnterpriseProductPricingService => new PricingService(_httpClient){BaseUrl = BaseUrl};
+    public IPricingService EnterpriseProductPricingService => new PricingService(_httpClient) { BaseUrl = BaseUrl };
 }

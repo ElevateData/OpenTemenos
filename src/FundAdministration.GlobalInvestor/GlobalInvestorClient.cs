@@ -9,13 +9,13 @@ public class GlobalInvestorClient : IGlobalInvestorClient
     {
         _httpClient = httpClient;
     }
-    public IOrderClient OrderClient => new OrderClient(_httpClient){BaseUrl = BaseUrl};
+    public IOrderClient OrderClient => new OrderClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public IPartyClient PartyClient => new PartyClient(_httpClient){BaseUrl = BaseUrl};
+    public IPartyClient PartyClient => new PartyClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public IProductClient ProductClient => new ProductClient(_httpClient){BaseUrl = BaseUrl};
+    public IProductClient ProductClient => new ProductClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public IReferenceClient ReferenceClient => new ReferenceClient(_httpClient){BaseUrl = BaseUrl};
+    public IReferenceClient ReferenceClient => new ReferenceClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public ISystemClient SystemClient => new SystemClient(_httpClient){BaseUrl = BaseUrl};
+    public ISystemClient SystemClient => new SystemClient(_httpClient) { BaseUrl = BaseUrl };
 }

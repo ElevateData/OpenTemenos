@@ -24,35 +24,35 @@ public class HoldingClient : IHoldingClient
     }
 
     public IAccountTransactionDetailsService AccountTransactionDetailService =>
-        new AccountTransactionDetailsService(_httpClient){BaseUrl = BaseUrl};
+        new AccountTransactionDetailsService(_httpClient) { BaseUrl = BaseUrl };
 
     public IAccountTransactionMetricsService AccountTransactionService =>
-        new AccountTransactionMetricsService(_httpClient){BaseUrl = BaseUrl};
+        new AccountTransactionMetricsService(_httpClient) { BaseUrl = BaseUrl };
 
     public ICustomerDepositMaturity30DaysService CustomerDepositService =>
-        new CustomerDepositMaturity30DaysService(_httpClient){BaseUrl = BaseUrl};
+        new CustomerDepositMaturity30DaysService(_httpClient) { BaseUrl = BaseUrl };
 
     public ICustomerLoanDelinquency30DaysService CustomerLoanDelinquencyService =>
-        new CustomerLoanDelinquency30DaysService(_httpClient){BaseUrl = BaseUrl};
+        new CustomerLoanDelinquency30DaysService(_httpClient) { BaseUrl = BaseUrl };
 
     public ICustomerAccountBalanceOverdrawnService CustomerOverdrawnAccountBalanceService =>
-        new CustomerAccountBalanceOverdrawnService(_httpClient){BaseUrl = BaseUrl};
+        new CustomerAccountBalanceOverdrawnService(_httpClient) { BaseUrl = BaseUrl };
 
     public IAllCustomerProductBalancesService CustomerProductBalanceService =>
-        new AllCustomerProductBalancesService(_httpClient){BaseUrl = BaseUrl};
+        new AllCustomerProductBalancesService(_httpClient) { BaseUrl = BaseUrl };
 
     public IAllCustomerProfitabilityMetricsService CustomerProfitabilityService =>
-        new AllCustomerProfitabilityMetricsService(_httpClient){BaseUrl = BaseUrl};
+        new AllCustomerProfitabilityMetricsService(_httpClient) { BaseUrl = BaseUrl };
 
     public IAllCustomerTransactionCountService CustomerTransactionClassificationService =>
-        new AllCustomerTransactionCountService(_httpClient){BaseUrl = BaseUrl};
+        new AllCustomerTransactionCountService(_httpClient) { BaseUrl = BaseUrl };
 
     public IRetailDepositsCustomerDetailsService DepositCustomerBalanceService =>
-        new RetailDepositsCustomerDetailsService(_httpClient){BaseUrl = BaseUrl};
+        new RetailDepositsCustomerDetailsService(_httpClient) { BaseUrl = BaseUrl };
 
     public IRetailLendingCustomerDetailsService LendingCustomerBalanceService =>
-        new RetailLendingCustomerDetailsService(_httpClient){BaseUrl = BaseUrl};
+        new RetailLendingCustomerDetailsService(_httpClient) { BaseUrl = BaseUrl };
 
     public IProductTransactionMetricsService ProductTransactionService =>
-        new ProductTransactionMetricsService(_httpClient){BaseUrl = BaseUrl};
+        new ProductTransactionMetricsService(_httpClient) { BaseUrl = BaseUrl };
 }

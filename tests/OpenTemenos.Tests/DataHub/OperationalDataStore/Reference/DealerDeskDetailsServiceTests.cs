@@ -12,7 +12,7 @@ public class DealerDeskDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexAgreementTypeAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetForexAgreementTypeAsync(_recordId,null).Result;
+        var result = _client.TreasuryDealerDeskService.GetForexAgreementTypeAsync(_recordId, null).Result;
         Assert.IsNotNull(result.Data);
     }
     [TestMethod]

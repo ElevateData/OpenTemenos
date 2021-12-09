@@ -18,14 +18,14 @@ public class ProductClient : IProductClient
         _httpClient = httpClient;
     }
 
-    public IProductBuilderDetailsService ProductBuilderService => new ProductBuilderDetailsService(_httpClient){BaseUrl = BaseUrl};
-    public IProductConditionDetailsService ProductConditionService => new ProductConditionDetailsService(_httpClient){BaseUrl = BaseUrl};
-    public IProductDetailsService ProductDetailService => new ProductDetailsService(_httpClient){BaseUrl = BaseUrl};
-    public IInterestCatalogService InterestCatalogService => new InterestCatalogService(_httpClient){BaseUrl = BaseUrl};
+    public IProductBuilderDetailsService ProductBuilderService => new ProductBuilderDetailsService(_httpClient) { BaseUrl = BaseUrl };
+    public IProductConditionDetailsService ProductConditionService => new ProductConditionDetailsService(_httpClient) { BaseUrl = BaseUrl };
+    public IProductDetailsService ProductDetailService => new ProductDetailsService(_httpClient) { BaseUrl = BaseUrl };
+    public IInterestCatalogService InterestCatalogService => new InterestCatalogService(_httpClient) { BaseUrl = BaseUrl };
 
     public IInterestConditionDetailsService ProductInterestConditionService =>
-        new InterestConditionDetailsService(_httpClient){BaseUrl = BaseUrl};
+        new InterestConditionDetailsService(_httpClient) { BaseUrl = BaseUrl };
 
     public IProductMarketingCatalogueService ProductMarketingCatalogService =>
-        new ProductMarketingCatalogueService(_httpClient){BaseUrl = BaseUrl};
+        new ProductMarketingCatalogueService(_httpClient) { BaseUrl = BaseUrl };
 }

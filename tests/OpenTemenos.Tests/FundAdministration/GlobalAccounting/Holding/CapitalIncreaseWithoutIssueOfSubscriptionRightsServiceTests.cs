@@ -1,6 +1,6 @@
 ﻿using FundAdministration.GlobalAccounting;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FundAdministration.GlobalAccounting.Holding.CapitalIncreaseWithoutIssueOfSubscriptionRights;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 

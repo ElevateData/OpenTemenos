@@ -9,9 +9,9 @@ public class GlobalAccountingClient : IGlobalAccountingClient
     {
         _httpClient = httpClient;
     }
-    public IHoldingClient Holding => new HoldingClient(_httpClient){BaseUrl = BaseUrl};
+    public IHoldingClient Holding => new HoldingClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public IOrderClient Order => new OrderClient(_httpClient){BaseUrl = BaseUrl};
+    public IOrderClient Order => new OrderClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public IReferenceClient Reference => new ReferenceClient(_httpClient){BaseUrl = BaseUrl};
+    public IReferenceClient Reference => new ReferenceClient(_httpClient) { BaseUrl = BaseUrl };
 }

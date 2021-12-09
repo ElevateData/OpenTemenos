@@ -42,7 +42,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetChildOrganizationsAsync()
     {
-        var result = _client.OrganizationStructuresServicesService.GetChildOrganizationsAsync(OrganizationId, null, null, null, null,null, null, null, null).Result;
+        var result = _client.OrganizationStructuresServicesService.GetChildOrganizationsAsync(OrganizationId, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"BicId: {result.Body.First().ChildOrganizationId}");
     }
@@ -56,7 +56,8 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
 
     [TestMethod]
     public void GetLineOfBusinessNameAsync()
-    { var result = _client.OrganizationStructuresServicesService.GetLineOfBusinessNameAsync(LineOfBusinessId, null, null, null, null).Result;
+    {
+        var result = _client.OrganizationStructuresServicesService.GetLineOfBusinessNameAsync(LineOfBusinessId, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
 }

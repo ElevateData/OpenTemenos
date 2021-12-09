@@ -28,21 +28,21 @@ public class OrderClient : IOrderClient
     {
         _httpClient = httpClient;
     }
-    public IAdjustmentsService UnderlyingRegAdjustmentService => new AdjustmentsService(_httpClient){BaseUrl = BaseUrl};
-    public IAnnouncementsService DividendPaymentService => new AnnouncementsService(_httpClient){BaseUrl = BaseUrl};
-    public IContractChangesService RegisterContractChangeService => new ContractChangesService(_httpClient){BaseUrl = BaseUrl};
-    public IContractHistoryService RegisterHistoricalContractService => new ContractHistoryService(_httpClient){BaseUrl = BaseUrl};
-    public IDividendRatesService DividendRateService => new DividendRatesService(_httpClient){BaseUrl = BaseUrl};
-    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient){BaseUrl = BaseUrl};
-    public IInstructionService InstructionService => new InstructionService(_httpClient){BaseUrl = BaseUrl};
-    public INavService SharePriceService => new NavService(_httpClient){BaseUrl = BaseUrl};
-    public IOrderCancelReverseService OrderCancellationService => new OrderCancelReverseService(_httpClient){BaseUrl = BaseUrl};
-    public IOrderNotificationService ErrorInterfaceService => new OrderNotificationService(_httpClient){BaseUrl = BaseUrl};
-    public IOrderService OrderService => new OrderService(_httpClient){BaseUrl = BaseUrl};
-    public IPaymentAmendmentsService PaymentAmendmentService => new PaymentAmendmentsService(_httpClient){BaseUrl = BaseUrl};
-    public IPaymentLogProcessesService PaymentLogService => new PaymentLogProcessesService(_httpClient){BaseUrl = BaseUrl};
-    public IPaymentsService PaymentService => new PaymentsService(_httpClient){BaseUrl = BaseUrl};
-    public IReceiptsService CashReceiptService => new ReceiptsService(_httpClient){BaseUrl = BaseUrl};
-    public ISecurityPriceUpdatesService MarketValueHistoricalService => new SecurityPriceUpdatesService(_httpClient){BaseUrl = BaseUrl};
-    public ITradingDeskRatesService TradingDeskValidationService => new TradingDeskRatesService(_httpClient){BaseUrl = BaseUrl};
+    public IAdjustmentsService UnderlyingRegAdjustmentService => new AdjustmentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IAnnouncementsService DividendPaymentService => new AnnouncementsService(_httpClient) { BaseUrl = BaseUrl };
+    public IContractChangesService RegisterContractChangeService => new ContractChangesService(_httpClient) { BaseUrl = BaseUrl };
+    public IContractHistoryService RegisterHistoricalContractService => new ContractHistoryService(_httpClient) { BaseUrl = BaseUrl };
+    public IDividendRatesService DividendRateService => new DividendRatesService(_httpClient) { BaseUrl = BaseUrl };
+    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient) { BaseUrl = BaseUrl };
+    public IInstructionService InstructionService => new InstructionService(_httpClient) { BaseUrl = BaseUrl };
+    public INavService SharePriceService => new NavService(_httpClient) { BaseUrl = BaseUrl };
+    public IOrderCancelReverseService OrderCancellationService => new OrderCancelReverseService(_httpClient) { BaseUrl = BaseUrl };
+    public IOrderNotificationService ErrorInterfaceService => new OrderNotificationService(_httpClient) { BaseUrl = BaseUrl };
+    public IOrderService OrderService => new OrderService(_httpClient) { BaseUrl = BaseUrl };
+    public IPaymentAmendmentsService PaymentAmendmentService => new PaymentAmendmentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IPaymentLogProcessesService PaymentLogService => new PaymentLogProcessesService(_httpClient) { BaseUrl = BaseUrl };
+    public IPaymentsService PaymentService => new PaymentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IReceiptsService CashReceiptService => new ReceiptsService(_httpClient) { BaseUrl = BaseUrl };
+    public ISecurityPriceUpdatesService MarketValueHistoricalService => new SecurityPriceUpdatesService(_httpClient) { BaseUrl = BaseUrl };
+    public ITradingDeskRatesService TradingDeskValidationService => new TradingDeskRatesService(_httpClient) { BaseUrl = BaseUrl };
 }

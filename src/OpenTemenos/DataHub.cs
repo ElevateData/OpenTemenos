@@ -13,6 +13,6 @@ public class DataHub : IDataHub
         _httpClient = httpClient;
     }
 
-    public IAnalyticDataStoreClient AnalyticDataStore => new AnalyticDataStoreClient(_httpClient){BaseUrl = BaseUrl};
-    public IOperationalDataStoreClient OperationalDataStore => new OperationalDataStoreClient(_httpClient){BaseUrl = BaseUrl};
+    public IAnalyticDataStoreClient AnalyticDataStore => new AnalyticDataStoreClient(_httpClient) { BaseUrl = BaseUrl };
+    public IOperationalDataStoreClient OperationalDataStore => new OperationalDataStoreClient(_httpClient) { BaseUrl = BaseUrl };
 }

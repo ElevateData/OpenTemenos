@@ -11,7 +11,7 @@ public class InterestBasisServiceTests : CredentialManagement
     [TestMethod]
     public void GetInterestBasisAsync()
     {
-        var result = _client.InterestBaseService.GetInterestBasisAsync(null,null).Result;
+        var result = _client.InterestBaseService.GetInterestBasisAsync(null, null).Result;
         Assert.IsNotNull(result.Data);
     }
 }

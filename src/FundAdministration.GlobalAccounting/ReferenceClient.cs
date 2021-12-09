@@ -18,11 +18,11 @@ public class ReferenceClient : IReferenceClient
     {
         _httpClient = httpClient;
     }
-    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient){BaseUrl = BaseUrl};
-    public IForwardExchangeRateService ForwardExchangeRateService => new ForwardExchangeRateService(_httpClient){BaseUrl = BaseUrl};
-    public IForwardInterestRateService ForwardInterestRateService => new ForwardInterestRateService(_httpClient){BaseUrl = BaseUrl};
-    public IInterestRateTypeService InterestRateTypeService => new InterestRateTypeService(_httpClient){BaseUrl = BaseUrl};
-    public ISecurityPriceService SecurityPriceService => new SecurityPriceService(_httpClient){BaseUrl = BaseUrl};
-    public ISwapInterestRateService SwapInterestRateService => new SwapInterestRateService(_httpClient){BaseUrl = BaseUrl};
-    public ISwapsPriceService SwapsPriceService => new SwapsPriceService(_httpClient){BaseUrl = BaseUrl};
+    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient) { BaseUrl = BaseUrl };
+    public IForwardExchangeRateService ForwardExchangeRateService => new ForwardExchangeRateService(_httpClient) { BaseUrl = BaseUrl };
+    public IForwardInterestRateService ForwardInterestRateService => new ForwardInterestRateService(_httpClient) { BaseUrl = BaseUrl };
+    public IInterestRateTypeService InterestRateTypeService => new InterestRateTypeService(_httpClient) { BaseUrl = BaseUrl };
+    public ISecurityPriceService SecurityPriceService => new SecurityPriceService(_httpClient) { BaseUrl = BaseUrl };
+    public ISwapInterestRateService SwapInterestRateService => new SwapInterestRateService(_httpClient) { BaseUrl = BaseUrl };
+    public ISwapsPriceService SwapsPriceService => new SwapsPriceService(_httpClient) { BaseUrl = BaseUrl };
 }

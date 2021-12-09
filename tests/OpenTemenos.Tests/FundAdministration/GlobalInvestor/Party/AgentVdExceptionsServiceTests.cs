@@ -1,6 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FundAdministration.GlobalInvestor.Party.AgentVdExceptions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
@@ -62,8 +62,9 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     [TestMethod, Ignore("DELETE method")]
     public void DeleteAgentVdExceptionsByIdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ExceptionValueDateService.DeleteAgentVdExceptionsByIdAsync(null, null, null, null, null,InternalId, payload).Result;
+        var result = _client.ExceptionValueDateService.DeleteAgentVdExceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -102,23 +103,25 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     [TestMethod]
     public void GetFundVdExceptionsByInternalIdProdAsync()
     {
-        var result = _client.ExceptionValueDateService.GetFundVdExceptionsByInternalIdProdAsync(null, null, null, null, null, null,null,null, null,null, InternalId).Result;
+        var result = _client.ExceptionValueDateService.GetFundVdExceptionsByInternalIdProdAsync(null, null, null, null, null, null, null, null, null, null, InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod, Ignore("PUT method")]
     public void PutFundVdExceptionsByIdProdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ExceptionValueDateService.PutFundVdExceptionsByIdProdAsync(null, null, null, null, null,InternalId, payload).Result;
+        var result = _client.ExceptionValueDateService.PutFundVdExceptionsByIdProdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod, Ignore("DELETE method")]
     public void DeleteFundVdExceptionsByIdProdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ExceptionValueDateService.DeleteFundVdExceptionsByIdProdAsync(null, null, null, null, null,InternalId, payload).Result;
+        var result = _client.ExceptionValueDateService.DeleteFundVdExceptionsByIdProdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

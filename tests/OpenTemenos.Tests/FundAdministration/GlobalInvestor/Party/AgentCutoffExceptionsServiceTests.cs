@@ -1,6 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FundAdministration.GlobalInvestor.Party.AgentCutoffExceptions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
@@ -52,16 +52,18 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
     [TestMethod, Ignore("PUT method")]
     public void PutAgentCutoffExceptionsByIdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ExceptionCutoffForDistributorService.PutAgentcutoffexceptionsByIdAsync(null, null, null, null, null,InternalId, payload).Result;
+        var result = _client.ExceptionCutoffForDistributorService.PutAgentcutoffexceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod, Ignore("DELETE method")]
     public void DeleteAgentCutoffExceptionsByIdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ExceptionCutoffForDistributorService.DeleteAgentcutoffexceptionsByIdAsync(null, null, null, null, null, InternalId, payload).Result;
+        var result = _client.ExceptionCutoffForDistributorService.DeleteAgentcutoffexceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

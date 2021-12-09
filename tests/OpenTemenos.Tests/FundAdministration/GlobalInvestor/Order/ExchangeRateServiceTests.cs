@@ -1,6 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FundAdministration.GlobalInvestor.Order.ExchangeRate;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 

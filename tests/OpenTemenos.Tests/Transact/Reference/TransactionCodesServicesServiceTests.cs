@@ -24,7 +24,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     {
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
-        var result = _client.TransactionCodesServicesService.CreateTransactionCodeAsync(transactionCode,  payload, null, null, null, null, null).Result;
+        var result = _client.TransactionCodesServicesService.CreateTransactionCodeAsync(transactionCode, payload, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
 

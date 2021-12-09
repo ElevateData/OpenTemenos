@@ -18,18 +18,18 @@ public class Treasury : ITreasury
     {
         _httpClient = httpClient;
     }
-    public ITreasuryCurrencyPairsService CurrencyPairService => new TreasuryCurrencyPairsService(_httpClient){BaseUrl = BaseUrl};
+    public ITreasuryCurrencyPairsService CurrencyPairService => new TreasuryCurrencyPairsService(_httpClient) { BaseUrl = BaseUrl };
 
-    public ISwapNpvRevaluationService InterestRateSwapRevaluationService => new SwapNpvRevaluationService(_httpClient){BaseUrl = BaseUrl};
+    public ISwapNpvRevaluationService InterestRateSwapRevaluationService => new SwapNpvRevaluationService(_httpClient) { BaseUrl = BaseUrl };
 
-    public ITreasuryCurrenciesService LiveRateService => new TreasuryCurrenciesService(_httpClient){BaseUrl = BaseUrl};
+    public ITreasuryCurrenciesService LiveRateService => new TreasuryCurrenciesService(_httpClient) { BaseUrl = BaseUrl };
 
     public ICreateNonDeliverableForwardsService NonDeliverableForwardService =>
-        new CreateNonDeliverableForwardsService(_httpClient){BaseUrl = BaseUrl};
+        new CreateNonDeliverableForwardsService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IPositionService PositionService => new PositionService(_httpClient){BaseUrl = BaseUrl};
+    public IPositionService PositionService => new PositionService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IReportsService ReportService => new ReportsService(_httpClient){BaseUrl = BaseUrl};
+    public IReportsService ReportService => new ReportsService(_httpClient) { BaseUrl = BaseUrl };
 
-    public ICurrencyPositionService CurrencyPositionService => new CurrencyPositionService(_httpClient){BaseUrl = BaseUrl};
+    public ICurrencyPositionService CurrencyPositionService => new CurrencyPositionService(_httpClient) { BaseUrl = BaseUrl };
 }

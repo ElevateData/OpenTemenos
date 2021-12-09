@@ -16,9 +16,9 @@ public class ProductClient : IProductClient
     {
         _httpClient = httpClient;
     }
-    public ICustomersService CustomersService => new CustomersService(_httpClient){BaseUrl = BaseUrl};
-    public IExternalProductsService ExternalProductsService => new ExternalProductsService(_httpClient){BaseUrl = BaseUrl};
-    public ILimitProductsService LimitProductsService => new LimitProductsService(_httpClient){BaseUrl = BaseUrl};
-    public IMarketingCatalogueService MarketingCatalogueService => new MarketingCatalogueService(_httpClient){BaseUrl = BaseUrl};
-    public IUserAdminService UserAdminService => new UserAdminService(_httpClient){BaseUrl = BaseUrl};
+    public ICustomersService CustomersService => new CustomersService(_httpClient) { BaseUrl = BaseUrl };
+    public IExternalProductsService ExternalProductsService => new ExternalProductsService(_httpClient) { BaseUrl = BaseUrl };
+    public ILimitProductsService LimitProductsService => new LimitProductsService(_httpClient) { BaseUrl = BaseUrl };
+    public IMarketingCatalogueService MarketingCatalogueService => new MarketingCatalogueService(_httpClient) { BaseUrl = BaseUrl };
+    public IUserAdminService UserAdminService => new UserAdminService(_httpClient) { BaseUrl = BaseUrl };
 }

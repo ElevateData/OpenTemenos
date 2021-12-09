@@ -1,6 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FundAdministration.GlobalInvestor.Party.AgentDistributions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 

@@ -13,7 +13,7 @@ public class UsModelBank : IUsModelBank
     {
         _httpClient = httpClient;
     }
-    public IUsDashboardsService HoldingSummaryService => new UsDashboardsService(_httpClient){BaseUrl = BaseUrl};
+    public IUsDashboardsService HoldingSummaryService => new UsDashboardsService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IUsSafeDepositsService SafeDepositService => new UsSafeDepositsService(_httpClient){BaseUrl = BaseUrl};
+    public IUsSafeDepositsService SafeDepositService => new UsSafeDepositsService(_httpClient) { BaseUrl = BaseUrl };
 }

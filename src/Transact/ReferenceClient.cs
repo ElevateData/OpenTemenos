@@ -49,7 +49,7 @@ public class ReferenceClient : IReferenceClient
     {
         _httpClient = httpClient;
     }
-    public IAccountOfficersService AccountOfficersService => new AccountOfficersService(_httpClient){BaseUrl = BaseUrl};
+    public IAccountOfficersService AccountOfficersService => new AccountOfficersService(_httpClient) { BaseUrl = BaseUrl };
     public IBalanceTypesService BalanceTypesService => new BalanceTypesService(_httpClient) { BaseUrl = BaseUrl };
     public IBeneficiariesService BeneficiariesService => new BeneficiariesService(_httpClient) { BaseUrl = BaseUrl };
     public IBICsService BICsService => new BICsService(_httpClient) { BaseUrl = BaseUrl };
@@ -70,22 +70,22 @@ public class ReferenceClient : IReferenceClient
     public INationalIdsService NationalIdsService => new NationalIdsService(_httpClient) { BaseUrl = BaseUrl };
     public IOrganizationStructuresServicesService OrganizationStructuresServicesService => new OrganizationStructuresServicesService(_httpClient) { BaseUrl = BaseUrl };
     public IPeriodDatesService PeriodDatesService => new PeriodDatesService(_httpClient) { BaseUrl = BaseUrl };
-    public IPortfolioAccountsService PortfolioAccountsService => new PortfolioAccountsService(_httpClient){BaseUrl = BaseUrl};
-    public IProductService ProductService => new ProductService(_httpClient){BaseUrl = BaseUrl};
-    public IRoundingRuleService RoundingRuleService => new RoundingRuleService(_httpClient){BaseUrl = BaseUrl};
-    public ITransactionCodesServicesService TransactionCodesServicesService => new TransactionCodesServicesService(_httpClient){BaseUrl = BaseUrl};
-    public ITreasuryService TreasuryService => new TreasuryService(_httpClient){BaseUrl = BaseUrl};
-    public IUsBenOwnerTypesService UsBenOwnerTypesService => new UsBenOwnerTypesService(_httpClient){BaseUrl = BaseUrl};
-    public IUsCountyService UsCountyService => new UsCountyService(_httpClient){BaseUrl = BaseUrl};
-    public IUsCovenantService UsCovenantService => new UsCovenantService(_httpClient){BaseUrl = BaseUrl};
-    public IUsCustomerRatingService UsCustomerRatingService => new UsCustomerRatingService(_httpClient){BaseUrl = BaseUrl};
-    public IUsCustomerSuffixService UsCustomerSuffixService => new UsCustomerSuffixService(_httpClient){BaseUrl = BaseUrl};
-    public IUsCustomerTitleService UsCustomerTitleService => new UsCustomerTitleService(_httpClient){BaseUrl = BaseUrl};
-    public IUsFdicClassCodesService UsFdicClassCodesService => new UsFdicClassCodesService(_httpClient){BaseUrl = BaseUrl};
-    public IUsHoldTypesService UsHoldTypesService => new UsHoldTypesService(_httpClient){BaseUrl = BaseUrl};
-    public IUsIdDocumentsService UsIdDocumentsService => new UsIdDocumentsService(_httpClient){BaseUrl = BaseUrl};
-    public IUsIndustryService UsIndustryService => new UsIndustryService(_httpClient){BaseUrl = BaseUrl};
-    public IUsSectorService UsSectorService => new UsSectorService(_httpClient){BaseUrl = BaseUrl};
-    public IUsSortCodesServicesService UsSortCodesServicesService => new UsSortCodesServicesService(_httpClient){BaseUrl = BaseUrl};
-    public IUsStateService UsStateService => new UsStateService(_httpClient){BaseUrl = BaseUrl};
+    public IPortfolioAccountsService PortfolioAccountsService => new PortfolioAccountsService(_httpClient) { BaseUrl = BaseUrl };
+    public IProductService ProductService => new ProductService(_httpClient) { BaseUrl = BaseUrl };
+    public IRoundingRuleService RoundingRuleService => new RoundingRuleService(_httpClient) { BaseUrl = BaseUrl };
+    public ITransactionCodesServicesService TransactionCodesServicesService => new TransactionCodesServicesService(_httpClient) { BaseUrl = BaseUrl };
+    public ITreasuryService TreasuryService => new TreasuryService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsBenOwnerTypesService UsBenOwnerTypesService => new UsBenOwnerTypesService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsCountyService UsCountyService => new UsCountyService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsCovenantService UsCovenantService => new UsCovenantService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsCustomerRatingService UsCustomerRatingService => new UsCustomerRatingService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsCustomerSuffixService UsCustomerSuffixService => new UsCustomerSuffixService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsCustomerTitleService UsCustomerTitleService => new UsCustomerTitleService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsFdicClassCodesService UsFdicClassCodesService => new UsFdicClassCodesService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsHoldTypesService UsHoldTypesService => new UsHoldTypesService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsIdDocumentsService UsIdDocumentsService => new UsIdDocumentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsIndustryService UsIndustryService => new UsIndustryService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsSectorService UsSectorService => new UsSectorService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsSortCodesServicesService UsSortCodesServicesService => new UsSortCodesServicesService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsStateService UsStateService => new UsStateService(_httpClient) { BaseUrl = BaseUrl };
 }

@@ -20,13 +20,13 @@ public class SystemClient : ISystemClient
     {
         _httpClient = httpClient;
     }
-    public ICloudServiceElasticityService CloudServiceElasticityService => new CloudServiceElasticityService(_httpClient){BaseUrl = BaseUrl};
-    public IDataEventStreamingService DataEventStreamingService => new DataEventStreamingService(_httpClient){BaseUrl = BaseUrl};
-    public IExternalAccountingService ExternalAccountingService => new ExternalAccountingService(_httpClient){BaseUrl = BaseUrl};
-    public IDocumentRequiredService DocumentRequiredService => new DocumentRequiredService(_httpClient){BaseUrl = BaseUrl};
-    public ISPFInformationService SPFInformationService => new SPFInformationService(_httpClient){BaseUrl = BaseUrl};
-    public IUsageStatisticsService UsageStatisticsService => new UsageStatisticsService(_httpClient){BaseUrl = BaseUrl};
-    public IOnlineUpgradeService OnlineUpgradeService => new OnlineUpgradeService(_httpClient){BaseUrl = BaseUrl};
-    public IProcessWorkFlowService ProcessWorkFlowService => new ProcessWorkFlowService(_httpClient){BaseUrl = BaseUrl};
-    public IServiceAutomationService ServiceAutomationService => new ServiceAutomationService(_httpClient){BaseUrl = BaseUrl};
+    public ICloudServiceElasticityService CloudServiceElasticityService => new CloudServiceElasticityService(_httpClient) { BaseUrl = BaseUrl };
+    public IDataEventStreamingService DataEventStreamingService => new DataEventStreamingService(_httpClient) { BaseUrl = BaseUrl };
+    public IExternalAccountingService ExternalAccountingService => new ExternalAccountingService(_httpClient) { BaseUrl = BaseUrl };
+    public IDocumentRequiredService DocumentRequiredService => new DocumentRequiredService(_httpClient) { BaseUrl = BaseUrl };
+    public ISPFInformationService SPFInformationService => new SPFInformationService(_httpClient) { BaseUrl = BaseUrl };
+    public IUsageStatisticsService UsageStatisticsService => new UsageStatisticsService(_httpClient) { BaseUrl = BaseUrl };
+    public IOnlineUpgradeService OnlineUpgradeService => new OnlineUpgradeService(_httpClient) { BaseUrl = BaseUrl };
+    public IProcessWorkFlowService ProcessWorkFlowService => new ProcessWorkFlowService(_httpClient) { BaseUrl = BaseUrl };
+    public IServiceAutomationService ServiceAutomationService => new ServiceAutomationService(_httpClient) { BaseUrl = BaseUrl };
 }

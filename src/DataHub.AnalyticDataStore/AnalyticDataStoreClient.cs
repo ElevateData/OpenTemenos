@@ -9,7 +9,7 @@ public class AnalyticDataStoreClient : IAnalyticDataStoreClient
         _httpClient = httpClient;
     }
 
-    public IHoldingClient Holding => new HoldingClient(_httpClient){BaseUrl = BaseUrl};
-    public IPartyClient Party => new PartyClient(_httpClient){BaseUrl = BaseUrl};
-    public IProductClient Product => new ProductClient(_httpClient){BaseUrl = BaseUrl};
+    public IHoldingClient Holding => new HoldingClient(_httpClient) { BaseUrl = BaseUrl };
+    public IPartyClient Party => new PartyClient(_httpClient) { BaseUrl = BaseUrl };
+    public IProductClient Product => new ProductClient(_httpClient) { BaseUrl = BaseUrl };
 }

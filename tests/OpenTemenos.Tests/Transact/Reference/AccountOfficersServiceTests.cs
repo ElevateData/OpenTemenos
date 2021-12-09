@@ -32,8 +32,8 @@ public class AccountOfficersServiceTests : CredentialManagement
     {
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerDetails();
-           var result = _client.AccountOfficersService
-            .CreateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
+        var result = _client.AccountOfficersService
+         .CreateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
     }
     [TestMethod, Ignore("PUT method")]

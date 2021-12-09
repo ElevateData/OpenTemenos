@@ -42,7 +42,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexDealMethodAsync()
     {
-        var result = _client.TreasuryService.GetForexDealMethodAsync(DealMethodId,null, null, null, null, null, null, null, null).Result;
+        var result = _client.TreasuryService.GetForexDealMethodAsync(DealMethodId, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"DealMethodId: {result.Body.First().DealMethodId}");
     }
@@ -66,7 +66,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetTreasurySettingsAsync()
     {
-        var result = _client.TreasuryService.GetTreasurySettingsAsync(null, null, null, null, null, null, null, null,null).Result;
+        var result = _client.TreasuryService.GetTreasurySettingsAsync(null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"CompanyId: {result.Body.First().CompanyId}");
         Debug.WriteLine($@"LocalCurrencyId: {result.Body.First().LocalCurrencyId}");
@@ -76,7 +76,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetPeriodDatesAsync()
     {
-        var result = _client.TreasuryService.GetPeriodDatesAsync(CurrencyOrPair, null, null, null, null, null, null, null, null,null,null).Result;
+        var result = _client.TreasuryService.GetPeriodDatesAsync(CurrencyOrPair, null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Date: {result.Body.First().Date}");
     }
@@ -84,7 +84,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetDealMethodsAsync()
     {
-        var result = _client.TreasuryService.GetDealMethodsAsync(null, null, null, null, null, null, null, null,null).Result;
+        var result = _client.TreasuryService.GetDealMethodsAsync(null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"PaymentAccountId: {result.Body.First().PaymentAccountId}");
         Debug.WriteLine($@"PaymentCurrencyId: {result.Body.First().PaymentCurrencyId}");

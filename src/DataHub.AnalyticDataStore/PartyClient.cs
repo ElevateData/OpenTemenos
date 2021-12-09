@@ -14,5 +14,5 @@ public class PartyClient : IPartyClient
     }
 
     public IAllCustomerSegmentationDetailsService CustomerSegmentationService =>
-        new AllCustomerSegmentationDetailsService(_httpClient){BaseUrl = BaseUrl};
+        new AllCustomerSegmentationDetailsService(_httpClient) { BaseUrl = BaseUrl };
 }

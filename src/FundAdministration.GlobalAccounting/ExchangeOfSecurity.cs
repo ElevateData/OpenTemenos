@@ -19,18 +19,18 @@ public class ExchangeOfSecurity : IExchangeOfSecurity
     }
 
     public IExchangeOfNewSecurityWithCashOutflowService NewSecurityWithCashOutflowService =>
-        new ExchangeOfNewSecurityWithCashOutflowService(_httpClient){BaseUrl = BaseUrl};
+        new ExchangeOfNewSecurityWithCashOutflowService(_httpClient) { BaseUrl = BaseUrl };
 
     public IExchangeOfNewSecurityWithCashInflowService NewSecurityWithCashInflowService =>
-        new ExchangeOfNewSecurityWithCashInflowService(_httpClient){BaseUrl = BaseUrl};
+        new ExchangeOfNewSecurityWithCashInflowService(_httpClient) { BaseUrl = BaseUrl };
 
     public IEosNewSecurityWithoutCashService NewSecurityWithoutCashCompensationService =>
-        new EosNewSecurityWithoutCashService(_httpClient){BaseUrl = BaseUrl};
+        new EosNewSecurityWithoutCashService(_httpClient) { BaseUrl = BaseUrl };
 
     public IEosCashCompensationService NewSecurityWithCashCompensationService =>
-        new EosCashCompensationService(_httpClient){BaseUrl = BaseUrl};
+        new EosCashCompensationService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IEosSameSecurityService SameSecurityService => new EosSameSecurityService(_httpClient){BaseUrl = BaseUrl};
+    public IEosSameSecurityService SameSecurityService => new EosSameSecurityService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IEosMultipleSecurityService MultipleSecurityService => new EosMultipleSecurityService(_httpClient){BaseUrl = BaseUrl};
+    public IEosMultipleSecurityService MultipleSecurityService => new EosMultipleSecurityService(_httpClient) { BaseUrl = BaseUrl };
 }

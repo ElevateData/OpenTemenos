@@ -21,13 +21,13 @@ public class MetaClient : IMetaClient
         _httpClient = httpClient;
     }
 
-    public IApisService ApisService => new ApisService(_httpClient){BaseUrl = BaseUrl};
-    public IDwExportPropertiesService DwExportPropertyService => new DwExportPropertiesService(_httpClient){BaseUrl = BaseUrl};
-    public IMenusService MenuService => new MenusService(_httpClient){BaseUrl = BaseUrl};
-    public IPaymentsService PaymentService => new PaymentsService(_httpClient){BaseUrl = BaseUrl};
-    public IQueriesService QueryService => new QueriesService(_httpClient){BaseUrl = BaseUrl};
-    public IScreensService ScreenService => new ScreensService(_httpClient){BaseUrl = BaseUrl};
-    public ITablesService TableService => new TablesService(_httpClient){BaseUrl = BaseUrl};
-    public IUserAdministrationInternalService UserAdministrationInternalService => new UserAdministrationInternalService(_httpClient){BaseUrl = BaseUrl};
-    public IVirtualTableService VirtualTableService => new VirtualTableService(_httpClient){BaseUrl = BaseUrl};
+    public IApisService ApisService => new ApisService(_httpClient) { BaseUrl = BaseUrl };
+    public IDwExportPropertiesService DwExportPropertyService => new DwExportPropertiesService(_httpClient) { BaseUrl = BaseUrl };
+    public IMenusService MenuService => new MenusService(_httpClient) { BaseUrl = BaseUrl };
+    public IPaymentsService PaymentService => new PaymentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IQueriesService QueryService => new QueriesService(_httpClient) { BaseUrl = BaseUrl };
+    public IScreensService ScreenService => new ScreensService(_httpClient) { BaseUrl = BaseUrl };
+    public ITablesService TableService => new TablesService(_httpClient) { BaseUrl = BaseUrl };
+    public IUserAdministrationInternalService UserAdministrationInternalService => new UserAdministrationInternalService(_httpClient) { BaseUrl = BaseUrl };
+    public IVirtualTableService VirtualTableService => new VirtualTableService(_httpClient) { BaseUrl = BaseUrl };
 }

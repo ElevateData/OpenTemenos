@@ -16,7 +16,7 @@ public class DatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetDatesAsync()
     {
-        var result = _client.DatesService.GetDatesAsync(null, null, null, null, null, null, null, null, null,null,null,null).Result;
+        var result = _client.DatesService.GetDatesAsync(null, null, null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"CurrentWorkingDate: {result.Body.First().CurrentWorkingDate}");
     }

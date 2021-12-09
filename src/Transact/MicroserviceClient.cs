@@ -17,10 +17,10 @@ public class MicroserviceClient : IMicroserviceClient
     {
         _httpClient = httpClient;
     }
-    public ICallbackRegistryService CallbackRegistryService => new CallbackRegistryService(_httpClient){BaseUrl = BaseUrl};
-    public IEntitlementService EntitlementService => new EntitlementService(_httpClient){BaseUrl = BaseUrl};
-    public IGenericConfigService ConfigurationService => new GenericConfigService(_httpClient){BaseUrl = BaseUrl};
-    public IMeteringService ApplicationMeteringService => new MeteringService(_httpClient){BaseUrl = BaseUrl};
-    public IServiceOrchestratorService ServiceOrchestratorService => new ServiceOrchestratorService(_httpClient){BaseUrl = BaseUrl};
-    public ITraceabilityService TraceabilityService => new TraceabilityService(_httpClient){BaseUrl = BaseUrl};
+    public ICallbackRegistryService CallbackRegistryService => new CallbackRegistryService(_httpClient) { BaseUrl = BaseUrl };
+    public IEntitlementService EntitlementService => new EntitlementService(_httpClient) { BaseUrl = BaseUrl };
+    public IGenericConfigService ConfigurationService => new GenericConfigService(_httpClient) { BaseUrl = BaseUrl };
+    public IMeteringService ApplicationMeteringService => new MeteringService(_httpClient) { BaseUrl = BaseUrl };
+    public IServiceOrchestratorService ServiceOrchestratorService => new ServiceOrchestratorService(_httpClient) { BaseUrl = BaseUrl };
+    public ITraceabilityService TraceabilityService => new TraceabilityService(_httpClient) { BaseUrl = BaseUrl };
 }

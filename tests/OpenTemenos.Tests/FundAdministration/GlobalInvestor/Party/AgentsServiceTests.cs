@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Linq;
 using FundAdministration.GlobalInvestor;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FundAdministration.GlobalInvestor.Party.Agents;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
@@ -16,7 +16,7 @@ public class AgentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAgentAsync()
     {
-        var result = _client.DistributorService.GetAgentAsync(null, null, null, null, null, null,null,null,null,null).Result;
+        var result = _client.DistributorService.GetAgentAsync(null, null, null, null, null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"InternalId: {result.Body.Records?.First().InternalId}");
         Debug.WriteLine($@"MainAgentId: {result.Body.Records?.First().MainAgentId}");
@@ -49,23 +49,25 @@ public class AgentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAgentByAgentIdAsync()
     {
-        var result = _client.DistributorService.GetAgentByagentIdAsync(null, null, null, null, null, null,null,null,null,null, AgentId).Result;
+        var result = _client.DistributorService.GetAgentByagentIdAsync(null, null, null, null, null, null, null, null, null, null, AgentId).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod, Ignore("PUT method")]
     public void PutAgentByInternalIdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.DistributorService.PutAgentByinternalIdAsync(null, null, null, null, null, InternalId, payload).Result;
+        var result = _client.DistributorService.PutAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod, Ignore("DELETE method")]
     public void DeleteAgentByInternalIdAsync()
     {
+        var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.DistributorService.DeleteAgentByinternalIdAsync(null, null, null, null, null, InternalId, payload).Result;
+        var result = _client.DistributorService.DeleteAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

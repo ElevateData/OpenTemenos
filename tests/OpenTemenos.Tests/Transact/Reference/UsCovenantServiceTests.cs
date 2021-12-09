@@ -13,7 +13,7 @@ public class UsCovenantServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsCovenantListAsync()
     {
-        var result = _client.UsCovenantService.GetUsCovenantListAsync(null, null, null, null, null,null).Result;
+        var result = _client.UsCovenantService.GetUsCovenantListAsync(null, null, null, null, null, null).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"CovenantPlan: {result.Body.First().CovenantPlan}");
     }

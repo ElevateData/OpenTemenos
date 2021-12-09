@@ -13,7 +13,7 @@ public class FundAdministration : IFundAdministration
         _httpClient = httpClient;
     }
 
-    public IGlobalAccountingClient GlobalAccountingClient => new GlobalAccountingClient(_httpClient){BaseUrl = BaseUrl};
+    public IGlobalAccountingClient GlobalAccountingClient => new GlobalAccountingClient(_httpClient) { BaseUrl = BaseUrl };
 
-    public IGlobalInvestorClient GlobalInvestorClient => new GlobalInvestorClient(_httpClient){BaseUrl = BaseUrl};
+    public IGlobalInvestorClient GlobalInvestorClient => new GlobalInvestorClient(_httpClient) { BaseUrl = BaseUrl };
 }

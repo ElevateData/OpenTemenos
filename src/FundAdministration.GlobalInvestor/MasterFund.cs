@@ -15,11 +15,11 @@ public class MasterFund : IMasterFund
     {
         _httpClient = httpClient;
     }
-    public ISecurityDescService SecurityDescriptionService => new SecurityDescService(_httpClient){BaseUrl = BaseUrl};
+    public ISecurityDescService SecurityDescriptionService => new SecurityDescService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IShareValuesService ShareValueService => new ShareValuesService(_httpClient){BaseUrl = BaseUrl};
+    public IShareValuesService ShareValueService => new ShareValuesService(_httpClient) { BaseUrl = BaseUrl };
 
-    public IMinDivPaymentsService MinDividendPaymentService => new MinDivPaymentsService(_httpClient){BaseUrl = BaseUrl};
+    public IMinDivPaymentsService MinDividendPaymentService => new MinDivPaymentsService(_httpClient) { BaseUrl = BaseUrl };
 
-    public ISecurityService SecurityService => new SecurityService(_httpClient){BaseUrl = BaseUrl};
+    public ISecurityService SecurityService => new SecurityService(_httpClient) { BaseUrl = BaseUrl };
 }

@@ -16,10 +16,10 @@ public class PartyClient : IPartyClient
         _httpClient = httpClient;
     }
 
-    public ICustomerDetailsService CustomerDetailService => new CustomerDetailsService(_httpClient){BaseUrl = BaseUrl};
-    public IExternalUserDetailsService ExternalUserDetailService => new ExternalUserDetailsService(_httpClient){BaseUrl = BaseUrl};
-    public IParticipantListService ParticipantListService => new ParticipantListService(_httpClient){BaseUrl = BaseUrl};
+    public ICustomerDetailsService CustomerDetailService => new CustomerDetailsService(_httpClient) { BaseUrl = BaseUrl };
+    public IExternalUserDetailsService ExternalUserDetailService => new ExternalUserDetailsService(_httpClient) { BaseUrl = BaseUrl };
+    public IParticipantListService ParticipantListService => new ParticipantListService(_httpClient) { BaseUrl = BaseUrl };
 
     public IUsCustomerDetailsService UsModelBankCustomerDetailService =>
-        new UsCustomerDetailsService(_httpClient){BaseUrl = BaseUrl};
+        new UsCustomerDetailsService(_httpClient) { BaseUrl = BaseUrl };
 }

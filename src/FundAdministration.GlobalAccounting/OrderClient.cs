@@ -12,5 +12,5 @@ public class OrderClient : IOrderClient
     {
         _httpClient = httpClient;
     }
-    public IStockExchangeTransactionService StockExchangeTransactionBookingService => new StockExchangeTransactionService(_httpClient){BaseUrl = BaseUrl};
+    public IStockExchangeTransactionService StockExchangeTransactionBookingService => new StockExchangeTransactionService(_httpClient) { BaseUrl = BaseUrl };
 }
