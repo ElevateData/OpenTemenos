@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getServiceDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.System">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getServiceDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getServiceDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ServiceDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.System.ServiceDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ServiceDetailsService.cs</OutputPath>

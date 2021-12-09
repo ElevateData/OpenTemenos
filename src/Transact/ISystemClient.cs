@@ -1,12 +1,12 @@
-﻿using Transact.SystemX.CloudServiceElasticity;
-using Transact.SystemX.DataEventStreaming;
-using Transact.SystemX.DocumentRequired;
-using Transact.SystemX.ExternalAccounting;
-using Transact.SystemX.OnlineUpgrade;
-using Transact.SystemX.ProcessWorkFlow;
-using Transact.SystemX.ServiceAutomation;
-using Transact.SystemX.SPFInformation;
-using Transact.SystemX.UsageStatistics;
+﻿using Transact.System.CloudServiceElasticity;
+using Transact.System.DataEventStreaming;
+using Transact.System.DocumentRequired;
+using Transact.System.ExternalAccounting;
+using Transact.System.OnlineUpgrade;
+using Transact.System.ProcessWorkFlow;
+using Transact.System.ServiceAutomation;
+using Transact.System.SPFInformation;
+using Transact.System.UsageStatistics;
 
 namespace Transact;
 

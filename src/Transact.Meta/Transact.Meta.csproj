@@ -7,55 +7,55 @@
   </PropertyGroup>
 	<ItemGroup>
 
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-apis-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-apis-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-apis-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ApisService.cs /ContractsNamespace:Transact.Meta.Apis /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ApisService.cs</OutputPath>
 			<ClassName>ApisService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-dwExportProperties-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-dwExportProperties-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-dwExportProperties-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:DwExportPropertiesService.cs /ContractsNamespace:Transact.Meta.DwExportProperties /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>DwExportPropertiesService.cs</OutputPath>
 			<ClassName>DwExportPropertiesService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-menus-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-menus-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-menus-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:MenusService.cs /ContractsNamespace:Transact.Meta.Menus /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>MenusService.cs</OutputPath>
 			<ClassName>MenusService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-payments-service-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-payments-service-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-payments-service-v2.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:PaymentsService.cs /ContractsNamespace:Transact.Meta.Payments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>PaymentsService.cs</OutputPath>
 			<ClassName>PaymentsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-queries-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-queries-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-queries-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:QueriesService.cs /ContractsNamespace:Transact.Meta.Queries /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>QueriesService.cs</OutputPath>
 			<ClassName>QueriesService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-screens-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-screens-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-screens-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ScreensService.cs /ContractsNamespace:Transact.Meta.Screens /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ScreensService.cs</OutputPath>
 			<ClassName>ScreensService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-tables-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-tables-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-tables-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:TablesService.cs /ContractsNamespace:Transact.Meta.Tables /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>TablesService.cs</OutputPath>
 			<ClassName>TablesService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-userAdministration-internal-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-userAdministration-internal-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-userAdministration-internal-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:UserAdministrationInternalService.cs /ContractsNamespace:Transact.Meta.UserAdministrationInternal /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>UserAdministrationInternalService.cs</OutputPath>
 			<ClassName>UserAdministrationInternalService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-virtualtable-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Meta">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\meta-virtualtable-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/meta-virtualtable-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:VirtualTableService.cs /ContractsNamespace:Transact.Meta.VirtualTable /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>VirtualTableService.cs</OutputPath>

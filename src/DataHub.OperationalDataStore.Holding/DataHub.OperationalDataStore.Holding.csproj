@@ -7,55 +7,55 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getArrangementsDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getArrangementsDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getArrangementsDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ArrangementsDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.ArrangementsDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ArrangementsDetailsService.cs</OutputPath>
 			<ClassName>ArrangementsDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getTradeDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getTradeDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getTradeDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:TradeDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.TradeDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>TradeDetailsService.cs</OutputPath>
 			<ClassName>TradeDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getGuaranteeDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getGuaranteeDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getGuaranteeDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:GuaranteeDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.GuaranteeDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>GuaranteeDetailsService.cs</OutputPath>
 			<ClassName>GuaranteeDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getLcDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getLcDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getLcDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:LcDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.LcDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>LcDetailsService.cs</OutputPath>
 			<ClassName>LcDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getLimitDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getLimitDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getLimitDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:LimitDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.LimitDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>LimitDetailsService.cs</OutputPath>
 			<ClassName>LimitDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getAccountList-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getAccountList-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getAccountList-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:AccountListService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.AccountList /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>AccountListService.cs</OutputPath>
 			<ClassName>AccountListService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getPaymentStops-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getPaymentStops-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getPaymentStops-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:PaymentStopsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.PaymentStops /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>PaymentStopsService.cs</OutputPath>
 			<ClassName>PaymentStopsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getPortfolios-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getPortfolios-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getPortfolios-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:PortfoliosService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.Portfolios /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>PortfoliosService.cs</OutputPath>
 			<ClassName>PortfoliosService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getRepurchaseAgreements-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getRepurchaseAgreements-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getRepurchaseAgreements-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:RepurchaseAgreementsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Holding.RepurchaseAgreements /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>RepurchaseAgreementsService.cs</OutputPath>

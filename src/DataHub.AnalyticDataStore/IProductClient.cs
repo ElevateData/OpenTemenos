@@ -1,8 +1,5 @@
 ﻿using DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances;
-using DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances;
 using DataHub.AnalyticDataStore.Product.RetailDepositProductBalances;
-using DataHub.AnalyticDataStore.Product.RetailDepositProductBalances;
-using DataHub.AnalyticDataStore.Product.RetailLendingProductBalances;
 using DataHub.AnalyticDataStore.Product.RetailLendingProductBalances;
 
 namespace DataHub.AnalyticDataStore;

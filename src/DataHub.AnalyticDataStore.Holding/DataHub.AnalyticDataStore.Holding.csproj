@@ -7,77 +7,77 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAccountTransactionDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAccountTransactionDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getAccountTransactionMetrics-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:AccountTransactionDetailsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.AccountTransactionDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>AccountTransactionDetailsService.cs</OutputPath>
 			<ClassName>AccountTransactionDetailsService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAccountTransactionMetrics-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAccountTransactionMetrics-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getAccountTransactionMetrics-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:AccountTransactionMetricsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.AccountTransactionMetrics /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>AccountTransactionMetricsService.cs</OutputPath>
 			<ClassName>AccountTransactionMetricsService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getAllCustomerProductBalances-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:AllCustomerProductBalancesService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.AllCustomerProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>AllCustomerProductBalancesService.cs</OutputPath>
 			<ClassName>AllCustomerProductBalancesService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerProfitabilityMetrics-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerProfitabilityMetrics-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getAllCustomerProfitabilityMetrics-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:AllCustomerProfitabilityMetricsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.AllCustomerProfitabilityMetrics /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>AllCustomerProfitabilityMetricsService.cs</OutputPath>
 			<ClassName>AllCustomerProfitabilityMetricsService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerTransactionCount-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getAllCustomerTransactionCount-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getAllCustomerTransactionCount-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:AllCustomerTransactionCountService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.AllCustomerTransactionCount /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>AllCustomerTransactionCountService.cs</OutputPath>
 			<ClassName>AllCustomerTransactionCountService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCustomerAccountBalanceOverdrawn-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCustomerAccountBalanceOverdrawn-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getCustomerAccountBalanceOverdrawn-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:CustomerAccountBalanceOverdrawnService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.CustomerAccountBalanceOverdrawn /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CustomerAccountBalanceOverdrawnService.cs</OutputPath>
 			<ClassName>CustomerAccountBalanceOverdrawnService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCustomerDepositMaturity30Days-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCustomerDepositMaturity30Days-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getCustomerDepositMaturity30Days-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:CustomerDepositMaturity30DaysService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.CustomerDepositMaturity30Days /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CustomerDepositMaturity30DaysService.cs</OutputPath>
 			<ClassName>CustomerDepositMaturity30DaysService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCustomerLoanDelinquency30Days-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCustomerLoanDelinquency30Days-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getCustomerLoanDelinquency30Days-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:CustomerLoanDelinquency30DaysService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.CustomerLoanDelinquency30Days /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CustomerLoanDelinquency30DaysService.cs</OutputPath>
 			<ClassName>CustomerLoanDelinquency30DaysService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getProductTransactionMetrics-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getProductTransactionMetrics-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getProductTransactionMetrics-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ProductTransactionMetricsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.ProductTransactionMetrics /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ProductTransactionMetricsService.cs</OutputPath>
 			<ClassName>ProductTransactionMetricsService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailDepositsCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailDepositsCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getRetailDepositsCustomerDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:RetailDepositsCustomerDetailsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.RetailDepositsCustomerDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>RetailDepositsCustomerDetailsService.cs</OutputPath>
 			<ClassName>RetailDepositsCustomerDetailsService</ClassName>
 		</OpenApiReference>
 
-		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailLendingCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.AnalyticDataStore.Holding">
+		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailLendingCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getRetailLendingCustomerDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:RetailLendingCustomerDetailsService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Holding.RetailLendingCustomerDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>RetailLendingCustomerDetailsService.cs</OutputPath>

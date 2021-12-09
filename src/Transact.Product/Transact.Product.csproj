@@ -7,46 +7,46 @@
   </PropertyGroup>
 	<ItemGroup>
 
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-customers-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-customers-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/product-customers-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:CustomersService.cs /ContractsNamespace:Transact.Product.Customers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CustomersService.cs</OutputPath>
 			<ClassName>CustomersService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-externalProducts-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-externalProducts-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/product-externalProducts-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ExternalProductsService.cs /ContractsNamespace:Transact.Product.ExternalProducts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ExternalProductsService.cs</OutputPath>
 			<ClassName>ExternalProductsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-limitproducts-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-limitproducts-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/product-limitproducts-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:LimitProductsService.cs /ContractsNamespace:Transact.Product.LimitProducts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>LimitProductsService.cs</OutputPath>
 			<ClassName>LimitProductsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-marketingCatalogue-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-marketingCatalogue-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/product-marketingCatalogue-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:MarketingCatalogueService.cs /ContractsNamespace:Transact.Product.MarketingCatalogue /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>MarketingCatalogueService.cs</OutputPath>
 			<ClassName>MarketingCatalogueService</ClassName>
 		</OpenApiReference>
 		<!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-products-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-products-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/product-products-v2.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ProductsService.cs /ContractsNamespace:Transact.Product.Products /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ProductsService.cs</OutputPath>
 			<ClassName>ProductsService</ClassName>
 		</OpenApiReference>
 -->
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-userAdmin-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\product-userAdmin-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/product-userAdmin-service-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:UserAdminService.cs /ContractsNamespace:Transact.Product.UserAdmin /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>UserAdminService.cs</OutputPath>
 			<ClassName>UserAdminService</ClassName>
 		</OpenApiReference>
 		<!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\products-cashmanagement-bundles-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Product">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\products-cashmanagement-bundles-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/products-cashmanagement-bundles-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:sCashManagementBundlesService.cs /ContractsNamespace:Transact.Product.sCashManagementBundles /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>sCashManagementBundlesService.cs</OutputPath>

@@ -7,289 +7,289 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreasebynewsecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreasebynewsecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitaldecreasebynewsecurity-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalDecreaseByNewSecurityService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalDecreaseByNewSecurity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalDecreaseByNewSecurityService.cs</OutputPath>
 			<ClassName>CapitalDecreaseByNewSecurityService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreasecollectionofshares-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreasecollectionofshares-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitaldecreasecollectionofshares-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalDecreaseCollectionOfSharesService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalDecreaseCollectionOfShares /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalDecreaseCollectionOfSharesService.cs</OutputPath>
 			<ClassName>CapitalDecreaseCollectionOfSharesService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreaseofparvaluesdomesticshare-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreaseofparvaluesdomesticshare-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitaldecreaseofparvaluesdomesticshare-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalDecreaseOfParValuesDomesticShareService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesDomesticShare /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalDecreaseOfParValuesDomesticShareService.cs</OutputPath>
 			<ClassName>CapitalDecreaseOfParValuesDomesticShareService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreaseofparvaluesforiegnshare-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreaseofparvaluesforiegnshare-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitaldecreaseofparvaluesforiegnshare-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalDecreaseOfParValuesForeignShareService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesForeignShare /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalDecreaseOfParValuesForeignShareService.cs</OutputPath>
 			<ClassName>CapitalDecreaseOfParValuesForeignShareService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreaseofparvalueswithrealisedgain-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitaldecreaseofparvalueswithrealisedgain-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitaldecreaseofparvalueswithrealisedgain-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalDecreaseOfParValuesWithRealizedGainService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesWithRealizedGain /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalDecreaseOfParValuesWithRealizedGainService.cs</OutputPath>
 			<ClassName>CapitalDecreaseOfParValuesWithRealizedGainService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitalincreasewithexerciseofsubscriptionrights-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitalincreasewithexerciseofsubscriptionrights-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitalincreasewithexerciseofsubscriptionrights-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalIIncreaseWithExerciseOfSubscriptionRightsService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalIIncreaseWithExerciseOfSubscriptionRights /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalIIncreaseWithExerciseOfSubscriptionRightsService.cs</OutputPath>
 			<ClassName>CapitalIIncreaseWithExerciseOfSubscriptionRightsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitalincreasewithoutissueofsubscriptionrights-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-capitalincreasewithoutissueofsubscriptionrights-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-capitalincreasewithoutissueofsubscriptionrights-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CapitalIncreaseWithoutIssueOfSubscriptionRightsService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CapitalIncreaseWithoutIssueOfSubscriptionRights /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CapitalIncreaseWithoutIssueOfSubscriptionRightsService.cs</OutputPath>
 			<ClassName>CapitalIncreaseWithoutIssueOfSubscriptionRightsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-cashdividendannouncement-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-cashdividendannouncement-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-cashdividendannouncement-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CashDividendAnnouncementService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CashDividendAnnouncement /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CashDividendAnnouncementService.cs</OutputPath>
 			<ClassName>CashDividendAnnouncementService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-ciasubscriptionright-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-ciasubscriptionright-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-ciasubscriptionright-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CiaSubscriptionRightService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CiaSubscriptionRight /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CiaSubscriptionRightService.cs</OutputPath>
 			<ClassName>CiaSubscriptionRightService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eoscashcompensation-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eoscashcompensation-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-eoscashcompensation-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:EosCashCompensationService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.EosCashCompensation /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>EosCashCompensationService.cs</OutputPath>
 			<ClassName>EosCashCompensationService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eosmultiplesecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eosmultiplesecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-eosmultiplesecurity-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:EosMultipleSecurityService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.EosMultipleSecurity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>EosMultipleSecurityService.cs</OutputPath>
 			<ClassName>EosMultipleSecurityService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eosnewsecuritywithoutcash-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eosnewsecuritywithoutcash-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-eosnewsecuritywithoutcash-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:EosNewSecurityWithoutCashService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.EosNewSecurityWithoutCash /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>EosNewSecurityWithoutCashService.cs</OutputPath>
 			<ClassName>EosNewSecurityWithoutCashService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eossamesecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-eossamesecurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-eossamesecurity-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:EosSameSecurityService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.EosSameSecurity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>EosSameSecurityService.cs</OutputPath>
 			<ClassName>EosSameSecurityService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-equity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-equity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-equity-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:EquityService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.Equity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>EquityService.cs</OutputPath>
 			<ClassName>EquityService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-exchangeofnewsecuritywithcashinflow-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-exchangeofnewsecuritywithcashinflow-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-exchangeofnewsecuritywithcashinflow-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:ExchangeOfNewSecurityWithCashInflowService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflow /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ExchangeOfNewSecurityWithCashInflowService.cs</OutputPath>
 			<ClassName>ExchangeOfNewSecurityWithCashInflowService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-exchangeofnewsecuritywithcashoutflow-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-exchangeofnewsecuritywithcashoutflow-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-exchangeofnewsecuritywithcashoutflow-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:ExchangeOfNewSecurityWithCashOutflowService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashOutflow /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ExchangeOfNewSecurityWithCashOutflowService.cs</OutputPath>
 			<ClassName>ExchangeOfNewSecurityWithCashOutflowService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-fixedbond-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-fixedbond-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-fixedbond-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FixedBondService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FixedBond /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FixedBondService.cs</OutputPath>
 			<ClassName>FixedBondService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-fixedmbsipb-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-fixedmbsipb-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-fixedmbsipb-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FixedMbsIpbService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FixedMbsIpb /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FixedMbsIpbService.cs</OutputPath>
 			<ClassName>FixedMbsIpbService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-floaterratefactor-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-floaterratefactor-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-floaterratefactor-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FloatOrRateFactorService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FloatOrRateFactor /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FloatOrRateFactorService.cs</OutputPath>
 			<ClassName>FloatOrRateFactorService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-floatingvariablebond-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-floatingvariablebond-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-floatingvariablebond-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FloatingVariableBondService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FloatingVariableBond /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FloatingVariableBondService.cs</OutputPath>
 			<ClassName>FloatingVariableBondService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-forwardforiegnexchange-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-forwardforiegnexchange-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-forwardforiegnexchange-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:ForwardForeignExchangeService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.ForwardForeignExchange /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ForwardForeignExchangeService.cs</OutputPath>
 			<ClassName>ForwardForeignExchangeService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-forwardforiegnexchangerepayment-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-forwardforiegnexchangerepayment-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-forwardforiegnexchangerepayment-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:ForwardForeignExchangeRepaymentService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.ForwardForeignExchangeRepayment /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ForwardForeignExchangeRepaymentService.cs</OutputPath>
 			<ClassName>ForwardForeignExchangeRepaymentService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-future-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-future-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-future-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FutureService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.Future /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FutureService.cs</OutputPath>
 			<ClassName>FutureService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-futurefee-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-futurefee-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-futurefee-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FutureFeeService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FutureFee /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FutureFeeService.cs</OutputPath>
 			<ClassName>FutureFeeService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-futurematurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-futurematurity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-futurematurity-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FutureMaturityService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FutureMaturity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FutureMaturityService.cs</OutputPath>
 			<ClassName>FutureMaturityService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-futuretransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-futuretransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-futuretransaction-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FutureTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FutureTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FutureTransactionService.cs</OutputPath>
 			<ClassName>FutureTransactionService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optionexercise-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optionexercise-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-optionexercise-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:OptionExerciseService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.OptionExercise /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>OptionExerciseService.cs</OutputPath>
 			<ClassName>OptionExerciseService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optionfee-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optionfee-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-optionfee-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:OptionFeeService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.OptionFee /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>OptionFeeService.cs</OutputPath>
 			<ClassName>OptionFeeService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optionmaturity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optionmaturity-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-optionmaturity-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:OptionMaturityService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.OptionMaturity /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>OptionMaturityService.cs</OutputPath>
 			<ClassName>OptionMaturityService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optiontransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-optiontransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-optiontransaction-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:OptionTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.OptionTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>OptionTransactionService.cs</OutputPath>
 			<ClassName>OptionTransactionService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-pikbond-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-pikbond-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-pikbond-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:PikBondService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.PikBond /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>PikBondService.cs</OutputPath>
 			<ClassName>PikBondService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-reversestocksplit-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-reversestocksplit-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-reversestocksplit-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:ReverseStockSplitService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.ReverseStockSplit /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ReverseStockSplitService.cs</OutputPath>
 			<ClassName>ReverseStockSplitService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-spinoff-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-spinoff-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-spinoff-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:SpinOffService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.SpinOff /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>SpinOffService.cs</OutputPath>
 			<ClassName>SpinOffService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-spotforiegnexchange-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-spotforiegnexchange-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-spotforiegnexchange-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:SpotForeignExchangeService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.SpotForeignExchange /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>SpotForeignExchangeService.cs</OutputPath>
 			<ClassName>SpotForeignExchangeService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockdividend-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockdividend-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-stockdividend-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:StockDividendService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.StockDividend /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>StockDividendService.cs</OutputPath>
 			<ClassName>StockDividendService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockexchangetransactionfee-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockexchangetransactionfee-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-stockexchangetransactionfee-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:StockExchangeTransactionFeeService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.StockExchangeTransactionFee /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>StockExchangeTransactionFeeService.cs</OutputPath>
 			<ClassName>StockExchangeTransactionFeeService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stocksplit-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stocksplit-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-stocksplit-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:StockSplitService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.StockSplit /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>StockSplitService.cs</OutputPath>
 			<ClassName>StockSplitService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-variablembs-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-variablembs-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-variablembs-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:VariableMbsService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.VariableMbs /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>VariableMbsService.cs</OutputPath>
 			<ClassName>VariableMbsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-zerocoupon-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-zerocoupon-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-zerocoupon-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:ZeroCouponService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.ZeroCoupon /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ZeroCouponService.cs</OutputPath>
 			<ClassName>ZeroCouponService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new-debitCreditTransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new-debitCreditTransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new-debitCreditTransaction-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:DebitCreditTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.DebitCreditTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>DebitCreditTransactionService.cs</OutputPath>
 			<ClassName>DebitCreditTransactionService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new-securityTransactionRebooking-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new-securityTransactionRebooking-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new-securityTransactionRebooking-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:SecurityTransactionRebookingService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.SecurityTransactionRebooking /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>SecurityTransactionRebookingService.cs</OutputPath>
 			<ClassName>SecurityTransactionRebookingService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_callDepositTransactions-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_callDepositTransactions-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_callDepositTransactions-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CallDepositTransactionsService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CallDepositTransactions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CallDepositTransactionsService.cs</OutputPath>
 			<ClassName>CallDepositTransactionsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_couponDividendTransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_couponDividendTransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_couponDividendTransaction-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:CouponDividendTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.CouponDividendTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CouponDividendTransactionService.cs</OutputPath>
 			<ClassName>CouponDividendTransactionService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_fundSharetransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_fundSharetransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_fundSharetransaction-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FundShareTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FundShareTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FundShareTransactionService.cs</OutputPath>
 			<ClassName>FundShareTransactionService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_futureTransactionsRebooking-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_futureTransactionsRebooking-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_futureTransactionsRebooking-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:FutureTransactionsRebookingService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.FutureTransactionsRebooking /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>FutureTransactionsRebookingService.cs</OutputPath>
 			<ClassName>FutureTransactionsRebookingService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_irsTransactions-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_irsTransactions-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_irsTransactions-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:IrsTransactionsService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.IrsTransactions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>IrsTransactionsService.cs</OutputPath>
 			<ClassName>IrsTransactionsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_optionTransactionsRebooking-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_optionTransactionsRebooking-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_optionTransactionsRebooking-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:OptionTransactionsRebookingService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.OptionTransactionsRebooking /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>OptionTransactionsRebookingService.cs</OutputPath>
 			<ClassName>OptionTransactionsRebookingService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_termDepositTransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Holding">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-new_termDepositTransaction-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-new_termDepositTransaction-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:TermDepositTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Holding.TermDepositTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>TermDepositTransactionService.cs</OutputPath>

@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\enterprise-pricing-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Enterprise">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\enterprise-pricing-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/enterprise-pricing-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:PricingService.cs /ContractsNamespace:Transact.Enterprise.Pricing /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>PricingService.cs</OutputPath>

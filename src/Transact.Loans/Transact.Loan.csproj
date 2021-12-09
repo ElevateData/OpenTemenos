@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup><!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-calculatePayoff-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Loan">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-calculatePayoff-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/loans-calculatePayoff-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:CalculatePayoffService.cs /ContractsNamespace:Transact.Loan.CalculatePayoff /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CalculatePayoffService.cs</OutputPath>
@@ -14,7 +14,7 @@
 		</OpenApiReference>
 -->
 		<!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-updatePaymentHoliday-simulation-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Loan">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-updatePaymentHoliday-simulation-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/loans-updatePaymentHoliday-simulation-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:UpdatePaymentHolidaySimulationService.cs /ContractsNamespace:Transact.Loan.UpdatePaymentHolidaySimulation /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>UpdatePaymentHolidaySimulationService.cs</OutputPath>
@@ -22,7 +22,7 @@
 		</OpenApiReference>
 		-->
 		<!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-updatePaymentHoliday-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="Transact.Loan">
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-updatePaymentHoliday-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/loans-updatePaymentHoliday-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:UpdatePaymentHolidayService.cs /ContractsNamespace:Transact.Loan.UpdatePaymentHoliday /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>UpdatePaymentHolidayService.cs</OutputPath>

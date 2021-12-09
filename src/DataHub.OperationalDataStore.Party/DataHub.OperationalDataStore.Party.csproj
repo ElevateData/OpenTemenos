@@ -6,25 +6,25 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getCustomerDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:CustomerDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.CustomerDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>CustomerDetailsService.cs</OutputPath>
 			<ClassName>CustomerDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getExternalUserDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getExternalUserDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getExternalUserDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ExternalUserDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.ExternalUserDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ExternalUserDetailsService.cs</OutputPath>
 			<ClassName>ExternalUserDetailsService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getParticipantList-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getParticipantList-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getParticipantList-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:ParticipantListService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.ParticipantList /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>ParticipantListService.cs</OutputPath>
 			<ClassName>ParticipantListService</ClassName>
 		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getUsCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp" Namespace="DataHub.OperationalDataStore.Party">
+		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getUsCustomerDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getUsCustomerDetails-v1.0.0-swagger.json</SourceUri>
 			<Options>/ContractsOutput:UsCustomerDetailsService.cs /ContractsNamespace:DataHub.OperationalDataStore.Party.UsCustomerDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>UsCustomerDetailsService.cs</OutputPath>

@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-triggers-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalInvestor.System">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global investor\multifonds-gi-triggers-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20investor/multifonds-gi-triggers-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:TriggersService.cs /ContractsNamespace:FundAdministration.GlobalInvestor.System.Triggers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>TriggersService.cs</OutputPath>

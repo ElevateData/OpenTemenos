@@ -7,7 +7,7 @@
   </PropertyGroup>
 	<ItemGroup>
 
-		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockexchangetransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp" Namespace="FundAdministration.GlobalAccounting.Order">
+		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockexchangetransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-stockexchangetransaction-screen-swagger-v1.0.0.json</SourceUri>
 			<Options>/ContractsOutput:StockExchangeTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Order.StockExchangeTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models </Options>
 			<OutputPath>StockExchangeTransactionService.cs</OutputPath>
