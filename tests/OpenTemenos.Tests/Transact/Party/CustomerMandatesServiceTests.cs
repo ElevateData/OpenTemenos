@@ -5,5 +5,5 @@ namespace OpenTemenos.Tests.Transact.Party;
 [TestClass]
 public class CustomerMandatesServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
+    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
 }

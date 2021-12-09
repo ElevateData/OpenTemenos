@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class ProductServiceTests : CredentialManagement
 {
     private const string RuleId = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetPeriodicRuleAsync()

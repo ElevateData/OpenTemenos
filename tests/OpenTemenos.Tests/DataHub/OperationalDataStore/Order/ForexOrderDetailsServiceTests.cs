@@ -7,7 +7,7 @@ public class ForexOrderDetailsServiceTests : CredentialManagement
 {
     private const string CounterPartyId = "";
     private const string RecordId = "";
-    private readonly IOrderClient _client = new OrderClient(HttpClient);
+    private readonly IOrderClient _client = new OrderClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetForexDealsAsync()

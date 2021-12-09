@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Holding;
 [TestClass]
 public class AllCustomerProfitabilityMetricsServiceTests : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
 
 
     [TestMethod]

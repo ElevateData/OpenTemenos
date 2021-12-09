@@ -7,6 +7,7 @@ public class PartyClient : IPartyClient
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public PartyClient(HttpClient httpClient)
     {
@@ -14,5 +15,5 @@ public class PartyClient : IPartyClient
     }
 
     public IAllCustomerSegmentationDetailsService CustomerSegmentationService =>
-        new AllCustomerSegmentationDetailsService(_httpClient) { BaseUrl = BaseUrl };
+        new AllCustomerSegmentationDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

@@ -9,7 +9,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     private const string OrganizationId = "";
     private const string BranchId = "";
     private const string LineOfBusinessId = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetOrganizationHierarchyAsync()

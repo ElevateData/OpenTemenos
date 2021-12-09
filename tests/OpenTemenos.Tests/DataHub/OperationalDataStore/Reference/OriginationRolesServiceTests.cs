@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 [TestClass]
 public class OriginationRolesServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetOriginationRolesAsync()

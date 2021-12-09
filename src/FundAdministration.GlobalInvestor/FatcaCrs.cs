@@ -9,14 +9,15 @@ public class FatcaCrs : IFatcaCrs
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public FatcaCrs(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IFatcaCrsDocumentsService DocumentService => new FatcaCrsDocumentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IFatcaCrsDocumentsService DocumentService => new FatcaCrsDocumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFatcaCrsStatusesService StatusService => new FatcaCrsStatusesService(_httpClient) { BaseUrl = BaseUrl };
+    public IFatcaCrsStatusesService StatusService => new FatcaCrsStatusesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFatcaCrsSubStatusesService SubStatusService => new FatcaCrsSubStatusesService(_httpClient) { BaseUrl = BaseUrl };
+    public IFatcaCrsSubStatusesService SubStatusService => new FatcaCrsSubStatusesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

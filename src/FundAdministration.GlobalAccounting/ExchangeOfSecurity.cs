@@ -12,6 +12,7 @@ public class ExchangeOfSecurity : IExchangeOfSecurity
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public ExchangeOfSecurity(HttpClient httpClient)
     {
@@ -19,18 +20,18 @@ public class ExchangeOfSecurity : IExchangeOfSecurity
     }
 
     public IExchangeOfNewSecurityWithCashOutflowService NewSecurityWithCashOutflowService =>
-        new ExchangeOfNewSecurityWithCashOutflowService(_httpClient) { BaseUrl = BaseUrl };
+        new ExchangeOfNewSecurityWithCashOutflowService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IExchangeOfNewSecurityWithCashInflowService NewSecurityWithCashInflowService =>
-        new ExchangeOfNewSecurityWithCashInflowService(_httpClient) { BaseUrl = BaseUrl };
+        new ExchangeOfNewSecurityWithCashInflowService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IEosNewSecurityWithoutCashService NewSecurityWithoutCashCompensationService =>
-        new EosNewSecurityWithoutCashService(_httpClient) { BaseUrl = BaseUrl };
+        new EosNewSecurityWithoutCashService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IEosCashCompensationService NewSecurityWithCashCompensationService =>
-        new EosCashCompensationService(_httpClient) { BaseUrl = BaseUrl };
+        new EosCashCompensationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IEosSameSecurityService SameSecurityService => new EosSameSecurityService(_httpClient) { BaseUrl = BaseUrl };
+    public IEosSameSecurityService SameSecurityService => new EosSameSecurityService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IEosMultipleSecurityService MultipleSecurityService => new EosMultipleSecurityService(_httpClient) { BaseUrl = BaseUrl };
+    public IEosMultipleSecurityService MultipleSecurityService => new EosMultipleSecurityService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 [TestClass]
 public class InvestigationItemsServiceTests : CredentialManagement
 {
-    private readonly IOrderClient _client = new OrderClient(HttpClient);
+    private readonly IOrderClient _client = new OrderClient(HttpClient){ ReadResponseAsString = true };
 
 
     [TestMethod]

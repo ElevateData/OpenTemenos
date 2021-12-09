@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 [TestClass]
 public class FundValueDatesServiceTests : CredentialManagement
 {
-    private readonly IProductClient _client = new ProductClient(HttpClient);
+    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("POST method")]

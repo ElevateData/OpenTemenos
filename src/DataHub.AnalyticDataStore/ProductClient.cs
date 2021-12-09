@@ -9,6 +9,7 @@ public class ProductClient : IProductClient
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public ProductClient(HttpClient httpClient)
     {
@@ -16,11 +17,11 @@ public class ProductClient : IProductClient
     }
 
     public ICorporateLendingProductBalancesService CorporateLendingProductService =>
-        new CorporateLendingProductBalancesService(_httpClient) { BaseUrl = BaseUrl };
+        new CorporateLendingProductBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IRetailDepositProductBalancesService RetailDepositProductBalanceService =>
-        new RetailDepositProductBalancesService(_httpClient) { BaseUrl = BaseUrl };
+        new RetailDepositProductBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IRetailLendingProductBalancesService RetailLendingProductBalanceService =>
-        new RetailLendingProductBalancesService(_httpClient) { BaseUrl = BaseUrl };
+        new RetailLendingProductBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

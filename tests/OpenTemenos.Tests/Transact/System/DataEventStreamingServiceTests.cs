@@ -5,5 +5,5 @@ namespace OpenTemenos.Tests.Transact.System;
 [TestClass]
 public class DataEventStreamingServiceTests : CredentialManagement
 {
-    private readonly ISystemClient _client = new SystemClient(HttpClient);
+    private readonly ISystemClient _client = new SystemClient(HttpClient){ ReadResponseAsString = true };
 }

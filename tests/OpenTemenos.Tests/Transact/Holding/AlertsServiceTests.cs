@@ -8,7 +8,7 @@ public class AlertsServiceTests : CredentialManagement
 {
     private const string ArrangementId = "1";
     private const string AccountId = "101125";
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetPackageStatementAsync()

@@ -11,14 +11,15 @@ public class ProductClient : IProductClient
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public ProductClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public ICustomersService CustomersService => new CustomersService(_httpClient) { BaseUrl = BaseUrl };
-    public IExternalProductsService ExternalProductsService => new ExternalProductsService(_httpClient) { BaseUrl = BaseUrl };
-    public ILimitProductsService LimitProductsService => new LimitProductsService(_httpClient) { BaseUrl = BaseUrl };
-    public IMarketingCatalogueService MarketingCatalogueService => new MarketingCatalogueService(_httpClient) { BaseUrl = BaseUrl };
-    public IUserAdminService UserAdminService => new UserAdminService(_httpClient) { BaseUrl = BaseUrl };
+    public ICustomersService CustomersService => new CustomersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IExternalProductsService ExternalProductsService => new ExternalProductsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ILimitProductsService LimitProductsService => new LimitProductsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IMarketingCatalogueService MarketingCatalogueService => new MarketingCatalogueService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IUserAdminService UserAdminService => new UserAdminService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

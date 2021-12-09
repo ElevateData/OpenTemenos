@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Reference;
 [TestClass]
 public class CitiesServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("POST method")]

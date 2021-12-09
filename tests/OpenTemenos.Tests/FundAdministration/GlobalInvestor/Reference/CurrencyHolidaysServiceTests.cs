@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Reference;
 [TestClass]
 public class CurrencyHolidaysServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetCurHolAsync()

@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 [TestClass]
 public class RepurchaseAgreementsServiceTests : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
 
 
     [TestMethod]

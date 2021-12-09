@@ -7,10 +7,11 @@ public class SystemClient : ISystemClient
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public SystemClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public ITriggersService OutboundTriggerService => new TriggersService(_httpClient) { BaseUrl = BaseUrl };
+    public ITriggersService OutboundTriggerService => new TriggersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

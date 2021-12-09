@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class UsCountyServiceTests : CredentialManagement
 {
     private const string StateId = "HI";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetUsCountyListAsync()

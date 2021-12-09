@@ -9,7 +9,7 @@ public class CountriesServiceTests : CredentialManagement
     private const string CountryId = "US";
     private const string GroupId = "EEA";
     private const string RegionId = "1";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetCountriesAsync()

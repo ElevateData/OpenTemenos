@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Reference;
 [TestClass]
 public class CountryHolidaysServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetCountryHolidaysAsync()

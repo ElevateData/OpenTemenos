@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class BundleRatesServiceTests : CredentialManagement
 {
     private const string BundleId = "1";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetBundleExchangeRatesAsync()

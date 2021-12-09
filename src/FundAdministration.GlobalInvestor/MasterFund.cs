@@ -10,16 +10,17 @@ public class MasterFund : IMasterFund
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public MasterFund(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public ISecurityDescService SecurityDescriptionService => new SecurityDescService(_httpClient) { BaseUrl = BaseUrl };
+    public ISecurityDescService SecurityDescriptionService => new SecurityDescService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IShareValuesService ShareValueService => new ShareValuesService(_httpClient) { BaseUrl = BaseUrl };
+    public IShareValuesService ShareValueService => new ShareValuesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IMinDivPaymentsService MinDividendPaymentService => new MinDivPaymentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IMinDivPaymentsService MinDividendPaymentService => new MinDivPaymentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ISecurityService SecurityService => new SecurityService(_httpClient) { BaseUrl = BaseUrl };
+    public ISecurityService SecurityService => new SecurityService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

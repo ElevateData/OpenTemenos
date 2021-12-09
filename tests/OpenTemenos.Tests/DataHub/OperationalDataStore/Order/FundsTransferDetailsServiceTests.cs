@@ -8,7 +8,7 @@ public class FundsTransferDetailsServiceTests : CredentialManagement
     private const string InwardPayType = "";
     private const string DebitAccountId = "";
     private const string CreditAccountId = "";
-    private readonly IOrderClient _client = new OrderClient(HttpClient);
+    private readonly IOrderClient _client = new OrderClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetBulkTransfersAsync()

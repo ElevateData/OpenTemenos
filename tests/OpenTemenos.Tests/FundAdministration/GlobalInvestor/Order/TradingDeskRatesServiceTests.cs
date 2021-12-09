@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 [TestClass]
 public class TradingDeskRatesServiceTests : CredentialManagement
 {
-    private readonly IOrderClient _client = new OrderClient(HttpClient);
+    private readonly IOrderClient _client = new OrderClient(HttpClient){ ReadResponseAsString = true };
 
 
     [TestMethod]

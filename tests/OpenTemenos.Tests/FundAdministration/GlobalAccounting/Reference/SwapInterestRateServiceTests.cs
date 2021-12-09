@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Reference;
 [TestClass]
 public class SwapInterestRateServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("POST method")]

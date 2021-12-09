@@ -15,7 +15,7 @@ public class AccountsServiceTests : CredentialManagement
     private const string AccountSwitch = "";
     private const string BeneficialCustomer = "";
     private const string ContractBalanceId = "";
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetPackageStatementAsync()

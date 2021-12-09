@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 [TestClass]
 public class AgentDistributionsServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
+    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
 
 
     [TestMethod]

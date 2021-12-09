@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class UsSectorServiceTests : CredentialManagement
 {
     private const string CustomerType = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetUsSectorListAsync()

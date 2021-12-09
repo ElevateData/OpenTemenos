@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class PeriodDatesServiceTests : CredentialManagement
 {
     private const string CurrencyOrPair = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetPeriodDatesAsync()

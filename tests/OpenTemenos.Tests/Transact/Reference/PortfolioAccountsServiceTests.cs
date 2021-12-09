@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class PortfolioAccountsServiceTests : CredentialManagement
 {
     private const string PortfolioId = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetPortfolioAccountsAsync()

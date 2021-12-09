@@ -9,14 +9,15 @@ public class AntiMoneyLaundering : IAntiMoneyLaundering
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public AntiMoneyLaundering(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IAmlBlocksService AmlBlocksService => new AmlBlocksService(_httpClient) { BaseUrl = BaseUrl };
+    public IAmlBlocksService AmlBlocksService => new AmlBlocksService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IAmlDocumentsService AmlDocumentsService => new AmlDocumentsService(_httpClient) { BaseUrl = BaseUrl };
+    public IAmlDocumentsService AmlDocumentsService => new AmlDocumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IAmlMonitorBlocksService AmlMonitorBlocksService => new AmlMonitorBlocksService(_httpClient) { BaseUrl = BaseUrl };
+    public IAmlMonitorBlocksService AmlMonitorBlocksService => new AmlMonitorBlocksService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

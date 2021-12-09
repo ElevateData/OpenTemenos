@@ -31,6 +31,7 @@ public interface IHoldingClient
 {
     public ICardsService AccountCardService { get; }
     public IAccountsService AccountManagementService { get; }
+    [Obsolete("All methods are obsolete")]
     public IArrangementsActivitiesService ArrangementsActivityService { get; }
     //public IArrangementsService ArrangementDetailService { get; }
     public ICashManagementBundlesService CashManagementBundleArrangementService { get; }
@@ -50,6 +51,7 @@ public interface IHoldingClient
     public IArrangementsProductLinesService ArrangementForProductLineService { get; }
     //public ILoansArrangementsService LoansCreationService { get; }
     public IAlertsService ArrangementAccountAlertService { get; }
+    [Obsolete("All methods are obsolete")]
     public IArrangementsBalancesService ArrangementAccountDocumentService { get; }
     public ICollateralsService CustomerCollateralService { get; }
     public IForexUtilizationsService ForexUtilizationService { get; }

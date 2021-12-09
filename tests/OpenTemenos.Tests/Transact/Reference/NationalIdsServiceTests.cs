@@ -11,7 +11,7 @@ public class NationalIdsServiceTests : CredentialManagement
     private const string ParticipantId = "1";
     private const string CountryId = "US";
     private const string CurrencyCode = "USD";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetBICFromLEIAsync()

@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 public class FundPromotersServiceTests : CredentialManagement
 {
     private const string NPromoter = "1";
-    private readonly IProductClient _client = new ProductClient(HttpClient);
+    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetFundPromoterAsync()

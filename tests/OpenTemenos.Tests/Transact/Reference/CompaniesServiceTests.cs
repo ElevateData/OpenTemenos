@@ -7,7 +7,7 @@ public class CompaniesServiceTests : CredentialManagement
 {
     private const string CompanyCode = "";
     private const string CurrencyMarket = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetCompaniesAsync()

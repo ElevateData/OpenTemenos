@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 [TestClass]
 public class DealerDeskDetailsServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient);
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
     private readonly string _recordId = string.Empty;
 
     [TestMethod]

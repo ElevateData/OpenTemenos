@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 [TestClass]
 public class ZeroCouponServiceTests : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
 
 
     [TestMethod]

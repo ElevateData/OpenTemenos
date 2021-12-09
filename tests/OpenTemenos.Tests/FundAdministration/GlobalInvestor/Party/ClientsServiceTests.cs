@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 public class ClientsServiceTests : CredentialManagement
 {
     private const string ClientId = "1";
-    private readonly IPartyClient _client = new PartyClient(HttpClient);
+    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetClientAsync()

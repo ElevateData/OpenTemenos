@@ -7,7 +7,7 @@ public class LimitDetailsServiceTests : CredentialManagement
 {
     private const string MasterGroupKey = "";
     private const string RecordId = "";
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient);
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
 
     [TestMethod]
     public void GetExpiringLimitsAsync()
