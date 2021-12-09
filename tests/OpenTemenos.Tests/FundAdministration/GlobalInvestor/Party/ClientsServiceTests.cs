@@ -44,7 +44,6 @@ public class ClientsServiceTests : CredentialManagement
     [TestMethod]
     public void GetClientByClientIdAsync()
     {
-        var payload = new _0Payload();
         var result = _client.InvestorService.GetClientByClientIdAsync(null, null, null, null, null, null, null, null, null, null, ClientId).Result;
         Assert.IsNotNull(result.Body);
     }

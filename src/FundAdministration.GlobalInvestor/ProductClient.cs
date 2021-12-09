@@ -20,11 +20,14 @@ using FundAdministration.GlobalInvestor.Product.FxDetails;
 using FundAdministration.GlobalInvestor.Product.HoldingLimits;
 using FundAdministration.GlobalInvestor.Product.Holidays;
 using FundAdministration.GlobalInvestor.Product.InitialSubscriptions;
+using FundAdministration.GlobalInvestor.Product.MinDivPayments;
 using FundAdministration.GlobalInvestor.Product.PerformanceFeeSetups;
 using FundAdministration.GlobalInvestor.Product.PermissionCountries;
 using FundAdministration.GlobalInvestor.Product.Security;
+using FundAdministration.GlobalInvestor.Product.SecurityDesc;
 using FundAdministration.GlobalInvestor.Product.SecurityIds;
 using FundAdministration.GlobalInvestor.Product.ShareClasses;
+using FundAdministration.GlobalInvestor.Product.ShareValues;
 using FundAdministration.GlobalInvestor.Product.SimulationCalendars;
 using FundAdministration.GlobalInvestor.Product.SoftClosures;
 using FundAdministration.GlobalInvestor.Product.StpCounterParts;
@@ -68,17 +71,24 @@ public class ProductClient : IProductClient
     public IHolidaysService HolidayService => new HolidaysService(_httpClient) { BaseUrl = BaseUrl };
     public IInitialSubscriptionsService InitialSubscriptionService => new InitialSubscriptionsService(_httpClient) { BaseUrl = BaseUrl };
 
+    public IMinDivPaymentsService MinDivPaymentService => new MinDivPaymentsService(_httpClient) { BaseUrl = BaseUrl };
+
     public IMasterFund MasterFund => new MasterFund(_httpClient) { BaseUrl = BaseUrl };
 
     public IPerformanceFeeSetupsService PerformanceFeeService => new PerformanceFeeSetupsService(_httpClient) { BaseUrl = BaseUrl };
     public IPermissionCountriesService PermissionCountryService => new PermissionCountriesService(_httpClient) { BaseUrl = BaseUrl };
+
+    public ISecurityDescService SecurityDescService => new SecurityDescService(_httpClient) { BaseUrl = BaseUrl };
+
     public ISecurityIdsService SecurityIdService => new SecurityIdsService(_httpClient) { BaseUrl = BaseUrl };
     public ISecurityService SecurityService => new SecurityService(_httpClient) { BaseUrl = BaseUrl };
-    public IShareClassesService TransferAgentFundShareclassService => new ShareClassesService(_httpClient) { BaseUrl = BaseUrl };
+    public IShareClassesService TransferAgentFundShareClassService => new ShareClassesService(_httpClient) { BaseUrl = BaseUrl };
     public ISimulationCalendarsService SimulationCalendarService => new SimulationCalendarsService(_httpClient) { BaseUrl = BaseUrl };
     public ISoftClosuresService SoftClosureService => new SoftClosuresService(_httpClient) { BaseUrl = BaseUrl };
     public IStpCounterPartsService StraightThroughProcessingCounterpartService => new StpCounterPartsService(_httpClient) { BaseUrl = BaseUrl };
     public ITaFundsService TransferAgentFundService => new TaFundsService(_httpClient) { BaseUrl = BaseUrl };
+    public IShareValuesService TransferAgentFundShareValueService => new ShareValuesService(_httpClient) { BaseUrl = BaseUrl };
+    public ITradeDateExceptionsService TradeDateExceptionService => new TradeDateExceptionsService(_httpClient) { BaseUrl = BaseUrl };
     public ITradeDateExceptionsService FundCalendarExceptionService => new TradeDateExceptionsService(_httpClient) { BaseUrl = BaseUrl };
     public ITransactionLimitsService TransactionLimitService => new TransactionLimitsService(_httpClient) { BaseUrl = BaseUrl };
     public ITransactionRestrictionsService TransactionRestrictionService => new TransactionRestrictionsService(_httpClient) { BaseUrl = BaseUrl };

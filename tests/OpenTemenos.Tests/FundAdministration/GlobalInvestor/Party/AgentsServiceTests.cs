@@ -11,7 +11,6 @@ public class AgentsServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient);
     private const string AgentId = "1";
-    private const string InternalId = "1";
 
     [TestMethod]
     public void GetAgentAsync()

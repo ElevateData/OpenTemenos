@@ -19,10 +19,14 @@ using FundAdministration.GlobalInvestor.Product.FxDetails;
 using FundAdministration.GlobalInvestor.Product.HoldingLimits;
 using FundAdministration.GlobalInvestor.Product.Holidays;
 using FundAdministration.GlobalInvestor.Product.InitialSubscriptions;
+using FundAdministration.GlobalInvestor.Product.MinDivPayments;
 using FundAdministration.GlobalInvestor.Product.PerformanceFeeSetups;
 using FundAdministration.GlobalInvestor.Product.PermissionCountries;
+using FundAdministration.GlobalInvestor.Product.Security;
+using FundAdministration.GlobalInvestor.Product.SecurityDesc;
 using FundAdministration.GlobalInvestor.Product.SecurityIds;
 using FundAdministration.GlobalInvestor.Product.ShareClasses;
+using FundAdministration.GlobalInvestor.Product.ShareValues;
 using FundAdministration.GlobalInvestor.Product.SimulationCalendars;
 using FundAdministration.GlobalInvestor.Product.SoftClosures;
 using FundAdministration.GlobalInvestor.Product.StpCounterParts;
@@ -57,16 +61,21 @@ public interface IProductClient
     public IHoldingLimitsService HoldingLimitService { get; }
     public IHolidaysService HolidayService { get; }
     public IInitialSubscriptionsService InitialSubscriptionService { get; }
+    public IMinDivPaymentsService MinDivPaymentService { get; }
     public IMasterFund MasterFund { get; }
     public IPerformanceFeeSetupsService PerformanceFeeService { get; }
     public IPermissionCountriesService PermissionCountryService { get; }
+    public ISecurityDescService SecurityDescService { get; }
     public ISecurityIdsService SecurityIdService { get; }
+    public ISecurityService SecurityService { get; }
     public ISimulationCalendarsService SimulationCalendarService { get; }
     public ISoftClosuresService SoftClosureService { get; }
     public IStpCounterPartsService StraightThroughProcessingCounterpartService { get; }
     public ITransactionLimitsService TransactionLimitService { get; }
     public ITransactionRestrictionsService TransactionRestrictionService { get; }
     public ITaFundsService TransferAgentFundService { get; }
-    public IShareClassesService TransferAgentFundShareclassService { get; }
+    public IShareClassesService TransferAgentFundShareClassService { get; }
+    public IShareValuesService TransferAgentFundShareValueService { get; }
+    public ITradeDateExceptionsService TradeDateExceptionService { get; }
     //public ITfcsService TrustFundCompanyService { get; }
 }
