@@ -8,4 +8,11 @@ public class RetailDepositsCustomerDetailsServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
+
+    [TestMethod]
+    public void GetRetailDepositsCustomerDetailsAsync()
+    {
+        var result = _client.DepositCustomerBalanceService.GetRetailDepositsCustomerDetailsAsync(null, null).Result;
+        Assert.IsNotNull(result.Data);
+    }
 }

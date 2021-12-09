@@ -11,6 +11,7 @@ namespace FundAdministration.GlobalAccounting;
 public class ExchangeOfSecurity : IExchangeOfSecurity
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public ExchangeOfSecurity(HttpClient httpClient)
     {
@@ -18,18 +19,18 @@ public class ExchangeOfSecurity : IExchangeOfSecurity
     }
 
     public IExchangeOfNewSecurityWithCashOutflowService NewSecurityWithCashOutflowService =>
-        new ExchangeOfNewSecurityWithCashOutflowService(_httpClient);
+        new ExchangeOfNewSecurityWithCashOutflowService(_httpClient){BaseUrl = BaseUrl};
 
     public IExchangeOfNewSecurityWithCashInflowService NewSecurityWithCashInflowService =>
-        new ExchangeOfNewSecurityWithCashInflowService(_httpClient);
+        new ExchangeOfNewSecurityWithCashInflowService(_httpClient){BaseUrl = BaseUrl};
 
     public IEosNewSecurityWithoutCashService NewSecurityWithoutCashCompensationService =>
-        new EosNewSecurityWithoutCashService(_httpClient);
+        new EosNewSecurityWithoutCashService(_httpClient){BaseUrl = BaseUrl};
 
     public IEosCashCompensationService NewSecurityWithCashCompensationService =>
-        new EosCashCompensationService(_httpClient);
+        new EosCashCompensationService(_httpClient){BaseUrl = BaseUrl};
 
-    public IEosSameSecurityService SameSecurityService => new EosSameSecurityService(_httpClient);
+    public IEosSameSecurityService SameSecurityService => new EosSameSecurityService(_httpClient){BaseUrl = BaseUrl};
 
-    public IEosMultipleSecurityService MultipleSecurityService => new EosMultipleSecurityService(_httpClient);
+    public IEosMultipleSecurityService MultipleSecurityService => new EosMultipleSecurityService(_httpClient){BaseUrl = BaseUrl};
 }

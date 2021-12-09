@@ -22,26 +22,27 @@ namespace FundAdministration.GlobalInvestor;
 public class OrderClient : IOrderClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public OrderClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IAdjustmentsService UnderlyingRegAdjustmentService => new AdjustmentsService(_httpClient);
-    public IAnnouncementsService DividendPaymentService => new AnnouncementsService(_httpClient);
-    public IContractChangesService RegisterContractChangeService => new ContractChangesService(_httpClient);
-    public IContractHistoryService RegisterHistoricalContractService => new ContractHistoryService(_httpClient);
-    public IDividendRatesService DividendRateService => new DividendRatesService(_httpClient);
-    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient);
-    public IInstructionService InstructionService => new InstructionService(_httpClient);
-    public INavService SharePriceService => new NavService(_httpClient);
-    public IOrderCancelReverseService OrderCancellationService => new OrderCancelReverseService(_httpClient);
-    public IOrderNotificationService ErrorInterfaceService => new OrderNotificationService(_httpClient);
-    public IOrderService OrderService => new OrderService(_httpClient);
-    public IPaymentAmendmentsService PaymentAmendmentService => new PaymentAmendmentsService(_httpClient);
-    public IPaymentLogProcessesService PaymentLogService => new PaymentLogProcessesService(_httpClient);
-    public IPaymentsService PaymentService => new PaymentsService(_httpClient);
-    public IReceiptsService CashReceiptService => new ReceiptsService(_httpClient);
-    public ISecurityPriceUpdatesService MarketValueHistoricalService => new SecurityPriceUpdatesService(_httpClient);
-    public ITradingDeskRatesService TradingDeskValidationService => new TradingDeskRatesService(_httpClient);
+    public IAdjustmentsService UnderlyingRegAdjustmentService => new AdjustmentsService(_httpClient){BaseUrl = BaseUrl};
+    public IAnnouncementsService DividendPaymentService => new AnnouncementsService(_httpClient){BaseUrl = BaseUrl};
+    public IContractChangesService RegisterContractChangeService => new ContractChangesService(_httpClient){BaseUrl = BaseUrl};
+    public IContractHistoryService RegisterHistoricalContractService => new ContractHistoryService(_httpClient){BaseUrl = BaseUrl};
+    public IDividendRatesService DividendRateService => new DividendRatesService(_httpClient){BaseUrl = BaseUrl};
+    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient){BaseUrl = BaseUrl};
+    public IInstructionService InstructionService => new InstructionService(_httpClient){BaseUrl = BaseUrl};
+    public INavService SharePriceService => new NavService(_httpClient){BaseUrl = BaseUrl};
+    public IOrderCancelReverseService OrderCancellationService => new OrderCancelReverseService(_httpClient){BaseUrl = BaseUrl};
+    public IOrderNotificationService ErrorInterfaceService => new OrderNotificationService(_httpClient){BaseUrl = BaseUrl};
+    public IOrderService OrderService => new OrderService(_httpClient){BaseUrl = BaseUrl};
+    public IPaymentAmendmentsService PaymentAmendmentService => new PaymentAmendmentsService(_httpClient){BaseUrl = BaseUrl};
+    public IPaymentLogProcessesService PaymentLogService => new PaymentLogProcessesService(_httpClient){BaseUrl = BaseUrl};
+    public IPaymentsService PaymentService => new PaymentsService(_httpClient){BaseUrl = BaseUrl};
+    public IReceiptsService CashReceiptService => new ReceiptsService(_httpClient){BaseUrl = BaseUrl};
+    public ISecurityPriceUpdatesService MarketValueHistoricalService => new SecurityPriceUpdatesService(_httpClient){BaseUrl = BaseUrl};
+    public ITradingDeskRatesService TradingDeskValidationService => new TradingDeskRatesService(_httpClient){BaseUrl = BaseUrl};
 }

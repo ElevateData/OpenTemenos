@@ -12,16 +12,17 @@ namespace FundAdministration.GlobalAccounting;
 public class ReferenceClient : IReferenceClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public ReferenceClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient);
-    public IForwardExchangeRateService ForwardExchangeRateService => new ForwardExchangeRateService(_httpClient);
-    public IForwardInterestRateService ForwardInterestRateService => new ForwardInterestRateService(_httpClient);
-    public IInterestRateTypeService InterestRateTypeService => new InterestRateTypeService(_httpClient);
-    public ISecurityPriceService SecurityPriceService => new SecurityPriceService(_httpClient);
-    public ISwapInterestRateService SwapInterestRateService => new SwapInterestRateService(_httpClient);
-    public ISwapsPriceService SwapsPriceService => new SwapsPriceService(_httpClient);
+    public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient){BaseUrl = BaseUrl};
+    public IForwardExchangeRateService ForwardExchangeRateService => new ForwardExchangeRateService(_httpClient){BaseUrl = BaseUrl};
+    public IForwardInterestRateService ForwardInterestRateService => new ForwardInterestRateService(_httpClient){BaseUrl = BaseUrl};
+    public IInterestRateTypeService InterestRateTypeService => new InterestRateTypeService(_httpClient){BaseUrl = BaseUrl};
+    public ISecurityPriceService SecurityPriceService => new SecurityPriceService(_httpClient){BaseUrl = BaseUrl};
+    public ISwapInterestRateService SwapInterestRateService => new SwapInterestRateService(_httpClient){BaseUrl = BaseUrl};
+    public ISwapsPriceService SwapsPriceService => new SwapsPriceService(_httpClient){BaseUrl = BaseUrl};
 }

@@ -38,47 +38,48 @@ namespace FundAdministration.GlobalInvestor;
 public class ProductClient : IProductClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public ProductClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IAdlDealingDetailsService AntiDilutionLevyDealingService => new AdlDealingDetailsService(_httpClient);
-    public IApproExproDefinitionsService ApproOrExproDefinitionService => new ApproExproDefinitionsService(_httpClient);
-    public ICommissionGroupsService CommissionGroupService => new CommissionGroupsService(_httpClient);
-    public IDelayDaysService DelayDayService => new DelayDaysService(_httpClient);
-    public IEscalationChecksService EscalationCheckService => new EscalationChecksService(_httpClient);
-    public IExchangeGroupsService ExchangeGroupService => new ExchangeGroupsService(_httpClient);
-    public IFixedCalendarsService FixedCalendarService => new FixedCalendarsService(_httpClient);
-    public IFrequencyExceptionDaysService FrequentExceptionDayService => new FrequencyExceptionDaysService(_httpClient);
-    public IFrequencyExceptionsService FrequentExceptionService => new FrequencyExceptionsService(_httpClient);
-    public IFundCutoffTimesService FundCutoffTimeService => new FundCutoffTimesService(_httpClient);
-    public IFundEscalationChecksService FundEscalationCheckService => new FundEscalationChecksService(_httpClient);
-    public IFundGroupCutoffService CutoffByFundGroupService => new FundGroupCutoffService(_httpClient);
-    public IFundManagersService FundManagerService => new FundManagersService(_httpClient);
-    public IFundOfFundsService FundOfFundService => new FundOfFundsService(_httpClient);
-    public IFundPromotersService FundPromoterService => new FundPromotersService(_httpClient);
+    public IAdlDealingDetailsService AntiDilutionLevyDealingService => new AdlDealingDetailsService(_httpClient){BaseUrl = BaseUrl};
+    public IApproExproDefinitionsService ApproOrExproDefinitionService => new ApproExproDefinitionsService(_httpClient){BaseUrl = BaseUrl};
+    public ICommissionGroupsService CommissionGroupService => new CommissionGroupsService(_httpClient){BaseUrl = BaseUrl};
+    public IDelayDaysService DelayDayService => new DelayDaysService(_httpClient){BaseUrl = BaseUrl};
+    public IEscalationChecksService EscalationCheckService => new EscalationChecksService(_httpClient){BaseUrl = BaseUrl};
+    public IExchangeGroupsService ExchangeGroupService => new ExchangeGroupsService(_httpClient){BaseUrl = BaseUrl};
+    public IFixedCalendarsService FixedCalendarService => new FixedCalendarsService(_httpClient){BaseUrl = BaseUrl};
+    public IFrequencyExceptionDaysService FrequentExceptionDayService => new FrequencyExceptionDaysService(_httpClient){BaseUrl = BaseUrl};
+    public IFrequencyExceptionsService FrequentExceptionService => new FrequencyExceptionsService(_httpClient){BaseUrl = BaseUrl};
+    public IFundCutoffTimesService FundCutoffTimeService => new FundCutoffTimesService(_httpClient){BaseUrl = BaseUrl};
+    public IFundEscalationChecksService FundEscalationCheckService => new FundEscalationChecksService(_httpClient){BaseUrl = BaseUrl};
+    public IFundGroupCutoffService CutoffByFundGroupService => new FundGroupCutoffService(_httpClient){BaseUrl = BaseUrl};
+    public IFundManagersService FundManagerService => new FundManagersService(_httpClient){BaseUrl = BaseUrl};
+    public IFundOfFundsService FundOfFundService => new FundOfFundsService(_httpClient){BaseUrl = BaseUrl};
+    public IFundPromotersService FundPromoterService => new FundPromotersService(_httpClient){BaseUrl = BaseUrl};
 
-    public IFundTradingDeskTransService FundTradingDeskService => new FundTradingDeskTransService(_httpClient);
+    public IFundTradingDeskTransService FundTradingDeskService => new FundTradingDeskTransService(_httpClient){BaseUrl = BaseUrl};
 
-    public IFundValueDatesService FundValueDateService => new FundValueDatesService(_httpClient);
-    public IFxDetailsService ForexService => new FxDetailsService(_httpClient);
-    public IHoldingLimitsService HoldingLimitService => new HoldingLimitsService(_httpClient);
-    public IHolidaysService HolidayService => new HolidaysService(_httpClient);
-    public IInitialSubscriptionsService InitialSubscriptionService => new InitialSubscriptionsService(_httpClient);
+    public IFundValueDatesService FundValueDateService => new FundValueDatesService(_httpClient){BaseUrl = BaseUrl};
+    public IFxDetailsService ForexService => new FxDetailsService(_httpClient){BaseUrl = BaseUrl};
+    public IHoldingLimitsService HoldingLimitService => new HoldingLimitsService(_httpClient){BaseUrl = BaseUrl};
+    public IHolidaysService HolidayService => new HolidaysService(_httpClient){BaseUrl = BaseUrl};
+    public IInitialSubscriptionsService InitialSubscriptionService => new InitialSubscriptionsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IMasterFund MasterFund => new MasterFund(_httpClient);
+    public IMasterFund MasterFund => new MasterFund(_httpClient){BaseUrl = BaseUrl};
 
-    public IPerformanceFeeSetupsService PerformanceFeeService => new PerformanceFeeSetupsService(_httpClient);
-    public IPermissionCountriesService PermissionCountryService => new PermissionCountriesService(_httpClient);
-    public ISecurityIdsService SecurityIdService => new SecurityIdsService(_httpClient);
-    public ISecurityService SecurityService => new SecurityService(_httpClient);
-    public IShareClassesService TransferAgentFundShareclassService => new ShareClassesService(_httpClient);
-    public ISimulationCalendarsService SimulationCalendarService => new SimulationCalendarsService(_httpClient);
-    public ISoftClosuresService SoftClosureService => new SoftClosuresService(_httpClient);
-    public IStpCounterPartsService StraightThroughProcessingCounterpartService => new StpCounterPartsService(_httpClient);
-    public ITaFundsService TransferAgentFundService => new TaFundsService(_httpClient);
-    public ITradeDateExceptionsService FundCalendarExceptionService => new TradeDateExceptionsService(_httpClient);
-    public ITransactionLimitsService TransactionLimitService => new TransactionLimitsService(_httpClient);
-    public ITransactionRestrictionsService TransactionRestrictionService => new TransactionRestrictionsService(_httpClient);
+    public IPerformanceFeeSetupsService PerformanceFeeService => new PerformanceFeeSetupsService(_httpClient){BaseUrl = BaseUrl};
+    public IPermissionCountriesService PermissionCountryService => new PermissionCountriesService(_httpClient){BaseUrl = BaseUrl};
+    public ISecurityIdsService SecurityIdService => new SecurityIdsService(_httpClient){BaseUrl = BaseUrl};
+    public ISecurityService SecurityService => new SecurityService(_httpClient){BaseUrl = BaseUrl};
+    public IShareClassesService TransferAgentFundShareclassService => new ShareClassesService(_httpClient){BaseUrl = BaseUrl};
+    public ISimulationCalendarsService SimulationCalendarService => new SimulationCalendarsService(_httpClient){BaseUrl = BaseUrl};
+    public ISoftClosuresService SoftClosureService => new SoftClosuresService(_httpClient){BaseUrl = BaseUrl};
+    public IStpCounterPartsService StraightThroughProcessingCounterpartService => new StpCounterPartsService(_httpClient){BaseUrl = BaseUrl};
+    public ITaFundsService TransferAgentFundService => new TaFundsService(_httpClient){BaseUrl = BaseUrl};
+    public ITradeDateExceptionsService FundCalendarExceptionService => new TradeDateExceptionsService(_httpClient){BaseUrl = BaseUrl};
+    public ITransactionLimitsService TransactionLimitService => new TransactionLimitsService(_httpClient){BaseUrl = BaseUrl};
+    public ITransactionRestrictionsService TransactionRestrictionService => new TransactionRestrictionsService(_httpClient){BaseUrl = BaseUrl};
 }

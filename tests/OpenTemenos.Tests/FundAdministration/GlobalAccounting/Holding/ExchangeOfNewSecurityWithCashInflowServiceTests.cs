@@ -1,5 +1,6 @@
 ﻿using FundAdministration.GlobalAccounting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflow;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
@@ -8,4 +9,14 @@ public class ExchangeOfNewSecurityWithCashInflowServiceTests : CredentialManagem
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
+
+    [TestMethod, Ignore("POST method")]
+    public void CreateExchangeOfNewSecurityWithCashInflowAsync()
+    {
+        var payload = new _0BULKPayload();
+        var result = _client.ExchangeOfSecurity.NewSecurityWithCashInflowService
+            .CreateExchangeOfNewSecurityWithCashInflowAsync(null, null, null, null, null, payload)
+            .Result;
+        Assert.IsNotNull(result.Body);
+    }
 }

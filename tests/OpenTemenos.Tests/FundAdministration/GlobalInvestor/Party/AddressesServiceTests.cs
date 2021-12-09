@@ -1,5 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FundAdministration.GlobalInvestor.Party.Addresses;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
@@ -8,5 +9,60 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 public class AddressesServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient);
+    private const string InternalId = "";
 
+    [TestMethod, Ignore("POST method")]
+    public void PostAddressesByParentAsync()
+    {
+        var payload = new _0Payload();
+        var result = _client.AddressService.PostAddressesByParentAsync(null, null, null, null, null, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
+
+    [TestMethod, Ignore("POST method")]
+    public void PostAddressesAsync()
+    {
+        var payload = new _0Payload();
+        var result = _client.AddressService.PostAddressesAsync(null, null, null, null, null, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
+
+    [TestMethod, Ignore("PUT method")]
+    public void PutAddressesAsync()
+    {
+        var payload = new _0BULKPayload();
+        var result = _client.AddressService.PutAddressesAsync(null, null, null, null, null, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
+
+    [TestMethod, Ignore("DELETE method")]
+    public void DeleteAddressesAsync()
+    {
+        var payload = new _0BULKPayload();
+        var result = _client.AddressService.DeleteAddressesAsync(null, null, null, null, null, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
+
+    [TestMethod]
+    public void GetAddressesByInternalIdAsync()
+    {
+        var result = _client.AddressService.GetAddressesByInternalIdAsync(null, null, null, null, null, null,null,null,null,null,InternalId).Result;
+        Assert.IsNotNull(result.Body);
+    }
+
+    [TestMethod, Ignore("PUT method")]
+    public void PutAddressesByIdAsync()
+    {
+        var payload = new _0Payload();
+        var result = _client.AddressService.PutAddressesByIdAsync(null, null, null, null, null, InternalId, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
+
+    [TestMethod, Ignore("DELETE method")]
+    public void DeleteAddressesByIdAsync()
+    {
+        var payload = new _0Payload();
+        var result = _client.AddressService.DeleteAddressesByIdAsync(null, null, null, null, null, InternalId, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
 }

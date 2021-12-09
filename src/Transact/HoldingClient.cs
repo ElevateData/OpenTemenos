@@ -30,63 +30,64 @@ namespace Transact;
 public class HoldingClient : IHoldingClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public HoldingClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
-    public ICardsService AccountCardService => new CardsService(_httpClient);
+    public ICardsService AccountCardService => new CardsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IAccountsService AccountManagementService => new AccountsService(_httpClient);
+    public IAccountsService AccountManagementService => new AccountsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IArrangementsActivitiesService ArrangementsActivityService => new ArrangementsActivitiesService(_httpClient);
+    public IArrangementsActivitiesService ArrangementsActivityService => new ArrangementsActivitiesService(_httpClient){BaseUrl = BaseUrl};
 
-    public ICashManagementBundlesService CashManagementBundleArrangementService => new CashManagementBundlesService(_httpClient);
+    public ICashManagementBundlesService CashManagementBundleArrangementService => new CashManagementBundlesService(_httpClient){BaseUrl = BaseUrl};
 
-    public IEntitlementsService CorporateActionEventManagementService => new EntitlementsService(_httpClient);
+    public IEntitlementsService CorporateActionEventManagementService => new EntitlementsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IDashboardsService CorporateDashboardService => new DashboardsService(_httpClient);
+    public IDashboardsService CorporateDashboardService => new DashboardsService(_httpClient){BaseUrl = BaseUrl};
 
-    public ICustomerArrangementsService CustomerArrangementService => new CustomerArrangementsService(_httpClient);
+    public ICustomerArrangementsService CustomerArrangementService => new CustomerArrangementsService(_httpClient){BaseUrl = BaseUrl};
 
-    public ICustomersService CustomerHoldingService => new CustomersService(_httpClient);
+    public ICustomersService CustomerHoldingService => new CustomersService(_httpClient){BaseUrl = BaseUrl};
 
-    public IDerivativesOptionsService DerivativeInstrumentOperationService => new DerivativesOptionsService(_httpClient);
+    public IDerivativesOptionsService DerivativeInstrumentOperationService => new DerivativesOptionsService(_httpClient){BaseUrl = BaseUrl};
 
-    public ILimitsService LimitLiabilityAndForexLimitService => new LimitsService(_httpClient);
+    public ILimitsService LimitLiabilityAndForexLimitService => new LimitsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IHoldingService HoldingService => new HoldingService(_httpClient);
+    public IHoldingService HoldingService => new HoldingService(_httpClient){BaseUrl = BaseUrl};
 
-    public IArrangementsProductLinesService ArrangementForProductLineService => new ArrangementsProductLinesService(_httpClient);
+    public IArrangementsProductLinesService ArrangementForProductLineService => new ArrangementsProductLinesService(_httpClient){BaseUrl = BaseUrl};
 
-    public IAlertsService ArrangementAccountAlertService => new AlertsService(_httpClient);
+    public IAlertsService ArrangementAccountAlertService => new AlertsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IArrangementsBalancesService ArrangementAccountDocumentService => new ArrangementsBalancesService(_httpClient);
+    public IArrangementsBalancesService ArrangementAccountDocumentService => new ArrangementsBalancesService(_httpClient){BaseUrl = BaseUrl};
 
-    public ICollateralsService CustomerCollateralService => new CollateralsService(_httpClient);
+    public ICollateralsService CustomerCollateralService => new CollateralsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IForexUtilizationsService ForexUtilizationService => new ForexUtilizationsService(_httpClient);
+    public IForexUtilizationsService ForexUtilizationService => new ForexUtilizationsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IGuaranteesService GuaranteeService => new GuaranteesService(_httpClient);
+    public IGuaranteesService GuaranteeService => new GuaranteesService(_httpClient){BaseUrl = BaseUrl};
 
-    public ILetterOfCreditService LetterOfCreditService => new LetterOfCreditService(_httpClient);
+    public ILetterOfCreditService LetterOfCreditService => new LetterOfCreditService(_httpClient){BaseUrl = BaseUrl};
 
-    public IPaymentStopsService PaymentStopService => new PaymentStopsService(_httpClient);
+    public IPaymentStopsService PaymentStopService => new PaymentStopsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IPortfoliosService PortfolioService => new PortfoliosService(_httpClient);
+    public IPortfoliosService PortfolioService => new PortfoliosService(_httpClient){BaseUrl = BaseUrl};
 
-    public IRepurchaseAgreementsService RepurchaseAgreementService => new RepurchaseAgreementsService(_httpClient);
+    public IRepurchaseAgreementsService RepurchaseAgreementService => new RepurchaseAgreementsService(_httpClient){BaseUrl = BaseUrl};
 
-    public ISecurityPositionsService SecurityPositionService => new SecurityPositionsService(_httpClient);
+    public ISecurityPositionsService SecurityPositionService => new SecurityPositionsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IPortfolioSettlementService SecuritySettlementService => new PortfolioSettlementService(_httpClient);
+    public IPortfolioSettlementService SecuritySettlementService => new PortfolioSettlementService(_httpClient){BaseUrl = BaseUrl};
 
-    public ISecurityTradesService SecurityTradeService => new SecurityTradesService(_httpClient);
+    public ISecurityTradesService SecurityTradeService => new SecurityTradesService(_httpClient){BaseUrl = BaseUrl};
 
-    public ITransactionsService TransactionService => new TransactionsService(_httpClient);
+    public ITransactionsService TransactionService => new TransactionsService(_httpClient){BaseUrl = BaseUrl};
 
-    public ITreasury Treasury => new Treasury(_httpClient);
+    public ITreasury Treasury => new Treasury(_httpClient){BaseUrl = BaseUrl};
 
-    public IUsModelBank UsModelBank => new UsModelBank(_httpClient);
+    public IUsModelBank UsModelBank => new UsModelBank(_httpClient){BaseUrl = BaseUrl};
 }

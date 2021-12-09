@@ -8,4 +8,11 @@ public class PaymentStopsServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient);
 
+
+    [TestMethod]
+    public void GetPaymentStopsAsync()
+    {
+        var result = _client.PaymentStopService.GetPaymentStopsAsync(null, null, null).Result;
+        Assert.IsNotNull(result.Data);
+    }
 }

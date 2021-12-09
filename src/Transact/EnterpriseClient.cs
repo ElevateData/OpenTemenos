@@ -6,11 +6,12 @@ namespace Transact;
 public class EnterpriseClient : IEnterpriseClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public EnterpriseClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
-    public IPricingService EnterpriseProductPricingService => new PricingService(_httpClient);
+    public IPricingService EnterpriseProductPricingService => new PricingService(_httpClient){BaseUrl = BaseUrl};
 }

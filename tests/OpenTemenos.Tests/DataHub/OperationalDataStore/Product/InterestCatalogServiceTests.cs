@@ -7,5 +7,12 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 public class InterestCatalogServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient);
+    private const string RecordId = "";
 
+    [TestMethod]
+    public void GetInterestCatalogAsync()
+    {
+        var result = _client.InterestCatalogService.GetInterestCatalogAsync(RecordId).Result;
+        Assert.IsNotNull(result.Data);
+    }
 }

@@ -9,16 +9,17 @@ namespace FundAdministration.GlobalInvestor;
 public class MasterFund : IMasterFund
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public MasterFund(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public ISecurityDescService SecurityDescriptionService => new SecurityDescService(_httpClient);
+    public ISecurityDescService SecurityDescriptionService => new SecurityDescService(_httpClient){BaseUrl = BaseUrl};
 
-    public IShareValuesService ShareValueService => new ShareValuesService(_httpClient);
+    public IShareValuesService ShareValueService => new ShareValuesService(_httpClient){BaseUrl = BaseUrl};
 
-    public IMinDivPaymentsService MinDividendPaymentService => new MinDivPaymentsService(_httpClient);
+    public IMinDivPaymentsService MinDividendPaymentService => new MinDivPaymentsService(_httpClient){BaseUrl = BaseUrl};
 
-    public ISecurityService SecurityService => new SecurityService(_httpClient);
+    public ISecurityService SecurityService => new SecurityService(_httpClient){BaseUrl = BaseUrl};
 }

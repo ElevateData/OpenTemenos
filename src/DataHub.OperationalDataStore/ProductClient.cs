@@ -11,20 +11,21 @@ namespace DataHub.OperationalDataStore;
 public class ProductClient : IProductClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public ProductClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
-    public IProductBuilderDetailsService ProductBuilderService => new ProductBuilderDetailsService(_httpClient);
-    public IProductConditionDetailsService ProductConditionService => new ProductConditionDetailsService(_httpClient);
-    public IProductDetailsService ProductDetailService => new ProductDetailsService(_httpClient);
-    public IInterestCatalogService InterestCatalogService => new InterestCatalogService(_httpClient);
+    public IProductBuilderDetailsService ProductBuilderService => new ProductBuilderDetailsService(_httpClient){BaseUrl = BaseUrl};
+    public IProductConditionDetailsService ProductConditionService => new ProductConditionDetailsService(_httpClient){BaseUrl = BaseUrl};
+    public IProductDetailsService ProductDetailService => new ProductDetailsService(_httpClient){BaseUrl = BaseUrl};
+    public IInterestCatalogService InterestCatalogService => new InterestCatalogService(_httpClient){BaseUrl = BaseUrl};
 
     public IInterestConditionDetailsService ProductInterestConditionService =>
-        new InterestConditionDetailsService(_httpClient);
+        new InterestConditionDetailsService(_httpClient){BaseUrl = BaseUrl};
 
     public IProductMarketingCatalogueService ProductMarketingCatalogService =>
-        new ProductMarketingCatalogueService(_httpClient);
+        new ProductMarketingCatalogueService(_httpClient){BaseUrl = BaseUrl};
 }

@@ -8,14 +8,15 @@ namespace FundAdministration.GlobalInvestor;
 public class FatcaCrs : IFatcaCrs
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public FatcaCrs(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IFatcaCrsDocumentsService DocumentService => new FatcaCrsDocumentsService(_httpClient);
+    public IFatcaCrsDocumentsService DocumentService => new FatcaCrsDocumentsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IFatcaCrsStatusesService StatusService => new FatcaCrsStatusesService(_httpClient);
+    public IFatcaCrsStatusesService StatusService => new FatcaCrsStatusesService(_httpClient){BaseUrl = BaseUrl};
 
-    public IFatcaCrsSubStatusesService SubStatusService => new FatcaCrsSubStatusesService(_httpClient);
+    public IFatcaCrsSubStatusesService SubStatusService => new FatcaCrsSubStatusesService(_httpClient){BaseUrl = BaseUrl};
 }

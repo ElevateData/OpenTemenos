@@ -9,15 +9,15 @@ namespace FundAdministration.GlobalInvestor;
 public class ReferenceClient : IReferenceClient
 {
     private readonly HttpClient _httpClient;
-    private readonly string _baseUrl = "https://api.temenos.com/IRISgi/multifonds/api/v1.0.0";
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
     public ReferenceClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
-    public ICitiesService TownService => new CitiesService(_httpClient) { BaseUrl = _baseUrl };
+    public ICitiesService TownService => new CitiesService(_httpClient) { BaseUrl = BaseUrl };
 
-    public ICountryHolidaysService CountryHolidayService => new CountryHolidaysService(_httpClient) { BaseUrl = _baseUrl };
-    public ICurrencyHolidaysService CurrencyHolidayService => new CurrencyHolidaysService(_httpClient) { BaseUrl = _baseUrl };
-    public IMessagesService MessageService => new MessagesService(_httpClient) { BaseUrl = _baseUrl };
+    public ICountryHolidaysService CountryHolidayService => new CountryHolidaysService(_httpClient) { BaseUrl = BaseUrl };
+    public ICurrencyHolidaysService CurrencyHolidayService => new CurrencyHolidaysService(_httpClient) { BaseUrl = BaseUrl };
+    public IMessagesService MessageService => new MessagesService(_httpClient) { BaseUrl = BaseUrl };
 }

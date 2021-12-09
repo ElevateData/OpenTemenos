@@ -1,5 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FundAdministration.GlobalInvestor.Order.OrderNotification;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
@@ -8,4 +9,12 @@ public class OrderNotificationServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient);
 
+
+    [TestMethod, Ignore("POST method")]
+    public void PostOrderNotificationAsync()
+    {
+        var payload = new _0BULKPayload();
+        var result = _client.ErrorInterfaceService.PostordernotificationAsync(null, null, null, null, null, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
 }

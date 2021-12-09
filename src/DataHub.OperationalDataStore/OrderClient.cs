@@ -12,24 +12,25 @@ namespace DataHub.OperationalDataStore;
 public class OrderClient : IOrderClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public OrderClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
-    public ISweepAccountDetailsService AccountSweepService => new SweepAccountDetailsService(_httpClient);
+    public ISweepAccountDetailsService AccountSweepService => new SweepAccountDetailsService(_httpClient){BaseUrl = BaseUrl};
 
     public IFundsTransferDetailsService FundsTransferDetailService =>
-        new FundsTransferDetailsService(_httpClient);
+        new FundsTransferDetailsService(_httpClient){BaseUrl = BaseUrl};
 
     public IRejectedCollectionsService OrderRejectedCollectionService =>
-        new RejectedCollectionsService(_httpClient);
+        new RejectedCollectionsService(_httpClient){BaseUrl = BaseUrl};
 
-    public IPaymentDetailsService PaymentService => new PaymentDetailsService(_httpClient);
-    public IInvestigationItemsService TransactionStopService => new InvestigationItemsService(_httpClient);
-    public IForexOrderDetailsService TreasuryForexOrderService => new ForexOrderDetailsService(_httpClient);
+    public IPaymentDetailsService PaymentService => new PaymentDetailsService(_httpClient){BaseUrl = BaseUrl};
+    public IInvestigationItemsService TransactionStopService => new InvestigationItemsService(_httpClient){BaseUrl = BaseUrl};
+    public IForexOrderDetailsService TreasuryForexOrderService => new ForexOrderDetailsService(_httpClient){BaseUrl = BaseUrl};
 
     public IAccountHoldDetailsService UsModelBankCashTransactionService =>
-        new AccountHoldDetailsService(_httpClient);
+        new AccountHoldDetailsService(_httpClient){BaseUrl = BaseUrl};
 }

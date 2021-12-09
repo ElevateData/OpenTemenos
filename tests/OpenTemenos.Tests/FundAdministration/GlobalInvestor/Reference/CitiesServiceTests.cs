@@ -3,6 +3,8 @@ using FundAdministration.GlobalInvestor.Reference.Cities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Reference;
+
+//TODO: the documented URL is pointed to localhost:8080. Figure out the correct base url
 [TestClass]
 public class CitiesServiceTests : CredentialManagement
 {

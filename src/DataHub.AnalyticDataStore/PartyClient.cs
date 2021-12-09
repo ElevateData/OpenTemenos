@@ -6,6 +6,7 @@ namespace DataHub.AnalyticDataStore;
 public class PartyClient : IPartyClient
 {
     private readonly HttpClient _httpClient;
+    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
 
     public PartyClient(HttpClient httpClient)
     {
@@ -13,5 +14,5 @@ public class PartyClient : IPartyClient
     }
 
     public IAllCustomerSegmentationDetailsService CustomerSegmentationService =>
-        new AllCustomerSegmentationDetailsService(_httpClient);
+        new AllCustomerSegmentationDetailsService(_httpClient){BaseUrl = BaseUrl};
 }

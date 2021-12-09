@@ -1,5 +1,6 @@
 ﻿using FundAdministration.GlobalInvestor;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FundAdministration.GlobalInvestor.Party.AgentDistributions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
@@ -8,4 +9,12 @@ public class AgentDistributionsServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient);
 
+
+    [TestMethod, Ignore("POST method")]
+    public void PostAgentDistributionsAsync()
+    {
+        var payload = new _0BULKPayload();
+        var result = _client.HierarchyTreeForAgentDistributionService.PostAgentDistributionsAsync(null, null, null, null, null, payload).Result;
+        Assert.IsNotNull(result.Body);
+    }
 }
