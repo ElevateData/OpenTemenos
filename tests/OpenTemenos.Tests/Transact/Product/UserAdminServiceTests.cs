@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Product;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class UserAdminServiceTests : CredentialManagement
 {
     private const string ProductId = "1";

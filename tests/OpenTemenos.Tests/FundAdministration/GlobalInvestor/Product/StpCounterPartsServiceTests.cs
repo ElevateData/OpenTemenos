@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.StpCounterParts;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class StpCounterpartsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class StpCounterpartServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

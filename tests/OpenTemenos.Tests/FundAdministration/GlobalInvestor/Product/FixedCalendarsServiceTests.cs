@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.FixedCalendars;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class FixedCalendarsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class FixedCalendarServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

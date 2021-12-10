@@ -3,9 +3,9 @@ using Transact;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 [Ignore("All methods are flagged as obsolete")]
-public class ArrangementsActivitiesServiceTests : CredentialManagement
+public class ArrangementsActivityServiceTests : CredentialManagement
 {
     private const string ArrangementId = "";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Order.PaymentAmendments;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
-[TestClass]
-public class PaymentAmendmentsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class PaymentAmendmentServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
 

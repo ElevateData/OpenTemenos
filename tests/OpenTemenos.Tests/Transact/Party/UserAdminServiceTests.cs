@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Party.UserAdmin;
+using Transact.Party.UserAdmins;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class UserAdminServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";

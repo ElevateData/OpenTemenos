@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
-[TestClass]
-public class GuaranteeDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class GuaranteeDetailServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

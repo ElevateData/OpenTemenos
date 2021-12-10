@@ -5,20 +5,20 @@ using Transact.Meta.Payments;
 using Transact.Meta.Queries;
 using Transact.Meta.Screens;
 using Transact.Meta.Tables;
-using Transact.Meta.UserAdministrationInternal;
-using Transact.Meta.VirtualTable;
+using Transact.Meta.UserAdministrationInternals;
+using Transact.Meta.VirtualTables;
 
 namespace Transact;
 
 public interface IMetaClient
 {
-    public IApisService ApisService { get; }
-    public IDwExportPropertiesService DwExportPropertyService { get; }
-    public IMenusService MenuService { get; }
-    public IPaymentsService PaymentService { get; }
-    public IQueriesService QueryService { get; }
-    public IScreensService ScreenService { get; }
-    public ITablesService TableService { get; }
+    public IApiService ApiService { get; }
+    public IDwExportPropertyService DwExportPropertyService { get; }
+    public IMenuService MenuService { get; }
+    public IPaymentService PaymentService { get; }
+    public IQueryService QueryService { get; }
+    public IScreenService ScreenService { get; }
+    public ITableService TableService { get; }
     public IUserAdministrationInternalService UserAdministrationInternalService { get; }
     public IVirtualTableService VirtualTableService { get; }
 

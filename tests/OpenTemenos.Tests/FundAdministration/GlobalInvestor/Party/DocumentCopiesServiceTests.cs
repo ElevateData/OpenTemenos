@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Party.DocumentCopies;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
-public class DocumentCopiesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class DocumentCopyServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };

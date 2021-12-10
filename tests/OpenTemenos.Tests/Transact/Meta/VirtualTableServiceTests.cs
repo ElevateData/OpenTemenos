@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class VirtualTableServiceTests : CredentialManagement
 {
     private const string VirtualTableName = "1099C";

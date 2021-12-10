@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Enterprise;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class EnterpriseProductPricingServiceTests : CredentialManagement
 {
     private const string BaseContractReference = "";

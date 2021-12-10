@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class PaymentsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class PaymentServiceTests : CredentialManagement
 {
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };
 

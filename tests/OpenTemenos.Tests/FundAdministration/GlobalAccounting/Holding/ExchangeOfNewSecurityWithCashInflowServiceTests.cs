@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflow;
+using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflows;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class ExchangeOfNewSecurityWithCashInflowServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

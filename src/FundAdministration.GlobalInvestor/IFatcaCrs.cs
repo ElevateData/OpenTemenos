@@ -6,7 +6,7 @@ namespace FundAdministration.GlobalInvestor;
 
 public interface IFatcaCrs
 {
-    public IFatcaCrsDocumentsService DocumentService { get; }
-    public IFatcaCrsStatusesService StatusService { get; }
-    public IFatcaCrsSubStatusesService SubStatusService { get; }
+    public IFatcaCrsDocumentService DocumentService { get; }
+    public IFatcaCrsStatuseService StatuService { get; }
+    public IFatcaCrsSubStatuseService SubStatuService { get; }
 }

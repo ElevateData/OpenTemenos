@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class CashManagementBundlesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CashManagementBundleServiceTests : CredentialManagement
 {
     private const string AccountId = "";
     private const string BundleId = "";

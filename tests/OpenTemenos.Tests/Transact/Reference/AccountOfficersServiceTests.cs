@@ -3,8 +3,8 @@ using Transact.Reference.AccountOfficers;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class AccountOfficersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class AccountOfficerServiceTests : CredentialManagement
 {
     private const string AccountOfficerId = "1";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountOfficersAsync()
     {
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .GetAccountOfficersAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -21,7 +21,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountOfficerDetailsAsync()
     {
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .GetAccountOfficerDetailsAsync(AccountOfficerId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -33,7 +33,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     {
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerDetails();
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .CreateAccountOfficerDetailsAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     {
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerDetails();
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .UpdateAccountOfficerDetailsAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -52,7 +52,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountOfficerAlertSubscriptionAsync()
     {
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .GetAccountOfficerAlertSubscriptionAsync(AccountOfficerId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -64,7 +64,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     {
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerAlertSubscription();
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .CreateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -75,7 +75,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     {
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerAlertSubscription();
-        var result = _client.AccountOfficersService
+        var result = _client.AccountOfficerService
             .UpdateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }

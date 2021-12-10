@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class CompaniesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CompanyServiceTests : CredentialManagement
 {
     private const string CompanyCode = "";
     private const string CurrencyMarket = "";
@@ -12,7 +12,7 @@ public class CompaniesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCompaniesAsync()
     {
-        var result = _client.CompaniesService.GetCompaniesAsync().Result;
+        var result = _client.CompanyService.GetCompaniesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -20,7 +20,7 @@ public class CompaniesServiceTests : CredentialManagement
     [TestMethod]
     public void GetMasterCompanyAsync()
     {
-        var result = _client.CompaniesService.GetMasterCompanyAsync()
+        var result = _client.CompanyService.GetMasterCompanyAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -29,7 +29,7 @@ public class CompaniesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCompanyCurrencyExchangeRatesAsync()
     {
-        var result = _client.CompaniesService.GetCompanyCurrencyExchangeRatesAsync(CompanyCode, CurrencyMarket).Result;
+        var result = _client.CompanyService.GetCompanyCurrencyExchangeRatesAsync(CompanyCode, CurrencyMarket).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

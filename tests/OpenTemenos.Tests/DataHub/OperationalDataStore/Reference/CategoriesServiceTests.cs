@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 
-[TestClass]
-public class CategoriesServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class CategoryServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 

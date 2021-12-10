@@ -3,8 +3,8 @@ using Transact.Order.AccountTransfers;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class AccountTransfersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class AccountTransferServiceTests : CredentialManagement
 {
     private const string BulkTransferId = "1";
     private const string CreditAccountId = "1";

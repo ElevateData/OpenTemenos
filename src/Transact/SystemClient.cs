@@ -1,12 +1,12 @@
 ﻿using Transact.System;
-using Transact.System.CloudServiceElasticity;
-using Transact.System.DataEventStreaming;
-using Transact.System.DocumentRequired;
-using Transact.System.ExternalAccounting;
-using Transact.System.OnlineUpgrade;
-using Transact.System.ProcessWorkFlow;
-using Transact.System.ServiceAutomation;
-using Transact.System.SPFInformation;
+using Transact.System.CloudServiceElasticities;
+using Transact.System.DataEventStreamings;
+using Transact.System.DocumentRequireds;
+using Transact.System.ExternalAccountings;
+using Transact.System.OnlineUpgrades;
+using Transact.System.ProcessWorkFlows;
+using Transact.System.ServiceAutomations;
+using Transact.System.SPFInformations;
 using Transact.System.UsageStatistics;
 
 namespace Transact;
@@ -26,7 +26,7 @@ public class SystemClient : ISystemClient
     public IExternalAccountingService ExternalAccountingService => new ExternalAccountingService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IDocumentRequiredService DocumentRequiredService => new DocumentRequiredService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ISPFInformationService SPFInformationService => new SPFInformationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IUsageStatisticsService UsageStatisticsService => new UsageStatisticsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IUsageStatisticService UsageStatisticService => new UsageStatisticService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IOnlineUpgradeService OnlineUpgradeService => new OnlineUpgradeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IProcessWorkFlowService ProcessWorkFlowService => new ProcessWorkFlowService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IServiceAutomationService ServiceAutomationService => new ServiceAutomationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };

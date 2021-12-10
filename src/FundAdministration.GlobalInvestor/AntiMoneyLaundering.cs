@@ -15,9 +15,9 @@ public class AntiMoneyLaundering : IAntiMoneyLaundering
     {
         _httpClient = httpClient;
     }
-    public IAmlBlocksService AmlBlocksService => new AmlBlocksService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAmlBlockService AmlBlockService => new AmlBlockService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IAmlDocumentsService AmlDocumentsService => new AmlDocumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAmlDocumentService AmlDocumentService => new AmlDocumentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IAmlMonitorBlocksService AmlMonitorBlocksService => new AmlMonitorBlocksService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAmlMonitorBlockService AmlMonitorBlockService => new AmlMonitorBlockService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

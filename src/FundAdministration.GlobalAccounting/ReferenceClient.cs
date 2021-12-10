@@ -1,11 +1,11 @@
 ﻿using FundAdministration.GlobalAccounting.Reference;
-using FundAdministration.GlobalAccounting.Reference.ExchangeRate;
-using FundAdministration.GlobalAccounting.Reference.ForwardExchangeRate;
-using FundAdministration.GlobalAccounting.Reference.ForwardInterestRate;
-using FundAdministration.GlobalAccounting.Reference.InterestRateType;
-using FundAdministration.GlobalAccounting.Reference.SecurityPrice;
-using FundAdministration.GlobalAccounting.Reference.SwapInterestRate;
-using FundAdministration.GlobalAccounting.Reference.SwapsPrice;
+using FundAdministration.GlobalAccounting.Reference.ExchangeRates;
+using FundAdministration.GlobalAccounting.Reference.ForwardExchangeRates;
+using FundAdministration.GlobalAccounting.Reference.ForwardInterestRates;
+using FundAdministration.GlobalAccounting.Reference.InterestRateTypes;
+using FundAdministration.GlobalAccounting.Reference.SecurityPrices;
+using FundAdministration.GlobalAccounting.Reference.SwapInterestRates;
+using FundAdministration.GlobalAccounting.Reference.SwapsPrices;
 
 namespace FundAdministration.GlobalAccounting;
 

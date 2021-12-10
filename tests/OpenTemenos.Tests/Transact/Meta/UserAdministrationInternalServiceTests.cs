@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class UserAdministrationInternalServiceTests : CredentialManagement
 {
     private const string UserId = "1";

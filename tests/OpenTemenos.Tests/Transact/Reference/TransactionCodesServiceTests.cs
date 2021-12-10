@@ -3,8 +3,8 @@ using Transact.Reference.TransactionCodes;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class TransactionCodesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class TransactionCodeServiceTests : CredentialManagement
 {
     private const string TransactionCode = "1";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class TransactionCodesServiceTests : CredentialManagement
     [TestMethod]
     public void GetTransactionCodeAsync()
     {
-        var result = _client.TransactionCodesService
+        var result = _client.TransactionCodeService
             .GetTransactionCodeAsync(TransactionCode).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -24,7 +24,7 @@ public class TransactionCodesServiceTests : CredentialManagement
     {
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
-        var result = _client.TransactionCodesService
+        var result = _client.TransactionCodeService
             .CreateTransactionCodeAsync(transactionCode, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -35,7 +35,7 @@ public class TransactionCodesServiceTests : CredentialManagement
     {
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
-        var result = _client.TransactionCodesService
+        var result = _client.TransactionCodeService
             .UpdateTransactionCodeAsync(transactionCode, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -43,7 +43,7 @@ public class TransactionCodesServiceTests : CredentialManagement
     [TestMethod]
     public void GetTransactionCodeListAsync()
     {
-        var result = _client.TransactionCodesService
+        var result = _client.TransactionCodeService
             .GetTransactionCodeListAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.OptionMaturity;
+using FundAdministration.GlobalAccounting.Holding.OptionMaturities;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class OptionMaturityServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

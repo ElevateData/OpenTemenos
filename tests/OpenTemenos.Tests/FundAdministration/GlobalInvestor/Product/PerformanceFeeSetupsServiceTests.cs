@@ -3,7 +3,7 @@ using FundAdministration.GlobalInvestor.Product.PerformanceFeeSetups;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class PerformanceFeeServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

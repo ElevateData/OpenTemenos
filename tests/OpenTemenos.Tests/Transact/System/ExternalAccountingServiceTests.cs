@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.System.ExternalAccounting;
+using Transact.System.ExternalAccountings;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ExternalAccountingServiceTests : CredentialManagement
 {
     private const string SettingId = "1";

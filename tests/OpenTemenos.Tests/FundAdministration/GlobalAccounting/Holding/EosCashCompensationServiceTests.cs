@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.EosCashCompensation;
+using FundAdministration.GlobalAccounting.Holding.EosCashCompensations;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class EosCashCompensationServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

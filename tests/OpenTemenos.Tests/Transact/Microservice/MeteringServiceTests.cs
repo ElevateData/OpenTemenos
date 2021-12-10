@@ -1,10 +1,10 @@
 ﻿using System;
 using Transact;
-using Transact.Microservice.Metering;
+using Transact.Microservice.Meterings;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class MeteringServiceTests : CredentialManagement
 {
     private const string ApplicationId = "1";

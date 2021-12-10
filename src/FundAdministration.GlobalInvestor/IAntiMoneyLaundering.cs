@@ -6,8 +6,8 @@ namespace FundAdministration.GlobalInvestor;
 
 public interface IAntiMoneyLaundering
 {
-    public IAmlBlocksService AmlBlocksService { get; }
-    public IAmlDocumentsService AmlDocumentsService { get; }
-    public IAmlMonitorBlocksService AmlMonitorBlocksService { get; }
+    public IAmlBlockService AmlBlockService { get; }
+    public IAmlDocumentService AmlDocumentService { get; }
+    public IAmlMonitorBlockService AmlMonitorBlockService { get; }
 
 }

@@ -3,7 +3,8 @@
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Product;
 
 [TestClass]
-public class CorporateLendingProductBalancesServiceTests : CredentialManagement
+[TestCategory("DataHub.AnalyticDataStore")]
+public class CorporateLendingProductBalanceServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 

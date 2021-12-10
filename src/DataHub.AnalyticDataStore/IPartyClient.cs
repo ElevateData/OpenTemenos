@@ -4,5 +4,5 @@ namespace DataHub.AnalyticDataStore;
 
 public interface IPartyClient
 {
-    public IAllCustomerSegmentationDetailsService CustomerSegmentationService { get; }
+    public IAllCustomerSegmentationDetailService CustomerSegmentationService { get; }
 }

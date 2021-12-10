@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.StockDividend;
+using FundAdministration.GlobalAccounting.Holding.StockDividends;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class StockDividendServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

@@ -3,8 +3,8 @@ using Transact.Meta.Menus;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class MenusServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class MenuServiceTests : CredentialManagement
 {
     private const string MenuId = "1";
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };

@@ -1,10 +1,10 @@
 ﻿using System;
 using Transact;
-using Transact.Order.PaymentsConfiguration;
+using Transact.Order.PaymentsConfigurations;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class PaymentsConfigurationServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

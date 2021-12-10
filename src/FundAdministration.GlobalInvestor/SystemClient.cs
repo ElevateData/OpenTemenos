@@ -13,5 +13,5 @@ public class SystemClient : ISystemClient
     {
         _httpClient = httpClient;
     }
-    public ITriggersService OutboundTriggerService => new TriggersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITriggerService OutboundTriggerService => new TriggerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Product;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class MarketingCatalogueServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

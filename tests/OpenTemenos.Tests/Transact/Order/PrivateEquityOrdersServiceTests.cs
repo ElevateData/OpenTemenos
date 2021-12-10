@@ -3,8 +3,8 @@ using Transact.Order.PrivateEquityOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class PrivateEquityOrdersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class PrivateEquityOrderServiceTests : CredentialManagement
 {
     private const string PrivateEquityOrderId = "1";
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

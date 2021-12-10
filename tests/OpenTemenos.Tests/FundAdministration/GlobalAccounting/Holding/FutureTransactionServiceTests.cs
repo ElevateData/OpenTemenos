@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.FutureTransaction;
+using FundAdministration.GlobalAccounting.Holding.FutureTransactions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class FutureTransactionServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

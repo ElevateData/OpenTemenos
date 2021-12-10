@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.System.DataEventStreaming;
+using Transact.System.DataEventStreamings;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class DataEventStreamingServiceTests : CredentialManagement
 {
     private const string CompanyMnemonic = "1";

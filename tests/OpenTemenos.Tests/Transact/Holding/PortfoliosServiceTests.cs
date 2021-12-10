@@ -3,8 +3,8 @@ using Transact.Holding.Portfolios;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class PortfoliosServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class PortfolioServiceTests : CredentialManagement
 {
     private const string PortfolioId = "1";
     private const string CustomerId = "100282";

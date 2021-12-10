@@ -3,8 +3,8 @@ using Transact.Order.SecurityOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class SecurityOrdersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class SecurityOrderServiceTests : CredentialManagement
 {
     private const string SecurityOrderId = "1";
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

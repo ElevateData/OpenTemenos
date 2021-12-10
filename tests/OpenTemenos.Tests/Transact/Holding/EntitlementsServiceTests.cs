@@ -3,8 +3,8 @@ using Transact.Holding.Entitlements;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class EntitlementsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class EntitlementServiceTests : CredentialManagement
 {
     private const string EntitlementId = "";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

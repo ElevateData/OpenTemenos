@@ -3,8 +3,8 @@ using Transact.Order.ForexCustomerOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class ForexCustomerOrdersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class ForexCustomerOrderServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private const string LimitOrderId = "1";

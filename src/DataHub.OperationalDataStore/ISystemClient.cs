@@ -4,5 +4,5 @@ namespace DataHub.OperationalDataStore;
 
 public interface ISystemClient
 {
-    public IServiceDetailsService ServiceAutomationService { get; }
+    public IServiceDetailService ServiceAutomationService { get; }
 }

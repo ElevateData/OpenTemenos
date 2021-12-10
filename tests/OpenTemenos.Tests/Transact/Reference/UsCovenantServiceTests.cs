@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class UsCovenantServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };

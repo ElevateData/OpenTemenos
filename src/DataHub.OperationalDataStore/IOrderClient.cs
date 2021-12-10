@@ -10,11 +10,11 @@ namespace DataHub.OperationalDataStore;
 
 public interface IOrderClient
 {
-    public ISweepAccountDetailsService AccountSweepService { get; }
-    public IFundsTransferDetailsService FundsTransferDetailService { get; }
-    public IRejectedCollectionsService OrderRejectedCollectionService { get; }
-    public IPaymentDetailsService PaymentService { get; }
-    public IInvestigationItemsService TransactionStopService { get; }
-    public IForexOrderDetailsService TreasuryForexOrderService { get; }
-    public IAccountHoldDetailsService UsModelBankCashTransactionService { get; }
+    public ISweepAccountDetailService AccountSweepService { get; }
+    public IFundsTransferDetailService FundsTransferDetailService { get; }
+    public IRejectedCollectionService OrderRejectedCollectionService { get; }
+    public IPaymentDetailService PaymentService { get; }
+    public IInvestigationItemService TransactionStopService { get; }
+    public IForexOrderDetailService TreasuryForexOrderService { get; }
+    public IAccountHoldDetailService UsModelBankCashTransactionService { get; }
 }

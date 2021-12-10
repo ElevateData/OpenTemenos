@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Microservice.GenericConfig;
+using Transact.Microservice.GenericConfigs;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class GenericConfigServiceTests : CredentialManagement
 {
     private const string ConfigName = "1";

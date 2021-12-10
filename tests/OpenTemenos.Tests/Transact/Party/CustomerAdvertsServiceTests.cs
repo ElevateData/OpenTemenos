@@ -3,8 +3,8 @@ using Transact.Party.CustomerAdverts;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class CustomerAdvertsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CustomerAdvertServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class CustomerAdvertsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerAdvertsAsync()
     {
-        var result = _client.CustomerAdvertsService.GetCustomerAdvertsAsync(CustomerId)
+        var result = _client.CustomerAdvertService.GetCustomerAdvertsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -24,7 +24,7 @@ public class CustomerAdvertsServiceTests : CredentialManagement
     {
         var advertId = string.Empty;
         var payload = new Advert();
-        var result = _client.CustomerAdvertsService.UpdateAdvertAsync(advertId, payload)
+        var result = _client.CustomerAdvertService.UpdateAdvertAsync(advertId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -35,7 +35,7 @@ public class CustomerAdvertsServiceTests : CredentialManagement
     public void CreateAdvertAsync()
     {
         var payload = new Advert();
-        var result = _client.CustomerAdvertsService.CreateAdvertAsync(payload)
+        var result = _client.CustomerAdvertService.CreateAdvertAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

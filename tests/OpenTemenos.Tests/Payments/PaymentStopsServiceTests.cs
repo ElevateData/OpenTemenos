@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass]
-public class PaymentStopsServiceTests : CredentialManagement
+[TestClass, TestCategory("Payments")]
+public class PaymentStopServiceTests : CredentialManagement
 {
     private const string AccountId = "23701";
     private readonly IPaymentClient _client = new PaymentClient(HttpClient) { ReadResponseAsString = true };

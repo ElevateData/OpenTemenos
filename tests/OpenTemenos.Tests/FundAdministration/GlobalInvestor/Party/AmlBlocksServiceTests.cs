@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Party.AmlBlocks;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
-public class AmlBlocksServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class AmlBlockServiceTests : CredentialManagement
 {
     private const string InternalId = "";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -15,7 +15,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     public void PostAmlBlocksByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .PostamlblocksByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -25,7 +25,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     public void PostAmlBlocksAsync()
     {
         var payload = new _0Payload();
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .PostamlblocksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -35,7 +35,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     public void PutAmlBlocksAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .PutamlblocksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     public void DeleteAmlBlocksAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .DeleteamlblocksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -53,7 +53,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     [TestMethod]
     public void GetAmlBlocksByInternalIdAsync()
     {
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .GetamlblocksByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
@@ -65,7 +65,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .PutamlblocksByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -76,7 +76,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.AntiMoneyLaundering.AmlBlocksService
+        var result = _client.AntiMoneyLaundering.AmlBlockService
             .DeleteamlblocksByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }

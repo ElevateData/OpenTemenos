@@ -3,8 +3,8 @@ using Transact.Party.TravelNotifications;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class TravelNotificationsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class TravelNotificationServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -15,7 +15,7 @@ public class TravelNotificationsServiceTests : CredentialManagement
     {
         var travelNotificationId = string.Empty;
         var payload = new TravelNotification();
-        var result = _client.TravelNotificationsService.UpdateTravelNotificationAsync(travelNotificationId, payload)
+        var result = _client.TravelNotificationService.UpdateTravelNotificationAsync(travelNotificationId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -27,7 +27,7 @@ public class TravelNotificationsServiceTests : CredentialManagement
     {
         var travelNotificationId = string.Empty;
         var payload = new TravelNotificationDelete();
-        var result = _client.TravelNotificationsService.DeleteTravelNotificationAsync(travelNotificationId, payload)
+        var result = _client.TravelNotificationService.DeleteTravelNotificationAsync(travelNotificationId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -38,7 +38,7 @@ public class TravelNotificationsServiceTests : CredentialManagement
     public void CreateTravelNotificationAsync()
     {
         var payload = new TravelNotification();
-        var result = _client.TravelNotificationsService.CreateTravelNotificationAsync(payload)
+        var result = _client.TravelNotificationService.CreateTravelNotificationAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -48,7 +48,7 @@ public class TravelNotificationsServiceTests : CredentialManagement
     [Ignore("POST method")]
     public void GetCustomerTravelNotificationsAsync()
     {
-        var result = _client.TravelNotificationsService.GetCustomerTravelNotificationsAsync(CustomerId)
+        var result = _client.TravelNotificationService.GetCustomerTravelNotificationsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

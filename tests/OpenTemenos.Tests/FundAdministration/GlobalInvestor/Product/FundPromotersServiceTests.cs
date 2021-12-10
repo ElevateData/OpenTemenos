@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.FundPromoters;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class FundPromotersServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class FundPromoterServiceTests : CredentialManagement
 {
     private const string NPromoter = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

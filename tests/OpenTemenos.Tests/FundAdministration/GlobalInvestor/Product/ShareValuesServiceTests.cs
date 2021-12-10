@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.ShareValues;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class ShareValuesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class ShareValueServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

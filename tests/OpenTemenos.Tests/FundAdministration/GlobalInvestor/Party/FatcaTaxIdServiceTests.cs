@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.FatcaTaxId;
+using FundAdministration.GlobalInvestor.Party.FatcaTaxIds;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class FatcaTaxIdServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

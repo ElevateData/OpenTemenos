@@ -1,5 +1,5 @@
 ﻿using FundAdministration.GlobalAccounting.Order;
-using FundAdministration.GlobalAccounting.Order.StockExchangeTransaction;
+using FundAdministration.GlobalAccounting.Order.StockExchangeTransactions;
 
 namespace FundAdministration.GlobalAccounting;
 

@@ -5,9 +5,9 @@ namespace Transact;
 
 public interface IUsModelBank
 {
-    public IUsDashboardsService HoldingSummaryService { get; }
-    //public IUsLoansService LoanService { get; }
-    //public IUsAccountsService AccountService { get; }
-    //public IUsDepositsService DepositService { get; }
-    public IUsSafeDepositsService SafeDepositService { get; }
+    public IUsDashboardService HoldingSummaryService { get; }
+    //public IUsLoanService LoanService { get; }
+    //public IUsAccountService AccountService { get; }
+    //public IUsDepositService DepositService { get; }
+    public IUsSafeDepositService SafeDepositService { get; }
 }

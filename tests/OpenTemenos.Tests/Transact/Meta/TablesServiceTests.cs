@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class TablesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class TableServiceTests : CredentialManagement
 {
     private const string TableId = "1";
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };

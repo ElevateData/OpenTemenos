@@ -16,9 +16,9 @@ public class ReferenceClient : IReferenceClient
         _httpClient = httpClient;
     }
 
-    public ICitiesService TownService => new CitiesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICityService TownService => new CityService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ICountryHolidaysService CountryHolidayService => new CountryHolidaysService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ICurrencyHolidaysService CurrencyHolidayService => new CurrencyHolidaysService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IMessagesService MessageService => new MessagesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICountryHolidayService CountryHolidayService => new CountryHolidayService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICurrencyHolidayService CurrencyHolidayService => new CurrencyHolidayService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IMessageService MessageService => new MessageService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

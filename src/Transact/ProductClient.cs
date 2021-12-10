@@ -2,8 +2,8 @@
 using Transact.Product.Customers;
 using Transact.Product.ExternalProducts;
 using Transact.Product.LimitProducts;
-using Transact.Product.MarketingCatalogue;
-using Transact.Product.UserAdmin;
+using Transact.Product.MarketingCatalogues;
+using Transact.Product.UserAdmins;
 
 namespace Transact;
 
@@ -17,9 +17,9 @@ public class ProductClient : IProductClient
     {
         _httpClient = httpClient;
     }
-    public ICustomersService CustomersService => new CustomersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IExternalProductsService ExternalProductsService => new ExternalProductsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ILimitProductsService LimitProductsService => new LimitProductsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICustomerService CustomerService => new CustomerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IExternalProductService ExternalProductService => new ExternalProductService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ILimitProductService LimitProductService => new LimitProductService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IMarketingCatalogueService MarketingCatalogueService => new MarketingCatalogueService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUserAdminService UserAdminService => new UserAdminService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

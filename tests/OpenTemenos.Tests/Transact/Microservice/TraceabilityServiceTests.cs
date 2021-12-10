@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Microservice.Traceability;
+using Transact.Microservice.Traceabilities;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class TraceabilityServiceTests : CredentialManagement
 {
     private const string Category = "Test";

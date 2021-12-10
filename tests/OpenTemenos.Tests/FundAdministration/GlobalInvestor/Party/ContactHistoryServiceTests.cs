@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.ContactHistory;
+using FundAdministration.GlobalInvestor.Party.ContactHistories;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class ContactHistoryServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

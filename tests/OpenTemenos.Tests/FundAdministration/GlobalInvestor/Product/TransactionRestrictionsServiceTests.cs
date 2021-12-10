@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.TransactionRestrictions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class TransactionRestrictionsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class TransactionRestrictionServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

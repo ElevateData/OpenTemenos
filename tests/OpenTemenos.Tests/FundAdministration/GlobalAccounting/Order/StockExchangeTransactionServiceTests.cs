@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Order.StockExchangeTransaction;
+using FundAdministration.GlobalAccounting.Order.StockExchangeTransactions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Order;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class StockExchangeTransactionServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

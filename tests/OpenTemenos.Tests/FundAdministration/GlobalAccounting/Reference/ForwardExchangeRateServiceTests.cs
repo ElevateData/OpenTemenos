@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Reference.ForwardExchangeRate;
+using FundAdministration.GlobalAccounting.Reference.ForwardExchangeRates;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Reference;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class ForwardExchangeRateServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };

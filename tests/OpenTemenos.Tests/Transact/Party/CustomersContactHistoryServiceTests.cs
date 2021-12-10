@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Party.CustomersContactHistory;
+using Transact.Party.CustomersContactHistories;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CustomersContactHistoryServiceTests : CredentialManagement
 {
     private const string ContactHistoryId = "1000";

@@ -3,8 +3,8 @@ using Transact.Reference.Dates;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class DatesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class DateServiceTests : CredentialManagement
 {
     private const string CompanyIdPath = "US0010001";
     private const string HolidayId = "";
@@ -13,7 +13,7 @@ public class DatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetDatesAsync()
     {
-        var result = _client.DatesService
+        var result = _client.DateService
             .GetDatesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -22,7 +22,7 @@ public class DatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetDatesByCompanyAsync()
     {
-        var result = _client.DatesService
+        var result = _client.DateService
             .GetDatesByCompanyAsync(CompanyIdPath)
             .Result;
         Assert.IsNotNull(result.Body);
@@ -31,7 +31,7 @@ public class DatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetHolidayAsync()
     {
-        var result = _client.DatesService.GetHolidayAsync(HolidayId).Result;
+        var result = _client.DateService.GetHolidayAsync(HolidayId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class DatesServiceTests : CredentialManagement
     {
         var holidayId = string.Empty;
         var payload = new Holiday();
-        var result = _client.DatesService.CreateHolidayAsync(holidayId, payload).Result;
+        var result = _client.DateService.CreateHolidayAsync(holidayId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -51,7 +51,7 @@ public class DatesServiceTests : CredentialManagement
     {
         var holidayId = string.Empty;
         var payload = new Holiday();
-        var result = _client.DatesService.UpdateHolidayAsync(holidayId, payload).Result;
+        var result = _client.DateService.UpdateHolidayAsync(holidayId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Party;
 
-[TestClass]
-public class UsCustomerDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class UsCustomerDetailServiceTests : CredentialManagement
 {
     private const string RecordId = "";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };

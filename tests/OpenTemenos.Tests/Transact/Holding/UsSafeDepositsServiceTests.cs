@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class UsSafeDepositsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class UsSafeDepositServiceTests : CredentialManagement
 {
     private const string AccountId = "1";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

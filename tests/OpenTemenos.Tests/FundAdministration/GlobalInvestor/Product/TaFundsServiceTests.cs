@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.TaFunds;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class TaFundsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class TaFundServiceTests : CredentialManagement
 {
     private const string FundId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

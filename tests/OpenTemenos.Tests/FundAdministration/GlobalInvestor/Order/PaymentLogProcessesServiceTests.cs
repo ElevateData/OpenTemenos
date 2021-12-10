@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Order.PaymentLogProcesses;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
-[TestClass]
-public class PaymentLogProcessesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class PaymentLogProcesseServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
 

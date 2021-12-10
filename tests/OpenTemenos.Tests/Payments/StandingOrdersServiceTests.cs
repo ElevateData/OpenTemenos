@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass]
-public class StandingOrdersServiceTests : CredentialManagement
+[TestClass, TestCategory("Payments")]
+public class StandingOrderServiceTests : CredentialManagement
 {
     private readonly IPaymentClient _client = new PaymentClient(HttpClient) { ReadResponseAsString = true };
 

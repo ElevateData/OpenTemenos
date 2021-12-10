@@ -3,8 +3,8 @@ using FundAdministration.GlobalAccounting.Holding.IrsTransactions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
-public class IrsTransactionsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+public class IrsTransactionServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

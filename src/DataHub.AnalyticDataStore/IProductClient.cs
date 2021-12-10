@@ -6,7 +6,7 @@ namespace DataHub.AnalyticDataStore;
 
 public interface IProductClient
 {
-    public ICorporateLendingProductBalancesService CorporateLendingProductService { get; }
-    public IRetailDepositProductBalancesService RetailDepositProductBalanceService { get; }
-    public IRetailLendingProductBalancesService RetailLendingProductBalanceService { get; }
+    public ICorporateLendingProductBalanceService CorporateLendingProductService { get; }
+    public IRetailDepositProductBalanceService RetailDepositProductBalanceService { get; }
+    public IRetailLendingProductBalanceService RetailLendingProductBalanceService { get; }
 }

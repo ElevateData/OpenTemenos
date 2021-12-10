@@ -15,9 +15,9 @@ public class FatcaCrs : IFatcaCrs
     {
         _httpClient = httpClient;
     }
-    public IFatcaCrsDocumentsService DocumentService => new FatcaCrsDocumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFatcaCrsDocumentService DocumentService => new FatcaCrsDocumentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFatcaCrsStatusesService StatusService => new FatcaCrsStatusesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFatcaCrsStatuseService StatuService => new FatcaCrsStatuseService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFatcaCrsSubStatusesService SubStatusService => new FatcaCrsSubStatusesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFatcaCrsSubStatuseService SubStatuService => new FatcaCrsSubStatuseService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

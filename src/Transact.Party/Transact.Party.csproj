@@ -9,125 +9,125 @@
 	<ItemGroup>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\participantList-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/participantList-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ParticipantListService.cs /ContractsNamespace:Transact.Party.ParticipantList /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ParticipantListService.cs /ContractsNamespace:Transact.Party.ParticipantLists /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ParticipantListService.cs</OutputPath>
 			<ClassName>ParticipantListService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-beneficiaries-service-v1.1.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-beneficiaries-service-v1.1.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:BeneficiariesService.cs /ContractsNamespace:Transact.Party.Beneficiaries /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>BeneficiariesService.cs</OutputPath>
-			<ClassName>BeneficiariesService</ClassName>
+			<Options>/ContractsOutput:BeneficiaryService.cs /ContractsNamespace:Transact.Party.Beneficiaries /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>BeneficiaryService.cs</OutputPath>
+			<ClassName>BeneficiaryService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customer-arrangements-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customer-arrangements-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomerArrangementsService.cs /ContractsNamespace:Transact.Party.CustomerArrangements /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CustomerArrangementsService.cs</OutputPath>
-			<ClassName>CustomerArrangementsService</ClassName>
+			<Options>/ContractsOutput:CustomerArrangementService.cs /ContractsNamespace:Transact.Party.CustomerArrangements /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>CustomerArrangementService.cs</OutputPath>
+			<ClassName>CustomerArrangementService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customerAdverts-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customerAdverts-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomerAdvertsService.cs /ContractsNamespace:Transact.Party.CustomerAdverts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CustomerAdvertsService.cs</OutputPath>
-			<ClassName>CustomerAdvertsService</ClassName>
+			<Options>/ContractsOutput:CustomerAdvertService.cs /ContractsNamespace:Transact.Party.CustomerAdverts /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>CustomerAdvertService.cs</OutputPath>
+			<ClassName>CustomerAdvertService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customerDeliveryPreferences-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customerDeliveryPreferences-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomerDeliveryPreferencesService.cs /ContractsNamespace:Transact.Party.CustomerDeliveryPreferences /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CustomerDeliveryPreferencesService.cs</OutputPath>
-			<ClassName>CustomerDeliveryPreferencesService</ClassName>
+			<Options>/ContractsOutput:CustomerDeliveryPreferenceService.cs /ContractsNamespace:Transact.Party.CustomerDeliveryPreferences /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>CustomerDeliveryPreferenceService.cs</OutputPath>
+			<ClassName>CustomerDeliveryPreferenceService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customerMandates-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customerMandates-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomerMandatesService.cs /ContractsNamespace:Transact.Party.CustomerMandates /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CustomerMandatesService.cs</OutputPath>
-			<ClassName>CustomerMandatesService</ClassName>
+			<Options>/ContractsOutput:CustomerMandateService.cs /ContractsNamespace:Transact.Party.CustomerMandates /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>CustomerMandateService.cs</OutputPath>
+			<ClassName>CustomerMandateService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customerOpenBankingConnections-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customerOpenBankingConnections-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomerOpenBankingConnectionsService.cs /ContractsNamespace:Transact.Party.CustomerOpenBankingConnections /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CustomerOpenBankingConnectionsService.cs</OutputPath>
-			<ClassName>CustomerOpenBankingConnectionsService</ClassName>
+			<Options>/ContractsOutput:CustomerOpenBankingConnectionService.cs /ContractsNamespace:Transact.Party.CustomerOpenBankingConnections /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>CustomerOpenBankingConnectionService.cs</OutputPath>
+			<ClassName>CustomerOpenBankingConnectionService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customers-contactHistory-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customers-contactHistory-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomersContactHistoryService.cs /ContractsNamespace:Transact.Party.CustomersContactHistory /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:CustomersContactHistoryService.cs /ContractsNamespace:Transact.Party.CustomersContactHistories /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>CustomersContactHistoryService.cs</OutputPath>
 			<ClassName>CustomersContactHistoryService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customers-documents-service-v1.0.1-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customers-documents-service-v1.0.1-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomersDocumentsService.cs /ContractsNamespace:Transact.Party.CustomersDocuments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CustomersDocumentsService.cs</OutputPath>
-			<ClassName>CustomersDocumentsService</ClassName>
+			<Options>/ContractsOutput:CustomersDocumentService.cs /ContractsNamespace:Transact.Party.CustomersDocuments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>CustomersDocumentService.cs</OutputPath>
+			<ClassName>CustomersDocumentService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customerServices-v4.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customerServices-v4.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomerService.cs /ContractsNamespace:Transact.Party.CustomerX /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:CustomerService.cs /ContractsNamespace:Transact.Party.Customers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>CustomerService.cs</OutputPath>
 			<ClassName>CustomerService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-customersMiFID-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-customersMiFID-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CustomersMiFIDService.cs /ContractsNamespace:Transact.Party.CustomersMiFID /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:CustomersMiFIDService.cs /ContractsNamespace:Transact.Party.CustomersMiFIDs /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>CustomersMiFIDService.cs</OutputPath>
 			<ClassName>CustomersMiFIDService</ClassName>
 		</OpenApiReference>
 		<!--
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-dataProtection-customers-v1.3.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-dataProtection-customers-v1.3.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:DataProtectionCustomersService.cs /ContractsNamespace:Transact.Party.DataProtectionCustomers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>DataProtectionCustomersService.cs</OutputPath>
-			<ClassName>DataProtectionCustomersService</ClassName>
+			<Options>/ContractsOutput:DataProtectionCustomerService.cs /ContractsNamespace:Transact.Party.DataProtectionCustomers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>DataProtectionCustomerService.cs</OutputPath>
+			<ClassName>DataProtectionCustomerService</ClassName>
 		</OpenApiReference>
 -->
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-externalUsers-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-externalUsers-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ExternalUsersService.cs /ContractsNamespace:Transact.Party.ExternalUsers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>ExternalUsersService.cs</OutputPath>
-			<ClassName>ExternalUsersService</ClassName>
+			<Options>/ContractsOutput:ExternalUserService.cs /ContractsNamespace:Transact.Party.ExternalUsers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>ExternalUserService.cs</OutputPath>
+			<ClassName>ExternalUserService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-onboarding-customer-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-onboarding-customer-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:OnboardingCustomerService.cs /ContractsNamespace:Transact.Party.OnboardingCustomerX /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:OnboardingCustomerService.cs /ContractsNamespace:Transact.Party.OnboardingCustomers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>OnboardingCustomerService.cs</OutputPath>
 			<ClassName>OnboardingCustomerService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-saas-beneficiary-service-v1.1.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-saas-beneficiary-service-v1.1.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:SaasBeneficiaryService.cs /ContractsNamespace:Transact.Party.SaasBeneficiary /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:SaasBeneficiaryService.cs /ContractsNamespace:Transact.Party.SaasBeneficiaries /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>SaasBeneficiaryService.cs</OutputPath>
 			<ClassName>SaasBeneficiaryService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-securitiesCustomer-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-securitiesCustomer-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:SecuritiesCustomerService.cs /ContractsNamespace:Transact.Party.SecuritiesCustomerX /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:SecuritiesCustomerService.cs /ContractsNamespace:Transact.Party.SecuritiesCustomers /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>SecuritiesCustomerService.cs</OutputPath>
 			<ClassName>SecuritiesCustomerService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-travelNotifications-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-travelNotifications-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:TravelNotificationsService.cs /ContractsNamespace:Transact.Party.TravelNotifications /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>TravelNotificationsService.cs</OutputPath>
-			<ClassName>TravelNotificationsService</ClassName>
+			<Options>/ContractsOutput:TravelNotificationService.cs /ContractsNamespace:Transact.Party.TravelNotifications /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>TravelNotificationService.cs</OutputPath>
+			<ClassName>TravelNotificationService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-us-customerInformation-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-us-customerInformation-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:UsCustomerInformationService.cs /ContractsNamespace:Transact.Party.UsCustomerInformation /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:UsCustomerInformationService.cs /ContractsNamespace:Transact.Party.UsCustomerInformations /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>UsCustomerInformationService.cs</OutputPath>
 			<ClassName>UsCustomerInformationService</ClassName>
 		</OpenApiReference>
 		<!--
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-us-customerservice-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-us-customerservice-v2.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:UsCustomerService.cs /ContractsNamespace:Transact.Party.UsCustomerservice /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:UsCustomerService.cs /ContractsNamespace:Transact.Party.UsCustomerservices /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>UsCustomerService.cs</OutputPath>
 			<ClassName>UsCustomerService</ClassName>
 		</OpenApiReference>
 -->
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\party-userAdmin-service-v1.0.1-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/party-userAdmin-service-v1.0.1-swagger.json</SourceUri>
-			<Options>/ContractsOutput:UserAdminService.cs /ContractsNamespace:Transact.Party.UserAdmin /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:UserAdminService.cs /ContractsNamespace:Transact.Party.UserAdmins /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>UserAdminService.cs</OutputPath>
 			<ClassName>UserAdminService</ClassName>
 		</OpenApiReference>

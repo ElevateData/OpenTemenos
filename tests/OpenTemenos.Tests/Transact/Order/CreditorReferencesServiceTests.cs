@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class CreditorReferencesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CreditorReferenceServiceTests : CredentialManagement
 {
     private const string CreditorReference = "";
     private const string GenerateOrValidateOption = "VALIDATE";

@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Reference.SecurityPrice;
+using FundAdministration.GlobalAccounting.Reference.SecurityPrices;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Reference;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
 public class SecurityPriceServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };

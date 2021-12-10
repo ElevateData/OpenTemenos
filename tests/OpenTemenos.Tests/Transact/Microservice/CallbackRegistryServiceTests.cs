@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Microservice.CallbackRegistry;
+using Transact.Microservice.CallbackRegistries;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CallbackRegistryServiceTests : CredentialManagement
 {
     private readonly IMicroserviceClient _client = new MicroserviceClient(HttpClient) { ReadResponseAsString = true };

@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass]
-public class RequestToPayPaymentsServiceTests : CredentialManagement
+[TestClass, TestCategory("Payments")]
+public class RequestToPayPaymentServiceTests : CredentialManagement
 {
     private const string CurrentState = "1";
     private const string RequestId = "1";

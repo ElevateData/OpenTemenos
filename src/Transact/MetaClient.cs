@@ -6,8 +6,8 @@ using Transact.Meta.Payments;
 using Transact.Meta.Queries;
 using Transact.Meta.Screens;
 using Transact.Meta.Tables;
-using Transact.Meta.UserAdministrationInternal;
-using Transact.Meta.VirtualTable;
+using Transact.Meta.UserAdministrationInternals;
+using Transact.Meta.VirtualTables;
 
 namespace Transact;
 
@@ -22,13 +22,13 @@ public class MetaClient : IMetaClient
         _httpClient = httpClient;
     }
 
-    public IApisService ApisService => new ApisService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IDwExportPropertiesService DwExportPropertyService => new DwExportPropertiesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IMenusService MenuService => new MenusService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPaymentsService PaymentService => new PaymentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IQueriesService QueryService => new QueriesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IScreensService ScreenService => new ScreensService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITablesService TableService => new TablesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IApiService ApiService => new ApiService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDwExportPropertyService DwExportPropertyService => new DwExportPropertyService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IMenuService MenuService => new MenuService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentService PaymentService => new PaymentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IQueryService QueryService => new QueryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IScreenService ScreenService => new ScreenService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITableService TableService => new TableService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUserAdministrationInternalService UserAdministrationInternalService => new UserAdministrationInternalService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IVirtualTableService VirtualTableService => new VirtualTableService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

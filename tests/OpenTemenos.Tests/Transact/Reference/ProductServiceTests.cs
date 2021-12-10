@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ProductServiceTests : CredentialManagement
 {
     private const string RuleId = "";

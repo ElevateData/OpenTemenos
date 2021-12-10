@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Party.ElectronicAddresses;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
-public class ElectronicAddressesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class ElectronicAddressServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };

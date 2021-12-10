@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.System.OnlineUpgrade;
+using Transact.System.OnlineUpgrades;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class OnlineUpgradeServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };

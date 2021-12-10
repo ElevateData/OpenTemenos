@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Holding.PortfolioSettlement;
+using Transact.Holding.PortfolioSettlements;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class PortfolioSettlementServiceTests : CredentialManagement
 {
     private const string PortfolioId = "1";

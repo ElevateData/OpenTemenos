@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Order.Nav;
+using FundAdministration.GlobalInvestor.Order.Navs;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class NavServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

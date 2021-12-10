@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ParticipantListServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };

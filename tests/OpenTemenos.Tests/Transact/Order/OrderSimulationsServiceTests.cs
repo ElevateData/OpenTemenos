@@ -3,8 +3,8 @@ using Transact.Order.OrderSimulations;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class OrderSimulationsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class OrderSimulationServiceTests : CredentialManagement
 {
     private const string OrderSimulationId = "1";
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

@@ -3,8 +3,8 @@ using Transact.Holding.Accounts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class AccountsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class AccountServiceTests : CredentialManagement
 {
     private const string AccountId = "101125";
     private const string BookingDate = "20201209";

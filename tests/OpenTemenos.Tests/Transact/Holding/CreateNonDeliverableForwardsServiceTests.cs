@@ -3,8 +3,8 @@ using Transact.Holding.CreateNonDeliverableForwards;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class CreateNonDeliverableForwardsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CreateNonDeliverableForwardServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

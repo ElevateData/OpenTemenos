@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CurrencyPositionServiceTests : CredentialManagement
 {
     private const string CurrencyId = "USD";

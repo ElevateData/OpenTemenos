@@ -3,8 +3,8 @@ using Transact.Holding.Guarantees;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class GuaranteesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class GuaranteeServiceTests : CredentialManagement
 {
     private const string ClauseId = "";
     private const string CustomerId = "100282";

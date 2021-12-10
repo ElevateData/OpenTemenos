@@ -3,7 +3,7 @@ using FundAdministration.GlobalInvestor.Product.SecurityIds;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class SecurityIdServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

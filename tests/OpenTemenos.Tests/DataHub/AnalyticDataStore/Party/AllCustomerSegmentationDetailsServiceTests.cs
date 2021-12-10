@@ -3,7 +3,8 @@
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Party;
 
 [TestClass]
-public class AllCustomerSegmentationDetailsServiceTests : CredentialManagement
+[TestCategory("DataHub.AnalyticDataStore")]
+public class AllCustomerSegmentationDetailServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 

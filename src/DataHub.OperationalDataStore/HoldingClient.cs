@@ -1,5 +1,5 @@
 ﻿using DataHub.OperationalDataStore.Holding;
-using DataHub.OperationalDataStore.Holding.AccountList;
+using DataHub.OperationalDataStore.Holding.AccountLists;
 using DataHub.OperationalDataStore.Holding.ArrangementsDetails;
 using DataHub.OperationalDataStore.Holding.GuaranteeDetails;
 using DataHub.OperationalDataStore.Holding.LcDetails;
@@ -22,15 +22,15 @@ public class HoldingClient : IHoldingClient
         _httpClient = httpClient;
     }
 
-    public IArrangementsDetailsService ArrangementsDetailService => new ArrangementsDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITradeDetailsService DerivativeInstrumentOperationService => new TradeDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IGuaranteeDetailsService GuaranteeDetailService => new GuaranteeDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ILcDetailsService LetterOfCreditService => new LcDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ILimitDetailsService LimitDetailService => new LimitDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IArrangementsDetailService ArrangementsDetailService => new ArrangementsDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITradeDetailService DerivativeInstrumentOperationService => new TradeDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IGuaranteeDetailService GuaranteeDetailService => new GuaranteeDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ILcDetailService LetterOfCreditService => new LcDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ILimitDetailService LimitDetailService => new LimitDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IAccountListService NostroVostroAccountListService => new AccountListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPaymentStopsService PaymentStopService => new PaymentStopsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPortfoliosService PortfolioDetailService => new PortfoliosService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentStopService PaymentStopService => new PaymentStopService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPortfolioService PortfolioDetailService => new PortfolioService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IRepurchaseAgreementsService RepurchaseAgreementService =>
-        new RepurchaseAgreementsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IRepurchaseAgreementService RepurchaseAgreementService =>
+        new RepurchaseAgreementService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

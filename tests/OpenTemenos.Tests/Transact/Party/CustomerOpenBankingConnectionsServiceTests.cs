@@ -3,8 +3,8 @@ using Transact.Party.CustomerOpenBankingConnections;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class CustomerOpenBankingConnectionsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 
@@ -14,7 +14,7 @@ public class CustomerOpenBankingConnectionsServiceTests : CredentialManagement
     {
         var connectionId = string.Empty;
         var payload = new OpenBankingConnection();
-        var result = _client.CustomerOpenBankingConnectionsService
+        var result = _client.CustomerOpenBankingConnectionService
             .CreateOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
@@ -27,7 +27,7 @@ public class CustomerOpenBankingConnectionsServiceTests : CredentialManagement
     {
         var connectionId = string.Empty;
         var payload = new OpenBankingConnection1();
-        var result = _client.CustomerOpenBankingConnectionsService
+        var result = _client.CustomerOpenBankingConnectionService
             .RemoveOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
@@ -40,7 +40,7 @@ public class CustomerOpenBankingConnectionsServiceTests : CredentialManagement
     {
         var connectionId = string.Empty;
         var payload = new OpenBankingConnection();
-        var result = _client.CustomerOpenBankingConnectionsService
+        var result = _client.CustomerOpenBankingConnectionService
             .ReconnectOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
@@ -53,7 +53,7 @@ public class CustomerOpenBankingConnectionsServiceTests : CredentialManagement
     {
         var connectionId = string.Empty;
         var payload = new OpenBankingConnection2();
-        var result = _client.CustomerOpenBankingConnectionsService
+        var result = _client.CustomerOpenBankingConnectionService
             .RefreshOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
@@ -63,7 +63,7 @@ public class CustomerOpenBankingConnectionsServiceTests : CredentialManagement
     [TestMethod]
     public void GetThirdPartyProviderConsentsAsync()
     {
-        var result = _client.CustomerOpenBankingConnectionsService.GetThirdPartyProviderConsentsAsync()
+        var result = _client.CustomerOpenBankingConnectionService.GetThirdPartyProviderConsentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

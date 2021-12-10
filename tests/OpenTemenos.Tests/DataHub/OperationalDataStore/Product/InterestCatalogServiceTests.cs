@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
-[TestClass]
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
 public class InterestCatalogServiceTests : CredentialManagement
 {
     private const string RecordId = "";

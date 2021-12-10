@@ -3,8 +3,8 @@ using Transact.Party.Beneficiaries;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class BeneficiariesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class BeneficiaryServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -15,7 +15,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     {
         var beneficiaryId = string.Empty;
         var payload = new Beneficiary();
-            var result = _client.BeneficiariesService.UpdateBeneficiaryAsync(beneficiaryId, payload)
+        var result = _client.BeneficiaryService.UpdateBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -27,7 +27,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     {
         var beneficiaryId = string.Empty;
         var payload = new BeneficiaryDelete();
-        var result = _client.BeneficiariesService.DeleteBeneficiaryAsync(beneficiaryId, payload)
+        var result = _client.BeneficiaryService.DeleteBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -38,7 +38,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     public void CreateBeneficiaryAsync()
     {
         var payload = new Beneficiary();
-        var result = _client.BeneficiariesService.CreateBeneficiaryAsync(payload)
+        var result = _client.BeneficiaryService.CreateBeneficiaryAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -49,7 +49,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     public void ApproveBeneficiaryAsync()
     {
         var beneficiaryId = string.Empty;
-        var result = _client.BeneficiariesService.ApproveBeneficiaryAsync(beneficiaryId)
+        var result = _client.BeneficiaryService.ApproveBeneficiaryAsync(beneficiaryId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -61,7 +61,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     {
         var beneficiaryId = string.Empty;
         var payload = new BeneficiaryDelete();
-        var result = _client.BeneficiariesService.RejectBeneficiaryAsync(beneficiaryId, payload)
+        var result = _client.BeneficiaryService.RejectBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -70,7 +70,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerBeneficiaryAsync()
     {
-        var result = _client.BeneficiariesService.GetCustomerBeneficiaryAsync(CustomerId)
+        var result = _client.BeneficiaryService.GetCustomerBeneficiaryAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -79,7 +79,7 @@ public class BeneficiariesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerBeneficiariesAsync()
     {
-        var result = _client.BeneficiariesService.GetCustomerBeneficiariesAsync(CustomerId)
+        var result = _client.BeneficiaryService.GetCustomerBeneficiariesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

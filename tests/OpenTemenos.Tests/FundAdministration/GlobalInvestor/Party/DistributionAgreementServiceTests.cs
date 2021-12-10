@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.DistributionAgreement;
+using FundAdministration.GlobalInvestor.Party.DistributionAgreements;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class DistributionAgreementServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };

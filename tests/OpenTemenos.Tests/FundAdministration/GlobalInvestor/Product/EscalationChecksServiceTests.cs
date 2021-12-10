@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.EscalationChecks;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class EscalationChecksServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class EscalationCheckServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

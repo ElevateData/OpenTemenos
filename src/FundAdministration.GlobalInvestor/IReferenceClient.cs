@@ -7,8 +7,8 @@ namespace FundAdministration.GlobalInvestor;
 
 public interface IReferenceClient
 {
-    public ICountryHolidaysService CountryHolidayService { get; }
-    public ICurrencyHolidaysService CurrencyHolidayService { get; }
-    public IMessagesService MessageService { get; }
-    public ICitiesService TownService { get; }
+    public ICountryHolidayService CountryHolidayService { get; }
+    public ICurrencyHolidayService CurrencyHolidayService { get; }
+    public IMessageService MessageService { get; }
+    public ICityService TownService { get; }
 }

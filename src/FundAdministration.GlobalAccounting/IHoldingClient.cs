@@ -1,59 +1,59 @@
 ﻿using FundAdministration.GlobalAccounting.Holding.CallDepositTransactions;
-using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseByNewSecurity;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseByNewSecurities;
 using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseCollectionOfShares;
-using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesDomesticShare;
-using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesForeignShare;
-using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesWithRealizedGain;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesDomesticShares;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesForeignShares;
+using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseOfParValuesWithRealizedGains;
 using FundAdministration.GlobalAccounting.Holding.CapitalIIncreaseWithExerciseOfSubscriptionRights;
 using FundAdministration.GlobalAccounting.Holding.CapitalIncreaseWithoutIssueOfSubscriptionRights;
-using FundAdministration.GlobalAccounting.Holding.CashDividendAnnouncement;
-using FundAdministration.GlobalAccounting.Holding.CiaSubscriptionRight;
-using FundAdministration.GlobalAccounting.Holding.CouponDividendTransaction;
-using FundAdministration.GlobalAccounting.Holding.DebitCreditTransaction;
-using FundAdministration.GlobalAccounting.Holding.Equity;
-using FundAdministration.GlobalAccounting.Holding.FixedBond;
-using FundAdministration.GlobalAccounting.Holding.FixedMbsIpb;
-using FundAdministration.GlobalAccounting.Holding.FloatingVariableBond;
-using FundAdministration.GlobalAccounting.Holding.FloatOrRateFactor;
-using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchange;
-using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchangeRepayment;
-using FundAdministration.GlobalAccounting.Holding.FundShareTransaction;
-using FundAdministration.GlobalAccounting.Holding.Future;
-using FundAdministration.GlobalAccounting.Holding.FutureFee;
-using FundAdministration.GlobalAccounting.Holding.FutureMaturity;
-using FundAdministration.GlobalAccounting.Holding.FutureTransaction;
-using FundAdministration.GlobalAccounting.Holding.FutureTransactionsRebooking;
+using FundAdministration.GlobalAccounting.Holding.CashDividendAnnouncements;
+using FundAdministration.GlobalAccounting.Holding.CiaSubscriptionRights;
+using FundAdministration.GlobalAccounting.Holding.CouponDividendTransactions;
+using FundAdministration.GlobalAccounting.Holding.DebitCreditTransactions;
+using FundAdministration.GlobalAccounting.Holding.Equities;
+using FundAdministration.GlobalAccounting.Holding.FixedBonds;
+using FundAdministration.GlobalAccounting.Holding.FixedMbsIpbs;
+using FundAdministration.GlobalAccounting.Holding.FloatingVariableBonds;
+using FundAdministration.GlobalAccounting.Holding.FloatOrRateFactors;
+using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchangeRepayments;
+using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchanges;
+using FundAdministration.GlobalAccounting.Holding.FundShareTransactions;
+using FundAdministration.GlobalAccounting.Holding.FutureFees;
+using FundAdministration.GlobalAccounting.Holding.FutureMaturities;
+using FundAdministration.GlobalAccounting.Holding.Futures;
+using FundAdministration.GlobalAccounting.Holding.FutureTransactions;
+using FundAdministration.GlobalAccounting.Holding.FutureTransactionsRebookings;
 using FundAdministration.GlobalAccounting.Holding.IrsTransactions;
-using FundAdministration.GlobalAccounting.Holding.OptionExercise;
-using FundAdministration.GlobalAccounting.Holding.OptionFee;
-using FundAdministration.GlobalAccounting.Holding.OptionMaturity;
-using FundAdministration.GlobalAccounting.Holding.OptionTransaction;
-using FundAdministration.GlobalAccounting.Holding.OptionTransactionsRebooking;
-using FundAdministration.GlobalAccounting.Holding.PikBond;
-using FundAdministration.GlobalAccounting.Holding.ReverseStockSplit;
-using FundAdministration.GlobalAccounting.Holding.SecurityTransactionRebooking;
-using FundAdministration.GlobalAccounting.Holding.SpinOff;
-using FundAdministration.GlobalAccounting.Holding.SpotForeignExchange;
-using FundAdministration.GlobalAccounting.Holding.StockDividend;
-using FundAdministration.GlobalAccounting.Holding.StockExchangeTransactionFee;
-using FundAdministration.GlobalAccounting.Holding.StockSplit;
-using FundAdministration.GlobalAccounting.Holding.TermDepositTransaction;
+using FundAdministration.GlobalAccounting.Holding.OptionExercises;
+using FundAdministration.GlobalAccounting.Holding.OptionFees;
+using FundAdministration.GlobalAccounting.Holding.OptionMaturities;
+using FundAdministration.GlobalAccounting.Holding.OptionTransactions;
+using FundAdministration.GlobalAccounting.Holding.OptionTransactionsRebookings;
+using FundAdministration.GlobalAccounting.Holding.PikBonds;
+using FundAdministration.GlobalAccounting.Holding.ReverseStockSplits;
+using FundAdministration.GlobalAccounting.Holding.SecurityTransactionRebookings;
+using FundAdministration.GlobalAccounting.Holding.SpinOffs;
+using FundAdministration.GlobalAccounting.Holding.SpotForeignExchanges;
+using FundAdministration.GlobalAccounting.Holding.StockDividends;
+using FundAdministration.GlobalAccounting.Holding.StockExchangeTransactionFees;
+using FundAdministration.GlobalAccounting.Holding.StockSplits;
+using FundAdministration.GlobalAccounting.Holding.TermDepositTransactions;
 using FundAdministration.GlobalAccounting.Holding.VariableMbs;
-using FundAdministration.GlobalAccounting.Holding.ZeroCoupon;
+using FundAdministration.GlobalAccounting.Holding.ZeroCoupons;
 
 namespace FundAdministration.GlobalAccounting;
 
 public interface IHoldingClient
 {
-    public ICallDepositTransactionsService CallDepositTransactionService { get; }
+    public ICallDepositTransactionService CallDepositTransactionService { get; }
     public ICapitalDecreaseByNewSecurityService CapitalDecreaseByNewSecurityService { get; }
-    public ICapitalDecreaseCollectionOfSharesService CapitalDecreaseCollectionOfShareService { get; }
+    public ICapitalDecreaseCollectionOfShareService CapitalDecreaseCollectionOfShareService { get; }
     public ICapitalDecreaseOfParValuesForeignShareService CapitalDecreaseOfParValueForeignShareService { get; }
     public ICapitalDecreaseOfParValuesDomesticShareService CapitalDecreaseOfParValueDomesticShareService { get; }
     public ICapitalDecreaseOfParValuesWithRealizedGainService CapitalDecreaseOfParValueDomesticSharesTaxablePayment { get; }
     public ICiaSubscriptionRightService CapitalIncreaseAllotmentSubscriptionRightService { get; }
-    public ICapitalIIncreaseWithExerciseOfSubscriptionRightsService CapitalIIncreaseWithExerciseOfSubscriptionRightService { get; }
-    public ICapitalIncreaseWithoutIssueOfSubscriptionRightsService CapitalIncreaseWithoutIssueOfSubscriptionRightService { get; }
+    public ICapitalIIncreaseWithExerciseOfSubscriptionRightService CapitalIIncreaseWithExerciseOfSubscriptionRightService { get; }
+    public ICapitalIncreaseWithoutIssueOfSubscriptionRightService CapitalIncreaseWithoutIssueOfSubscriptionRightService { get; }
     public ICashDividendAnnouncementService CashDividendAnnouncementService { get; }
     public ICouponDividendTransactionService CouponDividendTransactionService { get; }
     public IDebitCreditTransactionService DebitCreditTransactionService { get; }
@@ -83,9 +83,9 @@ public interface IHoldingClient
     public IStockDividendService StockDividendService { get; }
     public IStockExchangeTransactionFeeService StockExchangeFeeService { get; }
     public IStockSplitService StockSplitService { get; }
-    public IIrsTransactionsService SwapService { get; }
+    public IIrsTransactionService SwapService { get; }
     public ITermDepositTransactionService TimeTermDepositService { get; }
-    public IVariableMbsService VariableMortgageBackedSecurityService { get; }
+    public IVariableMbService VariableMortgageBackedSecurityService { get; }
     public IZeroCouponService ZeroCouponService { get; }
 
 

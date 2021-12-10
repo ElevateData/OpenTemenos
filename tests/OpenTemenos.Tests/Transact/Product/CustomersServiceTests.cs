@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Product;
 
-[TestClass]
-public class CustomersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CustomerServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private const string InterestCatalogId = "1";
@@ -13,7 +13,7 @@ public class CustomersServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalUserAsync()
     {
-        var result = _client.CustomersService.GetEligibleProductsAsync(CustomerId)
+        var result = _client.CustomerService.GetEligibleProductsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -22,7 +22,7 @@ public class CustomersServiceTests : CredentialManagement
     [TestMethod]
     public void GetPeriodicInterestsAsync()
     {
-        var result = _client.CustomersService.GetPeriodicInterestsAsync(PeriodicInterestId)
+        var result = _client.CustomerService.GetPeriodicInterestsAsync(PeriodicInterestId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -31,7 +31,7 @@ public class CustomersServiceTests : CredentialManagement
     [TestMethod]
     public void GetInterestCatalogAsync()
     {
-        var result = _client.CustomersService.GetInterestCatalogAsync(InterestCatalogId)
+        var result = _client.CustomerService.GetInterestCatalogAsync(InterestCatalogId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

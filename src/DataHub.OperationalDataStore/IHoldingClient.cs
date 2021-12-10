@@ -1,4 +1,4 @@
-﻿using DataHub.OperationalDataStore.Holding.AccountList;
+﻿using DataHub.OperationalDataStore.Holding.AccountLists;
 using DataHub.OperationalDataStore.Holding.ArrangementsDetails;
 using DataHub.OperationalDataStore.Holding.GuaranteeDetails;
 using DataHub.OperationalDataStore.Holding.LcDetails;
@@ -12,14 +12,14 @@ namespace DataHub.OperationalDataStore;
 
 public interface IHoldingClient
 {
-    public IArrangementsDetailsService ArrangementsDetailService { get; }
-    public ITradeDetailsService DerivativeInstrumentOperationService { get; }
-    public IGuaranteeDetailsService GuaranteeDetailService { get; }
-    public ILcDetailsService LetterOfCreditService { get; }
-    public ILimitDetailsService LimitDetailService { get; }
+    public IArrangementsDetailService ArrangementsDetailService { get; }
+    public ITradeDetailService DerivativeInstrumentOperationService { get; }
+    public IGuaranteeDetailService GuaranteeDetailService { get; }
+    public ILcDetailService LetterOfCreditService { get; }
+    public ILimitDetailService LimitDetailService { get; }
     public IAccountListService NostroVostroAccountListService { get; }
-    public IPaymentStopsService PaymentStopService { get; }
-    public IPortfoliosService PortfolioDetailService { get; }
-    public IRepurchaseAgreementsService RepurchaseAgreementService { get; }
+    public IPaymentStopService PaymentStopService { get; }
+    public IPortfolioService PortfolioDetailService { get; }
+    public IRepurchaseAgreementService RepurchaseAgreementService { get; }
 
 }

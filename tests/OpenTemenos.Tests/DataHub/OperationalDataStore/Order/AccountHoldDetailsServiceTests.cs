@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 
-[TestClass]
-public class AccountHoldDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class AccountHoldDetailServiceTests : CredentialManagement
 {
     private const string AccountId = "";
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

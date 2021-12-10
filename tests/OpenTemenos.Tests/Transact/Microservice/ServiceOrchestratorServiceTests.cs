@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Microservice.ServiceOrchestrator;
+using Transact.Microservice.ServiceOrchestrators;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ServiceOrchestratorServiceTests : CredentialManagement
 {
     private const string SequenceId = "1";

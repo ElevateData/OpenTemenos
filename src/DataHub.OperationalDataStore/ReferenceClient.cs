@@ -1,5 +1,5 @@
 ﻿using DataHub.OperationalDataStore.Reference;
-using DataHub.OperationalDataStore.Reference.AAPurposeList;
+using DataHub.OperationalDataStore.Reference.AAPurposeLists;
 using DataHub.OperationalDataStore.Reference.AccountOfficers;
 using DataHub.OperationalDataStore.Reference.BalanceTypes;
 using DataHub.OperationalDataStore.Reference.BankBICDetails;
@@ -15,26 +15,26 @@ using DataHub.OperationalDataStore.Reference.CurrenciesDetails;
 using DataHub.OperationalDataStore.Reference.DateDetails;
 using DataHub.OperationalDataStore.Reference.DealerDeskDetails;
 using DataHub.OperationalDataStore.Reference.EvidenceTypes;
-using DataHub.OperationalDataStore.Reference.FdicDepositClassCodeList;
+using DataHub.OperationalDataStore.Reference.FdicDepositClassCodeLists;
 using DataHub.OperationalDataStore.Reference.HoldTypes;
 using DataHub.OperationalDataStore.Reference.IBANBankDetails;
-using DataHub.OperationalDataStore.Reference.IBANCountriesList;
-using DataHub.OperationalDataStore.Reference.IndustryList;
+using DataHub.OperationalDataStore.Reference.IBANCountriesLists;
+using DataHub.OperationalDataStore.Reference.IndustryLists;
 using DataHub.OperationalDataStore.Reference.InterestBasis;
-using DataHub.OperationalDataStore.Reference.LanguageList;
+using DataHub.OperationalDataStore.Reference.LanguageLists;
 using DataHub.OperationalDataStore.Reference.LookUpTableDetails;
 using DataHub.OperationalDataStore.Reference.OriginationDefinitions;
 using DataHub.OperationalDataStore.Reference.OriginationRoles;
 using DataHub.OperationalDataStore.Reference.QuestionnaireTypes;
 using DataHub.OperationalDataStore.Reference.RateTexts;
-using DataHub.OperationalDataStore.Reference.SectorList;
+using DataHub.OperationalDataStore.Reference.SectorLists;
 using DataHub.OperationalDataStore.Reference.SecurityDeliveryInstructions;
 using DataHub.OperationalDataStore.Reference.SecurityInstruments;
 using DataHub.OperationalDataStore.Reference.StockExchanges;
-using DataHub.OperationalDataStore.Reference.UsCovenantList;
-using DataHub.OperationalDataStore.Reference.USCustomerRatingList;
-using DataHub.OperationalDataStore.Reference.USIndustrylist;
-using DataHub.OperationalDataStore.Reference.UsStateList;
+using DataHub.OperationalDataStore.Reference.UsCovenantLists;
+using DataHub.OperationalDataStore.Reference.USCustomerRatingLists;
+using DataHub.OperationalDataStore.Reference.USIndustrylists;
+using DataHub.OperationalDataStore.Reference.UsStateLists;
 using DataHub.OperationalDataStore.Reference.UtilityBeneficiaries;
 
 namespace DataHub.OperationalDataStore;
@@ -50,68 +50,68 @@ public class ReferenceClient : IReferenceClient
         _httpClient = httpClient;
     }
 
-    public IAccountOfficersService AccountOfficerService => new AccountOfficersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAccountOfficerService AccountOfficerService => new AccountOfficerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IBalanceTypesService BalanceTypeService => new BalanceTypesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IBalanceTypeService BalanceTypeService => new BalanceTypeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IChequeTypesService ChequeTypeService => new ChequeTypesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IChequeTypeService ChequeTypeService => new ChequeTypeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IClassTypeActivitiesService ClassTypeActivityService => new ClassTypeActivitiesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IClassTypeActivityService ClassTypeActivityService => new ClassTypeActivityService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ICountriesService CountryCodeService => new CountriesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICountryService CountryCodeService => new CountryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ICurrenciesDetailsService CurrencyCodeService => new CurrenciesDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICurrenciesDetailService CurrencyCodeService => new CurrenciesDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IEvidenceTypesService EvidenceTypeService => new EvidenceTypesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IEvidenceTypeService EvidenceTypeService => new EvidenceTypeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IIBANBankDetailsService IbanDetailService => new IBANBankDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IIBANBankDetailService IbanDetailService => new IBANBankDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IIBANCountriesListService IbanStructureDetailService => new IBANCountriesListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IIndustryListService IndustryService => new IndustryListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IInterestBasisService InterestBaseService => new InterestBasisService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IInterestBasiService InterestBaseService => new InterestBasiService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IRateTextsService InterestRateDescriptionService => new RateTextsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IRateTextService InterestRateDescriptionService => new RateTextService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ILanguageListService LanguageCodeService => new LanguageListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IBrokersService BrokerService => new BrokersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IBrokerService BrokerService => new BrokerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ICompaniesService LegalEntityService => new CompaniesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICompanyService LegalEntityService => new CompanyService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IAAPurposeListService PurposeService => new AAPurposeListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IBankBICDetailsService SwiftBankCodeService => new BankBICDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IBankBICDetailService SwiftBankCodeService => new BankBICDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ILookUpTableDetailsService LookupTableService => new LookUpTableDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ILookUpTableDetailService LookupTableService => new LookUpTableDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IOriginationDefinitionsService OriginationDefinitionService =>
-        new OriginationDefinitionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IOriginationDefinitionService OriginationDefinitionService =>
+        new OriginationDefinitionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IOriginationRolesService OriginationRoleService => new OriginationRolesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IOriginationRoleService OriginationRoleService => new OriginationRoleService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IClientPortfoliosService OwnBookPortfolioService => new ClientPortfoliosService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IClientPortfolioService OwnBookPortfolioService => new ClientPortfolioService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ICategoriesService ProductInternalCategoryCodeService => new CategoriesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICategoryService ProductInternalCategoryCodeService => new CategoryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IQuestionnaireTypesService QuestionnaireTypeService => new QuestionnaireTypesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IQuestionnaireTypeService QuestionnaireTypeService => new QuestionnaireTypeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ISectorListService SectorService => new SectorListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ISecurityDeliveryInstructionsService SecurityDeliveryInstructionService =>
-        new SecurityDeliveryInstructionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISecurityDeliveryInstructionService SecurityDeliveryInstructionService =>
+        new SecurityDeliveryInstructionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ISecurityInstrumentsService SecurityInstrumentService => new SecurityInstrumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISecurityInstrumentService SecurityInstrumentService => new SecurityInstrumentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IStockExchangesService StockExchangeService => new StockExchangesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IStockExchangeService StockExchangeService => new StockExchangeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IDateDetailsService SystemBusinessDateService => new DateDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDateDetailService SystemBusinessDateService => new DateDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IDealerDeskDetailsService TreasuryDealerDeskService => new DealerDeskDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDealerDeskDetailService TreasuryDealerDeskService => new DealerDeskDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IBeneficialOwnerRulesService UsModelBankBeneficialRoleService =>
-        new BeneficialOwnerRulesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IBeneficialOwnerRuleService UsModelBankBeneficialRoleService =>
+        new BeneficialOwnerRuleService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IUSCustomerRatingListService UsModelBankCustomerRiskRatingService =>
         new USCustomerRatingListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
@@ -119,7 +119,7 @@ public class ReferenceClient : IReferenceClient
     public IFdicDepositClassCodeListService UsModelBankFdicSubClassificationCodeService =>
         new FdicDepositClassCodeListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IHoldTypesService UsModelBankHoldTypeService => new HoldTypesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IHoldTypeService UsModelBankHoldTypeService => new HoldTypeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IUsCovenantListService UsModelBankLoanCovenantService => new UsCovenantListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
@@ -128,5 +128,5 @@ public class ReferenceClient : IReferenceClient
 
     public IUsStateListService UsModelBankUsStateService => new UsStateListService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IUtilityBeneficiariesService UtilityBeneficiaryService => new UtilityBeneficiariesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IUtilityBeneficiaryService UtilityBeneficiaryService => new UtilityBeneficiaryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

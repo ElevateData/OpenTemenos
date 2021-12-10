@@ -3,8 +3,8 @@ using DataHub.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.System;
 
-[TestClass]
-public class ServiceDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class ServiceDetailServiceTests : CredentialManagement
 {
     private readonly DateTimeOffset _batchDate = DateTimeOffset.Now.AddDays(-1);
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };

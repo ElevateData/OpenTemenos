@@ -1,14 +1,14 @@
 ﻿using Transact.Order;
 using Transact.Order.AccountTransfers;
-using Transact.Order.CashManagementSweep;
+using Transact.Order.CashManagementSweeps;
 using Transact.Order.CreditorReferences;
 using Transact.Order.DerivativeOrders;
 using Transact.Order.FiduciaryOrders;
 using Transact.Order.ForexCustomerOrders;
 using Transact.Order.IPOSecurityOrders;
 using Transact.Order.OrderSimulations;
-using Transact.Order.PaymentsConfiguration;
-using Transact.Order.PositionTransferOrdersRequest;
+using Transact.Order.PaymentsConfigurations;
+using Transact.Order.PositionTransferOrdersRequests;
 using Transact.Order.PrivateEquityOrders;
 using Transact.Order.SecurityOrders;
 using Transact.Order.SecurityTransferOrders;
@@ -26,18 +26,18 @@ public class OrderClient : IOrderClient
     {
         _httpClient = httpClient;
     }
-    public IAccountTransfersService AccountFundTransferService => new AccountTransfersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAccountTransferService AccountFundTransferService => new AccountTransferService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ICashManagementSweepService CashManagementSweepService => new CashManagementSweepService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ICreditorReferencesService CreditorReferenceService => new CreditorReferencesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IDerivativeOrdersService DerivativeInstrumentOrderService => new DerivativeOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFiduciaryOrdersService FiduciaryOrderService => new FiduciaryOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IForexCustomerOrdersService TreasuryForexOrderService => new ForexCustomerOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IIPOSecurityOrdersService InitialPublicOfferingSecurityOrderService => new IPOSecurityOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IOrderSimulationsService SecurityOrderSimulationService => new OrderSimulationsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICreditorReferenceService CreditorReferenceService => new CreditorReferenceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDerivativeOrderService DerivativeInstrumentOrderService => new DerivativeOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFiduciaryOrderService FiduciaryOrderService => new FiduciaryOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IForexCustomerOrderService TreasuryForexOrderService => new ForexCustomerOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IIPOSecurityOrderService InitialPublicOfferingSecurityOrderService => new IPOSecurityOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IOrderSimulationService SecurityOrderSimulationService => new OrderSimulationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IPositionTransferOrdersRequestService SecurityPositionTransferService => new PositionTransferOrdersRequestService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPrivateEquityOrdersService PrivateEquityOrderService => new PrivateEquityOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPrivateEquityOrderService PrivateEquityOrderService => new PrivateEquityOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IPaymentsConfigurationService PaymentConfigurationService => new PaymentsConfigurationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ISecurityOrdersService SecurityOrderService => new SecurityOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ISecurityTransferOrdersService SecurityTransferService => new SecurityTransferOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ISweepsService AccountSweepService => new SweepsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISecurityOrderService SecurityOrderService => new SecurityOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISecurityTransferOrderService SecurityTransferService => new SecurityTransferOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISweepService AccountSweepService => new SweepService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

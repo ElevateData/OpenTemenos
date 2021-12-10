@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Order.PositionTransferOrdersRequest;
+using Transact.Order.PositionTransferOrdersRequests;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class PositionTransferOrdersRequestServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

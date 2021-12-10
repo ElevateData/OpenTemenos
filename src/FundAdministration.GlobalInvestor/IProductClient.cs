@@ -9,7 +9,7 @@ using FundAdministration.GlobalInvestor.Product.FrequencyExceptionDays;
 using FundAdministration.GlobalInvestor.Product.FrequencyExceptions;
 using FundAdministration.GlobalInvestor.Product.FundCutoffTimes;
 using FundAdministration.GlobalInvestor.Product.FundEscalationChecks;
-using FundAdministration.GlobalInvestor.Product.FundGroupCutoff;
+using FundAdministration.GlobalInvestor.Product.FundGroupCutoffs;
 using FundAdministration.GlobalInvestor.Product.FundManagers;
 using FundAdministration.GlobalInvestor.Product.FundOfFunds;
 using FundAdministration.GlobalInvestor.Product.FundPromoters;
@@ -22,8 +22,8 @@ using FundAdministration.GlobalInvestor.Product.InitialSubscriptions;
 using FundAdministration.GlobalInvestor.Product.MinDivPayments;
 using FundAdministration.GlobalInvestor.Product.PerformanceFeeSetups;
 using FundAdministration.GlobalInvestor.Product.PermissionCountries;
-using FundAdministration.GlobalInvestor.Product.Security;
-using FundAdministration.GlobalInvestor.Product.SecurityDesc;
+using FundAdministration.GlobalInvestor.Product.Securities;
+using FundAdministration.GlobalInvestor.Product.SecurityDescs;
 using FundAdministration.GlobalInvestor.Product.SecurityIds;
 using FundAdministration.GlobalInvestor.Product.ShareClasses;
 using FundAdministration.GlobalInvestor.Product.ShareValues;
@@ -39,43 +39,43 @@ namespace FundAdministration.GlobalInvestor;
 
 public interface IProductClient
 {
-    public IAdlDealingDetailsService AntiDilutionLevyDealingService { get; }
-    public IApproExproDefinitionsService ApproOrExproDefinitionService { get; }
-    public ICommissionGroupsService CommissionGroupService { get; }
+    public IAdlDealingDetailService AntiDilutionLevyDealingService { get; }
+    public IApproExproDefinitionService ApproOrExproDefinitionService { get; }
+    public ICommissionGroupService CommissionGroupService { get; }
     public IFundGroupCutoffService CutoffByFundGroupService { get; }
-    public IDelayDaysService DelayDayService { get; }
-    public IEscalationChecksService EscalationCheckService { get; }
-    public IExchangeGroupsService ExchangeGroupService { get; }
-    public IFixedCalendarsService FixedCalendarService { get; }
-    public IFxDetailsService ForexService { get; }
-    public IFrequencyExceptionDaysService FrequentExceptionDayService { get; }
-    public IFrequencyExceptionsService FrequentExceptionService { get; }
-    public ITradeDateExceptionsService FundCalendarExceptionService { get; }
-    public IFundCutoffTimesService FundCutoffTimeService { get; }
-    public IFundEscalationChecksService FundEscalationCheckService { get; }
-    public IFundManagersService FundManagerService { get; }
-    public IFundOfFundsService FundOfFundService { get; }
-    public IFundPromotersService FundPromoterService { get; }
-    public IFundTradingDeskTransService FundTradingDeskService { get; }
-    public IFundValueDatesService FundValueDateService { get; }
-    public IHoldingLimitsService HoldingLimitService { get; }
-    public IHolidaysService HolidayService { get; }
-    public IInitialSubscriptionsService InitialSubscriptionService { get; }
-    public IMinDivPaymentsService MinDivPaymentService { get; }
+    public IDelayDayService DelayDayService { get; }
+    public IEscalationCheckService EscalationCheckService { get; }
+    public IExchangeGroupService ExchangeGroupService { get; }
+    public IFixedCalendarService FixedCalendarService { get; }
+    public IFxDetailService ForexService { get; }
+    public IFrequencyExceptionDayService FrequentExceptionDayService { get; }
+    public IFrequencyExceptionService FrequentExceptionService { get; }
+    public ITradeDateExceptionService FundCalendarExceptionService { get; }
+    public IFundCutoffTimeService FundCutoffTimeService { get; }
+    public IFundEscalationCheckService FundEscalationCheckService { get; }
+    public IFundManagerService FundManagerService { get; }
+    public IFundOfFundService FundOfFundService { get; }
+    public IFundPromoterService FundPromoterService { get; }
+    public IFundTradingDeskTranService FundTradingDeskService { get; }
+    public IFundValueDateService FundValueDateService { get; }
+    public IHoldingLimitService HoldingLimitService { get; }
+    public IHolidayService HolidayService { get; }
+    public IInitialSubscriptionService InitialSubscriptionService { get; }
+    public IMinDivPaymentService MinDivPaymentService { get; }
     public IMasterFund MasterFund { get; }
-    public IPerformanceFeeSetupsService PerformanceFeeService { get; }
-    public IPermissionCountriesService PermissionCountryService { get; }
+    public IPerformanceFeeSetupService PerformanceFeeService { get; }
+    public IPermissionCountryService PermissionCountryService { get; }
     public ISecurityDescService SecurityDescService { get; }
-    public ISecurityIdsService SecurityIdService { get; }
+    public ISecurityIdService SecurityIdService { get; }
     public ISecurityService SecurityService { get; }
-    public ISimulationCalendarsService SimulationCalendarService { get; }
-    public ISoftClosuresService SoftClosureService { get; }
-    public IStpCounterPartsService StraightThroughProcessingCounterpartService { get; }
-    public ITransactionLimitsService TransactionLimitService { get; }
-    public ITransactionRestrictionsService TransactionRestrictionService { get; }
-    public ITaFundsService TransferAgentFundService { get; }
-    public IShareClassesService TransferAgentFundShareClassService { get; }
-    public IShareValuesService TransferAgentFundShareValueService { get; }
-    public ITradeDateExceptionsService TradeDateExceptionService { get; }
-    //public ITfcsService TrustFundCompanyService { get; }
+    public ISimulationCalendarService SimulationCalendarService { get; }
+    public ISoftClosureService SoftClosureService { get; }
+    public IStpCounterPartService StraightThroughProcessingCounterpartService { get; }
+    public ITransactionLimitService TransactionLimitService { get; }
+    public ITransactionRestrictionService TransactionRestrictionService { get; }
+    public ITaFundService TransferAgentFundService { get; }
+    public IShareClasseService TransferAgentFundShareClasService { get; }
+    public IShareValueService TransferAgentFundShareValueService { get; }
+    public ITradeDateExceptionService TradeDateExceptionService { get; }
+    //public ITfcService TrustFundCompanyService { get; }
 }

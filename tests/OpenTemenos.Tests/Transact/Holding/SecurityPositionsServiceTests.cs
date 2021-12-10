@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class SecurityPositionsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class SecurityPositionServiceTests : CredentialManagement
 {
     private const string InstrumentId = "1";
     private const string PortfolioId = "1";

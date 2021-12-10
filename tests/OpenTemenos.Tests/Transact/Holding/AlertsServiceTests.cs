@@ -3,8 +3,8 @@ using Transact.Holding.Alerts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class AlertsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class AlertServiceTests : CredentialManagement
 {
     private const string ArrangementId = "1";
     private const string AccountId = "101125";

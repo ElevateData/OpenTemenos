@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Holding.LetterOfCreditX;
+using Transact.Holding.LetterOfCredits;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class LetterOfCreditServiceTests : CredentialManagement
 {
     private const string ClausesId = "1";

@@ -14,5 +14,5 @@ public class SystemClient : ISystemClient
         _httpClient = httpClient;
     }
 
-    public IServiceDetailsService ServiceAutomationService => new ServiceDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IServiceDetailService ServiceAutomationService => new ServiceDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

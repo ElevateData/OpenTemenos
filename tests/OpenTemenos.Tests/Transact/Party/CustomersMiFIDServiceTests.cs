@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Party.CustomersMiFID;
+using Transact.Party.CustomersMiFIDs;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CustomersMiFIDServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";

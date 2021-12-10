@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ProcessWorkFlowServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };

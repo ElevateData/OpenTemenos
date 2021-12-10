@@ -1,4 +1,4 @@
-﻿using Transact.Enterprise.Pricing;
+﻿using Transact.Enterprise.Pricings;
 
 namespace Transact;
 

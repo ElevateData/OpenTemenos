@@ -3,8 +3,8 @@ using Transact.Order.FiduciaryOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class FiduciaryOrdersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class FiduciaryOrderServiceTests : CredentialManagement
 {
     private const string FiduciaryOrderId = "1";
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
-[TestClass]
-public class ProductConditionDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class ProductConditionDetailServiceTests : CredentialManagement
 {
     private const string ProductId = "";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

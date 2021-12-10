@@ -3,7 +3,7 @@ using FundAdministration.GlobalInvestor.Party.ReinvestPay;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class ReinvestPayServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

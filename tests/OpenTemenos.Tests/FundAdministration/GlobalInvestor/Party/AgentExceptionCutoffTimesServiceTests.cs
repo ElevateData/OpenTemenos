@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Party.AgentExceptionCutoffTimes;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
-public class AgentExceptionCutoffTimesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class AgentExceptionCutoffTimeServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 

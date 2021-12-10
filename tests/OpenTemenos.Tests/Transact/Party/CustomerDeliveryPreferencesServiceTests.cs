@@ -3,8 +3,8 @@ using Transact.Party.CustomerDeliveryPreferences;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class CustomerDeliveryPreferencesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CustomerDeliveryPreferenceServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class CustomerDeliveryPreferencesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerDeliveryPreferencesAsync()
     {
-        var result = _client.CustomerDeliveryPreferencesService.GetCustomerDeliveryPreferencesAsync(CustomerId)
+        var result = _client.CustomerDeliveryPreferenceService.GetCustomerDeliveryPreferencesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -24,7 +24,8 @@ public class CustomerDeliveryPreferencesServiceTests : CredentialManagement
     {
         var customerId = string.Empty;
         var payload = new CustomerDeliveryPreference();
-        var result = _client.CustomerDeliveryPreferencesService.CreateCustomerDeliveryPreferenceAsync(customerId, payload)
+        var result = _client.CustomerDeliveryPreferenceService
+            .CreateCustomerDeliveryPreferenceAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -36,7 +37,8 @@ public class CustomerDeliveryPreferencesServiceTests : CredentialManagement
     {
         var customerId = string.Empty;
         var payload = new CustomerDeliveryPreference();
-        var result = _client.CustomerDeliveryPreferencesService.UpdateCustomerDeliveryPreferenceAsync(customerId, payload)
+        var result = _client.CustomerDeliveryPreferenceService
+            .UpdateCustomerDeliveryPreferenceAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -48,7 +50,8 @@ public class CustomerDeliveryPreferencesServiceTests : CredentialManagement
     {
         var customerId = string.Empty;
         var payload = new CustomerDeliveryPreferenceDelete();
-        var result = _client.CustomerDeliveryPreferencesService.DeleteCustomerDeliveryPreferenceAsync(customerId, payload)
+        var result = _client.CustomerDeliveryPreferenceService
+            .DeleteCustomerDeliveryPreferenceAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

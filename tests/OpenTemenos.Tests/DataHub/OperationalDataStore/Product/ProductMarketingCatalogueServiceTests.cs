@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
-[TestClass]
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
 public class ProductMarketingCatalogueServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

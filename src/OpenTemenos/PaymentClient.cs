@@ -1,12 +1,12 @@
 ﻿using Payment;
-using Payment.DirectDebitsX;
+using Payment.DirectDebit;
 using Payment.PaymentOrders;
-using Payment.PaymentOrdersConfiguration;
+using Payment.PaymentOrdersConfigurations;
 using Payment.Payments;
 using Payment.PaymentStops;
 using Payment.RequestToPayPayments;
 using Payment.StandingOrders;
-using Payment.TransactionStopX;
+using Payment.TransactionStops;
 
 namespace OpenTemenos;
 
@@ -21,20 +21,20 @@ public class PaymentClient : IPaymentClient
         _httpClient = httpClient;
     }
 
-    public IDirectDebitsService DirectDebitManagementService => new DirectDebitsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDirectDebitService DirectDebitManagementService => new DirectDebitService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IPaymentStopsService PaymentStopService => new PaymentStopsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentStopService PaymentStopService => new PaymentStopService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IStandingOrdersService StandingOrderService => new StandingOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IStandingOrderService StandingOrderService => new StandingOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ITransactionStopService TransactionStopService => new TransactionStopService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IPaymentOrdersService PaymentOrderService => new PaymentOrdersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentOrderService PaymentOrderService => new PaymentOrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IPaymentsService PaymentExecutionService => new PaymentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentService PaymentExecutionService => new PaymentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IPaymentOrdersConfigurationService PaymentOrderConfigurationService =>
         new PaymentOrdersConfigurationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IRequestToPayPaymentsService RequestToPaymentService => new RequestToPayPaymentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IRequestToPayPaymentService RequestToPaymentService => new RequestToPayPaymentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

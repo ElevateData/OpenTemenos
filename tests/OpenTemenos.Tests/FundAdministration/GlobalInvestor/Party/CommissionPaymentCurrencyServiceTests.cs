@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.CommissionPaymentCurrency;
+using FundAdministration.GlobalInvestor.Party.CommissionPaymentCurrencies;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class CommissionPaymentCurrencyServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

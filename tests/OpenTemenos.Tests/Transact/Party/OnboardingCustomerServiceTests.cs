@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Party.OnboardingCustomerX;
+using Transact.Party.OnboardingCustomers;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class OnboardingCustomerServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";

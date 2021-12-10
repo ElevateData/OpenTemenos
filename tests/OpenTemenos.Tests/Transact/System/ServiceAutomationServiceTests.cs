@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.System.ServiceAutomation;
+using Transact.System.ServiceAutomations;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ServiceAutomationServiceTests : CredentialManagement
 {
     private const string BusinessClosureDate = "20200101";

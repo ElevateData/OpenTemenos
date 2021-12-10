@@ -16,7 +16,7 @@ using Shared.Models;
 #pragma warning disable 8073 // Disable "CS8073 The result of the expression is always 'false' since a value of type 'T' is never equal to 'null' of type 'T?'"
 #pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
 
-namespace FundAdministration.GlobalInvestor.Party.MinLimitsExpiry
+namespace FundAdministration.GlobalInvestor.Party.MinLimitsExpiries
 {
     using System = global::System;
 

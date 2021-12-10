@@ -16,12 +16,12 @@ public class ProductClient : IProductClient
         _httpClient = httpClient;
     }
 
-    public ICorporateLendingProductBalancesService CorporateLendingProductService =>
-        new CorporateLendingProductBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICorporateLendingProductBalanceService CorporateLendingProductService =>
+        new CorporateLendingProductBalanceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IRetailDepositProductBalancesService RetailDepositProductBalanceService =>
-        new RetailDepositProductBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IRetailDepositProductBalanceService RetailDepositProductBalanceService =>
+        new RetailDepositProductBalanceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IRetailLendingProductBalancesService RetailLendingProductBalanceService =>
-        new RetailLendingProductBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IRetailLendingProductBalanceService RetailLendingProductBalanceService =>
+        new RetailLendingProductBalanceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

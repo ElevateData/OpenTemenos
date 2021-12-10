@@ -3,8 +3,8 @@ using Transact.Holding.DerivativesOptions;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class DerivativesOptionsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class DerivativesOptionServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

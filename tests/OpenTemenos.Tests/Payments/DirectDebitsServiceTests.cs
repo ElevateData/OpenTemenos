@@ -1,9 +1,9 @@
-﻿using Payment.DirectDebitsX;
+﻿using Payment.DirectDebit;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass]
-public class DirectDebitsServiceTests : CredentialManagement
+[TestClass, TestCategory("Payments")]
+public class DirectDebitServiceTests : CredentialManagement
 {
     private readonly IPaymentClient _client = new PaymentClient(HttpClient) { ReadResponseAsString = true };
 

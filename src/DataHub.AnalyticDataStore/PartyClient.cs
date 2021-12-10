@@ -14,6 +14,6 @@ public class PartyClient : IPartyClient
         _httpClient = httpClient;
     }
 
-    public IAllCustomerSegmentationDetailsService CustomerSegmentationService =>
-        new AllCustomerSegmentationDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAllCustomerSegmentationDetailService CustomerSegmentationService =>
+        new AllCustomerSegmentationDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

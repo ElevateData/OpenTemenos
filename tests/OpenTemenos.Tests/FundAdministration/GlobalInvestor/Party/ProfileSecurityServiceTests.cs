@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.ProfileSecurity;
+using FundAdministration.GlobalInvestor.Party.ProfileSecurities;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class ProfileSecurityServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

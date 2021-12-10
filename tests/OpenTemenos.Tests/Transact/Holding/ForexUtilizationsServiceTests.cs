@@ -3,7 +3,7 @@ using Transact.Holding.ForexUtilizations;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class ForexUtilizationServiceTests : CredentialManagement
 {
     private const string UtilizationId = "";

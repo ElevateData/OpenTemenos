@@ -2,7 +2,7 @@
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class UsCountyServiceTests : CredentialManagement
 {
     private const string StateId = "HI";

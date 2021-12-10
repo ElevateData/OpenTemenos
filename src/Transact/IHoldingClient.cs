@@ -8,7 +8,7 @@ using Transact.Holding.Cards;
 using Transact.Holding.CashManagementBundles;
 using Transact.Holding.Collaterals;
 using Transact.Holding.CreateNonDeliverableForwards;
-using Transact.Holding.CurrencyPosition;
+using Transact.Holding.CurrencyPositions;
 using Transact.Holding.CustomerArrangements;
 using Transact.Holding.Customers;
 using Transact.Holding.Dashboards;
@@ -17,74 +17,73 @@ using Transact.Holding.DerivativesOptions;
 using Transact.Holding.Entitlements;
 using Transact.Holding.ForexUtilizations;
 using Transact.Holding.Guarantees;
-using Transact.Holding.LetterOfCreditX;
+using Transact.Holding.LetterOfCredits;
 using Transact.Holding.Limits;
 using Transact.Holding.PaymentStops;
 using Transact.Holding.Portfolios;
-using Transact.Holding.PortfolioSettlement;
-using Transact.Holding.Position;
+using Transact.Holding.PortfolioSettlements;
+using Transact.Holding.Positions;
 using Transact.Holding.Reports;
 using Transact.Holding.RepurchaseAgreements;
 using Transact.Holding.SecurityPositions;
 using Transact.Holding.SecurityTrades;
-using Transact.Holding.Service;
-using Transact.Holding.SwapNpvRevaluation;
+using Transact.Holding.Services;
+using Transact.Holding.SwapNpvRevaluations;
 using Transact.Holding.Transactions;
 using Transact.Holding.TreasuryCurrencies;
 using Transact.Holding.TreasuryCurrencyPairs;
-using Transact.Holding.UsDashboards;
 
 namespace Transact;
 
 public interface IHoldingClient
 {
-    public ICardsService AccountCardService { get; }
-    public IAccountsService AccountManagementService { get; }
+    public ICardService AccountCardService { get; }
+    public IAccountService AccountManagementService { get; }
     [Obsolete("All methods are obsolete")]
-    public IArrangementsActivitiesService ArrangementsActivityService { get; }
-    //public IArrangementsService ArrangementDetailService { get; }
-    public ICashManagementBundlesService CashManagementBundleArrangementService { get; }
+    public IArrangementsActivityService ArrangementsActivityService { get; }
+    //public IArrangementService ArrangementDetailService { get; }
+    public ICashManagementBundleService CashManagementBundleArrangementService { get; }
     //public IUserAdminService ChannelUserAdministrationService {get;}
-    public IEntitlementsService CorporateActionEventManagementService { get; }
-    //public ICreditAgreementsApiService CorporateCreditAgreementsService {get;}
-    public IDashboardsService CorporateDashboardService { get; }
-    public IDepositsService DepositService { get; }
-    //public ILoansArrangementsService LoanCreationService {get;}
+    public IEntitlementService CorporateActionEventManagementService { get; }
+    //public ICreditAgreementsApiService CorporateCreditAgreementService {get;}
+    public IDashboardService CorporateDashboardService { get; }
+    public IDepositService DepositService { get; }
+    //public ILoansArrangementService LoanCreationService {get;}
     public ICurrencyPositionService CurrencyPositionService { get; }
-    //public IAccountsArrangementsService CustomerArrangementAccountService { get; }
-    public ICustomerArrangementsService CustomerArrangementService { get; }
-    public ICustomersService CustomerHoldingService { get; }
-    public IDerivativesOptionsService DerivativeInstrumentOperationService { get; }
+    //public IAccountsArrangementService CustomerArrangementAccountService { get; }
+    public ICustomerArrangementService CustomerArrangementService { get; }
+    public ICustomerService CustomerHoldingService { get; }
+    public IDerivativesOptionService DerivativeInstrumentOperationService { get; }
     //public ICalculatePayoffService InitialLoanPayoffService { get; }
     //public IUpdatePaymentHolidayService UpdatePaymentHolidayService { get; }
-    public ILimitsService LimitLiabilityAndForexLimitService { get; }
+    public ILimitService LimitLiabilityAndForexLimitService { get; }
     public IHoldingService HoldingService { get; }
-    public IArrangementsProductLinesService ArrangementForProductLineService { get; }
-    //public ILoansArrangementsService LoansCreationService { get; }
-    public IAlertsService ArrangementAccountAlertService { get; }
+    public IArrangementsProductLineService ArrangementForProductLineService { get; }
+    //public ILoansArrangementService LoansCreationService { get; }
+    public IAlertService ArrangementAccountAlertService { get; }
     [Obsolete("All methods are obsolete")]
-    public IArrangementsBalancesService ArrangementAccountDocumentService { get; }
-    public ICollateralsService CustomerCollateralService { get; }
-    public ICreateNonDeliverableForwardsService CreateNonDeliverableForwardService { get; }
-    public IForexUtilizationsService ForexUtilizationService { get; }
-    public IGuaranteesService GuaranteeService { get; }
+    public IArrangementsBalanceService ArrangementAccountDocumentService { get; }
+    public ICollateralService CustomerCollateralService { get; }
+    public ICreateNonDeliverableForwardService CreateNonDeliverableForwardService { get; }
+    public IForexUtilizationService ForexUtilizationService { get; }
+    public IGuaranteeService GuaranteeService { get; }
     public ILetterOfCreditService LetterOfCreditService { get; }
-    public IPaymentStopsService PaymentStopService { get; }
-    public IPortfoliosService PortfolioService { get; }
+    public IPaymentStopService PaymentStopService { get; }
+    public IPortfolioService PortfolioService { get; }
     public IPositionService PositionService { get; }
-    public IReportsService ReportService { get; }
-    public IRepurchaseAgreementsService RepurchaseAgreementService { get; }
-    public ISecurityPositionsService SecurityPositionService { get; }
+    public IReportService ReportService { get; }
+    public IRepurchaseAgreementService RepurchaseAgreementService { get; }
+    public ISecurityPositionService SecurityPositionService { get; }
     public IPortfolioSettlementService SecuritySettlementService { get; }
-    public ISecurityTradesService SecurityTradeService { get; }
+    public ISecurityTradeService SecurityTradeService { get; }
     public ISwapNpvRevaluationService SwapNpvRevaluationService { get; }
     //public IUpdatePaymentHolidaySimulationService UpdatePaymentHolidaySimulationService { get; }
-    public ITransactionsService TransactionService { get; }
+    public ITransactionService TransactionService { get; }
     public ITreasury Treasury { get; }
-    public ITreasuryCurrenciesService TreasuryCurrencyService { get; }
-    public ITreasuryCurrencyPairsService TreasuryCurrencyPairService { get; }
+    public ITreasuryCurrencyService TreasuryCurrencyService { get; }
+    public ITreasuryCurrencyPairService TreasuryCurrencyPairService { get; }
     public IUsModelBank UsModelBank { get; }
 
     //Not sure if this item is being used by Temenos
-    //public IDepositsService DepositsService { get; }
+    //public IDepositService DepositService { get; }
 }

@@ -2,14 +2,14 @@
 using FundAdministration.GlobalInvestor.Order.Adjustments;
 using FundAdministration.GlobalInvestor.Order.Announcements;
 using FundAdministration.GlobalInvestor.Order.ContractChanges;
-using FundAdministration.GlobalInvestor.Order.ContractHistory;
+using FundAdministration.GlobalInvestor.Order.ContractHistories;
 using FundAdministration.GlobalInvestor.Order.DividendRates;
-using FundAdministration.GlobalInvestor.Order.ExchangeRate;
-using FundAdministration.GlobalInvestor.Order.Instruction;
-using FundAdministration.GlobalInvestor.Order.Nav;
-using FundAdministration.GlobalInvestor.Order.Order;
-using FundAdministration.GlobalInvestor.Order.OrderCancelReverse;
-using FundAdministration.GlobalInvestor.Order.OrderNotification;
+using FundAdministration.GlobalInvestor.Order.ExchangeRates;
+using FundAdministration.GlobalInvestor.Order.Instructions;
+using FundAdministration.GlobalInvestor.Order.Navs;
+using FundAdministration.GlobalInvestor.Order.OrderCancelReverses;
+using FundAdministration.GlobalInvestor.Order.OrderNotifications;
+using FundAdministration.GlobalInvestor.Order.Orders;
 using FundAdministration.GlobalInvestor.Order.PaymentAmendments;
 using FundAdministration.GlobalInvestor.Order.PaymentLogProcesses;
 using FundAdministration.GlobalInvestor.Order.Payments;
@@ -29,21 +29,21 @@ public class OrderClient : IOrderClient
     {
         _httpClient = httpClient;
     }
-    public IAdjustmentsService UnderlyingRegAdjustmentService => new AdjustmentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IAnnouncementsService DividendPaymentService => new AnnouncementsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IContractChangesService RegisterContractChangeService => new ContractChangesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAdjustmentService UnderlyingRegAdjustmentService => new AdjustmentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAnnouncementService DividendPaymentService => new AnnouncementService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IContractChangeService RegisterContractChangeService => new ContractChangeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IContractHistoryService RegisterHistoricalContractService => new ContractHistoryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IDividendRatesService DividendRateService => new DividendRatesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDividendRateService DividendRateService => new DividendRateService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IExchangeRateService ExchangeRateService => new ExchangeRateService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IInstructionService InstructionService => new InstructionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public INavService SharePriceService => new NavService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IOrderCancelReverseService OrderCancellationService => new OrderCancelReverseService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IOrderNotificationService ErrorInterfaceService => new OrderNotificationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IOrderService OrderService => new OrderService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPaymentAmendmentsService PaymentAmendmentService => new PaymentAmendmentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPaymentLogProcessesService PaymentLogService => new PaymentLogProcessesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPaymentsService PaymentService => new PaymentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IReceiptsService CashReceiptService => new ReceiptsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ISecurityPriceUpdatesService MarketValueHistoricalService => new SecurityPriceUpdatesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITradingDeskRatesService TradingDeskValidationService => new TradingDeskRatesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentAmendmentService PaymentAmendmentService => new PaymentAmendmentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentLogProcesseService PaymentLogService => new PaymentLogProcesseService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentService PaymentService => new PaymentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IReceiptService CashReceiptService => new ReceiptService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISecurityPriceUpdateService MarketValueHistoricalService => new SecurityPriceUpdateService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITradingDeskRateService TradingDeskValidationService => new TradingDeskRateService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

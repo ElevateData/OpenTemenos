@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Party.AgentCutoffExceptions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
-public class AgentCutoffExceptionsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class AgentCutoffExceptionServiceTests : CredentialManagement
 {
     private const string InternalId = "";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };

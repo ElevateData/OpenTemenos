@@ -3,8 +3,8 @@ using Transact.Party.CustomersDocuments;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class CustomersDocumentsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CustomersDocumentServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private const string CustomerDocumentId = "1";
@@ -15,7 +15,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetDocumentImageAsync()
     {
-        var result = _client.CustomersDocumentsService.GetDocumentImageAsync(CustomerId, ImageId)
+        var result = _client.CustomersDocumentService.GetDocumentImageAsync(CustomerId, ImageId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -28,7 +28,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
         var customerId = string.Empty;
         var imageId = string.Empty;
         var payload = new DocumentImage();
-        var result = _client.CustomersDocumentsService.UpdateDocumentImageAsync(customerId, imageId, payload)
+        var result = _client.CustomersDocumentService.UpdateDocumentImageAsync(customerId, imageId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -37,7 +37,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerImagesAsync()
     {
-        var result = _client.CustomersDocumentsService.GetCustomerImagesAsync(CustomerId)
+        var result = _client.CustomersDocumentService.GetCustomerImagesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -49,7 +49,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var customerId = string.Empty;
         var payload = new DocumentImage();
-        var result = _client.CustomersDocumentsService.CreateDocumentImageAsync(customerId, payload)
+        var result = _client.CustomersDocumentService.CreateDocumentImageAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -58,7 +58,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerDocumentAsync()
     {
-        var result = _client.CustomersDocumentsService.GetCustomerDocumentAsync(CustomerDocumentId)
+        var result = _client.CustomersDocumentService.GetCustomerDocumentAsync(CustomerDocumentId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -70,7 +70,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var customerDocumentId = string.Empty;
         var payload = new CustomerDocument();
-        var result = _client.CustomersDocumentsService.CreateCustomerDocumentAsync(customerDocumentId, payload)
+        var result = _client.CustomersDocumentService.CreateCustomerDocumentAsync(customerDocumentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -82,7 +82,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var customerDocumentId = string.Empty;
         var payload = new CustomerDocument();
-        var result = _client.CustomersDocumentsService.AmendCustomerDocumentAsync(customerDocumentId, payload)
+        var result = _client.CustomersDocumentService.AmendCustomerDocumentAsync(customerDocumentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -94,7 +94,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var customerDocumentId = string.Empty;
         var payload = new CustomerDocumentDelete();
-        var result = _client.CustomersDocumentsService.DeleteCustomerDocumentAsync(customerDocumentId, payload)
+        var result = _client.CustomersDocumentService.DeleteCustomerDocumentAsync(customerDocumentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -103,7 +103,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerDocumentsAsync()
     {
-        var result = _client.CustomersDocumentsService.GetCustomerDocumentsAsync(CustomerId)
+        var result = _client.CustomersDocumentService.GetCustomerDocumentsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -112,7 +112,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetDocumentsLocationAsync()
     {
-        var result = _client.CustomersDocumentsService.GetDocumentsLocationAsync()
+        var result = _client.CustomersDocumentService.GetDocumentsLocationAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -121,7 +121,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetDocumentAndImagesAsync()
     {
-        var result = _client.CustomersDocumentsService.GetDocumentandImagesAsync(ImageReference)
+        var result = _client.CustomersDocumentService.GetDocumentandImagesAsync(ImageReference)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -133,7 +133,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var uploadId = string.Empty;
         var payload = new ProfilePictureUpload();
-        var result = _client.CustomersDocumentsService.CreateProfilePictureUploadAsync(uploadId, payload)
+        var result = _client.CustomersDocumentService.CreateProfilePictureUploadAsync(uploadId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -145,7 +145,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var uploadId = string.Empty;
         var payload = new ProfilePictureUpload();
-        var result = _client.CustomersDocumentsService.UpdateProfilePictureUploadAsync(uploadId, payload)
+        var result = _client.CustomersDocumentService.UpdateProfilePictureUploadAsync(uploadId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -157,7 +157,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var uploadId = string.Empty;
         var payload = new ProfilePictureUploadDelete();
-        var result = _client.CustomersDocumentsService.DeleteProfilePictureUploadAsync(uploadId, payload)
+        var result = _client.CustomersDocumentService.DeleteProfilePictureUploadAsync(uploadId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -168,7 +168,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     public void CreateDocumentAndImageAsync()
     {
         var payload = new DocumentandImage();
-        var result = _client.CustomersDocumentsService.CreateDocumentandImageAsync(payload)
+        var result = _client.CustomersDocumentService.CreateDocumentandImageAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -180,7 +180,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var documentId = string.Empty;
         var payload = new DocumentandImage();
-        var result = _client.CustomersDocumentsService.UpdateDocumentandImageAsync(documentId, payload)
+        var result = _client.CustomersDocumentService.UpdateDocumentandImageAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -192,7 +192,7 @@ public class CustomersDocumentsServiceTests : CredentialManagement
     {
         var documentId = string.Empty;
         var payload = new DocumentandImageDelete();
-        var result = _client.CustomersDocumentsService.DeleteDocumentandImageAsync(documentId, payload)
+        var result = _client.CustomersDocumentService.DeleteDocumentandImageAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

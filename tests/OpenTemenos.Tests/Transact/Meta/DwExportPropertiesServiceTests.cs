@@ -3,8 +3,8 @@ using Transact.Meta.DwExportProperties;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class DwExportPropertiesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class DwExportPropertyServiceTests : CredentialManagement
 {
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };
 

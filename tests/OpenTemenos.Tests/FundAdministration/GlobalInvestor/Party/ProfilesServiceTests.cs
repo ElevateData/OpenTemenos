@@ -3,7 +3,7 @@ using FundAdministration.GlobalInvestor.Party.Profiles;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class ProfileServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

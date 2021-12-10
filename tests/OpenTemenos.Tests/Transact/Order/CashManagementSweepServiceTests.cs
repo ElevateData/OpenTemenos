@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Order.CashManagementSweep;
+using Transact.Order.CashManagementSweeps;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CashManagementSweepServiceTests : CredentialManagement
 {
     private const string AccountId = "1";

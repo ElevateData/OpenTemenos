@@ -1,9 +1,9 @@
 ﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Product.Security;
+using FundAdministration.GlobalInvestor.Product.Securities;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
 public class SecurityServiceTests : CredentialManagement
 {
     private const string SecId = "1";

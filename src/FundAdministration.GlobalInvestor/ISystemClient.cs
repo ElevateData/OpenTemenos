@@ -4,5 +4,5 @@ namespace FundAdministration.GlobalInvestor;
 
 public interface ISystemClient
 {
-    public ITriggersService OutboundTriggerService { get; }
+    public ITriggerService OutboundTriggerService { get; }
 }

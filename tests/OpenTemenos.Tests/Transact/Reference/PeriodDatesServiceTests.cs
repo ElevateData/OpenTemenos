@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class PeriodDatesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class PeriodDateServiceTests : CredentialManagement
 {
     private const string CurrencyOrPair = "";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
@@ -11,7 +11,7 @@ public class PeriodDatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetPeriodDatesAsync()
     {
-        var result = _client.PeriodDatesService
+        var result = _client.PeriodDateService
             .GetPeriodDatesAsync(CurrencyOrPair).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class LimitsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class LimitServiceTests : CredentialManagement
 {
     private const string ArrangementId = "1";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

@@ -3,8 +3,8 @@ using Transact.Order.DerivativeOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass]
-public class DerivativeOrdersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class DerivativeOrderServiceTests : CredentialManagement
 {
     private const string DerivativeOrderId = "1";
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

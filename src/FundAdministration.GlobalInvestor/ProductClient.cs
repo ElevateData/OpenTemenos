@@ -10,7 +10,7 @@ using FundAdministration.GlobalInvestor.Product.FrequencyExceptionDays;
 using FundAdministration.GlobalInvestor.Product.FrequencyExceptions;
 using FundAdministration.GlobalInvestor.Product.FundCutoffTimes;
 using FundAdministration.GlobalInvestor.Product.FundEscalationChecks;
-using FundAdministration.GlobalInvestor.Product.FundGroupCutoff;
+using FundAdministration.GlobalInvestor.Product.FundGroupCutoffs;
 using FundAdministration.GlobalInvestor.Product.FundManagers;
 using FundAdministration.GlobalInvestor.Product.FundOfFunds;
 using FundAdministration.GlobalInvestor.Product.FundPromoters;
@@ -23,8 +23,8 @@ using FundAdministration.GlobalInvestor.Product.InitialSubscriptions;
 using FundAdministration.GlobalInvestor.Product.MinDivPayments;
 using FundAdministration.GlobalInvestor.Product.PerformanceFeeSetups;
 using FundAdministration.GlobalInvestor.Product.PermissionCountries;
-using FundAdministration.GlobalInvestor.Product.Security;
-using FundAdministration.GlobalInvestor.Product.SecurityDesc;
+using FundAdministration.GlobalInvestor.Product.Securities;
+using FundAdministration.GlobalInvestor.Product.SecurityDescs;
 using FundAdministration.GlobalInvestor.Product.SecurityIds;
 using FundAdministration.GlobalInvestor.Product.ShareClasses;
 using FundAdministration.GlobalInvestor.Product.ShareValues;
@@ -48,49 +48,49 @@ public class ProductClient : IProductClient
     {
         _httpClient = httpClient;
     }
-    public IAdlDealingDetailsService AntiDilutionLevyDealingService => new AdlDealingDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IApproExproDefinitionsService ApproOrExproDefinitionService => new ApproExproDefinitionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ICommissionGroupsService CommissionGroupService => new CommissionGroupsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IDelayDaysService DelayDayService => new DelayDaysService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IEscalationChecksService EscalationCheckService => new EscalationChecksService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IExchangeGroupsService ExchangeGroupService => new ExchangeGroupsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFixedCalendarsService FixedCalendarService => new FixedCalendarsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFrequencyExceptionDaysService FrequentExceptionDayService => new FrequencyExceptionDaysService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFrequencyExceptionsService FrequentExceptionService => new FrequencyExceptionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFundCutoffTimesService FundCutoffTimeService => new FundCutoffTimesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFundEscalationChecksService FundEscalationCheckService => new FundEscalationChecksService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAdlDealingDetailService AntiDilutionLevyDealingService => new AdlDealingDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IApproExproDefinitionService ApproOrExproDefinitionService => new ApproExproDefinitionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICommissionGroupService CommissionGroupService => new CommissionGroupService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IDelayDayService DelayDayService => new DelayDayService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IEscalationCheckService EscalationCheckService => new EscalationCheckService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IExchangeGroupService ExchangeGroupService => new ExchangeGroupService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFixedCalendarService FixedCalendarService => new FixedCalendarService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFrequencyExceptionDayService FrequentExceptionDayService => new FrequencyExceptionDayService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFrequencyExceptionService FrequentExceptionService => new FrequencyExceptionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundCutoffTimeService FundCutoffTimeService => new FundCutoffTimeService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundEscalationCheckService FundEscalationCheckService => new FundEscalationCheckService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IFundGroupCutoffService CutoffByFundGroupService => new FundGroupCutoffService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFundManagersService FundManagerService => new FundManagersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFundOfFundsService FundOfFundService => new FundOfFundsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFundPromotersService FundPromoterService => new FundPromotersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundManagerService FundManagerService => new FundManagerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundOfFundService FundOfFundService => new FundOfFundService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundPromoterService FundPromoterService => new FundPromoterService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFundTradingDeskTransService FundTradingDeskService => new FundTradingDeskTransService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundTradingDeskTranService FundTradingDeskService => new FundTradingDeskTranService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFundValueDatesService FundValueDateService => new FundValueDatesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IFxDetailsService ForexService => new FxDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IHoldingLimitsService HoldingLimitService => new HoldingLimitsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IHolidaysService HolidayService => new HolidaysService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IInitialSubscriptionsService InitialSubscriptionService => new InitialSubscriptionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundValueDateService FundValueDateService => new FundValueDateService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFxDetailService ForexService => new FxDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IHoldingLimitService HoldingLimitService => new HoldingLimitService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IHolidayService HolidayService => new HolidayService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IInitialSubscriptionService InitialSubscriptionService => new InitialSubscriptionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IMinDivPaymentsService MinDivPaymentService => new MinDivPaymentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IMinDivPaymentService MinDivPaymentService => new MinDivPaymentService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IMasterFund MasterFund => new MasterFund(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IPerformanceFeeSetupsService PerformanceFeeService => new PerformanceFeeSetupsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IPermissionCountriesService PermissionCountryService => new PermissionCountriesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPerformanceFeeSetupService PerformanceFeeService => new PerformanceFeeSetupService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPermissionCountryService PermissionCountryService => new PermissionCountryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ISecurityDescService SecurityDescService => new SecurityDescService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ISecurityIdsService SecurityIdService => new SecurityIdsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISecurityIdService SecurityIdService => new SecurityIdService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ISecurityService SecurityService => new SecurityService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IShareClassesService TransferAgentFundShareClassService => new ShareClassesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ISimulationCalendarsService SimulationCalendarService => new SimulationCalendarsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ISoftClosuresService SoftClosureService => new SoftClosuresService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IStpCounterPartsService StraightThroughProcessingCounterpartService => new StpCounterPartsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITaFundsService TransferAgentFundService => new TaFundsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IShareValuesService TransferAgentFundShareValueService => new ShareValuesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITradeDateExceptionsService TradeDateExceptionService => new TradeDateExceptionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITradeDateExceptionsService FundCalendarExceptionService => new TradeDateExceptionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITransactionLimitsService TransactionLimitService => new TransactionLimitsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITransactionRestrictionsService TransactionRestrictionService => new TransactionRestrictionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IShareClasseService TransferAgentFundShareClasService => new ShareClasseService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISimulationCalendarService SimulationCalendarService => new SimulationCalendarService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISoftClosureService SoftClosureService => new SoftClosureService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IStpCounterPartService StraightThroughProcessingCounterpartService => new StpCounterPartService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITaFundService TransferAgentFundService => new TaFundService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IShareValueService TransferAgentFundShareValueService => new ShareValueService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITradeDateExceptionService TradeDateExceptionService => new TradeDateExceptionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITradeDateExceptionService FundCalendarExceptionService => new TradeDateExceptionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITransactionLimitService TransactionLimitService => new TransactionLimitService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITransactionRestrictionService TransactionRestrictionService => new TransactionRestrictionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

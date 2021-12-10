@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Microservice.EntitlementX;
+using Transact.Microservice.Entitlements;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class EntitlementServiceTests : CredentialManagement
 {
     private const string UserId = "1";

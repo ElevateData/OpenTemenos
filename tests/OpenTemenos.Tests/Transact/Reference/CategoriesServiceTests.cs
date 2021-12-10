@@ -3,8 +3,8 @@ using Transact.Reference.Categories;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class CategoriesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CategoryServiceTests : CredentialManagement
 {
     private const string CategoryId = "1000";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class CategoriesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCategoriesAsync()
     {
-        var result = _client.CategoriesService
+        var result = _client.CategoryService
             .GetCategoriesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -21,7 +21,7 @@ public class CategoriesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCategoryDetailsAsync()
     {
-        var result = _client.CategoriesService.GetCategoryDetailsAsync(CategoryId).Result;
+        var result = _client.CategoryService.GetCategoryDetailsAsync(CategoryId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
@@ -32,7 +32,7 @@ public class CategoriesServiceTests : CredentialManagement
     {
         var categoryId = string.Empty;
         var payload = new CategoryDetails();
-        var result = _client.CategoriesService
+        var result = _client.CategoryService
             .CreateCategoryDetailsAsync(categoryId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -43,7 +43,7 @@ public class CategoriesServiceTests : CredentialManagement
     {
         var categoryId = string.Empty;
         var payload = new CategoryDetails();
-        var result = _client.CategoriesService
+        var result = _client.CategoryService
             .UpdateCategoryDetailsAsync(categoryId, payload).Result;
         Assert.IsNotNull(result.Body);
     }

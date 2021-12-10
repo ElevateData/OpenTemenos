@@ -1,9 +1,9 @@
 ﻿using Transact.Holding;
 using Transact.Holding.CreateNonDeliverableForwards;
-using Transact.Holding.CurrencyPosition;
-using Transact.Holding.Position;
+using Transact.Holding.CurrencyPositions;
+using Transact.Holding.Positions;
 using Transact.Holding.Reports;
-using Transact.Holding.SwapNpvRevaluation;
+using Transact.Holding.SwapNpvRevaluations;
 using Transact.Holding.TreasuryCurrencies;
 using Transact.Holding.TreasuryCurrencyPairs;
 
@@ -19,18 +19,18 @@ public class Treasury : ITreasury
     {
         _httpClient = httpClient;
     }
-    public ITreasuryCurrencyPairsService CurrencyPairService => new TreasuryCurrencyPairsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITreasuryCurrencyPairService CurrencyPairService => new TreasuryCurrencyPairService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ISwapNpvRevaluationService InterestRateSwapRevaluationService => new SwapNpvRevaluationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ITreasuryCurrenciesService LiveRateService => new TreasuryCurrenciesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITreasuryCurrencyService LiveRateService => new TreasuryCurrencyService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public ICreateNonDeliverableForwardsService NonDeliverableForwardService =>
-        new CreateNonDeliverableForwardsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICreateNonDeliverableForwardService NonDeliverableForwardService =>
+        new CreateNonDeliverableForwardService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IPositionService PositionService => new PositionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IReportsService ReportService => new ReportsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IReportService ReportService => new ReportService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ICurrencyPositionService CurrencyPositionService => new CurrencyPositionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

@@ -3,8 +3,8 @@ using Transact.Meta.Screens;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class ScreensServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class ScreenServiceTests : CredentialManagement
 {
     private const string ScreenId = "1";
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };

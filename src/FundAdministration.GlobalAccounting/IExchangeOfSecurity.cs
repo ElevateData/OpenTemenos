@@ -1,9 +1,9 @@
-﻿using FundAdministration.GlobalAccounting.Holding.EosCashCompensation;
-using FundAdministration.GlobalAccounting.Holding.EosMultipleSecurity;
+﻿using FundAdministration.GlobalAccounting.Holding.EosCashCompensations;
+using FundAdministration.GlobalAccounting.Holding.EosMultipleSecurities;
 using FundAdministration.GlobalAccounting.Holding.EosNewSecurityWithoutCash;
-using FundAdministration.GlobalAccounting.Holding.EosSameSecurity;
-using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflow;
-using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashOutflow;
+using FundAdministration.GlobalAccounting.Holding.EosSameSecurities;
+using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflows;
+using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashOutflows;
 
 namespace FundAdministration.GlobalAccounting;
 

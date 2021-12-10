@@ -1,10 +1,9 @@
-﻿using Payment;
-using Payment.Payments;
+﻿using Payment.Payments;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass]
-public class PaymentsServiceTests : CredentialManagement
+[TestClass, TestCategory("Payments")]
+public class PaymentServiceTests : CredentialManagement
 {
     private const string FromDate = "20200101";
     private const string Status = "Test";

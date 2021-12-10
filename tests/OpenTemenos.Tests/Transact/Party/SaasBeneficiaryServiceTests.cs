@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Party.SaasBeneficiary;
+using Transact.Party.SaasBeneficiaries;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class SaasBeneficiaryServiceTests : CredentialManagement
 {
     private const string BeneficiaryId = "1";

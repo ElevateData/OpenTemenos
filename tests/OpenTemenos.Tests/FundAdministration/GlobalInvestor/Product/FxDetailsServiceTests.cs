@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Product.FxDetails;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass]
-public class FxDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class FxDetailServiceTests : CredentialManagement
 {
     private const string Nptf = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

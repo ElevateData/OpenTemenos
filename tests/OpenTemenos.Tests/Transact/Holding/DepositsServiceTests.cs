@@ -3,8 +3,8 @@ using Transact;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class DepositsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class DepositServiceTests : CredentialManagement
 {
     private const string DepositId = "";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

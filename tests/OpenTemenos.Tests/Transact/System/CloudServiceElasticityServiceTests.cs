@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.System.CloudServiceElasticity;
+using Transact.System.CloudServiceElasticities;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CloudServiceElasticityServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };

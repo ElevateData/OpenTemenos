@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 
-[TestClass]
-public class FundsTransferDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class FundsTransferDetailServiceTests : CredentialManagement
 {
     private const string InwardPayType = "";
     private const string DebitAccountId = "";

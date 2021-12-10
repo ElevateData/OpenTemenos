@@ -3,8 +3,8 @@ using Transact.Party.ExternalUsers;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class ExternalUsersServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class ExternalUserServiceTests : CredentialManagement
 {
     private const string ExternalUserPreferencesId = "1";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalUserProfileAsync()
     {
-        var result = _client.ExternalUsersService.GetExternalUserProfileAsync()
+        var result = _client.ExternalUserService.GetExternalUserProfileAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -21,7 +21,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalUserPreferencesAsync()
     {
-        var result = _client.ExternalUsersService.GetExternalUserPreferencesAsync()
+        var result = _client.ExternalUserService.GetExternalUserPreferencesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -33,7 +33,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     {
         var externalUserId = string.Empty;
         var payload = new ExternalUserStatus();
-        var result = _client.ExternalUsersService.UpdateExternalUserStatusAsync(externalUserId, payload)
+        var result = _client.ExternalUserService.UpdateExternalUserStatusAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -45,7 +45,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     {
         var externalUserPreferencesId = string.Empty;
         var payload = new ExternalUserPreference();
-        var result = _client.ExternalUsersService.CreateExternalUserPreferenceAsync(externalUserPreferencesId, payload)
+        var result = _client.ExternalUserService.CreateExternalUserPreferenceAsync(externalUserPreferencesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -57,7 +57,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     {
         var externalUserPreferencesId = string.Empty;
         var payload = new ExternalUserPreference();
-        var result = _client.ExternalUsersService.UpdateExternalUserPreferenceAsync(externalUserPreferencesId, payload)
+        var result = _client.ExternalUserService.UpdateExternalUserPreferenceAsync(externalUserPreferencesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -69,7 +69,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     {
         var externalUserPreferencesId = string.Empty;
         var payload = new ExternalUserPreferenceDelete();
-        var result = _client.ExternalUsersService.DeleteExternalUserPreferenceAsync(externalUserPreferencesId, payload)
+        var result = _client.ExternalUserService.DeleteExternalUserPreferenceAsync(externalUserPreferencesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -78,7 +78,7 @@ public class ExternalUsersServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalUserPreferenceAsync()
     {
-        var result = _client.ExternalUsersService.GetExternalUserPreferenceAsync(ExternalUserPreferencesId)
+        var result = _client.ExternalUserService.GetExternalUserPreferenceAsync(ExternalUserPreferencesId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

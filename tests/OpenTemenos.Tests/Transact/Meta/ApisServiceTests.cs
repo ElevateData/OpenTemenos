@@ -3,8 +3,8 @@ using Transact;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class ApisServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class ApiServiceTests : CredentialManagement
 {
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };
 
@@ -12,7 +12,7 @@ public class ApisServiceTests : CredentialManagement
     //TODO: compare Azure stored results against GitHub. There are already some differences.
     public void GetApiDocsAsync()
     {
-        var result = _client.ApisService.GetApiDocsAsync()
+        var result = _client.ApiService.GetApiDocsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -22,7 +22,7 @@ public class ApisServiceTests : CredentialManagement
     //TODO: validate versioning issues against these results
     public void GetApisAsync()
     {
-        var result = _client.ApisService.GetApisAsync()
+        var result = _client.ApiService.GetApisAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -32,7 +32,7 @@ public class ApisServiceTests : CredentialManagement
     public void GetInternalApisAsync()
     {
         //TODO: Body is missing from response
-        //var result = _client.ApisService.GetInternalApisAsync().Result;
+        //var result = _client.ApiService.GetInternalApisAsync().Result;
         //Assert.IsNotNull(result.Body);
         //Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
         throw new NotImplementedException("Body is missing from response");

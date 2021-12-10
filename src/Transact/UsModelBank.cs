@@ -14,7 +14,7 @@ public class UsModelBank : IUsModelBank
     {
         _httpClient = httpClient;
     }
-    public IUsDashboardsService HoldingSummaryService => new UsDashboardsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IUsDashboardService HoldingSummaryService => new UsDashboardService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IUsSafeDepositsService SafeDepositService => new UsSafeDepositsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IUsSafeDepositService SafeDepositService => new UsSafeDepositService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

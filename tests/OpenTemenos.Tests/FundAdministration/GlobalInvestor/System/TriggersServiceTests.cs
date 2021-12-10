@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.System.Triggers;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.System;
 
-[TestClass]
-public class TriggersServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class TriggerServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };
 

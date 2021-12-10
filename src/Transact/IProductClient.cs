@@ -1,17 +1,17 @@
 ﻿using Transact.Product.Customers;
 using Transact.Product.ExternalProducts;
 using Transact.Product.LimitProducts;
-using Transact.Product.MarketingCatalogue;
-using Transact.Product.UserAdmin;
+using Transact.Product.MarketingCatalogues;
+using Transact.Product.UserAdmins;
 
 namespace Transact;
 
 //TODO: Rename Transact.IProductClient methods
 public interface IProductClient
 {
-    public ICustomersService CustomersService { get; }
-    public IExternalProductsService ExternalProductsService { get; }
-    public ILimitProductsService LimitProductsService { get; }
+    public ICustomerService CustomerService { get; }
+    public IExternalProductService ExternalProductService { get; }
+    public ILimitProductService LimitProductService { get; }
     public IMarketingCatalogueService MarketingCatalogueService { get; }
     public IUserAdminService UserAdminService { get; }
 

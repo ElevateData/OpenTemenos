@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Order.SecurityPriceUpdates;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
-[TestClass]
-public class SecurityPriceUpdatesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class SecurityPriceUpdateServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
 

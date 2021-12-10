@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
-[TestClass]
-public class ArrangementsDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class ArrangementsDetailServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private const string RecordId = "";

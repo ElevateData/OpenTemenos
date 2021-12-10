@@ -1,10 +1,10 @@
 ﻿using Transact.Microservice;
-using Transact.Microservice.CallbackRegistry;
-using Transact.Microservice.EntitlementX;
-using Transact.Microservice.GenericConfig;
-using Transact.Microservice.Metering;
-using Transact.Microservice.ServiceOrchestrator;
-using Transact.Microservice.Traceability;
+using Transact.Microservice.CallbackRegistries;
+using Transact.Microservice.Entitlements;
+using Transact.Microservice.GenericConfigs;
+using Transact.Microservice.Meterings;
+using Transact.Microservice.ServiceOrchestrators;
+using Transact.Microservice.Traceabilities;
 
 namespace Transact;
 

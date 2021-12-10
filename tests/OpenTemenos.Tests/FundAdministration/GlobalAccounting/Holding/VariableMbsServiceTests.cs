@@ -3,8 +3,8 @@ using FundAdministration.GlobalAccounting.Holding.VariableMbs;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
-public class VariableMbsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+public class VariableMbServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

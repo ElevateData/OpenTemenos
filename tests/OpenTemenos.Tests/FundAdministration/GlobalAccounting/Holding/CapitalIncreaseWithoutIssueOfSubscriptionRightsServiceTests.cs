@@ -3,8 +3,8 @@ using FundAdministration.GlobalAccounting.Holding.CapitalIncreaseWithoutIssueOfS
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
-public class CapitalIncreaseWithoutIssueOfSubscriptionRightsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+public class CapitalIncreaseWithoutIssueOfSubscriptionRightServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

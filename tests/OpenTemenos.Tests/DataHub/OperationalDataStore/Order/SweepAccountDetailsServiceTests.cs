@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 
-[TestClass]
-public class SweepAccountDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class SweepAccountDetailServiceTests : CredentialManagement
 {
     private const string CreditAccount = "";
     private const string DebitAccount = "";

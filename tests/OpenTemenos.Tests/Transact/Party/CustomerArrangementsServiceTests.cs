@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
-public class CustomerArrangementsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class CustomerArrangementServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -11,7 +11,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     [TestMethod]
     public void GetArrangementListAsync()
     {
-        var result = _client.CustomerArrangementsService.GetArrangementListAsync(CustomerId)
+        var result = _client.CustomerArrangementService.GetArrangementListAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -20,7 +20,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     [TestMethod]
     public void GetArrangementAccountsAsync()
     {
-        var result = _client.CustomerArrangementsService.GetArrangementAccountsAsync(CustomerId)
+        var result = _client.CustomerArrangementService.GetArrangementAccountsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -29,7 +29,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     [TestMethod]
     public void GetProductBundlesAsync()
     {
-        var result = _client.CustomerArrangementsService.GetProductBundlesAsync(CustomerId)
+        var result = _client.CustomerArrangementService.GetProductBundlesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -38,7 +38,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPreferentialPricingAsync()
     {
-        var result = _client.CustomerArrangementsService.GetPreferentialPricingAsync(CustomerId)
+        var result = _client.CustomerArrangementService.GetPreferentialPricingAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

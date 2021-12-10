@@ -20,18 +20,18 @@ public class OrderClient : IOrderClient
         _httpClient = httpClient;
     }
 
-    public ISweepAccountDetailsService AccountSweepService => new SweepAccountDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ISweepAccountDetailService AccountSweepService => new SweepAccountDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IFundsTransferDetailsService FundsTransferDetailService =>
-        new FundsTransferDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IFundsTransferDetailService FundsTransferDetailService =>
+        new FundsTransferDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IRejectedCollectionsService OrderRejectedCollectionService =>
-        new RejectedCollectionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IRejectedCollectionService OrderRejectedCollectionService =>
+        new RejectedCollectionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IPaymentDetailsService PaymentService => new PaymentDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IInvestigationItemsService TransactionStopService => new InvestigationItemsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IForexOrderDetailsService TreasuryForexOrderService => new ForexOrderDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentDetailService PaymentService => new PaymentDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IInvestigationItemService TransactionStopService => new InvestigationItemService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IForexOrderDetailService TreasuryForexOrderService => new ForexOrderDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
-    public IAccountHoldDetailsService UsModelBankCashTransactionService =>
-        new AccountHoldDetailsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IAccountHoldDetailService UsModelBankCashTransactionService =>
+        new AccountHoldDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

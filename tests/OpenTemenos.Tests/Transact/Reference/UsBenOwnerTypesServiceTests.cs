@@ -2,15 +2,15 @@
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class UsBenOwnerTypesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class UsBenOwnerTypeServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetUsBeneficialOwnerTypesAsync()
     {
-        var result = _client.UsBenOwnerTypesService.GetUsBeneficialOwnerTypesAsync().Result;
+        var result = _client.UsBenOwnerTypeService.GetUsBeneficialOwnerTypesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Product;
 
-[TestClass]
-public class LimitProductsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class LimitProductServiceTests : CredentialManagement
 {
     private const string LimitProductId = "1";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
@@ -11,7 +11,7 @@ public class LimitProductsServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalDepositProductAsync()
     {
-        var result = _client.LimitProductsService.GetLimitProductAsync(LimitProductId)
+        var result = _client.LimitProductService.GetLimitProductAsync(LimitProductId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

@@ -3,8 +3,8 @@ using Transact.Holding.PaymentStops;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class PaymentStopsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class PaymentStopServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

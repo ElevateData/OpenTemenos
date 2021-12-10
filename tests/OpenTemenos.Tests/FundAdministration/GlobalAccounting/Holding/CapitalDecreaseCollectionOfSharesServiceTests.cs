@@ -3,8 +3,8 @@ using FundAdministration.GlobalAccounting.Holding.CapitalDecreaseCollectionOfSha
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass]
-public class CapitalDecreaseCollectionOfSharesServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+public class CapitalDecreaseCollectionOfShareServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

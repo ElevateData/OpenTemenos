@@ -1,9 +1,8 @@
-﻿using Payment;
-using Payment.TransactionStopX;
+﻿using Payment.TransactionStops;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass]
+[TestClass, TestCategory("Payments")]
 public class TransactionStopServiceTests : CredentialManagement
 {
     private const string TransactionStopId = "1";

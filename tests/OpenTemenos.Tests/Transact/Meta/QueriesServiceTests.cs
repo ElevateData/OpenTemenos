@@ -3,8 +3,8 @@ using Transact.Meta.Queries;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass]
-public class QueriesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class QueryServiceTests : CredentialManagement
 {
     private const string QueryId = "1";
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };

@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Reference.RoundingRule;
+using Transact.Reference.RoundingRules;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class RoundingRuleServiceTests : CredentialManagement
 {
     private const string RuleId = "";

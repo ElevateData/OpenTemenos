@@ -1,14 +1,14 @@
 ﻿using FundAdministration.GlobalInvestor.Order.Adjustments;
 using FundAdministration.GlobalInvestor.Order.Announcements;
 using FundAdministration.GlobalInvestor.Order.ContractChanges;
-using FundAdministration.GlobalInvestor.Order.ContractHistory;
+using FundAdministration.GlobalInvestor.Order.ContractHistories;
 using FundAdministration.GlobalInvestor.Order.DividendRates;
-using FundAdministration.GlobalInvestor.Order.ExchangeRate;
-using FundAdministration.GlobalInvestor.Order.Instruction;
-using FundAdministration.GlobalInvestor.Order.Nav;
-using FundAdministration.GlobalInvestor.Order.Order;
-using FundAdministration.GlobalInvestor.Order.OrderCancelReverse;
-using FundAdministration.GlobalInvestor.Order.OrderNotification;
+using FundAdministration.GlobalInvestor.Order.ExchangeRates;
+using FundAdministration.GlobalInvestor.Order.Instructions;
+using FundAdministration.GlobalInvestor.Order.Navs;
+using FundAdministration.GlobalInvestor.Order.OrderCancelReverses;
+using FundAdministration.GlobalInvestor.Order.OrderNotifications;
+using FundAdministration.GlobalInvestor.Order.Orders;
 using FundAdministration.GlobalInvestor.Order.PaymentAmendments;
 using FundAdministration.GlobalInvestor.Order.PaymentLogProcesses;
 using FundAdministration.GlobalInvestor.Order.Payments;
@@ -20,21 +20,21 @@ namespace FundAdministration.GlobalInvestor;
 
 public interface IOrderClient
 {
-    public IReceiptsService CashReceiptService { get; }
-    public IAnnouncementsService DividendPaymentService { get; }
-    public IDividendRatesService DividendRateService { get; }
+    public IReceiptService CashReceiptService { get; }
+    public IAnnouncementService DividendPaymentService { get; }
+    public IDividendRateService DividendRateService { get; }
     public IOrderNotificationService ErrorInterfaceService { get; }
     public IExchangeRateService ExchangeRateService { get; }
     public IInstructionService InstructionService { get; }
-    public ISecurityPriceUpdatesService MarketValueHistoricalService { get; }
+    public ISecurityPriceUpdateService MarketValueHistoricalService { get; }
     public IOrderCancelReverseService OrderCancellationService { get; }
     public IOrderService OrderService { get; }
-    public IPaymentAmendmentsService PaymentAmendmentService { get; }
-    public IPaymentsService PaymentService { get; }
-    public IPaymentLogProcessesService PaymentLogService { get; }
-    public IContractChangesService RegisterContractChangeService { get; }
+    public IPaymentAmendmentService PaymentAmendmentService { get; }
+    public IPaymentService PaymentService { get; }
+    public IPaymentLogProcesseService PaymentLogService { get; }
+    public IContractChangeService RegisterContractChangeService { get; }
     public IContractHistoryService RegisterHistoricalContractService { get; }
     public INavService SharePriceService { get; }
-    public ITradingDeskRatesService TradingDeskValidationService { get; }
-    public IAdjustmentsService UnderlyingRegAdjustmentService { get; }
+    public ITradingDeskRateService TradingDeskValidationService { get; }
+    public IAdjustmentService UnderlyingRegAdjustmentService { get; }
 }

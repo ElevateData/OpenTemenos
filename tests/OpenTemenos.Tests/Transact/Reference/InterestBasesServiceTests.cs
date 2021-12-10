@@ -3,8 +3,8 @@ using Transact.Reference.InterestBases;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass]
-public class InterestBasesServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class InterestBaseServiceTests : CredentialManagement
 {
     private const string InterestBasisId = "A";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class InterestBasesServiceTests : CredentialManagement
     [TestMethod]
     public void GetInterestBasesAsync()
     {
-        var result = _client.InterestBasesService
+        var result = _client.InterestBaseService
             .GetInterestBasesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -21,7 +21,7 @@ public class InterestBasesServiceTests : CredentialManagement
     [TestMethod]
     public void GetInterestDayBasisDetailsAsync()
     {
-        var result = _client.InterestBasesService
+        var result = _client.InterestBaseService
             .GetInterestDayBasisDetailsAsync(InterestBasisId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -33,7 +33,7 @@ public class InterestBasesServiceTests : CredentialManagement
     {
         var interestBasisId = string.Empty;
         var payload = new InterestDayBasis();
-        var result = _client.InterestBasesService
+        var result = _client.InterestBaseService
             .CreateInterestDayBasisAsync(interestBasisId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class InterestBasesServiceTests : CredentialManagement
     {
         var interestBasisId = string.Empty;
         var payload = new InterestDayBasis();
-        var result = _client.InterestBasesService
+        var result = _client.InterestBaseService
             .UpdateInterestDayBasisAsync(interestBasisId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -55,7 +55,7 @@ public class InterestBasesServiceTests : CredentialManagement
     {
         var interestBasisId = string.Empty;
         var payload = new InterestDayBasisDelete();
-        var result = _client.InterestBasesService
+        var result = _client.InterestBaseService
             .DeleteInterestDayBasisAsync(interestBasisId, payload).Result;
         Assert.IsNotNull(result.Body);
     }

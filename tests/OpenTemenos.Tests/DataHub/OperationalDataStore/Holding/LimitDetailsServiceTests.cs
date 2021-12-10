@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
-[TestClass]
-public class LimitDetailsServiceTests : CredentialManagement
+[TestClass, TestCategory("DataHub.OperationalDataStore")]
+public class LimitDetailServiceTests : CredentialManagement
 {
     private const string MasterGroupKey = "";
     private const string RecordId = "";

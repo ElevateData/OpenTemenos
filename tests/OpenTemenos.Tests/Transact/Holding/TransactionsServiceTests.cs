@@ -2,8 +2,8 @@
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass]
-public class TransactionsServiceTests : CredentialManagement
+[TestClass, TestCategory("Transact")]
+public class TransactionServiceTests : CredentialManagement
 {
     private const string TransactionId = "";
     private const string TransactionReferenceId = "FX2109691941";

@@ -1,9 +1,9 @@
 ﻿using Transact;
-using Transact.Party.CustomerX;
+using Transact.Party.Customers;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass]
+[TestClass, TestCategory("Transact")]
 public class CustomerServiceTests : CredentialManagement
 {
     private const string AddressId = "1";

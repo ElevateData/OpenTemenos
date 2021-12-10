@@ -9,7 +9,7 @@
 
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-stockexchangetransaction-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-stockexchangetransaction-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:StockExchangeTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Order.StockExchangeTransaction /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:StockExchangeTransactionService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Order.StockExchangeTransactions /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>StockExchangeTransactionService.cs</OutputPath>
 			<ClassName>StockExchangeTransactionService</ClassName>
 		</OpenApiReference>

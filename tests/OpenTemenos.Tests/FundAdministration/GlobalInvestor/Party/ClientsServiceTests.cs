@@ -3,8 +3,8 @@ using FundAdministration.GlobalInvestor.Party.Clients;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass]
-public class ClientsServiceTests : CredentialManagement
+[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+public class ClientServiceTests : CredentialManagement
 {
     private const string ClientId = "1";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
