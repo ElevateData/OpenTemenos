@@ -1,10 +1,10 @@
 ﻿using Transact;
-using Transact.Reference.OrganizationStructuresServices;
+using Transact.Reference.OrganizationStructures;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
 [TestClass]
-public class OrganizationStructuresServicesServiceTests : CredentialManagement
+public class OrganizationStructuresServiceTests : CredentialManagement
 {
     private const string OrganizationId = "";
     private const string BranchId = "";
@@ -14,7 +14,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetOrganizationHierarchyAsync()
     {
-        var result = _client.OrganizationStructuresServicesService
+        var result = _client.OrganizationStructuresService
             .GetOrganizationHierarchyAsync(OrganizationId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -25,7 +25,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     {
         var organizationId = string.Empty;
         var payload = new OrganizationHierarchy();
-        var result = _client.OrganizationStructuresServicesService
+        var result = _client.OrganizationStructuresService
             .CreateOrganizationHierarchyAsync(organizationId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -36,7 +36,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     {
         var organizationId = string.Empty;
         var payload = new OrganizationHierarchy();
-        var result = _client.OrganizationStructuresServicesService
+        var result = _client.OrganizationStructuresService
             .UpdateOrganizationHierarchyAsync(organizationId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetChildOrganizationsAsync()
     {
-        var result = _client.OrganizationStructuresServicesService
+        var result = _client.OrganizationStructuresService
             .GetChildOrganizationsAsync(OrganizationId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -53,7 +53,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetOrganizationBranchNameAsync()
     {
-        var result = _client.OrganizationStructuresServicesService
+        var result = _client.OrganizationStructuresService
             .GetOrganizationBranchNameAsync(BranchId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -61,7 +61,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetLineOfBusinessNameAsync()
     {
-        var result = _client.OrganizationStructuresServicesService
+        var result = _client.OrganizationStructuresService
             .GetLineOfBusinessNameAsync(LineOfBusinessId).Result;
         Assert.IsNotNull(result.Body);
     }

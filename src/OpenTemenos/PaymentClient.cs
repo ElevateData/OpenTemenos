@@ -1,22 +1,22 @@
-﻿using Transact.Order;
-using Transact.Order.DirectDebitsX;
-using Transact.Order.PaymentOrders;
-using Transact.Order.PaymentOrdersConfiguration;
-using Transact.Order.Payments;
-using Transact.Order.PaymentStops;
-using Transact.Order.RequestToPayPayments;
-using Transact.Order.StandingOrders;
-using Transact.Order.TransactionStopX;
+﻿using Payment;
+using Payment.DirectDebitsX;
+using Payment.PaymentOrders;
+using Payment.PaymentOrdersConfiguration;
+using Payment.Payments;
+using Payment.PaymentStops;
+using Payment.RequestToPayPayments;
+using Payment.StandingOrders;
+using Payment.TransactionStopX;
 
 namespace OpenTemenos;
 
-public class Payment : IPayment
+public class PaymentClient : IPaymentClient
 {
     private readonly HttpClient _httpClient;
     public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
     public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
-    public Payment(HttpClient httpClient)
+    public PaymentClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }

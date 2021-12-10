@@ -6,6 +6,54 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-directDebits-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-directDebits-service-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:DirectDebitsService.cs /ContractsNamespace:Payment.DirectDebitsX /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>DirectDebitsService.cs</OutputPath>
+			<ClassName>DirectDebitsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-paymentOrdersConfiguration-service-v3.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-paymentOrdersConfiguration-service-v3.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:PaymentOrdersConfigurationService.cs /ContractsNamespace:Payment.PaymentOrdersConfiguration /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>PaymentOrdersConfigurationService.cs</OutputPath>
+			<ClassName>PaymentOrdersConfigurationService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-paymentOrders-service-v3.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-paymentOrders-service-v3.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:PaymentOrdersService.cs /ContractsNamespace:Payment.PaymentOrders /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>PaymentOrdersService.cs</OutputPath>
+			<ClassName>PaymentOrdersService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-payments-service-v3.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-payments-service-v3.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:PaymentsService.cs /ContractsNamespace:Payment.Payments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>PaymentsService.cs</OutputPath>
+			<ClassName>PaymentsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-paymentStops-service-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-paymentStops-service-v2.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:PaymentStopsService.cs /ContractsNamespace:Payment.PaymentStops /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>PaymentStopsService.cs</OutputPath>
+			<ClassName>PaymentStopsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\RequestToPayPayments-v1.1.1-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/RequestToPayPayments-v1.1.1-swagger.json</SourceUri>
+			<Options>/ContractsOutput:RequestToPayPaymentsService.cs /ContractsNamespace:Payment.RequestToPayPayments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>RequestToPayPaymentsService.cs</OutputPath>
+			<ClassName>RequestToPayPaymentsService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-standingOrders-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-standingOrders-service-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:StandingOrdersService.cs /ContractsNamespace:Payment.StandingOrders /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>StandingOrdersService.cs</OutputPath>
+			<ClassName>StandingOrdersService</ClassName>
+		</OpenApiReference>
+		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-transactionstop-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
+			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-transactionstop-v1.0.0-swagger.json</SourceUri>
+			<Options>/ContractsOutput:TransactionStopService.cs /ContractsNamespace:Payment.TransactionStopX /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<OutputPath>TransactionStopService.cs</OutputPath>
+			<ClassName>TransactionStopService</ClassName>
+		</OpenApiReference>
 
 	</ItemGroup>
 

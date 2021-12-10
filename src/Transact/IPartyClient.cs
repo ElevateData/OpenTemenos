@@ -6,8 +6,8 @@ using Transact.Party.CustomerMandates;
 using Transact.Party.CustomerOpenBankingConnections;
 using Transact.Party.CustomersContactHistory;
 using Transact.Party.CustomersDocuments;
-using Transact.Party.CustomerServices;
 using Transact.Party.CustomersMiFID;
+using Transact.Party.CustomerX;
 using Transact.Party.ExternalUsers;
 using Transact.Party.OnboardingCustomerX;
 using Transact.Party.ParticipantList;
@@ -30,7 +30,7 @@ public interface IPartyClient
     public ICustomerOpenBankingConnectionsService CustomerOpenBankingConnectionsService { get; }
     public ICustomersContactHistoryService CustomersContactHistoryService { get; }
     public ICustomersDocumentsService CustomersDocumentsService { get; }
-    public ICustomerServicesService CustomerServicesService { get; }
+    public ICustomerService CustomerService { get; }
     public ICustomersMiFIDService CustomersMiFIDService { get; }
     public IExternalUsersService ExternalUsersService { get; }
     public IOnboardingCustomerService OnboardingCustomerService { get; }

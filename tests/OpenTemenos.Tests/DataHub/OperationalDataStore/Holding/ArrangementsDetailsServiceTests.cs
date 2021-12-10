@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 [TestClass]
 public class ArrangementsDetailsServiceTests : CredentialManagement
 {
-    private const string CustomerId = "";
+    private const string CustomerId = "100282";
     private const string RecordId = "";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

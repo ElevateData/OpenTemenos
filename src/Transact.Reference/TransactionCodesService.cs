@@ -16,53 +16,53 @@ using Shared.Models;
 #pragma warning disable 8073 // Disable "CS8073 The result of the expression is always 'false' since a value of type 'T' is never equal to 'null' of type 'T?'"
 #pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
 
-namespace Transact.Reference.OrganizationStructuresServices
+namespace Transact.Reference.TransactionCodes
 {
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial interface IOrganizationStructuresServicesService
+    public partial interface ITransactionCodesService
     {
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieve the Organization code details</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
+        /// <summary>Retrieves the transaction code details</summary>
+        /// <param name="transactionCode">Identifies the system internal transaction code applicable to the transaction</param>
         /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <param name="deviceId">Identifies the device type</param>
         /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationHierarchyResponse</returns>
+        /// <returns>TransactionCodeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> GetOrganizationHierarchyAsync(string organizationId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionCodeResponse> GetTransactionCodeAsync(string transactionCode, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Create the Organization code details</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
+        /// <summary>Creates the transaction code details</summary>
+        /// <param name="transactionCode">Identifies the system internal transaction code applicable to the transaction</param>
         /// <param name="payload">body Payload</param>
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <param name="deviceId">Identifies the device type</param>
         /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationHierarchyResponse</returns>
+        /// <returns>TransactionCodeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> CreateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionCodeResponse> CreateTransactionCodeAsync(string transactionCode, TransactionCode payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Update the Organization code details</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
+        /// <summary>Updates the transaction code details</summary>
+        /// <param name="transactionCode">Identifies the system internal transaction code applicable to the transaction</param>
         /// <param name="payload">body Payload</param>
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <param name="deviceId">Identifies the device type</param>
         /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationHierarchyResponse</returns>
+        /// <returns>TransactionCodeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> UpdateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionCodeResponse> UpdateTransactionCodeAsync(string transactionCode, TransactionCode payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves the child organizations</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
+        /// <summary>Retrieves all the transaction codes</summary>
+        /// <param name="transactionCode">Identifies the system internal transaction code applicable to the transaction</param>
         /// <param name="page_size">The total number of records per page</param>
         /// <param name="page_start">The record from which the response should be displayed</param>
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
@@ -71,31 +71,9 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="deviceId">Identifies the device type</param>
         /// <param name="userRole">User who initiated the transaction</param>
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ChildOrganizationsResponse</returns>
+        /// <returns>TransactionCodeListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ChildOrganizationsResponse> GetChildOrganizationsAsync(string organizationId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieve the branch name</summary>
-        /// <param name="branchId">Unique and unambiguous identification of a branch of a financial institution.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationBranchNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationBranchNameResponse> GetOrganizationBranchNameAsync(string branchId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves the line of business</summary>
-        /// <param name="lineOfBusinessId">Identifier of the line of business provided by the branch</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>LineOfBusinessNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LineOfBusinessNameResponse> GetLineOfBusinessNameAsync(string lineOfBusinessId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionCodeListResponse> GetTransactionCodeListAsync(string? transactionCode = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 
@@ -124,35 +102,107 @@ namespace Transact.Reference.OrganizationStructuresServices
     
     }
     
-    /// <summary>OrganizationHierarchyResponse</summary>
+    /// <summary>TransactionCodeResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationHierarchyResponse 
+    public partial class TransactionCodeResponse 
     {
         [System.Text.Json.Serialization.JsonPropertyName("header")]
         public ScreenHeader? Header { get; set; }= default!;
     
         [System.Text.Json.Serialization.JsonPropertyName("body")]
-        public OrganizationHierarchyResponseBody? Body { get; set; }= default!;
+        public TransactionCodeResponseBody? Body { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationHierarchyResponseBody 
+    public partial class TransactionCodeResponseBody 
     {
-        /// <summary>Indicates the name of the organization</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("organizationNames")]
-        public System.Collections.Generic.ICollection<OrganizationNames>? OrganizationNames { get; set; }= default!;
+        /// <summary>The transaction description</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionNames")]
+        public System.Collections.Generic.ICollection<TransactionNames>? TransactionNames { get; set; }= default!;
     
-        /// <summary>This Field is to determine whether the order is a parent order, Allowed value is YES</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("parent")]
-        [System.ComponentModel.DataAnnotations.StringLength(20)]
-        public string? Parent { get; set; }= default!;
+        /// <summary>This indicates the charge code which will be triggered for payment stop instruction. Applicable when financial institutions would like to charge for stop payment of cheque etc. </summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chargeIds")]
+        public System.Collections.Generic.ICollection<ChargeIds>? ChargeIds { get; set; }= default!;
     
-        /// <summary>Captured for information purpose to render the placeholders in GUI</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("level")]
-        [System.ComponentModel.DataAnnotations.Range(0D, 20D)]
-        public double? Level { get; set; }= default!;
+        [System.Text.Json.Serialization.JsonPropertyName("entryNetting")]
+        public System.Collections.Generic.ICollection<EntryNetting>? EntryNetting { get; set; }= default!;
+    
+        /// <summary>Indicates whether the transactions using this code requires mandatory cheque number</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chequeTransaction")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChequeTransaction { get; set; }= default!;
+    
+        /// <summary>Indicates the type of Cheques for which payment stop instruction is effective</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chequeTypeId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChequeTypeId { get; set; }= default!;
+    
+        /// <summary>Indicates whether the transactions using this code requires mandatory reference number</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chequeIdRequired")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChequeIdRequired { get; set; }= default!;
+    
+        /// <summary>Indicator flag which is set whenever a debit or a credit transaction happens in the account</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("debitCreditIndicator")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? DebitCreditIndicator { get; set; }= default!;
+    
+        /// <summary>Indicates whether the transaction using this code are to be included in the calculation of Debit/Credit turnover charges</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("includeInTurnoverCharge")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? IncludeInTurnoverCharge { get; set; }= default!;
+    
+        /// <summary>Indicates the SWIFT narrative corresponding to the transaction code as per the rules specified in the SWIFT user handbook</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("swiftNarrative")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? SwiftNarrative { get; set; }= default!;
+    
+        /// <summary>Defines the initiator type of transaction. Example - bank or customer</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionInitiationType")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? TransactionInitiationType { get; set; }= default!;
+    
+        /// <summary>Defines if reference has to appear as part statement narrative.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("statementReferenceField")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? StatementReferenceField { get; set; }= default!;
+    
+        /// <summary>Identifier of the statement narration format record.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("statementNarrativeFormatId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? StatementNarrativeFormatId { get; set; }= default!;
+    
+        /// <summary>Indicates if the transaction is to excluded from dispo processing</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("exemptDispoProcessing")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ExemptDispoProcessing { get; set; }= default!;
+    
+        /// <summary>Identifier of the Exposure condition record</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("exposureDateConditionId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ExposureDateConditionId { get; set; }= default!;
+    
+        /// <summary>Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionType")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? TransactionType { get; set; }= default!;
+    
+        /// <summary>The additional text printed on descriptive statements in addition to the standard narrative and/or reference</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("narrative")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? Narrative { get; set; }= default!;
+    
+        /// <summary>Contains the description of purpose of the payment.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("description")]
+        [System.ComponentModel.DataAnnotations.StringLength(11)]
+        public string? Description { get; set; }= default!;
+    
+        /// <summary>Boolean field to indicate if the charge is to be colelcted from the Account immediately.  Possible values: Y = Charge must be levied immediately, i.e. when the transaction is booked.  NO=  Charge must not be levied when the transaction is booked and Blank- Default value that implies that the charge is not levied immediately.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("immediateCharge")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ImmediateCharge { get; set; }= default!;
     
     
     }
@@ -282,21 +332,21 @@ namespace Transact.Reference.OrganizationStructuresServices
     
     }
     
-    /// <summary>ChildOrganizationsResponse</summary>
+    /// <summary>TransactionCodeListResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class ChildOrganizationsResponse 
+    public partial class TransactionCodeListResponse 
     {
         [System.Text.Json.Serialization.JsonPropertyName("header")]
         public QueryHeader? Header { get; set; }= default!;
     
         [System.Text.Json.Serialization.JsonPropertyName("body")]
-        public ChildOrganizationsResponseBody? Body { get; set; }= default!;
+        public TransactionCodeListResponseBody? Body { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class ChildOrganizationsResponseBody : System.Collections.ObjectModel.Collection<Anonymous>
+    public partial class TransactionCodeListResponseBody : System.Collections.ObjectModel.Collection<Anonymous>
     {
     
     }
@@ -375,92 +425,148 @@ namespace Transact.Reference.OrganizationStructuresServices
     
     }
     
-    /// <summary>OrganizationHierarchy</summary>
+    /// <summary>TransactionCode</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationHierarchy 
+    public partial class TransactionCode 
     {
         [System.Text.Json.Serialization.JsonPropertyName("header")]
         public PayloadHeader? Header { get; set; }= default!;
     
         [System.Text.Json.Serialization.JsonPropertyName("body")]
-        public OrganizationHierarchyBody? Body { get; set; }= default!;
+        public TransactionCodeBody? Body { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationHierarchyBody 
+    public partial class TransactionCodeBody 
     {
-        /// <summary>Indicates the name of the organization</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("organizationNames")]
-        public System.Collections.Generic.ICollection<OrganizationNames2>? OrganizationNames { get; set; }= default!;
+        /// <summary>The transaction description</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionNames")]
+        public System.Collections.Generic.ICollection<TransactionNames2>? TransactionNames { get; set; }= default!;
     
-        /// <summary>This Field is to determine whether the order is a parent order, Allowed value is YES</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("parent")]
-        [System.ComponentModel.DataAnnotations.StringLength(20)]
-        public string? Parent { get; set; }= default!;
+        /// <summary>This indicates the charge code which will be triggered for payment stop instruction. Applicable when financial institutions would like to charge for stop payment of cheque etc. </summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chargeIds")]
+        public System.Collections.Generic.ICollection<ChargeIds2>? ChargeIds { get; set; }= default!;
     
-        /// <summary>Captured for information purpose to render the placeholders in GUI</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("level")]
-        [System.ComponentModel.DataAnnotations.Range(0D, 20D)]
-        public double? Level { get; set; }= default!;
+        [System.Text.Json.Serialization.JsonPropertyName("entryNetting")]
+        public System.Collections.Generic.ICollection<EntryNetting2>? EntryNetting { get; set; }= default!;
+    
+        /// <summary>Indicates whether the transactions using this code requires mandatory cheque number</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chequeTransaction")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChequeTransaction { get; set; }= default!;
+    
+        /// <summary>Indicates the type of Cheques for which payment stop instruction is effective</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chequeTypeId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChequeTypeId { get; set; }= default!;
+    
+        /// <summary>Indicates whether the transactions using this code requires mandatory reference number</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chequeIdRequired")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChequeIdRequired { get; set; }= default!;
+    
+        /// <summary>Indicator flag which is set whenever a debit or a credit transaction happens in the account</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("debitCreditIndicator")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? DebitCreditIndicator { get; set; }= default!;
+    
+        /// <summary>Indicates whether the transaction using this code are to be included in the calculation of Debit/Credit turnover charges</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("includeInTurnoverCharge")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? IncludeInTurnoverCharge { get; set; }= default!;
+    
+        /// <summary>Indicates the SWIFT narrative corresponding to the transaction code as per the rules specified in the SWIFT user handbook</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("swiftNarrative")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? SwiftNarrative { get; set; }= default!;
+    
+        /// <summary>Defines the initiator type of transaction. Example - bank or customer</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionInitiationType")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? TransactionInitiationType { get; set; }= default!;
+    
+        /// <summary>Defines if reference has to appear as part statement narrative.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("statementReferenceField")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? StatementReferenceField { get; set; }= default!;
+    
+        /// <summary>Identifier of the statement narration format record.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("statementNarrativeFormatId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? StatementNarrativeFormatId { get; set; }= default!;
+    
+        /// <summary>Indicates if the transaction is to excluded from dispo processing</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("exemptDispoProcessing")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ExemptDispoProcessing { get; set; }= default!;
+    
+        /// <summary>Identifier of the Exposure condition record</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("exposureDateConditionId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ExposureDateConditionId { get; set; }= default!;
+    
+        /// <summary>Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionType")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? TransactionType { get; set; }= default!;
+    
+        /// <summary>The additional text printed on descriptive statements in addition to the standard narrative and/or reference</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("narrative")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? Narrative { get; set; }= default!;
+    
+        /// <summary>Contains the description of purpose of the payment.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("description")]
+        [System.ComponentModel.DataAnnotations.StringLength(11)]
+        public string? Description { get; set; }= default!;
+    
+        /// <summary>Boolean field to indicate if the charge is to be colelcted from the Account immediately.  Possible values: Y = Charge must be levied immediately, i.e. when the transaction is booked.  NO=  Charge must not be levied when the transaction is booked and Blank- Default value that implies that the charge is not levied immediately.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("immediateCharge")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ImmediateCharge { get; set; }= default!;
     
     
     }
     
-    /// <summary>OrganizationBranchNameResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationBranchNameResponse 
+    public partial class TransactionNames 
     {
-        [System.Text.Json.Serialization.JsonPropertyName("header")]
-        public ScreenHeader? Header { get; set; }= default!;
-    
-        [System.Text.Json.Serialization.JsonPropertyName("body")]
-        public OrganizationBranchNameResponseBody? Body { get; set; }= default!;
+        /// <summary>The transaction description</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionName")]
+        [System.ComponentModel.DataAnnotations.StringLength(19)]
+        public string? TransactionName { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationBranchNameResponseBody 
+    public partial class ChargeIds 
     {
-        /// <summary>Contains the description for the Organization Code defined at Branch Level.</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("branchNames")]
-        public System.Collections.Generic.ICollection<BranchNames>? BranchNames { get; set; }= default!;
-    
-    
-    }
-    
-    /// <summary>LineOfBusinessNameResponse</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class LineOfBusinessNameResponse 
-    {
-        [System.Text.Json.Serialization.JsonPropertyName("header")]
-        public ScreenHeader? Header { get; set; }= default!;
-    
-        [System.Text.Json.Serialization.JsonPropertyName("body")]
-        public LineOfBusinessNameResponseBody? Body { get; set; }= default!;
+        /// <summary>This indicates the charge code which will be triggered for payment stop instruction. Applicable when financial institutions would like to charge for stop payment of cheque etc. </summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chargeId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChargeId { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class LineOfBusinessNameResponseBody 
+    public partial class EntryNetting 
     {
-        /// <summary>Contains the name used for display or enrichment purposes</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("displayNames")]
-        public System.Collections.Generic.ICollection<DisplayNames>? DisplayNames { get; set; }= default!;
+        /// <summary>Unique identifier associated with the product name of the account or contract. For example: For customer/counterparty accounts, the identifier would be in the range 1000 to 9999. For ledger accounts, in the range 10000 to 19999.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("categoryId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? CategoryId { get; set; }= default!;
     
+        /// <summary>Contains the unique identifier of the product, e.g. the product id of the arrangement account.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("productId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ProductId { get; set; }= default!;
     
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationNames 
-    {
-        /// <summary>Indicates the name of the organization</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("organizationName")]
-        [System.ComponentModel.DataAnnotations.StringLength(20)]
-        public string? OrganizationName { get; set; }= default!;
+        [System.Text.Json.Serialization.JsonPropertyName("combineTransactionId")]
+        public System.Collections.Generic.ICollection<CombineTransactionId>? CombineTransactionId { get; set; }= default!;
     
     
     }
@@ -592,10 +698,25 @@ namespace Transact.Reference.OrganizationStructuresServices
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
     public partial class Anonymous 
     {
-        /// <summary>Indicates the next level hierarchy of any organization id</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("childOrganizationId")]
-        [System.ComponentModel.DataAnnotations.StringLength(35)]
-        public string? ChildOrganizationId { get; set; }= default!;
+        /// <summary>Identifies the system internal transaction code applicable to the transaction</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionCode")]
+        [System.ComponentModel.DataAnnotations.Range(double.MinValue, 10D)]
+        public double? TransactionCode { get; set; }= default!;
+    
+        /// <summary>The transaction description</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionName")]
+        [System.ComponentModel.DataAnnotations.StringLength(30)]
+        public string? TransactionName { get; set; }= default!;
+    
+        /// <summary>Defines the initiator type of transaction. Example - bank or customer</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionInitiationType")]
+        [System.ComponentModel.DataAnnotations.StringLength(8)]
+        public string? TransactionInitiationType { get; set; }= default!;
+    
+        /// <summary>Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionType")]
+        [System.ComponentModel.DataAnnotations.StringLength(8)]
+        public string? TransactionType { get; set; }= default!;
     
     
     }
@@ -620,34 +741,53 @@ namespace Transact.Reference.OrganizationStructuresServices
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class OrganizationNames2 
+    public partial class TransactionNames2 
     {
-        /// <summary>Indicates the name of the organization</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("organizationName")]
-        [System.ComponentModel.DataAnnotations.StringLength(20)]
-        public string? OrganizationName { get; set; }= default!;
+        /// <summary>The transaction description</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionName")]
+        [System.ComponentModel.DataAnnotations.StringLength(19)]
+        public string? TransactionName { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class BranchNames 
+    public partial class ChargeIds2 
     {
-        /// <summary>Contains the description for the Organization Code defined at Branch Level.</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("branchName")]
-        [System.ComponentModel.DataAnnotations.StringLength(50)]
-        public string? BranchName { get; set; }= default!;
+        /// <summary>This indicates the charge code which will be triggered for payment stop instruction. Applicable when financial institutions would like to charge for stop payment of cheque etc. </summary>
+        [System.Text.Json.Serialization.JsonPropertyName("chargeId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ChargeId { get; set; }= default!;
     
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
-    public partial class DisplayNames 
+    public partial class EntryNetting2 
     {
-        /// <summary>Contains the name used for display or enrichment purposes</summary>
-        [System.Text.Json.Serialization.JsonPropertyName("displayName")]
-        [System.ComponentModel.DataAnnotations.StringLength(50)]
-        public string? DisplayName { get; set; }= default!;
+        /// <summary>Unique identifier associated with the product name of the account or contract. For example: For customer/counterparty accounts, the identifier would be in the range 1000 to 9999. For ledger accounts, in the range 10000 to 19999.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("categoryId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? CategoryId { get; set; }= default!;
+    
+        /// <summary>Contains the unique identifier of the product, e.g. the product id of the arrangement account.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("productId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? ProductId { get; set; }= default!;
+    
+        [System.Text.Json.Serialization.JsonPropertyName("combineTransactionId")]
+        public System.Collections.Generic.ICollection<CombineTransactionId2>? CombineTransactionId { get; set; }= default!;
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
+    public partial class CombineTransactionId 
+    {
+        /// <summary>Unique transaction identifier for retrieving the details of the transaction. For example: FT0102030333 etc.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? TransactionId { get; set; }= default!;
     
     
     }
@@ -670,6 +810,17 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <summary>The user input to accept/reject the override.</summary>
         [System.Text.Json.Serialization.JsonPropertyName("responseCode")]
         public string? ResponseCode { get; set; }= default!;
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v13.0.0.0)")]
+    public partial class CombineTransactionId2 
+    {
+        /// <summary>Unique transaction identifier for retrieving the details of the transaction. For example: FT0102030333 etc.</summary>
+        [System.Text.Json.Serialization.JsonPropertyName("transactionId")]
+        [System.ComponentModel.DataAnnotations.StringLength(26)]
+        public string? TransactionId { get; set; }= default!;
     
     
     }

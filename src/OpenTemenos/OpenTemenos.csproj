@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,6 +12,7 @@
     <ProjectReference Include="..\FinancialCrimeMitigation\FinancialCrimeMitigation.csproj" />
     <ProjectReference Include="..\FundAdministration.GlobalAccounting\FundAdministration.GlobalAccounting.csproj" />
     <ProjectReference Include="..\FundAdministration.GlobalInvestor\FundAdministration.GlobalInvestor.csproj" />
+    <ProjectReference Include="..\Payment\Payment.csproj" />
     <ProjectReference Include="..\PortfolioManagement\PortfolioManagement.csproj" />
     <ProjectReference Include="..\Transact\Transact.csproj" />
   </ItemGroup>

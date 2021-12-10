@@ -21,5 +21,5 @@ public class OpenTemenosClient : IOpenTemenosClient
 
     public IPortfolioManagement PortfolioManagement => throw new NotImplementedException();
 
-    public IPayment Payment => new Payment(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IPaymentClient Payment => new PaymentClient(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

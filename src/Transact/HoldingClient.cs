@@ -22,11 +22,17 @@ using Transact.Holding.Limits;
 using Transact.Holding.PaymentStops;
 using Transact.Holding.Portfolios;
 using Transact.Holding.PortfolioSettlement;
+using Transact.Holding.Position;
+using Transact.Holding.Reports;
 using Transact.Holding.RepurchaseAgreements;
 using Transact.Holding.SecurityPositions;
 using Transact.Holding.SecurityTrades;
 using Transact.Holding.Service;
+using Transact.Holding.SwapNpvRevaluation;
 using Transact.Holding.Transactions;
+using Transact.Holding.TreasuryCurrencies;
+using Transact.Holding.TreasuryCurrencyPairs;
+using Transact.Holding.UsDashboards;
 
 namespace Transact;
 
@@ -87,6 +93,10 @@ public class HoldingClient : IHoldingClient
 
     public IPortfoliosService PortfolioService => new PortfoliosService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
+    public IPositionService PositionService => new PositionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public IReportsService ReportService => new ReportsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
     public IRepurchaseAgreementsService RepurchaseAgreementService => new RepurchaseAgreementsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ISecurityPositionsService SecurityPositionService => new SecurityPositionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
@@ -95,9 +105,15 @@ public class HoldingClient : IHoldingClient
 
     public ISecurityTradesService SecurityTradeService => new SecurityTradesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
+    public ISwapNpvRevaluationService SwapNpvRevaluationService => new SwapNpvRevaluationService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
     public ITransactionsService TransactionService => new TransactionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ITreasury Treasury => new Treasury(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public ITreasuryCurrenciesService TreasuryCurrencyService => new TreasuryCurrenciesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public ITreasuryCurrencyPairsService TreasuryCurrencyPairService => new TreasuryCurrencyPairsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IUsModelBank UsModelBank => new UsModelBank(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

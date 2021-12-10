@@ -6,6 +6,7 @@ using Transact.Order.FiduciaryOrders;
 using Transact.Order.ForexCustomerOrders;
 using Transact.Order.IPOSecurityOrders;
 using Transact.Order.OrderSimulations;
+using Transact.Order.PaymentsConfiguration;
 using Transact.Order.PositionTransferOrdersRequest;
 using Transact.Order.PrivateEquityOrders;
 using Transact.Order.SecurityOrders;
@@ -25,6 +26,7 @@ public interface IOrderClient
     public IIPOSecurityOrdersService InitialPublicOfferingSecurityOrderService { get; }
     public ISweepsService AccountSweepService { get; }
     public IPrivateEquityOrdersService PrivateEquityOrderService { get; }
+    public IPaymentsConfigurationService PaymentConfigurationService { get; }
     public ISecurityOrdersService SecurityOrderService { get; }
     public IOrderSimulationsService SecurityOrderSimulationService { get; }
     public IPositionTransferOrdersRequestService SecurityPositionTransferService { get; }
@@ -34,15 +36,4 @@ public interface IOrderClient
 
 
     //public IPaymentsConfigurationService PaymentsConfigurationService { get; }
-    //TODO: Move these items to the Payments project
-    /*
-    public IDirectDebitsService DirectDebitsService { get; }
-    public IPaymentOrdersConfigurationService PaymentOrdersConfigurationService { get; }
-    public IPaymentOrdersService PaymentOrdersService { get; }
-    public IPaymentsService PaymentsService { get; }
-    public IPaymentStopsService PaymentStopsService { get; }
-    public IRequestToPayPaymentsService RequestToPayPaymentsService { get; }
-    public IStandingOrdersService StandingOrdersService { get; }
-    public ITransactionStopService TransactionStopService { get; }
-    */
 }

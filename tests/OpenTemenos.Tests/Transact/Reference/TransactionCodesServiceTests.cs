@@ -1,10 +1,10 @@
 ﻿using Transact;
-using Transact.Reference.TransactionCodesServices;
+using Transact.Reference.TransactionCodes;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
 [TestClass]
-public class TransactionCodesServicesServiceTests : CredentialManagement
+public class TransactionCodesServiceTests : CredentialManagement
 {
     private const string TransactionCode = "1";
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
@@ -12,7 +12,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetTransactionCodeAsync()
     {
-        var result = _client.TransactionCodesServicesService
+        var result = _client.TransactionCodesService
             .GetTransactionCodeAsync(TransactionCode).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -24,7 +24,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     {
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
-        var result = _client.TransactionCodesServicesService
+        var result = _client.TransactionCodesService
             .CreateTransactionCodeAsync(transactionCode, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -35,7 +35,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     {
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
-        var result = _client.TransactionCodesServicesService
+        var result = _client.TransactionCodesService
             .UpdateTransactionCodeAsync(transactionCode, payload).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -43,7 +43,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     [TestMethod]
     public void GetTransactionCodeListAsync()
     {
-        var result = _client.TransactionCodesServicesService
+        var result = _client.TransactionCodesService
             .GetTransactionCodeListAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

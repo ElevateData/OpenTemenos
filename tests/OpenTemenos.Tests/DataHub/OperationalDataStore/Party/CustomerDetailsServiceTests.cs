@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Party;
 public class CustomerDetailsServiceTests : CredentialManagement
 {
     private const string RecordId = "";
-    private const string FromCustomerId = "";
+    private const string FromCustomerId = "100282";
     private const string CutomerId = "";
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 

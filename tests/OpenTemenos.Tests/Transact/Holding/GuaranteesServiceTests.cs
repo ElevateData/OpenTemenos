@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.Transact.Holding;
 public class GuaranteesServiceTests : CredentialManagement
 {
     private const string ClauseId = "";
-    private const string CustomerId = "";
+    private const string CustomerId = "100282";
     private const string GuaranteeId = "";
     private const string RequestId = "";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

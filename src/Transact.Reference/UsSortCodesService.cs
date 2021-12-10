@@ -16,12 +16,12 @@ using Shared.Models;
 #pragma warning disable 8073 // Disable "CS8073 The result of the expression is always 'false' since a value of type 'T' is never equal to 'null' of type 'T?'"
 #pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
 
-namespace Transact.Reference.UsSortCodesServices
+namespace Transact.Reference.UsSortCodes
 {
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial interface IUsSortCodesServicesService
+    public partial interface IUsSortCodesService
     {
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>API to retreive the list of all Financial institutions routing numbers and the respective  details or a to retreive the routing number details of a specific FI using the routing number or institute name</summary>

@@ -22,11 +22,17 @@ using Transact.Holding.Limits;
 using Transact.Holding.PaymentStops;
 using Transact.Holding.Portfolios;
 using Transact.Holding.PortfolioSettlement;
+using Transact.Holding.Position;
+using Transact.Holding.Reports;
 using Transact.Holding.RepurchaseAgreements;
 using Transact.Holding.SecurityPositions;
 using Transact.Holding.SecurityTrades;
 using Transact.Holding.Service;
+using Transact.Holding.SwapNpvRevaluation;
 using Transact.Holding.Transactions;
+using Transact.Holding.TreasuryCurrencies;
+using Transact.Holding.TreasuryCurrencyPairs;
+using Transact.Holding.UsDashboards;
 
 namespace Transact;
 
@@ -65,13 +71,18 @@ public interface IHoldingClient
     public ILetterOfCreditService LetterOfCreditService { get; }
     public IPaymentStopsService PaymentStopService { get; }
     public IPortfoliosService PortfolioService { get; }
+    public IPositionService PositionService { get; }
+    public IReportsService ReportService { get; }
     public IRepurchaseAgreementsService RepurchaseAgreementService { get; }
     public ISecurityPositionsService SecurityPositionService { get; }
     public IPortfolioSettlementService SecuritySettlementService { get; }
     public ISecurityTradesService SecurityTradeService { get; }
+    public ISwapNpvRevaluationService SwapNpvRevaluationService { get; }
     //public IUpdatePaymentHolidaySimulationService UpdatePaymentHolidaySimulationService { get; }
     public ITransactionsService TransactionService { get; }
     public ITreasury Treasury { get; }
+    public ITreasuryCurrenciesService TreasuryCurrencyService { get; }
+    public ITreasuryCurrencyPairsService TreasuryCurrencyPairService { get; }
     public IUsModelBank UsModelBank { get; }
 
     //Not sure if this item is being used by Temenos

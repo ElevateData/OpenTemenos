@@ -18,12 +18,12 @@ using Transact.Reference.InterestBases;
 using Transact.Reference.InterestRates;
 using Transact.Reference.Lookups;
 using Transact.Reference.NationalIds;
-using Transact.Reference.OrganizationStructuresServices;
+using Transact.Reference.OrganizationStructures;
 using Transact.Reference.PeriodDates;
 using Transact.Reference.PortfolioAccounts;
 using Transact.Reference.Product;
 using Transact.Reference.RoundingRule;
-using Transact.Reference.TransactionCodesServices;
+using Transact.Reference.TransactionCodes;
 using Transact.Reference.Treasury;
 using Transact.Reference.UsBenOwnerTypes;
 using Transact.Reference.UsCounty;
@@ -36,7 +36,7 @@ using Transact.Reference.UsHoldTypes;
 using Transact.Reference.UsIdDocuments;
 using Transact.Reference.UsIndustry;
 using Transact.Reference.UsSector;
-using Transact.Reference.UsSortCodesServices;
+using Transact.Reference.UsSortCodes;
 using Transact.Reference.UsState;
 
 namespace Transact;
@@ -69,12 +69,12 @@ public class ReferenceClient : IReferenceClient
     public IInterestRatesService InterestRatesService => new InterestRatesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ILookupsService LookupsService => new LookupsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public INationalIdsService NationalIdsService => new NationalIdsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IOrganizationStructuresServicesService OrganizationStructuresServicesService => new OrganizationStructuresServicesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IOrganizationStructuresService OrganizationStructuresService => new OrganizationStructuresService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IPeriodDatesService PeriodDatesService => new PeriodDatesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IPortfolioAccountsService PortfolioAccountsService => new PortfolioAccountsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IProductService ProductService => new ProductService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IRoundingRuleService RoundingRuleService => new RoundingRuleService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ITransactionCodesServicesService TransactionCodesServicesService => new TransactionCodesServicesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ITransactionCodesService TransactionCodesService => new TransactionCodesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ITreasuryService TreasuryService => new TreasuryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUsBenOwnerTypesService UsBenOwnerTypesService => new UsBenOwnerTypesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUsCountyService UsCountyService => new UsCountyService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
@@ -87,6 +87,6 @@ public class ReferenceClient : IReferenceClient
     public IUsIdDocumentsService UsIdDocumentsService => new UsIdDocumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUsIndustryService UsIndustryService => new UsIndustryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUsSectorService UsSectorService => new UsSectorService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public IUsSortCodesServicesService UsSortCodesServicesService => new UsSortCodesServicesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public IUsSortCodesService UsSortCodesService => new UsSortCodesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IUsStateService UsStateService => new UsStateService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

@@ -17,12 +17,12 @@ using Transact.Reference.InterestBases;
 using Transact.Reference.InterestRates;
 using Transact.Reference.Lookups;
 using Transact.Reference.NationalIds;
-using Transact.Reference.OrganizationStructuresServices;
+using Transact.Reference.OrganizationStructures;
 using Transact.Reference.PeriodDates;
 using Transact.Reference.PortfolioAccounts;
 using Transact.Reference.Product;
 using Transact.Reference.RoundingRule;
-using Transact.Reference.TransactionCodesServices;
+using Transact.Reference.TransactionCodes;
 using Transact.Reference.Treasury;
 using Transact.Reference.UsBenOwnerTypes;
 using Transact.Reference.UsCounty;
@@ -35,7 +35,7 @@ using Transact.Reference.UsHoldTypes;
 using Transact.Reference.UsIdDocuments;
 using Transact.Reference.UsIndustry;
 using Transact.Reference.UsSector;
-using Transact.Reference.UsSortCodesServices;
+using Transact.Reference.UsSortCodes;
 using Transact.Reference.UsState;
 
 namespace Transact;
@@ -62,12 +62,12 @@ public interface IReferenceClient
     public IInterestRatesService InterestRatesService { get; }
     public ILookupsService LookupsService { get; }
     public INationalIdsService NationalIdsService { get; }
-    public IOrganizationStructuresServicesService OrganizationStructuresServicesService { get; }
+    public IOrganizationStructuresService OrganizationStructuresService { get; }
     public IPeriodDatesService PeriodDatesService { get; }
     public IPortfolioAccountsService PortfolioAccountsService { get; }
     public IProductService ProductService { get; }
     public IRoundingRuleService RoundingRuleService { get; }
-    public ITransactionCodesServicesService TransactionCodesServicesService { get; }
+    public ITransactionCodesService TransactionCodesService { get; }
     public ITreasuryService TreasuryService { get; }
     public IUsBenOwnerTypesService UsBenOwnerTypesService { get; }
     public IUsCountyService UsCountyService { get; }
@@ -80,7 +80,7 @@ public interface IReferenceClient
     public IUsIdDocumentsService UsIdDocumentsService { get; }
     public IUsIndustryService UsIndustryService { get; }
     public IUsSectorService UsSectorService { get; }
-    public IUsSortCodesServicesService UsSortCodesServicesService { get; }
+    public IUsSortCodesService UsSortCodesService { get; }
     public IUsStateService UsStateService { get; }
 
 }

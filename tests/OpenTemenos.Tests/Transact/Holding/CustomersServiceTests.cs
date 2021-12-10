@@ -7,7 +7,7 @@ public class CustomersServiceTests : CredentialManagement
 {
     private const string AccountId = "";
     private const string ArrangementId = "";
-    private const string CustomerId = "";
+    private const string CustomerId = "100282";
     private const string PortfolioId = "";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 

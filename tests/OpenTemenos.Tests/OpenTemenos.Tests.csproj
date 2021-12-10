@@ -24,13 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DataHub.AnalyticDataStore\DataHub.AnalyticDataStore.csproj" />
-    <ProjectReference Include="..\..\src\DataHub.OperationalDataStore\DataHub.OperationalDataStore.csproj" />
-    <ProjectReference Include="..\..\src\FinancialCrimeMitigation\FinancialCrimeMitigation.csproj" />
-    <ProjectReference Include="..\..\src\FundAdministration.GlobalAccounting\FundAdministration.GlobalAccounting.csproj" />
-    <ProjectReference Include="..\..\src\FundAdministration.GlobalInvestor\FundAdministration.GlobalInvestor.csproj" />
-    <ProjectReference Include="..\..\src\PortfolioManagement\PortfolioManagement.csproj" />
-    <ProjectReference Include="..\..\src\Transact\Transact.csproj" />
+    <ProjectReference Include="..\..\src\OpenTemenos\OpenTemenos.csproj" />
   </ItemGroup>
 
   <ItemGroup>

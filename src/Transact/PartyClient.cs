@@ -7,8 +7,8 @@ using Transact.Party.CustomerMandates;
 using Transact.Party.CustomerOpenBankingConnections;
 using Transact.Party.CustomersContactHistory;
 using Transact.Party.CustomersDocuments;
-using Transact.Party.CustomerServices;
 using Transact.Party.CustomersMiFID;
+using Transact.Party.CustomerX;
 using Transact.Party.ExternalUsers;
 using Transact.Party.OnboardingCustomerX;
 using Transact.Party.ParticipantList;
@@ -38,7 +38,7 @@ public class PartyClient : IPartyClient
     public ICustomerOpenBankingConnectionsService CustomerOpenBankingConnectionsService => new CustomerOpenBankingConnectionsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ICustomersContactHistoryService CustomersContactHistoryService => new CustomersContactHistoryService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ICustomersDocumentsService CustomersDocumentsService => new CustomersDocumentsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-    public ICustomerServicesService CustomerServicesService => new CustomerServicesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public ICustomerService CustomerService => new CustomerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public ICustomersMiFIDService CustomersMiFIDService => new CustomersMiFIDService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IExternalUsersService ExternalUsersService => new ExternalUsersService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
     public IOnboardingCustomerService OnboardingCustomerService => new OnboardingCustomerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };

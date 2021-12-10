@@ -8,7 +8,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     private const string AccountId = "";
     private const string BundleId = "";
     private const string CurrencyId = "USD";
-    private const string CustomerId = "";
+    private const string CustomerId = "100282";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]

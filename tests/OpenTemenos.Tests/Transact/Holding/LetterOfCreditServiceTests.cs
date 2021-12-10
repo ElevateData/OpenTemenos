@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.Transact.Holding;
 public class LetterOfCreditServiceTests : CredentialManagement
 {
     private const string ClausesId = "1";
-    private const string CustomerId = "1";
+    private const string CustomerId = "100282";
     private const string DocumentId = "1";
     private const string DrawingId = "1";
     private const string LcAmendmentId = "1";
@@ -165,7 +165,6 @@ public class LetterOfCreditServiceTests : CredentialManagement
     public void ApproveLcAmendmentAsync()
     {
         var letterOfCreditId = string.Empty;
-        var payload = new Drawing();
         var result = _client.LetterOfCreditService.ApproveLcAmendmentAsync(letterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);

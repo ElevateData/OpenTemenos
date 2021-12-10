@@ -9,5 +9,5 @@ public interface IOpenTemenosClient
     public IFundAdministration FundAdministration { get; }
     [Obsolete]
     public IPortfolioManagement PortfolioManagement { get; }
-    public IPayment Payment { get; }
+    public IPaymentClient Payment { get; }
 }
