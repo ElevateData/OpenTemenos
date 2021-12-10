@@ -10,7 +10,7 @@ public class UsCustomerSuffixServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsSuffixListAsync()
     {
-        var result = _client.UsCustomerSuffixService.GetUsSuffixListAsync(null, null, null, null, null).Result;
+        var result = _client.UsCustomerSuffixService.GetUsSuffixListAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

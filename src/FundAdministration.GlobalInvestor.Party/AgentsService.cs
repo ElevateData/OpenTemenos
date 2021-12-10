@@ -23,21 +23,6 @@ namespace FundAdministration.GlobalInvestor.Party.Agents
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IAgentsService
     {
-        /// <summary>Retrieves the list of distributor informations</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <returns>getAgent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgentSuccessResponse> GetAgentAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of distributor informations</summary>
         /// <param name="page">Current page number (Default:1)</param>
@@ -52,78 +37,47 @@ namespace FundAdministration.GlobalInvestor.Party.Agents
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
         /// <returns>getAgent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgentSuccessResponse> GetAgentAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a distributor information record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postAgent Payload</param>
-        /// <returns>postAgent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostAgentSuccessResponse> PostAgentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<GetAgentSuccessResponse> GetAgentAsync(double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a distributor information record</summary>
+        /// <param name="payload">postAgent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postAgent Payload</param>
         /// <returns>postAgent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostAgentSuccessResponse> PostAgentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates distributor information records with identifiers specified in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putAgent Payload</param>
-        /// <returns>putAgent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutAgentSuccessResponse> PutAgentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostAgentSuccessResponse> PostAgentAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates distributor information records with identifiers specified in the payload</summary>
+        /// <param name="payload">putAgent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putAgent Payload</param>
         /// <returns>putAgent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutAgentSuccessResponse> PutAgentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes distributor information records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteAgent Payload</param>
-        /// <returns>deleteAgent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteAgentSuccessResponse> DeleteAgentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutAgentSuccessResponse> PutAgentAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes distributor information records with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteAgent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteAgent Payload</param>
         /// <returns>deleteAgent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteAgentSuccessResponse> DeleteAgentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteAgentSuccessResponse> DeleteAgentAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific distributor information record</summary>
+        /// <param name="agentId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -134,77 +88,35 @@ namespace FundAdministration.GlobalInvestor.Party.Agents
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="agentId">internalId</param>
         /// <returns>getAgentByagentId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgentByagentIdSuccessResponse> GetAgentByagentIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string agentId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific distributor information record</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="agentId">internalId</param>
-        /// <returns>getAgentByagentId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgentByagentIdSuccessResponse> GetAgentByagentIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string agentId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates specific distributor information record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putAgentByinternalId Payload</param>
-        /// <returns>putAgentByinternalId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutAgentByinternalIdSuccessResponse> PutAgentByinternalIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetAgentByagentIdSuccessResponse> GetAgentByagentIdAsync(string agentId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates specific distributor information record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
         /// <param name="internalId">internalId</param>
         /// <param name="payload">putAgentByinternalId Payload</param>
-        /// <returns>putAgentByinternalId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutAgentByinternalIdSuccessResponse> PutAgentByinternalIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes a distributor information record</summary>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteAgentByinternalId Payload</param>
-        /// <returns>deleteAgentByinternalId Success Response</returns>
+        /// <returns>putAgentByinternalId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteAgentByinternalIdSuccessResponse> DeleteAgentByinternalIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
+        System.Threading.Tasks.Task<PutAgentByinternalIdSuccessResponse> PutAgentByinternalIdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a distributor information record</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteAgentByinternalId Payload</param>
         /// <returns>deleteAgentByinternalId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteAgentByinternalIdSuccessResponse> DeleteAgentByinternalIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteAgentByinternalIdSuccessResponse> DeleteAgentByinternalIdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

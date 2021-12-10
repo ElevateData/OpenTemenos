@@ -23,99 +23,57 @@ namespace FundAdministration.GlobalInvestor.Party.ImaDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IImaDetailsService
     {
-        /// <summary>Creates Investment management account for the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postImadetailsByParent Payload</param>
-        /// <returns>postImadetailsByParent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostImadetailsByParentSuccessResponse> PostImadetailsByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Investment management account for the specified parent</summary>
+        /// <param name="payload">postImadetailsByParent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postImadetailsByParent Payload</param>
         /// <returns>postImadetailsByParent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostImadetailsByParentSuccessResponse> PostImadetailsByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Investment management account with parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postImadetails Payload</param>
-        /// <returns>postImadetails Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostImadetailsSuccessResponse> PostImadetailsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostImadetailsByParentSuccessResponse> PostImadetailsByParentAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Investment management account with parent mentioned in the payload</summary>
+        /// <param name="payload">postImadetails Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postImadetails Payload</param>
         /// <returns>postImadetails Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostImadetailsSuccessResponse> PostImadetailsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Investment management account records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putImadetails Payload</param>
-        /// <returns>putImadetails Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutImadetailsSuccessResponse> PutImadetailsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostImadetailsSuccessResponse> PostImadetailsAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Investment management account records with identifiers provided in the payload</summary>
+        /// <param name="payload">putImadetails Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putImadetails Payload</param>
         /// <returns>putImadetails Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutImadetailsSuccessResponse> PutImadetailsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Investment management account records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteImadetails Payload</param>
-        /// <returns>deleteImadetails Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteImadetailsSuccessResponse> DeleteImadetailsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutImadetailsSuccessResponse> PutImadetailsAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Investment management account records with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteImadetails Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteImadetails Payload</param>
         /// <returns>deleteImadetails Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteImadetailsSuccessResponse> DeleteImadetailsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteImadetailsSuccessResponse> DeleteImadetailsAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Investment management account record</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -126,77 +84,35 @@ namespace FundAdministration.GlobalInvestor.Party.ImaDetails
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getImadetailsByInternalId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetImadetailsByInternalIdSuccessResponse> GetImadetailsByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Investment management account record</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getImadetailsByInternalId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetImadetailsByInternalIdSuccessResponse> GetImadetailsByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Investment management account record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putImadetailsById Payload</param>
-        /// <returns>putImadetailsById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutImadetailsByIdSuccessResponse> PutImadetailsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetImadetailsByInternalIdSuccessResponse> GetImadetailsByInternalIdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Investment management account record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
         /// <param name="internalId">internalId</param>
         /// <param name="payload">putImadetailsById Payload</param>
-        /// <returns>putImadetailsById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutImadetailsByIdSuccessResponse> PutImadetailsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes a specific Investment management account records</summary>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteImadetailsById Payload</param>
-        /// <returns>deleteImadetailsById Success Response</returns>
+        /// <returns>putImadetailsById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteImadetailsByIdSuccessResponse> DeleteImadetailsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
+        System.Threading.Tasks.Task<PutImadetailsByIdSuccessResponse> PutImadetailsByIdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Investment management account records</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteImadetailsById Payload</param>
         /// <returns>deleteImadetailsById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteImadetailsByIdSuccessResponse> DeleteImadetailsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteImadetailsByIdSuccessResponse> DeleteImadetailsByIdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

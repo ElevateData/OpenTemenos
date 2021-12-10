@@ -14,7 +14,7 @@ public class TradeDateExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TradeDateExceptionService
-            .PosttradedateexceptionsAsync(null, null, null, null, null, payload).Result;
+            .PosttradedateexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

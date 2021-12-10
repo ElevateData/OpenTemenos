@@ -15,7 +15,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FrequentExceptionDayService
-            .PostFrequencyexceptiondaysByParentAsync(null, null, null, null, null, payload).Result;
+            .PostFrequencyexceptiondaysByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FrequentExceptionDayService
-            .PostFrequencyexceptiondaysAsync(null, null, null, null, null, payload).Result;
+            .PostFrequencyexceptiondaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FrequentExceptionDayService
-            .PutFrequencyexceptiondaysAsync(null, null, null, null, null, payload).Result;
+            .PutFrequencyexceptiondaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FrequentExceptionDayService
-            .DeleteFrequencyexceptiondaysAsync(null, null, null, null, null, payload).Result;
+            .DeleteFrequencyexceptiondaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
     public void GetFrequencyExceptionDaysByInternalIdAsync()
     {
         var result = _client.FrequentExceptionDayService
-            .GetFrequencyexceptiondaysByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetFrequencyexceptiondaysByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FrequentExceptionDayService
-            .PutFrequencyexceptiondaysByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFrequencyexceptiondaysByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class FrequencyExceptionDaysServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FrequentExceptionDayService
-            .DeleteFrequencyexceptiondaysByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFrequencyexceptiondaysByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

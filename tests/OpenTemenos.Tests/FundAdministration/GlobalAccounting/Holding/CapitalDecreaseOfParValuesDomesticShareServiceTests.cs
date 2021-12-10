@@ -15,7 +15,7 @@ public class CapitalDecreaseOfParValuesDomesticShareServiceTests : CredentialMan
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalDecreaseOfParValueDomesticShareService
-            .CreateCapitalDecreaseOfParValueDomesticWithCostAdjustmentAsync(null, null, null, null, null, payload)
+            .CreateCapitalDecreaseOfParValueDomesticWithCostAdjustmentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

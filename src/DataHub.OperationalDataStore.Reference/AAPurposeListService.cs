@@ -23,16 +23,11 @@ namespace DataHub.OperationalDataStore.Reference.AAPurposeList
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IAAPurposeListService
     {
-        /// <summary>Retrieves the list of Purposes available</summary>
-        /// <returns>List of PurposesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAAPurposeListResponse> GetAAPurposeListAsync();
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of Purposes available</summary>
         /// <returns>List of PurposesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAAPurposeListResponse> GetAAPurposeListAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetAAPurposeListResponse> GetAAPurposeListAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

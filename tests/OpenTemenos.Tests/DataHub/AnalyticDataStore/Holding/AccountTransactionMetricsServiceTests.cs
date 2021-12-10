@@ -12,7 +12,7 @@ public class AccountTransactionMetricsServiceTests
     public void GetAccountTransactionMetricsAsync()
     {
         var result = _client.AccountTransactionService
-            .GetAccountTransactionMetricsAsync(null, null)
+            .GetAccountTransactionMetricsAsync()
             .Result;
         Assert.IsNotNull(result.Data);
     }

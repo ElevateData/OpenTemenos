@@ -23,22 +23,6 @@ namespace Transact.Reference.Categories
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICategoriesService
     {
-        /// <summary>Retrieves list of categories</summary>
-        /// <param name="categoryId">Indicate a category code</param>
-        /// <param name="categoryIdGE">Indicate a category code</param>
-        /// <param name="categoryIdLE">Indicate a category code</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CategoriesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoriesResponse> GetCategoriesAsync(string? categoryId, string? categoryIdGE, string? categoryIdLE, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of categories</summary>
         /// <param name="categoryId">Indicate a category code</param>
@@ -54,17 +38,7 @@ namespace Transact.Reference.Categories
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CategoriesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoriesResponse> GetCategoriesAsync(string? categoryId, string? categoryIdGE, string? categoryIdLE, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of category code</summary>
-        /// <param name="categoryId">Indicate a category code</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CategoryDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoryDetailsResponse> GetCategoryDetailsAsync(string categoryId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CategoriesResponse> GetCategoriesAsync(string? categoryId = null, string? categoryIdGE = null, string? categoryIdLE = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of category code</summary>
@@ -75,19 +49,7 @@ namespace Transact.Reference.Categories
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CategoryDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoryDetailsResponse> GetCategoryDetailsAsync(string categoryId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create the details of category code</summary>
-        /// <param name="categoryId">Unique identifier associated with the product name of the account or contract. For example: For customer/counterparty accounts, the identifier would be in the range 1000 to 9999. For ledger accounts, in the range 10000 to 19999.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CategoryDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoryDetailsResponse> CreateCategoryDetailsAsync(string categoryId, CategoryDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CategoryDetailsResponse> GetCategoryDetailsAsync(string categoryId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create the details of category code</summary>
@@ -100,19 +62,7 @@ namespace Transact.Reference.Categories
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CategoryDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoryDetailsResponse> CreateCategoryDetailsAsync(string categoryId, CategoryDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the details of category code</summary>
-        /// <param name="categoryId">Unique identifier associated with the product name of the account or contract. For example: For customer/counterparty accounts, the identifier would be in the range 1000 to 9999. For ledger accounts, in the range 10000 to 19999.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CategoryDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoryDetailsResponse> UpdateCategoryDetailsAsync(string categoryId, CategoryDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CategoryDetailsResponse> CreateCategoryDetailsAsync(string categoryId, CategoryDetails payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the details of category code</summary>
@@ -125,7 +75,7 @@ namespace Transact.Reference.Categories
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CategoryDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CategoryDetailsResponse> UpdateCategoryDetailsAsync(string categoryId, CategoryDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CategoryDetailsResponse> UpdateCategoryDetailsAsync(string categoryId, CategoryDetails payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

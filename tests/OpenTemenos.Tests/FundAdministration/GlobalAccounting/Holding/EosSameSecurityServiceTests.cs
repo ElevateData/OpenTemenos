@@ -15,7 +15,7 @@ public class EosSameSecurityServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExchangeOfSecurity.SameSecurityService
-            .CreateExchangeOfSecurityIntoExistingSecurityAsync(null, null, null, null, null, payload)
+            .CreateExchangeOfSecurityIntoExistingSecurityAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

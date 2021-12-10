@@ -14,7 +14,7 @@ public class CreateNonDeliverableForwardsServiceTests : CredentialManagement
     {
         var payload = new NonDeliverableForwards();
         var result = _client.CreateNonDeliverableForwardService
-            .CreateNonDeliverableForwardsAsync(payload, null, null, null, null, null)
+            .CreateNonDeliverableForwardsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

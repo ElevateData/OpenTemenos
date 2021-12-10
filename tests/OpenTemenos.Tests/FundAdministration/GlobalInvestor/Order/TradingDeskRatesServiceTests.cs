@@ -15,7 +15,7 @@ public class TradingDeskRatesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TradingDeskValidationService
-            .PosttradingdeskratesAsync(null, null, null, null, null, payload).Result;
+            .PosttradingdeskratesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

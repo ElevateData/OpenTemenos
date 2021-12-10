@@ -12,7 +12,7 @@ public class CompaniesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCompaniesAsync()
     {
-        var result = _client.CompaniesService.GetCompaniesAsync(null, null, null, null, null, null, null, null).Result;
+        var result = _client.CompaniesService.GetCompaniesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -20,7 +20,7 @@ public class CompaniesServiceTests : CredentialManagement
     [TestMethod]
     public void GetMasterCompanyAsync()
     {
-        var result = _client.CompaniesService.GetMasterCompanyAsync(null, null, null, null, null, null, null, null)
+        var result = _client.CompaniesService.GetMasterCompanyAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -29,8 +29,7 @@ public class CompaniesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCompanyCurrencyExchangeRatesAsync()
     {
-        var result = _client.CompaniesService.GetCompanyCurrencyExchangeRatesAsync(CompanyCode, CurrencyMarket, null,
-            null, null, null, null, null, null, null, null).Result;
+        var result = _client.CompaniesService.GetCompanyCurrencyExchangeRatesAsync(CompanyCode, CurrencyMarket).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

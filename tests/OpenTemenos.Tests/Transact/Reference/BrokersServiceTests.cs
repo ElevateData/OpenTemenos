@@ -10,7 +10,7 @@ public class BrokersServiceTests : CredentialManagement
     [TestMethod]
     public void GetBrokersAsync()
     {
-        var result = _client.BrokersService.GetBrokersAsync(null, null, null, null, null).Result;
+        var result = _client.BrokersService.GetBrokersAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

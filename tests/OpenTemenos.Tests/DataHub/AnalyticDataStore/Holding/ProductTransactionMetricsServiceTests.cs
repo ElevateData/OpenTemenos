@@ -11,7 +11,7 @@ public class ProductTransactionMetricsServiceTests : CredentialManagement
     [TestMethod]
     public void GetProductTransactionMetricsAsync()
     {
-        var result = _client.ProductTransactionService.GetProductTransactionMetricsAsync(null, null).Result;
+        var result = _client.ProductTransactionService.GetProductTransactionMetricsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

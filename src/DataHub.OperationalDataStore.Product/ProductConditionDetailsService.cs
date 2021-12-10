@@ -23,27 +23,13 @@ namespace DataHub.OperationalDataStore.Product.ProductConditionDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IProductConditionDetailsService
     {
-        /// <summary>Retrieves the Protection Limit Property details like arrangement number, actual Limit amount, Limit amount currency for a product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="propertyId">The identifier of the product condition</param>
-        /// <returns>getProtectionLimitConditionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProtectionLimitConditionsResponse> GetProtectionLimitConditionsAsync(string productId, string? propertyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Protection Limit Property details like arrangement number, actual Limit amount, Limit amount currency for a product</summary>
         /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
         /// <param name="propertyId">The identifier of the product condition</param>
         /// <returns>getProtectionLimitConditionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProtectionLimitConditionsResponse> GetProtectionLimitConditionsAsync(string productId, string? propertyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the product availability details such as the day/time from which the specific product conditions are available</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="propertyId">The identifier of the product condition</param>
-        /// <returns>getAvailabilityConditionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAvailabilityConditionsResponse> GetAvailabilityConditionsAsync(string productId, string? propertyId);
+        System.Threading.Tasks.Task<GetProtectionLimitConditionsResponse> GetProtectionLimitConditionsAsync(string productId, string? propertyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product availability details such as the day/time from which the specific product conditions are available</summary>
@@ -51,14 +37,7 @@ namespace DataHub.OperationalDataStore.Product.ProductConditionDetails
         /// <param name="propertyId">The identifier of the product condition</param>
         /// <returns>getAvailabilityConditionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAvailabilityConditionsResponse> GetAvailabilityConditionsAsync(string productId, string? propertyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the published product conditions record details like arrangement number, property name, maximum number of roles linked to the master arrangement, maximum number of users linked to a master arrangement or its roles for a product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="propertyId">The identifier of the product condition</param>
-        /// <returns>getLicensingConditionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLicensingConditionsResponse> GetLicensingConditionsAsync(string productId, string? propertyId);
+        System.Threading.Tasks.Task<GetAvailabilityConditionsResponse> GetAvailabilityConditionsAsync(string productId, string? propertyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the published product conditions record details like arrangement number, property name, maximum number of roles linked to the master arrangement, maximum number of users linked to a master arrangement or its roles for a product</summary>
@@ -66,7 +45,7 @@ namespace DataHub.OperationalDataStore.Product.ProductConditionDetails
         /// <param name="propertyId">The identifier of the product condition</param>
         /// <returns>getLicensingConditionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLicensingConditionsResponse> GetLicensingConditionsAsync(string productId, string? propertyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetLicensingConditionsResponse> GetLicensingConditionsAsync(string productId, string? propertyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

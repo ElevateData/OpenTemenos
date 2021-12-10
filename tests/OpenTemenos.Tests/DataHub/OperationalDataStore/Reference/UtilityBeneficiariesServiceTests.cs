@@ -11,7 +11,7 @@ public class UtilityBeneficiariesServiceTests : CredentialManagement
     public void GetUtilityBeneficiariesAsync()
     {
         var result = _client.UtilityBeneficiaryService
-            .GetUtilityBeneficiariesAsync(null, null, null, null, null, null, null, null, null).Result;
+            .GetUtilityBeneficiariesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

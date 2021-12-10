@@ -14,7 +14,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
     public void PostDocumentCopiesByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.DocumentCopyService.PostDocumentcopiesByParentAsync(null, null, null, null, null, payload)
+        var result = _client.DocumentCopyService.PostDocumentcopiesByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
     public void PostDocumentCopiesAsync()
     {
         var payload = new _0Payload();
-        var result = _client.DocumentCopyService.PostDocumentcopiesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DocumentCopyService.PostDocumentcopiesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
     public void PutDocumentCopiesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DocumentCopyService.PutDocumentcopiesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DocumentCopyService.PutDocumentcopiesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
     public void DeleteDocumentCopiesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DocumentCopyService.DeleteDocumentcopiesAsync(null, null, null, null, null, payload)
+        var result = _client.DocumentCopyService.DeleteDocumentcopiesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -51,7 +51,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
     public void GetDocumentCopiesByInternalIdAsync()
     {
         var result = _client.DocumentCopyService
-            .GetDocumentcopiesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetDocumentcopiesByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -63,7 +63,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.DocumentCopyService
-            .PutDocumentcopiesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutDocumentcopiesByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -74,7 +74,7 @@ public class DocumentCopiesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.DocumentCopyService
-            .DeleteDocumentcopiesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteDocumentcopiesByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -23,16 +23,6 @@ namespace Transact.Holding.Accounts
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IAccountsService
     {
-        /// <summary>Retrieves the account closure information</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AccountClosureResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountClosureResponse> GetAccountClosureAsync(string accountId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the account closure information</summary>
         /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
@@ -42,19 +32,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AccountClosureResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountClosureResponse> GetAccountClosureAsync(string accountId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates account closure information</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AccountClosureResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountClosureResponse> UpdateAccountClosureAsync(string accountId, AccountClosure payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AccountClosureResponse> GetAccountClosureAsync(string accountId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates account closure information</summary>
@@ -67,27 +45,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AccountClosureResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountClosureResponse> UpdateAccountClosureAsync(string accountId, AccountClosure payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves account transaction details</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as account id. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="bookingDate">Business date on which the accounting entry was generated.</param>
-        /// <param name="processingDate">The date when payment instruction is processed in system.</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="description">Contains the description of purpose of the payment.</param>
-        /// <param name="reversalMarker">Denotes the flag which is set whenever any credit or reversal debit entries with future exposure dates are processed</param>
-        /// <param name="includeSubAcct">Denotes the flag which needs to be set in order to allow the automatic creation of sub-accounts and the automatic distribution of transactions over sub-accounts</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountTransactionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountTransactionsResponse> GetAccountTransactionsAsync(string accountId, string? bookingDate, string? processingDate, string? valueDate, string? description, string? reversalMarker, string? includeSubAcct, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountClosureResponse> UpdateAccountClosureAsync(string accountId, AccountClosure payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves account transaction details</summary>
@@ -108,25 +66,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountTransactionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountTransactionsResponse> GetAccountTransactionsAsync(string accountId, string? bookingDate, string? processingDate, string? valueDate, string? description, string? reversalMarker, string? includeSubAcct, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves available card details</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="cardIssueId">The identifier of the issued card formatted as cardType '.' cardNumber. E.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222</param>
-        /// <param name="issueDate">The date the item was issued.</param>
-        /// <param name="expiryDate">The date an agreement such as an arrangement, product, credit facility or limit is due to expire</param>
-        /// <param name="cardStatus">Current status of the Card and following are the possible statuses are  - CARD.ISSUED - CARD.RETURNED - CARD.SCRAP - CARD.CANCEL - NOT.ACTIVATED - NOT.RECEIVED - ACTIVE - BLOCKED - EXPIRED</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountCardsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountCardsResponse> GetAccountCardsAsync(string accountId, string? cardIssueId, string? issueDate, string? expiryDate, string? cardStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountTransactionsResponse> GetAccountTransactionsAsync(string accountId, string? bookingDate = null, string? processingDate = null, string? valueDate = null, string? description = null, string? reversalMarker = null, string? includeSubAcct = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves available card details</summary>
@@ -145,25 +85,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountCardsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountCardsResponse> GetAccountCardsAsync(string accountId, string? cardIssueId, string? issueDate, string? expiryDate, string? cardStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of account balances</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="limitReferenceId">Limit reference identifier for the limit order.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountBalanceTodayResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountBalanceTodayResponse> GetAccountBalanceTodayAsync(string? accountId, string? customerId, string? productId, string? currencyId, string? limitReferenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountCardsResponse> GetAccountCardsAsync(string accountId, string? cardIssueId = null, string? issueDate = null, string? expiryDate = null, string? cardStatus = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of account balances</summary>
@@ -182,22 +104,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountBalanceTodayResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountBalanceTodayResponse> GetAccountBalanceTodayAsync(string? accountId, string? customerId, string? productId, string? currencyId, string? limitReferenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves balances movements of account</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="bookingDate">Business date on which the accounting entry was generated.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountBalanceMovementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountBalanceMovementResponse> GetAccountBalanceMovementAsync(string accountId, string bookingDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountBalanceTodayResponse> GetAccountBalanceTodayAsync(string? accountId = null, string? customerId = null, string? productId = null, string? currencyId = null, string? limitReferenceId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves balances movements of account</summary>
@@ -213,21 +120,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountBalanceMovementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountBalanceMovementResponse> GetAccountBalanceMovementAsync(string accountId, string bookingDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve emergency block information for an account</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountEmergencyBlockResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountEmergencyBlockResponse1> GetAccountEmergencyBlockAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountBalanceMovementResponse> GetAccountBalanceMovementAsync(string accountId, string bookingDate, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve emergency block information for an account</summary>
@@ -242,19 +135,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountEmergencyBlockResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountEmergencyBlockResponse1> GetAccountEmergencyBlockAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update emergency block in account</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AccountEmergencyBlockResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountEmergencyBlockResponse> UpdateAccountEmergencyBlockAsync(string accountId, AccountEmergencyBlock payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AccountEmergencyBlockResponse1> GetAccountEmergencyBlockAsync(string accountId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update emergency block in account</summary>
@@ -267,21 +148,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AccountEmergencyBlockResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountEmergencyBlockResponse> UpdateAccountEmergencyBlockAsync(string accountId, AccountEmergencyBlock payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve account funds authorisation status</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountFundsAuthStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountFundsAuthStatusResponse1> GetAccountFundsAuthStatusAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountEmergencyBlockResponse> UpdateAccountEmergencyBlockAsync(string accountId, AccountEmergencyBlock payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve account funds authorisation status</summary>
@@ -296,18 +163,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountFundsAuthStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountFundsAuthStatusResponse1> GetAccountFundsAuthStatusAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update account funds authorisation status</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AccountFundsAuthStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountFundsAuthStatusResponse> UpdateAccountFundsAuthStatusAsync(string accountId, AccountFundsAuthStatus payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AccountFundsAuthStatusResponse1> GetAccountFundsAuthStatusAsync(string accountId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update account funds authorisation status</summary>
@@ -319,19 +175,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AccountFundsAuthStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountFundsAuthStatusResponse> UpdateAccountFundsAuthStatusAsync(string accountId, AccountFundsAuthStatus payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates conditions for funds diversion</summary>
-        /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FundsDiversionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FundsDiversionResponse> CreateFundsDiversionAsync(string settingId, FundsDiversion payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AccountFundsAuthStatusResponse> UpdateAccountFundsAuthStatusAsync(string accountId, AccountFundsAuthStatus payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates conditions for funds diversion</summary>
@@ -344,19 +188,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FundsDiversionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FundsDiversionResponse> CreateFundsDiversionAsync(string settingId, FundsDiversion payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates funds diversion parameter</summary>
-        /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FundsDiversionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FundsDiversionResponse> UpdateFundsDiversionAsync(string settingId, FundsDiversion payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<FundsDiversionResponse> CreateFundsDiversionAsync(string settingId, FundsDiversion payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates funds diversion parameter</summary>
@@ -369,23 +201,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FundsDiversionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FundsDiversionResponse> UpdateFundsDiversionAsync(string settingId, FundsDiversion payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves consolidated nostro account balances</summary>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="longPositionSign">Polarity (sign) used to denote buy position balance.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>NostroForwardBalancesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroForwardBalancesResponse> GetNostroForwardBalancesAsync(string valueDate, string? accountId, string? longPositionSign, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<FundsDiversionResponse> UpdateFundsDiversionAsync(string settingId, FundsDiversion payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves consolidated nostro account balances</summary>
@@ -402,22 +218,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>NostroForwardBalancesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroForwardBalancesResponse> GetNostroForwardBalancesAsync(string valueDate, string? accountId, string? longPositionSign, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves nostro account balances for a specific currency</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="nostroId">Nostro account id</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>NostroBalancesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroBalancesResponse> GetNostroBalancesAsync(string currencyId, string? nostroId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<NostroForwardBalancesResponse> GetNostroForwardBalancesAsync(string valueDate, string? accountId = null, string? longPositionSign = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves nostro account balances for a specific currency</summary>
@@ -433,21 +234,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>NostroBalancesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroBalancesResponse> GetNostroBalancesAsync(string currencyId, string? nostroId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves consolidated nostro account balances for a specific currency</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>NostroCurrencyPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroCurrencyPositionsResponse> GetNostroCurrencyPositionsAsync(string currencyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<NostroBalancesResponse> GetNostroBalancesAsync(string currencyId, string? nostroId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves consolidated nostro account balances for a specific currency</summary>
@@ -462,22 +249,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>NostroCurrencyPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroCurrencyPositionsResponse> GetNostroCurrencyPositionsAsync(string currencyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves consolidated nostro account positions for the currency</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="longPositionSign">Polarity (sign) used to denote buy position balance.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>NostroPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroPositionsResponse> GetNostroPositionsAsync(string currencyId, string? longPositionSign, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<NostroCurrencyPositionsResponse> GetNostroCurrencyPositionsAsync(string currencyId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves consolidated nostro account positions for the currency</summary>
@@ -493,25 +265,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>NostroPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NostroPositionsResponse> GetNostroPositionsAsync(string currencyId, string? longPositionSign, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of reserved funds</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="eventId">Event identifier</param>
-        /// <param name="lockReason">Indicates the simple description for the balance reservation event.</param>
-        /// <param name="fromDate">Indicates the business date from when the balance reservation event is active.</param>
-        /// <param name="toDate">Indicates the business date until when the balance reservation event is active.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ReservedFundsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ReservedFundsResponse> GetReservedFundsAsync(string? accountId, string? eventId, string? lockReason, string? fromDate, string? toDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<NostroPositionsResponse> GetNostroPositionsAsync(string currencyId, string? longPositionSign = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of reserved funds</summary>
@@ -530,21 +284,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ReservedFundsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ReservedFundsResponse> GetReservedFundsAsync(string? accountId, string? eventId, string? lockReason, string? fromDate, string? toDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves arrangement account details</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountDetailsResponse> GetAccountDetailsAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ReservedFundsResponse> GetReservedFundsAsync(string? accountId = null, string? eventId = null, string? lockReason = null, string? fromDate = null, string? toDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves arrangement account details</summary>
@@ -559,24 +299,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountDetailsResponse> GetAccountDetailsAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve proxy registration status</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="alternateAccountId">Alternate identification for an account</param>
-        /// <param name="proxyType">Type of proxy created for account</param>
-        /// <param name="proxyIdentifier">A proxy identifier to be linked to an account based on the proxy type provided eg. Mobile number, email id and tax id</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ActiveProxyIdentifierResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ActiveProxyIdentifierResponse> GetActiveProxyIdentifierAsync(string? customerId, string? alternateAccountId, string? proxyType, string? proxyIdentifier, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountDetailsResponse> GetAccountDetailsAsync(string accountId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve proxy registration status</summary>
@@ -594,18 +317,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ActiveProxyIdentifierResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ActiveProxyIdentifierResponse> GetActiveProxyIdentifierAsync(string? customerId, string? alternateAccountId, string? proxyType, string? proxyIdentifier, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Register the proxy identifier for the account</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ProxyIdentifierResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProxyIdentifierResponse> CreateProxyIdentifierAsync(ProxyIdentifier payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ActiveProxyIdentifierResponse> GetActiveProxyIdentifierAsync(string? customerId = null, string? alternateAccountId = null, string? proxyType = null, string? proxyIdentifier = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Register the proxy identifier for the account</summary>
@@ -617,18 +329,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ProxyIdentifierResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProxyIdentifierResponse> CreateProxyIdentifierAsync(ProxyIdentifier payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update proxy directory for account to de-register the proxy identifier</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ProxyIdentifierResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProxyIdentifierResponse1> UpdateProxyIdentifierAsync(string proxyIdentifierId, ProxyIdentifier1 payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ProxyIdentifierResponse> CreateProxyIdentifierAsync(ProxyIdentifier payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update proxy directory for account to de-register the proxy identifier</summary>
@@ -640,25 +341,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ProxyIdentifierResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProxyIdentifierResponse1> UpdateProxyIdentifierAsync(string proxyIdentifierId, ProxyIdentifier1 payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves account details required for payment processing</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="accountCompany">Company of the account to be created</param>
-        /// <param name="paymentCurrency">This field holds the transaction currency or currency in which payment is initiated.</param>
-        /// <param name="accountSwitch">Indicates if availability of account switch details should be checked.</param>
-        /// <param name="beneficialCustomer">Indicates if beneficial owners of the account are to be retrieved</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountPaymentDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountPaymentDetailsResponse> GetAccountPaymentDetailsAsync(string accountId, string accountCompany, string paymentCurrency, string accountSwitch, string beneficialCustomer, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ProxyIdentifierResponse1> UpdateProxyIdentifierAsync(string proxyIdentifierId, ProxyIdentifier1 payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves account details required for payment processing</summary>
@@ -677,26 +360,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountPaymentDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountPaymentDetailsResponse> GetAccountPaymentDetailsAsync(string accountId, string accountCompany, string paymentCurrency, string accountSwitch, string beneficialCustomer, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of account details</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="limitReference">Identifies the credit limit reference for the underlying account.</param>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountsResponse> GetAccountsAsync(string? accountId, string? customerId, string? productId, string? currencyId, string? limitReference, string? arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountPaymentDetailsResponse> GetAccountPaymentDetailsAsync(string accountId, string accountCompany, string paymentCurrency, string accountSwitch, string beneficialCustomer, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of account details</summary>
@@ -716,21 +380,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountsResponse> GetAccountsAsync(string? accountId, string? customerId, string? productId, string? currencyId, string? limitReference, string? arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves contract balances of accounts</summary>
-        /// <param name="contractBalanceId">Unique Identifier of Contract Balances</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ContractBalancesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ContractBalancesResponse> GetContractBalancesAsync(string contractBalanceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountsResponse> GetAccountsAsync(string? accountId = null, string? customerId = null, string? productId = null, string? currencyId = null, string? limitReference = null, string? arrangementId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves contract balances of accounts</summary>
@@ -745,19 +395,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ContractBalancesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ContractBalancesResponse> GetContractBalancesAsync(string contractBalanceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update synchronization error status</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SynchronizationErrorResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SynchronizationErrorResponse> UpdateSynchronizationErrorAsync(string accountId, SynchronizationError payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ContractBalancesResponse> GetContractBalancesAsync(string contractBalanceId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update synchronization error status</summary>
@@ -770,20 +408,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SynchronizationErrorResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SynchronizationErrorResponse> UpdateSynchronizationErrorAsync(string accountId, SynchronizationError payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of the expiring switches for generating alerts</summary>
-        /// <param name="accountId">The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as account id.Accepts both IBAN &amp; BBAN</param>
-        /// <param name="alertStatus">Contains status of the Alert. Possible values are Pending, Sent</param>
-        /// <param name="alertDate">Indicates the date in which an alert to be raised.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ExpiringAccountSwitchesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExpiringAccountSwitchesResponse> GetExpiringAccountSwitchesAsync(string accountId, string? alertStatus, System.DateTimeOffset? alertDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SynchronizationErrorResponse> UpdateSynchronizationErrorAsync(string accountId, SynchronizationError payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of the expiring switches for generating alerts</summary>
@@ -797,19 +422,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ExpiringAccountSwitchesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExpiringAccountSwitchesResponse> GetExpiringAccountSwitchesAsync(string accountId, string? alertStatus, System.DateTimeOffset? alertDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves details of the account switch requests</summary>
-        /// <param name="accountId">The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.Accepts both IBAN &amp; BBAN</param>
-        /// <param name="requestDate">Date on which the client's request to be classified as professional has been received.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountSwitchDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountSwitchDetailsResponse> GetAccountSwitchDetailsAsync(string accountId, System.DateTimeOffset? requestDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ExpiringAccountSwitchesResponse> GetExpiringAccountSwitchesAsync(string accountId, string? alertStatus = null, System.DateTimeOffset? alertDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves details of the account switch requests</summary>
@@ -822,16 +435,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountSwitchDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountSwitchDetailsResponse> GetAccountSwitchDetailsAsync(string accountId, System.DateTimeOffset? requestDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates alert status from pending to sent for corresponding switch instructions.</summary>
-        /// <param name="accountId">The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>AccountSwitchDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountSwitchDetailsResponse1> UpdateAccountSwitchDetailsAsync(string accountId, AccountSwitchDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AccountSwitchDetailsResponse> GetAccountSwitchDetailsAsync(string accountId, System.DateTimeOffset? requestDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates alert status from pending to sent for corresponding switch instructions.</summary>
@@ -841,18 +445,7 @@ namespace Transact.Holding.Accounts
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>AccountSwitchDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountSwitchDetailsResponse1> UpdateAccountSwitchDetailsAsync(string accountId, AccountSwitchDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves rerouted payment information.</summary>
-        /// <param name="accountId">The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.Accepts both IBAN &amp; BBAN</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountSwitchPaymentDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountSwitchPaymentDetailsResponse> GetAccountSwitchPaymentDetailsAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountSwitchDetailsResponse1> UpdateAccountSwitchDetailsAsync(string accountId, AccountSwitchDetails payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves rerouted payment information.</summary>
@@ -864,17 +457,7 @@ namespace Transact.Holding.Accounts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AccountSwitchPaymentDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountSwitchPaymentDetailsResponse> GetAccountSwitchPaymentDetailsAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Approves account closure information</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AccountClosureResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountClosureResponse> ApproveAccountClosureAsync(string accountId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AccountSwitchPaymentDetailsResponse> GetAccountSwitchPaymentDetailsAsync(string accountId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Approves account closure information</summary>
@@ -885,7 +468,7 @@ namespace Transact.Holding.Accounts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AccountClosureResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountClosureResponse> ApproveAccountClosureAsync(string accountId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<AccountClosureResponse> ApproveAccountClosureAsync(string accountId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

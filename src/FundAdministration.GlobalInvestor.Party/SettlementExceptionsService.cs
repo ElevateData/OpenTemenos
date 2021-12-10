@@ -23,99 +23,57 @@ namespace FundAdministration.GlobalInvestor.Party.SettlementExceptions
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISettlementExceptionsService
     {
-        /// <summary>Creates Settlement exception for the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptionsByParent Payload</param>
-        /// <returns>postSettlementexceptionsByParent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsByParentSuccessResponse> PostSettlementexceptionsByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Settlement exception for the specified parent</summary>
+        /// <param name="payload">postSettlementexceptionsByParent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptionsByParent Payload</param>
         /// <returns>postSettlementexceptionsByParent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsByParentSuccessResponse> PostSettlementexceptionsByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Settlement exception with parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptions Payload</param>
-        /// <returns>postSettlementexceptions Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsSuccessResponse> PostSettlementexceptionsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostSettlementexceptionsByParentSuccessResponse> PostSettlementexceptionsByParentAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Settlement exception with parent mentioned in the payload</summary>
+        /// <param name="payload">postSettlementexceptions Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptions Payload</param>
         /// <returns>postSettlementexceptions Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsSuccessResponse> PostSettlementexceptionsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Settlement exception records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putSettlementexceptions Payload</param>
-        /// <returns>putSettlementexceptions Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsSuccessResponse> PutSettlementexceptionsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostSettlementexceptionsSuccessResponse> PostSettlementexceptionsAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Settlement exception records with identifiers provided in the payload</summary>
+        /// <param name="payload">putSettlementexceptions Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putSettlementexceptions Payload</param>
         /// <returns>putSettlementexceptions Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsSuccessResponse> PutSettlementexceptionsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Settlement exception records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteSettlementexceptions Payload</param>
-        /// <returns>deleteSettlementexceptions Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsSuccessResponse> DeleteSettlementexceptionsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutSettlementexceptionsSuccessResponse> PutSettlementexceptionsAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Settlement exception records with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteSettlementexceptions Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteSettlementexceptions Payload</param>
         /// <returns>deleteSettlementexceptions Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsSuccessResponse> DeleteSettlementexceptionsAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteSettlementexceptionsSuccessResponse> DeleteSettlementexceptionsAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Settlement exception record</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -126,171 +84,87 @@ namespace FundAdministration.GlobalInvestor.Party.SettlementExceptions
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getSettlementexceptionsByInternalId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSettlementexceptionsByInternalIdSuccessResponse> GetSettlementexceptionsByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Settlement exception record</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getSettlementexceptionsByInternalId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSettlementexceptionsByInternalIdSuccessResponse> GetSettlementexceptionsByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Settlement exception record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putSettlementexceptionsById Payload</param>
-        /// <returns>putSettlementexceptionsById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsByIdSuccessResponse> PutSettlementexceptionsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetSettlementexceptionsByInternalIdSuccessResponse> GetSettlementexceptionsByInternalIdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Settlement exception record</summary>
+        /// <param name="internalId">internalId</param>
+        /// <param name="payload">putSettlementexceptionsById Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putSettlementexceptionsById Payload</param>
         /// <returns>putSettlementexceptionsById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsByIdSuccessResponse> PutSettlementexceptionsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PutSettlementexceptionsByIdSuccessResponse> PutSettlementexceptionsByIdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Settlement exception records</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteSettlementexceptionsById Payload</param>
         /// <returns>deleteSettlementexceptionsById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsByIdSuccessResponse> DeleteSettlementexceptionsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Deletes a specific Settlement exception records</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteSettlementexceptionsById Payload</param>
-        /// <returns>deleteSettlementexceptionsById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsByIdSuccessResponse> DeleteSettlementexceptionsByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Settlement exception for the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptionsByParentProd Payload</param>
-        /// <returns>postSettlementexceptionsByParentProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsByParentProdSuccessResponse> PostSettlementexceptionsByParentProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<DeleteSettlementexceptionsByIdSuccessResponse> DeleteSettlementexceptionsByIdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Settlement exception for the specified parent</summary>
+        /// <param name="payload">postSettlementexceptionsByParentProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptionsByParentProd Payload</param>
         /// <returns>postSettlementexceptionsByParentProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsByParentProdSuccessResponse> PostSettlementexceptionsByParentProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Settlement exception with parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptionsProd Payload</param>
-        /// <returns>postSettlementexceptionsProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsProdSuccessResponse> PostSettlementexceptionsProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostSettlementexceptionsByParentProdSuccessResponse> PostSettlementexceptionsByParentProdAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Settlement exception with parent mentioned in the payload</summary>
+        /// <param name="payload">postSettlementexceptionsProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postSettlementexceptionsProd Payload</param>
         /// <returns>postSettlementexceptionsProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostSettlementexceptionsProdSuccessResponse> PostSettlementexceptionsProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Settlement exception records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putSettlementexceptionsProd Payload</param>
-        /// <returns>putSettlementexceptionsProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsProdSuccessResponse> PutSettlementexceptionsProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostSettlementexceptionsProdSuccessResponse> PostSettlementexceptionsProdAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Settlement exception records with identifiers provided in the payload</summary>
+        /// <param name="payload">putSettlementexceptionsProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putSettlementexceptionsProd Payload</param>
         /// <returns>putSettlementexceptionsProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsProdSuccessResponse> PutSettlementexceptionsProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Settlement exception records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteSettlementexceptionsProd Payload</param>
-        /// <returns>deleteSettlementexceptionsProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsProdSuccessResponse> DeleteSettlementexceptionsProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutSettlementexceptionsProdSuccessResponse> PutSettlementexceptionsProdAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Settlement exception records with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteSettlementexceptionsProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteSettlementexceptionsProd Payload</param>
         /// <returns>deleteSettlementexceptionsProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsProdSuccessResponse> DeleteSettlementexceptionsProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteSettlementexceptionsProdSuccessResponse> DeleteSettlementexceptionsProdAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Settlement exception record</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -301,77 +175,35 @@ namespace FundAdministration.GlobalInvestor.Party.SettlementExceptions
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getSettlementexceptionsByInternalIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSettlementexceptionsByInternalIdProdSuccessResponse> GetSettlementexceptionsByInternalIdProdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Settlement exception record</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getSettlementexceptionsByInternalIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSettlementexceptionsByInternalIdProdSuccessResponse> GetSettlementexceptionsByInternalIdProdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Settlement exception record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putSettlementexceptionsByIdProd Payload</param>
-        /// <returns>putSettlementexceptionsByIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsByIdProdSuccessResponse> PutSettlementexceptionsByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetSettlementexceptionsByInternalIdProdSuccessResponse> GetSettlementexceptionsByInternalIdProdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Settlement exception record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
         /// <param name="internalId">internalId</param>
         /// <param name="payload">putSettlementexceptionsByIdProd Payload</param>
-        /// <returns>putSettlementexceptionsByIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutSettlementexceptionsByIdProdSuccessResponse> PutSettlementexceptionsByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes a specific Settlement exception records</summary>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteSettlementexceptionsByIdProd Payload</param>
-        /// <returns>deleteSettlementexceptionsByIdProd Success Response</returns>
+        /// <returns>putSettlementexceptionsByIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsByIdProdSuccessResponse> DeleteSettlementexceptionsByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
+        System.Threading.Tasks.Task<PutSettlementexceptionsByIdProdSuccessResponse> PutSettlementexceptionsByIdProdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Settlement exception records</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteSettlementexceptionsByIdProd Payload</param>
         /// <returns>deleteSettlementexceptionsByIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteSettlementexceptionsByIdProdSuccessResponse> DeleteSettlementexceptionsByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteSettlementexceptionsByIdProdSuccessResponse> DeleteSettlementexceptionsByIdProdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

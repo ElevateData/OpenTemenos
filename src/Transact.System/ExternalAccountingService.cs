@@ -23,16 +23,6 @@ namespace Transact.System.ExternalAccounting
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IExternalAccountingService
     {
-        /// <summary>Retrieves external accounting system settings.</summary>
-        /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalAccountingSystemSettingsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalAccountingSystemSettingsResponse> GetExternalAccountingSystemSettingsAsync(string settingId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves external accounting system settings.</summary>
         /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
@@ -42,19 +32,7 @@ namespace Transact.System.ExternalAccounting
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalAccountingSystemSettingsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalAccountingSystemSettingsResponse> GetExternalAccountingSystemSettingsAsync(string settingId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates external accounting system settings.</summary>
-        /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalAccountingSystemSettingsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalAccountingSystemSettingsResponse> CreateExternalAccountingSystemSettingsAsync(string settingId, ExternalAccountingSystemSettings payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalAccountingSystemSettingsResponse> GetExternalAccountingSystemSettingsAsync(string settingId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates external accounting system settings.</summary>
@@ -67,7 +45,7 @@ namespace Transact.System.ExternalAccounting
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalAccountingSystemSettingsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalAccountingSystemSettingsResponse> CreateExternalAccountingSystemSettingsAsync(string settingId, ExternalAccountingSystemSettings payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ExternalAccountingSystemSettingsResponse> CreateExternalAccountingSystemSettingsAsync(string settingId, ExternalAccountingSystemSettings payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

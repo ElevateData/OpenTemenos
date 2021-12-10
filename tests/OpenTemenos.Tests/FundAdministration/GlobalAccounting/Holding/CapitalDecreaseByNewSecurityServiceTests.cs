@@ -15,7 +15,7 @@ public class CapitalDecreaseByNewSecurityServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalDecreaseByNewSecurityService
-            .CreateCapitalDecreaseByNewSecurityAsync(null, null, null, null, null, payload).Result;
+            .CreateCapitalDecreaseByNewSecurityAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

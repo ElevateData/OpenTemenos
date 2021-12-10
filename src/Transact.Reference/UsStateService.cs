@@ -23,17 +23,6 @@ namespace Transact.Reference.UsState
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsStateService
     {
-        /// <summary>Retrieves list of US States</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>UsStateListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsStateListResponse> GetUsStateListAsync(string? countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of US States</summary>
         /// <param name="countryId">ISO country code of the financial institution.</param>
@@ -44,7 +33,7 @@ namespace Transact.Reference.UsState
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>UsStateListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsStateListResponse> GetUsStateListAsync(string? countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UsStateListResponse> GetUsStateListAsync(string? countryId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -14,7 +14,7 @@ public class ForwardExchangeRateServiceTests : CredentialManagement
     {
         var body = new _0BULKPayload();
         var result = _client.ForwardExchangeRateService
-            .CreateForwardExchangeRateAsync(null, null, null, null, null, body).Result;
+            .CreateForwardExchangeRateAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

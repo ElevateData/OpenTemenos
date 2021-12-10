@@ -23,99 +23,57 @@ namespace FundAdministration.GlobalInvestor.Party.DocumentCopies
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IDocumentCopiesService
     {
-        /// <summary>Creates Document copy for address and electronic addressfor the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopiesByParent Payload</param>
-        /// <returns>postDocumentcopiesByParent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesByParentSuccessResponse> PostDocumentcopiesByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Document copy for address and electronic addressfor the specified parent</summary>
+        /// <param name="payload">postDocumentcopiesByParent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopiesByParent Payload</param>
         /// <returns>postDocumentcopiesByParent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesByParentSuccessResponse> PostDocumentcopiesByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Document copy for address and electronic addresswith parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopies Payload</param>
-        /// <returns>postDocumentcopies Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesSuccessResponse> PostDocumentcopiesAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostDocumentcopiesByParentSuccessResponse> PostDocumentcopiesByParentAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Document copy for address and electronic addresswith parent mentioned in the payload</summary>
+        /// <param name="payload">postDocumentcopies Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopies Payload</param>
         /// <returns>postDocumentcopies Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesSuccessResponse> PostDocumentcopiesAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putDocumentcopies Payload</param>
-        /// <returns>putDocumentcopies Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesSuccessResponse> PutDocumentcopiesAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostDocumentcopiesSuccessResponse> PostDocumentcopiesAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
+        /// <param name="payload">putDocumentcopies Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putDocumentcopies Payload</param>
         /// <returns>putDocumentcopies Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesSuccessResponse> PutDocumentcopiesAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteDocumentcopies Payload</param>
-        /// <returns>deleteDocumentcopies Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesSuccessResponse> DeleteDocumentcopiesAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutDocumentcopiesSuccessResponse> PutDocumentcopiesAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteDocumentcopies Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteDocumentcopies Payload</param>
         /// <returns>deleteDocumentcopies Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesSuccessResponse> DeleteDocumentcopiesAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteDocumentcopiesSuccessResponse> DeleteDocumentcopiesAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Document copy for address and electronic addressrecord</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -126,171 +84,87 @@ namespace FundAdministration.GlobalInvestor.Party.DocumentCopies
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getDocumentcopiesByInternalId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDocumentcopiesByInternalIdSuccessResponse> GetDocumentcopiesByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Document copy for address and electronic addressrecord</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getDocumentcopiesByInternalId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDocumentcopiesByInternalIdSuccessResponse> GetDocumentcopiesByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Document copy for address and electronic addressrecord</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putDocumentcopiesById Payload</param>
-        /// <returns>putDocumentcopiesById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesByIdSuccessResponse> PutDocumentcopiesByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetDocumentcopiesByInternalIdSuccessResponse> GetDocumentcopiesByInternalIdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Document copy for address and electronic addressrecord</summary>
+        /// <param name="internalId">internalId</param>
+        /// <param name="payload">putDocumentcopiesById Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putDocumentcopiesById Payload</param>
         /// <returns>putDocumentcopiesById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesByIdSuccessResponse> PutDocumentcopiesByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PutDocumentcopiesByIdSuccessResponse> PutDocumentcopiesByIdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Document copy for address and electronic addressrecords</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteDocumentcopiesById Payload</param>
         /// <returns>deleteDocumentcopiesById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesByIdSuccessResponse> DeleteDocumentcopiesByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Deletes a specific Document copy for address and electronic addressrecords</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteDocumentcopiesById Payload</param>
-        /// <returns>deleteDocumentcopiesById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesByIdSuccessResponse> DeleteDocumentcopiesByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Document copy for address and electronic addressfor the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopiesByParentProd Payload</param>
-        /// <returns>postDocumentcopiesByParentProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesByParentProdSuccessResponse> PostDocumentcopiesByParentProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<DeleteDocumentcopiesByIdSuccessResponse> DeleteDocumentcopiesByIdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Document copy for address and electronic addressfor the specified parent</summary>
+        /// <param name="payload">postDocumentcopiesByParentProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopiesByParentProd Payload</param>
         /// <returns>postDocumentcopiesByParentProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesByParentProdSuccessResponse> PostDocumentcopiesByParentProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Document copy for address and electronic addresswith parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopiesProd Payload</param>
-        /// <returns>postDocumentcopiesProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesProdSuccessResponse> PostDocumentcopiesProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostDocumentcopiesByParentProdSuccessResponse> PostDocumentcopiesByParentProdAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Document copy for address and electronic addresswith parent mentioned in the payload</summary>
+        /// <param name="payload">postDocumentcopiesProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postDocumentcopiesProd Payload</param>
         /// <returns>postDocumentcopiesProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostDocumentcopiesProdSuccessResponse> PostDocumentcopiesProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putDocumentcopiesProd Payload</param>
-        /// <returns>putDocumentcopiesProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesProdSuccessResponse> PutDocumentcopiesProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostDocumentcopiesProdSuccessResponse> PostDocumentcopiesProdAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
+        /// <param name="payload">putDocumentcopiesProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putDocumentcopiesProd Payload</param>
         /// <returns>putDocumentcopiesProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesProdSuccessResponse> PutDocumentcopiesProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteDocumentcopiesProd Payload</param>
-        /// <returns>deleteDocumentcopiesProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesProdSuccessResponse> DeleteDocumentcopiesProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutDocumentcopiesProdSuccessResponse> PutDocumentcopiesProdAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Document copy for address and electronic addressrecords with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteDocumentcopiesProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteDocumentcopiesProd Payload</param>
         /// <returns>deleteDocumentcopiesProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesProdSuccessResponse> DeleteDocumentcopiesProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteDocumentcopiesProdSuccessResponse> DeleteDocumentcopiesProdAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Document copy for address and electronic addressrecord</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -301,77 +175,35 @@ namespace FundAdministration.GlobalInvestor.Party.DocumentCopies
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getDocumentcopiesByInternalIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDocumentcopiesByInternalIdProdSuccessResponse> GetDocumentcopiesByInternalIdProdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Document copy for address and electronic addressrecord</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getDocumentcopiesByInternalIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDocumentcopiesByInternalIdProdSuccessResponse> GetDocumentcopiesByInternalIdProdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Document copy for address and electronic addressrecord</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putDocumentcopiesByIdProd Payload</param>
-        /// <returns>putDocumentcopiesByIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesByIdProdSuccessResponse> PutDocumentcopiesByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetDocumentcopiesByInternalIdProdSuccessResponse> GetDocumentcopiesByInternalIdProdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Document copy for address and electronic addressrecord</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
         /// <param name="internalId">internalId</param>
         /// <param name="payload">putDocumentcopiesByIdProd Payload</param>
-        /// <returns>putDocumentcopiesByIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutDocumentcopiesByIdProdSuccessResponse> PutDocumentcopiesByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes a specific Document copy for address and electronic addressrecords</summary>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteDocumentcopiesByIdProd Payload</param>
-        /// <returns>deleteDocumentcopiesByIdProd Success Response</returns>
+        /// <returns>putDocumentcopiesByIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesByIdProdSuccessResponse> DeleteDocumentcopiesByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
+        System.Threading.Tasks.Task<PutDocumentcopiesByIdProdSuccessResponse> PutDocumentcopiesByIdProdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Document copy for address and electronic addressrecords</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteDocumentcopiesByIdProd Payload</param>
         /// <returns>deleteDocumentcopiesByIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteDocumentcopiesByIdProdSuccessResponse> DeleteDocumentcopiesByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteDocumentcopiesByIdProdSuccessResponse> DeleteDocumentcopiesByIdProdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

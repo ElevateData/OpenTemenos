@@ -14,7 +14,7 @@ public class ReceiptsServiceTests : CredentialManagement
     public void PostReceiptsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.CashReceiptService.PostreceiptsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.CashReceiptService.PostreceiptsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

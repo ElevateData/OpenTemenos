@@ -23,17 +23,6 @@ namespace Transact.Party.CustomerArrangements
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomerArrangementsService
     {
-        /// <summary>Retrieves the list of accounts(Accounts,Deposits,Loans) available for a customer</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ArrangementListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementListResponse> GetArrangementListAsync(string customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of accounts(Accounts,Deposits,Loans) available for a customer</summary>
         /// <param name="customerId">The identifier of the customer</param>
@@ -44,17 +33,7 @@ namespace Transact.Party.CustomerArrangements
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ArrangementListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementListResponse> GetArrangementListAsync(string customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of accounts available for a customer(Only from Accounts Product)</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ArrangementAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementAccountsResponse> GetArrangementAccountsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ArrangementListResponse> GetArrangementListAsync(string customerId, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of accounts available for a customer(Only from Accounts Product)</summary>
@@ -65,21 +44,7 @@ namespace Transact.Party.CustomerArrangements
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ArrangementAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementAccountsResponse> GetArrangementAccountsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of Bundle accounts available for a customer</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productGroupId">The identifier of the product group</param>
-        /// <param name="productId">The identifier of the product</param>
-        /// <param name="currencyId">The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ProductBundlesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProductBundlesResponse> GetProductBundlesAsync(string customerId, string? arrangementId, string? productGroupId, string? productId, string? currencyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ArrangementAccountsResponse> GetArrangementAccountsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of Bundle accounts available for a customer</summary>
@@ -94,18 +59,7 @@ namespace Transact.Party.CustomerArrangements
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ProductBundlesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProductBundlesResponse> GetProductBundlesAsync(string customerId, string? arrangementId, string? productGroupId, string? productId, string? currencyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Pricing Condition related to a customer</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>PreferentialPricingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PreferentialPricingResponse> GetPreferentialPricingAsync(string customerId, string? arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ProductBundlesResponse> GetProductBundlesAsync(string customerId, string? arrangementId = null, string? productGroupId = null, string? productId = null, string? currencyId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Pricing Condition related to a customer</summary>
@@ -117,7 +71,7 @@ namespace Transact.Party.CustomerArrangements
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>PreferentialPricingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PreferentialPricingResponse> GetPreferentialPricingAsync(string customerId, string? arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PreferentialPricingResponse> GetPreferentialPricingAsync(string customerId, string? arrangementId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

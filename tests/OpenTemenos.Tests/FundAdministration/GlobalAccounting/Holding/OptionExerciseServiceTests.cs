@@ -14,7 +14,7 @@ public class OptionExerciseServiceTests : CredentialManagement
     public void CreateOptionExerciseAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.OptionExerciseService.CreateOptionExerciseAsync(null, null, null, null, null, payload)
+        var result = _client.OptionExerciseService.CreateOptionExerciseAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

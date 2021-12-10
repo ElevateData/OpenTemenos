@@ -15,7 +15,7 @@ public class EquityServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.EquityService
-            .CreateEquityAsync(null, null, null, null, null, payload)
+            .CreateEquityAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

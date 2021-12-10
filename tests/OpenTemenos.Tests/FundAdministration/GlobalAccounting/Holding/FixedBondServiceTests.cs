@@ -14,7 +14,7 @@ public class FixedBondServiceTests : CredentialManagement
     public void CreateFixedBondAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FixedBondService.CreateFixedBondAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FixedBondService.CreateFixedBondAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

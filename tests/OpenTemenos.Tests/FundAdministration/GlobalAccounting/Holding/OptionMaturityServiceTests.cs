@@ -14,7 +14,7 @@ public class OptionMaturityServiceTests : CredentialManagement
     public void CreateOptionMaturityAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.OptionMaturityService.CreateOptionMaturityAsync(null, null, null, null, null, payload)
+        var result = _client.OptionMaturityService.CreateOptionMaturityAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

@@ -10,7 +10,7 @@ public class UsIndustryServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsIndustryListAsync()
     {
-        var result = _client.UsIndustryService.GetUsIndustrylistAsync(null, null, null, null, null, null).Result;
+        var result = _client.UsIndustryService.GetUsIndustrylistAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

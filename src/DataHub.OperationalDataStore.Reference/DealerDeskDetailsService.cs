@@ -23,41 +23,20 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IDealerDeskDetailsService
     {
-        /// <summary>Retrieves description of the given forex agreement type</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <returns>getForexAgreementTypeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexAgreementTypeResponse> GetForexAgreementTypeAsync(string recordId, string? displayName);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves description of the given forex agreement type</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
         /// <returns>getForexAgreementTypeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexAgreementTypeResponse> GetForexAgreementTypeAsync(string recordId, string? displayName, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves description of forex deal method</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getForexDealMethodResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexDealMethodResponse> GetForexDealMethodAsync(string recordId);
+        System.Threading.Tasks.Task<GetForexAgreementTypeResponse> GetForexAgreementTypeAsync(string recordId, string? displayName = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves description of forex deal method</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getForexDealMethodResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexDealMethodResponse> GetForexDealMethodAsync(string recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves information of a given revaluation method</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="swapForwardposition">Indicates the profit or loss position through positive and negative signs respectively</param>
-        /// <returns>getForexRevaluationTypeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexRevaluationTypeResponse> GetForexRevaluationTypeAsync(string recordId, string? displayName, string? swapForwardposition);
+        System.Threading.Tasks.Task<GetForexDealMethodResponse> GetForexDealMethodAsync(string recordId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves information of a given revaluation method</summary>
@@ -66,16 +45,7 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
         /// <param name="swapForwardposition">Indicates the profit or loss position through positive and negative signs respectively</param>
         /// <returns>getForexRevaluationTypeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexRevaluationTypeResponse> GetForexRevaluationTypeAsync(string recordId, string? displayName, string? swapForwardposition, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves description of the given agreement type</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="defaultAgreement">The master agreement type to be to be defaulted  on the contract.</param>
-        /// <param name="defaultDate">The date to indicate the year of the version of the ISDA agreement.</param>
-        /// <returns>getAgreementTypeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgreementTypeResponse> GetAgreementTypeAsync(string recordId, string? displayName, string? defaultAgreement, System.DateTimeOffset? defaultDate);
+        System.Threading.Tasks.Task<GetForexRevaluationTypeResponse> GetForexRevaluationTypeAsync(string recordId, string? displayName = null, string? swapForwardposition = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves description of the given agreement type</summary>
@@ -85,14 +55,7 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
         /// <param name="defaultDate">The date to indicate the year of the version of the ISDA agreement.</param>
         /// <returns>getAgreementTypeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgreementTypeResponse> GetAgreementTypeAsync(string recordId, string? displayName, string? defaultAgreement, System.DateTimeOffset? defaultDate, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the dealer details such as dealer id, description</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <returns>getDealersListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDealersListResponse> GetDealersListAsync(string? recordId, string? displayName);
+        System.Threading.Tasks.Task<GetAgreementTypeResponse> GetAgreementTypeAsync(string recordId, string? displayName = null, string? defaultAgreement = null, System.DateTimeOffset? defaultDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the dealer details such as dealer id, description</summary>
@@ -100,14 +63,7 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
         /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
         /// <returns>getDealersListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDealersListResponse> GetDealersListAsync(string? recordId, string? displayName, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves description of the given forex agreement type</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <returns>getForexAgreementTypesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexAgreementTypesResponse> GetForexAgreementTypesAsync(string? recordId, string? displayName);
+        System.Threading.Tasks.Task<GetDealersListResponse> GetDealersListAsync(string? recordId = null, string? displayName = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves description of the given forex agreement type</summary>
@@ -115,28 +71,14 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
         /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
         /// <returns>getForexAgreementTypesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexAgreementTypesResponse> GetForexAgreementTypesAsync(string? recordId, string? displayName, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve description of the forex deal method</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getForexDealMethodsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexDealMethodsResponse> GetForexDealMethodsAsync(string? recordId);
+        System.Threading.Tasks.Task<GetForexAgreementTypesResponse> GetForexAgreementTypesAsync(string? recordId = null, string? displayName = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve description of the forex deal method</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getForexDealMethodsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexDealMethodsResponse> GetForexDealMethodsAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves information of a given revaluation method</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="swapForwardposition">Indicates the profit or loss position through positive and negative signs respectively</param>
-        /// <returns>getForexRevaluationTypesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexRevaluationTypesResponse> GetForexRevaluationTypesAsync(string? recordId, string? displayName, string? swapForwardposition);
+        System.Threading.Tasks.Task<GetForexDealMethodsResponse> GetForexDealMethodsAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves information of a given revaluation method</summary>
@@ -145,16 +87,7 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
         /// <param name="swapForwardposition">Indicates the profit or loss position through positive and negative signs respectively</param>
         /// <returns>getForexRevaluationTypesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexRevaluationTypesResponse> GetForexRevaluationTypesAsync(string? recordId, string? displayName, string? swapForwardposition, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves description of the given agreement type</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="defaultAgreement">The master agreement type to be to be defaulted  on the contract.</param>
-        /// <param name="defaultDate">The date to indicate the year of the version of the ISDA agreement.</param>
-        /// <returns>getAgreementTypesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgreementTypesResponse> GetAgreementTypesAsync(string? recordId, string? displayName, string? defaultAgreement, System.DateTimeOffset? defaultDate);
+        System.Threading.Tasks.Task<GetForexRevaluationTypesResponse> GetForexRevaluationTypesAsync(string? recordId = null, string? displayName = null, string? swapForwardposition = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves description of the given agreement type</summary>
@@ -164,7 +97,7 @@ namespace DataHub.OperationalDataStore.Reference.DealerDeskDetails
         /// <param name="defaultDate">The date to indicate the year of the version of the ISDA agreement.</param>
         /// <returns>getAgreementTypesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAgreementTypesResponse> GetAgreementTypesAsync(string? recordId, string? displayName, string? defaultAgreement, System.DateTimeOffset? defaultDate, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetAgreementTypesResponse> GetAgreementTypesAsync(string? recordId = null, string? displayName = null, string? defaultAgreement = null, System.DateTimeOffset? defaultDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

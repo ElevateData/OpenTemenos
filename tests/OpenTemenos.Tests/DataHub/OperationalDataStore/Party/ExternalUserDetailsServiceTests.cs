@@ -18,7 +18,7 @@ public class ExternalUserDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalUserPreferencesAsync()
     {
-        var result = _client.ExternalUserDetailService.GetExternalUserPreferencesAsync(null).Result;
+        var result = _client.ExternalUserDetailService.GetExternalUserPreferencesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

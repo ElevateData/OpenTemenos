@@ -15,7 +15,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.SettlementExceptionService
-            .PostSettlementexceptionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostSettlementexceptionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.SettlementExceptionService
-            .PostSettlementexceptionsAsync(null, null, null, null, null, payload).Result;
+            .PostSettlementexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SettlementExceptionService
-            .PutSettlementexceptionsAsync(null, null, null, null, null, payload).Result;
+            .PutSettlementexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SettlementExceptionService
-            .DeleteSettlementexceptionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteSettlementexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
     public void GetSettlementExceptionsByInternalIdAsync()
     {
         var result = _client.SettlementExceptionService
-            .GetSettlementexceptionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetSettlementexceptionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SettlementExceptionService
-            .PutSettlementexceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutSettlementexceptionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class SettlementExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SettlementExceptionService
-            .DeleteSettlementexceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteSettlementexceptionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

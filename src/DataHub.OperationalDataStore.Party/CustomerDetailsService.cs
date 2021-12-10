@@ -23,66 +23,33 @@ namespace DataHub.OperationalDataStore.Party.CustomerDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomerDetailsService
     {
-        /// <summary>Retrieves the KYC details of a Customer</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerKycDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerKycDetailsResponse> GetCustomerKycDetailsAsync(string recordId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the KYC details of a Customer</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerKycDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerKycDetailsResponse> GetCustomerKycDetailsAsync(string recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of customers having the Kyc details</summary>
-        /// <param name="kycRelationship">Indicates the Customer Relationship details of the customer</param>
-        /// <returns>getCustomerKycListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerKycListResponse> GetCustomerKycListAsync(string? kycRelationship);
+        System.Threading.Tasks.Task<GetCustomerKycDetailsResponse> GetCustomerKycDetailsAsync(string recordId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of customers having the Kyc details</summary>
         /// <param name="kycRelationship">Indicates the Customer Relationship details of the customer</param>
         /// <returns>getCustomerKycListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerKycListResponse> GetCustomerKycListAsync(string? kycRelationship, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of customers not having the Kyc details</summary>
-        /// <param name="kycRelationship">Indicates the Customer Relationship details of the customer</param>
-        /// <returns>getCustomerNoKycListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerNoKycListResponse> GetCustomerNoKycListAsync(string? kycRelationship);
+        System.Threading.Tasks.Task<GetCustomerKycListResponse> GetCustomerKycListAsync(string? kycRelationship = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of customers not having the Kyc details</summary>
         /// <param name="kycRelationship">Indicates the Customer Relationship details of the customer</param>
         /// <returns>getCustomerNoKycListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerNoKycListResponse> GetCustomerNoKycListAsync(string? kycRelationship, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of a Customer</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerForMDALResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerForMDALResponse> GetCustomerForMDALAsync(string recordId);
+        System.Threading.Tasks.Task<GetCustomerNoKycListResponse> GetCustomerNoKycListAsync(string? kycRelationship = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of a Customer</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerForMDALResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerForMDALResponse> GetCustomerForMDALAsync(string recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the customer relationship details</summary>
-        /// <param name="customerRelationGroupId">Identifies the key to Customer Relationship Group to form a relation</param>
-        /// <param name="partyId">Allows capturing of customers or person entities to be part of the relationship. If partyType is selected as Customer, then the system will allow only customer Ids to be captured into this field. If partyType is selected as Person or Entity, then system will allow only personEntity Ids to be captured into this field.</param>
-        /// <param name="relationPartyId">Related customers or persons/entities that are part of the relationship.</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerRelationshipDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerRelationshipDetailsResponse> GetCustomerRelationshipDetailsAsync(string? customerRelationGroupId, string? partyId, string? relationPartyId, string? recordId);
+        System.Threading.Tasks.Task<GetCustomerForMDALResponse> GetCustomerForMDALAsync(string recordId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the customer relationship details</summary>
@@ -92,17 +59,7 @@ namespace DataHub.OperationalDataStore.Party.CustomerDetails
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerRelationshipDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerRelationshipDetailsResponse> GetCustomerRelationshipDetailsAsync(string? customerRelationGroupId, string? partyId, string? relationPartyId, string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of messages of a customer from Bank to Customer and from customer to Bank</summary>
-        /// <param name="fromCustomerId">The Customer ID from which the message is triggered.</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="parentMessageId">Identifier of the parent message.</param>
-        /// <param name="toCustomerId">The unique customer identifier of the Payee, to whom the payment message is to be sent</param>
-        /// <param name="messageStatus">Status of the message</param>
-        /// <returns>getSecureMessagesForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSecureMessagesForCustomerResponse> GetSecureMessagesForCustomerAsync(string fromCustomerId, string? recordId, string? parentMessageId, string? toCustomerId, string? messageStatus);
+        System.Threading.Tasks.Task<GetCustomerRelationshipDetailsResponse> GetCustomerRelationshipDetailsAsync(string? customerRelationGroupId = null, string? partyId = null, string? relationPartyId = null, string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of messages of a customer from Bank to Customer and from customer to Bank</summary>
@@ -113,17 +70,7 @@ namespace DataHub.OperationalDataStore.Party.CustomerDetails
         /// <param name="messageStatus">Status of the message</param>
         /// <returns>getSecureMessagesForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSecureMessagesForCustomerResponse> GetSecureMessagesForCustomerAsync(string fromCustomerId, string? recordId, string? parentMessageId, string? toCustomerId, string? messageStatus, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of messages from Bank to Customer and from Customer to Bank</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="parentMessageId">Identifier of the parent message.</param>
-        /// <param name="toCustomerId">The unique customer identifier of the Payee, to whom the payment message is to be sent</param>
-        /// <param name="fromCustomerId">The Customer ID from which the message is triggered.</param>
-        /// <param name="messageStatus">Status of the message</param>
-        /// <returns>getSecureMessagesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSecureMessagesResponse> GetSecureMessagesAsync(string? recordId, string? parentMessageId, string? toCustomerId, string? fromCustomerId, string? messageStatus);
+        System.Threading.Tasks.Task<GetSecureMessagesForCustomerResponse> GetSecureMessagesForCustomerAsync(string fromCustomerId, string? recordId = null, string? parentMessageId = null, string? toCustomerId = null, string? messageStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of messages from Bank to Customer and from Customer to Bank</summary>
@@ -134,15 +81,7 @@ namespace DataHub.OperationalDataStore.Party.CustomerDetails
         /// <param name="messageStatus">Status of the message</param>
         /// <returns>getSecureMessagesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSecureMessagesResponse> GetSecureMessagesAsync(string? recordId, string? parentMessageId, string? toCustomerId, string? fromCustomerId, string? messageStatus, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>API to retrieve the list of travel notification details for specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="overallStatus">Contains the overall status</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerTravelNotificationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerTravelNotificationsResponse> GetCustomerTravelNotificationsAsync(string customerId, string? overallStatus, string? recordId);
+        System.Threading.Tasks.Task<GetSecureMessagesResponse> GetSecureMessagesAsync(string? recordId = null, string? parentMessageId = null, string? toCustomerId = null, string? fromCustomerId = null, string? messageStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>API to retrieve the list of travel notification details for specific customer</summary>
@@ -151,31 +90,20 @@ namespace DataHub.OperationalDataStore.Party.CustomerDetails
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerTravelNotificationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerTravelNotificationsResponse> GetCustomerTravelNotificationsAsync(string customerId, string? overallStatus, string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Prospect customer details</summary>
-        /// <returns>getProspectCustomersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProspectCustomersResponse> GetProspectCustomersAsync();
+        System.Threading.Tasks.Task<GetCustomerTravelNotificationsResponse> GetCustomerTravelNotificationsAsync(string customerId, string? overallStatus = null, string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Prospect customer details</summary>
         /// <returns>getProspectCustomersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProspectCustomersResponse> GetProspectCustomersAsync(System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of preferred communication channels for the customer</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerDeliveryPreferencesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerDeliveryPreferencesResponse> GetCustomerDeliveryPreferencesAsync(object unnamed, string? recordId);
+        System.Threading.Tasks.Task<GetProspectCustomersResponse> GetProspectCustomersAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of preferred communication channels for the customer</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerDeliveryPreferencesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerDeliveryPreferencesResponse> GetCustomerDeliveryPreferencesAsync(object unnamed, string? recordId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCustomerDeliveryPreferencesResponse> GetCustomerDeliveryPreferencesAsync(object unnamed, string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

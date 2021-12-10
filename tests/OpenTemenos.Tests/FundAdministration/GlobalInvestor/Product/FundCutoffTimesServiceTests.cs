@@ -13,7 +13,7 @@ public class FundCutoffTimesServiceTests : CredentialManagement
     public void PostFundCutOffTimeAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundCutoffTimeService.PostFundCutOffTimeAsync(null, null, null, null, null, payload)
+        var result = _client.FundCutoffTimeService.PostFundCutOffTimeAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

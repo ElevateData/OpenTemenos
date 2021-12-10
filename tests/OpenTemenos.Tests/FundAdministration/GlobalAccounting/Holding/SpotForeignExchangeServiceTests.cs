@@ -15,7 +15,7 @@ public class SpotForeignExchangeServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SpotForeignExchangeService
-            .CreateSpotForeignExchangeAsync(null, null, null, null, null, payload).Result;
+            .CreateSpotForeignExchangeAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

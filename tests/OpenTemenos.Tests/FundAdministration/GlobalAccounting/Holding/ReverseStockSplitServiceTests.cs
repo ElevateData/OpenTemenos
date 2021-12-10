@@ -14,7 +14,7 @@ public class ReverseStockSplitServiceTests : CredentialManagement
     public void GetReverseStockSplitAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ReverseStockSplitService.GetReverseStockSplitAsync(null, null, null, null, null, payload)
+        var result = _client.ReverseStockSplitService.GetReverseStockSplitAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

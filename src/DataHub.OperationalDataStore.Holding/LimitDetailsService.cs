@@ -23,28 +23,13 @@ namespace DataHub.OperationalDataStore.Holding.LimitDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ILimitDetailsService
     {
-        /// <summary>Retrieves the expiring credit limit details</summary>
-        /// <param name="expiryDate">The date an agreement such as an arrangement, product, credit facility or limit is due to expire</param>
-        /// <param name="approvalDate">Indicates the date on which the Limit was last approved by the credit committee of the bank</param>
-        /// <returns>getExpiringLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetExpiringLimitsResponse> GetExpiringLimitsAsync(System.DateTimeOffset? expiryDate, System.DateTimeOffset? approvalDate);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the expiring credit limit details</summary>
         /// <param name="expiryDate">The date an agreement such as an arrangement, product, credit facility or limit is due to expire</param>
         /// <param name="approvalDate">Indicates the date on which the Limit was last approved by the credit committee of the bank</param>
         /// <returns>getExpiringLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetExpiringLimitsResponse> GetExpiringLimitsAsync(System.DateTimeOffset? expiryDate, System.DateTimeOffset? approvalDate, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Credit Limits to be reviewed</summary>
-        /// <param name="limitReviewDate">Specifies the next date on which the limit is reviewed</param>
-        /// <param name="approvalDate">Indicates the date on which the Limit was last approved by the credit committee of the bank</param>
-        /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
-        /// <returns>getLimitsToReviewResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLimitsToReviewResponse> GetLimitsToReviewAsync(string? limitReviewDate, System.DateTimeOffset? approvalDate, string? liabilityNumber);
+        System.Threading.Tasks.Task<GetExpiringLimitsResponse> GetExpiringLimitsAsync(System.DateTimeOffset? expiryDate = null, System.DateTimeOffset? approvalDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Credit Limits to be reviewed</summary>
@@ -53,59 +38,35 @@ namespace DataHub.OperationalDataStore.Holding.LimitDetails
         /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
         /// <returns>getLimitsToReviewResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLimitsToReviewResponse> GetLimitsToReviewAsync(string? limitReviewDate, System.DateTimeOffset? approvalDate, string? liabilityNumber, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Limit Group allocation details</summary>
-        /// <param name="masterGroupKey">Automatically updated by system during authorization with the master group key in which the sharing group key is linked. It will be updated only for the Main group and not for the sub groups.</param>
-        /// <returns>getLimitGroupAllocationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLimitGroupAllocationsResponse> GetLimitGroupAllocationsAsync(string masterGroupKey);
+        System.Threading.Tasks.Task<GetLimitsToReviewResponse> GetLimitsToReviewAsync(string? limitReviewDate = null, System.DateTimeOffset? approvalDate = null, string? liabilityNumber = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Limit Group allocation details</summary>
         /// <param name="masterGroupKey">Automatically updated by system during authorization with the master group key in which the sharing group key is linked. It will be updated only for the Main group and not for the sub groups.</param>
         /// <returns>getLimitGroupAllocationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLimitGroupAllocationsResponse> GetLimitGroupAllocationsAsync(string masterGroupKey, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the group and individual limits orders for the particular customer</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerLimitSharingPrioritiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerLimitSharingPrioritiesResponse> GetCustomerLimitSharingPrioritiesAsync(string recordId);
+        System.Threading.Tasks.Task<GetLimitGroupAllocationsResponse> GetLimitGroupAllocationsAsync(string masterGroupKey, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the group and individual limits orders for the particular customer</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerLimitSharingPrioritiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerLimitSharingPrioritiesResponse> GetCustomerLimitSharingPrioritiesAsync(string recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Limit Master group details such as priority details of the Limit Sharing group</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCustomerLimitMasterGroupsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerLimitMasterGroupsResponse> GetCustomerLimitMasterGroupsAsync(string? recordId);
+        System.Threading.Tasks.Task<GetCustomerLimitSharingPrioritiesResponse> GetCustomerLimitSharingPrioritiesAsync(string recordId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Limit Master group details such as priority details of the Limit Sharing group</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCustomerLimitMasterGroupsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerLimitMasterGroupsResponse> GetCustomerLimitMasterGroupsAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the group limits details</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getLimitSharingGroupResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLimitSharingGroupResponse> GetLimitSharingGroupAsync(string? recordId);
+        System.Threading.Tasks.Task<GetCustomerLimitMasterGroupsResponse> GetCustomerLimitMasterGroupsAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the group limits details</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getLimitSharingGroupResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLimitSharingGroupResponse> GetLimitSharingGroupAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetLimitSharingGroupResponse> GetLimitSharingGroupAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

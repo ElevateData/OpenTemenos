@@ -14,7 +14,7 @@ public class OrderServiceTests : CredentialManagement
     public void PostOrdersAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.OrderService.PostOrdersAsync(null, null, null, null, null, payload).Result;
+        var result = _client.OrderService.PostOrdersAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

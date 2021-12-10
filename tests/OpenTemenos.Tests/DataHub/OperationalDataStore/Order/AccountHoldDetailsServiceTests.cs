@@ -11,7 +11,7 @@ public class AccountHoldDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountHoldDetailsAsync()
     {
-        var result = _client.UsModelBankCashTransactionService.GetAccountHoldDetailsAsync(AccountId, null, null).Result;
+        var result = _client.UsModelBankCashTransactionService.GetAccountHoldDetailsAsync(AccountId).Result;
         Assert.IsNotNull(result.Data);
     }
 }

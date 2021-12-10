@@ -23,15 +23,6 @@ namespace DataHub.AnalyticDataStore.Holding.CustomerAccountBalanceOverdrawn
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomerAccountBalanceOverdrawnService
     {
-        /// <summary>Retrieves accounts/contracts details with customer information for current accounts that are overdrawn</summary>
-        /// <param name="businessDate">Business snapshot date of the source data</param>
-        /// <param name="useCurrentDate">Current Date flag for the Business date</param>
-        /// <param name="productGroupCode">Grouping of product codes</param>
-        /// <param name="isOverdrawn">Indicates if contract is overdrawn  (yes/no)</param>
-        /// <returns>Customer overdrawn account balancesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerAccountBalanceOverdrawnResponse> GetCustomerAccountBalanceOverdrawnAsync(string? businessDate, string? useCurrentDate, string? productGroupCode, string? isOverdrawn);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves accounts/contracts details with customer information for current accounts that are overdrawn</summary>
         /// <param name="businessDate">Business snapshot date of the source data</param>
@@ -40,7 +31,7 @@ namespace DataHub.AnalyticDataStore.Holding.CustomerAccountBalanceOverdrawn
         /// <param name="isOverdrawn">Indicates if contract is overdrawn  (yes/no)</param>
         /// <returns>Customer overdrawn account balancesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerAccountBalanceOverdrawnResponse> GetCustomerAccountBalanceOverdrawnAsync(string? businessDate, string? useCurrentDate, string? productGroupCode, string? isOverdrawn, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCustomerAccountBalanceOverdrawnResponse> GetCustomerAccountBalanceOverdrawnAsync(string? businessDate = null, string? useCurrentDate = null, string? productGroupCode = null, string? isOverdrawn = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -13,7 +13,7 @@ public class InterestRateTypeServiceTests : CredentialManagement
     public void CreateInterestRateTypeAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.InterestRateTypeService.CreateInterestRateTypeAsync(null, null, null, null, null, body)
+        var result = _client.InterestRateTypeService.CreateInterestRateTypeAsync(body)
             .Result;
         Assert.IsNotNull(result.Body);
     }

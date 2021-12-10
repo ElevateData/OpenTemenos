@@ -23,14 +23,6 @@ namespace DataHub.OperationalDataStore.Order.AccountHoldDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IAccountHoldDetailsService
     {
-        /// <summary>Retrieves the details of all holds placed on an account</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="fromDate">Indicates the business date from when the balance reservation event is active.</param>
-        /// <param name="holdTypeId">Purpose or the type of hold placed on the account  The available list of hold types can be retrieved through getHoldTypes</param>
-        /// <returns>getAccountHoldDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAccountHoldDetailsResponse> GetAccountHoldDetailsAsync(string accountId, System.DateTimeOffset? fromDate, string? holdTypeId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of all holds placed on an account</summary>
         /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
@@ -38,7 +30,7 @@ namespace DataHub.OperationalDataStore.Order.AccountHoldDetails
         /// <param name="holdTypeId">Purpose or the type of hold placed on the account  The available list of hold types can be retrieved through getHoldTypes</param>
         /// <returns>getAccountHoldDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetAccountHoldDetailsResponse> GetAccountHoldDetailsAsync(string accountId, System.DateTimeOffset? fromDate, string? holdTypeId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetAccountHoldDetailsResponse> GetAccountHoldDetailsAsync(string accountId, System.DateTimeOffset? fromDate = null, string? holdTypeId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

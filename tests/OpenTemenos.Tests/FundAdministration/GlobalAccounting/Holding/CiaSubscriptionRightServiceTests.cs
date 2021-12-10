@@ -15,7 +15,7 @@ public class CiaSubscriptionRightServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalIncreaseAllotmentSubscriptionRightService
-            .CreateCapitalIncreaseWithAllotmentOfSubscriptionRightsAsync(null, null, null, null, null, payload)
+            .CreateCapitalIncreaseWithAllotmentOfSubscriptionRightsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

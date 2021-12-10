@@ -16,7 +16,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .PostamldocumentsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostamldocumentsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -26,7 +26,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .PostamldocumentsAsync(null, null, null, null, null, payload).Result;
+            .PostamldocumentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -36,7 +36,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .PutamldocumentsAsync(null, null, null, null, null, payload).Result;
+            .PutamldocumentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -46,7 +46,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .DeleteamldocumentsAsync(null, null, null, null, null, payload).Result;
+            .DeleteamldocumentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -54,7 +54,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
     public void GetAmlDocumentsByInternalIdAsync()
     {
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .GetamldocumentsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetamldocumentsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -66,7 +66,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .PutamldocumentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutamldocumentsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -77,7 +77,7 @@ public class AmlDocumentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlDocumentsService
-            .DeleteamldocumentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteamldocumentsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

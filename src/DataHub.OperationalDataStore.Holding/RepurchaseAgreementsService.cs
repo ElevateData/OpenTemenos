@@ -23,15 +23,6 @@ namespace DataHub.OperationalDataStore.Holding.RepurchaseAgreements
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IRepurchaseAgreementsService
     {
-        /// <summary>Retrieves the repurchase agreement position movements</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <returns>getREPOPositionMovementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetREPOPositionMovementsResponse> GetREPOPositionMovementsAsync(string? recordId, string? portfolioId, string? instrumentId, string? depositoryId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the repurchase agreement position movements</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
@@ -40,16 +31,7 @@ namespace DataHub.OperationalDataStore.Holding.RepurchaseAgreements
         /// <param name="depositoryId">Id of the securities depository.</param>
         /// <returns>getREPOPositionMovementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetREPOPositionMovementsResponse> GetREPOPositionMovementsAsync(string? recordId, string? portfolioId, string? instrumentId, string? depositoryId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the reverse repurchase agreement positions  and movements</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <returns>getRESOPositionMovementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetRESOPositionMovementsResponse> GetRESOPositionMovementsAsync(string? recordId, string? portfolioId, string? instrumentId, string? depositoryId);
+        System.Threading.Tasks.Task<GetREPOPositionMovementsResponse> GetREPOPositionMovementsAsync(string? recordId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the reverse repurchase agreement positions  and movements</summary>
@@ -59,17 +41,7 @@ namespace DataHub.OperationalDataStore.Holding.RepurchaseAgreements
         /// <param name="depositoryId">Id of the securities depository.</param>
         /// <returns>getRESOPositionMovementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetRESOPositionMovementsResponse> GetRESOPositionMovementsAsync(string? recordId, string? portfolioId, string? instrumentId, string? depositoryId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the  reverse repurchase agreement positions</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <returns>getRESOPositionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetRESOPositionResponse> GetRESOPositionAsync(string? recordId, string? portfolioId, string? instrumentId, string? depositoryId, double? quantity);
+        System.Threading.Tasks.Task<GetRESOPositionMovementsResponse> GetRESOPositionMovementsAsync(string? recordId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the  reverse repurchase agreement positions</summary>
@@ -80,17 +52,7 @@ namespace DataHub.OperationalDataStore.Holding.RepurchaseAgreements
         /// <param name="quantity">The nominal quantity</param>
         /// <returns>getRESOPositionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetRESOPositionResponse> GetRESOPositionAsync(string? recordId, string? portfolioId, string? instrumentId, string? depositoryId, double? quantity, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the repurchase agreement positions</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <returns>getREPOPositionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetREPOPositionResponse> GetREPOPositionAsync(string? recordId, string? portfolioId, string? depositoryId, string? instrumentId, double? quantity);
+        System.Threading.Tasks.Task<GetRESOPositionResponse> GetRESOPositionAsync(string? recordId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, double? quantity = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the repurchase agreement positions</summary>
@@ -101,7 +63,7 @@ namespace DataHub.OperationalDataStore.Holding.RepurchaseAgreements
         /// <param name="quantity">The nominal quantity</param>
         /// <returns>getREPOPositionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetREPOPositionResponse> GetREPOPositionAsync(string? recordId, string? portfolioId, string? depositoryId, string? instrumentId, double? quantity, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetREPOPositionResponse> GetREPOPositionAsync(string? recordId = null, string? portfolioId = null, string? depositoryId = null, string? instrumentId = null, double? quantity = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

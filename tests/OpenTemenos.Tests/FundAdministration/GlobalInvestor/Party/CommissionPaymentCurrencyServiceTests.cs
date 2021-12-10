@@ -15,7 +15,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .PostCommissionPaymentCurrencyByParentAsync(null, null, null, null, null, payload).Result;
+            .PostCommissionPaymentCurrencyByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .PostCommissionPaymentCurrencyAsync(null, null, null, null, null, payload).Result;
+            .PostCommissionPaymentCurrencyAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .PutCommissionPaymentCurrencyAsync(null, null, null, null, null, payload).Result;
+            .PutCommissionPaymentCurrencyAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .DeleteCommissionPaymentCurrencyAsync(null, null, null, null, null, payload).Result;
+            .DeleteCommissionPaymentCurrencyAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
     public void GetCommissionPaymentCurrencyByInternalIdAsync()
     {
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .GetCommissionPaymentCurrencyByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetCommissionPaymentCurrencyByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .PutCommissionPaymentCurrencyByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutCommissionPaymentCurrencyByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class CommissionPaymentCurrencyServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.DistributorExceptionCommissionPaymentCurrencyService
-            .DeleteCommissionPaymentCurrencyByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteCommissionPaymentCurrencyByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

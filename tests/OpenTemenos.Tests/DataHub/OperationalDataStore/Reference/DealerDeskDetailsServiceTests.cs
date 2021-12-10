@@ -11,7 +11,7 @@ public class DealerDeskDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexAgreementTypeAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetForexAgreementTypeAsync(_recordId, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetForexAgreementTypeAsync(_recordId).Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -25,49 +25,49 @@ public class DealerDeskDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexRevaluationTypeAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetForexRevaluationTypeAsync(_recordId, null, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetForexRevaluationTypeAsync(_recordId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetAgreementTypeAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetAgreementTypeAsync(_recordId, null, null, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetAgreementTypeAsync(_recordId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetDealersListAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetDealersListAsync(null, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetDealersListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetForexAgreementTypesAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetForexAgreementTypesAsync(null, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetForexAgreementTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetForexDealMethodsAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetForexDealMethodsAsync(null).Result;
+        var result = _client.TreasuryDealerDeskService.GetForexDealMethodsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetForexRevaluationTypesAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetForexRevaluationTypesAsync(null, null, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetForexRevaluationTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetAgreementTypesAsync()
     {
-        var result = _client.TreasuryDealerDeskService.GetAgreementTypesAsync(null, null, null, null).Result;
+        var result = _client.TreasuryDealerDeskService.GetAgreementTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

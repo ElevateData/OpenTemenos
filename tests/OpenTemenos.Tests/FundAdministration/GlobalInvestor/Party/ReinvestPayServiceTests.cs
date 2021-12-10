@@ -14,7 +14,7 @@ public class ReinvestPayServiceTests : CredentialManagement
     public void PostReinvestPayByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ReinvestOrPayService.PostReinvestpayByParentAsync(null, null, null, null, null, payload)
+        var result = _client.ReinvestOrPayService.PostReinvestpayByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class ReinvestPayServiceTests : CredentialManagement
     public void PostReinvestPayAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ReinvestOrPayService.PostReinvestpayAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ReinvestOrPayService.PostReinvestpayAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class ReinvestPayServiceTests : CredentialManagement
     public void PutReinvestPayAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ReinvestOrPayService.PutReinvestpayAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ReinvestOrPayService.PutReinvestpayAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class ReinvestPayServiceTests : CredentialManagement
     public void DeleteReinvestPayAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ReinvestOrPayService.DeleteReinvestpayAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ReinvestOrPayService.DeleteReinvestpayAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class ReinvestPayServiceTests : CredentialManagement
     public void GetReinvestPayByInternalIdAsync()
     {
         var result = _client.ReinvestOrPayService
-            .GetReinvestpayByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetReinvestpayByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class ReinvestPayServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ReinvestOrPayService
-            .PutReinvestpayByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutReinvestpayByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class ReinvestPayServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ReinvestOrPayService
-            .DeleteReinvestpayByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteReinvestpayByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

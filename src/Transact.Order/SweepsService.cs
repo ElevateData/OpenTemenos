@@ -23,21 +23,6 @@ namespace Transact.Order.Sweeps
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISweepsService
     {
-        /// <summary>Retrieves the sweep transactions</summary>
-        /// <param name="toAccountId">Account number of the Payee or Beneficiary of the transaction</param>
-        /// <param name="fromAccountId">For surplus this refers to the account which will be credited and for maintenance this account from where the funds are debited.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepsResponse> GetSweepsAsync(string? toAccountId, string? fromAccountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the sweep transactions</summary>
         /// <param name="toAccountId">Account number of the Payee or Beneficiary of the transaction</param>
@@ -52,18 +37,7 @@ namespace Transact.Order.Sweeps
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepsResponse> GetSweepsAsync(string? toAccountId, string? fromAccountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Initiate a sweep transaction</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SweepResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> CreateSweepAsync(Sweep payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SweepsResponse> GetSweepsAsync(string? toAccountId = null, string? fromAccountId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Initiate a sweep transaction</summary>
@@ -75,17 +49,7 @@ namespace Transact.Order.Sweeps
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SweepResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> CreateSweepAsync(Sweep payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Overview of sweep transaction</summary>
-        /// <param name="sweepId">Identifier of the Retail account sweep</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SweepResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> GetSweepAsync(string sweepId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SweepResponse> CreateSweepAsync(Sweep payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Overview of sweep transaction</summary>
@@ -96,19 +60,7 @@ namespace Transact.Order.Sweeps
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SweepResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> GetSweepAsync(string sweepId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update a sweep transaction</summary>
-        /// <param name="sweepId">Identifier of the Retail account sweep</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SweepResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> UpdateSweepAsync(string sweepId, Sweep payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SweepResponse> GetSweepAsync(string sweepId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update a sweep transaction</summary>
@@ -121,19 +73,7 @@ namespace Transact.Order.Sweeps
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SweepResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> UpdateSweepAsync(string sweepId, Sweep payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Remove a sweep transaction</summary>
-        /// <param name="sweepId">Identifier of the Retail account sweep</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SweepResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> DeleteSweepAsync(string sweepId, SweepDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SweepResponse> UpdateSweepAsync(string sweepId, Sweep payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Remove a sweep transaction</summary>
@@ -146,19 +86,7 @@ namespace Transact.Order.Sweeps
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SweepResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> DeleteSweepAsync(string sweepId, SweepDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Cancel a sweep transaction</summary>
-        /// <param name="sweepId">Identifier of the Retail account sweep</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SweepResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> RejectSweepAsync(string sweepId, SweepDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SweepResponse> DeleteSweepAsync(string sweepId, SweepDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Cancel a sweep transaction</summary>
@@ -171,17 +99,7 @@ namespace Transact.Order.Sweeps
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SweepResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> RejectSweepAsync(string sweepId, SweepDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Approve a sweep transaction</summary>
-        /// <param name="sweepId">Identifier of the Retail account sweep</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SweepResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> ApproveSweepAsync(string sweepId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SweepResponse> RejectSweepAsync(string sweepId, SweepDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Approve a sweep transaction</summary>
@@ -192,23 +110,7 @@ namespace Transact.Order.Sweeps
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SweepResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepResponse> ApproveSweepAsync(string sweepId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves cancelled sweeps</summary>
-        /// <param name="sweepId">Identifier of the Retail account sweep</param>
-        /// <param name="creditAccountId">Credit account identifier of the payment or transaction</param>
-        /// <param name="debitAccountId">Indicates the debit account number of the payment or transaction.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SweepCancellationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepCancellationsResponse> GetSweepCancellationsAsync(string? sweepId, string? creditAccountId, string? debitAccountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SweepResponse> ApproveSweepAsync(string sweepId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves cancelled sweeps</summary>
@@ -225,7 +127,7 @@ namespace Transact.Order.Sweeps
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SweepCancellationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SweepCancellationsResponse> GetSweepCancellationsAsync(string? sweepId, string? creditAccountId, string? debitAccountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SweepCancellationsResponse> GetSweepCancellationsAsync(string? sweepId = null, string? creditAccountId = null, string? debitAccountId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

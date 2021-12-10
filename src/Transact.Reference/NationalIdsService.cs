@@ -23,16 +23,6 @@ namespace Transact.Reference.NationalIds
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface INationalIdsService
     {
-        /// <summary>Retrieves the BIC code of the requested Bank's legal entity identifier</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>BICFromLEIResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICFromLEIResponse> GetBICFromLEIAsync(string leiId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the BIC code of the requested Bank's legal entity identifier</summary>
         /// <param name="page_size">The total number of records per page</param>
@@ -42,19 +32,7 @@ namespace Transact.Reference.NationalIds
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>BICFromLEIResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICFromLEIResponse> GetBICFromLEIAsync(string leiId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the BIC or BICs for a given national ID with its country code or scheme.</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>BICsFromNationalIdResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICsFromNationalIdResponse> GetBICsFromNationalIdAsync(string nationalIdRef, string? countryId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<BICFromLEIResponse> GetBICFromLEIAsync(string leiId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the BIC or BICs for a given national ID with its country code or scheme.</summary>
@@ -67,19 +45,7 @@ namespace Transact.Reference.NationalIds
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>BICsFromNationalIdResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICsFromNationalIdResponse> GetBICsFromNationalIdAsync(string nationalIdRef, string? countryId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of the given national ID</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>NationalIdDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NationalIdDetailsResponse> GetNationalIdDetailsAsync(string nationalIdRef, string? countryId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<BICsFromNationalIdResponse> GetBICsFromNationalIdAsync(string nationalIdRef, string? countryId = null, string? scheme = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of the given national ID</summary>
@@ -92,18 +58,7 @@ namespace Transact.Reference.NationalIds
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>NationalIdDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NationalIdDetailsResponse> GetNationalIdDetailsAsync(string nationalIdRef, string? countryId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves national IDs for a BIC</summary>
-        /// <param name="bicId">Bank Identifier Code (BIC) of the Beneficiary bank.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>NationalIdsFromBicResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NationalIdsFromBicResponse> GetNationalIdsFromBicAsync(string bicId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<NationalIdDetailsResponse> GetNationalIdDetailsAsync(string nationalIdRef, string? countryId = null, string? scheme = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves national IDs for a BIC</summary>
@@ -115,19 +70,7 @@ namespace Transact.Reference.NationalIds
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>NationalIdsFromBicResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NationalIdsFromBicResponse> GetNationalIdsFromBicAsync(string bicId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the status on the validity of the given national ID</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>NationalIdResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NationalIdResponse> ValidateNationalIdAsync(string nationalIdRef, string? countryId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<NationalIdsFromBicResponse> GetNationalIdsFromBicAsync(string bicId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the status on the validity of the given national ID</summary>
@@ -140,24 +83,7 @@ namespace Transact.Reference.NationalIds
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>NationalIdResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NationalIdResponse> ValidateNationalIdAsync(string nationalIdRef, string? countryId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves GPI participant information</summary>
-        /// <param name="participantId">Process Workflow Participant ID</param>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="currencyCode">ISO Currency code, accepted in field 32A of incoming gpi MT 103 payment by the participant ID or by the gpi intermediary through which the participant can be reached for this currency</param>
-        /// <param name="requestDate">Date on which the client's request to be classified as professional has been received.</param>
-        /// <param name="channelType">Indicates the type of the Reachable Through channel</param>
-        /// <param name="reachableThrough">Channel through which the participant is reachable for Global Payment Initiative (GPI) payment instructions for one of its GPI currencies</param>
-        /// <param name="actAsIntermediary">Flag specifying whether the participant acts as the Global Payment Initiative (GPI) Intermediary Agent for GPI payments in a given currency and over a given REACHABLE THROUGH channel. Y indicates that the participant will forward incoming MT 103s payments coming from a GPI participant through this channel and in this currency to an upcoming GPI participant, per the GPI business rules.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>ParticipantDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ParticipantDetailsResponse> GetParticipantDetailsAsync(string participantId, string countryId, string currencyCode, string? requestDate, string? channelType, string? reachableThrough, string? actAsIntermediary, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<NationalIdResponse> ValidateNationalIdAsync(string nationalIdRef, string? countryId = null, string? scheme = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves GPI participant information</summary>
@@ -175,7 +101,7 @@ namespace Transact.Reference.NationalIds
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>ParticipantDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ParticipantDetailsResponse> GetParticipantDetailsAsync(string participantId, string countryId, string currencyCode, string? requestDate, string? channelType, string? reachableThrough, string? actAsIntermediary, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ParticipantDetailsResponse> GetParticipantDetailsAsync(string participantId, string countryId, string currencyCode, string? requestDate = null, string? channelType = null, string? reachableThrough = null, string? actAsIntermediary = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

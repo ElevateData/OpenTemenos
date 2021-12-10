@@ -19,7 +19,7 @@ public class AccountListServiceTests : CredentialManagement
     [TestMethod]
     public void GetVostroAccountListAsync()
     {
-        var result = _client.NostroVostroAccountListService.GetVostroAccountListAsync(null, null, null, null).Result;
+        var result = _client.NostroVostroAccountListService.GetVostroAccountListAsync().Result;
         Assert.IsNotNull(result.Data);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Data)}");
     }

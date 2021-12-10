@@ -15,7 +15,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     public void GetOrganizationHierarchyAsync()
     {
         var result = _client.OrganizationStructuresServicesService
-            .GetOrganizationHierarchyAsync(OrganizationId, null, null, null, null).Result;
+            .GetOrganizationHierarchyAsync(OrganizationId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -26,7 +26,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
         var organizationId = string.Empty;
         var payload = new OrganizationHierarchy();
         var result = _client.OrganizationStructuresServicesService
-            .CreateOrganizationHierarchyAsync(organizationId, payload, null, null, null, null, null).Result;
+            .CreateOrganizationHierarchyAsync(organizationId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -37,7 +37,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
         var organizationId = string.Empty;
         var payload = new OrganizationHierarchy();
         var result = _client.OrganizationStructuresServicesService
-            .UpdateOrganizationHierarchyAsync(organizationId, payload, null, null, null, null, null).Result;
+            .UpdateOrganizationHierarchyAsync(organizationId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     public void GetChildOrganizationsAsync()
     {
         var result = _client.OrganizationStructuresServicesService
-            .GetChildOrganizationsAsync(OrganizationId, null, null, null, null, null, null, null, null).Result;
+            .GetChildOrganizationsAsync(OrganizationId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -54,7 +54,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     public void GetOrganizationBranchNameAsync()
     {
         var result = _client.OrganizationStructuresServicesService
-            .GetOrganizationBranchNameAsync(BranchId, null, null, null, null).Result;
+            .GetOrganizationBranchNameAsync(BranchId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -62,7 +62,7 @@ public class OrganizationStructuresServicesServiceTests : CredentialManagement
     public void GetLineOfBusinessNameAsync()
     {
         var result = _client.OrganizationStructuresServicesService
-            .GetLineOfBusinessNameAsync(LineOfBusinessId, null, null, null, null).Result;
+            .GetLineOfBusinessNameAsync(LineOfBusinessId).Result;
         Assert.IsNotNull(result.Body);
     }
 }

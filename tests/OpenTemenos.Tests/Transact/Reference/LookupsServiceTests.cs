@@ -11,7 +11,7 @@ public class LookupsServiceTests : CredentialManagement
     public void GetEbLookupsAsync()
     {
         var result = _client.LookupsService
-            .GetEbLookupsAsync(null, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetEbLookupsAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

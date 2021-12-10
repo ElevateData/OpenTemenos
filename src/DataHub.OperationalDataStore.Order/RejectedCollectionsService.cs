@@ -23,14 +23,6 @@ namespace DataHub.OperationalDataStore.Order.RejectedCollections
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IRejectedCollectionsService
     {
-        /// <summary>Retrieves the details of rejected collections</summary>
-        /// <param name="claimStatus">Status update of the claim records</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <returns>getRejectedCollectionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetRejectedCollectionsResponse> GetRejectedCollectionsAsync(string? claimStatus, string? recordId, string? accountId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of rejected collections</summary>
         /// <param name="claimStatus">Status update of the claim records</param>
@@ -38,7 +30,7 @@ namespace DataHub.OperationalDataStore.Order.RejectedCollections
         /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
         /// <returns>getRejectedCollectionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetRejectedCollectionsResponse> GetRejectedCollectionsAsync(string? claimStatus, string? recordId, string? accountId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetRejectedCollectionsResponse> GetRejectedCollectionsAsync(string? claimStatus = null, string? recordId = null, string? accountId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

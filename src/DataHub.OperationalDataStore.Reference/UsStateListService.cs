@@ -23,18 +23,12 @@ namespace DataHub.OperationalDataStore.Reference.UsStateList
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsStateListService
     {
-        /// <summary>Retrieves the list of US States</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <returns>getUsStateListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUsStateListResponse> GetUsStateListAsync(string? countryId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of US States</summary>
         /// <param name="countryId">ISO country code of the financial institution.</param>
         /// <returns>getUsStateListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUsStateListResponse> GetUsStateListAsync(string? countryId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetUsStateListResponse> GetUsStateListAsync(string? countryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

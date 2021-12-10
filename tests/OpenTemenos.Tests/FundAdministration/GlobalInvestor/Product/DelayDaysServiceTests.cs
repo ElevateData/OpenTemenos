@@ -14,7 +14,7 @@ public class DelayDaysServiceTests : CredentialManagement
     public void PostDelayDaysByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.DelayDayService.PostdelaydaysByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DelayDayService.PostdelaydaysByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -23,7 +23,7 @@ public class DelayDaysServiceTests : CredentialManagement
     public void PostDelayDaysAsync()
     {
         var payload = new _0Payload();
-        var result = _client.DelayDayService.PostdelaydaysAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DelayDayService.PostdelaydaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class DelayDaysServiceTests : CredentialManagement
     public void PutDelayDaysAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DelayDayService.PutdelaydaysAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DelayDayService.PutdelaydaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class DelayDaysServiceTests : CredentialManagement
     public void DeleteDelayDaysAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DelayDayService.DeletedelaydaysAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DelayDayService.DeletedelaydaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class DelayDaysServiceTests : CredentialManagement
     public void GetDelayDaysByInternalIdAsync()
     {
         var result = _client.DelayDayService
-            .GetdelaydaysByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetdelaydaysByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -60,7 +60,7 @@ public class DelayDaysServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.DelayDayService.PutdelaydaysByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.DelayDayService.PutdelaydaysByIdAsync(internalId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -71,7 +71,7 @@ public class DelayDaysServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.DelayDayService.DeletedelaydaysByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.DelayDayService.DeletedelaydaysByIdAsync(internalId, payload: payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

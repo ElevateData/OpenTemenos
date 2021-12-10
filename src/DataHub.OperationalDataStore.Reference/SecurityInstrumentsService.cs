@@ -23,15 +23,6 @@ namespace DataHub.OperationalDataStore.Reference.SecurityInstruments
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISecurityInstrumentsService
     {
-        /// <summary>Retrieves the details of all securities such as Id, fixed offer price, Security description, stock exchange code, IPO book start date, IPO book end date, IPO lot size, price currency code, minimum bid price, maximum bid price</summary>
-        /// <param name="ipoStatus">Indicates the IPO is open, closed, alloted, listed, reopened and so on</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <returns>getActiveIPOsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetActiveIPOsResponse> GetActiveIPOsAsync(string? ipoStatus, string? recordId, System.DateTimeOffset? startDate, System.DateTimeOffset? endDate);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of all securities such as Id, fixed offer price, Security description, stock exchange code, IPO book start date, IPO book end date, IPO lot size, price currency code, minimum bid price, maximum bid price</summary>
         /// <param name="ipoStatus">Indicates the IPO is open, closed, alloted, listed, reopened and so on</param>
@@ -40,21 +31,7 @@ namespace DataHub.OperationalDataStore.Reference.SecurityInstruments
         /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
         /// <returns>getActiveIPOsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetActiveIPOsResponse> GetActiveIPOsAsync(string? ipoStatus, string? recordId, System.DateTimeOffset? startDate, System.DateTimeOffset? endDate, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the International security identification number details of all securities</summary>
-        /// <param name="instrumentType">Indicates the type of the security</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="instrumentCurrencyId">The currency of the instrument</param>
-        /// <param name="mnemonic">Shortcut code for referring an Entity/Company/Branch.</param>
-        /// <param name="subAssetType">Contains a further definition of an asset</param>
-        /// <param name="priceType">Defines the method to be used when calculating the price of a trade</param>
-        /// <param name="iSIN">The International Securities Identification Number of the instrument</param>
-        /// <param name="stockExchange">The stock exchange identifier</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <returns>getInstrumentsBondsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetInstrumentsBondsResponse> GetInstrumentsBondsAsync(string? instrumentType, string? recordId, string? instrumentCurrencyId, string? mnemonic, string? subAssetType, string? priceType, string? iSIN, string? stockExchange, string? depositoryId);
+        System.Threading.Tasks.Task<GetActiveIPOsResponse> GetActiveIPOsAsync(string? ipoStatus = null, string? recordId = null, System.DateTimeOffset? startDate = null, System.DateTimeOffset? endDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the International security identification number details of all securities</summary>
@@ -69,33 +46,21 @@ namespace DataHub.OperationalDataStore.Reference.SecurityInstruments
         /// <param name="depositoryId">Id of the securities depository.</param>
         /// <returns>getInstrumentsBondsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetInstrumentsBondsResponse> GetInstrumentsBondsAsync(string? instrumentType, string? recordId, string? instrumentCurrencyId, string? mnemonic, string? subAssetType, string? priceType, string? iSIN, string? stockExchange, string? depositoryId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the contract definitions such as contract code, description of all the FUTURE contract types</summary>
-        /// <param name="contractType">Indicates the type of contract that has been traded on an exchange</param>
-        /// <returns>getFutureContractsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetFutureContractsResponse> GetFutureContractsAsync(string? contractType);
+        System.Threading.Tasks.Task<GetInstrumentsBondsResponse> GetInstrumentsBondsAsync(string? instrumentType = null, string? recordId = null, string? instrumentCurrencyId = null, string? mnemonic = null, string? subAssetType = null, string? priceType = null, string? iSIN = null, string? stockExchange = null, string? depositoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the contract definitions such as contract code, description of all the FUTURE contract types</summary>
         /// <param name="contractType">Indicates the type of contract that has been traded on an exchange</param>
         /// <returns>getFutureContractsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetFutureContractsResponse> GetFutureContractsAsync(string? contractType, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the contract definitions such as contract code, description of all the OPTION contract types</summary>
-        /// <param name="contractType">Indicates the type of contract that has been traded on an exchange</param>
-        /// <returns>getOptionContractsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetOptionContractsResponse> GetOptionContractsAsync(string? contractType);
+        System.Threading.Tasks.Task<GetFutureContractsResponse> GetFutureContractsAsync(string? contractType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the contract definitions such as contract code, description of all the OPTION contract types</summary>
         /// <param name="contractType">Indicates the type of contract that has been traded on an exchange</param>
         /// <returns>getOptionContractsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetOptionContractsResponse> GetOptionContractsAsync(string? contractType, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetOptionContractsResponse> GetOptionContractsAsync(string? contractType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

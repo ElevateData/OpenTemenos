@@ -15,7 +15,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.SecurityClearingAccountService
-            .PostSecclearingaccountsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostSecclearingaccountsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.SecurityClearingAccountService
-            .PostSecclearingaccountsAsync(null, null, null, null, null, payload).Result;
+            .PostSecclearingaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SecurityClearingAccountService
-            .PutSecclearingaccountsAsync(null, null, null, null, null, payload).Result;
+            .PutSecclearingaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SecurityClearingAccountService
-            .DeleteSecclearingaccountsAsync(null, null, null, null, null, payload).Result;
+            .DeleteSecclearingaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
     public void GetSecClearingAccountsByInternalIdAsync()
     {
         var result = _client.SecurityClearingAccountService
-            .GetSecclearingaccountsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetSecclearingaccountsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SecurityClearingAccountService
-            .PutSecclearingaccountsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutSecclearingaccountsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class SecClearingAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SecurityClearingAccountService
-            .DeleteSecclearingaccountsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteSecclearingaccountsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

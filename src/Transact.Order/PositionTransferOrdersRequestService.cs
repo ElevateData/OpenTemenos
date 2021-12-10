@@ -23,15 +23,6 @@ namespace Transact.Order.PositionTransferOrdersRequest
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPositionTransferOrdersRequestService
     {
-        /// <summary>Create Position transfer order Initiation</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityPositionTransferOrdersInitiationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> CreateSecurityPositionTransferOrdersInitiationAsync(SecurityPositionTransferOrdersInitiation payload, bool? validate_only, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create Position transfer order Initiation</summary>
         /// <param name="payload">body Payload</param>
@@ -40,16 +31,7 @@ namespace Transact.Order.PositionTransferOrdersRequest
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityPositionTransferOrdersInitiationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> CreateSecurityPositionTransferOrdersInitiationAsync(SecurityPositionTransferOrdersInitiation payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update Position transfer order Initiation</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityPositionTransferOrdersInitiationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> UpdateSecurityPositionTransferOrdersInitiationAsync(string positionTransferOrderId, SecurityPositionTransferOrdersInitiation payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> CreateSecurityPositionTransferOrdersInitiationAsync(SecurityPositionTransferOrdersInitiation payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update Position transfer order Initiation</summary>
@@ -59,16 +41,7 @@ namespace Transact.Order.PositionTransferOrdersRequest
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityPositionTransferOrdersInitiationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> UpdateSecurityPositionTransferOrdersInitiationAsync(string positionTransferOrderId, SecurityPositionTransferOrdersInitiation payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Delete Position transfer order Initiation</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityPositionTransferOrdersInitiationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> DeleteSecurityPositionTransferOrdersInitiationAsync(string positionTransferOrderId, SecurityPositionTransferOrdersInitiationDelete? payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> UpdateSecurityPositionTransferOrdersInitiationAsync(string positionTransferOrderId, SecurityPositionTransferOrdersInitiation payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Delete Position transfer order Initiation</summary>
@@ -78,14 +51,7 @@ namespace Transact.Order.PositionTransferOrdersRequest
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityPositionTransferOrdersInitiationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> DeleteSecurityPositionTransferOrdersInitiationAsync(string positionTransferOrderId, SecurityPositionTransferOrdersInitiationDelete? payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Approve Position transfer order Initiation</summary>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>PositionTransferRequestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> ApprovePositionTransferRequestAsync(string positionTransferOrderId, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> DeleteSecurityPositionTransferOrdersInitiationAsync(string positionTransferOrderId, SecurityPositionTransferOrdersInitiationDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Approve Position transfer order Initiation</summary>
@@ -93,7 +59,7 @@ namespace Transact.Order.PositionTransferOrdersRequest
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>PositionTransferRequestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> ApprovePositionTransferRequestAsync(string positionTransferOrderId, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SecurityPositionTransferOrdersInitiationResponse> ApprovePositionTransferRequestAsync(string positionTransferOrderId, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

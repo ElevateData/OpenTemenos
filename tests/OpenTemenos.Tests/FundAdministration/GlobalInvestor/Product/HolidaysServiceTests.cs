@@ -14,7 +14,7 @@ public class HolidaysServiceTests : CredentialManagement
     public void PostHolidaysByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.HolidayService.PostHolidaysByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HolidayService.PostHolidaysByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -23,7 +23,7 @@ public class HolidaysServiceTests : CredentialManagement
     public void PostHolidaysAsync()
     {
         var payload = new _0Payload();
-        var result = _client.HolidayService.PostHolidaysAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HolidayService.PostHolidaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class HolidaysServiceTests : CredentialManagement
     public void PutHolidaysAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.HolidayService.PutHolidaysAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HolidayService.PutHolidaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class HolidaysServiceTests : CredentialManagement
     public void DeleteHolidaysAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.HolidayService.DeleteHolidaysAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HolidayService.DeleteHolidaysAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class HolidaysServiceTests : CredentialManagement
     public void GetHolidaysByInternalIdAsync()
     {
         var result = _client.HolidayService
-            .GetHolidaysByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetHolidaysByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -60,7 +60,7 @@ public class HolidaysServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.HolidayService.PutHolidaysByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.HolidayService.PutHolidaysByIdAsync(internalId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -71,7 +71,7 @@ public class HolidaysServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.HolidayService.DeleteHolidaysByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.HolidayService.DeleteHolidaysByIdAsync(internalId, payload: payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

@@ -23,20 +23,6 @@ namespace Transact.Holding.SecurityTrades
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISecurityTradesService
     {
-        /// <summary>Allows to view the security trade details</summary>
-        /// <param name="securityTradeId">Identifier of the Security Trade</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTradesResponse> GetSecurityTradesAsync(string securityTradeId, string? customerId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the security trade details</summary>
         /// <param name="securityTradeId">Identifier of the Security Trade</param>
@@ -50,7 +36,7 @@ namespace Transact.Holding.SecurityTrades
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTradesResponse> GetSecurityTradesAsync(string securityTradeId, string? customerId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SecurityTradesResponse> GetSecurityTradesAsync(string securityTradeId, string? customerId = null, string? instrumentId = null, string? depositoryId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

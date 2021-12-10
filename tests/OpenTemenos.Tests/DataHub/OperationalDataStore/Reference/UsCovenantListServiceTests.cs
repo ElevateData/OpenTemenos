@@ -10,7 +10,7 @@ public class UsCovenantListServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsCovenantListAsync()
     {
-        var result = _client.UsModelBankLoanCovenantService.GetUsCovenantListAsync(null).Result;
+        var result = _client.UsModelBankLoanCovenantService.GetUsCovenantListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -13,7 +13,7 @@ public class AgentsServiceTests : CredentialManagement
     public void GetAgentAsync()
     {
         var result = _client.DistributorService
-            .GetAgentAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetAgentAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.Records!.First())}");
     }
@@ -23,7 +23,7 @@ public class AgentsServiceTests : CredentialManagement
     public void PostAgentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.DistributorService.PostAgentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DistributorService.PostAgentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class AgentsServiceTests : CredentialManagement
     public void PutAgentAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DistributorService.PutAgentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DistributorService.PutAgentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class AgentsServiceTests : CredentialManagement
     public void DeleteAgentAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DistributorService.DeleteAgentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DistributorService.DeleteAgentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class AgentsServiceTests : CredentialManagement
     public void GetAgentByAgentIdAsync()
     {
         var result = _client.DistributorService
-            .GetAgentByagentIdAsync(null, null, null, null, null, null, null, null, null, null, AgentId).Result;
+            .GetAgentByagentIdAsync(AgentId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -60,7 +60,7 @@ public class AgentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.DistributorService
-            .PutAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutAgentByinternalIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -71,7 +71,7 @@ public class AgentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.DistributorService
-            .DeleteAgentByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteAgentByinternalIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

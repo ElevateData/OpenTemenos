@@ -23,23 +23,6 @@ namespace Transact.Holding.Alerts
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IAlertsService
     {
-        /// <summary>Retrieves the subscribed alerts details for an arrangement</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="subscribe">Enables an alert service</param>
-        /// <param name="alertRequestId">The unique identifier of the alert request.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SubscribedAlertsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubscribedAlertsResponse> GetSubscribedAlertsAsync(string arrangementId, string? customerId, string? subscribe, string? alertRequestId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the subscribed alerts details for an arrangement</summary>
         /// <param name="arrangementId">Indicates an unique identifier of an account</param>
@@ -56,21 +39,7 @@ namespace Transact.Holding.Alerts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SubscribedAlertsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubscribedAlertsResponse> GetSubscribedAlertsAsync(string arrangementId, string? customerId, string? subscribe, string? alertRequestId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the eligible alerts available for the account</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>EligibleEventsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EligibleEventsResponse> GetEligibleEventsAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SubscribedAlertsResponse> GetSubscribedAlertsAsync(string arrangementId, string? customerId = null, string? subscribe = null, string? alertRequestId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the eligible alerts available for the account</summary>
@@ -85,25 +54,7 @@ namespace Transact.Holding.Alerts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>EligibleEventsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EligibleEventsResponse> GetEligibleEventsAsync(string accountId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves alert requests for external subscriptions.</summary>
-        /// <param name="eventId">Event identifier</param>
-        /// <param name="contractReference">Contains the contract reference</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="externalUserId">Contains the external user identifier for which the consent is created.</param>
-        /// <param name="externalCustomerId">Identifier of the external customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ExternalSubscribersAlertRequestsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSubscribersAlertRequestsResponse> GetExternalSubscribersAlertRequestsAsync(string? eventId, string? contractReference, string? customerId, string? externalUserId, string? externalCustomerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<EligibleEventsResponse> GetEligibleEventsAsync(string accountId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves alert requests for external subscriptions.</summary>
@@ -122,18 +73,7 @@ namespace Transact.Holding.Alerts
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ExternalSubscribersAlertRequestsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSubscribersAlertRequestsResponse> GetExternalSubscribersAlertRequestsAsync(string? eventId, string? contractReference, string? customerId, string? externalUserId, string? externalCustomerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates alert for external subscription.</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AlertSubscriptionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlertSubscriptionResponse> CreateAlertSubscriptionAsync(AlertSubscription payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalSubscribersAlertRequestsResponse> GetExternalSubscribersAlertRequestsAsync(string? eventId = null, string? contractReference = null, string? customerId = null, string? externalUserId = null, string? externalCustomerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates alert for external subscription.</summary>
@@ -145,19 +85,7 @@ namespace Transact.Holding.Alerts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AlertSubscriptionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlertSubscriptionResponse> CreateAlertSubscriptionAsync(AlertSubscription payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the alert subscription details for online banking user</summary>
-        /// <param name="alertRequestId">The unique identifier of the alert request.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AlertSubscriptionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlertSubscriptionResponse> UpdateAlertSubscriptionAsync(string alertRequestId, AlertSubscription payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AlertSubscriptionResponse> CreateAlertSubscriptionAsync(AlertSubscription payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the alert subscription details for online banking user</summary>
@@ -170,7 +98,7 @@ namespace Transact.Holding.Alerts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AlertSubscriptionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlertSubscriptionResponse> UpdateAlertSubscriptionAsync(string alertRequestId, AlertSubscription payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<AlertSubscriptionResponse> UpdateAlertSubscriptionAsync(string alertRequestId, AlertSubscription payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -14,7 +14,7 @@ public class FundOfFundsServiceTests : CredentialManagement
     public void PostFundOfFundsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FundOfFundService.PostFundofFundsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.FundOfFundService.PostFundofFundsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class FundOfFundsServiceTests : CredentialManagement
     public void PostFundOfFundsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FundOfFundService.PostFundofFundsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundOfFundService.PostFundofFundsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class FundOfFundsServiceTests : CredentialManagement
     public void PutFundOfFundsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundOfFundService.PutFundofFundsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundOfFundService.PutFundofFundsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class FundOfFundsServiceTests : CredentialManagement
     public void DeleteFundOfFundsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundOfFundService.DeleteFundofFundsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundOfFundService.DeleteFundofFundsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class FundOfFundsServiceTests : CredentialManagement
     public void GetFundOfFundsByInternalIdAsync()
     {
         var result = _client.FundOfFundService
-            .GetFundofFundsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetFundofFundsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class FundOfFundsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundOfFundService
-            .PutFundofFundsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFundofFundsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class FundOfFundsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundOfFundService
-            .DeleteFundofFundsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFundofFundsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -13,7 +13,7 @@ public class SwapsPriceServiceTests : CredentialManagement
     public void CreateSwapPriceAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.SwapsPriceService.CreateSwapPriceAsync(null, null, null, null, null, body).Result;
+        var result = _client.SwapsPriceService.CreateSwapPriceAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

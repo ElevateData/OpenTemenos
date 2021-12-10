@@ -14,7 +14,7 @@ public class TermDepositTransactionServiceTests : CredentialManagement
     public void TermDepositTransactionAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TimeTermDepositService.TermDepositTransactionAsync(null, null, null, null, null, payload)
+        var result = _client.TimeTermDepositService.TermDepositTransactionAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

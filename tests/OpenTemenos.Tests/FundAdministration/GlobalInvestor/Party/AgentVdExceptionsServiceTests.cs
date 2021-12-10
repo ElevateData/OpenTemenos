@@ -15,7 +15,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .PostAgentVdExceptionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostAgentVdExceptionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     public void PostAgentVdExceptionsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ExceptionValueDateService.PostAgentVdExceptionsAsync(null, null, null, null, null, payload)
+        var result = _client.ExceptionValueDateService.PostAgentVdExceptionsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     public void PutAgentVdExceptionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ExceptionValueDateService.PutAgentVdExceptionsAsync(null, null, null, null, null, payload)
+        var result = _client.ExceptionValueDateService.PutAgentVdExceptionsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExceptionValueDateService
-            .DeleteAgentVdExceptionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteAgentVdExceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     public void GetAgentVdExceptionsByInternalIdAsync()
     {
         var result = _client.ExceptionValueDateService
-            .GetAgentVdExceptionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetAgentVdExceptionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -64,7 +64,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .PutAgentVdExceptionsByIdAsync(null, null, null, null, null, InternalId, payload).Result;
+            .PutAgentVdExceptionsByIdAsync(InternalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -75,7 +75,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .DeleteAgentVdExceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteAgentVdExceptionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -85,7 +85,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .PostFundVdExceptionsByParentProdAsync(null, null, null, null, null, payload).Result;
+            .PostFundVdExceptionsByParentProdAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -95,7 +95,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .PostFundVdExceptionsProdAsync(null, null, null, null, null, payload).Result;
+            .PostFundVdExceptionsProdAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -105,7 +105,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExceptionValueDateService
-            .PutFundVdExceptionsProdAsync(null, null, null, null, null, payload).Result;
+            .PutFundVdExceptionsProdAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -115,7 +115,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExceptionValueDateService
-            .DeleteFundVdExceptionsProdAsync(null, null, null, null, null, payload).Result;
+            .DeleteFundVdExceptionsProdAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -123,7 +123,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
     public void GetFundVdExceptionsByInternalIdProdAsync()
     {
         var result = _client.ExceptionValueDateService
-            .GetFundVdExceptionsByInternalIdProdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetFundVdExceptionsByInternalIdProdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -135,7 +135,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .PutFundVdExceptionsByIdProdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFundVdExceptionsByIdProdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -146,7 +146,7 @@ public class AgentVdExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ExceptionValueDateService
-            .DeleteFundVdExceptionsByIdProdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFundVdExceptionsByIdProdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

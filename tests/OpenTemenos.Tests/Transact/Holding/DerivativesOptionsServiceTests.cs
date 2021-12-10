@@ -11,8 +11,7 @@ public class DerivativesOptionsServiceTests : CredentialManagement
     [TestMethod]
     public void GetSellOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetSellOptionTradesAsync(null, null, null, null, null,
-                null, null, null, null, null, null, null, null, null)
+        var result = _client.DerivativeInstrumentOperationService.GetSellOptionTradesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -24,7 +23,7 @@ public class DerivativesOptionsServiceTests : CredentialManagement
     {
         var payload = new ManualAssignOptionTrades();
         var result = _client.DerivativeInstrumentOperationService
-            .CreateManualAssignOptionTradesAsync(payload, null, null, null)
+            .CreateManualAssignOptionTradesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -32,8 +31,7 @@ public class DerivativesOptionsServiceTests : CredentialManagement
     [TestMethod]
     public void GetBuyOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetBuyOptionTradesAsync(null, null, null, null, null,
-                null, null, null, null, null, null, null, null, null)
+        var result = _client.DerivativeInstrumentOperationService.GetBuyOptionTradesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -45,7 +43,7 @@ public class DerivativesOptionsServiceTests : CredentialManagement
     {
         var payload = new ManualExerciseOptionTrades();
         var result = _client.DerivativeInstrumentOperationService
-            .CreateManualExerciseOptionTradesAsync(payload, null, null, null)
+            .CreateManualExerciseOptionTradesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -53,8 +51,7 @@ public class DerivativesOptionsServiceTests : CredentialManagement
     [TestMethod]
     public void GetActiveOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync(null, null, null, null,
-                null, null, null, null, null, null, null, null, null, null)
+        var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -66,7 +63,7 @@ public class DerivativesOptionsServiceTests : CredentialManagement
     {
         var payload = new ManualExpireOptionTrades();
         var result = _client.DerivativeInstrumentOperationService
-            .CreateManualExpireOptionTradesAsync(payload, null, null, null)
+            .CreateManualExpireOptionTradesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

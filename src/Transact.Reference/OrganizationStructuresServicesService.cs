@@ -23,16 +23,6 @@ namespace Transact.Reference.OrganizationStructuresServices
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IOrganizationStructuresServicesService
     {
-        /// <summary>Retrieve the Organization code details</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationHierarchyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> GetOrganizationHierarchyAsync(string organizationId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the Organization code details</summary>
         /// <param name="organizationId">Identifier of Organization Code</param>
@@ -42,19 +32,7 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OrganizationHierarchyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> GetOrganizationHierarchyAsync(string organizationId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create the Organization code details</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationHierarchyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> CreateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OrganizationHierarchyResponse> GetOrganizationHierarchyAsync(string organizationId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create the Organization code details</summary>
@@ -67,19 +45,7 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OrganizationHierarchyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> CreateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the Organization code details</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationHierarchyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> UpdateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OrganizationHierarchyResponse> CreateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the Organization code details</summary>
@@ -92,21 +58,7 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OrganizationHierarchyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationHierarchyResponse> UpdateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the child organizations</summary>
-        /// <param name="organizationId">Identifier of Organization Code</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ChildOrganizationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ChildOrganizationsResponse> GetChildOrganizationsAsync(string organizationId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<OrganizationHierarchyResponse> UpdateOrganizationHierarchyAsync(string organizationId, OrganizationHierarchy payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the child organizations</summary>
@@ -121,17 +73,7 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ChildOrganizationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ChildOrganizationsResponse> GetChildOrganizationsAsync(string organizationId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the branch name</summary>
-        /// <param name="branchId">Unique and unambiguous identification of a branch of a financial institution.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OrganizationBranchNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationBranchNameResponse> GetOrganizationBranchNameAsync(string branchId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ChildOrganizationsResponse> GetChildOrganizationsAsync(string organizationId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the branch name</summary>
@@ -142,17 +84,7 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OrganizationBranchNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OrganizationBranchNameResponse> GetOrganizationBranchNameAsync(string branchId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the line of business</summary>
-        /// <param name="lineOfBusinessId">Identifier of the line of business provided by the branch</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>LineOfBusinessNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LineOfBusinessNameResponse> GetLineOfBusinessNameAsync(string lineOfBusinessId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OrganizationBranchNameResponse> GetOrganizationBranchNameAsync(string branchId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the line of business</summary>
@@ -163,7 +95,7 @@ namespace Transact.Reference.OrganizationStructuresServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>LineOfBusinessNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LineOfBusinessNameResponse> GetLineOfBusinessNameAsync(string lineOfBusinessId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<LineOfBusinessNameResponse> GetLineOfBusinessNameAsync(string lineOfBusinessId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -23,17 +23,6 @@ namespace Transact.Order.DerivativeOrders
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IDerivativeOrdersService
     {
-        /// <summary>Retrieves the over the counter derivative trades</summary>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="tradeType">The trade type</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>OTCDerivativeOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OTCDerivativeOrdersResponse> GetOTCDerivativeOrdersAsync(string? instrumentId, string? tradeType, string? callOrPut, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the over the counter derivative trades</summary>
         /// <param name="instrumentId">The identifier of the instrument</param>
@@ -44,18 +33,7 @@ namespace Transact.Order.DerivativeOrders
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>OTCDerivativeOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OTCDerivativeOrdersResponse> GetOTCDerivativeOrdersAsync(string? instrumentId, string? tradeType, string? callOrPut, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the exchange traded derivative trades</summary>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="tradeType">The trade type</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>ETDDerivativeOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ETDDerivativeOrdersResponse> GetETDDerivativeOrdersAsync(string? instrumentId, string? tradeType, string? callOrPut, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<OTCDerivativeOrdersResponse> GetOTCDerivativeOrdersAsync(string? instrumentId = null, string? tradeType = null, string? callOrPut = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the exchange traded derivative trades</summary>
@@ -67,14 +45,7 @@ namespace Transact.Order.DerivativeOrders
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>ETDDerivativeOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ETDDerivativeOrdersResponse> GetETDDerivativeOrdersAsync(string? instrumentId, string? tradeType, string? callOrPut, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the derivatives order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>DerivativesOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DerivativesOrderResponse> CreateDerivativesOrderAsync(DerivativesOrder payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ETDDerivativeOrdersResponse> GetETDDerivativeOrdersAsync(string? instrumentId = null, string? tradeType = null, string? callOrPut = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the derivatives order</summary>
@@ -82,25 +53,13 @@ namespace Transact.Order.DerivativeOrders
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>DerivativesOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DerivativesOrderResponse> CreateDerivativesOrderAsync(DerivativesOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the derivatives order</summary>
-        /// <returns>DerivativesOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DerivativesOrderResponse> GetDerivativesOrderAsync(string deriviativeOrderId, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<DerivativesOrderResponse> CreateDerivativesOrderAsync(DerivativesOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the derivatives order</summary>
         /// <returns>DerivativesOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DerivativesOrderResponse> GetDerivativesOrderAsync(string deriviativeOrderId, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the derivatives order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>DerivativesOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DerivativesOrderResponse> UpdateDerivativesOrderAsync(string deriviativeOrderId, DerivativesOrder payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<DerivativesOrderResponse> GetDerivativesOrderAsync(string deriviativeOrderId, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the derivatives order</summary>
@@ -108,7 +67,7 @@ namespace Transact.Order.DerivativeOrders
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>DerivativesOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DerivativesOrderResponse> UpdateDerivativesOrderAsync(string deriviativeOrderId, DerivativesOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DerivativesOrderResponse> UpdateDerivativesOrderAsync(string deriviativeOrderId, DerivativesOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

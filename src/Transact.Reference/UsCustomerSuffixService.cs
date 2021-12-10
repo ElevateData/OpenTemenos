@@ -23,16 +23,6 @@ namespace Transact.Reference.UsCustomerSuffix
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsCustomerSuffixService
     {
-        /// <summary>Retrieves the of post-nominal or designatory titles allowed for a customer.</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>UsSuffixListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsSuffixListResponse> GetUsSuffixListAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the of post-nominal or designatory titles allowed for a customer.</summary>
         /// <param name="page_size">The total number of records per page</param>
@@ -42,7 +32,7 @@ namespace Transact.Reference.UsCustomerSuffix
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>UsSuffixListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsSuffixListResponse> GetUsSuffixListAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UsSuffixListResponse> GetUsSuffixListAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -15,7 +15,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.SimulationCalendarService
-            .PostSimulationcalendarsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostSimulationcalendarsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.SimulationCalendarService
-            .PostSimulationcalendarsAsync(null, null, null, null, null, payload).Result;
+            .PostSimulationcalendarsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SimulationCalendarService
-            .PutSimulationcalendarsAsync(null, null, null, null, null, payload).Result;
+            .PutSimulationcalendarsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SimulationCalendarService
-            .DeleteSimulationcalendarsAsync(null, null, null, null, null, payload).Result;
+            .DeleteSimulationcalendarsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
     public void GetSimulationCalendarsByInternalIdAsync()
     {
         var result = _client.SimulationCalendarService
-            .GetSimulationcalendarsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetSimulationcalendarsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SimulationCalendarService
-            .PutSimulationcalendarsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutSimulationcalendarsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class SimulationCalendarsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SimulationCalendarService
-            .DeleteSimulationcalendarsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteSimulationcalendarsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

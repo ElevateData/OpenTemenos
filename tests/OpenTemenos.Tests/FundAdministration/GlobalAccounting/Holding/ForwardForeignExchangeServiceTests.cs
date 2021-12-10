@@ -15,7 +15,7 @@ public class ForwardForeignExchangeServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ForwardForeignExchangeService
-            .CreateForwardForeignExchangeAsync(null, null, null, null, null, payload).Result;
+            .CreateForwardForeignExchangeAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

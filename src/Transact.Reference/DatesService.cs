@@ -23,23 +23,6 @@ namespace Transact.Reference.Dates
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IDatesService
     {
-        /// <summary>Retrieves the list of dates</summary>
-        /// <param name="companyIdQuery">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="today">Date of the current business day for all online activities in the selected Company. This field is updated automatically with the date from 'nextWorkingDay' during the Close of Business processing.</param>
-        /// <param name="lastWorkingDay">Contains the date of the last working day</param>
-        /// <param name="nextWorkingDay">Date of the next business day which will be processed in this Company.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>DatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DatesResponse> GetDatesAsync(string? companyIdQuery, System.DateTimeOffset? today, System.DateTimeOffset? lastWorkingDay, System.DateTimeOffset? nextWorkingDay, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of dates</summary>
         /// <param name="companyIdQuery">The identifier of the underlying Entity/Company/Branch.</param>
@@ -56,24 +39,7 @@ namespace Transact.Reference.Dates
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>DatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DatesResponse> GetDatesAsync(string? companyIdQuery, System.DateTimeOffset? today, System.DateTimeOffset? lastWorkingDay, System.DateTimeOffset? nextWorkingDay, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of date for a specific company identifier</summary>
-        /// <param name="companyIdPath">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="today">Date of the current business day for all online activities in the selected Company. This field is updated automatically with the date from 'nextWorkingDay' during the Close of Business processing.</param>
-        /// <param name="lastWorkingDay">Contains the date of the last working day</param>
-        /// <param name="nextWorkingDay">Date of the next business day which will be processed in this Company.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>DatesByCompanyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DatesResponse> GetDatesByCompanyAsync(string companyIdPath, System.DateTimeOffset? today, System.DateTimeOffset? lastWorkingDay, System.DateTimeOffset? nextWorkingDay, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<DatesResponse> GetDatesAsync(string? companyIdQuery = null, System.DateTimeOffset? today = null, System.DateTimeOffset? lastWorkingDay = null, System.DateTimeOffset? nextWorkingDay = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of date for a specific company identifier</summary>
@@ -91,17 +57,7 @@ namespace Transact.Reference.Dates
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>DatesByCompanyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DatesResponse> GetDatesByCompanyAsync(string companyIdPath, System.DateTimeOffset? today, System.DateTimeOffset? lastWorkingDay, System.DateTimeOffset? nextWorkingDay, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the holiday information</summary>
-        /// <param name="holidayId">Identifier of the holiday record.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>HolidayResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HolidayResponse> GetHolidayAsync(string holidayId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<DatesResponse> GetDatesByCompanyAsync(string companyIdPath, System.DateTimeOffset? today = null, System.DateTimeOffset? lastWorkingDay = null, System.DateTimeOffset? nextWorkingDay = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the holiday information</summary>
@@ -112,19 +68,7 @@ namespace Transact.Reference.Dates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>HolidayResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HolidayResponse> GetHolidayAsync(string holidayId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the holiday information</summary>
-        /// <param name="holidayId">Identifier of the holiday record.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>HolidayResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HolidayResponse> CreateHolidayAsync(string holidayId, Holiday payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<HolidayResponse> GetHolidayAsync(string holidayId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the holiday information</summary>
@@ -137,19 +81,7 @@ namespace Transact.Reference.Dates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>HolidayResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HolidayResponse> CreateHolidayAsync(string holidayId, Holiday payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the holiday information</summary>
-        /// <param name="holidayId">Identifier of the holiday record.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>HolidayResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HolidayResponse> UpdateHolidayAsync(string holidayId, Holiday payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<HolidayResponse> CreateHolidayAsync(string holidayId, Holiday payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the holiday information</summary>
@@ -162,7 +94,7 @@ namespace Transact.Reference.Dates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>HolidayResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HolidayResponse> UpdateHolidayAsync(string holidayId, Holiday payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<HolidayResponse> UpdateHolidayAsync(string holidayId, Holiday payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

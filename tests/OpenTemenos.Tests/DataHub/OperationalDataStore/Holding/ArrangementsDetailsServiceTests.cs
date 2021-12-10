@@ -13,14 +13,14 @@ public class ArrangementsDetailsServiceTests : CredentialManagement
     public void GetArrangementsForCustomersAsync()
     {
         var result = _client.ArrangementsDetailService
-            .GetArrangementsForCustomersAsync(CustomerId, null, null, null, null, null).Result;
+            .GetArrangementsForCustomersAsync(CustomerId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetArrangementAsync()
     {
-        var result = _client.ArrangementsDetailService.GetArrangementAsync(RecordId, null, null, null, null, null)
+        var result = _client.ArrangementsDetailService.GetArrangementAsync(RecordId)
             .Result;
         Assert.IsNotNull(result.Data);
     }
@@ -29,14 +29,14 @@ public class ArrangementsDetailsServiceTests : CredentialManagement
     public void GetArrangementsForCustomerAsync()
     {
         var result = _client.ArrangementsDetailService
-            .GetArrangementsForCustomerAsync(CustomerId, RecordId, null, null, null, null).Result;
+            .GetArrangementsForCustomerAsync(CustomerId, RecordId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetArrangementsAsync()
     {
-        var result = _client.ArrangementsDetailService.GetArrangementsAsync(RecordId, null, null, null, null).Result;
+        var result = _client.ArrangementsDetailService.GetArrangementsAsync(RecordId).Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -50,35 +50,35 @@ public class ArrangementsDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPendingArrangementActivityAsync()
     {
-        var result = _client.ArrangementsDetailService.GetPendingArrangementActivityAsync(null, null).Result;
+        var result = _client.ArrangementsDetailService.GetPendingArrangementActivityAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetPendingBundleArrangementAsync()
     {
-        var result = _client.ArrangementsDetailService.GetPendingBundleArrangementAsync(null, null).Result;
+        var result = _client.ArrangementsDetailService.GetPendingBundleArrangementAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetPendingDepositArrangementAsync()
     {
-        var result = _client.ArrangementsDetailService.GetPendingDepositArrangementAsync(null, null).Result;
+        var result = _client.ArrangementsDetailService.GetPendingDepositArrangementAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetPendingLoanArrangementAsync()
     {
-        var result = _client.ArrangementsDetailService.GetPendingLoanArrangementAsync(null, null).Result;
+        var result = _client.ArrangementsDetailService.GetPendingLoanArrangementAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetPendingConsentArrangementAsync()
     {
-        var result = _client.ArrangementsDetailService.GetPendingConsentArrangementAsync(null, null).Result;
+        var result = _client.ArrangementsDetailService.GetPendingConsentArrangementAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -23,18 +23,12 @@ namespace DataHub.OperationalDataStore.Reference.ClientPortfolios
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IClientPortfoliosService
     {
-        /// <summary>Retrieves the own book portfolio list details such as portfolio id, reference currency and account name</summary>
-        /// <param name="dealerBook">Indicates the portfolio is an Own Account Trading/Investment portfolio</param>
-        /// <returns>getClientPortfoliosResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetClientPortfoliosResponse> GetClientPortfoliosAsync(string? dealerBook);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the own book portfolio list details such as portfolio id, reference currency and account name</summary>
         /// <param name="dealerBook">Indicates the portfolio is an Own Account Trading/Investment portfolio</param>
         /// <returns>getClientPortfoliosResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetClientPortfoliosResponse> GetClientPortfoliosAsync(string? dealerBook, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetClientPortfoliosResponse> GetClientPortfoliosAsync(string? dealerBook = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

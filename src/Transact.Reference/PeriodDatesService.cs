@@ -23,20 +23,6 @@ namespace Transact.Reference.PeriodDates
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPeriodDatesService
     {
-        /// <summary>Retrieves reference period dates</summary>
-        /// <param name="currencyOrPair">A single currency or a currency pair.</param>
-        /// <param name="fromDate">Indicates the business date from when the balance reservation event is active.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodDatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodDatesResponse> GetPeriodDatesAsync(string currencyOrPair, string? fromDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves reference period dates</summary>
         /// <param name="currencyOrPair">A single currency or a currency pair.</param>
@@ -50,7 +36,7 @@ namespace Transact.Reference.PeriodDates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodDatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodDatesResponse> GetPeriodDatesAsync(string currencyOrPair, string? fromDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PeriodDatesResponse> GetPeriodDatesAsync(string currencyOrPair, string? fromDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

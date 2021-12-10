@@ -14,7 +14,7 @@ public class SecurityDescServiceTests : CredentialManagement
     public void PostSecurityDescByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.SecurityDescService.PostSecuritydescByParentAsync(null, null, null, null, null, payload)
+        var result = _client.SecurityDescService.PostSecuritydescByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class SecurityDescServiceTests : CredentialManagement
     public void PostSecurityDescAsync()
     {
         var payload = new _0Payload();
-        var result = _client.SecurityDescService.PostSecuritydescAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SecurityDescService.PostSecuritydescAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class SecurityDescServiceTests : CredentialManagement
     public void PutSecurityDescAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SecurityDescService.PutSecuritydescAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SecurityDescService.PutSecuritydescAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class SecurityDescServiceTests : CredentialManagement
     public void DeleteSecurityDescAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SecurityDescService.DeleteSecuritydescAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SecurityDescService.DeleteSecuritydescAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class SecurityDescServiceTests : CredentialManagement
     public void GetSecurityDescByInternalIdAsync()
     {
         var result = _client.SecurityDescService
-            .GetSecuritydescByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetSecuritydescByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class SecurityDescServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SecurityDescService
-            .PutSecuritydescByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutSecuritydescByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class SecurityDescServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SecurityDescService
-            .DeleteSecuritydescByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteSecuritydescByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -12,7 +12,7 @@ public class AllCustomerProductBalancesServiceTests : CredentialManagement
     public void GetAllCustomerProductBalancesAsync()
     {
         var result = _client.CustomerProductBalanceService
-            .GetAllCustomerProductBalancesAsync(null, null)
+            .GetAllCustomerProductBalancesAsync()
             .Result;
         Assert.IsNotNull(result.Data);
     }

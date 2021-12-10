@@ -15,7 +15,7 @@ public class ImaDetailsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.InvestmentManagementAccountService
-            .PostImadetailsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostImadetailsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class ImaDetailsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.InvestmentManagementAccountService
-            .PostImadetailsAsync(null, null, null, null, null, payload).Result;
+            .PostImadetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class ImaDetailsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.InvestmentManagementAccountService
-            .PutImadetailsAsync(null, null, null, null, null, payload).Result;
+            .PutImadetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class ImaDetailsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.InvestmentManagementAccountService
-            .DeleteImadetailsAsync(null, null, null, null, null, payload).Result;
+            .DeleteImadetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class ImaDetailsServiceTests : CredentialManagement
     public void GetImaDetailsByInternalIdAsync()
     {
         var result = _client.InvestmentManagementAccountService
-            .GetImadetailsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetImadetailsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class ImaDetailsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestmentManagementAccountService
-            .PutImadetailsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutImadetailsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class ImaDetailsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestmentManagementAccountService
-            .DeleteImadetailsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteImadetailsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

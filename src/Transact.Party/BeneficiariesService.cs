@@ -23,18 +23,6 @@ namespace Transact.Party.Beneficiaries
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IBeneficiariesService
     {
-        /// <summary>Update beneficiary details</summary>
-        /// <param name="beneficiaryId">Indicates the reference of the financial institution that allows access to the beneficiary information</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BeneficiaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> UpdateBeneficiaryAsync(string beneficiaryId, Beneficiary payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update beneficiary details</summary>
         /// <param name="beneficiaryId">Indicates the reference of the financial institution that allows access to the beneficiary information</param>
@@ -46,19 +34,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BeneficiaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> UpdateBeneficiaryAsync(string beneficiaryId, Beneficiary payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Remove beneficiary</summary>
-        /// <param name="beneficiaryId">Indicates the reference of the financial institution that allows access to the beneficiary information</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BeneficiaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> DeleteBeneficiaryAsync(string beneficiaryId, BeneficiaryDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BeneficiaryResponse> UpdateBeneficiaryAsync(string beneficiaryId, Beneficiary payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Remove beneficiary</summary>
@@ -71,18 +47,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BeneficiaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> DeleteBeneficiaryAsync(string beneficiaryId, BeneficiaryDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create beneficiary</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BeneficiaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> CreateBeneficiaryAsync(Beneficiary payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BeneficiaryResponse> DeleteBeneficiaryAsync(string beneficiaryId, BeneficiaryDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create beneficiary</summary>
@@ -94,17 +59,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BeneficiaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> CreateBeneficiaryAsync(Beneficiary payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Approve beneficiary</summary>
-        /// <param name="beneficiaryId">Indicates the reference of the financial institution that allows access to the beneficiary information</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BeneficiaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> ApproveBeneficiaryAsync(string beneficiaryId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BeneficiaryResponse> CreateBeneficiaryAsync(Beneficiary payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Approve beneficiary</summary>
@@ -115,19 +70,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BeneficiaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> ApproveBeneficiaryAsync(string beneficiaryId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Reject beneficiary</summary>
-        /// <param name="beneficiaryId">Indicates the reference of the financial institution that allows access to the beneficiary information</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BeneficiaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> RejectBeneficiaryAsync(string beneficiaryId, BeneficiaryDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BeneficiaryResponse> ApproveBeneficiaryAsync(string beneficiaryId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Reject beneficiary</summary>
@@ -140,22 +83,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BeneficiaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BeneficiaryResponse> RejectBeneficiaryAsync(string beneficiaryId, BeneficiaryDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of beneficiary details for a customers</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="nickName">Nickname of the beneficiary</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerBeneficiaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerBeneficiaryResponse> GetCustomerBeneficiaryAsync(string customerId, string? nickName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<BeneficiaryResponse> RejectBeneficiaryAsync(string beneficiaryId, BeneficiaryDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of beneficiary details for a customers</summary>
@@ -171,23 +99,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerBeneficiaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerBeneficiaryResponse> GetCustomerBeneficiaryAsync(string customerId, string? nickName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of beneficiaries details for specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="externalBeneficiaryFlag">Flag to identify if the beneficiary is external</param>
-        /// <param name="paymentScheme">Payment scheme details</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerBeneficiariesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerBeneficiariesResponse> GetCustomerBeneficiariesAsync(string customerId, string? externalBeneficiaryFlag, string? paymentScheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerBeneficiaryResponse> GetCustomerBeneficiaryAsync(string customerId, string? nickName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of beneficiaries details for specific customer</summary>
@@ -204,7 +116,7 @@ namespace Transact.Party.Beneficiaries
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerBeneficiariesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerBeneficiariesResponse> GetCustomerBeneficiariesAsync(string customerId, string? externalBeneficiaryFlag, string? paymentScheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CustomerBeneficiariesResponse> GetCustomerBeneficiariesAsync(string customerId, string? externalBeneficiaryFlag = null, string? paymentScheme = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

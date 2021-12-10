@@ -10,7 +10,7 @@ public class USIndustrylistServiceTests : CredentialManagement
     [TestMethod]
     public void GetUSIndustrylistAsync()
     {
-        var result = _client.UsModelBankUsIndustryClassificationService.GetUSIndustrylistAsync(null).Result;
+        var result = _client.UsModelBankUsIndustryClassificationService.GetUSIndustrylistAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

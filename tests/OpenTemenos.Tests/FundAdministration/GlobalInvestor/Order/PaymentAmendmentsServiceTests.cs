@@ -14,7 +14,7 @@ public class PaymentAmendmentsServiceTests : CredentialManagement
     public void PostPaymentAmendmentsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.PaymentAmendmentService.PostpaymentamendmentsAsync(null, null, null, null, null, payload)
+        var result = _client.PaymentAmendmentService.PostpaymentamendmentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

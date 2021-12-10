@@ -23,22 +23,6 @@ namespace Transact.Enterprise.Pricing
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPricingService
     {
-        /// <summary>Retrieves the package pricing benefit details</summary>
-        /// <param name="packageId">Indicates the arrangement reference of the package</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PackageStatementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PackageStatementResponse> GetPackageStatementAsync(string packageId, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the package pricing benefit details</summary>
         /// <param name="packageId">Indicates the arrangement reference of the package</param>
@@ -54,29 +38,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PackageStatementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PackageStatementResponse> GetPackageStatementAsync(string packageId, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the fee amount charged on an event</summary>
-        /// <param name="baseContractReference">Contains the identifier for the contract or account in which the event is raised. This would typically be a unique reference to identify the specific contract or account in the system</param>
-        /// <param name="systemReference">Contains the identifier for the system in which the event originated from. For ex, ‘Hogan’ or ‘TransactAccounts’ etc</param>
-        /// <param name="companyReference">Contains the identifier of the underlying Entity or Company or Branch</param>
-        /// <param name="eventName">The name that is displayed for the event</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="channel">Contains the channel in which the activity was performed. If pricing is not determined based on channel, then this is not significant</param>
-        /// <param name="branch">Contains the branch name/code in which the business activity was performed. If pricing is not determined based on branch, then this is not significant</param>
-        /// <param name="lineOfBusiness">Contains the line of business in which the activity was performed. If pricing is not determined based on line of business, then this is not significant</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ActivityChargeAmountResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ActivityChargeAmountResponse> GetActivityChargeAmountAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? channel, string? branch, string? lineOfBusiness, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PackageStatementResponse> GetPackageStatementAsync(string packageId, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the fee amount charged on an event</summary>
@@ -99,29 +61,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ActivityChargeAmountResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ActivityChargeAmountResponse> GetActivityChargeAmountAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? channel, string? branch, string? lineOfBusiness, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the fee amount charged on an event</summary>
-        /// <param name="baseContractReference">Contains the identifier for the contract or account in which the event is raised. This would typically be a unique reference to identify the specific contract or account in the system</param>
-        /// <param name="systemReference">Contains the identifier for the system in which the event originated from. For ex, ‘Hogan’ or ‘TransactAccounts’ etc</param>
-        /// <param name="companyReference">Contains the identifier of the underlying Entity or Company or Branch</param>
-        /// <param name="eventName">The name that is displayed for the event</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="channel">Contains the channel in which the activity was performed. If pricing is not determined based on channel, then this is not significant</param>
-        /// <param name="branch">Contains the branch name/code in which the business activity was performed. If pricing is not determined based on branch, then this is not significant</param>
-        /// <param name="lineOfBusiness">Contains the line of business in which the activity was performed. If pricing is not determined based on line of business, then this is not significant</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PeriodicChargesAmountResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicChargesAmountResponse> GetPeriodicChargesAmountAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? channel, string? branch, string? lineOfBusiness, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ActivityChargeAmountResponse> GetActivityChargeAmountAsync(string baseContractReference, string? systemReference = null, string? companyReference = null, string? eventName = null, string? effectiveDate = null, string? channel = null, string? branch = null, string? lineOfBusiness = null, string? transactionReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the fee amount charged on an event</summary>
@@ -144,29 +84,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PeriodicChargesAmountResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicChargesAmountResponse> GetPeriodicChargesAmountAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? channel, string? branch, string? lineOfBusiness, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the interest rates</summary>
-        /// <param name="baseContractReference">Contains the identifier for the contract or account in which the event is raised. This would typically be a unique reference to identify the specific contract or account in the system</param>
-        /// <param name="systemReference">Contains the identifier for the system in which the event originated from. For ex, ‘Hogan’ or ‘TransactAccounts’ etc</param>
-        /// <param name="companyReference">Contains the identifier of the underlying Entity or Company or Branch</param>
-        /// <param name="eventName">The name that is displayed for the event</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="channel">Contains the channel in which the activity was performed. If pricing is not determined based on channel, then this is not significant</param>
-        /// <param name="branch">Contains the branch name/code in which the business activity was performed. If pricing is not determined based on branch, then this is not significant</param>
-        /// <param name="lineOfBusiness">Contains the line of business in which the activity was performed. If pricing is not determined based on line of business, then this is not significant</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>InterestRateResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<InterestRateResponse> GetInterestRateAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? channel, string? branch, string? lineOfBusiness, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PeriodicChargesAmountResponse> GetPeriodicChargesAmountAsync(string baseContractReference, string? systemReference = null, string? companyReference = null, string? eventName = null, string? effectiveDate = null, string? channel = null, string? branch = null, string? lineOfBusiness = null, string? transactionReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the interest rates</summary>
@@ -189,27 +107,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>InterestRateResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<InterestRateResponse> GetInterestRateAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? channel, string? branch, string? lineOfBusiness, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the interest rates for the given product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="partyId">Allows capturing of customers or person entities to be part of the relationship. If partyType is selected as Customer, then the system will allow only customer Ids to be captured into this field. If partyType is selected as Person or Entity, then system will allow only personEntity Ids to be captured into this field.</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="rateName">Specifies the name displayed for the interest rates</param>
-        /// <param name="amount">This is the payment amount</param>
-        /// <param name="tenor">This field is valid for Documentary Collections only. It is used in conjunction with the following field 'DAYS' or 'COLL.MAT.CODE' to indicate the TENOR of the drafts under the collection and is used in the production of corresponding Collection messages.</param>
-        /// <param name="rolloverPeriod">Indicates the roll over period after which contract will switch on to the new set of interest or fee conditions. For contracts dealing with periodic indexes, rates are influenced by Amount or Tenor or Rollover period. So, rollover period need to be stated if accurate rate needs to be retrieved.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>RequestRateResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RequestRateResponse> GetRequestRateAsync(string productId, string? partyId, string? effectiveDate, string? rateName, string? amount, string? tenor, string? rolloverPeriod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<InterestRateResponse> GetInterestRateAsync(string baseContractReference, string? systemReference = null, string? companyReference = null, string? eventName = null, string? effectiveDate = null, string? channel = null, string? branch = null, string? lineOfBusiness = null, string? transactionReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the interest rates for the given product</summary>
@@ -230,24 +128,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>RequestRateResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RequestRateResponse> GetRequestRateAsync(string productId, string? partyId, string? effectiveDate, string? rateName, string? amount, string? tenor, string? rolloverPeriod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the eligibility details for the product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="partyId">Allows capturing of customers or person entities to be part of the relationship. If partyType is selected as Customer, then the system will allow only customer Ids to be captured into this field. If partyType is selected as Person or Entity, then system will allow only personEntity Ids to be captured into this field.</param>
-        /// <param name="partyRole">Contains the identifier used for the role played by the party or customer in the contract or account</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>EligibilityDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EligibilityDetailsResponse> GetEligibilityDetailsAsync(string productId, string? partyId, string? partyRole, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<RequestRateResponse> GetRequestRateAsync(string productId, string? partyId = null, string? effectiveDate = null, string? rateName = null, string? amount = null, string? tenor = null, string? rolloverPeriod = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the eligibility details for the product</summary>
@@ -265,34 +146,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>EligibilityDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EligibilityDetailsResponse> GetEligibilityDetailsAsync(string productId, string? partyId, string? partyRole, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the pricing for transaction business activity</summary>
-        /// <param name="baseContractReference">Contains the identifier for the contract or account in which the event is raised. This would typically be a unique reference to identify the specific contract or account in the system</param>
-        /// <param name="systemReference">Contains the identifier for the system in which the event originated from. For ex, ‘Hogan’ or ‘TransactAccounts’ etc</param>
-        /// <param name="companyReference">Contains the identifier of the underlying Entity or Company or Branch</param>
-        /// <param name="eventName">The name that is displayed for the event</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="channel">Contains the channel in which the activity was performed. If pricing is not determined based on channel, then this is not significant</param>
-        /// <param name="branch">Contains the branch name/code in which the business activity was performed. If pricing is not determined based on branch, then this is not significant</param>
-        /// <param name="lineOfBusiness">Contains the line of business in which the activity was performed. If pricing is not determined based on line of business, then this is not significant</param>
-        /// <param name="transactionCurrency">Indicates the currency of the transaction. For example GBP, USD etc.</param>
-        /// <param name="transactionAmount">Contains the transaction amount. This is based on the currency, either local or foreign currency</param>
-        /// <param name="contractAmount">Indicates the amount of the transaction in contract currency</param>
-        /// <param name="contextName">Field name returned by the payment engine (TPH) for information or further processing.</param>
-        /// <param name="contextValue">Field value returned by the payment engine (TPH) for information or further processing.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>TransactionPricingRequestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TransactionPricingRequestResponse> GetTransactionPricingRequestAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? currency, string? channel, string? branch, string? lineOfBusiness, string? transactionCurrency, string? transactionAmount, string? contractAmount, string? contextName, string? contextValue, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<EligibilityDetailsResponse> GetEligibilityDetailsAsync(string productId, string? partyId = null, string? partyRole = null, string? effectiveDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the pricing for transaction business activity</summary>
@@ -320,30 +174,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>TransactionPricingRequestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TransactionPricingRequestResponse> GetTransactionPricingRequestAsync(string baseContractReference, string? systemReference, string? companyReference, string? eventName, string? effectiveDate, string? currency, string? channel, string? branch, string? lineOfBusiness, string? transactionCurrency, string? transactionAmount, string? contractAmount, string? contextName, string? contextValue, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the pricing for an event</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="companyReference">Contains the identifier of the underlying Entity or Company or Branch</param>
-        /// <param name="eventName">The name that is displayed for the event</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="channel">Contains the channel in which the activity was performed. If pricing is not determined based on channel, then this is not significant</param>
-        /// <param name="branch">Contains the branch name/code in which the business activity was performed. If pricing is not determined based on branch, then this is not significant</param>
-        /// <param name="lineOfBusiness">Contains the line of business in which the activity was performed. If pricing is not determined based on line of business, then this is not significant</param>
-        /// <param name="partyReference">Contains the identifier used for the party or customer</param>
-        /// <param name="partyRole">Contains the identifier used for the role played by the party or customer in the contract or account</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>NewActivityPricingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewActivityPricingResponse> GetNewActivityPricingAsync(string productId, string? companyReference, string? eventName, string? effectiveDate, string? currency, string? channel, string? branch, string? lineOfBusiness, string? partyReference, string? partyRole, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<TransactionPricingRequestResponse> GetTransactionPricingRequestAsync(string baseContractReference, string? systemReference = null, string? companyReference = null, string? eventName = null, string? effectiveDate = null, string? currency = null, string? channel = null, string? branch = null, string? lineOfBusiness = null, string? transactionCurrency = null, string? transactionAmount = null, string? contractAmount = null, string? contextName = null, string? contextValue = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the pricing for an event</summary>
@@ -367,22 +198,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>NewActivityPricingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewActivityPricingResponse> GetNewActivityPricingAsync(string productId, string? companyReference, string? eventName, string? effectiveDate, string? currency, string? channel, string? branch, string? lineOfBusiness, string? partyReference, string? partyRole, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the pricing details on a single Event</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PricingDetailsEventListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PricingDetailsEventListResponse> GetPricingDetailsEventListAsync(string arrangementId, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<NewActivityPricingResponse> GetNewActivityPricingAsync(string productId, string? companyReference = null, string? eventName = null, string? effectiveDate = null, string? currency = null, string? channel = null, string? branch = null, string? lineOfBusiness = null, string? partyReference = null, string? partyRole = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the pricing details on a single Event</summary>
@@ -398,22 +214,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PricingDetailsEventListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PricingDetailsEventListResponse> GetPricingDetailsEventListAsync(string arrangementId, string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the periodic pricing that have happened on a package</summary>
-        /// <param name="packageId">Indicates the arrangement reference of the package</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PackagePeriodicPricingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PackagePeriodicPricingResponse> GetPackagePeriodicPricingAsync(string packageId, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PricingDetailsEventListResponse> GetPricingDetailsEventListAsync(string arrangementId, string? transactionReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the periodic pricing that have happened on a package</summary>
@@ -429,22 +230,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PackagePeriodicPricingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PackagePeriodicPricingResponse> GetPackagePeriodicPricingAsync(string packageId, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of packages created in enterprise product pricing</summary>
-        /// <param name="packageId">Indicates the arrangement reference of the package</param>
-        /// <param name="effectiveDate">Contains the identifier for the transaction date. Dates are expected in ‘YYYYMMDD’ format</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PackageDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PackageDetailsResponse> GetPackageDetailsAsync(string packageId, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PackagePeriodicPricingResponse> GetPackagePeriodicPricingAsync(string packageId, string? effectiveDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of packages created in enterprise product pricing</summary>
@@ -460,21 +246,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PackageDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PackageDetailsResponse> GetPackageDetailsAsync(string packageId, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of contracts held by the party</summary>
-        /// <param name="partyId">Allows capturing of customers or person entities to be part of the relationship. If partyType is selected as Customer, then the system will allow only customer Ids to be captured into this field. If partyType is selected as Person or Entity, then system will allow only personEntity Ids to be captured into this field.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerHeldContractsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerHeldContractsResponse> GetCustomerHeldContractsAsync(string partyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PackageDetailsResponse> GetPackageDetailsAsync(string packageId, string? effectiveDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of contracts held by the party</summary>
@@ -489,25 +261,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerHeldContractsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerHeldContractsResponse> GetCustomerHeldContractsAsync(string partyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of events</summary>
-        /// <param name="baseContractReference">Contains the identifier for the contract or account in which the event is raised. This would typically be a unique reference to identify the specific contract or account in the system</param>
-        /// <param name="systemReference">Contains the identifier for the system in which the event originated from. For ex, ‘Hogan’ or ‘TransactAccounts’ etc</param>
-        /// <param name="numberOfTransactions">Indicates the number of transactions performed on the contract or the account</param>
-        /// <param name="dateFrom">Indicates the end date till which the transactions or events performed on the contract or account is to be returned</param>
-        /// <param name="dateTo">Indicates the start date from which the transactions or events performed on the contract or account is to be returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ContractEventListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ContractEventListResponse> GetContractEventListAsync(string baseContractReference, string? systemReference, string? numberOfTransactions, string? dateFrom, string? dateTo, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerHeldContractsResponse> GetCustomerHeldContractsAsync(string partyId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of events</summary>
@@ -526,7 +280,7 @@ namespace Transact.Enterprise.Pricing
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ContractEventListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ContractEventListResponse> GetContractEventListAsync(string baseContractReference, string? systemReference, string? numberOfTransactions, string? dateFrom, string? dateTo, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ContractEventListResponse> GetContractEventListAsync(string baseContractReference, string? systemReference = null, string? numberOfTransactions = null, string? dateFrom = null, string? dateTo = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -12,7 +12,7 @@ public class CountryHolidaysServiceTests : CredentialManagement
     public void GetCountryHolidaysAsync()
     {
         var result = _client.CountryHolidayService
-            .GetCountryholidaysAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetCountryholidaysAsync().Result;
         Assert.IsNotNull(result.Body);
     }
 }

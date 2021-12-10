@@ -12,21 +12,21 @@ public class BICsServiceTests : CredentialManagement
     [TestMethod]
     public void GetBICStatusAsync()
     {
-        var result = _client.BICsService.GetBICStatusAsync(BicId, null, null, null, null, null, null, null).Result;
+        var result = _client.BICsService.GetBICStatusAsync(BicId).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void ValidateBICAsync()
     {
-        var result = _client.BICsService.ValidateBICAsync(BicId, null, null, null, null, null, null, null, null).Result;
+        var result = _client.BICsService.ValidateBICAsync(BicId).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetLEIFromBICAsync()
     {
-        var result = _client.BICsService.GetLEIFromBICAsync(BicId, null, null, null, null, null, null, null).Result;
+        var result = _client.BICsService.GetLEIFromBICAsync(BicId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -34,7 +34,7 @@ public class BICsServiceTests : CredentialManagement
     public void GetBICIdentifierAsync()
     {
         var result = _client.BICsService
-            .GetBICIdentifierAsync(CountryCode, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetBICIdentifierAsync(CountryCode).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

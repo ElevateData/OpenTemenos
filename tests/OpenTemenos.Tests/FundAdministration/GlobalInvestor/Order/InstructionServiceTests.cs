@@ -14,7 +14,7 @@ public class InstructionServiceTests : CredentialManagement
     public void PostInstructionAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.InstructionService.PostInstructionAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InstructionService.PostInstructionAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

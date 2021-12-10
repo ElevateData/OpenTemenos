@@ -11,7 +11,7 @@ public class CorporateLendingProductBalancesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCorporateLendingProductBalancesAsync()
     {
-        var result = _client.CorporateLendingProductService.GetCorporateLendingProductBalancesAsync(null, null, null)
+        var result = _client.CorporateLendingProductService.GetCorporateLendingProductBalancesAsync()
             .Result;
         Assert.IsNotNull(result.Data);
     }

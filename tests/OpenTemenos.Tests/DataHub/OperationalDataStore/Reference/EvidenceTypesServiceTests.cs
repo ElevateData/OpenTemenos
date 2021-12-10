@@ -10,7 +10,7 @@ public class EvidenceTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetEvidenceTypesAsync()
     {
-        var result = _client.EvidenceTypeService.GetEvidenceTypesAsync(null).Result;
+        var result = _client.EvidenceTypeService.GetEvidenceTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

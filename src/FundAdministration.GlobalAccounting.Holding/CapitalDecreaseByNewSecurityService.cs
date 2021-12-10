@@ -23,28 +23,17 @@ namespace FundAdministration.GlobalAccounting.Holding.CapitalDecreaseByNewSecuri
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICapitalDecreaseByNewSecurityService
     {
-        /// <summary>Creates capital decrease consolidaton of shares master record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">createCapitalDecreaseByNewSecurity Payload</param>
-        /// <returns>createCapitalDecreaseByNewSecurity Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateCapitalDecreaseByNewSecuritySuccessResponse> CreateCapitalDecreaseByNewSecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates capital decrease consolidaton of shares master record</summary>
+        /// <param name="payload">createCapitalDecreaseByNewSecurity Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">createCapitalDecreaseByNewSecurity Payload</param>
         /// <returns>createCapitalDecreaseByNewSecurity Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateCapitalDecreaseByNewSecuritySuccessResponse> CreateCapitalDecreaseByNewSecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CreateCapitalDecreaseByNewSecuritySuccessResponse> CreateCapitalDecreaseByNewSecurityAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

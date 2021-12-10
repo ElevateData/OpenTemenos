@@ -11,28 +11,28 @@ public class RepurchaseAgreementsServiceTests : CredentialManagement
     [TestMethod]
     public void GetREPOPositionMovementsAsync()
     {
-        var result = _client.RepurchaseAgreementService.GetREPOPositionMovementsAsync(null, null, null, null).Result;
+        var result = _client.RepurchaseAgreementService.GetREPOPositionMovementsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetRESOPositionMovementsAsync()
     {
-        var result = _client.RepurchaseAgreementService.GetRESOPositionMovementsAsync(null, null, null, null).Result;
+        var result = _client.RepurchaseAgreementService.GetRESOPositionMovementsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetRESOPositionAsync()
     {
-        var result = _client.RepurchaseAgreementService.GetRESOPositionAsync(null, null, null, null, null).Result;
+        var result = _client.RepurchaseAgreementService.GetRESOPositionAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetREPOPositionAsync()
     {
-        var result = _client.RepurchaseAgreementService.GetREPOPositionAsync(null, null, null, null, null).Result;
+        var result = _client.RepurchaseAgreementService.GetREPOPositionAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

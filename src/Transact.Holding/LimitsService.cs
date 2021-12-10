@@ -23,20 +23,6 @@ namespace Transact.Holding.Limits
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ILimitsService
     {
-        /// <summary>Retrieves Limit cashflow details of contract</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitCashflowResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitCashflowResponse> GetLimitCashflowAsync(string arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit cashflow details of contract</summary>
         /// <param name="arrangementId">Indicates an unique identifier of an account</param>
@@ -50,70 +36,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitCashflowResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitCashflowResponse> GetLimitCashflowAsync(string arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Limit details of Customer group</summary>
-        /// <param name="customerLimitId">Limit reference of the customer</param>
-        /// <param name="riskGroupId">Identifier of the CUSTOMER.GROUP that constitutes one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them.</param>
-        /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="creditLineNumber">Details of the top most parent credit line plus the limit product in the hierarchy. Eg : 300/LI1701101987 where 300 is the limit product of the topmost parent and second part is the respective creditline</param>
-        /// <param name="recordParent">Identifier of the immediate parent limit</param>
-        /// <param name="limitProduct">Identifier of the credit limit product</param>
-        /// <param name="serialNumber">A sequence reference for the limit, which when used together with other fields such as Liability Number and/or Limit Reference, provides a unique identifier for a credit line</param>
-        /// <param name="limitCurrency">Currency in which the credit limit is granted</param>
-        /// <param name="buisnessUnit">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="expiryDate">The date an agreement such as an arrangement, product, credit facility or limit is due to expire</param>
-        /// <param name="timeBandName">Description of the individual time code under a credit facility</param>
-        /// <param name="internalAmount">Indicates the amount allocated to the Credit Limit by the Bank</param>
-        /// <param name="advisedAmount">Indicates the amount advised to the Credit Limit by the bank</param>
-        /// <param name="outstandingAmount">Contains the aggregate outstanding principal amount thereof after giving effect to any borrowings and prepayments or repayments of Committed Loans</param>
-        /// <param name="availableAmount">The credit limit available to the customer for use</param>
-        /// <param name="availableOrExcess">The available amount for the corresponding liability number and limit reference. This amount is always expressed in the currency of the limit. Calculated as the sum of the online limit, the available balance and any sub allocation taken, less any sub allocation given, any commission available, the total outstanding.</param>
-        /// <param name="totalCommitment">Specifies the total available commitment amounts  specific to a credit facility</param>
-        /// <param name="totalCredit">Indicates the total credit balance of the customer's account</param>
-        /// <param name="totalDebit">Indicates the total debit balance of the customer's account</param>
-        /// <param name="requestedCurrency">The currency the amount is requested in.</param>
-        /// <param name="exchangeRate">Contains the exchange rate returned from the system. i.e. For entries over foreign currency accounts, this contains the rate which used to convert the currency amount to the local equivalent at the time of the originating transaction.</param>
-        /// <param name="idlType">The INTRA.DAY.LIMIT type that is applicable for a specific credit facility of the customer</param>
-        /// <param name="idlApprovedAmount">The approved amount by the bank as INTRA.DAY.LIMIT on a credit facility within a specific period of the day</param>
-        /// <param name="idlAdvisedAmount">The advised amount by the bank to the customer as INTRA.DAY.LIMIT on a credit facility within a specific period of the day</param>
-        /// <param name="limitType">Defines the limit type for the trade</param>
-        /// <param name="relatedCustomer">Indicates the related customers of multi customer and joint limits</param>
-        /// <param name="sharedLimit">Indicates whether the credit line is of shared limit structure</param>
-        /// <param name="adjustAvailableAmount">Indicates to adjust the available funds to respective time bands.</param>
-        /// <param name="rebuildData">Indicates to rebuild the customer exposure when enquired by user.</param>
-        /// <param name="aggregateCustomerId">List of customer/person entity that are aggregated under a main customer on risk exposure view</param>
-        /// <param name="aggregateCustomerRelation">Relation code that exists between the main customer and the aggregated customers</param>
-        /// <param name="limitNote">Relation code that exists between the main customer and the aggregated customers</param>
-        /// <param name="sessionId">Id of the T24 session where the risk exposure view executed</param>
-        /// <param name="subGroup">Identifier of the sub group within a CUSTOMER.GROUP that constitues one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them.</param>
-        /// <param name="originalInternalAmount">Specifies the orignal amount actually approved or authorised on a credit line by Management or the Credit Committee before any repayment made</param>
-        /// <param name="originalAdvisedAmount">Specifies the original amount advised to the customer holding the credit facility before any repayment made</param>
-        /// <param name="repaidAmount">Indicates the amount which was repaid from the customer</param>
-        /// <param name="totalRepaidAmount">Total of the repaid amount under a credit facility</param>
-        /// <param name="excessFlag">Flag to indicate the credit line has been over utilised</param>
-        /// <param name="fixedOrVariable">Indicates the secured nature of limit that has been covered by a customer collateral. When FIXED the limit amount sanctioned will not have impact on changing value of collateral whereas when VARIABLE limit amount will change based on the collateral amount changes</param>
-        /// <param name="securedAmount">The total amount that has been covered by the collateral underlying the credit facility</param>
-        /// <param name="multiCustomerLimit">Specifies if a credit facility shall be used by multiple customers</param>
-        /// <param name="groupClass">Classify the type of group, whether it is a CUSTOMER.GROUP or SUB.GROUP</param>
-        /// <param name="isAggregationExists">Indicates if there exists aggregation of one or many customer exposure under a primary customer</param>
-        /// <param name="mainGroupId">Identifier of the main group under which the sub group has been defined</param>
-        /// <param name="creditLineProduct">Identifier of the limit product of the topmost credit facility in the hierarchy</param>
-        /// <param name="gvIndicator">Indicator which specifies the graphical view of risk exposure report requested</param>
-        /// <param name="onlineLimit">The Limit amount that is actually available for use.The system limit checks are performed against the online limit</param>
-        /// <param name="amountInUnits">Indicates the Units of the Amounts</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerGroupLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerGroupLimitsResponse> GetCustomerGroupLimitsAsync(string? customerLimitId, string? riskGroupId, string? liabilityNumber, string? limitId, string? creditLineNumber, string? recordParent, string? limitProduct, string? serialNumber, string? limitCurrency, string? buisnessUnit, string? expiryDate, string? timeBandName, string? internalAmount, string? advisedAmount, string? outstandingAmount, string? availableAmount, string? availableOrExcess, string? totalCommitment, string? totalCredit, string? totalDebit, string? requestedCurrency, string? exchangeRate, string? idlType, string? idlApprovedAmount, string? idlAdvisedAmount, string? limitType, string? relatedCustomer, string? sharedLimit, string? adjustAvailableAmount, string? rebuildData, string? aggregateCustomerId, string? aggregateCustomerRelation, string? limitNote, string? sessionId, string? subGroup, string? originalInternalAmount, string? originalAdvisedAmount, string? repaidAmount, string? totalRepaidAmount, string? excessFlag, string? fixedOrVariable, string? securedAmount, string? multiCustomerLimit, string? groupClass, string? isAggregationExists, string? mainGroupId, string? creditLineProduct, string? gvIndicator, string? onlineLimit, string? amountInUnits, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitCashflowResponse> GetLimitCashflowAsync(string arrangementId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit details of Customer group</summary>
@@ -177,23 +100,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerGroupLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerGroupLimitsResponse> GetCustomerGroupLimitsAsync(string? customerLimitId, string? riskGroupId, string? liabilityNumber, string? limitId, string? creditLineNumber, string? recordParent, string? limitProduct, string? serialNumber, string? limitCurrency, string? buisnessUnit, string? expiryDate, string? timeBandName, string? internalAmount, string? advisedAmount, string? outstandingAmount, string? availableAmount, string? availableOrExcess, string? totalCommitment, string? totalCredit, string? totalDebit, string? requestedCurrency, string? exchangeRate, string? idlType, string? idlApprovedAmount, string? idlAdvisedAmount, string? limitType, string? relatedCustomer, string? sharedLimit, string? adjustAvailableAmount, string? rebuildData, string? aggregateCustomerId, string? aggregateCustomerRelation, string? limitNote, string? sessionId, string? subGroup, string? originalInternalAmount, string? originalAdvisedAmount, string? repaidAmount, string? totalRepaidAmount, string? excessFlag, string? fixedOrVariable, string? securedAmount, string? multiCustomerLimit, string? groupClass, string? isAggregationExists, string? mainGroupId, string? creditLineProduct, string? gvIndicator, string? onlineLimit, string? amountInUnits, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves relations among customers</summary>
-        /// <param name="customerGroupId">Identifier of the CUSTOMER.GROUP that constitues one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them</param>
-        /// <param name="subGroup">Identifier of the sub group within a CUSTOMER.GROUP that constitues one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them.</param>
-        /// <param name="showReverseRelation">Indicates whether reverse relations among customer or entity are required</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerGroupRelationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerGroupRelationsResponse> GetCustomerGroupRelationsAsync(string customerGroupId, string? subGroup, string? showReverseRelation, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerGroupLimitsResponse> GetCustomerGroupLimitsAsync(string? customerLimitId = null, string? riskGroupId = null, string? liabilityNumber = null, string? limitId = null, string? creditLineNumber = null, string? recordParent = null, string? limitProduct = null, string? serialNumber = null, string? limitCurrency = null, string? buisnessUnit = null, string? expiryDate = null, string? timeBandName = null, string? internalAmount = null, string? advisedAmount = null, string? outstandingAmount = null, string? availableAmount = null, string? availableOrExcess = null, string? totalCommitment = null, string? totalCredit = null, string? totalDebit = null, string? requestedCurrency = null, string? exchangeRate = null, string? idlType = null, string? idlApprovedAmount = null, string? idlAdvisedAmount = null, string? limitType = null, string? relatedCustomer = null, string? sharedLimit = null, string? adjustAvailableAmount = null, string? rebuildData = null, string? aggregateCustomerId = null, string? aggregateCustomerRelation = null, string? limitNote = null, string? sessionId = null, string? subGroup = null, string? originalInternalAmount = null, string? originalAdvisedAmount = null, string? repaidAmount = null, string? totalRepaidAmount = null, string? excessFlag = null, string? fixedOrVariable = null, string? securedAmount = null, string? multiCustomerLimit = null, string? groupClass = null, string? isAggregationExists = null, string? mainGroupId = null, string? creditLineProduct = null, string? gvIndicator = null, string? onlineLimit = null, string? amountInUnits = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves relations among customers</summary>
@@ -210,21 +117,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerGroupRelationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerGroupRelationsResponse> GetCustomerGroupRelationsAsync(string customerGroupId, string? subGroup, string? showReverseRelation, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Customer Credit Limits</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitsResponse> GetCustomerLimitsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerGroupRelationsResponse> GetCustomerGroupRelationsAsync(string customerGroupId, string? subGroup = null, string? showReverseRelation = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Customer Credit Limits</summary>
@@ -239,21 +132,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitsResponse> GetCustomerLimitsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of Credit Lines that are due for Expiry</summary>
-        /// <param name="expiryDate">The date an agreement such as an arrangement, product, credit facility or limit is due to expire</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ExpiringLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExpiringLimitsResponse> GetExpiringLimitsAsync(string? expiryDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerLimitsResponse> GetCustomerLimitsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of Credit Lines that are due for Expiry</summary>
@@ -268,21 +147,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ExpiringLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExpiringLimitsResponse> GetExpiringLimitsAsync(string? expiryDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves summary of customer's Forex Liability</summary>
-        /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitsForexTradeSummaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitsForexTradeSummaryResponse> GetLimitsForexTradeSummaryAsync(string liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ExpiringLimitsResponse> GetExpiringLimitsAsync(string? expiryDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves summary of customer's Forex Liability</summary>
@@ -297,22 +162,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitsForexTradeSummaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitsForexTradeSummaryResponse> GetLimitsForexTradeSummaryAsync(string liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Limit Sharing group of the customer</summary>
-        /// <param name="groupId">Unique ID of the group</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerLimitGroupsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitGroupsResponse> GetCustomerLimitGroupsAsync(string? groupId, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitsForexTradeSummaryResponse> GetLimitsForexTradeSummaryAsync(string liabilityNumber, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit Sharing group of the customer</summary>
@@ -328,21 +178,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerLimitGroupsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitGroupsResponse> GetCustomerLimitGroupsAsync(string? groupId, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Limit group alloction details</summary>
-        /// <param name="groupId">Unique ID of the group</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitGroupAllocationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitGroupAllocationsResponse> GetLimitGroupAllocationsAsync(string groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerLimitGroupsResponse> GetCustomerLimitGroupsAsync(string? groupId = null, string? customerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit group alloction details</summary>
@@ -357,21 +193,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitGroupAllocationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitGroupAllocationsResponse> GetLimitGroupAllocationsAsync(string groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Limit Sharing Master Group details</summary>
-        /// <param name="groupId">Unique ID of the group</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerLimitMasterGroupsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitMasterGroupsResponse> GetCustomerLimitMasterGroupsAsync(string? groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitGroupAllocationsResponse> GetLimitGroupAllocationsAsync(string groupId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit Sharing Master Group details</summary>
@@ -386,21 +208,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerLimitMasterGroupsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitMasterGroupsResponse> GetCustomerLimitMasterGroupsAsync(string? groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves List of FOREX contract details available to the Limit</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitForexDealsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitForexDealsResponse> GetLimitForexDealsAsync(string limitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerLimitMasterGroupsResponse> GetCustomerLimitMasterGroupsAsync(string? groupId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves List of FOREX contract details available to the Limit</summary>
@@ -415,24 +223,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitForexDealsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitForexDealsResponse> GetLimitForexDealsAsync(string limitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves risk Excess details of the Limits untilised by Forex contracts</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="limitReferenceId">Limit reference identifier for the limit order.</param>
-        /// <param name="serialNumber">A sequence reference for the limit, which when used together with other fields such as Liability Number and/or Limit Reference, provides a unique identifier for a credit line</param>
-        /// <param name="customerNumber">Identifier of the Customer Number</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitForexLiabilitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitForexLiabilitiesResponse> GetLimitForexLiabilitiesAsync(string limitId, string? limitReferenceId, string? serialNumber, string? customerNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitForexDealsResponse> GetLimitForexDealsAsync(string limitId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves risk Excess details of the Limits untilised by Forex contracts</summary>
@@ -450,21 +241,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitForexLiabilitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitForexLiabilitiesResponse> GetLimitForexLiabilitiesAsync(string limitId, string? limitReferenceId, string? serialNumber, string? customerNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Limit Sharing group details</summary>
-        /// <param name="groupId">Unique ID of the group</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SharedLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SharedLimitsResponse> GetSharedLimitsAsync(string? groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitForexLiabilitiesResponse> GetLimitForexLiabilitiesAsync(string limitId, string? limitReferenceId = null, string? serialNumber = null, string? customerNumber = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit Sharing group details</summary>
@@ -479,21 +256,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SharedLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SharedLimitsResponse> GetSharedLimitsAsync(string? groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Limit sharing Priority</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerLimitSharingPrioritiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitSharingPrioritiesResponse> GetCustomerLimitSharingPrioritiesAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SharedLimitsResponse> GetSharedLimitsAsync(string? groupId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Limit sharing Priority</summary>
@@ -508,21 +271,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerLimitSharingPrioritiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLimitSharingPrioritiesResponse> GetCustomerLimitSharingPrioritiesAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves details of limit sub groups</summary>
-        /// <param name="masterGroupId">Identifier of the Limit Sharing Master Group</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitSubGroupsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitSubGroupsResponse> GetLimitSubGroupsAsync(string masterGroupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerLimitSharingPrioritiesResponse> GetCustomerLimitSharingPrioritiesAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves details of limit sub groups</summary>
@@ -537,21 +286,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitSubGroupsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitSubGroupsResponse> GetLimitSubGroupsAsync(string masterGroupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves summary of Customer outstanding details</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitSummaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitSummaryResponse> GetLimitSummaryAsync(string limitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitSubGroupsResponse> GetLimitSubGroupsAsync(string masterGroupId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves summary of Customer outstanding details</summary>
@@ -566,21 +301,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitSummaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitSummaryResponse> GetLimitSummaryAsync(string limitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of overdrawn Credit Limits</summary>
-        /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerOverdrawnLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerOverdrawnLimitsResponse> GetCustomerOverdrawnLimitsAsync(string liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitSummaryResponse> GetLimitSummaryAsync(string limitId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of overdrawn Credit Limits</summary>
@@ -595,21 +316,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerOverdrawnLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerOverdrawnLimitsResponse> GetCustomerOverdrawnLimitsAsync(string liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Credit Lines that are due for review</summary>
-        /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitsToReviewTodayResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitsToReviewTodayResponse> GetLimitsToReviewTodayAsync(string? liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerOverdrawnLimitsResponse> GetCustomerOverdrawnLimitsAsync(string liabilityNumber, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Credit Lines that are due for review</summary>
@@ -624,23 +331,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitsToReviewTodayResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitsToReviewTodayResponse> GetLimitsToReviewTodayAsync(string? liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Customer Sub Category Limits</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="customerGroupId">Identifier of the CUSTOMER.GROUP that constitues one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them</param>
-        /// <param name="subGroup">Identifier of the sub group within a CUSTOMER.GROUP that constitues one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SubCategoryLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubCategoryLimitsResponse> GetSubCategoryLimitsAsync(string customerId, string customerGroupId, string? subGroup, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitsToReviewTodayResponse> GetLimitsToReviewTodayAsync(string? liabilityNumber = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Customer Sub Category Limits</summary>
@@ -657,21 +348,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SubCategoryLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubCategoryLimitsResponse> GetSubCategoryLimitsAsync(string customerId, string customerGroupId, string? subGroup, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of Sub groups</summary>
-        /// <param name="customerGroupId">Identifier of the CUSTOMER.GROUP that constitues one or more related customers which would be used while arrivnig collective risk exposure of credit line liable to them either individually or shared among them</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SubGroupListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubGroupListResponse> GetSubGroupListAsync(string customerGroupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SubCategoryLimitsResponse> GetSubCategoryLimitsAsync(string customerId, string customerGroupId, string? subGroup = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of Sub groups</summary>
@@ -686,21 +363,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SubGroupListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubGroupListResponse> GetSubGroupListAsync(string customerGroupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of sublimits applicable for a credit line.</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SubLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubLimitsResponse> GetSubLimitsAsync(string limitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SubGroupListResponse> GetSubGroupListAsync(string customerGroupId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of sublimits applicable for a credit line.</summary>
@@ -715,21 +378,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SubLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SubLimitsResponse> GetSubLimitsAsync(string limitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of secured credit limits</summary>
-        /// <param name="liabilityNumber">Identifier of the Liability Customer to the credit limit</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>LimitCollateralsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitCollateralsResponse> GetLimitCollateralsAsync(string? liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SubLimitsResponse> GetSubLimitsAsync(string limitId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of secured credit limits</summary>
@@ -744,18 +393,7 @@ namespace Transact.Holding.Limits
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>LimitCollateralsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitCollateralsResponse> GetLimitCollateralsAsync(string? liabilityNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a credit limit</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CreditLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreditLimitsResponse> CreateCreditLimitsAsync(CreditLimits payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<LimitCollateralsResponse> GetLimitCollateralsAsync(string? liabilityNumber = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a credit limit</summary>
@@ -767,17 +405,7 @@ namespace Transact.Holding.Limits
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CreditLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreditLimitsResponse> CreateCreditLimitsAsync(CreditLimits payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves details of the limits</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>LimitDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitDetailsResponse> GetLimitDetailsAsync(string limitId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CreditLimitsResponse> CreateCreditLimitsAsync(CreditLimits payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves details of the limits</summary>
@@ -788,19 +416,7 @@ namespace Transact.Holding.Limits
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>LimitDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitDetailsResponse> GetLimitDetailsAsync(string limitId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a credit limit</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CreditLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreditLimitsResponse> UpdateCreditLimitsAsync(string limitId, CreditLimits payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<LimitDetailsResponse> GetLimitDetailsAsync(string limitId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a credit limit</summary>
@@ -813,19 +429,7 @@ namespace Transact.Holding.Limits
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CreditLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreditLimitsResponse> UpdateCreditLimitsAsync(string limitId, CreditLimits payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes a credit limit</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CreditLimitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreditLimitsResponse> DeleteCreditLimitsAsync(string limitId, CreditLimitsDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CreditLimitsResponse> UpdateCreditLimitsAsync(string limitId, CreditLimits payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a credit limit</summary>
@@ -838,7 +442,7 @@ namespace Transact.Holding.Limits
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CreditLimitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreditLimitsResponse> DeleteCreditLimitsAsync(string limitId, CreditLimitsDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CreditLimitsResponse> DeleteCreditLimitsAsync(string limitId, CreditLimitsDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -10,7 +10,7 @@ public class SecurityInstrumentsServiceTests : CredentialManagement
     [TestMethod]
     public void GetActiveIPOsAsync()
     {
-        var result = _client.SecurityInstrumentService.GetActiveIPOsAsync(null, null, null, null).Result;
+        var result = _client.SecurityInstrumentService.GetActiveIPOsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -18,21 +18,21 @@ public class SecurityInstrumentsServiceTests : CredentialManagement
     public void GetInstrumentsBondsAsync()
     {
         var result = _client.SecurityInstrumentService
-            .GetInstrumentsBondsAsync(null, null, null, null, null, null, null, null, null).Result;
+            .GetInstrumentsBondsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetFutureContractsAsync()
     {
-        var result = _client.SecurityInstrumentService.GetFutureContractsAsync(null).Result;
+        var result = _client.SecurityInstrumentService.GetFutureContractsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetOptionContractsAsync()
     {
-        var result = _client.SecurityInstrumentService.GetOptionContractsAsync(null).Result;
+        var result = _client.SecurityInstrumentService.GetOptionContractsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

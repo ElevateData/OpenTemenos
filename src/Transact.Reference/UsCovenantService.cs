@@ -23,17 +23,6 @@ namespace Transact.Reference.UsCovenant
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsCovenantService
     {
-        /// <summary>Retrives the available list of convenants that can be associated with a loan based on the terms agreed for the loan</summary>
-        /// <param name="covenantPlan">Indicates the covenant plan that are linked to a loan. Covenants are conditions based on which a commercial loan has been lent to a borrower. These covenants are are periodically evaluated and if the conditions are not met, the loan may be called or penalties applied.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>UsCovenantListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsCovenantListResponse> GetUsCovenantListAsync(string? covenantPlan, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrives the available list of convenants that can be associated with a loan based on the terms agreed for the loan</summary>
         /// <param name="covenantPlan">Indicates the covenant plan that are linked to a loan. Covenants are conditions based on which a commercial loan has been lent to a borrower. These covenants are are periodically evaluated and if the conditions are not met, the loan may be called or penalties applied.</param>
@@ -44,7 +33,7 @@ namespace Transact.Reference.UsCovenant
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>UsCovenantListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsCovenantListResponse> GetUsCovenantListAsync(string? covenantPlan, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UsCovenantListResponse> GetUsCovenantListAsync(string? covenantPlan = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

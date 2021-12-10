@@ -15,7 +15,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ApproOrExproDefinitionService
-            .PostapproexprodefinitionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostapproexprodefinitionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ApproOrExproDefinitionService
-            .PostapproexprodefinitionsAsync(null, null, null, null, null, payload).Result;
+            .PostapproexprodefinitionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ApproOrExproDefinitionService
-            .PutapproexprodefinitionsAsync(null, null, null, null, null, payload).Result;
+            .PutapproexprodefinitionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ApproOrExproDefinitionService
-            .DeleteapproexprodefinitionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteapproexprodefinitionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
     public void GetApproExproDefinitionsByInternalIdAsync()
     {
         var result = _client.ApproOrExproDefinitionService
-            .GetapproexprodefinitionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetapproexprodefinitionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ApproOrExproDefinitionService
-            .PutapproexprodefinitionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutapproexprodefinitionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class ApproExproDefinitionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ApproOrExproDefinitionService
-            .DeleteapproexprodefinitionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteapproexprodefinitionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

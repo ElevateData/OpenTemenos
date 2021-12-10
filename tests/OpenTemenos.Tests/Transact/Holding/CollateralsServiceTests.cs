@@ -15,7 +15,7 @@ public class CollateralsServiceTests : CredentialManagement
     {
         var payload = new CustomerCollaterals();
         var result = _client.CustomerCollateralService
-            .CreateCustomerCollateralsAsync(payload, null, null, null, null, null)
+            .CreateCustomerCollateralsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -27,7 +27,7 @@ public class CollateralsServiceTests : CredentialManagement
         var collateralId = string.Empty;
         var payload = new CustomerCollaterals();
         var result = _client.CustomerCollateralService
-            .UpdateCustomerCollateralsAsync(collateralId, payload, null, null, null, null, null)
+            .UpdateCustomerCollateralsAsync(collateralId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -36,7 +36,7 @@ public class CollateralsServiceTests : CredentialManagement
     public void GetCustomerCollateralsAsync()
     {
         var result = _client.CustomerCollateralService
-            .GetCustomerCollateralsAsync(CustomerId, null, null, null, null, null, null, null, null, null, null)
+            .GetCustomerCollateralsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

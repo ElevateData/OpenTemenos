@@ -14,7 +14,7 @@ public class ForwardInterestRateServiceTests : CredentialManagement
     {
         var body = new _0BULKPayload();
         var result = _client.ForwardInterestRateService
-            .CreateForwardInterestRateAsync(null, null, null, null, null, body).Result;
+            .CreateForwardInterestRateAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -15,7 +15,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.InitialSubscriptionService
-            .PostInitialsubscriptionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostInitialsubscriptionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.InitialSubscriptionService
-            .PostInitialsubscriptionsAsync(null, null, null, null, null, payload).Result;
+            .PostInitialsubscriptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.InitialSubscriptionService
-            .PutInitialsubscriptionsAsync(null, null, null, null, null, payload).Result;
+            .PutInitialsubscriptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.InitialSubscriptionService
-            .DeleteInitialsubscriptionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteInitialsubscriptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
     public void GetInitialSubscriptionsByInternalIdAsync()
     {
         var result = _client.InitialSubscriptionService
-            .GetInitialsubscriptionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetInitialsubscriptionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InitialSubscriptionService
-            .PutInitialsubscriptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutInitialsubscriptionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class InitialSubscriptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InitialSubscriptionService
-            .DeleteInitialsubscriptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteInitialsubscriptionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

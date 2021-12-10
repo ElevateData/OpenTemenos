@@ -15,7 +15,7 @@ public class SecurityPriceUpdatesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.MarketValueHistoricalService
-            .PostsecuritypriceupdatesAsync(null, null, null, null, null, payload).Result;
+            .PostsecuritypriceupdatesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

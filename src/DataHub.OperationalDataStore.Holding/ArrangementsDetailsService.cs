@@ -23,17 +23,6 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IArrangementsDetailsService
     {
-        /// <summary>Retrieves the arrangement details for specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="arrangementStatus">Indicates the status of the Arrangement during the life cycle of the contract</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <param name="productGroupId">The group, as defined by the institution, that the product belongs to.</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <returns>getArrangementsForCustomersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementsForCustomersResponse> GetArrangementsForCustomersAsync(string customerId, string? arrangementStatus, string? recordId, string? productLineId, string? productGroupId, string? productId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the arrangement details for specific customer</summary>
         /// <param name="customerId">Identifier of the customer</param>
@@ -44,18 +33,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
         /// <returns>getArrangementsForCustomersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementsForCustomersResponse> GetArrangementsForCustomersAsync(string customerId, string? arrangementStatus, string? recordId, string? productLineId, string? productGroupId, string? productId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the arrangement details for specific id</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="arrangementStatus">Indicates the status of the Arrangement during the life cycle of the contract</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <param name="productGroupId">The group, as defined by the institution, that the product belongs to.</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <returns>getArrangementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementResponse> GetArrangementAsync(string recordId, string? arrangementStatus, string? customerId, string? productLineId, string? productGroupId, string? productId);
+        System.Threading.Tasks.Task<GetArrangementsForCustomersResponse> GetArrangementsForCustomersAsync(string customerId, string? arrangementStatus = null, string? recordId = null, string? productLineId = null, string? productGroupId = null, string? productId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the arrangement details for specific id</summary>
@@ -67,18 +45,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
         /// <returns>getArrangementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementResponse> GetArrangementAsync(string recordId, string? arrangementStatus, string? customerId, string? productLineId, string? productGroupId, string? productId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the arrangement details for specific id and specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="arrangementStatus">Indicates the status of the Arrangement during the life cycle of the contract</param>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <param name="productGroupId">The group, as defined by the institution, that the product belongs to.</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <returns>getArrangementsForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementsForCustomerResponse> GetArrangementsForCustomerAsync(string customerId, string recordId, string? arrangementStatus, string? productLineId, string? productGroupId, string? productId);
+        System.Threading.Tasks.Task<GetArrangementResponse> GetArrangementAsync(string recordId, string? arrangementStatus = null, string? customerId = null, string? productLineId = null, string? productGroupId = null, string? productId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the arrangement details for specific id and specific customer</summary>
@@ -90,17 +57,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
         /// <returns>getArrangementsForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementsForCustomerResponse> GetArrangementsForCustomerAsync(string customerId, string recordId, string? arrangementStatus, string? productLineId, string? productGroupId, string? productId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Arrangement contract informations such as product line, product group, currency</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <param name="productGroupId">The group, as defined by the institution, that the product belongs to.</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <returns>getArrangementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementsResponse> GetArrangementsAsync(string recordId, string? productLineId, string? productGroupId, string? customerId, string? productId);
+        System.Threading.Tasks.Task<GetArrangementsForCustomerResponse> GetArrangementsForCustomerAsync(string customerId, string recordId, string? arrangementStatus = null, string? productLineId = null, string? productGroupId = null, string? productId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Arrangement contract informations such as product line, product group, currency</summary>
@@ -111,25 +68,13 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
         /// <returns>getArrangementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementsResponse> GetArrangementsAsync(string recordId, string? productLineId, string? productGroupId, string? customerId, string? productId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Arrangement Activity details</summary>
-        /// <returns>getArrangementActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementActivitiesResponse> GetArrangementActivitiesAsync();
+        System.Threading.Tasks.Task<GetArrangementsResponse> GetArrangementsAsync(string recordId, string? productLineId = null, string? productGroupId = null, string? customerId = null, string? productId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Arrangement Activity details</summary>
         /// <returns>getArrangementActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetArrangementActivitiesResponse> GetArrangementActivitiesAsync(System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of pending Arrangement Activity details</summary>
-        /// <param name="activity">Defines the activity to be processed against the Arrangement. The activity may be a user activity or a system generated activity.</param>
-        /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
-        /// <returns>getPendingArrangementActivityResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingArrangementActivityResponse> GetPendingArrangementActivityAsync(string? activity, string? recordStatus);
+        System.Threading.Tasks.Task<GetArrangementActivitiesResponse> GetArrangementActivitiesAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of pending Arrangement Activity details</summary>
@@ -137,14 +82,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
         /// <returns>getPendingArrangementActivityResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingArrangementActivityResponse> GetPendingArrangementActivityAsync(string? activity, string? recordStatus, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of pending bundle Arragement Activity details</summary>
-        /// <param name="activity">Defines the activity to be processed against the Arrangement. The activity may be a user activity or a system generated activity.</param>
-        /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
-        /// <returns>getPendingBundleArrangementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingBundleArrangementResponse> GetPendingBundleArrangementAsync(string? activity, string? recordStatus);
+        System.Threading.Tasks.Task<GetPendingArrangementActivityResponse> GetPendingArrangementActivityAsync(string? activity = null, string? recordStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of pending bundle Arragement Activity details</summary>
@@ -152,14 +90,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
         /// <returns>getPendingBundleArrangementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingBundleArrangementResponse> GetPendingBundleArrangementAsync(string? activity, string? recordStatus, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of pending deposit Arragement Activity details</summary>
-        /// <param name="activity">Defines the activity to be processed against the Arrangement. The activity may be a user activity or a system generated activity.</param>
-        /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
-        /// <returns>getPendingDepositArrangementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingDepositArrangementResponse> GetPendingDepositArrangementAsync(string? activity, string? recordStatus);
+        System.Threading.Tasks.Task<GetPendingBundleArrangementResponse> GetPendingBundleArrangementAsync(string? activity = null, string? recordStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of pending deposit Arragement Activity details</summary>
@@ -167,14 +98,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
         /// <returns>getPendingDepositArrangementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingDepositArrangementResponse> GetPendingDepositArrangementAsync(string? activity, string? recordStatus, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of pending loan Arragement Activity details</summary>
-        /// <param name="activity">Defines the activity to be processed against the Arrangement. The activity may be a user activity or a system generated activity.</param>
-        /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
-        /// <returns>getPendingLoanArrangementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingLoanArrangementResponse> GetPendingLoanArrangementAsync(string? activity, string? recordStatus);
+        System.Threading.Tasks.Task<GetPendingDepositArrangementResponse> GetPendingDepositArrangementAsync(string? activity = null, string? recordStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of pending loan Arragement Activity details</summary>
@@ -182,14 +106,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
         /// <returns>getPendingLoanArrangementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingLoanArrangementResponse> GetPendingLoanArrangementAsync(string? activity, string? recordStatus, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of pending consents Arragement Activity details</summary>
-        /// <param name="activity">Defines the activity to be processed against the Arrangement. The activity may be a user activity or a system generated activity.</param>
-        /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
-        /// <returns>getPendingConsentArrangementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingConsentArrangementResponse> GetPendingConsentArrangementAsync(string? activity, string? recordStatus);
+        System.Threading.Tasks.Task<GetPendingLoanArrangementResponse> GetPendingLoanArrangementAsync(string? activity = null, string? recordStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of pending consents Arragement Activity details</summary>
@@ -197,7 +114,7 @@ namespace DataHub.OperationalDataStore.Holding.ArrangementsDetails
         /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
         /// <returns>getPendingConsentArrangementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingConsentArrangementResponse> GetPendingConsentArrangementAsync(string? activity, string? recordStatus, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetPendingConsentArrangementResponse> GetPendingConsentArrangementAsync(string? activity = null, string? recordStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

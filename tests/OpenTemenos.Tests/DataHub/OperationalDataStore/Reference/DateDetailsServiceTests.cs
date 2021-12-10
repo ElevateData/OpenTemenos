@@ -11,14 +11,14 @@ public class DateDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetDatesByCompanyAsync()
     {
-        var result = _client.SystemBusinessDateService.GetDatesByCompanyAsync(_recordId, null, null, null).Result;
+        var result = _client.SystemBusinessDateService.GetDatesByCompanyAsync(_recordId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetDatesAsync()
     {
-        var result = _client.SystemBusinessDateService.GetDatesAsync(null, null, null).Result;
+        var result = _client.SystemBusinessDateService.GetDatesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

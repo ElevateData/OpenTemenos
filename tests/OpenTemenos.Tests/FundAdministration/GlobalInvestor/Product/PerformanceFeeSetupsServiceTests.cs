@@ -15,7 +15,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.PerformanceFeeService
-            .PostPerformancefeesetupsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostPerformancefeesetupsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
     public void PostPerformanceFeeSetupsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.PerformanceFeeService.PostPerformancefeesetupsAsync(null, null, null, null, null, payload)
+        var result = _client.PerformanceFeeService.PostPerformancefeesetupsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
     public void PutPerformanceFeeSetupsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.PerformanceFeeService.PutPerformancefeesetupsAsync(null, null, null, null, null, payload)
+        var result = _client.PerformanceFeeService.PutPerformancefeesetupsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.PerformanceFeeService
-            .DeletePerformancefeesetupsAsync(null, null, null, null, null, payload).Result;
+            .DeletePerformancefeesetupsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
     public void GetPerformanceFeeSetupsByInternalIdAsync()
     {
         var result = _client.PerformanceFeeService
-            .GetPerformancefeesetupsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetPerformancefeesetupsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.PerformanceFeeService
-            .PutPerformancefeesetupsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutPerformancefeesetupsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class PerformanceFeeServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.PerformanceFeeService
-            .DeletePerformancefeesetupsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletePerformancefeesetupsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

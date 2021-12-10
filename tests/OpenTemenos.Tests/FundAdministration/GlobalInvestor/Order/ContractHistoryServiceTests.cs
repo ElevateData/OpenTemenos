@@ -15,7 +15,7 @@ public class ContractHistoryServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.RegisterHistoricalContractService
-            .PostcontracthistoryAsync(null, null, null, null, null, payload).Result;
+            .PostcontracthistoryAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -23,26 +23,12 @@ namespace Transact.Party.CustomersMiFID
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomersMiFIDService
     {
-        /// <summary>Retrieves the MiFiD client information</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <returns>MiFIDClientInformationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MiFIDClientInformationResponse> GetMiFIDClientInformationAsync(string customerId, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the MiFiD client information</summary>
         /// <param name="customerId">Identifier of the customer</param>
         /// <returns>MiFIDClientInformationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MiFIDClientInformationResponse> GetMiFIDClientInformationAsync(string customerId, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the MiFiD client information</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>MiFIDClientInformationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MiFIDClientInformationResponse> CreateMiFIDClientInformationAsync(string customerId, MiFIDClientInformation payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<MiFIDClientInformationResponse> GetMiFIDClientInformationAsync(string customerId, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the MiFiD client information</summary>
@@ -51,15 +37,7 @@ namespace Transact.Party.CustomersMiFID
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>MiFIDClientInformationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MiFIDClientInformationResponse> CreateMiFIDClientInformationAsync(string customerId, MiFIDClientInformation payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the MiFiD client information</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>MiFIDClientInformationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MiFIDClientInformationResponse> UpdateMiFIDClientInformationAsync(string customerId, MiFIDClientInformation payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<MiFIDClientInformationResponse> CreateMiFIDClientInformationAsync(string customerId, MiFIDClientInformation payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the MiFiD client information</summary>
@@ -68,7 +46,7 @@ namespace Transact.Party.CustomersMiFID
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>MiFIDClientInformationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MiFIDClientInformationResponse> UpdateMiFIDClientInformationAsync(string customerId, MiFIDClientInformation payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<MiFIDClientInformationResponse> UpdateMiFIDClientInformationAsync(string customerId, MiFIDClientInformation payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

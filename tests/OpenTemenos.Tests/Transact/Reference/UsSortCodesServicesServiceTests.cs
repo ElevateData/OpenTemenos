@@ -11,7 +11,7 @@ public class UsSortCodesServicesServiceTests : CredentialManagement
     public void GetUsRoutingAsync()
     {
         var result = _client.UsSortCodesServicesService
-            .GetUsRoutingAsync(null, null, null, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetUsRoutingAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

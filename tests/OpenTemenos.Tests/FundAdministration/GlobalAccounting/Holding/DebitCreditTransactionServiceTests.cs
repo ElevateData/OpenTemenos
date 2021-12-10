@@ -15,7 +15,7 @@ public class DebitCreditTransactionServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.DebitCreditTransactionService
-            .DebitCreditTransactionAsync(null, null, null, null, null, payload)
+            .DebitCreditTransactionAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

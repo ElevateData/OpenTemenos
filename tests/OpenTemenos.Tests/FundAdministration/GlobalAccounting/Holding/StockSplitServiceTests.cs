@@ -14,7 +14,7 @@ public class StockSplitServiceTests : CredentialManagement
     public void CreateStockSplitAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.StockSplitService.CreateStockSplitAsync(null, null, null, null, null, payload).Result;
+        var result = _client.StockSplitService.CreateStockSplitAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

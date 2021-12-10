@@ -15,7 +15,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.AntiDilutionLevyDealingService
-            .PostAdlDealingDetailsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostAdlDealingDetailsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.AntiDilutionLevyDealingService
-            .PostAdlDealingDetailsAsync(null, null, null, null, null, payload).Result;
+            .PostAdlDealingDetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.AntiDilutionLevyDealingService
-            .PutAdlDealingDetailsAsync(null, null, null, null, null, payload).Result;
+            .PutAdlDealingDetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.AntiDilutionLevyDealingService
-            .DeleteAdlDealingDetailsAsync(null, null, null, null, null, payload).Result;
+            .DeleteAdlDealingDetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
     public void GetAdlDealingDetailsByInternalIdAsync()
     {
         var result = _client.AntiDilutionLevyDealingService
-            .GetAdlDealingDetailsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetAdlDealingDetailsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.AntiDilutionLevyDealingService
-            .PutAdlDealingDetailsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutAdlDealingDetailsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class AdlDealingDetailsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.AntiDilutionLevyDealingService
-            .DeleteAdlDealingDetailsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteAdlDealingDetailsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

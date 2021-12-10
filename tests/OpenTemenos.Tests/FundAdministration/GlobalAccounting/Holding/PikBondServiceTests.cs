@@ -14,7 +14,7 @@ public class PikBondServiceTests : CredentialManagement
     public void CreatePikBondAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.PikBondService.CreatePikBondAsync(null, null, null, null, null, payload).Result;
+        var result = _client.PikBondService.CreatePikBondAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

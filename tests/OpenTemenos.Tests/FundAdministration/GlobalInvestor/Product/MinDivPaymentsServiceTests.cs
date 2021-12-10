@@ -14,7 +14,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
     public void PostMinDivPaymentsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.MinDivPaymentService.PostMindivpaymentsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.MinDivPaymentService.PostMindivpaymentsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
     public void PostMinDivPaymentsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.MinDivPaymentService.PostMindivpaymentsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.MinDivPaymentService.PostMindivpaymentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
     public void PutMinDivPaymentsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.MinDivPaymentService.PutMindivpaymentsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.MinDivPaymentService.PutMindivpaymentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
     public void DeleteMinDivPaymentsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.MinDivPaymentService.DeleteMindivpaymentsAsync(null, null, null, null, null, payload)
+        var result = _client.MinDivPaymentService.DeleteMindivpaymentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -51,7 +51,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
     public void GetMinDivPaymentsByInternalIdAsync()
     {
         var result = _client.MinDivPaymentService
-            .GetMindivpaymentsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetMindivpaymentsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -63,7 +63,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.MinDivPaymentService
-            .PutMindivpaymentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutMindivpaymentsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -74,7 +74,7 @@ public class MinDivPaymentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.MinDivPaymentService
-            .DeleteMindivpaymentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteMindivpaymentsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

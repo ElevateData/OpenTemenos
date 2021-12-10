@@ -11,25 +11,21 @@ public class TradeDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetSellOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetSellOptionTradesAsync(null, null, null, null, null,
-            null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.DerivativeInstrumentOperationService.GetSellOptionTradesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetBuyOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetBuyOptionTradesAsync(null, null, null, null, null,
-            null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.DerivativeInstrumentOperationService.GetBuyOptionTradesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetActiveOptionTradesAsync()
     {
-        var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync(null, null, null, null,
-            null,
-            null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -23,19 +23,6 @@ namespace Transact.Product.MarketingCatalogue
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IMarketingCatalogueService
     {
-        /// <summary>Retrieves the list of Products available in Marketing Catalogue</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ProductMarketingCatalogueResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProductMarketingCatalogueResponse> GetProductMarketingCatalogueAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of Products available in Marketing Catalogue</summary>
         /// <param name="page_size">The total number of records per page</param>
@@ -48,22 +35,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ProductMarketingCatalogueResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProductMarketingCatalogueResponse> GetProductMarketingCatalogueAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Savings Accounts related products from Marketing Catalogue</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SavingsAccountCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SavingsAccountCatalogResponse> GetSavingsAccountCatalogAsync(string? currency, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ProductMarketingCatalogueResponse> GetProductMarketingCatalogueAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Savings Accounts related products from Marketing Catalogue</summary>
@@ -79,22 +51,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SavingsAccountCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SavingsAccountCatalogResponse> GetSavingsAccountCatalogAsync(string? currency, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of product related to Current Accounts Products</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrentAccountCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrentAccountCatalogResponse> GetCurrentAccountCatalogAsync(string? currency, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SavingsAccountCatalogResponse> GetSavingsAccountCatalogAsync(string? currency = null, string? customerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of product related to Current Accounts Products</summary>
@@ -110,25 +67,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrentAccountCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrentAccountCatalogResponse> GetCurrentAccountCatalogAsync(string? currency, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of products related to Term Deposit</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="minTerm">Contains the minimum term defined for the deposit contract</param>
-        /// <param name="maxTerm">Contains the maximum term defined for the deposit contract</param>
-        /// <param name="minAmount">Contains the minimum principal amount defined for the deposit contract</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>TermDepositsCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TermDepositsCatalogResponse> GetTermDepositsCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrentAccountCatalogResponse> GetCurrentAccountCatalogAsync(string? currency = null, string? customerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of products related to Term Deposit</summary>
@@ -147,26 +86,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>TermDepositsCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TermDepositsCatalogResponse> GetTermDepositsCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Short term finance products from Catalogue</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="minTerm">Contains the minimum term defined for the deposit contract</param>
-        /// <param name="maxTerm">Contains the maximum term defined for the deposit contract</param>
-        /// <param name="minAmount">Contains the minimum principal amount defined for the deposit contract</param>
-        /// <param name="maxAmount">Contains the maximum principal amount defined for the deposit contract</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ShortTermFinanceCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ShortTermFinanceCatalogResponse> GetShortTermFinanceCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<TermDepositsCatalogResponse> GetTermDepositsCatalogAsync(string? currency = null, string? customerId = null, string? minTerm = null, string? maxTerm = null, string? minAmount = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Short term finance products from Catalogue</summary>
@@ -186,26 +106,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ShortTermFinanceCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ShortTermFinanceCatalogResponse> GetShortTermFinanceCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Personal Loans Products from marketing catalogue</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="minTerm">Contains the minimum term defined for the deposit contract</param>
-        /// <param name="maxTerm">Contains the maximum term defined for the deposit contract</param>
-        /// <param name="minAmount">Contains the minimum principal amount defined for the deposit contract</param>
-        /// <param name="maxAmount">Contains the maximum principal amount defined for the deposit contract</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PersonalLoanCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PersonalLoanCatalogResponse> GetPersonalLoanCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ShortTermFinanceCatalogResponse> GetShortTermFinanceCatalogAsync(string? currency = null, string? customerId = null, string? minTerm = null, string? maxTerm = null, string? minAmount = null, string? maxAmount = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Personal Loans Products from marketing catalogue</summary>
@@ -225,26 +126,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PersonalLoanCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PersonalLoanCatalogResponse> GetPersonalLoanCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Mortgage Products available in Marketing Catalogue</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="minTerm">Contains the minimum term defined for the deposit contract</param>
-        /// <param name="maxTerm">Contains the maximum term defined for the deposit contract</param>
-        /// <param name="minAmount">Contains the minimum principal amount defined for the deposit contract</param>
-        /// <param name="maxAmount">Contains the maximum principal amount defined for the deposit contract</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>MortgageCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MortgageCatalogResponse> GetMortgageCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PersonalLoanCatalogResponse> GetPersonalLoanCatalogAsync(string? currency = null, string? customerId = null, string? minTerm = null, string? maxTerm = null, string? minAmount = null, string? maxAmount = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Mortgage Products available in Marketing Catalogue</summary>
@@ -264,26 +146,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>MortgageCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MortgageCatalogResponse> GetMortgageCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Home Purchase Products available from Marketing Catalogue</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="minTerm">Contains the minimum term defined for the deposit contract</param>
-        /// <param name="maxTerm">Contains the maximum term defined for the deposit contract</param>
-        /// <param name="minAmount">Contains the minimum principal amount defined for the deposit contract</param>
-        /// <param name="maxAmount">Contains the maximum principal amount defined for the deposit contract</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>HomePurchaseCatalogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HomePurchaseCatalogResponse> GetHomePurchaseCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<MortgageCatalogResponse> GetMortgageCatalogAsync(string? currency = null, string? customerId = null, string? minTerm = null, string? maxTerm = null, string? minAmount = null, string? maxAmount = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Home Purchase Products available from Marketing Catalogue</summary>
@@ -303,7 +166,7 @@ namespace Transact.Product.MarketingCatalogue
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>HomePurchaseCatalogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<HomePurchaseCatalogResponse> GetHomePurchaseCatalogAsync(string? currency, string? customerId, string? minTerm, string? maxTerm, string? minAmount, string? maxAmount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<HomePurchaseCatalogResponse> GetHomePurchaseCatalogAsync(string? currency = null, string? customerId = null, string? minTerm = null, string? maxTerm = null, string? minAmount = null, string? maxAmount = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

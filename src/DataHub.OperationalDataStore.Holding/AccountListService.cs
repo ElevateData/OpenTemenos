@@ -23,25 +23,11 @@ namespace DataHub.OperationalDataStore.Holding.AccountList
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IAccountListService
     {
-        /// <summary>Retrieve the list of Nostro accounts</summary>
-        /// <returns>getNostroAccountListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetNostroAccountListResponse> GetNostroAccountListAsync();
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of Nostro accounts</summary>
         /// <returns>getNostroAccountListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetNostroAccountListResponse> GetNostroAccountListAsync(System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of Vostro accounts</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="productName">Product name of the bank for this account, proprietary definition.</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <returns>getVostroAccountListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetVostroAccountListResponse> GetVostroAccountListAsync(string? recordId, string? customerId, string? productName, string? currencyId);
+        System.Threading.Tasks.Task<GetNostroAccountListResponse> GetNostroAccountListAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of Vostro accounts</summary>
@@ -51,7 +37,7 @@ namespace DataHub.OperationalDataStore.Holding.AccountList
         /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
         /// <returns>getVostroAccountListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetVostroAccountListResponse> GetVostroAccountListAsync(string? recordId, string? customerId, string? productName, string? currencyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetVostroAccountListResponse> GetVostroAccountListAsync(string? recordId = null, string? customerId = null, string? productName = null, string? currencyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -15,7 +15,7 @@ public class CapitalDecreaseOfParValuesForeignShareServiceTests : CredentialMana
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalDecreaseOfParValueForeignShareService
-            .CreateCapitalDecreaseOfParValueForeignWithCostAdjustmentAsync(null, null, null, null, null, payload)
+            .CreateCapitalDecreaseOfParValueForeignWithCostAdjustmentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

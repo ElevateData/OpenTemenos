@@ -15,7 +15,7 @@ public class CapitalDecreaseOfParValuesWithRealizedGainServiceTests : Credential
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalDecreaseOfParValueDomesticSharesTaxablePayment
-            .CreateCapitalDecreaseOfParValueWithRealisedGainAsync(null, null, null, null, null, payload)
+            .CreateCapitalDecreaseOfParValueWithRealisedGainAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

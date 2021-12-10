@@ -16,7 +16,7 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     public void GetPackageStatementAsync()
     {
         var result = _client.EnterpriseProductPricingService
-            .GetPackageStatementAsync(BaseContractReference, null, null, null, null, null, null, null, null, null, null)
+            .GetPackageStatementAsync(BaseContractReference)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,27 +24,22 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     [TestMethod]
     public void GetActivityChargeAmountAsync()
     {
-        var result = _client.EnterpriseProductPricingService.GetActivityChargeAmountAsync(BaseContractReference, null,
-            null,
-            null, null, null, null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.EnterpriseProductPricingService.GetActivityChargeAmountAsync(BaseContractReference).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetPeriodicChargesAmountAsync()
     {
-        var result = _client.EnterpriseProductPricingService.GetPeriodicChargesAmountAsync(BaseContractReference, null,
-            null, null,
-            null, null, null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.EnterpriseProductPricingService.GetPeriodicChargesAmountAsync(BaseContractReference)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetInterestRateAsync()
     {
-        var result = _client.EnterpriseProductPricingService.GetInterestRateAsync(BaseContractReference, null, null,
-            null, null,
-            null, null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.EnterpriseProductPricingService.GetInterestRateAsync(BaseContractReference).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -52,7 +47,7 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     public void GetEligibilityDetailsAsync()
     {
         var result = _client.EnterpriseProductPricingService
-            .GetEligibilityDetailsAsync(ProductId, null, null, null, null, null, null, null, null, null, null, null)
+            .GetEligibilityDetailsAsync(ProductId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -60,18 +55,15 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     [TestMethod]
     public void GetTransactionPricingRequestAsync()
     {
-        var result = _client.EnterpriseProductPricingService.GetTransactionPricingRequestAsync(BaseContractReference,
-            null, null,
-            null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
-            null, null).Result;
+        var result = _client.EnterpriseProductPricingService.GetTransactionPricingRequestAsync(BaseContractReference)
+            .Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetNewActivityPricingAsync()
     {
-        var result = _client.EnterpriseProductPricingService.GetNewActivityPricingAsync(ProductId, null, null, null,
-            null, null, null, null, null, null, null, null, null, null, null, null, null, null).Result;
+        var result = _client.EnterpriseProductPricingService.GetNewActivityPricingAsync(ProductId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -79,7 +71,7 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     public void GetPricingDetailsEventListAsync()
     {
         var result = _client.EnterpriseProductPricingService
-            .GetPricingDetailsEventListAsync(ArrangementId, null, null, null, null, null, null, null, null, null)
+            .GetPricingDetailsEventListAsync(ArrangementId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -88,7 +80,7 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     public void GetPackagePeriodicPricingAsync()
     {
         var result = _client.EnterpriseProductPricingService
-            .GetPackagePeriodicPricingAsync(PackageId, null, null, null, null, null, null, null, null, null).Result;
+            .GetPackagePeriodicPricingAsync(PackageId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -96,7 +88,7 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     public void GetPackageDetailsAsync()
     {
         var result = _client.EnterpriseProductPricingService
-            .GetPackageDetailsAsync(PackageId, null, null, null, null, null, null, null, null, null).Result;
+            .GetPackageDetailsAsync(PackageId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -104,16 +96,14 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     public void GetCustomerHeldContractsAsync()
     {
         var result = _client.EnterpriseProductPricingService
-            .GetCustomerHeldContractsAsync(PartyId, null, null, null, null, null, null, null, null).Result;
+            .GetCustomerHeldContractsAsync(PartyId).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetContractEventListAsync()
     {
-        var result = _client.EnterpriseProductPricingService.GetContractEventListAsync(BaseContractReference, null,
-            null, null, null,
-            null, null, null, null, null, null, null, null).Result;
+        var result = _client.EnterpriseProductPricingService.GetContractEventListAsync(BaseContractReference).Result;
         Assert.IsNotNull(result.Body);
     }
 }

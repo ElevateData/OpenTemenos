@@ -15,7 +15,7 @@ public class FixedMbsIpbServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FixedMortgageBackedSecurityOrInflationProtectedBondService
-            .CreateFixedMbsOrIpbAsync(null, null, null, null, null, payload).Result;
+            .CreateFixedMbsOrIpbAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

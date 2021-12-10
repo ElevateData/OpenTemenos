@@ -15,7 +15,7 @@ public class ForwardForeignExchangeRepaymentServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ForwardForeignExchangeRepaymentService
-            .CreateForwardForeignExchangeRepaymentAsync(null, null, null, null, null, payload).Result;
+            .CreateForwardForeignExchangeRepaymentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

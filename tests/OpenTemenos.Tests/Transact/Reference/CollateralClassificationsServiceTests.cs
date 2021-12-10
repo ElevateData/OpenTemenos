@@ -12,7 +12,7 @@ public class CollateralClassificationsServiceTests : CredentialManagement
     public void GetCollateralTypesAsync()
     {
         var result = _client.CollateralClassificationsService
-            .GetCollateralTypesAsync(null, null, null, null, null, null, null, null).Result;
+            .GetCollateralTypesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -21,7 +21,7 @@ public class CollateralClassificationsServiceTests : CredentialManagement
     public void GetCollateralSubTypesAsync()
     {
         var result = _client.CollateralClassificationsService
-            .GetCollateralSubTypesAsync(CollateralTypeId, null, null, null, null, null, null, null).Result;
+            .GetCollateralSubTypesAsync(CollateralTypeId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

@@ -14,7 +14,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
     public void PostTaxIdByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.TaxResidenceIdService.PosttaxidByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TaxResidenceIdService.PosttaxidByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -23,7 +23,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
     public void PostTaxIdAsync()
     {
         var payload = new _0Payload();
-        var result = _client.TaxResidenceIdService.PosttaxidAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TaxResidenceIdService.PosttaxidAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
     public void PutTaxIdAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TaxResidenceIdService.PuttaxidAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TaxResidenceIdService.PuttaxidAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
     public void DeleteTaxIdAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TaxResidenceIdService.DeletetaxidAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TaxResidenceIdService.DeletetaxidAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
     public void GetTaxIdByInternalIdAsync()
     {
         var result = _client.TaxResidenceIdService
-            .GettaxidByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId).Result;
+            .GettaxidByInternalIdAsync(InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -59,7 +59,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.TaxResidenceIdService.PuttaxidByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.TaxResidenceIdService.PuttaxidByIdAsync(internalId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -71,7 +71,7 @@ public class FatcaTaxIdServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TaxResidenceIdService
-            .DeletetaxidByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletetaxidByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

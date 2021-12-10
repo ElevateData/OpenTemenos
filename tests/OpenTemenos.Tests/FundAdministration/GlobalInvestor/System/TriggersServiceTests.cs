@@ -13,7 +13,7 @@ public class TriggersServiceTests : CredentialManagement
     public void PostTriggersAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.OutboundTriggerService.PosttriggersAsync(null, null, null, null, null, body).Result;
+        var result = _client.OutboundTriggerService.PosttriggersAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

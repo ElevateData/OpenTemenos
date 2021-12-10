@@ -14,7 +14,7 @@ public class InterestRatesServiceTests : CredentialManagement
     public void GetRateTextsAsync()
     {
         var result = _client.InterestRatesService
-            .GetRateTextsAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetRateTextsAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -22,7 +22,7 @@ public class InterestRatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBasicInterestAsync()
     {
-        var result = _client.InterestRatesService.GetBasicInterestAsync(RateId, null, null, null, null).Result;
+        var result = _client.InterestRatesService.GetBasicInterestAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new BasicInterest();
         var result = _client.InterestRatesService
-            .CreateBasicInterestAsync(rateId, payload, null, null, null, null, null).Result;
+            .CreateBasicInterestAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -44,7 +44,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new BasicInterest();
         var result = _client.InterestRatesService
-            .UpdateBasicInterestAsync(rateId, payload, null, null, null, null, null).Result;
+            .UpdateBasicInterestAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -52,7 +52,7 @@ public class InterestRatesServiceTests : CredentialManagement
     public void GetBasicInterestChangeDatesAsync()
     {
         var result = _client.InterestRatesService
-            .GetBasicInterestChangeDatesAsync(RateId, null, null, null, null, null, null, null, null).Result;
+            .GetBasicInterestChangeDatesAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -60,7 +60,7 @@ public class InterestRatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBasicInterestRateChangesAsync()
     {
-        var result = _client.InterestRatesService.GetBasicInterestRateChangesAsync(RateId, null, null, null, null)
+        var result = _client.InterestRatesService.GetBasicInterestRateChangesAsync(RateId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -68,7 +68,7 @@ public class InterestRatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetPeriodicInterestAsync()
     {
-        var result = _client.InterestRatesService.GetPeriodicInterestAsync(RateId, null, null, null, null).Result;
+        var result = _client.InterestRatesService.GetPeriodicInterestAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -79,7 +79,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new PeriodicInterest();
         var result = _client.InterestRatesService
-            .CreatePeriodicInterestAsync(rateId, payload, null, null, null, null, null).Result;
+            .CreatePeriodicInterestAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -90,7 +90,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new PeriodicInterest();
         var result = _client.InterestRatesService
-            .UpdatePeriodicInterestAsync(rateId, payload, null, null, null, null, null).Result;
+            .UpdatePeriodicInterestAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -98,7 +98,7 @@ public class InterestRatesServiceTests : CredentialManagement
     public void GetPeriodicRateChangesAsync()
     {
         var result = _client.InterestRatesService
-            .GetPeriodicRateChangesAsync(Date, null, null, null, null, null, null, null, null).Result;
+            .GetPeriodicRateChangesAsync(Date).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -106,7 +106,7 @@ public class InterestRatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBasicInterestNameAsync()
     {
-        var result = _client.InterestRatesService.GetBasicInterestNameAsync(RateId, null, null, null, null).Result;
+        var result = _client.InterestRatesService.GetBasicInterestNameAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
@@ -118,7 +118,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new BasicInterestName();
         var result = _client.InterestRatesService
-            .CreateBasicInterestNameAsync(rateId, payload, null, null, null, null, null).Result;
+            .CreateBasicInterestNameAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -129,14 +129,14 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new BasicInterestName();
         var result = _client.InterestRatesService
-            .UpdateBasicInterestNameAsync(rateId, payload, null, null, null, null, null).Result;
+            .UpdateBasicInterestNameAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetPeriodicRateNameAsync()
     {
-        var result = _client.InterestRatesService.GetPeriodicRateNameAsync(RateId, null, null, null, null).Result;
+        var result = _client.InterestRatesService.GetPeriodicRateNameAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -147,7 +147,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new PeriodicRateName();
         var result = _client.InterestRatesService
-            .CreatePeriodicRateNameAsync(rateId, payload, null, null, null, null, null).Result;
+            .CreatePeriodicRateNameAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -158,7 +158,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new PeriodicRateName();
         var result = _client.InterestRatesService
-            .UpdatePeriodicRateNameAsync(rateId, payload, null, null, null, null, null).Result;
+            .UpdatePeriodicRateNameAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -169,7 +169,7 @@ public class InterestRatesServiceTests : CredentialManagement
         var rateId = string.Empty;
         var payload = new PeriodicRateNameDelete();
         var result = _client.InterestRatesService
-            .DeletePeriodicRateNameAsync(rateId, payload, null, null, null, null, null).Result;
+            .DeletePeriodicRateNameAsync(rateId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

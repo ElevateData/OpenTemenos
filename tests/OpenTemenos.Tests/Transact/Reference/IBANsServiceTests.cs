@@ -14,7 +14,7 @@ public class IBANsServiceTests : CredentialManagement
     [TestMethod]
     public void GetBICfromIBANAsync()
     {
-        var result = _client.IBANsService.GetBICfromIBANAsync(IbanId, null, null, null, null, null, null, null).Result;
+        var result = _client.IBANsService.GetBICfromIBANAsync(IbanId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -22,7 +22,7 @@ public class IBANsServiceTests : CredentialManagement
     [TestMethod]
     public void GetIBANDetailsAsync()
     {
-        var result = _client.IBANsService.GetIBANDetailsAsync(IbanId, null, null, null, null, null, null, null).Result;
+        var result = _client.IBANsService.GetIBANDetailsAsync(IbanId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -30,7 +30,7 @@ public class IBANsServiceTests : CredentialManagement
     public void GetIBANFromBBANAsync()
     {
         var result = _client.IBANsService
-            .GetIBANFromBBANAsync(IbanId, CountryId, null, null, null, null, null, null, null).Result;
+            .GetIBANFromBBANAsync(IbanId, CountryId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -39,7 +39,7 @@ public class IBANsServiceTests : CredentialManagement
     public void GetIBANNumberGeneratedAsync()
     {
         var result = _client.IBANsService
-            .GetIBANNumberGeneratedAsync(AccountId, BankId, null, CountryId, null, null, null, null, null, null, null)
+            .GetIBANNumberGeneratedAsync(AccountId, BankId, CountryId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -48,7 +48,7 @@ public class IBANsServiceTests : CredentialManagement
     [TestMethod]
     public void GetIBANStructureAsync()
     {
-        var result = _client.IBANsService.GetIBANStructureAsync(CountryId, null, null, null, null, null, null, null)
+        var result = _client.IBANsService.GetIBANStructureAsync(CountryId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -56,7 +56,7 @@ public class IBANsServiceTests : CredentialManagement
     [TestMethod]
     public void ValidateIBANAsync()
     {
-        var result = _client.IBANsService.ValidateIBANAsync(IbanId, null, null, null, null, null, null, null).Result;
+        var result = _client.IBANsService.ValidateIBANAsync(IbanId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

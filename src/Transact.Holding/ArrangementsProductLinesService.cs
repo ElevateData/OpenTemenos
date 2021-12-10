@@ -23,19 +23,6 @@ namespace Transact.Holding.ArrangementsProductLines
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IArrangementsProductLinesService
     {
-        /// <summary>Retrieves the list of unapproved accounts for the given Accounts Product</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productGroupId">The identifier of the product group</param>
-        /// <param name="productId">The identifier of the product</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>UnapprovedArrangementsDepositsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UnapprovedArrangementsDepositsResponse> GetUnapprovedArrangementsDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productGroupId, string? productId, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of unapproved accounts for the given Accounts Product</summary>
         /// <param name="customerId">The identifier of the customer</param>
@@ -48,20 +35,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>UnapprovedArrangementsDepositsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UnapprovedArrangementsDepositsResponse> GetUnapprovedArrangementsDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productGroupId, string? productId, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of unapproved accounts for the given Loan Product</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productGroupId">The identifier of the product group</param>
-        /// <param name="productId">The identifier of the product</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>UnapprovedArrangementsLoansResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UnapprovedArrangementsLoansResponse> GetUnapprovedArrangementsLoansAsync(string productLine, string? customerId, string? arrangementId, string? productGroupId, string? productId, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<UnapprovedArrangementsDepositsResponse> GetUnapprovedArrangementsDepositsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroupId = null, string? productId = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of unapproved accounts for the given Loan Product</summary>
@@ -75,19 +49,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>UnapprovedArrangementsLoansResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UnapprovedArrangementsLoansResponse> GetUnapprovedArrangementsLoansAsync(string productLine, string? customerId, string? arrangementId, string? productGroupId, string? productId, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of unapproved accounts for the given Account Product</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productGroupId">The identifier of the product group</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>UnapprovedArrangementsAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UnapprovedArrangementsAccountsResponse> GetUnapprovedArrangementsAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productGroupId, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<UnapprovedArrangementsLoansResponse> GetUnapprovedArrangementsLoansAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroupId = null, string? productId = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of unapproved accounts for the given Account Product</summary>
@@ -100,20 +62,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>UnapprovedArrangementsAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UnapprovedArrangementsAccountsResponse> GetUnapprovedArrangementsAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productGroupId, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of accounts in Hold status for the given Accounts Product</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productId">The identifier of the product</param>
-        /// <param name="activityId">The identifier of the activity</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>AAPendingArrangementAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AAPendingArrangementAccountsResponse> GetAAPendingArrangementAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productId, string? currency, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<UnapprovedArrangementsAccountsResponse> GetUnapprovedArrangementsAccountsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroupId = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of accounts in Hold status for the given Accounts Product</summary>
@@ -127,20 +76,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>AAPendingArrangementAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AAPendingArrangementAccountsResponse> GetAAPendingArrangementAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productId, string? currency, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of accounts in Hold status for the given Deposit Product</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productId">The identifier of the product</param>
-        /// <param name="activityId">The identifier of the activity</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>AAPendingArrangementDepositsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AAPendingArrangementDepositsResponse> GetAAPendingArrangementDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productId, string? currency, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<AAPendingArrangementAccountsResponse> GetAAPendingArrangementAccountsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productId = null, string? currency = null, string? activityId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of accounts in Hold status for the given Deposit Product</summary>
@@ -154,20 +90,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>AAPendingArrangementDepositsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AAPendingArrangementDepositsResponse> GetAAPendingArrangementDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productId, string? currency, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of accounts in Hold status for the given Lending Product</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="productId">The identifier of the product</param>
-        /// <param name="activityId">The identifier of the activity</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>AAPendingArrangementLoansResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AAPendingArrangementLoansResponse> GetAAPendingArrangementLoansAsync(string productLine, string? customerId, string? arrangementId, string? productId, string? currency, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<AAPendingArrangementDepositsResponse> GetAAPendingArrangementDepositsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productId = null, string? currency = null, string? activityId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of accounts in Hold status for the given Lending Product</summary>
@@ -181,18 +104,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>AAPendingArrangementLoansResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AAPendingArrangementLoansResponse> GetAAPendingArrangementLoansAsync(string productLine, string? customerId, string? arrangementId, string? productId, string? currency, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of approved accounts created from the Accounts Products</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ApprovedAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApprovedAccountsResponse> GetApprovedAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<AAPendingArrangementLoansResponse> GetAAPendingArrangementLoansAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productId = null, string? currency = null, string? activityId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of approved accounts created from the Accounts Products</summary>
@@ -204,18 +116,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ApprovedAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApprovedAccountsResponse> GetApprovedAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of approved accounts created from the Deposits Products</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ApprovedDepositsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApprovedDepositsResponse> GetApprovedDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ApprovedAccountsResponse> GetApprovedAccountsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of approved accounts created from the Deposits Products</summary>
@@ -227,18 +128,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ApprovedDepositsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApprovedDepositsResponse> GetApprovedDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of approved accounts created from the Loan Products</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ApprovedLoansResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApprovedLoansResponse> GetApprovedLoansAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ApprovedDepositsResponse> GetApprovedDepositsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of approved accounts created from the Loan Products</summary>
@@ -250,18 +140,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ApprovedLoansResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApprovedLoansResponse> GetApprovedLoansAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of closed or matured accounts for a given Accounts Product Line</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ClosedMaturedAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ClosedMaturedAccountsResponse> GetClosedMaturedAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ApprovedLoansResponse> GetApprovedLoansAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of closed or matured accounts for a given Accounts Product Line</summary>
@@ -273,18 +152,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ClosedMaturedAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ClosedMaturedAccountsResponse> GetClosedMaturedAccountsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of closed or matured accounts for a given Deposit Product Line</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ClosedMaturedDepositsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ClosedMaturedDepositsResponse> GetClosedMaturedDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ClosedMaturedAccountsResponse> GetClosedMaturedAccountsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of closed or matured accounts for a given Deposit Product Line</summary>
@@ -296,18 +164,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ClosedMaturedDepositsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ClosedMaturedDepositsResponse> GetClosedMaturedDepositsAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of closed or matured accounts for a given Lending Product Line</summary>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>ClosedMaturedLendingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ClosedMaturedLendingResponse> GetClosedMaturedLendingAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ClosedMaturedDepositsResponse> GetClosedMaturedDepositsAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of closed or matured accounts for a given Lending Product Line</summary>
@@ -319,17 +176,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>ClosedMaturedLendingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ClosedMaturedLendingResponse> GetClosedMaturedLendingAsync(string productLine, string? customerId, string? arrangementId, string? productGroup, string? product, string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Simulated accounts created under the given Accounts Product Line</summary>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>SimulatedAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SimulatedAccountsResponse> GetSimulatedAccountsAsync(string productLine, string? owner, string? arrangementId, string? currency, string? offerReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ClosedMaturedLendingResponse> GetClosedMaturedLendingAsync(string productLine, string? customerId = null, string? arrangementId = null, string? productGroup = null, string? product = null, string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Simulated accounts created under the given Accounts Product Line</summary>
@@ -340,17 +187,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>SimulatedAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SimulatedAccountsResponse> GetSimulatedAccountsAsync(string productLine, string? owner, string? arrangementId, string? currency, string? offerReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Simulated accounts created under the given Deposit Product Line</summary>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>SimulatedDepositsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SimulatedDepositsResponse> GetSimulatedDepositsAsync(string productLine, string? arrangementId, string? owner, string? currency, string? offerReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SimulatedAccountsResponse> GetSimulatedAccountsAsync(string productLine, string? owner = null, string? arrangementId = null, string? currency = null, string? offerReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Simulated accounts created under the given Deposit Product Line</summary>
@@ -361,17 +198,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>SimulatedDepositsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SimulatedDepositsResponse> GetSimulatedDepositsAsync(string productLine, string? arrangementId, string? owner, string? currency, string? offerReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the List of Simulated accounts created under the given Lending Product Line</summary>
-        /// <param name="arrangementId">The unique identifiier of an arrangement contract. The format of the ID is YYDDDXXXXX prefixed with AA. YYDDD is the year and date of input in julian date format, XXXXX - is a random generated string.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
-        /// <returns>SimulatedLendingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SimulatedLendingResponse> GetSimulatedLendingAsync(string productLine, string? arrangementId, string? owner, string? currency, string? offerReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SimulatedDepositsResponse> GetSimulatedDepositsAsync(string productLine, string? arrangementId = null, string? owner = null, string? currency = null, string? offerReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the List of Simulated accounts created under the given Lending Product Line</summary>
@@ -382,7 +209,7 @@ namespace Transact.Holding.ArrangementsProductLines
         /// <param name="companyId">The identifier of the company, following the format CCGGGLLLL, where: CC is the country code, GGG is Company Group Code and LLLL is the Local Code. Country Code must be a valid countryCode, Company Group Code must be 3 numeric characters in the range 001-999 and must be a valid companyGroup. The Local Code is 4 numeric characters in the range 0001-9999, e.g. GB0010001</param>
         /// <returns>SimulatedLendingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SimulatedLendingResponse> GetSimulatedLendingAsync(string productLine, string? arrangementId, string? owner, string? currency, string? offerReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SimulatedLendingResponse> GetSimulatedLendingAsync(string productLine, string? arrangementId = null, string? owner = null, string? currency = null, string? offerReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

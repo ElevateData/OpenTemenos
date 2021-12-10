@@ -23,99 +23,57 @@ namespace FundAdministration.GlobalInvestor.Party.ProfileSecurity
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IProfileSecurityService
     {
-        /// <summary>Creates Profile security for the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurityByParent Payload</param>
-        /// <returns>postProfilesecurityByParent Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecurityByParentSuccessResponse> PostProfilesecurityByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Profile security for the specified parent</summary>
+        /// <param name="payload">postProfilesecurityByParent Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurityByParent Payload</param>
         /// <returns>postProfilesecurityByParent Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecurityByParentSuccessResponse> PostProfilesecurityByParentAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Profile security with parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurity Payload</param>
-        /// <returns>postProfilesecurity Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecuritySuccessResponse> PostProfilesecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostProfilesecurityByParentSuccessResponse> PostProfilesecurityByParentAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Profile security with parent mentioned in the payload</summary>
+        /// <param name="payload">postProfilesecurity Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurity Payload</param>
         /// <returns>postProfilesecurity Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecuritySuccessResponse> PostProfilesecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Profile security records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putProfilesecurity Payload</param>
-        /// <returns>putProfilesecurity Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecuritySuccessResponse> PutProfilesecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostProfilesecuritySuccessResponse> PostProfilesecurityAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Profile security records with identifiers provided in the payload</summary>
+        /// <param name="payload">putProfilesecurity Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putProfilesecurity Payload</param>
         /// <returns>putProfilesecurity Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecuritySuccessResponse> PutProfilesecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Profile security records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteProfilesecurity Payload</param>
-        /// <returns>deleteProfilesecurity Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecuritySuccessResponse> DeleteProfilesecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutProfilesecuritySuccessResponse> PutProfilesecurityAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Profile security records with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteProfilesecurity Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteProfilesecurity Payload</param>
         /// <returns>deleteProfilesecurity Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecuritySuccessResponse> DeleteProfilesecurityAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteProfilesecuritySuccessResponse> DeleteProfilesecurityAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Profile security record</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -126,171 +84,87 @@ namespace FundAdministration.GlobalInvestor.Party.ProfileSecurity
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getProfilesecurityByInternalId Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProfilesecurityByInternalIdSuccessResponse> GetProfilesecurityByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Profile security record</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getProfilesecurityByInternalId Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProfilesecurityByInternalIdSuccessResponse> GetProfilesecurityByInternalIdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Profile security record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putProfilesecurityById Payload</param>
-        /// <returns>putProfilesecurityById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecurityByIdSuccessResponse> PutProfilesecurityByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetProfilesecurityByInternalIdSuccessResponse> GetProfilesecurityByInternalIdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Profile security record</summary>
+        /// <param name="internalId">internalId</param>
+        /// <param name="payload">putProfilesecurityById Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putProfilesecurityById Payload</param>
         /// <returns>putProfilesecurityById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecurityByIdSuccessResponse> PutProfilesecurityByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PutProfilesecurityByIdSuccessResponse> PutProfilesecurityByIdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Profile security records</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteProfilesecurityById Payload</param>
         /// <returns>deleteProfilesecurityById Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecurityByIdSuccessResponse> DeleteProfilesecurityByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Deletes a specific Profile security records</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteProfilesecurityById Payload</param>
-        /// <returns>deleteProfilesecurityById Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecurityByIdSuccessResponse> DeleteProfilesecurityByIdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Profile security for the specified parent</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurityByParentProd Payload</param>
-        /// <returns>postProfilesecurityByParentProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecurityByParentProdSuccessResponse> PostProfilesecurityByParentProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<DeleteProfilesecurityByIdSuccessResponse> DeleteProfilesecurityByIdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Profile security for the specified parent</summary>
+        /// <param name="payload">postProfilesecurityByParentProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurityByParentProd Payload</param>
         /// <returns>postProfilesecurityByParentProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecurityByParentProdSuccessResponse> PostProfilesecurityByParentProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Profile security with parent mentioned in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurityProd Payload</param>
-        /// <returns>postProfilesecurityProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecurityProdSuccessResponse> PostProfilesecurityProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload);
+        System.Threading.Tasks.Task<PostProfilesecurityByParentProdSuccessResponse> PostProfilesecurityByParentProdAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Profile security with parent mentioned in the payload</summary>
+        /// <param name="payload">postProfilesecurityProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">postProfilesecurityProd Payload</param>
         /// <returns>postProfilesecurityProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PostProfilesecurityProdSuccessResponse> PostProfilesecurityProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Profile security records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putProfilesecurityProd Payload</param>
-        /// <returns>putProfilesecurityProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecurityProdSuccessResponse> PutProfilesecurityProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PostProfilesecurityProdSuccessResponse> PostProfilesecurityProdAsync(_0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Profile security records with identifiers provided in the payload</summary>
+        /// <param name="payload">putProfilesecurityProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">putProfilesecurityProd Payload</param>
         /// <returns>putProfilesecurityProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecurityProdSuccessResponse> PutProfilesecurityProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes Profile security records with identifiers provided in the payload</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteProfilesecurityProd Payload</param>
-        /// <returns>deleteProfilesecurityProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecurityProdSuccessResponse> DeleteProfilesecurityProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload);
+        System.Threading.Tasks.Task<PutProfilesecurityProdSuccessResponse> PutProfilesecurityProdAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes Profile security records with identifiers provided in the payload</summary>
+        /// <param name="payload">deleteProfilesecurityProd Payload</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="payload">deleteProfilesecurityProd Payload</param>
         /// <returns>deleteProfilesecurityProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecurityProdSuccessResponse> DeleteProfilesecurityProdAsync(string? referenceId, string? token, string? username, string? company, string? command, _0BULKPayload payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteProfilesecurityProdSuccessResponse> DeleteProfilesecurityProdAsync(_0BULKPayload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific Profile security record</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="page">Current page number (Default:1)</param>
         /// <param name="size">Total number of records per page (Default:25)</param>
         /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
@@ -301,77 +175,35 @@ namespace FundAdministration.GlobalInvestor.Party.ProfileSecurity
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <returns>getProfilesecurityByInternalIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProfilesecurityByInternalIdProdSuccessResponse> GetProfilesecurityByInternalIdProdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>Retrieves a specific Profile security record</summary>
-        /// <param name="page">Current page number (Default:1)</param>
-        /// <param name="size">Total number of records per page (Default:25)</param>
-        /// <param name="orders">An 'orders' parameter allows you to specify the order in which rows appear in the result set Eg: orders=fundname:0,masterfund:1 where 'fundname' is field, '0' for ascending manner and ',' as seperator for fields</param>
-        /// <param name="groups">A 'groups' parameter is used to collect data across multiple records and group the results by one or more columns. Eg: groups=nationality,reclaimtax-nationality:EQ:Indian,reclaimtax:EQ:N-nationality:COUNT where 'nationality,reclaimtax' is for the fields and 'nationality:EQ:Indian,reclaimtax:EQ:N-nationality' are filters, 'nationality:COUNT' is a aggregator and '-' as seperator</param>
-        /// <param name="filters">Use a 'filters' parameter to select rows based on a value by using basic operators like EQ, NE etc.., Eg: filters=statistictype:NE:SRS where 'statistictype' is a field, 'NE' is a operator and 'SRS' is a value</param>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <returns>getProfilesecurityByInternalIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProfilesecurityByInternalIdProdSuccessResponse> GetProfilesecurityByInternalIdProdAsync(double? page, double? size, string? orders, string? groups, string? filters, string? referenceId, string? token, string? username, string? company, string? command, string internalId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates a specific Profile security record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">putProfilesecurityByIdProd Payload</param>
-        /// <returns>putProfilesecurityByIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecurityByIdProdSuccessResponse> PutProfilesecurityByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload);
+        System.Threading.Tasks.Task<GetProfilesecurityByInternalIdProdSuccessResponse> GetProfilesecurityByInternalIdProdAsync(string internalId, double? page = null, double? size = null, string? orders = null, string? groups = null, string? filters = null, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates a specific Profile security record</summary>
-        /// <param name="referenceId">uniqueId for security purpose</param>
-        /// <param name="token">unique token</param>
-        /// <param name="username">username</param>
-        /// <param name="company">company name</param>
-        /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
         /// <param name="internalId">internalId</param>
         /// <param name="payload">putProfilesecurityByIdProd Payload</param>
-        /// <returns>putProfilesecurityByIdProd Success Response</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PutProfilesecurityByIdProdSuccessResponse> PutProfilesecurityByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload payload, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes a specific Profile security records</summary>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
-        /// <param name="payload">deleteProfilesecurityByIdProd Payload</param>
-        /// <returns>deleteProfilesecurityByIdProd Success Response</returns>
+        /// <returns>putProfilesecurityByIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecurityByIdProdSuccessResponse> DeleteProfilesecurityByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload);
+        System.Threading.Tasks.Task<PutProfilesecurityByIdProdSuccessResponse> PutProfilesecurityByIdProdAsync(string internalId, _0Payload payload, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes a specific Profile security records</summary>
+        /// <param name="internalId">internalId</param>
         /// <param name="referenceId">uniqueId for security purpose</param>
         /// <param name="token">unique token</param>
         /// <param name="username">username</param>
         /// <param name="company">company name</param>
         /// <param name="command">API operations like INVOKE, VALIDATE, PROCESS can be set or by default PROCESS is set</param>
-        /// <param name="internalId">internalId</param>
         /// <param name="payload">deleteProfilesecurityByIdProd Payload</param>
         /// <returns>deleteProfilesecurityByIdProd Success Response</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeleteProfilesecurityByIdProdSuccessResponse> DeleteProfilesecurityByIdProdAsync(string? referenceId, string? token, string? username, string? company, string? command, string internalId, _0Payload? payload, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<DeleteProfilesecurityByIdProdSuccessResponse> DeleteProfilesecurityByIdProdAsync(string internalId, string? referenceId = null, string? token = null, string? username = null, string? company = null, string? command = null, _0Payload? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

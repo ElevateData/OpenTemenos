@@ -15,7 +15,7 @@ public class ExchangeOfNewSecurityWithCashInflowServiceTests : CredentialManagem
     {
         var payload = new _0BULKPayload();
         var result = _client.ExchangeOfSecurity.NewSecurityWithCashInflowService
-            .CreateExchangeOfNewSecurityWithCashInflowAsync(null, null, null, null, null, payload)
+            .CreateExchangeOfNewSecurityWithCashInflowAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

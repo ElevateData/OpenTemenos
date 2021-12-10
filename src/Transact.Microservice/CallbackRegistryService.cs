@@ -23,27 +23,17 @@ namespace Transact.Microservice.CallbackRegistry
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICallbackRegistryService
     {
-        /// <summary>Adds callback url in the callback registry</summary>
-        /// <returns>Created callback succeess response.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Callback> CreateCallbackAsync(Callback body);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Adds callback url in the callback registry</summary>
         /// <returns>Created callback succeess response.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Callback> CreateCallbackAsync(Callback body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Receives transaction processed events</summary>
-        /// <returns>Success response from source keeping system for a transaction processed.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EventResponse> AcceptEventAsync(EventMessage body);
+        System.Threading.Tasks.Task<Callback> CreateCallbackAsync(Callback body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Receives transaction processed events</summary>
         /// <returns>Success response from source keeping system for a transaction processed.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EventResponse> AcceptEventAsync(EventMessage body, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<EventResponse> AcceptEventAsync(EventMessage body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

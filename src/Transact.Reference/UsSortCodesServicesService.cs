@@ -23,24 +23,6 @@ namespace Transact.Reference.UsSortCodesServices
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsSortCodesServicesService
     {
-        /// <summary>API to retreive the list of all Financial institutions routing numbers and the respective  details or a to retreive the routing number details of a specific FI using the routing number or institute name</summary>
-        /// <param name="instituteDirectoryId">Identifier of the internal reference to financial institute directories where routing number or BIC codes and address information are held</param>
-        /// <param name="routingBiccode">Indicates the routing number of BIC code used to identify the financial institution</param>
-        /// <param name="beneficiaryInstituteName">Indicates the name of financial institution where the beneficiary account is held</param>
-        /// <param name="beneficiaryInstituteBranchName">Indicates the Branch name of the financial institution where the beneficiary account is held</param>
-        /// <param name="beneficiaryInstituteCity">Indicates the City of financial institution where the beneficiary account is held</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>UsRoutingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsRoutingResponse> GetUsRoutingAsync(string? instituteDirectoryId, string? routingBiccode, string? beneficiaryInstituteName, string? beneficiaryInstituteBranchName, string? beneficiaryInstituteCity, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>API to retreive the list of all Financial institutions routing numbers and the respective  details or a to retreive the routing number details of a specific FI using the routing number or institute name</summary>
         /// <param name="instituteDirectoryId">Identifier of the internal reference to financial institute directories where routing number or BIC codes and address information are held</param>
@@ -58,7 +40,7 @@ namespace Transact.Reference.UsSortCodesServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>UsRoutingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsRoutingResponse> GetUsRoutingAsync(string? instituteDirectoryId, string? routingBiccode, string? beneficiaryInstituteName, string? beneficiaryInstituteBranchName, string? beneficiaryInstituteCity, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UsRoutingResponse> GetUsRoutingAsync(string? instituteDirectoryId = null, string? routingBiccode = null, string? beneficiaryInstituteName = null, string? beneficiaryInstituteBranchName = null, string? beneficiaryInstituteCity = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

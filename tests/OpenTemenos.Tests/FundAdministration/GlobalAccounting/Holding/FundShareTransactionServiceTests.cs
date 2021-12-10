@@ -14,7 +14,7 @@ public class FundShareTransactionServiceTests : CredentialManagement
     public void FundShareTransactionAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ShareholderService.FundSharetransactionAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ShareholderService.FundSharetransactionAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

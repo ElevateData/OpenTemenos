@@ -14,7 +14,7 @@ public class OrderCancelReverseServiceTests : CredentialManagement
     public void PostOrderCancelReverseAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.OrderCancellationService.PostordercancelreverseAsync(null, null, null, null, null, payload)
+        var result = _client.OrderCancellationService.PostordercancelreverseAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

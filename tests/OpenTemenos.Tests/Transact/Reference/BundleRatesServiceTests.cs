@@ -12,7 +12,7 @@ public class BundleRatesServiceTests : CredentialManagement
     public void GetBundleExchangeRatesAsync()
     {
         var result = _client.BundleRatesService
-            .GetBundleExchangeRatesAsync(BundleId, null, null, null, null, null, null, null).Result;
+            .GetBundleExchangeRatesAsync(BundleId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -20,7 +20,7 @@ public class BundleRatesServiceTests : CredentialManagement
     public void GetBundleInternalRatesAsync()
     {
         var result = _client.BundleRatesService
-            .GetBundleInternalRatesAsync(BundleId, null, null, null, null, null, null, null).Result;
+            .GetBundleInternalRatesAsync(BundleId).Result;
         Assert.IsNotNull(result.Body);
     }
 }

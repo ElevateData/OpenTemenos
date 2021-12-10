@@ -23,19 +23,6 @@ namespace Transact.Reference.BundleRates
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IBundleRatesService
     {
-        /// <summary>Retrieves the Exchange Rate mapped against the given currency for a bundle master account</summary>
-        /// <param name="bundleId">The field is to specify an arrangement reference which can act as a Master for the arrangement being created</param>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="date">Indicates the date on which activity was performed</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>BundleExchangeRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BundleExchangeRatesResponse> GetBundleExchangeRatesAsync(string bundleId, string? currency, string? date, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Exchange Rate mapped against the given currency for a bundle master account</summary>
         /// <param name="bundleId">The field is to specify an arrangement reference which can act as a Master for the arrangement being created</param>
@@ -48,20 +35,7 @@ namespace Transact.Reference.BundleRates
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>BundleExchangeRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BundleExchangeRatesResponse> GetBundleExchangeRatesAsync(string bundleId, string? currency, string? date, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Rate defined in Relationship accounts Preferential Pricing condition for the master account</summary>
-        /// <param name="bundleId">The field is to specify an arrangement reference which can act as a Master for the arrangement being created</param>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="date">Indicates the date on which activity was performed</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>BundleInternalRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BundleInternalRatesResponse> GetBundleInternalRatesAsync(string bundleId, string? currency, string? date, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<BundleExchangeRatesResponse> GetBundleExchangeRatesAsync(string bundleId, string? currency = null, string? date = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Rate defined in Relationship accounts Preferential Pricing condition for the master account</summary>
@@ -75,7 +49,7 @@ namespace Transact.Reference.BundleRates
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>BundleInternalRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BundleInternalRatesResponse> GetBundleInternalRatesAsync(string bundleId, string? currency, string? date, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<BundleInternalRatesResponse> GetBundleInternalRatesAsync(string bundleId, string? currency = null, string? date = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

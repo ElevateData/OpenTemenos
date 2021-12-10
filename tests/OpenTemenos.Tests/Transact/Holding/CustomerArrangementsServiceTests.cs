@@ -13,7 +13,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     public void GetCustomerLoansAsync()
     {
         var result = _client.CustomerArrangementService
-            .GetCustomerLoansAsync(CustomerId, null, null, null, null, null, null, null, null)
+            .GetCustomerLoansAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -23,7 +23,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     public void GetLoansAsync()
     {
         var result = _client.CustomerArrangementService
-            .GetLoansAsync(null, null, null, null, null, null, null, null, null, null)
+            .GetLoansAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -33,7 +33,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     public void GetCustomerDepositsAsync()
     {
         var result = _client.CustomerArrangementService
-            .GetCustomerDepositsAsync(CustomerId, null, null, null, null, null, null, null, null)
+            .GetCustomerDepositsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -43,7 +43,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     public void GetDepositsAsync()
     {
         var result = _client.CustomerArrangementService
-            .GetDepositsAsync(null, null, null, null, null, null, null, null, null, null)
+            .GetDepositsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -55,7 +55,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     public void GetCustomerArrangementDetailsAsync()
     {
         var result = _client.CustomerArrangementService
-            .GetCustomerArrangementDetailsAsync(CustomerId, null, null, null, null, null, null, null, null)
+            .GetCustomerArrangementDetailsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -65,7 +65,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     public void GetCustomerExternalAsync()
     {
         var result = _client.CustomerArrangementService
-            .GetCustomerExternalAsync(CustomerId, null, null, null, null, null, null, null, null)
+            .GetCustomerExternalAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -74,8 +74,7 @@ public class CustomerArrangementsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerClosedExternalAsync()
     {
-        var result = _client.CustomerArrangementService.GetCustomerClosedExternalAsync(CustomerId, null, null, null,
-                null, null, null, null, null, null, null, null, null, null)
+        var result = _client.CustomerArrangementService.GetCustomerClosedExternalAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

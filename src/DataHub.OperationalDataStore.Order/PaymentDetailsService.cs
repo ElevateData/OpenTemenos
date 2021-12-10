@@ -23,25 +23,12 @@ namespace DataHub.OperationalDataStore.Order.PaymentDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPaymentDetailsService
     {
-        /// <summary>Retrieves the payment purpose code details such as short description, classification and definition</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getPaymentOrderPurposeCodesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentOrderPurposeCodesResponse> GetPaymentOrderPurposeCodesAsync(string? recordId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the payment purpose code details such as short description, classification and definition</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getPaymentOrderPurposeCodesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentOrderPurposeCodesResponse> GetPaymentOrderPurposeCodesAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the payment features defined for each product</summary>
-        /// <param name="paymentProductGroupId">Payment method group details of the payment</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getPaymentOrderProductDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentOrderProductDetailsResponse> GetPaymentOrderProductDetailsAsync(string? paymentProductGroupId, string? recordId);
+        System.Threading.Tasks.Task<GetPaymentOrderPurposeCodesResponse> GetPaymentOrderPurposeCodesAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the payment features defined for each product</summary>
@@ -49,36 +36,14 @@ namespace DataHub.OperationalDataStore.Order.PaymentDetails
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getPaymentOrderProductDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentOrderProductDetailsResponse> GetPaymentOrderProductDetailsAsync(string? paymentProductGroupId, string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the country specific rule details such as IBAN, BIC, Bank Sort code to be allowed or not allowed, Clearing code format for each clearing channel, list of payment currencies accepted</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getPaymentOrderCountryRulesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentOrderCountryRulesResponse> GetPaymentOrderCountryRulesAsync(string? recordId);
+        System.Threading.Tasks.Task<GetPaymentOrderProductDetailsResponse> GetPaymentOrderProductDetailsAsync(string? paymentProductGroupId = null, string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the country specific rule details such as IBAN, BIC, Bank Sort code to be allowed or not allowed, Clearing code format for each clearing channel, list of payment currencies accepted</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getPaymentOrderCountryRulesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentOrderCountryRulesResponse> GetPaymentOrderCountryRulesAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the overall transaction information</summary>
-        /// <param name="company">The company code</param>
-        /// <param name="date">Indicates the date on which activity was performed</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="direction">Indicates the direction of the Direct debit claim for which mandate is received. The claim can be 'Outward' i.e. Claim is sent to the other bank or 'Inward'  i.e. other bank submit their claim to debit our customer's account.</param>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="amount">This is the payment amount</param>
-        /// <param name="debitClientID">Indicates the debit customer client Id</param>
-        /// <param name="creditClientID">Indicates the credit customer client Id</param>
-        /// <param name="debitMainAccountCurrencyCode">ISO Currency for Debit Main Account</param>
-        /// <param name="debitAccountId">Indicates the debit account number of the payment or transaction.</param>
-        /// <param name="creditAccountId">Credit account identifier of the payment or transaction</param>
-        /// <returns>getPendingPaymentsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingPaymentsResponse> GetPendingPaymentsAsync(string? company, System.DateTimeOffset? date, string? transactionReference, string? direction, string? currency, double? amount, string? debitClientID, string? creditClientID, string? debitMainAccountCurrencyCode, string? debitAccountId, string? creditAccountId);
+        System.Threading.Tasks.Task<GetPaymentOrderCountryRulesResponse> GetPaymentOrderCountryRulesAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the overall transaction information</summary>
@@ -95,31 +60,20 @@ namespace DataHub.OperationalDataStore.Order.PaymentDetails
         /// <param name="creditAccountId">Credit account identifier of the payment or transaction</param>
         /// <returns>getPendingPaymentsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPendingPaymentsResponse> GetPendingPaymentsAsync(string? company, System.DateTimeOffset? date, string? transactionReference, string? direction, string? currency, double? amount, string? debitClientID, string? creditClientID, string? debitMainAccountCurrencyCode, string? debitAccountId, string? creditAccountId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the charge details applied for transactions</summary>
-        /// <returns>getPaymentFeesAndChargesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentFeesAndChargesResponse> GetPaymentFeesAndChargesAsync();
+        System.Threading.Tasks.Task<GetPendingPaymentsResponse> GetPendingPaymentsAsync(string? company = null, System.DateTimeOffset? date = null, string? transactionReference = null, string? direction = null, string? currency = null, double? amount = null, string? debitClientID = null, string? creditClientID = null, string? debitMainAccountCurrencyCode = null, string? debitAccountId = null, string? creditAccountId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the charge details applied for transactions</summary>
         /// <returns>getPaymentFeesAndChargesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentFeesAndChargesResponse> GetPaymentFeesAndChargesAsync(System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the file uploading details which includes extension of the file, directory and maximum file size details</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getUploadFileTypesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUploadFileTypesResponse> GetUploadFileTypesAsync(string? recordId);
+        System.Threading.Tasks.Task<GetPaymentFeesAndChargesResponse> GetPaymentFeesAndChargesAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the file uploading details which includes extension of the file, directory and maximum file size details</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getUploadFileTypesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUploadFileTypesResponse> GetUploadFileTypesAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetUploadFileTypesResponse> GetUploadFileTypesAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

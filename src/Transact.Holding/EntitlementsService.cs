@@ -23,21 +23,6 @@ namespace Transact.Holding.Entitlements
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IEntitlementsService
     {
-        /// <summary>Retrieves pending entitlements</summary>
-        /// <param name="diaryId">The identifier of the diary</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="eventType">Event Type of the corporate action</param>
-        /// <param name="accountOfficerId">The identifier of the department head or specific account officer responsible for the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>PendingEntitlementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PendingEntitlementsResponse> GetPendingEntitlementsAsync(string? diaryId, string? portfolioId, string? customerId, string? eventType, string? accountOfficerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves pending entitlements</summary>
         /// <param name="diaryId">The identifier of the diary</param>
@@ -52,22 +37,7 @@ namespace Transact.Holding.Entitlements
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>PendingEntitlementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PendingEntitlementsResponse> GetPendingEntitlementsAsync(string? diaryId, string? portfolioId, string? customerId, string? eventType, string? accountOfficerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Allows to view the entitlement details</summary>
-        /// <param name="entitlementId">The identifier of the entitlement</param>
-        /// <param name="diaryId">The identifier of the diary</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="eventType">Event Type of the corporate action</param>
-        /// <param name="accountOfficerId">The identifier of the department head or specific account officer responsible for the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityEntitlementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityEntitlementsResponse> GetSecurityEntitlementsAsync(string entitlementId, string? diaryId, string? portfolioId, string? eventType, string? accountOfficerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<PendingEntitlementsResponse> GetPendingEntitlementsAsync(string? diaryId = null, string? portfolioId = null, string? customerId = null, string? eventType = null, string? accountOfficerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the entitlement details</summary>
@@ -83,17 +53,7 @@ namespace Transact.Holding.Entitlements
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityEntitlementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityEntitlementsResponse> GetSecurityEntitlementsAsync(string entitlementId, string? diaryId, string? portfolioId, string? eventType, string? accountOfficerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the entitlement</summary>
-        /// <param name="entitlementId">The identifier of the entitlement</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityEntitlementResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityEntitlementResponse> UpdateSecurityEntitlementAsync(string entitlementId, SecurityEntitlement payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityEntitlementsResponse> GetSecurityEntitlementsAsync(string entitlementId, string? diaryId = null, string? portfolioId = null, string? eventType = null, string? accountOfficerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the entitlement</summary>
@@ -104,15 +64,7 @@ namespace Transact.Holding.Entitlements
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityEntitlementResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityEntitlementResponse> UpdateSecurityEntitlementAsync(string entitlementId, SecurityEntitlement payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates buy sell rights</summary>
-        /// <param name="entitlementId">The identifier of the entitlement</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>EntitlementBuySellRightsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementBuySellRightsResponse> GetEntitlementBuySellRightsAsync(string entitlementId, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityEntitlementResponse> UpdateSecurityEntitlementAsync(string entitlementId, SecurityEntitlement payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates buy sell rights</summary>
@@ -121,17 +73,7 @@ namespace Transact.Holding.Entitlements
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>EntitlementBuySellRightsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementBuySellRightsResponse> GetEntitlementBuySellRightsAsync(string entitlementId, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves entitlement information</summary>
-        /// <param name="entitlementId">The identifier of the entitlement</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>EntitlementBuySellRightsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementBuySellRightsResponse> UpdateEntitlementBuySellRightsAsync(string entitlementId, EntitlementBuySellRights payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<EntitlementBuySellRightsResponse> GetEntitlementBuySellRightsAsync(string entitlementId, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves entitlement information</summary>
@@ -142,24 +84,7 @@ namespace Transact.Holding.Entitlements
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>EntitlementBuySellRightsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementBuySellRightsResponse> UpdateEntitlementBuySellRightsAsync(string entitlementId, EntitlementBuySellRights payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves unauthorised entitlements</summary>
-        /// <param name="diaryId">The identifier of the diary</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="securityUpdate">Indicates to update Security Position based on Corporate Action Event processing</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="eventType">Event Type of the corporate action</param>
-        /// <param name="accountOfficerId">The identifier of the department head or specific account officer responsible for the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>EntitlementApprovalsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementApprovalsResponse> GetEntitlementApprovalsAsync(string? diaryId, string? instrumentId, string? securityUpdate, string? portfolioId, string? customerId, string? eventType, string? accountOfficerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<EntitlementBuySellRightsResponse> UpdateEntitlementBuySellRightsAsync(string entitlementId, EntitlementBuySellRights payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves unauthorised entitlements</summary>
@@ -177,7 +102,7 @@ namespace Transact.Holding.Entitlements
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>EntitlementApprovalsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementApprovalsResponse> GetEntitlementApprovalsAsync(string? diaryId, string? instrumentId, string? securityUpdate, string? portfolioId, string? customerId, string? eventType, string? accountOfficerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<EntitlementApprovalsResponse> GetEntitlementApprovalsAsync(string? diaryId = null, string? instrumentId = null, string? securityUpdate = null, string? portfolioId = null, string? customerId = null, string? eventType = null, string? accountOfficerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

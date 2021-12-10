@@ -23,14 +23,6 @@ namespace DataHub.OperationalDataStore.Holding.PaymentStops
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPaymentStopsService
     {
-        /// <summary>Retrieves the Payment Stop information of all accounts</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="stopTypeId">Indicates the reason why a Payment Stop is requested for e.g. Cheque lost, funds not available etc.</param>
-        /// <returns>getPaymentStopsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentStopsResponse> GetPaymentStopsAsync(string? recordId, string? customerId, string? stopTypeId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Payment Stop information of all accounts</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
@@ -38,7 +30,7 @@ namespace DataHub.OperationalDataStore.Holding.PaymentStops
         /// <param name="stopTypeId">Indicates the reason why a Payment Stop is requested for e.g. Cheque lost, funds not available etc.</param>
         /// <returns>getPaymentStopsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPaymentStopsResponse> GetPaymentStopsAsync(string? recordId, string? customerId, string? stopTypeId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetPaymentStopsResponse> GetPaymentStopsAsync(string? recordId = null, string? customerId = null, string? stopTypeId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

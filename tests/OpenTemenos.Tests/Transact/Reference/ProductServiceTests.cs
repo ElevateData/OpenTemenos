@@ -11,7 +11,7 @@ public class ProductServiceTests : CredentialManagement
     [TestMethod]
     public void GetPeriodicRuleAsync()
     {
-        var result = _client.ProductService.GetPeriodicRuleAsync(RuleId, null, null, null, null, null, null, null)
+        var result = _client.ProductService.GetPeriodicRuleAsync(RuleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

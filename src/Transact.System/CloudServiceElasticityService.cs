@@ -23,17 +23,6 @@ namespace Transact.System.CloudServiceElasticity
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICloudServiceElasticityService
     {
-        /// <summary>Create cleanup instruction to initiate cleanup of downscaled servers</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceElasticCleanupResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticCleanupResponse> CreateServiceElasticCleanupAsync(string serverId, ServiceElasticCleanup payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create cleanup instruction to initiate cleanup of downscaled servers</summary>
         /// <param name="payload">body Payload</param>
@@ -44,19 +33,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceElasticCleanupResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticCleanupResponse> CreateServiceElasticCleanupAsync(string serverId, ServiceElasticCleanup payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update dynamic provisioning for system deployed in cloud</summary>
-        /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceElasticParameterResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticParameterResponse> AmendServiceElasticParameterAsync(string settingId, ServiceElasticParameter payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceElasticCleanupResponse> CreateServiceElasticCleanupAsync(string serverId, ServiceElasticCleanup payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update dynamic provisioning for system deployed in cloud</summary>
@@ -69,19 +46,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceElasticParameterResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticParameterResponse> AmendServiceElasticParameterAsync(string settingId, ServiceElasticParameter payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create number of agents for elastic scaling</summary>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceElasticProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticProfileResponse> CreateServiceElasticProfileAsync(string workProfileId, ServiceElasticProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceElasticParameterResponse> AmendServiceElasticParameterAsync(string settingId, ServiceElasticParameter payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create number of agents for elastic scaling</summary>
@@ -94,19 +59,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceElasticProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticProfileResponse> CreateServiceElasticProfileAsync(string workProfileId, ServiceElasticProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update number of agents for elastic scaling</summary>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceElasticProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticProfileResponse> AmendServiceElasticProfileAsync(string workProfileId, ServiceElasticProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceElasticProfileResponse> CreateServiceElasticProfileAsync(string workProfileId, ServiceElasticProfile payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update number of agents for elastic scaling</summary>
@@ -119,19 +72,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceElasticProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceElasticProfileResponse> AmendServiceElasticProfileAsync(string workProfileId, ServiceElasticProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the system deployment mode</summary>
-        /// <param name="settingId">Contains the particular parameter record setting identifier.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SystemParameterElasticResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SystemParameterElasticResponse> AmendSystemParameterElasticAsync(string settingId, SystemParameterElastic payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceElasticProfileResponse> AmendServiceElasticProfileAsync(string workProfileId, ServiceElasticProfile payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the system deployment mode</summary>
@@ -144,19 +85,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SystemParameterElasticResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SystemParameterElasticResponse> AmendSystemParameterElasticAsync(string settingId, SystemParameterElastic payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the total number of agents required for cloud deployment</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AgentElasticCheckResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AgentElasticCheckResponse> GetAgentElasticCheckAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SystemParameterElasticResponse> AmendSystemParameterElasticAsync(string settingId, SystemParameterElastic payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the total number of agents required for cloud deployment</summary>
@@ -169,19 +98,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AgentElasticCheckResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AgentElasticCheckResponse> GetAgentElasticCheckAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the agent details for active services in cloud deployment</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AgentElasticCheckDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AgentElasticCheckDetailsResponse> GetAgentElasticCheckDetailsAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AgentElasticCheckResponse> GetAgentElasticCheckAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the agent details for active services in cloud deployment</summary>
@@ -194,7 +111,7 @@ namespace Transact.System.CloudServiceElasticity
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AgentElasticCheckDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AgentElasticCheckDetailsResponse> GetAgentElasticCheckDetailsAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<AgentElasticCheckDetailsResponse> GetAgentElasticCheckDetailsAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

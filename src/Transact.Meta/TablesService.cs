@@ -23,14 +23,6 @@ namespace Transact.Meta.Tables
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ITablesService
     {
-        /// <param name="tableId">The unique application table identifier</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getFieldNamesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetFieldNamesResponse> GetFieldNamesAsync(string tableId, int? page_size, int? page_start, string? page_token);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="tableId">The unique application table identifier</param>
         /// <param name="page_size">The total number of records per page</param>
@@ -38,15 +30,7 @@ namespace Transact.Meta.Tables
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getFieldNamesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetFieldNamesResponse> GetFieldNamesAsync(string tableId, int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="moduleId">The identifier of the module</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getTablesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetTablesResponse> GetTablesAsync(string? moduleId, int? page_size, int? page_start, string? page_token);
+        System.Threading.Tasks.Task<GetFieldNamesResponse> GetFieldNamesAsync(string tableId, int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="moduleId">The identifier of the module</param>
@@ -55,14 +39,7 @@ namespace Transact.Meta.Tables
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getTablesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetTablesResponse> GetTablesAsync(string? moduleId, int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getTableScreensResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetTableScreensResponse> GetTableScreensAsync(string tableId, int? page_size, int? page_start, string? page_token);
+        System.Threading.Tasks.Task<GetTablesResponse> GetTablesAsync(string? moduleId = null, int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="page_size">The total number of records per page</param>
@@ -70,7 +47,7 @@ namespace Transact.Meta.Tables
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getTableScreensResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetTableScreensResponse> GetTableScreensAsync(string tableId, int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetTableScreensResponse> GetTableScreensAsync(string tableId, int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

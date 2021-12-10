@@ -15,7 +15,7 @@ public class CapitalIIncreaseWithExerciseOfSubscriptionRightsServiceTests : Cred
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalIIncreaseWithExerciseOfSubscriptionRightService
-            .CreateCapitalIncreaseWithExerciseOfSubscriptionRightAsync(null, null, null, null, null, payload)
+            .CreateCapitalIncreaseWithExerciseOfSubscriptionRightAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

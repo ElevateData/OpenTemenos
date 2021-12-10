@@ -15,7 +15,7 @@ public class AgentExceptionCutoffTimesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExceptionCutoffPerDistributorService
-            .PostAgentExceptioncutOffTimesAsync(null, null, null, null, null, payload).Result;
+            .PostAgentExceptioncutOffTimesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

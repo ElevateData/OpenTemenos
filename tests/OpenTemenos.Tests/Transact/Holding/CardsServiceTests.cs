@@ -11,8 +11,7 @@ public class CardsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCardIssuesAsync()
     {
-        var result = _client.AccountCardService.GetCardIssuesAsync(null, null, null, null,
-                null, null, null, null, null)
+        var result = _client.AccountCardService.GetCardIssuesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -24,7 +23,7 @@ public class CardsServiceTests : CredentialManagement
     {
         var cardIssueId = string.Empty;
         var payload = new CardIssue();
-        var result = _client.AccountCardService.CreateCardIssueAsync(cardIssueId, payload, null, null)
+        var result = _client.AccountCardService.CreateCardIssueAsync(cardIssueId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -36,7 +35,7 @@ public class CardsServiceTests : CredentialManagement
     {
         var cardIssueId = string.Empty;
         var payload = new CardIssue();
-        var result = _client.AccountCardService.UpdateCardIssueAsync(cardIssueId, payload, null, null)
+        var result = _client.AccountCardService.UpdateCardIssueAsync(cardIssueId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -48,7 +47,7 @@ public class CardsServiceTests : CredentialManagement
     {
         var cardIssueId = string.Empty;
         var payload = new CardIssueDelete();
-        var result = _client.AccountCardService.DeleteCardIssueAsync(cardIssueId, payload, null, null)
+        var result = _client.AccountCardService.DeleteCardIssueAsync(cardIssueId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

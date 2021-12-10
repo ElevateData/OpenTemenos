@@ -12,14 +12,14 @@ public class ForexOrderDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexDealsAsync()
     {
-        var result = _client.TreasuryForexOrderService.GetForexDealsAsync(CounterPartyId, null).Result;
+        var result = _client.TreasuryForexOrderService.GetForexDealsAsync(CounterPartyId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetCustomerForexLimitOrdersAsync()
     {
-        var result = _client.TreasuryForexOrderService.GetCustomerForexLimitOrdersAsync(RecordId, null).Result;
+        var result = _client.TreasuryForexOrderService.GetCustomerForexLimitOrdersAsync(RecordId).Result;
         Assert.IsNotNull(result.Data);
     }
 }

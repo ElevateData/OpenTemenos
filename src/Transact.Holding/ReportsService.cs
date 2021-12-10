@@ -23,21 +23,6 @@ namespace Transact.Holding.Reports
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IReportsService
     {
-        /// <summary>Retrieves the realized and unrealised mark to market details</summary>
-        /// <param name="dealer">The dealer/desk responsible for monitoring and managing the currency position</param>
-        /// <param name="groupId">Unique ID of the group</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ProfitabilityReportResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProfitabilityReportResponse> GetProfitabilityReportAsync(string? dealer, string? groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the realized and unrealised mark to market details</summary>
         /// <param name="dealer">The dealer/desk responsible for monitoring and managing the currency position</param>
@@ -52,30 +37,7 @@ namespace Transact.Holding.Reports
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ProfitabilityReportResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProfitabilityReportResponse> GetProfitabilityReportAsync(string? dealer, string? groupId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the position details for all the currencies in different calenders</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="company">The company code</param>
-        /// <param name="positionType">Identifies the position type. Possible values are CAS(cash position), GAP(Interest mismatch position), FXP(Foreign exchange position)</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="valueDateFrom">Contains the from value of value date to be specified in a range.</param>
-        /// <param name="valueDateTo">Contains the to value of value date to be specified in a range.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="period">Indicates spread of time buckets.Ex: 3M,6M,9M,10Y etc.</param>
-        /// <param name="calendar">Identifies the calendar to be used for the spreading of different position data into different time buckets. Ex: CAL-Standard calendar and DE1-Deutsche calendar</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyCalendarPositionsReportResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyCalendarPositionsReportResponse> GetCurrencyCalendarPositionsReportAsync(string? currency, string? company, string? positionType, string? dealerDesk, string? valueDate, string? valueDateFrom, string? valueDateTo, string? dealDate, string? period, string? calendar, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ProfitabilityReportResponse> GetProfitabilityReportAsync(string? dealer = null, string? groupId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the position details for all the currencies in different calenders</summary>
@@ -99,71 +61,7 @@ namespace Transact.Holding.Reports
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyCalendarPositionsReportResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyCalendarPositionsReportResponse> GetCurrencyCalendarPositionsReportAsync(string? currency, string? company, string? positionType, string? dealerDesk, string? valueDate, string? valueDateFrom, string? valueDateTo, string? dealDate, string? period, string? calendar, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves all the active(open) deals</summary>
-        /// <param name="contractId">Indicates the unique identifier of the transaction or contract which initiated the activity</param>
-        /// <param name="counterpartyId">The identifier of the counter party</param>
-        /// <param name="counterpartyName">The counterparty name for the forex deal.</param>
-        /// <param name="dealType">Foreign Exchange deal type. Allowed values: - SP(spot) - FW(forward) - SW(Swap)</param>
-        /// <param name="dealSubType">Under a deal type, there can be further sub deal types. E.g. Broker and Internal are sub deal types for FX spot and forward deal types.</param>
-        /// <param name="buyAmount">Amount bought in the FX deal.</param>
-        /// <param name="buyAmountFrom">Contains the from value of buy amount to be specified in a range.</param>
-        /// <param name="buyAmountTo">Contains the to value of buy amount to be specified in a range.</param>
-        /// <param name="buyCurrency">ISO Currency code for the bought currency.</param>
-        /// <param name="buyRate">The exchange rate at which is currency is bought.</param>
-        /// <param name="buyRateFrom">Contains the from value of buy rate to be specified in a range.</param>
-        /// <param name="buyRateTo">Contains the to value of buy rate to be specified in a range.</param>
-        /// <param name="sellAmount">Amount sold in the FX deal.</param>
-        /// <param name="sellAmountFrom">Contains the from value of sell amount to be specified in a range.</param>
-        /// <param name="sellAmountTo">Contains the to value of sell amount to be specified in a range.</param>
-        /// <param name="sellCurrency">ISO Currency code for the sold currency.</param>
-        /// <param name="sellRate">The exchange rate at which is currency is sold.</param>
-        /// <param name="sellRateFrom">Contains the from value of sell rate to be specified in a range.</param>
-        /// <param name="sellRateTo">Contains the to value of sell rate to be specified in a range.</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="valueDateFrom">Contains the from value of value date to be specified in a range.</param>
-        /// <param name="valueDateTo">Contains the to value of value date to be specified in a range.</param>
-        /// <param name="reutersDealId">The Reuters deal reference number, if the deal is booked on Reuters dealing platform.</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="maturityDateFrom">Contains the from value of maturity date to be specified in a range.</param>
-        /// <param name="maturityDateTo">Contains the to value of maturity date to be specified in a range.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="dealDateFrom">Date on which the deal was agreed.</param>
-        /// <param name="dealDateTo">Date on which the deal was agreed.</param>
-        /// <param name="instrument">The instrument identifier</param>
-        /// <param name="issuedBy">The issuer of a security or a bond.</param>
-        /// <param name="portfolio">Id of the portfolio (security account), which the arrangement (account, deposit, loan, etc.) is attached to.</param>
-        /// <param name="depository">Person designated as depository by the company in or pursuant to this Indenture, and, unless otherwise provided with respect to any security, any successor to such person</param>
-        /// <param name="inputter">The user identifier who input the transaction</param>
-        /// <param name="broker">Broker involved in the transaction</param>
-        /// <param name="method">A pricing plan can be applied to an account, the selection is automatic or manual</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="internalDealerDesk">One of the dealer/desk for an internal deal between two dealer/desks.</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="orderStatus">Status of the order.</param>
-        /// <param name="buyOrSell">Whether the transaction is a buy or a sell.</param>
-        /// <param name="recordStatus">General status of the record. Possible values: - null - authorised - IHLD - input, on hold - INAU - input, not authorised - INA2 - input, authorised, pending second authorisation - INAO - input, not authorised with blocking overrides - RNAU - reversed, not authorised - RNAO - reversed, not authorised with blocking overrides</param>
-        /// <param name="contractStatus">Status of the contract, e.g. open, matured or liquidated.</param>
-        /// <param name="dateTime">Contains the date and time separated by '-'</param>
-        /// <param name="dateTimeFrom">Contains the from value of date and time to be specified in a range.</param>
-        /// <param name="dateTimeTo">Contains the to value of date and time to be specified in a range.</param>
-        /// <param name="fixingExerciseDate">Fixing or Exercise Date for FRA deal.</param>
-        /// <param name="fixingExerciseDateFrom">Contains the from value of fixing or exercise date to be specified in a range.</param>
-        /// <param name="fixingExerciseDateTo">Contains the to value of fixing or exercise date to be specified in a range.</param>
-        /// <param name="rateKey">Identifies the periodic interest key used in case of money market deals or on the asset side of swap contract.</param>
-        /// <param name="liabilityRateKey">Identifies the periodic interest key used on the liability side of swap contract.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>BlotterReportResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BlotterReportResponse> GetBlotterReportAsync(string? contractId, string? counterpartyId, string? counterpartyName, string? dealType, string? dealSubType, string? buyAmount, string? buyAmountFrom, string? buyAmountTo, string? buyCurrency, string? buyRate, string? buyRateFrom, string? buyRateTo, string? sellAmount, string? sellAmountFrom, string? sellAmountTo, string? sellCurrency, string? sellRate, string? sellRateFrom, string? sellRateTo, string? valueDate, string? valueDateFrom, string? valueDateTo, string? reutersDealId, string? maturityDate, string? maturityDateFrom, string? maturityDateTo, string? dealDate, string? dealDateFrom, string? dealDateTo, string? instrument, string? issuedBy, string? portfolio, string? depository, string? inputter, string? broker, string? method, string? dealerDesk, string? internalDealerDesk, string? displayName, string? orderStatus, string? buyOrSell, string? recordStatus, string? contractStatus, string? dateTime, string? dateTimeFrom, string? dateTimeTo, string? fixingExerciseDate, string? fixingExerciseDateFrom, string? fixingExerciseDateTo, string? rateKey, string? liabilityRateKey, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyCalendarPositionsReportResponse> GetCurrencyCalendarPositionsReportAsync(string? currency = null, string? company = null, string? positionType = null, string? dealerDesk = null, string? valueDate = null, string? valueDateFrom = null, string? valueDateTo = null, string? dealDate = null, string? period = null, string? calendar = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all the active(open) deals</summary>
@@ -228,22 +126,7 @@ namespace Transact.Holding.Reports
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>BlotterReportResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BlotterReportResponse> GetBlotterReportAsync(string? contractId, string? counterpartyId, string? counterpartyName, string? dealType, string? dealSubType, string? buyAmount, string? buyAmountFrom, string? buyAmountTo, string? buyCurrency, string? buyRate, string? buyRateFrom, string? buyRateTo, string? sellAmount, string? sellAmountFrom, string? sellAmountTo, string? sellCurrency, string? sellRate, string? sellRateFrom, string? sellRateTo, string? valueDate, string? valueDateFrom, string? valueDateTo, string? reutersDealId, string? maturityDate, string? maturityDateFrom, string? maturityDateTo, string? dealDate, string? dealDateFrom, string? dealDateTo, string? instrument, string? issuedBy, string? portfolio, string? depository, string? inputter, string? broker, string? method, string? dealerDesk, string? internalDealerDesk, string? displayName, string? orderStatus, string? buyOrSell, string? recordStatus, string? contractStatus, string? dateTime, string? dateTimeFrom, string? dateTimeTo, string? fixingExerciseDate, string? fixingExerciseDateFrom, string? fixingExerciseDateTo, string? rateKey, string? liabilityRateKey, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves all events till date of money market deals.</summary>
-        /// <param name="contractId">Indicates the unique identifier of the transaction or contract which initiated the activity</param>
-        /// <param name="transactionDate">Contains the date on which the deal was booked.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>MoneyMarketEventsToDateResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MoneyMarketEventsToDateResponse> GetMoneyMarketEventsToDateAsync(string? contractId, string? transactionDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<BlotterReportResponse> GetBlotterReportAsync(string? contractId = null, string? counterpartyId = null, string? counterpartyName = null, string? dealType = null, string? dealSubType = null, string? buyAmount = null, string? buyAmountFrom = null, string? buyAmountTo = null, string? buyCurrency = null, string? buyRate = null, string? buyRateFrom = null, string? buyRateTo = null, string? sellAmount = null, string? sellAmountFrom = null, string? sellAmountTo = null, string? sellCurrency = null, string? sellRate = null, string? sellRateFrom = null, string? sellRateTo = null, string? valueDate = null, string? valueDateFrom = null, string? valueDateTo = null, string? reutersDealId = null, string? maturityDate = null, string? maturityDateFrom = null, string? maturityDateTo = null, string? dealDate = null, string? dealDateFrom = null, string? dealDateTo = null, string? instrument = null, string? issuedBy = null, string? portfolio = null, string? depository = null, string? inputter = null, string? broker = null, string? method = null, string? dealerDesk = null, string? internalDealerDesk = null, string? displayName = null, string? orderStatus = null, string? buyOrSell = null, string? recordStatus = null, string? contractStatus = null, string? dateTime = null, string? dateTimeFrom = null, string? dateTimeTo = null, string? fixingExerciseDate = null, string? fixingExerciseDateFrom = null, string? fixingExerciseDateTo = null, string? rateKey = null, string? liabilityRateKey = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all events till date of money market deals.</summary>
@@ -259,36 +142,7 @@ namespace Transact.Holding.Reports
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>MoneyMarketEventsToDateResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MoneyMarketEventsToDateResponse> GetMoneyMarketEventsToDateAsync(string? contractId, string? transactionDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves all the foreign exchange active deals as on today</summary>
-        /// <param name="dealType">Foreign Exchange deal type. Allowed values: - SP(spot) - FW(forward) - SW(Swap)</param>
-        /// <param name="counterparty">The counterparty ID  for the  deal.</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="swapReference">As the near and far leg of the swap have separate reference number, the swap reference is the near leg reference in the far leg and far leg reference in the near leg of a FX swap deal.</param>
-        /// <param name="settlementDateSell">Settlement date for sell side.</param>
-        /// <param name="settlementDateBuy">Settlement date for buy side.</param>
-        /// <param name="buyCurrency">ISO Currency code for the bought currency.</param>
-        /// <param name="buyAmount">Amount bought in the FX deal.</param>
-        /// <param name="sellCurrency">ISO Currency code for the sold currency.</param>
-        /// <param name="sellAmount">Amount sold in the FX deal.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="ourAccountPay">Account from which payment is  made.</param>
-        /// <param name="ourAccountRecieve">Account from which payment is received.</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="unevenSwap">Identifier for a FX uneven swap  (the swap base currency amount in near and far leg are not the same).</param>
-        /// <param name="forwardForwardSwap">A FX swap where both the near and the far leg have a value date greater than spot value date.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>OutstandingForexDealsTodayResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutstandingForexDealsTodayResponse> GetOutstandingForexDealsTodayAsync(string? dealType, string? counterparty, string? transactionReference, string? swapReference, string? settlementDateSell, string? settlementDateBuy, string? buyCurrency, string? buyAmount, string? sellCurrency, string? sellAmount, string? dealDate, string? ourAccountPay, string? ourAccountRecieve, string? dealerDesk, string? unevenSwap, string? forwardForwardSwap, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<MoneyMarketEventsToDateResponse> GetMoneyMarketEventsToDateAsync(string? contractId = null, string? transactionDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all the foreign exchange active deals as on today</summary>
@@ -318,7 +172,7 @@ namespace Transact.Holding.Reports
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>OutstandingForexDealsTodayResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutstandingForexDealsTodayResponse> GetOutstandingForexDealsTodayAsync(string? dealType, string? counterparty, string? transactionReference, string? swapReference, string? settlementDateSell, string? settlementDateBuy, string? buyCurrency, string? buyAmount, string? sellCurrency, string? sellAmount, string? dealDate, string? ourAccountPay, string? ourAccountRecieve, string? dealerDesk, string? unevenSwap, string? forwardForwardSwap, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<OutstandingForexDealsTodayResponse> GetOutstandingForexDealsTodayAsync(string? dealType = null, string? counterparty = null, string? transactionReference = null, string? swapReference = null, string? settlementDateSell = null, string? settlementDateBuy = null, string? buyCurrency = null, string? buyAmount = null, string? sellCurrency = null, string? sellAmount = null, string? dealDate = null, string? ourAccountPay = null, string? ourAccountRecieve = null, string? dealerDesk = null, string? unevenSwap = null, string? forwardForwardSwap = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

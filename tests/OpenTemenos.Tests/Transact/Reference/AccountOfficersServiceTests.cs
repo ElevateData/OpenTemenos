@@ -13,7 +13,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     public void GetAccountOfficersAsync()
     {
         var result = _client.AccountOfficersService
-            .GetAccountOfficersAsync(null, null, null, null, null, null, null, null).Result;
+            .GetAccountOfficersAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -22,7 +22,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     public void GetAccountOfficerDetailsAsync()
     {
         var result = _client.AccountOfficersService
-            .GetAccountOfficerDetailsAsync(AccountOfficerId, null, null, null, null).Result;
+            .GetAccountOfficerDetailsAsync(AccountOfficerId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
@@ -34,7 +34,7 @@ public class AccountOfficersServiceTests : CredentialManagement
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerDetails();
         var result = _client.AccountOfficersService
-            .CreateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
+            .CreateAccountOfficerDetailsAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class AccountOfficersServiceTests : CredentialManagement
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerDetails();
         var result = _client.AccountOfficersService
-            .UpdateAccountOfficerDetailsAsync(accountOfficerId, payload, null, null, null, null, null).Result;
+            .UpdateAccountOfficerDetailsAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class AccountOfficersServiceTests : CredentialManagement
     public void GetAccountOfficerAlertSubscriptionAsync()
     {
         var result = _client.AccountOfficersService
-            .GetAccountOfficerAlertSubscriptionAsync(AccountOfficerId, null, null, null, null).Result;
+            .GetAccountOfficerAlertSubscriptionAsync(AccountOfficerId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
@@ -65,7 +65,7 @@ public class AccountOfficersServiceTests : CredentialManagement
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerAlertSubscription();
         var result = _client.AccountOfficersService
-            .CreateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload, null, null, null, null, null).Result;
+            .CreateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class AccountOfficersServiceTests : CredentialManagement
         var accountOfficerId = string.Empty;
         var payload = new AccountOfficerAlertSubscription();
         var result = _client.AccountOfficersService
-            .UpdateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload, null, null, null, null, null).Result;
+            .UpdateAccountOfficerAlertSubscriptionAsync(accountOfficerId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

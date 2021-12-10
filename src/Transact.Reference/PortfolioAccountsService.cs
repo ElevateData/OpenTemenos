@@ -23,15 +23,6 @@ namespace Transact.Reference.PortfolioAccounts
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPortfolioAccountsService
     {
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="customerId">The identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>PortfolioAccountsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ReferencePortfolioAccountsResponse> GetPortfolioAccountsAsync(string portfolioId, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="portfolioId">Id of the portfolio or security account</param>
         /// <param name="customerId">The identifier of the customer</param>
@@ -40,7 +31,7 @@ namespace Transact.Reference.PortfolioAccounts
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>PortfolioAccountsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ReferencePortfolioAccountsResponse> GetPortfolioAccountsAsync(string portfolioId, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ReferencePortfolioAccountsResponse> GetPortfolioAccountsAsync(string portfolioId, string? customerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

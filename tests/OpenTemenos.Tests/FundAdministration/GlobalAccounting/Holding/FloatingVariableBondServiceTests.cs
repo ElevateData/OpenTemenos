@@ -15,7 +15,7 @@ public class FloatingVariableBondServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FloatingVariableRateBondService
-            .CreateFloatingOrVariableBondAsync(null, null, null, null, null, payload).Result;
+            .CreateFloatingOrVariableBondAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

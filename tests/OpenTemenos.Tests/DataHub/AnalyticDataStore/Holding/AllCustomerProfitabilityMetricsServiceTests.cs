@@ -11,7 +11,7 @@ public class AllCustomerProfitabilityMetricsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAllCustomerProfitabilityMetricsAsync()
     {
-        var result = _client.CustomerProfitabilityService.GetAllCustomerProfitabilityMetricsAsync(null).Result;
+        var result = _client.CustomerProfitabilityService.GetAllCustomerProfitabilityMetricsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

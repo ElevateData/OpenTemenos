@@ -14,7 +14,7 @@ public class PaymentLogProcessesServiceTests : CredentialManagement
     public void PostPaymentLogProcessesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.PaymentLogService.PostpaymentlogprocessesAsync(null, null, null, null, null, payload)
+        var result = _client.PaymentLogService.PostpaymentlogprocessesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

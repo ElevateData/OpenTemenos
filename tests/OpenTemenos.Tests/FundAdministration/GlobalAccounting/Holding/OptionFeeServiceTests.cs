@@ -14,7 +14,7 @@ public class OptionFeeServiceTests : CredentialManagement
     public void CreateOptionFeeAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.OptionFeeService.CreateOptionFeeAsync(null, null, null, null, null, payload).Result;
+        var result = _client.OptionFeeService.CreateOptionFeeAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

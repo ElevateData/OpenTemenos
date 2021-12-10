@@ -14,7 +14,7 @@ public class FundManagersServiceTests : CredentialManagement
     public void PostFundManagersByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FundManagerService.PostFundmanagersByParentAsync(null, null, null, null, null, payload)
+        var result = _client.FundManagerService.PostFundmanagersByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class FundManagersServiceTests : CredentialManagement
     public void PostFundManagersAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FundManagerService.PostFundmanagersAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundManagerService.PostFundmanagersAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class FundManagersServiceTests : CredentialManagement
     public void PutFundManagersAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundManagerService.PutFundmanagersAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundManagerService.PutFundmanagersAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class FundManagersServiceTests : CredentialManagement
     public void DeleteFundManagersAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundManagerService.DeleteFundmanagersAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundManagerService.DeleteFundmanagersAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class FundManagersServiceTests : CredentialManagement
     public void GetFundManagersByInternalIdAsync()
     {
         var result = _client.FundManagerService
-            .GetFundmanagersByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetFundmanagersByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class FundManagersServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundManagerService
-            .PutFundmanagersByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFundmanagersByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class FundManagersServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundManagerService
-            .DeleteFundmanagersByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFundmanagersByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

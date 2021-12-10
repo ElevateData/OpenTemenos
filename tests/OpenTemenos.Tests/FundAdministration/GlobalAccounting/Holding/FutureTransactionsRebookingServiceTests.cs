@@ -15,7 +15,7 @@ public class FutureTransactionsRebookingServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FutureTransactionRebookingService
-            .FutureTransactionsRebookingAsync(null, null, null, null, null, payload).Result;
+            .FutureTransactionsRebookingAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

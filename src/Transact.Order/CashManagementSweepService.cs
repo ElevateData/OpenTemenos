@@ -23,18 +23,6 @@ namespace Transact.Order.CashManagementSweep
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICashManagementSweepService
     {
-        /// <summary>Create balance maintenance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>MaintainBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create balance maintenance sweep</summary>
         /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
@@ -46,19 +34,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>MaintainBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update balance maintenance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>MaintainBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update balance maintenance sweep</summary>
@@ -71,19 +47,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>MaintainBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create surplus balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SurplusBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create surplus balance sweep</summary>
@@ -96,19 +60,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SurplusBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update surplus balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SurplusBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update surplus balance sweep</summary>
@@ -121,19 +73,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SurplusBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create two-way balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ZeroBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create two-way balance sweep</summary>
@@ -146,19 +86,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ZeroBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update two-way balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ZeroBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update two-way balance sweep</summary>
@@ -171,19 +99,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ZeroBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create cross currency balance maintenance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FXCurrencyMaintainBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXCurrencyMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create cross currency balance maintenance sweep</summary>
@@ -196,19 +112,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FXCurrencyMaintainBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXCurrencyMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update cross currency balance maintenance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FXCurrencyMaintainBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXCurrencyMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXCurrencyMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update cross currency balance maintenance sweep</summary>
@@ -221,19 +125,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FXCurrencyMaintainBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXCurrencyMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create cross currency surplus balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FXSurplusBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXCurrencyMaintainBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create cross currency surplus balance sweep</summary>
@@ -246,18 +138,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FXSurplusBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update cross currency surplus balance sweep</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FXSurplusBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update cross currency surplus balance sweep</summary>
@@ -269,19 +150,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FXSurplusBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create cross currency two-way balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FXZeroBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXSurplusBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create cross currency two-way balance sweep</summary>
@@ -294,19 +163,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FXZeroBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update cross currency two-way balance sweep</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FXZeroBalanceSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> CreateFXZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update cross currency two-way balance sweep</summary>
@@ -319,7 +176,7 @@ namespace Transact.Order.CashManagementSweep
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FXZeroBalanceSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<MaintainBalanceSweepsResponse> UpdateFXZeroBalanceSweepsAsync(string accountId, MaintainBalanceSweeps payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

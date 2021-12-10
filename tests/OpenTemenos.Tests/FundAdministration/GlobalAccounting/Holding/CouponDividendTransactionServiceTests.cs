@@ -15,7 +15,7 @@ public class CouponDividendTransactionServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.CouponDividendTransactionService
-            .CouponDividendTransactionAsync(null, null, null, null, null, payload)
+            .CouponDividendTransactionAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

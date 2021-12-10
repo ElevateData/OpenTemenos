@@ -13,7 +13,7 @@ public class SwapInterestRateServiceTests : CredentialManagement
     public void CreateSwapInterestRateAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.SwapInterestRateService.CreateSwapInterestRateAsync(null, null, null, null, null, body)
+        var result = _client.SwapInterestRateService.CreateSwapInterestRateAsync(body)
             .Result;
         Assert.IsNotNull(result.Body);
     }

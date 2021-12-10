@@ -23,16 +23,6 @@ namespace Transact.Order.SecurityTransferOrders
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISecurityTransferOrdersService
     {
-        /// <summary>Retrieves the inbound security transfers</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>InboundSecurityTransferOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<InboundSecurityTransferOrdersResponse> GetInboundSecurityTransferOrdersAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the inbound security transfers</summary>
         /// <param name="page_size">The total number of records per page</param>
@@ -42,17 +32,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>InboundSecurityTransferOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<InboundSecurityTransferOrdersResponse> GetInboundSecurityTransferOrdersAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the outbound security transfers</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>OutboundSecurityTransferOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutboundSecurityTransferOrdersResponse> GetOutboundSecurityTransferOrdersAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<InboundSecurityTransferOrdersResponse> GetInboundSecurityTransferOrdersAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the outbound security transfers</summary>
@@ -63,16 +43,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>OutboundSecurityTransferOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutboundSecurityTransferOrdersResponse> GetOutboundSecurityTransferOrdersAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a security transfer order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityTransferOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrderResponse> CreateSecurityTransferOrderAsync(SecurityTransferOrder payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<OutboundSecurityTransferOrdersResponse> GetOutboundSecurityTransferOrdersAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a security transfer order</summary>
@@ -82,20 +53,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityTransferOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrderResponse> CreateSecurityTransferOrderAsync(SecurityTransferOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Allows to view the Security Transfer Order details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityTransferOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrdersResponse> GetSecurityTransferOrdersAsync(string securityTransferOrderId, string? customerId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityTransferOrderResponse> CreateSecurityTransferOrderAsync(SecurityTransferOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the Security Transfer Order details</summary>
@@ -109,16 +67,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityTransferOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrdersResponse> GetSecurityTransferOrdersAsync(string securityTransferOrderId, string? customerId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the security transfer order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityTransferOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrderResponse> UpdateSecurityTransferOrderAsync(string securityTransferOrderId, SecurityTransferOrder payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityTransferOrdersResponse> GetSecurityTransferOrdersAsync(string securityTransferOrderId, string? customerId = null, string? instrumentId = null, string? depositoryId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the security transfer order</summary>
@@ -128,16 +77,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityTransferOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrderResponse> UpdateSecurityTransferOrderAsync(string securityTransferOrderId, SecurityTransferOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a security transfer order draft</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityTransferDraftOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrderResponse> CreateSecurityTransferDraftOrderAsync(SecurityTransferOrder payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityTransferOrderResponse> UpdateSecurityTransferOrderAsync(string securityTransferOrderId, SecurityTransferOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a security transfer order draft</summary>
@@ -147,16 +87,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityTransferDraftOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferOrderResponse> CreateSecurityTransferDraftOrderAsync(SecurityTransferOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the security transfer request</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>SecurityTransferRequestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferRequestResponse> CreateSecurityTransferRequestAsync(SecurityTransferRequest payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityTransferOrderResponse> CreateSecurityTransferDraftOrderAsync(SecurityTransferOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the security transfer request</summary>
@@ -166,7 +97,7 @@ namespace Transact.Order.SecurityTransferOrders
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>SecurityTransferRequestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityTransferRequestResponse> CreateSecurityTransferRequestAsync(SecurityTransferRequest payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SecurityTransferRequestResponse> CreateSecurityTransferRequestAsync(SecurityTransferRequest payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

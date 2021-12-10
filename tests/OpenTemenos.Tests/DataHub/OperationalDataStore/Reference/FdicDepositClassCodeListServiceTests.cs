@@ -10,7 +10,7 @@ public class FdicDepositClassCodeListServiceTests : CredentialManagement
     [TestMethod]
     public void GetFdicDepositClassCodeListAsync()
     {
-        var result = _client.UsModelBankFdicSubClassificationCodeService.GetFdicDepositClassCodeListAsync(null).Result;
+        var result = _client.UsModelBankFdicSubClassificationCodeService.GetFdicDepositClassCodeListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

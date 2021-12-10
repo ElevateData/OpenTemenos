@@ -14,7 +14,7 @@ public class DatesServiceTests : CredentialManagement
     public void GetDatesAsync()
     {
         var result = _client.DatesService
-            .GetDatesAsync(null, null, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetDatesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -23,7 +23,7 @@ public class DatesServiceTests : CredentialManagement
     public void GetDatesByCompanyAsync()
     {
         var result = _client.DatesService
-            .GetDatesByCompanyAsync(CompanyIdPath, null, null, null, null, null, null, null, null, null, null, null)
+            .GetDatesByCompanyAsync(CompanyIdPath)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -31,7 +31,7 @@ public class DatesServiceTests : CredentialManagement
     [TestMethod]
     public void GetHolidayAsync()
     {
-        var result = _client.DatesService.GetHolidayAsync(HolidayId, null, null, null, null).Result;
+        var result = _client.DatesService.GetHolidayAsync(HolidayId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class DatesServiceTests : CredentialManagement
     {
         var holidayId = string.Empty;
         var payload = new Holiday();
-        var result = _client.DatesService.CreateHolidayAsync(holidayId, payload, null, null, null, null, null).Result;
+        var result = _client.DatesService.CreateHolidayAsync(holidayId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -51,7 +51,7 @@ public class DatesServiceTests : CredentialManagement
     {
         var holidayId = string.Empty;
         var payload = new Holiday();
-        var result = _client.DatesService.UpdateHolidayAsync(holidayId, payload, null, null, null, null, null).Result;
+        var result = _client.DatesService.UpdateHolidayAsync(holidayId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

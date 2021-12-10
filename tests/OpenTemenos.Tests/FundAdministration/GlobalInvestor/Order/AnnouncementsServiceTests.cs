@@ -14,7 +14,7 @@ public class AnnouncementsServiceTests : CredentialManagement
     public void PostDividendPaymentAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DividendPaymentService.PostDividendPaymentAsync(null, null, null, null, null, payload)
+        var result = _client.DividendPaymentService.PostDividendPaymentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

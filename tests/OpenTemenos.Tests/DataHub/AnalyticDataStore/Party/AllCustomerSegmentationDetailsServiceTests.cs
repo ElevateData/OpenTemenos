@@ -11,7 +11,7 @@ public class AllCustomerSegmentationDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAllCustomerSegmentationDetailsAsync()
     {
-        var result = _client.CustomerSegmentationService.GetAllCustomerSegmentationDetailsAsync(null, null).Result;
+        var result = _client.CustomerSegmentationService.GetAllCustomerSegmentationDetailsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

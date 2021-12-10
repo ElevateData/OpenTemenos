@@ -20,7 +20,7 @@ public class AccountsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPackageStatementAsync()
     {
-        var result = _client.AccountManagementService.GetAccountClosureAsync(AccountId, null, null, null, null)
+        var result = _client.AccountManagementService.GetAccountClosureAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -32,15 +32,14 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new AccountClosure();
         var result = _client.AccountManagementService
-            .UpdateAccountClosureAsync(accountId, payload, null, null, null, null, null).Result;
+            .UpdateAccountClosureAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetAccountTransactionsAsync()
     {
-        var result = _client.AccountManagementService.GetAccountTransactionsAsync(AccountId, null, null, null, null,
-                null, null, null, null, null, null, null, null, null, null)
+        var result = _client.AccountManagementService.GetAccountTransactionsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -48,8 +47,7 @@ public class AccountsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountCardsAsync()
     {
-        var result = _client.AccountManagementService.GetAccountCardsAsync(AccountId, null, null, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.AccountManagementService.GetAccountCardsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -57,8 +55,7 @@ public class AccountsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountBalanceTodayAsync()
     {
-        var result = _client.AccountManagementService.GetAccountBalanceTodayAsync(null, null, null, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.AccountManagementService.GetAccountBalanceTodayAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -68,7 +65,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountBalanceMovementAsync()
     {
         var result = _client.AccountManagementService
-            .GetAccountBalanceMovementAsync(AccountId, BookingDate, null, null, null, null, null, null, null, null)
+            .GetAccountBalanceMovementAsync(AccountId, BookingDate)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -77,7 +74,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountEmergencyBlockAsync()
     {
         var result = _client.AccountManagementService
-            .GetAccountEmergencyBlockAsync(AccountId, null, null, null, null, null, null, null, null)
+            .GetAccountEmergencyBlockAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -89,7 +86,7 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new AccountEmergencyBlock();
         var result = _client.AccountManagementService
-            .UpdateAccountEmergencyBlockAsync(accountId, payload, null, null, null, null, null).Result;
+            .UpdateAccountEmergencyBlockAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -97,7 +94,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountFundsAuthStatusAsync()
     {
         var result = _client.AccountManagementService
-            .GetAccountFundsAuthStatusAsync(AccountId, null, null, null, null, null, null, null, null)
+            .GetAccountFundsAuthStatusAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -109,7 +106,7 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new AccountFundsAuthStatus();
         var result = _client.AccountManagementService
-            .UpdateAccountFundsAuthStatusAsync(accountId, payload, null, null, null, null, null).Result;
+            .UpdateAccountFundsAuthStatusAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -120,7 +117,7 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new FundsDiversion();
         var result = _client.AccountManagementService
-            .CreateFundsDiversionAsync(accountId, payload, null, null, null, null, null).Result;
+            .CreateFundsDiversionAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -131,7 +128,7 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new FundsDiversion();
         var result = _client.AccountManagementService
-            .UpdateFundsDiversionAsync(accountId, payload, null, null, null, null, null).Result;
+            .UpdateFundsDiversionAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -139,7 +136,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetNostroForwardBalancesAsync()
     {
         var result = _client.AccountManagementService
-            .GetNostroForwardBalancesAsync(ValueDate, null, null, null, null, null, null, null, null, null, null)
+            .GetNostroForwardBalancesAsync(ValueDate)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -148,7 +145,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetNostroBalancesAsync()
     {
         var result = _client.AccountManagementService
-            .GetNostroBalancesAsync(CurrencyId, null, null, null, null, null, null, null, null, null)
+            .GetNostroBalancesAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -158,7 +155,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetNostroCurrencyPositionsAsync()
     {
         var result = _client.AccountManagementService
-            .GetNostroCurrencyPositionsAsync(CurrencyId, null, null, null, null, null, null, null, null)
+            .GetNostroCurrencyPositionsAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -167,7 +164,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetNostroPositionsAsync()
     {
         var result = _client.AccountManagementService
-            .GetNostroPositionsAsync(CurrencyId, null, null, null, null, null, null, null, null, null)
+            .GetNostroPositionsAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -175,8 +172,7 @@ public class AccountsServiceTests : CredentialManagement
     [TestMethod]
     public void GetReservedFundsAsync()
     {
-        var result = _client.AccountManagementService.GetReservedFundsAsync(null, null, null, null, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.AccountManagementService.GetReservedFundsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -185,7 +181,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountDetailsAsync()
     {
         var result = _client.AccountManagementService
-            .GetAccountDetailsAsync(AccountId, null, null, null, null, null, null, null, null)
+            .GetAccountDetailsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -194,7 +190,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetActiveProxyIdentifierAsync()
     {
         var result = _client.AccountManagementService
-            .GetActiveProxyIdentifierAsync(null, null, null, null, null, null, null, null, null, null, null, null)
+            .GetActiveProxyIdentifierAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -205,7 +201,7 @@ public class AccountsServiceTests : CredentialManagement
     public void CreateProxyIdentifierAsync()
     {
         var payload = new ProxyIdentifier();
-        var result = _client.AccountManagementService.CreateProxyIdentifierAsync(payload, null, null, null, null, null)
+        var result = _client.AccountManagementService.CreateProxyIdentifierAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -217,7 +213,7 @@ public class AccountsServiceTests : CredentialManagement
         var proxyIdentifierId = string.Empty;
         var payload = new ProxyIdentifier1();
         var result = _client.AccountManagementService
-            .UpdateProxyIdentifierAsync(proxyIdentifierId, payload, null, null, null, null, null)
+            .UpdateProxyIdentifierAsync(proxyIdentifierId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -226,7 +222,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountPaymentDetailsAsync()
     {
         var result = _client.AccountManagementService.GetAccountPaymentDetailsAsync(AccountId, AccountCompany,
-                PaymentCurrency, AccountSwitch, BeneficialCustomer, null, null, null, null, null, null, null, null)
+                PaymentCurrency, AccountSwitch, BeneficialCustomer)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -234,8 +230,7 @@ public class AccountsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAccountsAsync()
     {
-        var result = _client.AccountManagementService.GetAccountsAsync(null, null, null, null, null, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.AccountManagementService.GetAccountsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -244,7 +239,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetContractBalancesAsync()
     {
         var result = _client.AccountManagementService
-            .GetContractBalancesAsync(ContractBalanceId, null, null, null, null, null, null, null, null)
+            .GetContractBalancesAsync(ContractBalanceId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -257,7 +252,7 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new SynchronizationError();
         var result = _client.AccountManagementService
-            .UpdateSynchronizationErrorAsync(accountId, payload, null, null, null, null, null)
+            .UpdateSynchronizationErrorAsync(accountId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -266,7 +261,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetExpiringAccountSwitchesAsync()
     {
         var result = _client.AccountManagementService
-            .GetExpiringAccountSwitchesAsync(AccountId, null, null, null, null, null, null, null, null, null, null)
+            .GetExpiringAccountSwitchesAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -275,7 +270,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountSwitchDetailsAsync()
     {
         var result = _client.AccountManagementService
-            .GetAccountSwitchDetailsAsync(AccountId, null, null, null, null, null, null, null, null, null)
+            .GetAccountSwitchDetailsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -287,7 +282,7 @@ public class AccountsServiceTests : CredentialManagement
         var accountId = string.Empty;
         var payload = new AccountSwitchDetails();
         var result = _client.AccountManagementService
-            .UpdateAccountSwitchDetailsAsync(accountId, payload, null, null, null, null, null)
+            .UpdateAccountSwitchDetailsAsync(accountId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -296,7 +291,7 @@ public class AccountsServiceTests : CredentialManagement
     public void GetAccountSwitchPaymentDetailsAsync()
     {
         var result = _client.AccountManagementService
-            .GetAccountSwitchPaymentDetailsAsync(AccountId, null, null, null, null, null, null, null, null)
+            .GetAccountSwitchPaymentDetailsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -306,7 +301,7 @@ public class AccountsServiceTests : CredentialManagement
     public void ApproveAccountClosureAsync()
     {
         var accountId = string.Empty;
-        var result = _client.AccountManagementService.ApproveAccountClosureAsync(accountId, null, null, null, null)
+        var result = _client.AccountManagementService.ApproveAccountClosureAsync(accountId)
             .Result;
         Assert.IsNotNull(result.Body);
     }

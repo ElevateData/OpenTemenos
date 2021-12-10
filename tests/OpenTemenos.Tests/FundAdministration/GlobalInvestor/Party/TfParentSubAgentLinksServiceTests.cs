@@ -15,7 +15,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ParentOrSubAgentLinkService
-            .PostTfparentsubagentlinksByParentAsync(null, null, null, null, null, payload).Result;
+            .PostTfparentsubagentlinksByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ParentOrSubAgentLinkService
-            .PostTfparentsubagentlinksAsync(null, null, null, null, null, payload).Result;
+            .PostTfparentsubagentlinksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ParentOrSubAgentLinkService
-            .PutTfparentsubagentlinksAsync(null, null, null, null, null, payload).Result;
+            .PutTfparentsubagentlinksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ParentOrSubAgentLinkService
-            .DeleteTfparentsubagentlinksAsync(null, null, null, null, null, payload).Result;
+            .DeleteTfparentsubagentlinksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
     public void GetTfParentSubAgentLinksByInternalIdAsync()
     {
         var result = _client.ParentOrSubAgentLinkService
-            .GetTfparentsubagentlinksByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetTfparentsubagentlinksByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ParentOrSubAgentLinkService
-            .PutTfparentsubagentlinksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutTfparentsubagentlinksByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class TfParentSubAgentLinksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ParentOrSubAgentLinkService
-            .DeleteTfparentsubagentlinksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteTfparentsubagentlinksByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

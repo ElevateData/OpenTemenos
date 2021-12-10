@@ -12,7 +12,7 @@ public class IBANCountriesListServiceTests : CredentialManagement
     [TestMethod]
     public void GetIBANBankDetailsAsync()
     {
-        var result = _client.IbanStructureDetailService.GetIBANCountriesListAsync(_recordId, null).Result;
+        var result = _client.IbanStructureDetailService.GetIBANCountriesListAsync(_recordId).Result;
         Assert.IsNotNull(result.Data);
     }
 }

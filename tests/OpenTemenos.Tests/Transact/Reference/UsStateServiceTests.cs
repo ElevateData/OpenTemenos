@@ -11,7 +11,7 @@ public class UsStateServiceTests : CredentialManagement
     public void GetUsStateListAsync()
     {
         var result = _client.UsStateService
-            .GetUsStateListAsync(null, null, null, null, null, null).Result;
+            .GetUsStateListAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

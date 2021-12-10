@@ -23,14 +23,6 @@ namespace Transact.Microservice.GenericConfig
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IGenericConfigService
     {
-        /// <summary>Retrieves the details of application configuration</summary>
-        /// <param name="configName">Indicates unique config name present inside the configuration group</param>
-        /// <param name="groupId">Indicates unique identifier of the configuration group</param>
-        /// <param name="versionId">Indicates optional search string to retrieve the selected version of artefact. If version id is not sent, retrieves the latest version of the configuration</param>
-        /// <returns>Searches and retrieves the configuration schema based on the groupId and configuration name</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Configuration> GetConfigByNameAsync(string configName, string groupId, string? versionId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of application configuration</summary>
         /// <param name="configName">Indicates unique config name present inside the configuration group</param>
@@ -38,15 +30,7 @@ namespace Transact.Microservice.GenericConfig
         /// <param name="versionId">Indicates optional search string to retrieve the selected version of artefact. If version id is not sent, retrieves the latest version of the configuration</param>
         /// <returns>Searches and retrieves the configuration schema based on the groupId and configuration name</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Configuration> GetConfigByNameAsync(string configName, string groupId, string? versionId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the configuration details</summary>
-        /// <param name="groupId">Indicates unique identifier represents a unique configuration group.</param>
-        /// <param name="configName">Indicates unique config name of the configuration maintained under the specified configuration group</param>
-        /// <param name="body">Request body consisting of the ConfigurationInput details along with the version</param>
-        /// <returns>Displays the updated record as response which consists of ID, name, version and the updated record details.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ConfigurationRecord> ModifyConfigurationAsync(string groupId, string configName, ConfigurationInput? body);
+        System.Threading.Tasks.Task<Configuration> GetConfigByNameAsync(string configName, string groupId, string? versionId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the configuration details</summary>
@@ -55,15 +39,7 @@ namespace Transact.Microservice.GenericConfig
         /// <param name="body">Request body consisting of the ConfigurationInput details along with the version</param>
         /// <returns>Displays the updated record as response which consists of ID, name, version and the updated record details.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ConfigurationRecord> ModifyConfigurationAsync(string groupId, string configName, ConfigurationInput? body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a new application configuration</summary>
-        /// <param name="groupId">Indicates unique identifier of the configuration group</param>
-        /// <param name="configName">Indicates unique config name present inside the configuration group</param>
-        /// <param name="body">Request body consisting of the Configuration details</param>
-        /// <returns>Displays the created record as response which consists of ID, name, version and the updated record details.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ConfigurationRecord> AddconfigurationAsync(string groupId, string configName, Configuration? body);
+        System.Threading.Tasks.Task<ConfigurationRecord> ModifyConfigurationAsync(string groupId, string configName, ConfigurationInput? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a new application configuration</summary>
@@ -72,14 +48,7 @@ namespace Transact.Microservice.GenericConfig
         /// <param name="body">Request body consisting of the Configuration details</param>
         /// <returns>Displays the created record as response which consists of ID, name, version and the updated record details.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ConfigurationRecord> AddconfigurationAsync(string groupId, string configName, Configuration? body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the application configuration details for a specified configuration groupid.</summary>
-        /// <param name="groupId">Indicates unique identifier of the configuration group</param>
-        /// <param name="versionId">Indicates optional search string to retrieve the selected version of artefact. If version id is not sent, retrieves the latest version of the document</param>
-        /// <returns>Searches and retrieves the configuration schema of all the configNames present inside a group based on the groupId</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<ConfigurationRecord>> GetConfigurationsAsync(string groupId, string? versionId);
+        System.Threading.Tasks.Task<ConfigurationRecord> AddconfigurationAsync(string groupId, string configName, Configuration? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the application configuration details for a specified configuration groupid.</summary>
@@ -87,7 +56,7 @@ namespace Transact.Microservice.GenericConfig
         /// <param name="versionId">Indicates optional search string to retrieve the selected version of artefact. If version id is not sent, retrieves the latest version of the document</param>
         /// <returns>Searches and retrieves the configuration schema of all the configNames present inside a group based on the groupId</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<ConfigurationRecord>> GetConfigurationsAsync(string groupId, string? versionId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<ConfigurationRecord>> GetConfigurationsAsync(string groupId, string? versionId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

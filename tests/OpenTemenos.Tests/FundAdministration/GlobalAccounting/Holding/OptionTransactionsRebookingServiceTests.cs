@@ -15,7 +15,7 @@ public class OptionTransactionsRebookingServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.OptionTransactionRebookingService
-            .OptionTransactionsRebookingAsync(null, null, null, null, null, payload).Result;
+            .OptionTransactionsRebookingAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

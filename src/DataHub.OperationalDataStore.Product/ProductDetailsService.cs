@@ -23,61 +23,31 @@ namespace DataHub.OperationalDataStore.Product.ProductDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IProductDetailsService
     {
-        /// <summary>Retrieves the product group information such as product line Id, product line Id, product group description for a product line</summary>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <returns>getProductGroupResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductGroupResponse> GetProductGroupAsync(string productLineId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product group information such as product line Id, product line Id, product group description for a product line</summary>
         /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
         /// <returns>getProductGroupResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductGroupResponse> GetProductGroupAsync(string productLineId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves product line activity information such as activity class Id, description</summary>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <returns>getProductLineActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductLineActivitiesResponse> GetProductLineActivitiesAsync(string productLineId);
+        System.Threading.Tasks.Task<GetProductGroupResponse> GetProductGroupAsync(string productLineId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves product line activity information such as activity class Id, description</summary>
         /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
         /// <returns>getProductLineActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductLineActivitiesResponse> GetProductLineActivitiesAsync(string productLineId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves product line information such as product line Id, description</summary>
-        /// <returns>getProductLinesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductLinesResponse> GetProductLinesAsync();
+        System.Threading.Tasks.Task<GetProductLineActivitiesResponse> GetProductLineActivitiesAsync(string productLineId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves product line information such as product line Id, description</summary>
         /// <returns>getProductLinesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductLinesResponse> GetProductLinesAsync(System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the product group information such as product line Id, product line Id, product group description</summary>
-        /// <returns>getProductGroupsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductGroupsResponse> GetProductGroupsAsync();
+        System.Threading.Tasks.Task<GetProductLinesResponse> GetProductLinesAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product group information such as product line Id, product line Id, product group description</summary>
         /// <returns>getProductGroupsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductGroupsResponse> GetProductGroupsAsync(System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the product's property class information, which is used for building products</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="fullDescription">Contains the name used for display or enrichment purposes</param>
-        /// <returns>getPropertyClassesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPropertyClassesResponse> GetPropertyClassesAsync(string? recordId, string? displayName, string? fullDescription);
+        System.Threading.Tasks.Task<GetProductGroupsResponse> GetProductGroupsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product's property class information, which is used for building products</summary>
@@ -86,7 +56,7 @@ namespace DataHub.OperationalDataStore.Product.ProductDetails
         /// <param name="fullDescription">Contains the name used for display or enrichment purposes</param>
         /// <returns>getPropertyClassesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPropertyClassesResponse> GetPropertyClassesAsync(string? recordId, string? displayName, string? fullDescription, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetPropertyClassesResponse> GetPropertyClassesAsync(string? recordId = null, string? displayName = null, string? fullDescription = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

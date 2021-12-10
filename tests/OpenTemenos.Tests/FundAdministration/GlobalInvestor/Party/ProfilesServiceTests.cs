@@ -14,7 +14,7 @@ public class ProfileServiceTests : CredentialManagement
     public void PostProfilesByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ProfileService.PostProfilesByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ProfileService.PostProfilesByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -23,7 +23,7 @@ public class ProfileServiceTests : CredentialManagement
     public void PostProfilesAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ProfileService.PostProfilesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ProfileService.PostProfilesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class ProfileServiceTests : CredentialManagement
     public void PutProfilesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ProfileService.PutProfilesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ProfileService.PutProfilesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class ProfileServiceTests : CredentialManagement
     public void DeleteProfilesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ProfileService.DeleteProfilesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ProfileService.DeleteProfilesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class ProfileServiceTests : CredentialManagement
     public void GetProfilesByInternalIdAsync()
     {
         var result = _client.ProfileService
-            .GetProfilesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetProfilesByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -60,7 +60,7 @@ public class ProfileServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ProfileService.PutProfilesByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.ProfileService.PutProfilesByIdAsync(internalId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -71,7 +71,7 @@ public class ProfileServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ProfileService.DeleteProfilesByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.ProfileService.DeleteProfilesByIdAsync(internalId, payload: payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

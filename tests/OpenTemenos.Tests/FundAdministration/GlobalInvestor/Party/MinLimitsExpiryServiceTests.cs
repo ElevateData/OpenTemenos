@@ -15,7 +15,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.InvestorMinLimitExpiryService
-            .PostMinlimitsexpiryByParentAsync(null, null, null, null, null, payload).Result;
+            .PostMinlimitsexpiryByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.InvestorMinLimitExpiryService
-            .PostMinlimitsexpiryAsync(null, null, null, null, null, payload).Result;
+            .PostMinlimitsexpiryAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.InvestorMinLimitExpiryService
-            .PutMinlimitsexpiryAsync(null, null, null, null, null, payload).Result;
+            .PutMinlimitsexpiryAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.InvestorMinLimitExpiryService
-            .DeleteMinlimitsexpiryAsync(null, null, null, null, null, payload).Result;
+            .DeleteMinlimitsexpiryAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
     public void GetMinLimitsExpiryByInternalIdAsync()
     {
         var result = _client.InvestorMinLimitExpiryService
-            .GetMinlimitsexpiryByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetMinlimitsexpiryByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestorMinLimitExpiryService
-            .PutMinlimitsexpiryByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutMinlimitsexpiryByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class MinLimitsExpiryServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestorMinLimitExpiryService
-            .DeleteMinlimitsexpiryByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteMinlimitsexpiryByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

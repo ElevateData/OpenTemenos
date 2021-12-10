@@ -14,7 +14,7 @@ public class ExchangeRateServiceTests : CredentialManagement
     public void PostExchangeRateAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ExchangeRateService.PostexchangerateAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ExchangeRateService.PostexchangerateAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

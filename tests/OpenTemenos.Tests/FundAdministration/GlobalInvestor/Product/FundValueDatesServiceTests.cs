@@ -13,7 +13,7 @@ public class FundValueDatesServiceTests : CredentialManagement
     public void PostFundValueDateAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundValueDateService.PostFundValueDateAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FundValueDateService.PostFundValueDateAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

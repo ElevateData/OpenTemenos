@@ -14,7 +14,7 @@ public class FutureMaturityServiceTests : CredentialManagement
     public void CreateFutureMaturityAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FutureMaturityService.CreateFutureMaturityAsync(null, null, null, null, null, payload)
+        var result = _client.FutureMaturityService.CreateFutureMaturityAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

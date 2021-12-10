@@ -14,7 +14,7 @@ public class IrsTransactionsServiceTests : CredentialManagement
     public void IrsTransactionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SwapService.IrsTransactionsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SwapService.IrsTransactionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

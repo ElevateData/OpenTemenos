@@ -10,7 +10,7 @@ public class UsHoldTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetHoldTypesAsync()
     {
-        var result = _client.UsHoldTypesService.GetHoldTypesAsync(null, null, null, null, null, null).Result;
+        var result = _client.UsHoldTypesService.GetHoldTypesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

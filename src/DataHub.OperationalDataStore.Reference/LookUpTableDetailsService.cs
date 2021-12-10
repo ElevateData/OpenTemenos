@@ -23,20 +23,13 @@ namespace DataHub.OperationalDataStore.Reference.LookUpTableDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ILookUpTableDetailsService
     {
-        /// <summary>Retrieves the lookup table details</summary>
-        /// <param name="virtualTable">Holds the table name value which will be derived from EB.LOOKUP table ID</param>
-        /// <param name="otherInfo">Specifies the other information about the lookup</param>
-        /// <returns>Lookup tablesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLookUpTableDetailsResponse> GetEbLookupsAsync(string? virtualTable, string? otherInfo);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the lookup table details</summary>
         /// <param name="virtualTable">Holds the table name value which will be derived from EB.LOOKUP table ID</param>
         /// <param name="otherInfo">Specifies the other information about the lookup</param>
         /// <returns>Lookup tablesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLookUpTableDetailsResponse> GetEbLookupsAsync(string? virtualTable, string? otherInfo, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetLookUpTableDetailsResponse> GetEbLookupsAsync(string? virtualTable = null, string? otherInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

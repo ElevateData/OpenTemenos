@@ -12,14 +12,14 @@ public class ServiceDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetAllReportTimesAsync()
     {
-        var result = _client.ServiceAutomationService.GetAllReportTimesAsync(null, null).Result;
+        var result = _client.ServiceAutomationService.GetAllReportTimesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetAllReportTimesCOBAsync()
     {
-        var result = _client.ServiceAutomationService.GetAllReportTimesCOBAsync(_batchDate, null).Result;
+        var result = _client.ServiceAutomationService.GetAllReportTimesCOBAsync(_batchDate).Result;
         Assert.IsNotNull(result.Data);
     }
 }

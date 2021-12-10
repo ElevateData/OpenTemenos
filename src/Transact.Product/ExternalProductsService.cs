@@ -23,16 +23,6 @@ namespace Transact.Product.ExternalProducts
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IExternalProductsService
     {
-        /// <summary>Retrieves the product details for the given blueprint of Mortgage product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalMortgageProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalMortgageProductResponse> GetExternalMortgageProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product details for the given blueprint of Mortgage product</summary>
         /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
@@ -42,19 +32,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalMortgageProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalMortgageProductResponse> GetExternalMortgageProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the blueprint of Mortgage product with the provided details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalMortgageProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalMortgageProductResponse> CreateExternalMortgageProductAsync(string productId, ExternalMortgageProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalMortgageProductResponse> GetExternalMortgageProductAsync(string productId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the blueprint of Mortgage product with the provided details</summary>
@@ -67,19 +45,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalMortgageProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalMortgageProductResponse> CreateExternalMortgageProductAsync(string productId, ExternalMortgageProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the given blueprint of Mortgage product with the specified details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalMortgageProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalMortgageProductResponse> UpdateExternalMortgageProductAsync(string productId, ExternalMortgageProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalMortgageProductResponse> CreateExternalMortgageProductAsync(string productId, ExternalMortgageProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the given blueprint of Mortgage product with the specified details</summary>
@@ -92,17 +58,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalMortgageProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalMortgageProductResponse> UpdateExternalMortgageProductAsync(string productId, ExternalMortgageProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the product details for the given blueprint of Current Account product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalCurrentAccountProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> GetExternalCurrentAccountProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalMortgageProductResponse> UpdateExternalMortgageProductAsync(string productId, ExternalMortgageProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product details for the given blueprint of Current Account product</summary>
@@ -113,19 +69,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalCurrentAccountProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> GetExternalCurrentAccountProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the blueprint of Current Account product with the provided details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalCurrentAccountProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> CreateExternalCurrentAccountProductAsync(string productId, ExternalCurrentAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> GetExternalCurrentAccountProductAsync(string productId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the blueprint of Current Account product with the provided details</summary>
@@ -138,19 +82,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalCurrentAccountProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> CreateExternalCurrentAccountProductAsync(string productId, ExternalCurrentAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the given blueprint of  Current Account product with the specified details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalCurrentAccountProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> UpdateExternalCurrentAccountProductAsync(string productId, ExternalCurrentAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> CreateExternalCurrentAccountProductAsync(string productId, ExternalCurrentAccountProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the given blueprint of  Current Account product with the specified details</summary>
@@ -163,17 +95,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalCurrentAccountProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> UpdateExternalCurrentAccountProductAsync(string productId, ExternalCurrentAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the product details for the given blueprint of  Savings Account product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalSavingsAccountProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> GetExternalSavingsAccountProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalCurrentAccountProductResponse> UpdateExternalCurrentAccountProductAsync(string productId, ExternalCurrentAccountProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product details for the given blueprint of  Savings Account product</summary>
@@ -184,19 +106,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalSavingsAccountProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> GetExternalSavingsAccountProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the blueprint of Savings Account  product with the provided details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalSavingsAccountProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> CreateExternalSavingsAccountProductAsync(string productId, ExternalSavingsAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> GetExternalSavingsAccountProductAsync(string productId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the blueprint of Savings Account  product with the provided details</summary>
@@ -209,19 +119,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalSavingsAccountProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> CreateExternalSavingsAccountProductAsync(string productId, ExternalSavingsAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the given blueprint of Savings Account product with the specified details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalSavingsAccountProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> UpdateExternalSavingsAccountProductAsync(string productId, ExternalSavingsAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> CreateExternalSavingsAccountProductAsync(string productId, ExternalSavingsAccountProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the given blueprint of Savings Account product with the specified details</summary>
@@ -234,19 +132,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalSavingsAccountProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> UpdateExternalSavingsAccountProductAsync(string productId, ExternalSavingsAccountProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the  blueprint  of Deposit product wih the provided details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalDepositProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalDepositProductResponse> CreateExternalDepositProductAsync(string productId, ExternalDepositProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalSavingsAccountProductResponse> UpdateExternalSavingsAccountProductAsync(string productId, ExternalSavingsAccountProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the  blueprint  of Deposit product wih the provided details</summary>
@@ -259,19 +145,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalDepositProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalDepositProductResponse> CreateExternalDepositProductAsync(string productId, ExternalDepositProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the given blueprint of  Deposit product with specified details</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalDepositProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalDepositProductResponse> UpdateExternalDepositProductAsync(string productId, ExternalDepositProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalDepositProductResponse> CreateExternalDepositProductAsync(string productId, ExternalDepositProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the given blueprint of  Deposit product with specified details</summary>
@@ -284,17 +158,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalDepositProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalDepositProductResponse> UpdateExternalDepositProductAsync(string productId, ExternalDepositProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the product details of the given  blueprint of  Deposit product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalDepositProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalDepositProductResponse> GetExternalDepositProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalDepositProductResponse> UpdateExternalDepositProductAsync(string productId, ExternalDepositProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the product details of the given  blueprint of  Deposit product</summary>
@@ -305,7 +169,7 @@ namespace Transact.Product.ExternalProducts
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalDepositProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalDepositProductResponse> GetExternalDepositProductAsync(string productId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ExternalDepositProductResponse> GetExternalDepositProductAsync(string productId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

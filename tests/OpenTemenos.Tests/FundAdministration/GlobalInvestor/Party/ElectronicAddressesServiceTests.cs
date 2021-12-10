@@ -15,7 +15,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ElectronicAddressService
-            .PostElectronicAddressesByParentAsync(null, null, null, null, null, payload).Result;
+            .PostElectronicAddressesByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ElectronicAddressService
-            .PostElectronicAddressesAsync(null, null, null, null, null, payload).Result;
+            .PostElectronicAddressesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -34,7 +34,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
     public void PutElectronicAddressesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ElectronicAddressService.PutElectronicAddressesAsync(null, null, null, null, null, payload)
+        var result = _client.ElectronicAddressService.PutElectronicAddressesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ElectronicAddressService
-            .DeleteElectronicAddressesAsync(null, null, null, null, null, payload).Result;
+            .DeleteElectronicAddressesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
     public void GetElectronicAddressesByInternalIdAsync()
     {
         var result = _client.ElectronicAddressService
-            .GetElectronicAddressesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetElectronicAddressesByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ElectronicAddressService
-            .PutElectronicAddressesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutElectronicAddressesByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class ElectronicAddressesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ElectronicAddressService
-            .DeleteElectronicAddressesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteElectronicAddressesByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

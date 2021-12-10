@@ -11,7 +11,7 @@ public class ParticipantListServiceTests : CredentialManagement
     [TestMethod]
     public void GetParticipantListAsync()
     {
-        var result = _client.ParticipantListService.GetParticipantListAsync(null, null, null).Result;
+        var result = _client.ParticipantListService.GetParticipantListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

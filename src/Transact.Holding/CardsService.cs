@@ -23,20 +23,6 @@ namespace Transact.Holding.Cards
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICardsService
     {
-        /// <summary>Retrieves issued cards details of an account</summary>
-        /// <param name="cardIssueId">The identifier of the issued card formatted as cardType '.' cardNumber. E.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222</param>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="issueDate">The date the item was issued.</param>
-        /// <param name="expiryDate">The date an agreement such as an arrangement, product, credit facility or limit is due to expire</param>
-        /// <param name="cardStatus">Current status of the Card and following are the possible statuses are  - CARD.ISSUED - CARD.RETURNED - CARD.SCRAP - CARD.CANCEL - NOT.ACTIVATED - NOT.RECEIVED - ACTIVE - BLOCKED - EXPIRED</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>CardIssuesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssuesResponse> GetCardIssuesAsync(string? cardIssueId, string? accountId, System.DateTimeOffset? issueDate, System.DateTimeOffset? expiryDate, string? cardStatus, int? page_size, int? page_start, string? page_token, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves issued cards details of an account</summary>
         /// <param name="cardIssueId">The identifier of the issued card formatted as cardType '.' cardNumber. E.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222</param>
@@ -50,16 +36,7 @@ namespace Transact.Holding.Cards
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>CardIssuesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssuesResponse> GetCardIssuesAsync(string? cardIssueId, string? accountId, System.DateTimeOffset? issueDate, System.DateTimeOffset? expiryDate, string? cardStatus, int? page_size, int? page_start, string? page_token, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates Card issue request for an account</summary>
-        /// <param name="cardIssueId">The identifier of the issued card formatted as cardType '.' cardNumber. E.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>CardIssueResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssueResponse> CreateCardIssueAsync(string cardIssueId, CardIssue payload, bool? validate_only, string? companyId);
+        System.Threading.Tasks.Task<CardIssuesResponse> GetCardIssuesAsync(string? cardIssueId = null, string? accountId = null, System.DateTimeOffset? issueDate = null, System.DateTimeOffset? expiryDate = null, string? cardStatus = null, int? page_size = null, int? page_start = null, string? page_token = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates Card issue request for an account</summary>
@@ -69,16 +46,7 @@ namespace Transact.Holding.Cards
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>CardIssueResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssueResponse> CreateCardIssueAsync(string cardIssueId, CardIssue payload, bool? validate_only, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates Card status of an account</summary>
-        /// <param name="cardIssueId">The identifier of the issued card formatted as cardType '.' cardNumber. E.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>CardIssueResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssueResponse> UpdateCardIssueAsync(string cardIssueId, CardIssue payload, bool? validate_only, string? companyId);
+        System.Threading.Tasks.Task<CardIssueResponse> CreateCardIssueAsync(string cardIssueId, CardIssue payload, bool? validate_only = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates Card status of an account</summary>
@@ -88,16 +56,7 @@ namespace Transact.Holding.Cards
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>CardIssueResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssueResponse> UpdateCardIssueAsync(string cardIssueId, CardIssue payload, bool? validate_only, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Removes a issued card for an account</summary>
-        /// <param name="cardIssueId">The identifier of the issued card formatted as cardType '.' cardNumber. E.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>CardIssueResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssueResponse> DeleteCardIssueAsync(string cardIssueId, CardIssueDelete? payload, bool? validate_only, string? companyId);
+        System.Threading.Tasks.Task<CardIssueResponse> UpdateCardIssueAsync(string cardIssueId, CardIssue payload, bool? validate_only = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Removes a issued card for an account</summary>
@@ -107,7 +66,7 @@ namespace Transact.Holding.Cards
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>CardIssueResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CardIssueResponse> DeleteCardIssueAsync(string cardIssueId, CardIssueDelete? payload, bool? validate_only, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CardIssueResponse> DeleteCardIssueAsync(string cardIssueId, CardIssueDelete? payload = null, bool? validate_only = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

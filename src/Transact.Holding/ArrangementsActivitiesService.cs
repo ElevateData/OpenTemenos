@@ -23,24 +23,6 @@ namespace Transact.Holding.ArrangementsActivities
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IArrangementsActivitiesService
     {
-        /// <summary>Retrieves the activity log of an account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="simulation">What if scenario reference</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ArrangementActivityLogResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<ArrangementActivityLogResponse> GetArrangementActivityLogAsync(string arrangementId, string? simulation, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the activity log of an account</summary>
         /// <param name="arrangementId">Indicates an unique identifier of an account</param>
@@ -58,25 +40,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>ArrangementActivityLogResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<ArrangementActivityLogResponse> GetArrangementActivityLogAsync(string arrangementId, string? simulation, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Financial Activity Log of an account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="simulationReference">Indicates the Reference ID for simulation activity</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>FinancialActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<FinancialActivitiesResponse> GetFinancialActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ArrangementActivityLogResponse> GetArrangementActivityLogAsync(string arrangementId, string? simulation = null, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Financial Activity Log of an account</summary>
@@ -95,25 +59,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>FinancialActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<FinancialActivitiesResponse> GetFinancialActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Lists the User related activity logs of an account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="simulationReference">Indicates the Reference ID for simulation activity</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>UserActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<UserActivitiesResponse> GetUserActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<FinancialActivitiesResponse> GetFinancialActivitiesAsync(string arrangementId, string? simulationReference = null, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Lists the User related activity logs of an account</summary>
@@ -132,25 +78,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>UserActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<UserActivitiesResponse> GetUserActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the System activities of an account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="simulationReference">Indicates the Reference ID for simulation activity</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SystemActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<SystemActivitiesResponse> GetSystemActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<UserActivitiesResponse> GetUserActivitiesAsync(string arrangementId, string? simulationReference = null, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the System activities of an account</summary>
@@ -169,22 +97,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>SystemActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<SystemActivitiesResponse> GetSystemActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the log of an activity in hold of an account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>HoldActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<HoldActivitiesResponse> GetHoldActivitiesAsync(string arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<SystemActivitiesResponse> GetSystemActivitiesAsync(string arrangementId, string? simulationReference = null, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the log of an activity in hold of an account</summary>
@@ -200,25 +113,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>HoldActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<HoldActivitiesResponse> GetHoldActivitiesAsync(string arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the archived activity log of an account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="simulationReference">Indicates the Reference ID for simulation activity</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ArchievedActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<ArchievedActivitiesResponse> GetArchievedActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<HoldActivitiesResponse> GetHoldActivitiesAsync(string arrangementId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the archived activity log of an account</summary>
@@ -237,24 +132,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>ArchievedActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<ArchievedActivitiesResponse> GetArchievedActivitiesAsync(string arrangementId, string? simulationReference, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the transaction list for a given Account Number</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="startDate">Contains the date on which the transaction or payment gets initiated.</param>
-        /// <param name="endDate">Indicates the date till which the transaction history requested. If 20120101 is the start date and 20120201 is the end date, all transactions that are booked between January 1 to February 1 2012 are returned</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AccountSummaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<AccountSummaryResponse> GetAccountSummaryAsync(string accountId, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ArchievedActivitiesResponse> GetArchievedActivitiesAsync(string arrangementId, string? simulationReference = null, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the transaction list for a given Account Number</summary>
@@ -272,23 +150,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>AccountSummaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<AccountSummaryResponse> GetAccountSummaryAsync(string accountId, string? startDate, string? endDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of activities applicable for an arrangement account</summary>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="activityId">Id of the activity, e.g. ACCOUNTS-CAPITALISE-ACCHARGE*CARDISSUEFEE</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ArrangementActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<ArrangementActivitiesResponse> GetArrangementActivitiesAsync(string arrangementId, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<AccountSummaryResponse> GetAccountSummaryAsync(string accountId, string? startDate = null, string? endDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of activities applicable for an arrangement account</summary>
@@ -305,31 +167,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>ArrangementActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<ArrangementActivitiesResponse> GetArrangementActivitiesAsync(string arrangementId, string? activityId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the list of unauthorised activities of an account</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="activity">Defines the activity to be processed against the Arrangement. The activity may be a user activity or a system generated activity.</param>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="product">Specifies the list of products licensed for the institution. This will be used to set the products field in the SPF (System Parameter) table and the master company. The products in the company can only be subset of the products in the SPF table.</param>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="contractId">Indicates the unique identifier of the transaction or contract which initiated the activity</param>
-        /// <param name="transactionAmount">Contains the transaction amount. This is based on the currency, either local or foreign currency</param>
-        /// <param name="transactionAmountLocalCurrency">Indicates the transaction amount in local currency</param>
-        /// <param name="applicationId">Contains the application id of the service that has crashed due to error.</param>
-        /// <param name="inputter">The user identifier who input the transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>UnauthorisedAAAResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<UnauthorisedAAAResponse> GetUnauthorisedAAAAsync(string? customerId, string? activity, string? arrangementId, string? product, string? currency, string? contractId, string? transactionAmount, string? transactionAmountLocalCurrency, string? applicationId, string? inputter, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ArrangementActivitiesResponse> GetArrangementActivitiesAsync(string arrangementId, string? activityId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the list of unauthorised activities of an account</summary>
@@ -354,7 +192,7 @@ namespace Transact.Holding.ArrangementsActivities
         /// <returns>UnauthorisedAAAResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<UnauthorisedAAAResponse> GetUnauthorisedAAAAsync(string? customerId, string? activity, string? arrangementId, string? product, string? currency, string? contractId, string? transactionAmount, string? transactionAmountLocalCurrency, string? applicationId, string? inputter, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UnauthorisedAAAResponse> GetUnauthorisedAAAAsync(string? customerId = null, string? activity = null, string? arrangementId = null, string? product = null, string? currency = null, string? contractId = null, string? transactionAmount = null, string? transactionAmountLocalCurrency = null, string? applicationId = null, string? inputter = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

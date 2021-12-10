@@ -23,17 +23,6 @@ namespace Transact.System.OnlineUpgrade
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IOnlineUpgradeService
     {
-        /// <summary>To add server for online upgrade</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServerOnlineupgradeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServerOnlineupgradeResponse> AddServerOnlineupgradeAsync(ServerOnlineupgrade payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To add server for online upgrade</summary>
         /// <param name="payload">body Payload</param>
@@ -44,18 +33,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServerOnlineupgradeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServerOnlineupgradeResponse> AddServerOnlineupgradeAsync(ServerOnlineupgrade payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To STOP the restructure service</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RestructureServiceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StopRestructureServiceAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServerOnlineupgradeResponse> AddServerOnlineupgradeAsync(ServerOnlineupgrade payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To STOP the restructure service</summary>
@@ -67,18 +45,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RestructureServiceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StopRestructureServiceAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To START restructure feeder service</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RestructureFeederResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StartRestructureFeederAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RestructureServiceResponse> StopRestructureServiceAsync(RestructureService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To START restructure feeder service</summary>
@@ -90,18 +57,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RestructureFeederResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StartRestructureFeederAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To STOP restructure feeder service</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RestructureFeederResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StopRestructureFeederAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RestructureServiceResponse> StartRestructureFeederAsync(RestructureService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To STOP restructure feeder service</summary>
@@ -113,18 +69,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RestructureFeederResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StopRestructureFeederAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To START primary data release</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PrimaryDatareleaseResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StartPrimaryDatareleaseAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RestructureServiceResponse> StopRestructureFeederAsync(RestructureService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To START primary data release</summary>
@@ -136,18 +81,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PrimaryDatareleaseResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StartPrimaryDatareleaseAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To START secondary data release</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SecondaryDatareleaseResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StartSecondaryDatareleaseAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RestructureServiceResponse> StartPrimaryDatareleaseAsync(RestructureService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To START secondary data release</summary>
@@ -159,19 +93,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SecondaryDatareleaseResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RestructureServiceResponse> StartSecondaryDatareleaseAsync(RestructureService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade critical records by scanning temp.release</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeCriticalRecordResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeCriticalRecordResponse> GetOnlineUpgradeCriticalRecordAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RestructureServiceResponse> StartSecondaryDatareleaseAsync(RestructureService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade critical records by scanning temp.release</summary>
@@ -184,19 +106,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeCriticalRecordResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeCriticalRecordResponse> GetOnlineUpgradeCriticalRecordAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade NON critical records by scanning temp.release</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeNonCriticalRecordsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeNonCriticalRecordsResponse> GetOnlineUpgradeNonCriticalRecordsAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnlineUpgradeCriticalRecordResponse> GetOnlineUpgradeCriticalRecordAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade NON critical records by scanning temp.release</summary>
@@ -209,19 +119,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeNonCriticalRecordsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeNonCriticalRecordsResponse> GetOnlineUpgradeNonCriticalRecordsAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade restructure file List</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeRestructureFilelistResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeRestructureFilelistResponse> GetOnlineUpgradeRestructureFilelistAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnlineUpgradeNonCriticalRecordsResponse> GetOnlineUpgradeNonCriticalRecordsAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade restructure file List</summary>
@@ -234,19 +132,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeRestructureFilelistResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeRestructureFilelistResponse> GetOnlineUpgradeRestructureFilelistAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade feeder drill down</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeFeederDrilldownResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeFeederDrilldownResponse> GetOnlineUpgradeFeederDrilldownAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnlineUpgradeRestructureFilelistResponse> GetOnlineUpgradeRestructureFilelistAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade feeder drill down</summary>
@@ -259,19 +145,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeFeederDrilldownResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeFeederDrilldownResponse> GetOnlineUpgradeFeederDrilldownAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade feeder drill down channel</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeFeederDrilldownChannelResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeFeederDrilldownChannelResponse> GetOnlineUpgradeFeederDrilldownChannelAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnlineUpgradeFeederDrilldownResponse> GetOnlineUpgradeFeederDrilldownAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade feeder drill down channel</summary>
@@ -284,19 +158,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeFeederDrilldownChannelResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeFeederDrilldownChannelResponse> GetOnlineUpgradeFeederDrilldownChannelAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade Job Times for primary</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeJobTimesPrimaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeJobTimesPrimaryResponse> GetOnlineUpgradeJobTimesPrimaryAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnlineUpgradeFeederDrilldownChannelResponse> GetOnlineUpgradeFeederDrilldownChannelAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade Job Times for primary</summary>
@@ -309,19 +171,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeJobTimesPrimaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeJobTimesPrimaryResponse> GetOnlineUpgradeJobTimesPrimaryAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>To GET online upgrade Job Times for secondary</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnlineUpgradeJobTimesSecondaryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeJobTimesSecondaryResponse> GetOnlineUpgradeJobTimesSecondaryAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnlineUpgradeJobTimesPrimaryResponse> GetOnlineUpgradeJobTimesPrimaryAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To GET online upgrade Job Times for secondary</summary>
@@ -334,7 +184,7 @@ namespace Transact.System.OnlineUpgrade
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnlineUpgradeJobTimesSecondaryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnlineUpgradeJobTimesSecondaryResponse> GetOnlineUpgradeJobTimesSecondaryAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<OnlineUpgradeJobTimesSecondaryResponse> GetOnlineUpgradeJobTimesSecondaryAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

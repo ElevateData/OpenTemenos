@@ -23,16 +23,6 @@ namespace Transact.Holding.ForexUtilizations
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IForexUtilizationsService
     {
-        /// <summary>Retrieves the forex contracts for the provided reference</summary>
-        /// <param name="utilisationId">Identifies the unique identifier of the transaction or contract which will be utilised.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>UtilisationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UtilisationsResponse> GetUtilisationsAsync(string utilisationId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the forex contracts for the provided reference</summary>
         /// <param name="utilisationId">Identifies the unique identifier of the transaction or contract which will be utilised.</param>
@@ -42,19 +32,7 @@ namespace Transact.Holding.ForexUtilizations
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>UtilisationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UtilisationsResponse> GetUtilisationsAsync(string utilisationId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Initiation of the Forex contract which will be utilised for external settlement</summary>
-        /// <param name="utilisationId">Identifies the unique identifier of the transaction or contract which will be utilised.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>UtilisationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UtilisationsResponse> AddUtilisationsAsync(string utilisationId, Utilisations payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<UtilisationsResponse> GetUtilisationsAsync(string utilisationId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Initiation of the Forex contract which will be utilised for external settlement</summary>
@@ -67,17 +45,7 @@ namespace Transact.Holding.ForexUtilizations
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>UtilisationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UtilisationsResponse> AddUtilisationsAsync(string utilisationId, Utilisations payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Authorization of the Forex contract which has been utilised for external settlement</summary>
-        /// <param name="utilisationId">Identifies the unique identifier of the transaction or contract which will be utilised.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>UtilisationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UtilisationsResponse> ApproveUtilisationsAsync(string utilisationId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<UtilisationsResponse> AddUtilisationsAsync(string utilisationId, Utilisations payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Authorization of the Forex contract which has been utilised for external settlement</summary>
@@ -88,25 +56,7 @@ namespace Transact.Holding.ForexUtilizations
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>UtilisationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UtilisationsResponse> ApproveUtilisationsAsync(string utilisationId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the currency exchange rates from the given forex contract that will be used by the transaction processing application for the conversion.</summary>
-        /// <param name="utilisationId">Identifies the unique identifier of the transaction or contract which will be utilised.</param>
-        /// <param name="counterparty">The counterparty ID  for the  deal.</param>
-        /// <param name="utilisationCurrency">Identifies the currency in which the amount is being utilised.</param>
-        /// <param name="utilisationAmount">Identifies the utilized amount of the Forex contract.</param>
-        /// <param name="executionDate">Date on which the transaction or payment gets processed, i.e. the processing date of the transaction.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>FxUtilisationRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FxUtilisationRatesResponse> GetFxUtilisationRatesAsync(string? utilisationId, string? counterparty, string? utilisationCurrency, string? utilisationAmount, string? executionDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<UtilisationsResponse> ApproveUtilisationsAsync(string utilisationId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the currency exchange rates from the given forex contract that will be used by the transaction processing application for the conversion.</summary>
@@ -125,7 +75,7 @@ namespace Transact.Holding.ForexUtilizations
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>FxUtilisationRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FxUtilisationRatesResponse> GetFxUtilisationRatesAsync(string? utilisationId, string? counterparty, string? utilisationCurrency, string? utilisationAmount, string? executionDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<FxUtilisationRatesResponse> GetFxUtilisationRatesAsync(string? utilisationId = null, string? counterparty = null, string? utilisationCurrency = null, string? utilisationAmount = null, string? executionDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

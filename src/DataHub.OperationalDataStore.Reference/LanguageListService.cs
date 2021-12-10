@@ -23,16 +23,11 @@ namespace DataHub.OperationalDataStore.Reference.LanguageList
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ILanguageListService
     {
-        /// <summary>Retrieves the language list details such as language Id, description</summary>
-        /// <returns>Language codesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLanguageListResponse> GetLanguageListAsync();
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the language list details such as language Id, description</summary>
         /// <returns>Language codesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetLanguageListResponse> GetLanguageListAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetLanguageListResponse> GetLanguageListAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

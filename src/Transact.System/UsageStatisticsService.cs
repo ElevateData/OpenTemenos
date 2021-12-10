@@ -23,28 +23,6 @@ namespace Transact.System.UsageStatistics
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsageStatisticsService
     {
-        /// <summary>To get Usage statistics by date</summary>
-        /// <param name="resourceReference">Contains the resource name. This is a broader classification of the grouped records. Example: Arrangements are displayed as CONTRACTS, PAYMENT.ORDER records as PAYMENT.ORDER, POR.TRANSACTION records as PAYMENTS etc.</param>
-        /// <param name="metricType">Contains the type of metering metric that are to be displayed. Example: ENTRIES, QUERIES, PAYMENTS etc.  For Arrangements, it will contain product line DEPOSITS#&lt;&lt;each product group under the product line&gt;&gt;, LOANS#&lt;&lt;each product group under the product line&gt;&gt;, ACCOUNTS#&lt;&lt;each product group under the product line&gt;&gt; etc.</param>
-        /// <param name="metricTypeMatches">Contains the strings that the metricType of a record has to match for the record to be selected</param>
-        /// <param name="meteredDate">Contains the metering date stored in the recorded profile</param>
-        /// <param name="meteredDateLessThan">Indicates the meteredDate value below which selection has to be made</param>
-        /// <param name="meteredDateLessThanOrEquals">Indicates the meteredDate value below or equal to which selection has to be made</param>
-        /// <param name="meteredDateGreaterThan">Indicates the meteredDate value above which selection has to be made</param>
-        /// <param name="meteredDateGreaterThanOrEquals">Indicates the meteredDate value above or equal to which selection has to be made</param>
-        /// <param name="meteredDateBetween">Indicates the range in which meteredDate has to be in for the record to be selected</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>UsageStatsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsageStatsResponse> GetUsageStatsAsync(string? resourceReference, string? metricType, string? metricTypeMatches, string? meteredDate, string? meteredDateLessThan, string? meteredDateLessThanOrEquals, string? meteredDateGreaterThan, string? meteredDateGreaterThanOrEquals, string? meteredDateBetween, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>To get Usage statistics by date</summary>
         /// <param name="resourceReference">Contains the resource name. This is a broader classification of the grouped records. Example: Arrangements are displayed as CONTRACTS, PAYMENT.ORDER records as PAYMENT.ORDER, POR.TRANSACTION records as PAYMENTS etc.</param>
@@ -66,7 +44,7 @@ namespace Transact.System.UsageStatistics
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>UsageStatsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsageStatsResponse> GetUsageStatsAsync(string? resourceReference, string? metricType, string? metricTypeMatches, string? meteredDate, string? meteredDateLessThan, string? meteredDateLessThanOrEquals, string? meteredDateGreaterThan, string? meteredDateGreaterThanOrEquals, string? meteredDateBetween, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UsageStatsResponse> GetUsageStatsAsync(string? resourceReference = null, string? metricType = null, string? metricTypeMatches = null, string? meteredDate = null, string? meteredDateLessThan = null, string? meteredDateLessThanOrEquals = null, string? meteredDateGreaterThan = null, string? meteredDateGreaterThanOrEquals = null, string? meteredDateBetween = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

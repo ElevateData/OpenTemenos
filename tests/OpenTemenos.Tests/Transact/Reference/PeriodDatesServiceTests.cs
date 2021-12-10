@@ -12,7 +12,7 @@ public class PeriodDatesServiceTests : CredentialManagement
     public void GetPeriodDatesAsync()
     {
         var result = _client.PeriodDatesService
-            .GetPeriodDatesAsync(CurrencyOrPair, null, null, null, null, null, null, null, null).Result;
+            .GetPeriodDatesAsync(CurrencyOrPair).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

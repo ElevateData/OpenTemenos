@@ -11,7 +11,7 @@ public class ProductMarketingCatalogueServiceTests : CredentialManagement
     [TestMethod]
     public void GetProductMarketingCatalogueAsync()
     {
-        var result = _client.ProductMarketingCatalogService.GetProductMarketingCatalogueAsync(null).Result;
+        var result = _client.ProductMarketingCatalogService.GetProductMarketingCatalogueAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

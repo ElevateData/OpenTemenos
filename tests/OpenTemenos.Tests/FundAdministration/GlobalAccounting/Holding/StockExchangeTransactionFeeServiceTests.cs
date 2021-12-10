@@ -15,7 +15,7 @@ public class StockExchangeTransactionFeeServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.StockExchangeFeeService
-            .CreateStockExchangeTransactionFeeAsync(null, null, null, null, null, payload).Result;
+            .CreateStockExchangeTransactionFeeAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -15,7 +15,7 @@ public class ContractChangesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.RegisterContractChangeService
-            .PostcontractchangesAsync(null, null, null, null, null, payload).Result;
+            .PostcontractchangesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

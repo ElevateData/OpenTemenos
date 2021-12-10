@@ -13,7 +13,7 @@ public class ExchangeRateServiceTests : CredentialManagement
     public void CreateExchangeRateAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.ExchangeRateService.CreateExchangeRateAsync(null, null, null, null, null, body).Result;
+        var result = _client.ExchangeRateService.CreateExchangeRateAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

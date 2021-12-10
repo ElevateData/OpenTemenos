@@ -23,15 +23,6 @@ namespace DataHub.OperationalDataStore.Reference.DateDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IDateDetailsService
     {
-        /// <summary>Retrieves the details of date for a specific company identifier</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="currentWorkingDate">Date of the current business day for all online activities in the selected Company. This field is updated automatically with the date from 'nextWorkingDay' during the Close of Business processing.</param>
-        /// <param name="lastWorkingDate">Date of the last business day processed for this Company. This field will be set with the date from Today table by the batch (overnight) processing system.</param>
-        /// <param name="nextWorkingDate">Date of the next business day which will be processed in this Company.</param>
-        /// <returns>getDatesByCompanyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDatesByCompanyResponse> GetDatesByCompanyAsync(string recordId, System.DateTimeOffset? currentWorkingDate, System.DateTimeOffset? lastWorkingDate, System.DateTimeOffset? nextWorkingDate);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of date for a specific company identifier</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
@@ -40,15 +31,7 @@ namespace DataHub.OperationalDataStore.Reference.DateDetails
         /// <param name="nextWorkingDate">Date of the next business day which will be processed in this Company.</param>
         /// <returns>getDatesByCompanyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDatesByCompanyResponse> GetDatesByCompanyAsync(string recordId, System.DateTimeOffset? currentWorkingDate, System.DateTimeOffset? lastWorkingDate, System.DateTimeOffset? nextWorkingDate, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the run dates informations such as the previous, the current and the next working days of all legal entities</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="nextWorkingDate">Date of the next business day which will be processed in this Company.</param>
-        /// <param name="lastWorkingDate">Date of the last business day processed for this Company. This field will be set with the date from Today table by the batch (overnight) processing system.</param>
-        /// <returns>getDatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDatesResponse> GetDatesAsync(string? recordId, System.DateTimeOffset? nextWorkingDate, System.DateTimeOffset? lastWorkingDate);
+        System.Threading.Tasks.Task<GetDatesByCompanyResponse> GetDatesByCompanyAsync(string recordId, System.DateTimeOffset? currentWorkingDate = null, System.DateTimeOffset? lastWorkingDate = null, System.DateTimeOffset? nextWorkingDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the run dates informations such as the previous, the current and the next working days of all legal entities</summary>
@@ -57,7 +40,7 @@ namespace DataHub.OperationalDataStore.Reference.DateDetails
         /// <param name="lastWorkingDate">Date of the last business day processed for this Company. This field will be set with the date from Today table by the batch (overnight) processing system.</param>
         /// <returns>getDatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetDatesResponse> GetDatesAsync(string? recordId, System.DateTimeOffset? nextWorkingDate, System.DateTimeOffset? lastWorkingDate, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetDatesResponse> GetDatesAsync(string? recordId = null, System.DateTimeOffset? nextWorkingDate = null, System.DateTimeOffset? lastWorkingDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

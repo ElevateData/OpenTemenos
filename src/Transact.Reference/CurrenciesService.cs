@@ -23,21 +23,6 @@ namespace Transact.Reference.Currencies
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICurrenciesService
     {
-        /// <summary>Retrieves Currencies details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="currencyIdNE">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrenciesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrenciesResponse> GetCurrenciesAsync(string? currencyId, string? currencyIdNE, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Currencies details</summary>
         /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
@@ -52,17 +37,7 @@ namespace Transact.Reference.Currencies
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrenciesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrenciesResponse> GetCurrenciesAsync(string? currencyId, string? currencyIdNE, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> GetCurrencyInfoAsync(string currencyId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrenciesResponse> GetCurrenciesAsync(string? currencyId = null, string? currencyIdNE = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves currency details</summary>
@@ -73,19 +48,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> GetCurrencyInfoAsync(string currencyId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> CreateCurrencyInfoAsync(string currencyId, CurrencyInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyInfoResponse> GetCurrencyInfoAsync(string currencyId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates currency details</summary>
@@ -98,19 +61,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> CreateCurrencyInfoAsync(string currencyId, CurrencyInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> UpdateCurrencyInfoAsync(string currencyId, CurrencyInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyInfoResponse> CreateCurrencyInfoAsync(string currencyId, CurrencyInfo payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates currency details</summary>
@@ -123,19 +74,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> UpdateCurrencyInfoAsync(string currencyId, CurrencyInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> DeleteCurrencyInfoAsync(string currencyId, CurrencyInfoDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyInfoResponse> UpdateCurrencyInfoAsync(string currencyId, CurrencyInfo payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes currency details</summary>
@@ -148,17 +87,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyInfoResponse> DeleteCurrencyInfoAsync(string currencyId, CurrencyInfoDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves currency market details</summary>
-        /// <param name="currencyMarketId">Specifies the code by which the Currency Market can be identified.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyMarketResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketResponse> GetCurrencyMarketAsync(string currencyMarketId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyInfoResponse> DeleteCurrencyInfoAsync(string currencyId, CurrencyInfoDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves currency market details</summary>
@@ -169,19 +98,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyMarketResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketResponse> GetCurrencyMarketAsync(string currencyMarketId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates currency market details</summary>
-        /// <param name="currencyMarketId">Specifies the code by which the Currency Market can be identified.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyMarketResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketResponse> CreateCurrencyMarketAsync(string currencyMarketId, CurrencyMarket payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyMarketResponse> GetCurrencyMarketAsync(string currencyMarketId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates currency market details</summary>
@@ -194,19 +111,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyMarketResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketResponse> CreateCurrencyMarketAsync(string currencyMarketId, CurrencyMarket payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates currency market details</summary>
-        /// <param name="currencyMarketId">Specifies the code by which the Currency Market can be identified.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyMarketResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketResponse> UpdateCurrencyMarketAsync(string currencyMarketId, CurrencyMarket payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyMarketResponse> CreateCurrencyMarketAsync(string currencyMarketId, CurrencyMarket payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates currency market details</summary>
@@ -219,21 +124,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyMarketResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketResponse> UpdateCurrencyMarketAsync(string currencyMarketId, CurrencyMarket payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves ISO currency code</summary>
-        /// <param name="numericCurrencyCode">Numeric code for the currency</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyFromNumericCodeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyFromNumericCodeResponse> GetCurrencyFromNumericCodeAsync(string numericCurrencyCode, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyMarketResponse> UpdateCurrencyMarketAsync(string currencyMarketId, CurrencyMarket payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves ISO currency code</summary>
@@ -248,22 +139,7 @@ namespace Transact.Reference.Currencies
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyFromNumericCodeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyFromNumericCodeResponse> GetCurrencyFromNumericCodeAsync(string numericCurrencyCode, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves currency historic details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="year">Contains the year in a standard ISO format</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyModificationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyModificationsResponse> GetCurrencyModificationsAsync(string currencyId, string year, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyFromNumericCodeResponse> GetCurrencyFromNumericCodeAsync(string numericCurrencyCode, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves currency historic details</summary>
@@ -279,21 +155,7 @@ namespace Transact.Reference.Currencies
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyModificationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyModificationsResponse> GetCurrencyModificationsAsync(string currencyId, string year, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves ISO currency code</summary>
-        /// <param name="rank">Indicates the rank of the payment order product within the group.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyForRankResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyForRankResponse> GetCurrencyForRankAsync(string rank, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyModificationsResponse> GetCurrencyModificationsAsync(string currencyId, string year, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves ISO currency code</summary>
@@ -308,17 +170,7 @@ namespace Transact.Reference.Currencies
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyForRankResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyForRankResponse> GetCurrencyForRankAsync(string rank, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves basic currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyBasicInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> GetCurrencyBasicInfoAsync(string currencyId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyForRankResponse> GetCurrencyForRankAsync(string rank, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves basic currency details</summary>
@@ -329,19 +181,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyBasicInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> GetCurrencyBasicInfoAsync(string currencyId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates basic currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyBasicInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> CreateCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> GetCurrencyBasicInfoAsync(string currencyId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates basic currency details</summary>
@@ -354,19 +194,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyBasicInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> CreateCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates basic currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyBasicInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> UpdateCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> CreateCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfo payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates basic currency details</summary>
@@ -379,19 +207,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyBasicInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> UpdateCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfo payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Delete basic currency details</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyBasicInfoResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> DeleteCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfoDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> UpdateCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfo payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Delete basic currency details</summary>
@@ -404,7 +220,7 @@ namespace Transact.Reference.Currencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyBasicInfoResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> DeleteCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfoDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CurrencyBasicInfoResponse> DeleteCurrencyBasicInfoAsync(string currencyId, CurrencyBasicInfoDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

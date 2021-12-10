@@ -14,7 +14,7 @@ public class DividendRatesServiceTests : CredentialManagement
     public void PostDividendRatesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.DividendRateService.PostDividendRatesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.DividendRateService.PostDividendRatesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

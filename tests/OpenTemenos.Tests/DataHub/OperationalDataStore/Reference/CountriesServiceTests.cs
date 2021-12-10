@@ -10,7 +10,7 @@ public class CountriesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCountriesAsync()
     {
-        var result = _client.CountryCodeService.GetCountriesAsync(null).Result;
+        var result = _client.CountryCodeService.GetCountriesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

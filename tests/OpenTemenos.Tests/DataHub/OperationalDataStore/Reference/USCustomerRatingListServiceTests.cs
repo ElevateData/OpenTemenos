@@ -10,7 +10,7 @@ public class USCustomerRatingListServiceTests : CredentialManagement
     [TestMethod]
     public void GetUSCustomerRatingListAsync()
     {
-        var result = _client.UsModelBankCustomerRiskRatingService.GetUSCustomerRatingListAsync(null).Result;
+        var result = _client.UsModelBankCustomerRiskRatingService.GetUSCustomerRatingListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

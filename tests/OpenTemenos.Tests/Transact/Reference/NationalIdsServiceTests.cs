@@ -16,7 +16,7 @@ public class NationalIdsServiceTests : CredentialManagement
     [TestMethod]
     public void GetBICFromLEIAsync()
     {
-        var result = _client.NationalIdsService.GetBICFromLEIAsync(LeiId, null, null, null, null, null).Result;
+        var result = _client.NationalIdsService.GetBICFromLEIAsync(LeiId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -25,7 +25,7 @@ public class NationalIdsServiceTests : CredentialManagement
     public void GetBICsFromNationalIdAsync()
     {
         var result = _client.NationalIdsService
-            .GetBICsFromNationalIdAsync(NationalIdRef, null, null, null, null, null, null, null).Result;
+            .GetBICsFromNationalIdAsync(NationalIdRef).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -34,7 +34,7 @@ public class NationalIdsServiceTests : CredentialManagement
     public void GetNationalIdDetailsAsync()
     {
         var result = _client.NationalIdsService
-            .GetNationalIdDetailsAsync(NationalIdRef, null, null, null, null, null, null, null).Result;
+            .GetNationalIdDetailsAsync(NationalIdRef).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -42,7 +42,7 @@ public class NationalIdsServiceTests : CredentialManagement
     [TestMethod]
     public void GetNationalIdsFromBicAsync()
     {
-        var result = _client.NationalIdsService.GetNationalIdsFromBicAsync(BicId, null, null, null, null, null).Result;
+        var result = _client.NationalIdsService.GetNationalIdsFromBicAsync(BicId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -51,7 +51,7 @@ public class NationalIdsServiceTests : CredentialManagement
     public void ValidateNationalIdAsync()
     {
         var result = _client.NationalIdsService
-            .ValidateNationalIdAsync(NationalIdRef, null, null, null, null, null, null, null).Result;
+            .ValidateNationalIdAsync(NationalIdRef).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -59,8 +59,8 @@ public class NationalIdsServiceTests : CredentialManagement
     [TestMethod]
     public void GetParticipantDetailsAsync()
     {
-        var result = _client.NationalIdsService.GetParticipantDetailsAsync(ParticipantId, CountryId, CurrencyCode, null,
-            null, null, null, null, null, null, null, null).Result;
+        var result = _client.NationalIdsService.GetParticipantDetailsAsync(ParticipantId, CountryId, CurrencyCode)
+            .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

@@ -23,17 +23,6 @@ namespace Transact.Order.SecurityOrders
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISecurityOrdersService
     {
-        /// <summary>Creates a security order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SecurityOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> CreateSecurityOrderAsync(SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a security order</summary>
         /// <param name="payload">body Payload</param>
@@ -44,16 +33,7 @@ namespace Transact.Order.SecurityOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SecurityOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> CreateSecurityOrderAsync(SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the security order</summary>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SecurityOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> GetSecurityOrderAsync(string securityOrderId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SecurityOrderResponse> CreateSecurityOrderAsync(SecurityOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the security order</summary>
@@ -63,18 +43,7 @@ namespace Transact.Order.SecurityOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SecurityOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> GetSecurityOrderAsync(string securityOrderId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the security order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SecurityOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> UpdateSecurityOrderAsync(string securityOrderId, SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SecurityOrderResponse> GetSecurityOrderAsync(string securityOrderId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the security order</summary>
@@ -86,37 +55,17 @@ namespace Transact.Order.SecurityOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SecurityOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> UpdateSecurityOrderAsync(string securityOrderId, SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Get Estimated Periodic Fees and charges for the deal</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <param name="amount">This is the payment amount</param>
-        /// <param name="price">The Price at which the nominal amount of the Security is to be valued for the transaction.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicFeeEstimatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicFeeEstimatesResponse> GetPeriodicFeeEstimatesAsync(string customerId, string portfolioId, string instrumentId, string? depositoryId, string tradeCurrency, string quantity, string amount, string? price, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SecurityOrderResponse> UpdateSecurityOrderAsync(string securityOrderId, SecurityOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Get Estimated Periodic Fees and charges for the deal</summary>
         /// <param name="customerId">Identifier of the customer</param>
         /// <param name="portfolioId">Id of the portfolio or security account</param>
         /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
         /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
         /// <param name="quantity">The nominal quantity</param>
         /// <param name="amount">This is the payment amount</param>
+        /// <param name="depositoryId">Id of the securities depository.</param>
         /// <param name="price">The Price at which the nominal amount of the Security is to be valued for the transaction.</param>
         /// <param name="page_size">The total number of records per page</param>
         /// <param name="page_start">The record from which the response should be displayed</param>
@@ -127,18 +76,7 @@ namespace Transact.Order.SecurityOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicFeeEstimatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicFeeEstimatesResponse> GetPeriodicFeeEstimatesAsync(string customerId, string portfolioId, string instrumentId, string? depositoryId, string tradeCurrency, string quantity, string amount, string? price, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a stop price order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>StopPriceOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> CreateStopPriceOrderAsync(SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicFeeEstimatesResponse> GetPeriodicFeeEstimatesAsync(string customerId, string portfolioId, string instrumentId, string tradeCurrency, string quantity, string amount, string? depositoryId = null, string? price = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a stop price order</summary>
@@ -150,18 +88,7 @@ namespace Transact.Order.SecurityOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>StopPriceOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> CreateStopPriceOrderAsync(SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates a stop price limit order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>StopPriceLimitOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> CreateStopPriceLimitOrderAsync(SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SecurityOrderResponse> CreateStopPriceOrderAsync(SecurityOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a stop price limit order</summary>
@@ -173,7 +100,7 @@ namespace Transact.Order.SecurityOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>StopPriceLimitOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityOrderResponse> CreateStopPriceLimitOrderAsync(SecurityOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SecurityOrderResponse> CreateStopPriceLimitOrderAsync(SecurityOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

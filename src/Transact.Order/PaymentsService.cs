@@ -23,56 +23,6 @@ namespace Transact.Order.Payments
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPaymentsService
     {
-        /// <summary>Retrieves the payment details based on status</summary>
-        /// <param name="fromDate">Indicates the business date from when the balance reservation event is active.</param>
-        /// <param name="status">The status of the early maturity request</param>
-        /// <param name="debitCustomerId">Debtor customer details</param>
-        /// <param name="creditCustomerId">Creditor customer id details</param>
-        /// <param name="debitAccountId">Indicates the debit account number of the payment or transaction.</param>
-        /// <param name="creditAccountId">Credit account identifier of the payment or transaction</param>
-        /// <param name="outputChannel">Contains the channel that will be used to send the outward payment message</param>
-        /// <param name="paymentSource">Indicates the source from where the payment is originated</param>
-        /// <param name="fileSendersReference">Indicates the sender reference that comes from the inward payment file</param>
-        /// <param name="fundsTransferId">Identifier of the Funds Transfer</param>
-        /// <param name="statusCode">Status code, as defined by the institution</param>
-        /// <param name="toDate">Indicates the business date until when the balance reservation event is active.</param>
-        /// <param name="beneficiaryId">Indicates the reference of the financial institution that allows access to the beneficiary information</param>
-        /// <param name="beneficiaryAccountId">Unique account identifier of the beneficiary account number.</param>
-        /// <param name="direction">Indicates the direction of the Direct debit claim for which mandate is received. The claim can be 'Outward' i.e. Claim is sent to the other bank or 'Inward'  i.e. other bank submit their claim to debit our customer's account.</param>
-        /// <param name="transactionAmount">Contains the transaction amount. This is based on the currency, either local or foreign currency</param>
-        /// <param name="messageType">Defines the type of swift messages that are sent or received for a transaction</param>
-        /// <param name="processingDate">The date when payment instruction is processed in system.</param>
-        /// <param name="customerReference">The reference which is provided to the beneficiary/ creditor by the originator of payment</param>
-        /// <param name="companyIdQuery">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="debitCurrency">Currency of the debit account. For example: USD, EUR etc.</param>
-        /// <param name="debitAccountCompany">Contains the company of the debit party</param>
-        /// <param name="creditCurrency">Currency of the account which funds will be transferred to.</param>
-        /// <param name="creditAccountCompany">Contains the company of the credit party</param>
-        /// <param name="partySendersReferenceIncoming">Debtor payment reference details of incoming</param>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="sendersCorrespondentAddress">Contains additional address lines of the sender correspondent institution.</param>
-        /// <param name="receiversCorrespondentAddress">Contains additional address lines of the receiver correspondent institution.</param>
-        /// <param name="bulkReference">Contains bulk master reference for the payment.</param>
-        /// <param name="customerOrBankTransfer">Indicates if the payment was initiated by Customer or the financial institution</param>
-        /// <param name="creditValueDate">Reference quoted by the credit account for a payment</param>
-        /// <param name="debitValueDate">Date on which the amount will be debited for settlement</param>
-        /// <param name="settlementTransactionIndicator">Indicates whether the payment is settlement transaction or not</param>
-        /// <param name="settlementClaimId">Indicates the settlement claim reference of the payment transaction</param>
-        /// <param name="entryDateTime">Contains the payment creation time</param>
-        /// <param name="approvedDateTime">Contains the time when payment got approved</param>
-        /// <param name="clearingNatureCode">Contains the nature of the payment transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PaymentsStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentsStatusResponse> GetPaymentsStatusAsync(string fromDate, string status, string? debitCustomerId, string? creditCustomerId, string? debitAccountId, string? creditAccountId, string? outputChannel, string? paymentSource, string? fileSendersReference, string? fundsTransferId, string? statusCode, string? toDate, string? beneficiaryId, string? beneficiaryAccountId, string? direction, string? transactionAmount, string? messageType, string? processingDate, string? customerReference, string? companyIdQuery, string? debitCurrency, string? debitAccountCompany, string? creditCurrency, string? creditAccountCompany, string? partySendersReferenceIncoming, string? transactionReference, string? sendersCorrespondentAddress, string? receiversCorrespondentAddress, string? bulkReference, string? customerOrBankTransfer, string? creditValueDate, string? debitValueDate, string? settlementTransactionIndicator, string? settlementClaimId, string? entryDateTime, string? approvedDateTime, string? clearingNatureCode, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the payment details based on status</summary>
         /// <param name="fromDate">Indicates the business date from when the balance reservation event is active.</param>
@@ -122,21 +72,7 @@ namespace Transact.Order.Payments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PaymentsStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentsStatusResponse> GetPaymentsStatusAsync(string fromDate, string status, string? debitCustomerId, string? creditCustomerId, string? debitAccountId, string? creditAccountId, string? outputChannel, string? paymentSource, string? fileSendersReference, string? fundsTransferId, string? statusCode, string? toDate, string? beneficiaryId, string? beneficiaryAccountId, string? direction, string? transactionAmount, string? messageType, string? processingDate, string? customerReference, string? companyIdQuery, string? debitCurrency, string? debitAccountCompany, string? creditCurrency, string? creditAccountCompany, string? partySendersReferenceIncoming, string? transactionReference, string? sendersCorrespondentAddress, string? receiversCorrespondentAddress, string? bulkReference, string? customerOrBankTransfer, string? creditValueDate, string? debitValueDate, string? settlementTransactionIndicator, string? settlementClaimId, string? entryDateTime, string? approvedDateTime, string? clearingNatureCode, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the payment fee and tax</summary>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PaymentFeesAndChargesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentFeesAndChargesResponse> GetPaymentFeesAndChargesAsync(string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PaymentsStatusResponse> GetPaymentsStatusAsync(string fromDate, string status, string? debitCustomerId = null, string? creditCustomerId = null, string? debitAccountId = null, string? creditAccountId = null, string? outputChannel = null, string? paymentSource = null, string? fileSendersReference = null, string? fundsTransferId = null, string? statusCode = null, string? toDate = null, string? beneficiaryId = null, string? beneficiaryAccountId = null, string? direction = null, string? transactionAmount = null, string? messageType = null, string? processingDate = null, string? customerReference = null, string? companyIdQuery = null, string? debitCurrency = null, string? debitAccountCompany = null, string? creditCurrency = null, string? creditAccountCompany = null, string? partySendersReferenceIncoming = null, string? transactionReference = null, string? sendersCorrespondentAddress = null, string? receiversCorrespondentAddress = null, string? bulkReference = null, string? customerOrBankTransfer = null, string? creditValueDate = null, string? debitValueDate = null, string? settlementTransactionIndicator = null, string? settlementClaimId = null, string? entryDateTime = null, string? approvedDateTime = null, string? clearingNatureCode = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the payment fee and tax</summary>
@@ -151,21 +87,7 @@ namespace Transact.Order.Payments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PaymentFeesAndChargesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentFeesAndChargesResponse> GetPaymentFeesAndChargesAsync(string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves payment audit trail</summary>
-        /// <param name="transactionReference">Contains the identifier for the transaction in the core system</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AllPaymentsTransactionLogsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AllPaymentsTransactionLogsResponse> GetAllPaymentsTransactionLogsAsync(string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PaymentFeesAndChargesResponse> GetPaymentFeesAndChargesAsync(string? transactionReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves payment audit trail</summary>
@@ -180,18 +102,7 @@ namespace Transact.Order.Payments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AllPaymentsTransactionLogsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AllPaymentsTransactionLogsResponse> GetAllPaymentsTransactionLogsAsync(string? transactionReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create a recall in response to a bank operator's request</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BankInitiatedPaymentRecallResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BankInitiatedPaymentRecallResponse> CreateBankInitiatedPaymentRecallAsync(BankInitiatedPaymentRecall payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AllPaymentsTransactionLogsResponse> GetAllPaymentsTransactionLogsAsync(string? transactionReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create a recall in response to a bank operator's request</summary>
@@ -203,18 +114,7 @@ namespace Transact.Order.Payments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BankInitiatedPaymentRecallResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BankInitiatedPaymentRecallResponse> CreateBankInitiatedPaymentRecallAsync(BankInitiatedPaymentRecall payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create a recall in response to a customer's request</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerInitiatedPaymentRecallResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerInitiatedPaymentRecallResponse> CreateCustomerInitiatedPaymentRecallAsync(CustomerInitiatedPaymentRecall payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BankInitiatedPaymentRecallResponse> CreateBankInitiatedPaymentRecallAsync(BankInitiatedPaymentRecall payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create a recall in response to a customer's request</summary>
@@ -226,19 +126,7 @@ namespace Transact.Order.Payments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerInitiatedPaymentRecallResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerInitiatedPaymentRecallResponse> CreateCustomerInitiatedPaymentRecallAsync(CustomerInitiatedPaymentRecall payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Respond to a request for recall</summary>
-        /// <param name="recallId">Defines the ID to identify the payment which has to be recalled</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ResponseToPaymentRecallResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ResponseToPaymentRecallResponse> UpdateResponseToPaymentRecallAsync(string recallId, ResponseToPaymentRecall payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerInitiatedPaymentRecallResponse> CreateCustomerInitiatedPaymentRecallAsync(CustomerInitiatedPaymentRecall payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Respond to a request for recall</summary>
@@ -251,19 +139,7 @@ namespace Transact.Order.Payments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ResponseToPaymentRecallResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ResponseToPaymentRecallResponse> UpdateResponseToPaymentRecallAsync(string recallId, ResponseToPaymentRecall payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the status of a received acknowledgement</summary>
-        /// <param name="sentMessageId">Contains the sent message reference as generated by the system</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PaymentSentMessageResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentSentMessageResponse> UpdatePaymentSentMessageAsync(string sentMessageId, PaymentSentMessage payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ResponseToPaymentRecallResponse> UpdateResponseToPaymentRecallAsync(string recallId, ResponseToPaymentRecall payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the status of a received acknowledgement</summary>
@@ -276,24 +152,7 @@ namespace Transact.Order.Payments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PaymentSentMessageResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentSentMessageResponse> UpdatePaymentSentMessageAsync(string sentMessageId, PaymentSentMessage payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the clearing reason codes to place in the recall request</summary>
-        /// <param name="optionSelected">The option selected from the total number of options available</param>
-        /// <param name="transactionType">Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</param>
-        /// <param name="receiver">Identifies the receiver of the message</param>
-        /// <param name="clearingId">Clearing channel specific details</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PaymentCancelReasonCodeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentCancelReasonCodeResponse> GetPaymentCancelReasonCodeAsync(string? optionSelected, string? transactionType, string? receiver, string? clearingId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PaymentSentMessageResponse> UpdatePaymentSentMessageAsync(string sentMessageId, PaymentSentMessage payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the clearing reason codes to place in the recall request</summary>
@@ -311,7 +170,7 @@ namespace Transact.Order.Payments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PaymentCancelReasonCodeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentCancelReasonCodeResponse> GetPaymentCancelReasonCodeAsync(string? optionSelected, string? transactionType, string? receiver, string? clearingId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PaymentCancelReasonCodeResponse> GetPaymentCancelReasonCodeAsync(string? optionSelected = null, string? transactionType = null, string? receiver = null, string? clearingId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

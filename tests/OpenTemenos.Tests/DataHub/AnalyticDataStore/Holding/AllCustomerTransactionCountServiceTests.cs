@@ -11,7 +11,7 @@ public class AllCustomerTransactionCountServiceTests : CredentialManagement
     [TestMethod]
     public void GetAllCustomerTransactionCountAsync()
     {
-        var result = _client.CustomerTransactionClassificationService.GetAllCustomerTransactionCountAsync(null).Result;
+        var result = _client.CustomerTransactionClassificationService.GetAllCustomerTransactionCountAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

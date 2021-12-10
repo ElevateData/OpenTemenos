@@ -11,7 +11,7 @@ public class RejectedCollectionsServiceTests : CredentialManagement
     [TestMethod]
     public void GetRejectedCollectionsAsync()
     {
-        var result = _client.OrderRejectedCollectionService.GetRejectedCollectionsAsync(null, null, null).Result;
+        var result = _client.OrderRejectedCollectionService.GetRejectedCollectionsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

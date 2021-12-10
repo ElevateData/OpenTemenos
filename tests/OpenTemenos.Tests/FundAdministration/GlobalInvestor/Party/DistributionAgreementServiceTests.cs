@@ -15,7 +15,7 @@ public class DistributionAgreementServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.DistributionAgreementService
-            .PostDistributionAgreementAsync(null, null, null, null, null, payload).Result;
+            .PostDistributionAgreementAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

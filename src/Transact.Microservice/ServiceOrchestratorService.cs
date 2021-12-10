@@ -23,23 +23,11 @@ namespace Transact.Microservice.ServiceOrchestrator
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IServiceOrchestratorService
     {
-        /// <summary>Creates the new service orchestrator sequence</summary>
-        /// <returns>New Sequence Created Successfully.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SequenceCreated> CreateSequenceAsync(Sequence? body);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the new service orchestrator sequence</summary>
         /// <returns>New Sequence Created Successfully.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SequenceCreated> CreateSequenceAsync(Sequence? body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the set of service orchestration sequences.</summary>
-        /// <param name="entityid">Indicates the unique id of business object</param>
-        /// <param name="status">Indicates current status of the sequence.</param>
-        /// <returns>Retrieved the Sequences Successfully.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Sequence>> GetSequenceAsync(string? entityid, Status? status);
+        System.Threading.Tasks.Task<SequenceCreated> CreateSequenceAsync(Sequence? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the set of service orchestration sequences.</summary>
@@ -47,14 +35,7 @@ namespace Transact.Microservice.ServiceOrchestrator
         /// <param name="status">Indicates current status of the sequence.</param>
         /// <returns>Retrieved the Sequences Successfully.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Sequence>> GetSequenceAsync(string? entityid, Status? status, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the service orchestration sequence.</summary>
-        /// <param name="sequenceid">Indicates the unique id of the sequence.</param>
-        /// <param name="status">Indicates current status of the sequence.</param>
-        /// <returns>Retrieved the service orchestration sequences successfully</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Sequence> GetSequenceByIdAsync(string sequenceid, Status2? status);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Sequence>> GetSequenceAsync(string? entityid = null, Status? status = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the service orchestration sequence.</summary>
@@ -62,14 +43,7 @@ namespace Transact.Microservice.ServiceOrchestrator
         /// <param name="status">Indicates current status of the sequence.</param>
         /// <returns>Retrieved the service orchestration sequences successfully</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Sequence> GetSequenceByIdAsync(string sequenceid, Status2? status, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Cancel a sequence that was initiated.</summary>
-        /// <param name="sequenceid">Indicates the unique id of the sequence.</param>
-        /// <param name="operation">Operation to cancel the sequence.</param>
-        /// <returns>Sequence status updated successfully</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SequenceHalted> CancelSequenceAsync(string sequenceid, string? operation);
+        System.Threading.Tasks.Task<Sequence> GetSequenceByIdAsync(string sequenceid, Status2? status = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Cancel a sequence that was initiated.</summary>
@@ -77,7 +51,7 @@ namespace Transact.Microservice.ServiceOrchestrator
         /// <param name="operation">Operation to cancel the sequence.</param>
         /// <returns>Sequence status updated successfully</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SequenceHalted> CancelSequenceAsync(string sequenceid, string? operation, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SequenceHalted> CancelSequenceAsync(string sequenceid, string? operation = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

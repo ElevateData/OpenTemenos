@@ -10,7 +10,7 @@ public class ChequeTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetChequeTypesAsync()
     {
-        var result = _client.ChequeTypeService.GetChequeTypesAsync(null).Result;
+        var result = _client.ChequeTypeService.GetChequeTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

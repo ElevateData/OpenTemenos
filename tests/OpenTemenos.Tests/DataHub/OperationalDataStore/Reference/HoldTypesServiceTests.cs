@@ -10,7 +10,7 @@ public class HoldTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetHoldTypesAsync()
     {
-        var result = _client.UsModelBankHoldTypeService.GetHoldTypesAsync(null).Result;
+        var result = _client.UsModelBankHoldTypeService.GetHoldTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

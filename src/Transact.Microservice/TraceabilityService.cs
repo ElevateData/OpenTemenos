@@ -23,46 +23,23 @@ namespace Transact.Microservice.Traceability
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ITraceabilityService
     {
-        /// <summary>Retrieves the trace logs details for a specified catagory  and a message type</summary>
-        /// <param name="category">Indicates the category of a trace log. It is a used to identify group of trace logs gathered across applications.</param>
-        /// <param name="traceType">Indicates the name of Application which creates trace log.</param>
-        /// <returns>Retrieved trace log details successfully.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<TraceLog>> GetTraceLogAsync(string category, string traceType);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the trace logs details for a specified catagory  and a message type</summary>
         /// <param name="category">Indicates the category of a trace log. It is a used to identify group of trace logs gathered across applications.</param>
         /// <param name="traceType">Indicates the name of Application which creates trace log.</param>
         /// <returns>Retrieved trace log details successfully.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<TraceLog>> GetTraceLogAsync(string category, string traceType, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Provides the computed signed value of the log message</summary>
-        /// <param name="message">Indicates the message to be signed</param>
-        /// <param name="configurationId">Indicates the identifier of configuration</param>
-        /// <param name="mode">Indicates the mode of execution. The values can be sign or verify.</param>
-        /// <param name="signValue">Indicates the signed content of the log message. It is mandatory when mode is verify  and not applicable for sign mode.</param>
-        /// <returns>Retrieved the signed value successfully</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Signature> GetSignatureAsync(string message, string? configurationId, Mode mode, string? signValue);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<TraceLog>> GetTraceLogAsync(string category, string traceType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Provides the computed signed value of the log message</summary>
         /// <param name="message">Indicates the message to be signed</param>
-        /// <param name="configurationId">Indicates the identifier of configuration</param>
         /// <param name="mode">Indicates the mode of execution. The values can be sign or verify.</param>
+        /// <param name="configurationId">Indicates the identifier of configuration</param>
         /// <param name="signValue">Indicates the signed content of the log message. It is mandatory when mode is verify  and not applicable for sign mode.</param>
         /// <returns>Retrieved the signed value successfully</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Signature> GetSignatureAsync(string message, string? configurationId, Mode mode, string? signValue, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Returns evidence values if there are any tampering evidences  found for the log message maintained in Traceability Microservice</summary>
-        /// <param name="category">Indicates the category of a trace log. It is a used to identify group of trace logs gathered across applications.</param>
-        /// <param name="traceType">The identifier to indicate the name of Application which creates trace log.It indicates the type of the request logged in the traceability service.</param>
-        /// <returns>Retrived the evidences successfully</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<VerifiableLogMessage>> GetEvidenceAsync(string category, string traceType);
+        System.Threading.Tasks.Task<Signature> GetSignatureAsync(string message, Mode mode, string? configurationId = null, string? signValue = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Returns evidence values if there are any tampering evidences  found for the log message maintained in Traceability Microservice</summary>
@@ -70,33 +47,7 @@ namespace Transact.Microservice.Traceability
         /// <param name="traceType">The identifier to indicate the name of Application which creates trace log.It indicates the type of the request logged in the traceability service.</param>
         /// <returns>Retrived the evidences successfully</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<VerifiableLogMessage>> GetEvidenceAsync(string category, string traceType, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Adds a new trace log to the existing trace log collections</summary>
-        /// <param name="traceLogId">Indicates the unique id of trace log.</param>
-        /// <param name="traceType">The identifier to indicate the name of Application which creates trace log.</param>
-        /// <param name="configurationId">Indicates the identifier of a configuration</param>
-        /// <param name="body"># The Message Field in Request Body should Contain Following fields
-        /// <br/>* encoding
-        /// <br/>* payLoad-sign
-        /// <br/>* requestMessage
-        /// <br/>* content
-        /// <br/>* payload_publickey
-        /// <br/>* url
-        /// <br/>* uuid
-        /// <br/>
-        /// <br/>Example Request Body
-        /// <br/>
-        /// <br/>```
-        /// <br/>{
-        /// <br/>  "categories": [""],
-        /// <br/>  "message": "{\"encoding\":\"\",\"content\":{ \"requestMessage\":\"\",\"payload_Sign\":\"\",\"payload_publickey\":\"\",\"uuid\":\"\",\"url\":\"\"}}"
-        /// <br/>}
-        /// <br/>
-        /// <br/>```</param>
-        /// <returns>New trace log created successfully</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ResponseTrace> CreateTraceLogsAsync(string traceLogId, string traceType, string? configurationId, TraceLogEntry? body);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<VerifiableLogMessage>> GetEvidenceAsync(string category, string traceType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Adds a new trace log to the existing trace log collections</summary>
@@ -123,7 +74,7 @@ namespace Transact.Microservice.Traceability
         /// <br/>```</param>
         /// <returns>New trace log created successfully</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ResponseTrace> CreateTraceLogsAsync(string traceLogId, string traceType, string? configurationId, TraceLogEntry? body, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ResponseTrace> CreateTraceLogsAsync(string traceLogId, string traceType, string? configurationId = null, TraceLogEntry? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

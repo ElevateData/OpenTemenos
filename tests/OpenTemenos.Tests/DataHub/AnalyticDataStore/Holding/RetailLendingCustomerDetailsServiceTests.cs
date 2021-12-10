@@ -11,7 +11,7 @@ public class RetailLendingCustomerDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetRetailLendingCustomerDetailsAsync()
     {
-        var result = _client.LendingCustomerBalanceService.GetRetailLendingCustomerDetailsAsync(null, null).Result;
+        var result = _client.LendingCustomerBalanceService.GetRetailLendingCustomerDetailsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

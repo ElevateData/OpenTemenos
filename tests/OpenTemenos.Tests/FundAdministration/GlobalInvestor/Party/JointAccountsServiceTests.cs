@@ -14,7 +14,7 @@ public class JointAccountsServiceTests : CredentialManagement
     public void PostJointAccountsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.JointAccountService.PostJointaccountsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.JointAccountService.PostJointaccountsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class JointAccountsServiceTests : CredentialManagement
     public void PostJointAccountsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.JointAccountService.PostJointaccountsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.JointAccountService.PostJointaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class JointAccountsServiceTests : CredentialManagement
     public void PutJointAccountsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.JointAccountService.PutJointaccountsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.JointAccountService.PutJointaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class JointAccountsServiceTests : CredentialManagement
     public void DeleteJointAccountsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.JointAccountService.DeleteJointaccountsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.JointAccountService.DeleteJointaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class JointAccountsServiceTests : CredentialManagement
     public void GetJointAccountsByInternalIdAsync()
     {
         var result = _client.JointAccountService
-            .GetJointaccountsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetJointaccountsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class JointAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.JointAccountService
-            .PutJointaccountsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutJointaccountsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class JointAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.JointAccountService
-            .DeleteJointaccountsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteJointaccountsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

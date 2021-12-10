@@ -11,7 +11,7 @@ public class CurrenciesDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCurrenciesAsync()
     {
-        var result = _client.CurrencyCodeService.GetCurrenciesAsync(null).Result;
+        var result = _client.CurrencyCodeService.GetCurrenciesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 

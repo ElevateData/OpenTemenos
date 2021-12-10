@@ -15,7 +15,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.StraightThroughProcessingCounterpartService
-            .PostStpcounterpartsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostStpcounterpartsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.StraightThroughProcessingCounterpartService
-            .PostStpcounterpartsAsync(null, null, null, null, null, payload).Result;
+            .PostStpcounterpartsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.StraightThroughProcessingCounterpartService
-            .PutStpcounterpartsAsync(null, null, null, null, null, payload).Result;
+            .PutStpcounterpartsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.StraightThroughProcessingCounterpartService
-            .DeleteStpcounterpartsAsync(null, null, null, null, null, payload).Result;
+            .DeleteStpcounterpartsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
     public void GetStpCounterpartsByInternalIdAsync()
     {
         var result = _client.StraightThroughProcessingCounterpartService
-            .GetStpcounterpartsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetStpcounterpartsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.StraightThroughProcessingCounterpartService
-            .PutStpcounterpartsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutStpcounterpartsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class StpCounterpartsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.StraightThroughProcessingCounterpartService
-            .DeleteStpcounterpartsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteStpcounterpartsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -14,7 +14,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
     public void PostUsTaxOptionsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.UsTaxOptionService.PostUstaxoptionsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.UsTaxOptionService.PostUstaxoptionsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
     public void PostUsTaxOptionsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.UsTaxOptionService.PostUstaxoptionsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.UsTaxOptionService.PostUstaxoptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
     public void PutUsTaxOptionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.UsTaxOptionService.PutUstaxoptionsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.UsTaxOptionService.PutUstaxoptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
     public void DeleteUsTaxOptionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.UsTaxOptionService.DeleteUstaxoptionsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.UsTaxOptionService.DeleteUstaxoptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
     public void GetUsTaxOptionsByInternalIdAsync()
     {
         var result = _client.UsTaxOptionService
-            .GetUstaxoptionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetUstaxoptionsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.UsTaxOptionService
-            .PutUstaxoptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutUstaxoptionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class UsTaxOptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.UsTaxOptionService
-            .DeleteUstaxoptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteUstaxoptionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

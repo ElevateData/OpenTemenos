@@ -11,21 +11,21 @@ public class PaymentDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPaymentOrderPurposeCodesAsync()
     {
-        var result = _client.PaymentService.GetPaymentOrderPurposeCodesAsync(null).Result;
+        var result = _client.PaymentService.GetPaymentOrderPurposeCodesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetPaymentOrderProductDetailsAsync()
     {
-        var result = _client.PaymentService.GetPaymentOrderProductDetailsAsync(null, null).Result;
+        var result = _client.PaymentService.GetPaymentOrderProductDetailsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetPaymentOrderCountryRulesAsync()
     {
-        var result = _client.PaymentService.GetPaymentOrderCountryRulesAsync(null).Result;
+        var result = _client.PaymentService.GetPaymentOrderCountryRulesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -33,7 +33,7 @@ public class PaymentDetailsServiceTests : CredentialManagement
     public void GetPendingPaymentsAsync()
     {
         var result = _client.PaymentService
-            .GetPendingPaymentsAsync(null, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetPendingPaymentsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -47,7 +47,7 @@ public class PaymentDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetUploadFileTypesAsync()
     {
-        var result = _client.PaymentService.GetUploadFileTypesAsync(null).Result;
+        var result = _client.PaymentService.GetUploadFileTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

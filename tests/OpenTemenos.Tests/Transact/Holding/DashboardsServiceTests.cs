@@ -11,7 +11,7 @@ public class DashboardsServiceTests : CredentialManagement
     public void GetLimitsAsync()
     {
         var result = _client.CorporateDashboardService
-            .GetLimitsAsync(null, null, null, null, null, null, null, null, null)
+            .GetLimitsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -21,7 +21,7 @@ public class DashboardsServiceTests : CredentialManagement
     public void GetDashboardDraftsAsync()
     {
         var result = _client.CorporateDashboardService
-            .GetDashboardDraftsAsync(null, null, null, null, null, null, null, null, null)
+            .GetDashboardDraftsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -31,7 +31,7 @@ public class DashboardsServiceTests : CredentialManagement
     public void GetBankMessagesAsync()
     {
         var result = _client.CorporateDashboardService
-            .GetBankMessagesAsync(null, null, null, null, null, null, null, null, null)
+            .GetBankMessagesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -41,7 +41,7 @@ public class DashboardsServiceTests : CredentialManagement
     public void GetDashboardApprovalsAsync()
     {
         var result = _client.CorporateDashboardService
-            .GetDashboardApprovalsAsync(null, null, null, null, null, null, null, null, null)
+            .GetDashboardApprovalsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

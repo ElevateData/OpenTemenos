@@ -14,7 +14,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
     public void PostHoldingLimitsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.HoldingLimitService.PostHoldinglimitsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.HoldingLimitService.PostHoldinglimitsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
     public void PostHoldingLimitsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.HoldingLimitService.PostHoldinglimitsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HoldingLimitService.PostHoldinglimitsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
     public void PutHoldingLimitsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.HoldingLimitService.PutHoldinglimitsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HoldingLimitService.PutHoldinglimitsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
     public void DeleteHoldingLimitsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.HoldingLimitService.DeleteHoldinglimitsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.HoldingLimitService.DeleteHoldinglimitsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
     public void GetHoldingLimitsByInternalIdAsync()
     {
         var result = _client.HoldingLimitService
-            .GetHoldinglimitsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetHoldinglimitsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.HoldingLimitService
-            .PutHoldinglimitsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutHoldinglimitsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class HoldingLimitsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.HoldingLimitService
-            .DeleteHoldinglimitsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteHoldinglimitsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

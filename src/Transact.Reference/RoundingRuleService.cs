@@ -23,16 +23,6 @@ namespace Transact.Reference.RoundingRule
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IRoundingRuleService
     {
-        /// <summary>Retrieve the details of rounding rule</summary>
-        /// <param name="ruleId">Identifier of rounding rule</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RoundingRuleDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> GetRoundingRuleDetailsAsync(string ruleId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the details of rounding rule</summary>
         /// <param name="ruleId">Identifier of rounding rule</param>
@@ -42,19 +32,7 @@ namespace Transact.Reference.RoundingRule
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RoundingRuleDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> GetRoundingRuleDetailsAsync(string ruleId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create the details of rounding rule</summary>
-        /// <param name="ruleId">Used to provide the rule for non-financial transaction, for identified related signatory groups and Minimum number of signatories</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RoundingRuleDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> CreateRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> GetRoundingRuleDetailsAsync(string ruleId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create the details of rounding rule</summary>
@@ -67,19 +45,7 @@ namespace Transact.Reference.RoundingRule
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RoundingRuleDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> CreateRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the details of rounding rule</summary>
-        /// <param name="ruleId">Used to provide the rule for non-financial transaction, for identified related signatory groups and Minimum number of signatories</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RoundingRuleDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> UpdateRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> CreateRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetails payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the details of rounding rule</summary>
@@ -92,19 +58,7 @@ namespace Transact.Reference.RoundingRule
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RoundingRuleDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> UpdateRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetails payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Delete the details of rounding rule</summary>
-        /// <param name="ruleId">Used to provide the rule for non-financial transaction, for identified related signatory groups and Minimum number of signatories</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RoundingRuleDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> DeleteRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetailsDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> UpdateRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetails payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Delete the details of rounding rule</summary>
@@ -117,7 +71,7 @@ namespace Transact.Reference.RoundingRule
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RoundingRuleDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> DeleteRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetailsDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<RoundingRuleDetailsResponse> DeleteRoundingRuleDetailsAsync(string ruleId, RoundingRuleDetailsDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

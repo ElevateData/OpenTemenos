@@ -10,7 +10,7 @@ public class UsCustomerRatingServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsCustomerRatingListAsync()
     {
-        var result = _client.UsCustomerRatingService.GetUsCustomerRatinglistAsync(null, null, null, null, null).Result;
+        var result = _client.UsCustomerRatingService.GetUsCustomerRatinglistAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

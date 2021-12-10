@@ -14,7 +14,7 @@ public class FutureServiceTests : CredentialManagement
     public void CreateFutureAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FutureService.CreateFutureAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FutureService.CreateFutureAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

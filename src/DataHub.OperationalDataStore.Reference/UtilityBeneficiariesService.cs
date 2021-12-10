@@ -23,20 +23,6 @@ namespace DataHub.OperationalDataStore.Reference.UtilityBeneficiaries
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUtilityBeneficiariesService
     {
-        /// <summary>Retrieves the beneficiary informations such as beneficiary Id, nick name, category,  beneficiary account number, sort code, payment amount</summary>
-        /// <param name="productName">Product name of the bank for this account, proprietary definition.</param>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="beneficiaryAccountId">Unique account identifier of the beneficiary account number.</param>
-        /// <param name="bankSortCode">The sort code or the national clearing code of the beneficiary bank.</param>
-        /// <param name="transactionType">Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</param>
-        /// <param name="paymentProduct">Preferred payment product can be specified for Beneficiary. This will be used for defaulting the payment product for specific beneficiary.</param>
-        /// <param name="companyName">The company in which payment is processed</param>
-        /// <param name="beneficiaryIBAN">International Bank Account Number (IBAN) of the beneficiary account, required only for International transfers/payments outside the Bank. For example: GB98 MIDL07009312345678, FR7630006000011234567890189</param>
-        /// <param name="owningCustomerId">This field specifies the customer to which beneficiary is linked to. Allowed only in case of customer defined beneficiaries</param>
-        /// <returns>getUtilityBeneficiariesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUtilityBeneficiariesResponse> GetUtilityBeneficiariesAsync(string? productName, string? recordId, string? beneficiaryAccountId, string? bankSortCode, string? transactionType, string? paymentProduct, string? companyName, string? beneficiaryIBAN, string? owningCustomerId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the beneficiary informations such as beneficiary Id, nick name, category,  beneficiary account number, sort code, payment amount</summary>
         /// <param name="productName">Product name of the bank for this account, proprietary definition.</param>
@@ -50,7 +36,7 @@ namespace DataHub.OperationalDataStore.Reference.UtilityBeneficiaries
         /// <param name="owningCustomerId">This field specifies the customer to which beneficiary is linked to. Allowed only in case of customer defined beneficiaries</param>
         /// <returns>getUtilityBeneficiariesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUtilityBeneficiariesResponse> GetUtilityBeneficiariesAsync(string? productName, string? recordId, string? beneficiaryAccountId, string? bankSortCode, string? transactionType, string? paymentProduct, string? companyName, string? beneficiaryIBAN, string? owningCustomerId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetUtilityBeneficiariesResponse> GetUtilityBeneficiariesAsync(string? productName = null, string? recordId = null, string? beneficiaryAccountId = null, string? bankSortCode = null, string? transactionType = null, string? paymentProduct = null, string? companyName = null, string? beneficiaryIBAN = null, string? owningCustomerId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

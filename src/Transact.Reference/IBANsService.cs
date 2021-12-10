@@ -23,18 +23,6 @@ namespace Transact.Reference.IBANs
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IIBANsService
     {
-        /// <summary>Retrieves the BIC code for the requested IBAN</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BICfromIBANResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICfromIBANResponse> GetBICfromIBANAsync(string ibanId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the BIC code for the requested IBAN</summary>
         /// <param name="page_size">The total number of records per page</param>
@@ -46,19 +34,7 @@ namespace Transact.Reference.IBANs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BICfromIBANResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICfromIBANResponse> GetBICfromIBANAsync(string ibanId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the components of the requested IBAN</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>IBANDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANDetailsResponse> GetIBANDetailsAsync(string ibanId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BICfromIBANResponse> GetBICfromIBANAsync(string ibanId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the components of the requested IBAN</summary>
@@ -71,20 +47,7 @@ namespace Transact.Reference.IBANs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>IBANDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANDetailsResponse> GetIBANDetailsAsync(string ibanId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves IBAN from a BBAN</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>IBANFromBBANResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANFromBBANResponse> GetIBANFromBBANAsync(string bbanId, string countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<IBANDetailsResponse> GetIBANDetailsAsync(string ibanId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves IBAN from a BBAN</summary>
@@ -98,30 +61,14 @@ namespace Transact.Reference.IBANs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>IBANFromBBANResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANFromBBANResponse> GetIBANFromBBANAsync(string bbanId, string countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the generated IBAN number</summary>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="bankId">Contains the identifier of the bank with which the transaction is performed</param>
-        /// <param name="branchId">Unique and unambiguous identification of a branch of a financial institution.</param>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>IBANNumberGeneratedResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANNumberGeneratedResponse> GetIBANNumberGeneratedAsync(string accountId, string bankId, string? branchId, string countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<IBANFromBBANResponse> GetIBANFromBBANAsync(string bbanId, string countryId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the generated IBAN number</summary>
         /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
         /// <param name="bankId">Contains the identifier of the bank with which the transaction is performed</param>
-        /// <param name="branchId">Unique and unambiguous identification of a branch of a financial institution.</param>
         /// <param name="countryId">ISO country code of the financial institution.</param>
+        /// <param name="branchId">Unique and unambiguous identification of a branch of a financial institution.</param>
         /// <param name="page_size">The total number of records per page</param>
         /// <param name="page_start">The record from which the response should be displayed</param>
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
@@ -131,20 +78,7 @@ namespace Transact.Reference.IBANs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>IBANNumberGeneratedResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANNumberGeneratedResponse> GetIBANNumberGeneratedAsync(string accountId, string bankId, string? branchId, string countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the structure of an IBAN number</summary>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>IBANStructureResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANStructureResponse> GetIBANStructureAsync(string countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<IBANNumberGeneratedResponse> GetIBANNumberGeneratedAsync(string accountId, string bankId, string countryId, string? branchId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the structure of an IBAN number</summary>
@@ -158,19 +92,7 @@ namespace Transact.Reference.IBANs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>IBANStructureResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANStructureResponse> GetIBANStructureAsync(string countryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the status on the validity of the given IBAN number</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>IBANResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANResponse> ValidateIBANAsync(string ibanId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<IBANStructureResponse> GetIBANStructureAsync(string countryId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the status on the validity of the given IBAN number</summary>
@@ -183,7 +105,7 @@ namespace Transact.Reference.IBANs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>IBANResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<IBANResponse> ValidateIBANAsync(string ibanId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<IBANResponse> ValidateIBANAsync(string ibanId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -23,18 +23,12 @@ namespace DataHub.OperationalDataStore.Reference.ClassTypeActivities
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IClassTypeActivitiesService
     {
-        /// <summary>Retrieves the Class Type Activity details of an entity Id</summary>
-        /// <param name="entityTypeId">Shows the entity types</param>
-        /// <returns>Class Type ActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetClassTypeActivitiesResponse> GetClassTypeActivitiesAsync(string entityTypeId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Class Type Activity details of an entity Id</summary>
         /// <param name="entityTypeId">Shows the entity types</param>
         /// <returns>Class Type ActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetClassTypeActivitiesResponse> GetClassTypeActivitiesAsync(string entityTypeId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetClassTypeActivitiesResponse> GetClassTypeActivitiesAsync(string entityTypeId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

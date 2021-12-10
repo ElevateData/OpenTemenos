@@ -23,19 +23,6 @@ namespace Transact.Holding.RepurchaseAgreements
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IRepurchaseAgreementsService
     {
-        /// <summary>Allows to view the Repurchase Agreement Positions</summary>
-        /// <param name="positionId">Key or Identifier of the Portfolio Position</param>
-        /// <param name="portfolioId">Identifier of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>REPOPositionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<REPOPositionResponse> GetREPOPositionAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, string? quantity, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the Repurchase Agreement Positions</summary>
         /// <param name="positionId">Key or Identifier of the Portfolio Position</param>
@@ -48,20 +35,7 @@ namespace Transact.Holding.RepurchaseAgreements
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>REPOPositionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<REPOPositionResponse> GetREPOPositionAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, string? quantity, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Allows to view the Reverse Repurchase Agreement Positions</summary>
-        /// <param name="positionId">Key or Identifier of the Portfolio Position</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>RESOPositionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RESOPositionResponse> GetRESOPositionAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, string? quantity, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<REPOPositionResponse> GetREPOPositionAsync(string? positionId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, string? quantity = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the Reverse Repurchase Agreement Positions</summary>
@@ -75,19 +49,7 @@ namespace Transact.Holding.RepurchaseAgreements
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>RESOPositionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RESOPositionResponse> GetRESOPositionAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, string? quantity, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Allows to view the Repurchase Agreement Position Movements</summary>
-        /// <param name="positionId">Key or Identifier of the Portfolio Position</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>REPOPositionMovementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<REPOPositionMovementsResponse> GetREPOPositionMovementsAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<RESOPositionResponse> GetRESOPositionAsync(string? positionId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, string? quantity = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the Repurchase Agreement Position Movements</summary>
@@ -100,19 +62,7 @@ namespace Transact.Holding.RepurchaseAgreements
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>REPOPositionMovementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<REPOPositionMovementsResponse> GetREPOPositionMovementsAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Allows to view the Reverse Repurchase Agreement Position Movements</summary>
-        /// <param name="positionId">Key or Identifier of the Portfolio Position</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depositoryId">Id of the securities depository.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>RESOPositionMovementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RESOPositionMovementsResponse> GetRESOPositionMovementsAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<REPOPositionMovementsResponse> GetREPOPositionMovementsAsync(string? positionId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the Reverse Repurchase Agreement Position Movements</summary>
@@ -125,7 +75,7 @@ namespace Transact.Holding.RepurchaseAgreements
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>RESOPositionMovementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RESOPositionMovementsResponse> GetRESOPositionMovementsAsync(string? positionId, string? portfolioId, string? instrumentId, string? depositoryId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<RESOPositionMovementsResponse> GetRESOPositionMovementsAsync(string? positionId = null, string? portfolioId = null, string? instrumentId = null, string? depositoryId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

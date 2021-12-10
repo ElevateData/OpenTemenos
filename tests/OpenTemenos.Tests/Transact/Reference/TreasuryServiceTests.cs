@@ -14,7 +14,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexAgreementTypesAsync()
     {
-        var result = _client.TreasuryService.GetForexAgreementTypesAsync(null, null, null, null, null, null, null, null)
+        var result = _client.TreasuryService.GetForexAgreementTypesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -24,7 +24,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetForexAgreementTypeAsync()
     {
         var result = _client.TreasuryService
-            .GetForexAgreementTypeAsync(AgreementTypeId, null, null, null, null, null, null, null, null).Result;
+            .GetForexAgreementTypeAsync(AgreementTypeId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -32,7 +32,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetForexDealMethodsAsync()
     {
-        var result = _client.TreasuryService.GetForexDealMethodsAsync(null, null, null, null, null, null, null, null)
+        var result = _client.TreasuryService.GetForexDealMethodsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -42,7 +42,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetForexDealMethodAsync()
     {
         var result = _client.TreasuryService
-            .GetForexDealMethodAsync(DealMethodId, null, null, null, null, null, null, null, null).Result;
+            .GetForexDealMethodAsync(DealMethodId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -51,7 +51,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetForexRevaluationTypesAsync()
     {
         var result = _client.TreasuryService
-            .GetForexRevaluationTypesAsync(null, null, null, null, null, null, null, null).Result;
+            .GetForexRevaluationTypesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -60,7 +60,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetForexRevaluationTypeAsync()
     {
         var result = _client.TreasuryService
-            .GetForexRevaluationTypeAsync(RevaluationTypeId, null, null, null, null, null, null, null, null).Result;
+            .GetForexRevaluationTypeAsync(RevaluationTypeId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -69,7 +69,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetTreasurySettingsAsync()
     {
         var result = _client.TreasuryService
-            .GetTreasurySettingsAsync(null, null, null, null, null, null, null, null, null).Result;
+            .GetTreasurySettingsAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -78,7 +78,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetPeriodDatesAsync()
     {
         var result = _client.TreasuryService
-            .GetPeriodDatesAsync(CurrencyOrPair, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetPeriodDatesAsync(CurrencyOrPair).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -86,7 +86,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetDealMethodsAsync()
     {
-        var result = _client.TreasuryService.GetDealMethodsAsync(null, null, null, null, null, null, null, null, null)
+        var result = _client.TreasuryService.GetDealMethodsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -95,7 +95,7 @@ public class TreasuryServiceTests : CredentialManagement
     [TestMethod]
     public void GetAgreementTypesAsync()
     {
-        var result = _client.TreasuryService.GetAgreementTypesAsync(null, null, null, null, null, null, null, null)
+        var result = _client.TreasuryService.GetAgreementTypesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -105,7 +105,7 @@ public class TreasuryServiceTests : CredentialManagement
     public void GetAgreementTypeAsync()
     {
         var result = _client.TreasuryService
-            .GetAgreementTypeAsync(AgreementTypeId, null, null, null, null, null, null, null, null).Result;
+            .GetAgreementTypeAsync(AgreementTypeId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

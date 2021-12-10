@@ -11,7 +11,7 @@ public class CustomerDepositMaturity30DaysServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerDepositMaturity30DaysAsync()
     {
-        var result = _client.CustomerDepositService.GetCustomerDepositMaturity30DaysAsync(null, null, null).Result;
+        var result = _client.CustomerDepositService.GetCustomerDepositMaturity30DaysAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

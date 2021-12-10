@@ -15,7 +15,7 @@ public class CapitalIncreaseWithoutIssueOfSubscriptionRightsServiceTests : Crede
     {
         var payload = new _0Payload();
         var result = _client.CapitalIncreaseWithoutIssueOfSubscriptionRightService
-            .CreateCapitalIncreaseWithoutIssueOfSubscriptionRightAsync(null, null, null, null, null, payload)
+            .CreateCapitalIncreaseWithoutIssueOfSubscriptionRightAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

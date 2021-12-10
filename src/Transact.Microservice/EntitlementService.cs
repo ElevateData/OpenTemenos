@@ -23,52 +23,26 @@ namespace Transact.Microservice.EntitlementX
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IEntitlementService
     {
-        /// <summary>Retrieves the entitlements for a specified userid</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <returns>List of Entitlements with resource details for the specified userId.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Entitlement>> GetEntitlementsAsync(string userId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the entitlements for a specified userid</summary>
         /// <param name="userId">Identifier of an user.</param>
         /// <returns>List of Entitlements with resource details for the specified userId.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Entitlement>> GetEntitlementsAsync(string userId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the entitlements with role details, for a specified userid</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <returns>List of entitled roles for the specified user in all entitled resources.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<EntitlementWithRoles>> GetUserEntitlementsAsync(string userId);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<Entitlement>> GetEntitlementsAsync(string userId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the entitlements with role details, for a specified userid</summary>
         /// <param name="userId">Identifier of an user.</param>
         /// <returns>List of entitled roles for the specified user in all entitled resources.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<EntitlementWithRoles>> GetUserEntitlementsAsync(string userId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the entitlements with actions for a specified userid</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <returns>List of Entitlements with entitled privilege actions for a specified userid.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<EntitleddActions>> GetEntitlementsWithActionsAsync(string userId);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<EntitlementWithRoles>> GetUserEntitlementsAsync(string userId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the entitlements with actions for a specified userid</summary>
         /// <param name="userId">Identifier of an user.</param>
         /// <returns>List of Entitlements with entitled privilege actions for a specified userid.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<EntitleddActions>> GetEntitlementsWithActionsAsync(string userId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates the user entitlement record for a specified userid  and resourceid</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <param name="resourceId">Indentifier of product. Example AccountId, ArrangemenId, CustomerId</param>
-        /// <param name="body">List of roles to assigned to an user</param>
-        /// <returns>List of roles defined as a part of entitlement for a specified userid and resourceid.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementData> AddEntitlementsAsync(string userId, string resourceId, Roles body);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<EntitleddActions>> GetEntitlementsWithActionsAsync(string userId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the user entitlement record for a specified userid  and resourceid</summary>
@@ -77,14 +51,7 @@ namespace Transact.Microservice.EntitlementX
         /// <param name="body">List of roles to assigned to an user</param>
         /// <returns>List of roles defined as a part of entitlement for a specified userid and resourceid.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementData> AddEntitlementsAsync(string userId, string resourceId, Roles body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the entitlements for a specified userid  and resourceid</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
-        /// <returns>List of Entitlements data retrived by user and resource.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementData> GetUserEntitlementsOnResourceAsync(string userId, string resourceId);
+        System.Threading.Tasks.Task<EntitlementData> AddEntitlementsAsync(string userId, string resourceId, Roles body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the entitlements for a specified userid  and resourceid</summary>
@@ -92,15 +59,7 @@ namespace Transact.Microservice.EntitlementX
         /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
         /// <returns>List of Entitlements data retrived by user and resource.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementData> GetUserEntitlementsOnResourceAsync(string userId, string resourceId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the user entitlements for a specified userid and a resourceid.</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
-        /// <param name="body">List of entitlements need to be updated for a specified resourceid and userid.</param>
-        /// <returns>List of updated entitlements for a specified userid and resourceid.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementsDataForModification> UpdateEntitlementsAsync(string userId, string resourceId, EntitlementsDataForModification body);
+        System.Threading.Tasks.Task<EntitlementData> GetUserEntitlementsOnResourceAsync(string userId, string resourceId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the user entitlements for a specified userid and a resourceid.</summary>
@@ -109,14 +68,7 @@ namespace Transact.Microservice.EntitlementX
         /// <param name="body">List of entitlements need to be updated for a specified resourceid and userid.</param>
         /// <returns>List of updated entitlements for a specified userid and resourceid.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementsDataForModification> UpdateEntitlementsAsync(string userId, string resourceId, EntitlementsDataForModification body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes the user entitlements for a specified userid and resourceid</summary>
-        /// <param name="userId">Identifier of an user.</param>
-        /// <param name="resourceId">Indentifier of product.</param>
-        /// <returns>List of deleted entitlements by resource and user.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementData> DeleteEntitlementsAsync(string userId, string resourceId);
+        System.Threading.Tasks.Task<EntitlementsDataForModification> UpdateEntitlementsAsync(string userId, string resourceId, EntitlementsDataForModification body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes the user entitlements for a specified userid and resourceid</summary>
@@ -124,14 +76,7 @@ namespace Transact.Microservice.EntitlementX
         /// <param name="resourceId">Indentifier of product.</param>
         /// <returns>List of deleted entitlements by resource and user.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementData> DeleteEntitlementsAsync(string userId, string resourceId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>creates the user entitlements for a specified resourceid</summary>
-        /// <param name="resourceId">Indentifier of product.Example AccountId, ArrangemenId, CustomerId.</param>
-        /// <param name="body">collection of user entitlements.</param>
-        /// <returns>Array of Entitlement data created by using resourceId.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UserRoleMappingDataList> AddEntitlementsByResourceAsync(string resourceId, UserRoleMappingDataList body);
+        System.Threading.Tasks.Task<EntitlementData> DeleteEntitlementsAsync(string userId, string resourceId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>creates the user entitlements for a specified resourceid</summary>
@@ -139,14 +84,7 @@ namespace Transact.Microservice.EntitlementX
         /// <param name="body">collection of user entitlements.</param>
         /// <returns>Array of Entitlement data created by using resourceId.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UserRoleMappingDataList> AddEntitlementsByResourceAsync(string resourceId, UserRoleMappingDataList body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the user entitlements for a specified resourceid</summary>
-        /// <param name="resourceId">Indentifier of product.Example AccountId, ArrangemenId, CustomerId</param>
-        /// <param name="body">Payload data to update entitlements user roles record by resource Id.</param>
-        /// <returns>returns list of updated entitlements data.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementListData> UpdateEntitlementsByResourceAsync(string resourceId, EntitlementListData body);
+        System.Threading.Tasks.Task<UserRoleMappingDataList> AddEntitlementsByResourceAsync(string resourceId, UserRoleMappingDataList body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the user entitlements for a specified resourceid</summary>
@@ -154,33 +92,21 @@ namespace Transact.Microservice.EntitlementX
         /// <param name="body">Payload data to update entitlements user roles record by resource Id.</param>
         /// <returns>returns list of updated entitlements data.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementListData> UpdateEntitlementsByResourceAsync(string resourceId, EntitlementListData body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes user entitlements for a specified resourceid.</summary>
-        /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
-        /// <returns>List of removed entitlement data</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementListData> DeleteEntitlementsByResourceAsync(string resourceId);
+        System.Threading.Tasks.Task<EntitlementListData> UpdateEntitlementsByResourceAsync(string resourceId, EntitlementListData body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes user entitlements for a specified resourceid.</summary>
         /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
         /// <returns>List of removed entitlement data</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<EntitlementListData> DeleteEntitlementsByResourceAsync(string resourceId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves all the entitlements for a specified resourceid</summary>
-        /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
-        /// <returns>returns array of the entitlements for the given resource id.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UserRoleMappingDataList> GetEntitlementsByResourceAsync(string resourceId);
+        System.Threading.Tasks.Task<EntitlementListData> DeleteEntitlementsByResourceAsync(string resourceId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all the entitlements for a specified resourceid</summary>
         /// <param name="resourceId">Indentifier of product which entitlements are defined.</param>
         /// <returns>returns array of the entitlements for the given resource id.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UserRoleMappingDataList> GetEntitlementsByResourceAsync(string resourceId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UserRoleMappingDataList> GetEntitlementsByResourceAsync(string resourceId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

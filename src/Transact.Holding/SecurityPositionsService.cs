@@ -23,17 +23,6 @@ namespace Transact.Holding.SecurityPositions
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISecurityPositionsService
     {
-        /// <summary>Retrieves the security position details</summary>
-        /// <param name="securityNumber">Security Numbers</param>
-        /// <param name="securityAccount">Security Accounts</param>
-        /// <param name="referenceNumber">Reference Numbers</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>PortfoliosTransactionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PortfoliosTransactionsResponse> GetPortfoliosTransactionsAsync(string? securityNumber, string? securityAccount, string? referenceNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the security position details</summary>
         /// <param name="securityNumber">Security Numbers</param>
@@ -44,19 +33,7 @@ namespace Transact.Holding.SecurityPositions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>PortfoliosTransactionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PortfoliosTransactionsResponse> GetPortfoliosTransactionsAsync(string? securityNumber, string? securityAccount, string? referenceNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the security position details for own book portfolios</summary>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="dealerBook">Dealer Book</param>
-        /// <param name="securityCode">Security Code</param>
-        /// <param name="currentPosition">Current Positions</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>SecurityInventoryPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityInventoryPositionsResponse> GetSecurityInventoryPositionsAsync(string? instrumentId, string? dealerBook, string? securityCode, string? currentPosition, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<PortfoliosTransactionsResponse> GetPortfoliosTransactionsAsync(string? securityNumber = null, string? securityAccount = null, string? referenceNumber = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the security position details for own book portfolios</summary>
@@ -69,18 +46,7 @@ namespace Transact.Holding.SecurityPositions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>SecurityInventoryPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityInventoryPositionsResponse> GetSecurityInventoryPositionsAsync(string? instrumentId, string? dealerBook, string? securityCode, string? currentPosition, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the security position details</summary>
-        /// <param name="securityNumber">Security Numbers</param>
-        /// <param name="securityAccount">Security Accounts</param>
-        /// <param name="referenceNumber">Reference Numbers</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>PortfolioTransactionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PortfoliosTransactionsResponse> GetPortfolioTransactionsAsync(string portfolioId, string? securityNumber, string? securityAccount, string? referenceNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecurityInventoryPositionsResponse> GetSecurityInventoryPositionsAsync(string? instrumentId = null, string? dealerBook = null, string? securityCode = null, string? currentPosition = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the security position details</summary>
@@ -92,19 +58,7 @@ namespace Transact.Holding.SecurityPositions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>PortfolioTransactionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PortfoliosTransactionsResponse> GetPortfolioTransactionsAsync(string portfolioId, string? securityNumber, string? securityAccount, string? referenceNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the position information</summary>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="depository">The custodian where securities are held</param>
-        /// <param name="subAccount">The sub-account that the security position is held in.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>InstrumentPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<InstrumentPositionsResponse> GetInstrumentPositionsAsync(string instrumentId, string? portfolioId, string? depository, string? subAccount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<PortfoliosTransactionsResponse> GetPortfolioTransactionsAsync(string portfolioId, string? securityNumber = null, string? securityAccount = null, string? referenceNumber = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the position information</summary>
@@ -117,18 +71,7 @@ namespace Transact.Holding.SecurityPositions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>InstrumentPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<InstrumentPositionsResponse> GetInstrumentPositionsAsync(string instrumentId, string? portfolioId, string? depository, string? subAccount, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the position information</summary>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="depository">The custodian where securities are held</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>PortfolioSecurityPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PortfolioSecurityPositionsResponse> GetPortfolioSecurityPositionsAsync(string portfolioId, string? instrumentId, string? depository, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<InstrumentPositionsResponse> GetInstrumentPositionsAsync(string instrumentId, string? portfolioId = null, string? depository = null, string? subAccount = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the position information</summary>
@@ -140,23 +83,7 @@ namespace Transact.Holding.SecurityPositions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>PortfolioSecurityPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PortfolioSecurityPositionsResponse> GetPortfolioSecurityPositionsAsync(string portfolioId, string? instrumentId, string? depository, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Allows to view the Security Movements of the Portfolio</summary>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="referenceNumber">Specifies the reference for the document, if any.</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>SecurityMovementsByPortfolioResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityMovementsByPortfolioResponse> GetSecurityMovementsByPortfolioAsync(string portfolioId, string? referenceNumber, string? instrumentId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PortfolioSecurityPositionsResponse> GetPortfolioSecurityPositionsAsync(string portfolioId, string? instrumentId = null, string? depository = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Allows to view the Security Movements of the Portfolio</summary>
@@ -173,7 +100,7 @@ namespace Transact.Holding.SecurityPositions
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>SecurityMovementsByPortfolioResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecurityMovementsByPortfolioResponse> GetSecurityMovementsByPortfolioAsync(string portfolioId, string? referenceNumber, string? instrumentId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SecurityMovementsByPortfolioResponse> GetSecurityMovementsByPortfolioAsync(string portfolioId, string? referenceNumber = null, string? instrumentId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

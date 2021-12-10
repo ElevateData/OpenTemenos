@@ -14,7 +14,7 @@ public class RelationshipsServiceTests : CredentialManagement
     public void PostRelationshipsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.RelationshipService.PostRelationshipsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.RelationshipService.PostRelationshipsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class RelationshipsServiceTests : CredentialManagement
     public void PostRelationshipsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.RelationshipService.PostRelationshipsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.RelationshipService.PostRelationshipsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class RelationshipsServiceTests : CredentialManagement
     public void PutRelationshipsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.RelationshipService.PutRelationshipsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.RelationshipService.PutRelationshipsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class RelationshipsServiceTests : CredentialManagement
     public void DeleteRelationshipsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.RelationshipService.DeleteRelationshipsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.RelationshipService.DeleteRelationshipsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class RelationshipsServiceTests : CredentialManagement
     public void GetRelationshipsByInternalIdAsync()
     {
         var result = _client.RelationshipService
-            .GetRelationshipsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetRelationshipsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class RelationshipsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.RelationshipService
-            .PutRelationshipsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutRelationshipsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class RelationshipsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.RelationshipService
-            .DeleteRelationshipsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteRelationshipsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

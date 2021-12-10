@@ -13,7 +13,7 @@ public class EntitlementsServiceTests : CredentialManagement
     public void GetPendingEntitlementsAsync()
     {
         var result = _client.CorporateActionEventManagementService
-            .GetPendingEntitlementsAsync(null, null, null, null, null, null, null, null, null, null)
+            .GetPendingEntitlementsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -23,7 +23,7 @@ public class EntitlementsServiceTests : CredentialManagement
     public void GetSecurityEntitlementsAsync()
     {
         var result = _client.CorporateActionEventManagementService
-            .GetSecurityEntitlementsAsync(EntitlementId, null, null, null, null, null, null, null, null, null)
+            .GetSecurityEntitlementsAsync(EntitlementId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -36,7 +36,7 @@ public class EntitlementsServiceTests : CredentialManagement
         var entitlementId = string.Empty;
         var payload = new SecurityEntitlement();
         var result = _client.CorporateActionEventManagementService
-            .UpdateSecurityEntitlementAsync(entitlementId, payload, null, null, null)
+            .UpdateSecurityEntitlementAsync(entitlementId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class EntitlementsServiceTests : CredentialManagement
     public void GetEntitlementBuySellRightsAsync()
     {
         var result = _client.CorporateActionEventManagementService
-            .GetEntitlementBuySellRightsAsync(EntitlementId, null, null)
+            .GetEntitlementBuySellRightsAsync(EntitlementId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -58,7 +58,7 @@ public class EntitlementsServiceTests : CredentialManagement
         var entitlementId = string.Empty;
         var payload = new EntitlementBuySellRights();
         var result = _client.CorporateActionEventManagementService
-            .UpdateEntitlementBuySellRightsAsync(entitlementId, payload, null, null, null)
+            .UpdateEntitlementBuySellRightsAsync(entitlementId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -67,7 +67,7 @@ public class EntitlementsServiceTests : CredentialManagement
     public void GetEntitlementApprovalsAsync()
     {
         var result = _client.CorporateActionEventManagementService
-            .GetEntitlementApprovalsAsync(null, null, null, null, null, null, null, null, null, null, null, null)
+            .GetEntitlementApprovalsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

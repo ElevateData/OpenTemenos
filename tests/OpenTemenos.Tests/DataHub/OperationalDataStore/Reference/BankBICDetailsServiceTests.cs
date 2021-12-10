@@ -10,7 +10,7 @@ public class BankBICDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetBankBICDetailsAsync()
     {
-        var result = _client.SwiftBankCodeService.GetBankBICDetailsAsync(null, null).Result;
+        var result = _client.SwiftBankCodeService.GetBankBICDetailsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -14,7 +14,7 @@ public class AddressesServiceTests : CredentialManagement
     public void PostAddressesByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.AddressService.PostAddressesByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.AddressService.PostAddressesByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -23,7 +23,7 @@ public class AddressesServiceTests : CredentialManagement
     public void PostAddressesAsync()
     {
         var payload = new _0Payload();
-        var result = _client.AddressService.PostAddressesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.AddressService.PostAddressesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class AddressesServiceTests : CredentialManagement
     public void PutAddressesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.AddressService.PutAddressesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.AddressService.PutAddressesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class AddressesServiceTests : CredentialManagement
     public void DeleteAddressesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.AddressService.DeleteAddressesAsync(null, null, null, null, null, payload).Result;
+        var result = _client.AddressService.DeleteAddressesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class AddressesServiceTests : CredentialManagement
     public void GetAddressesByInternalIdAsync()
     {
         var result = _client.AddressService
-            .GetAddressesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetAddressesByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -60,7 +60,7 @@ public class AddressesServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.AddressService.PutAddressesByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.AddressService.PutAddressesByIdAsync(internalId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -71,7 +71,7 @@ public class AddressesServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.AddressService.DeleteAddressesByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.AddressService.DeleteAddressesByIdAsync(internalId, payload: payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

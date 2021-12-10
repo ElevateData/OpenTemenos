@@ -23,14 +23,6 @@ namespace DataHub.OperationalDataStore.Holding.GuaranteeDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IGuaranteeDetailsService
     {
-        /// <summary>Retrieves the Corporate customer's guarantees issuance request details</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="eventStatus">Specifies the status of the request.Allowed values are - With Bank_With Customer_Approved_Rejected.</param>
-        /// <returns>getGuaranteeIssuanceRequestsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetGuaranteeIssuanceRequestsResponse> GetGuaranteeIssuanceRequestsAsync(string? recordId, string? customerId, string? eventStatus);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Corporate customer's guarantees issuance request details</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
@@ -38,7 +30,7 @@ namespace DataHub.OperationalDataStore.Holding.GuaranteeDetails
         /// <param name="eventStatus">Specifies the status of the request.Allowed values are - With Bank_With Customer_Approved_Rejected.</param>
         /// <returns>getGuaranteeIssuanceRequestsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetGuaranteeIssuanceRequestsResponse> GetGuaranteeIssuanceRequestsAsync(string? recordId, string? customerId, string? eventStatus, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetGuaranteeIssuanceRequestsResponse> GetGuaranteeIssuanceRequestsAsync(string? recordId = null, string? customerId = null, string? eventStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

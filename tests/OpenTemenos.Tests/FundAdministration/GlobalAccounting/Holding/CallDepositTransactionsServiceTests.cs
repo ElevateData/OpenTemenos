@@ -15,7 +15,7 @@ public class CallDepositTransactionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.CallDepositTransactionService
-            .CallDepositTransactionsAsync(null, null, null, null, null, payload).Result;
+            .CallDepositTransactionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

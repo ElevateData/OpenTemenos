@@ -14,7 +14,7 @@ public class FxDetailsServiceTests : CredentialManagement
     public void PostFxDetailsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ForexService.PostFxdetailsByParentAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ForexService.PostFxdetailsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -23,7 +23,7 @@ public class FxDetailsServiceTests : CredentialManagement
     public void PostFxDetailsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ForexService.PostFxdetailsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ForexService.PostFxdetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -32,7 +32,7 @@ public class FxDetailsServiceTests : CredentialManagement
     public void PutFxDetailsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ForexService.PutFxdetailsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ForexService.PutFxdetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -41,7 +41,7 @@ public class FxDetailsServiceTests : CredentialManagement
     public void DeleteFxDetailsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ForexService.DeleteFxdetailsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ForexService.DeleteFxdetailsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -49,7 +49,7 @@ public class FxDetailsServiceTests : CredentialManagement
     public void GetFxDetailsByNptfAsync()
     {
         var result = _client.ForexService
-            .GetFxdetailsBynptfAsync(null, null, null, null, null, null, null, null, null, null, Nptf).Result;
+            .GetFxdetailsBynptfAsync(Nptf).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -59,7 +59,7 @@ public class FxDetailsServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ForexService.PutFxdetailsByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.ForexService.PutFxdetailsByIdAsync(internalId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -70,7 +70,7 @@ public class FxDetailsServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var payload = new _0Payload();
-        var result = _client.ForexService.DeleteFxdetailsByIdAsync(null, null, null, null, null, internalId, payload)
+        var result = _client.ForexService.DeleteFxdetailsByIdAsync(internalId, payload: payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

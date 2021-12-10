@@ -15,7 +15,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FatcaCrs.DocumentService
-            .PostFatcaCrsDocumentsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostFatcaCrsDocumentsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
     public void PostFatcaCrsDocumentsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FatcaCrs.DocumentService.PostFatcaCrsDocumentsAsync(null, null, null, null, null, payload)
+        var result = _client.FatcaCrs.DocumentService.PostFatcaCrsDocumentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
     public void PutFatcaCrsDocumentsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FatcaCrs.DocumentService.PutFatcaCrsDocumentsAsync(null, null, null, null, null, payload)
+        var result = _client.FatcaCrs.DocumentService.PutFatcaCrsDocumentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FatcaCrs.DocumentService
-            .DeleteFatcaCrsDocumentsAsync(null, null, null, null, null, payload).Result;
+            .DeleteFatcaCrsDocumentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
     public void GetFatcaCrsDocumentsByInternalIdAsync()
     {
         var result = _client.FatcaCrs.DocumentService
-            .GetFatcaCrsDocumentsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetFatcaCrsDocumentsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FatcaCrs.DocumentService
-            .PutFatcaCrsDocumentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFatcaCrsDocumentsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class FatcaCrsDocumentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FatcaCrs.DocumentService
-            .DeleteFatcaCrsDocumentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFatcaCrsDocumentsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

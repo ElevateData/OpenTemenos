@@ -13,7 +13,7 @@ public class RegistersServiceTests : CredentialManagement
     public void GetRegisterAsync()
     {
         var result = _client.InvestorAccountService
-            .GetRegisterAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetRegisterAsync().Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -22,7 +22,7 @@ public class RegistersServiceTests : CredentialManagement
     public void PostRegisterAsync()
     {
         var payload = new _0Payload();
-        var result = _client.InvestorAccountService.PostRegisterAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InvestorAccountService.PostRegisterAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -31,7 +31,7 @@ public class RegistersServiceTests : CredentialManagement
     public void PutRegisterAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.InvestorAccountService.PutRegisterAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InvestorAccountService.PutRegisterAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -40,7 +40,7 @@ public class RegistersServiceTests : CredentialManagement
     public void DeleteRegisterAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.InvestorAccountService.DeleteRegisterAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InvestorAccountService.DeleteRegisterAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -48,7 +48,7 @@ public class RegistersServiceTests : CredentialManagement
     public void GetRegisterByRegisterIdAsync()
     {
         var result = _client.InvestorAccountService
-            .GetRegisterByRegisterIdAsync(null, null, null, null, null, null, null, null, null, null, RegisterId)
+            .GetRegisterByRegisterIdAsync(RegisterId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -60,7 +60,7 @@ public class RegistersServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestorAccountService
-            .PutRegisterByRegisterIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutRegisterByRegisterIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -71,7 +71,7 @@ public class RegistersServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestorAccountService
-            .DeleteRegisterByRegisterIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteRegisterByRegisterIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

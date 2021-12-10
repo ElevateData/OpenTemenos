@@ -23,25 +23,6 @@ namespace Transact.Holding.TreasuryCurrencies
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ITreasuryCurrenciesService
     {
-        /// <summary>Retrieves the live market rate from  rate feeds</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="rateSource">The market rates source in general. In the case of currency rate, whether rate is to be sourced from  currency table (front office) or from market rates table (back office).</param>
-        /// <param name="rateProvider">The market rate provider, e.g. Bloomberg, Reuters, etc.</param>
-        /// <param name="assetType">Type of the asset, e.g. FX, equity, etc.</param>
-        /// <param name="dateOrPeriod">Refers to a date or a given period.</param>
-        /// <param name="rateIndicator">Market rate indicator as per the asset class. For currency, it  will be buy rate(B) , sell rate(S) or mid rate(M).</param>
-        /// <param name="interpolationMethod">Identifies whether forward exchange rates are to be interpolated or not. Possible values are 'Blank' - Rate will be interpolated '1' - Takes the next available rate '2' - Takes the closest rate</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyMarketRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketRatesResponse> GetCurrencyMarketRatesAsync(string currencyId, string? rateSource, string? rateProvider, string? assetType, string? dateOrPeriod, string? rateIndicator, string? interpolationMethod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the live market rate from  rate feeds</summary>
         /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
@@ -60,20 +41,7 @@ namespace Transact.Holding.TreasuryCurrencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyMarketRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyMarketRatesResponse> GetCurrencyMarketRatesAsync(string currencyId, string? rateSource, string? rateProvider, string? assetType, string? dateOrPeriod, string? rateIndicator, string? interpolationMethod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the exchange rate(used in revaluation) of a foreign currency with respect to local currency</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyRevaluationRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyRevaluationRatesResponse> GetCurrencyRevaluationRatesAsync(string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyMarketRatesResponse> GetCurrencyMarketRatesAsync(string currencyId, string? rateSource = null, string? rateProvider = null, string? assetType = null, string? dateOrPeriod = null, string? rateIndicator = null, string? interpolationMethod = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the exchange rate(used in revaluation) of a foreign currency with respect to local currency</summary>
@@ -87,7 +55,7 @@ namespace Transact.Holding.TreasuryCurrencies
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyRevaluationRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyRevaluationRatesResponse> GetCurrencyRevaluationRatesAsync(string? currency, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CurrencyRevaluationRatesResponse> GetCurrencyRevaluationRatesAsync(string? currency = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

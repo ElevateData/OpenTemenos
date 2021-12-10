@@ -15,7 +15,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.CommissionGroupService
-            .PostcommissiongroupsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostcommissiongroupsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
     public void PostCommissionGroupsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.CommissionGroupService.PostcommissiongroupsAsync(null, null, null, null, null, payload)
+        var result = _client.CommissionGroupService.PostcommissiongroupsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
     public void PutCommissionGroupsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.CommissionGroupService.PutcommissiongroupsAsync(null, null, null, null, null, payload)
+        var result = _client.CommissionGroupService.PutcommissiongroupsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
     public void DeleteCommissionGroupsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.CommissionGroupService.DeletecommissiongroupsAsync(null, null, null, null, null, payload)
+        var result = _client.CommissionGroupService.DeletecommissiongroupsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -53,7 +53,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
     public void GetCommissionGroupsByInternalIdAsync()
     {
         var result = _client.CommissionGroupService
-            .GetcommissiongroupsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetcommissiongroupsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.CommissionGroupService
-            .PutcommissiongroupsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutcommissiongroupsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class CommissionGroupsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.CommissionGroupService
-            .DeletecommissiongroupsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletecommissiongroupsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

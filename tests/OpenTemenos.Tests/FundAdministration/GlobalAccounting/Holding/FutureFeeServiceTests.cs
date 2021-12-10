@@ -14,7 +14,7 @@ public class FutureFeeServiceTests : CredentialManagement
     public void CreateFutureFeeAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FutureFeeService.CreateFutureFeeAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FutureFeeService.CreateFutureFeeAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

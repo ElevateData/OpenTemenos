@@ -10,7 +10,7 @@ public class RateTextsServiceTests : CredentialManagement
     [TestMethod]
     public void GetRateTextsAsync()
     {
-        var result = _client.InterestRateDescriptionService.GetRateTextsAsync(null, null).Result;
+        var result = _client.InterestRateDescriptionService.GetRateTextsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

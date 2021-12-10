@@ -23,27 +23,13 @@ namespace DataHub.OperationalDataStore.Order.ForexOrderDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IForexOrderDetailsService
     {
-        /// <summary>Retrieves the forex orders of a customer</summary>
-        /// <param name="counterpartyId">The identifier of the counter party</param>
-        /// <param name="limOrderReference">Transaction reference ID of the limit order.</param>
-        /// <returns>getForexDealsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexDealsResponse> GetForexDealsAsync(string counterpartyId, string? limOrderReference);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the forex orders of a customer</summary>
         /// <param name="counterpartyId">The identifier of the counter party</param>
         /// <param name="limOrderReference">Transaction reference ID of the limit order.</param>
         /// <returns>getForexDealsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetForexDealsResponse> GetForexDealsAsync(string counterpartyId, string? limOrderReference, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the forex order created for customers to buy/sell currencies at desired rates</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <param name="counterpartyId">The identifier of the counter party</param>
-        /// <returns>getCustomerForexLimitOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerForexLimitOrdersResponse> GetCustomerForexLimitOrdersAsync(string recordId, string? counterpartyId);
+        System.Threading.Tasks.Task<GetForexDealsResponse> GetForexDealsAsync(string counterpartyId, string? limOrderReference = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the forex order created for customers to buy/sell currencies at desired rates</summary>
@@ -51,7 +37,7 @@ namespace DataHub.OperationalDataStore.Order.ForexOrderDetails
         /// <param name="counterpartyId">The identifier of the counter party</param>
         /// <returns>getCustomerForexLimitOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerForexLimitOrdersResponse> GetCustomerForexLimitOrdersAsync(string recordId, string? counterpartyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCustomerForexLimitOrdersResponse> GetCustomerForexLimitOrdersAsync(string recordId, string? counterpartyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -15,7 +15,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransactionRestrictionService
-            .PostTransactionrestrictionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostTransactionrestrictionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransactionRestrictionService
-            .PostTransactionrestrictionsAsync(null, null, null, null, null, payload).Result;
+            .PostTransactionrestrictionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransactionRestrictionService
-            .PutTransactionrestrictionsAsync(null, null, null, null, null, payload).Result;
+            .PutTransactionrestrictionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransactionRestrictionService
-            .DeleteTransactionrestrictionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteTransactionrestrictionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
     public void GetTransactionRestrictionsByInternalIdAsync()
     {
         var result = _client.TransactionRestrictionService
-            .GetTransactionrestrictionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetTransactionrestrictionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransactionRestrictionService
-            .PutTransactionrestrictionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutTransactionrestrictionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class TransactionRestrictionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransactionRestrictionService
-            .DeleteTransactionrestrictionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteTransactionrestrictionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

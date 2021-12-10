@@ -15,7 +15,7 @@ public class CapitalDecreaseCollectionOfSharesServiceTests : CredentialManagemen
     {
         var payload = new _0BULKPayload();
         var result = _client.CapitalDecreaseCollectionOfShareService
-            .CreateCapitalDecreaseCollectionOfShareAsync(null, null, null, null, null, payload).Result;
+            .CreateCapitalDecreaseCollectionOfShareAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

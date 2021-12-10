@@ -23,20 +23,6 @@ namespace Transact.Holding.SwapNpvRevaluation
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISwapNpvRevaluationService
     {
-        /// <summary>Retrieves the currency wise daily profit/loss details for net present value method of revaluation.</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="discountRate">The rate used to discount a future cash flow.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SwapNPVRevaluationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SwapNPVRevaluationsResponse> GetSwapNPVRevaluationsAsync(string? currency, string? discountRate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the currency wise daily profit/loss details for net present value method of revaluation.</summary>
         /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
@@ -50,21 +36,7 @@ namespace Transact.Holding.SwapNpvRevaluation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SwapNPVRevaluationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SwapNPVRevaluationsResponse> GetSwapNPVRevaluationsAsync(string? currency, string? discountRate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves cash flow details for selected swap contract and calculates the present value total cash flow.</summary>
-        /// <param name="contractId">Identifies the unique identifier of the transaction or contract.</param>
-        /// <param name="discountRate">The rate used to discount a future cash flow.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SwapNPVDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SwapNPVDetailsResponse> GetSwapNPVDetailsAsync(string? contractId, string? discountRate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SwapNPVRevaluationsResponse> GetSwapNPVRevaluationsAsync(string? currency = null, string? discountRate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves cash flow details for selected swap contract and calculates the present value total cash flow.</summary>
@@ -79,21 +51,7 @@ namespace Transact.Holding.SwapNpvRevaluation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SwapNPVDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SwapNPVDetailsResponse> GetSwapNPVDetailsAsync(string? contractId, string? discountRate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the present value of cross currency interest rate swap contracts and calculates the daily profit and loss.</summary>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="discountRate">The rate used to discount a future cash flow.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>SwapNPVCurrencyRevaluationsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SwapNPVCurrencyRevaluationsResponse> GetSwapNPVCurrencyRevaluationsAsync(string? currency, string? discountRate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<SwapNPVDetailsResponse> GetSwapNPVDetailsAsync(string? contractId = null, string? discountRate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the present value of cross currency interest rate swap contracts and calculates the daily profit and loss.</summary>
@@ -108,7 +66,7 @@ namespace Transact.Holding.SwapNpvRevaluation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>SwapNPVCurrencyRevaluationsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SwapNPVCurrencyRevaluationsResponse> GetSwapNPVCurrencyRevaluationsAsync(string? currency, string? discountRate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SwapNPVCurrencyRevaluationsResponse> GetSwapNPVCurrencyRevaluationsAsync(string? currency = null, string? discountRate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

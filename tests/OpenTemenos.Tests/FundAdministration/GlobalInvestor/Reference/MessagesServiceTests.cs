@@ -14,7 +14,7 @@ public class MessagesServiceTests : CredentialManagement
     public void PostCmessAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.MessageService.PostCmessAsync(null, null, null, null, null, body).Result;
+        var result = _client.MessageService.PostCmessAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

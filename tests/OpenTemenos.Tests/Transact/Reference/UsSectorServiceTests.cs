@@ -11,7 +11,7 @@ public class UsSectorServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsSectorListAsync()
     {
-        var result = _client.UsSectorService.GetUsSectorlistAsync(CustomerType, null, null, null, null).Result;
+        var result = _client.UsSectorService.GetUsSectorlistAsync(CustomerType).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

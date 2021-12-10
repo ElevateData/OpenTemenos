@@ -23,18 +23,6 @@ namespace Transact.Order.PaymentsConfiguration
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPaymentsConfigurationService
     {
-        /// <summary>Update local clearing parameters</summary>
-        /// <param name="systemId">The system application identifier that could be used as entry reference or used as prefix in unique transaction identifiers</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>LocalClearingResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LocalClearingResponse> UpdateLocalClearingAsync(string systemId, LocalClearing payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update local clearing parameters</summary>
         /// <param name="systemId">The system application identifier that could be used as entry reference or used as prefix in unique transaction identifiers</param>
@@ -46,20 +34,7 @@ namespace Transact.Order.PaymentsConfiguration
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>LocalClearingResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LocalClearingResponse> UpdateLocalClearingAsync(string systemId, LocalClearing payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the payment order parameter</summary>
-        /// <param name="companyIdPath">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PaymentOrderParameterResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<PaymentOrderParameterResponse> UpdatePaymentOrderParameterAsync(string companyIdPath, PaymentOrderParameter payload, bool? validate_only, string? credentials, string? companyIdHeader, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<LocalClearingResponse> UpdateLocalClearingAsync(string systemId, LocalClearing payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the payment order parameter</summary>
@@ -73,20 +48,7 @@ namespace Transact.Order.PaymentsConfiguration
         /// <returns>PaymentOrderParameterResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<PaymentOrderParameterResponse> UpdatePaymentOrderParameterAsync(string companyIdPath, PaymentOrderParameter payload, bool? validate_only, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the payment order product</summary>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PaymentOrderProductResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        [System.Obsolete]
-        System.Threading.Tasks.Task<PaymentOrderProductResponse> UpdatePaymentOrderProductAsync(string productId, PaymentOrderProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PaymentOrderParameterResponse> UpdatePaymentOrderParameterAsync(string companyIdPath, PaymentOrderParameter payload, bool? validate_only = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the payment order product</summary>
@@ -100,7 +62,7 @@ namespace Transact.Order.PaymentsConfiguration
         /// <returns>PaymentOrderProductResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         [System.Obsolete]
-        System.Threading.Tasks.Task<PaymentOrderProductResponse> UpdatePaymentOrderProductAsync(string productId, PaymentOrderProduct payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PaymentOrderProductResponse> UpdatePaymentOrderProductAsync(string productId, PaymentOrderProduct payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

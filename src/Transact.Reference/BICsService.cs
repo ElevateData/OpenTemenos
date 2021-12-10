@@ -23,19 +23,6 @@ namespace Transact.Reference.BICs
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IBICsService
     {
-        /// <summary>Retrieves the status on the validity of the requested BIC along with its details</summary>
-        /// <param name="bicId">Bank Identifier Code (BIC) of the Beneficiary bank.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BICStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICStatusResponse> GetBICStatusAsync(string bicId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the status on the validity of the requested BIC along with its details</summary>
         /// <param name="bicId">Bank Identifier Code (BIC) of the Beneficiary bank.</param>
@@ -48,21 +35,7 @@ namespace Transact.Reference.BICs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BICStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICStatusResponse> GetBICStatusAsync(string bicId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the status on the validity of the BIC code</summary>
-        /// <param name="bicId">Bank Identifier Code (BIC) of the Beneficiary bank.</param>
-        /// <param name="effectiveDate">The date on which the principal movement is effected</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BICResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICResponse> ValidateBICAsync(string bicId, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BICStatusResponse> GetBICStatusAsync(string bicId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the status on the validity of the BIC code</summary>
@@ -77,20 +50,7 @@ namespace Transact.Reference.BICs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BICResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICResponse> ValidateBICAsync(string bicId, string? effectiveDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Bank's legal entity identifier of the requested BIC</summary>
-        /// <param name="bicId">Bank Identifier Code (BIC) of the Beneficiary bank.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>LEIFromBICResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LEIFromBICResponse> GetLEIFromBICAsync(string bicId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BICResponse> ValidateBICAsync(string bicId, string? effectiveDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Bank's legal entity identifier of the requested BIC</summary>
@@ -104,23 +64,7 @@ namespace Transact.Reference.BICs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>LEIFromBICResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LEIFromBICResponse> GetLEIFromBICAsync(string bicId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the matching bank identification codes for the specified search criterions</summary>
-        /// <param name="countryCode">ISO 3166-1-alpha-2 or alpha-3 country code of financial institution</param>
-        /// <param name="bicId">Bank Identifier Code (BIC) of the Beneficiary bank.</param>
-        /// <param name="institutionName">Indicates the name of the institution</param>
-        /// <param name="city">City of residence of customer or the City in which the bank/financial institution is located. For Example LONDON, NEW YORK</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BICIdentifierResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICIdentifierResponse> GetBICIdentifierAsync(string countryCode, string? bicId, string? institutionName, string? city, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<LEIFromBICResponse> GetLEIFromBICAsync(string bicId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the matching bank identification codes for the specified search criterions</summary>
@@ -137,7 +81,7 @@ namespace Transact.Reference.BICs
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BICIdentifierResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BICIdentifierResponse> GetBICIdentifierAsync(string countryCode, string? bicId, string? institutionName, string? city, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<BICIdentifierResponse> GetBICIdentifierAsync(string countryCode, string? bicId = null, string? institutionName = null, string? city = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

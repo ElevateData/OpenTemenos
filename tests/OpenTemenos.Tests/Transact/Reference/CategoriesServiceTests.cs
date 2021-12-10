@@ -13,7 +13,7 @@ public class CategoriesServiceTests : CredentialManagement
     public void GetCategoriesAsync()
     {
         var result = _client.CategoriesService
-            .GetCategoriesAsync(null, null, null, null, null, null, null, null, null, null, null).Result;
+            .GetCategoriesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -21,7 +21,7 @@ public class CategoriesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCategoryDetailsAsync()
     {
-        var result = _client.CategoriesService.GetCategoryDetailsAsync(CategoryId, null, null, null, null).Result;
+        var result = _client.CategoriesService.GetCategoryDetailsAsync(CategoryId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
@@ -33,7 +33,7 @@ public class CategoriesServiceTests : CredentialManagement
         var categoryId = string.Empty;
         var payload = new CategoryDetails();
         var result = _client.CategoriesService
-            .CreateCategoryDetailsAsync(categoryId, payload, null, null, null, null, null).Result;
+            .CreateCategoryDetailsAsync(categoryId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -44,7 +44,7 @@ public class CategoriesServiceTests : CredentialManagement
         var categoryId = string.Empty;
         var payload = new CategoryDetails();
         var result = _client.CategoriesService
-            .UpdateCategoryDetailsAsync(categoryId, payload, null, null, null, null, null).Result;
+            .UpdateCategoryDetailsAsync(categoryId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

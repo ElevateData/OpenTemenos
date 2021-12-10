@@ -23,27 +23,6 @@ namespace DataHub.OperationalDataStore.Holding.TradeDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ITradeDetailsService
     {
-        /// <summary>Retrieves the Derivatives Active SELL trade data details of OPTION type contract</summary>
-        /// <param name="tradeStatus">The status of the trade in the system defaulted to either ACTIVE or CLOSED</param>
-        /// <param name="lot">The number of lots/contracts traded</param>
-        /// <param name="tradeType">The type of contract that has been traded on an exchange, FUTURE, OPTION or STOCK</param>
-        /// <param name="syTransactionReference">Structured Product reference through which the trade is created</param>
-        /// <param name="pndSett">ID of any DX.CLOSEOUT pending (Unauthorised) for this PRI.CUSTOMER.</param>
-        /// <param name="dxCloseoutPendingId">DX.CLOSEOUT pending ID for this PRI.CUSTOMER</param>
-        /// <param name="buyOrSell">Indicates whether the Customer is buying or selling</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="strikePrice">The price at which the option holder has the right to buy (Call Options) or sell (Put Options) the underlying instrument, or to cash-settle the option if appropriate</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="contractCurrency">Indicates the Contract currency</param>
-        /// <param name="optionStyle">The type of settlement rule that should be applied on the option. AMERICAN: An option that may be exercised at any time prior to its expiry date. EUROPEAN: An option that may only be exercised on its expiry date.</param>
-        /// <param name="referenceId">Identifies the unique identifier of the activity.</param>
-        /// <returns>getSellOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSellOptionTradesResponse> GetSellOptionTradesAsync(string? tradeStatus, string? lot, string? tradeType, string? syTransactionReference, string? pndSett, string? dxCloseoutPendingId, string? buyOrSell, string? portfolioId, string? instrumentId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? contractCurrency, string? optionStyle, string? referenceId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Derivatives Active SELL trade data details of OPTION type contract</summary>
         /// <param name="tradeStatus">The status of the trade in the system defaulted to either ACTIVE or CLOSED</param>
@@ -64,28 +43,7 @@ namespace DataHub.OperationalDataStore.Holding.TradeDetails
         /// <param name="referenceId">Identifies the unique identifier of the activity.</param>
         /// <returns>getSellOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSellOptionTradesResponse> GetSellOptionTradesAsync(string? tradeStatus, string? lot, string? tradeType, string? syTransactionReference, string? pndSett, string? dxCloseoutPendingId, string? buyOrSell, string? portfolioId, string? instrumentId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? contractCurrency, string? optionStyle, string? referenceId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Derivatives Active BUY trade data details of OPTION type contract</summary>
-        /// <param name="tradeStatus">The status of the trade in the system defaulted to either ACTIVE or CLOSED</param>
-        /// <param name="lot">The number of lots/contracts traded</param>
-        /// <param name="tradeType">The type of contract that has been traded on an exchange, FUTURE, OPTION or STOCK</param>
-        /// <param name="syTransactionReference">Structured Product reference through which the trade is created</param>
-        /// <param name="pndSett">ID of any DX.CLOSEOUT pending (Unauthorised) for this PRI.CUSTOMER.</param>
-        /// <param name="dxCloseoutPendingId">DX.CLOSEOUT pending ID for this PRI.CUSTOMER</param>
-        /// <param name="buyOrSell">Indicates whether the Customer is buying or selling</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="strikePrice">The price at which the option holder has the right to buy (Call Options) or sell (Put Options) the underlying instrument, or to cash-settle the option if appropriate</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="contractCurrency">Indicates the Contract currency</param>
-        /// <param name="optionStyle">The type of settlement rule that should be applied on the option. AMERICAN: An option that may be exercised at any time prior to its expiry date. EUROPEAN: An option that may only be exercised on its expiry date.</param>
-        /// <param name="referenceId">Identifies the unique identifier of the activity.</param>
-        /// <returns>getBuyOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetBuyOptionTradesResponse> GetBuyOptionTradesAsync(string? tradeStatus, string? lot, string? tradeType, string? syTransactionReference, string? pndSett, string? dxCloseoutPendingId, string? buyOrSell, string? portfolioId, string? instrumentId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? contractCurrency, string? optionStyle, string? referenceId);
+        System.Threading.Tasks.Task<GetSellOptionTradesResponse> GetSellOptionTradesAsync(string? tradeStatus = null, string? lot = null, string? tradeType = null, string? syTransactionReference = null, string? pndSett = null, string? dxCloseoutPendingId = null, string? buyOrSell = null, string? portfolioId = null, string? instrumentId = null, string? maturityDate = null, string? strikePrice = null, string? callOrPut = null, string? tradeCurrency = null, string? contractCurrency = null, string? optionStyle = null, string? referenceId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Derivatives Active BUY trade data details of OPTION type contract</summary>
@@ -107,27 +65,7 @@ namespace DataHub.OperationalDataStore.Holding.TradeDetails
         /// <param name="referenceId">Identifies the unique identifier of the activity.</param>
         /// <returns>getBuyOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetBuyOptionTradesResponse> GetBuyOptionTradesAsync(string? tradeStatus, string? lot, string? tradeType, string? syTransactionReference, string? pndSett, string? dxCloseoutPendingId, string? buyOrSell, string? portfolioId, string? instrumentId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? contractCurrency, string? optionStyle, string? referenceId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the Derivatives Active trade data details of OPTION type contract</summary>
-        /// <param name="tradeStatus">The status of the trade in the system defaulted to either ACTIVE or CLOSED</param>
-        /// <param name="lot">The number of lots/contracts traded</param>
-        /// <param name="tradeType">The type of contract that has been traded on an exchange, FUTURE, OPTION or STOCK</param>
-        /// <param name="syTransactionReference">Structured Product reference through which the trade is created</param>
-        /// <param name="pndSett">ID of any DX.CLOSEOUT pending (Unauthorised) for this PRI.CUSTOMER.</param>
-        /// <param name="dxCloseoutPendingId">DX.CLOSEOUT pending ID for this PRI.CUSTOMER</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="strikePrice">The price at which the option holder has the right to buy (Call Options) or sell (Put Options) the underlying instrument, or to cash-settle the option if appropriate</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="contractCurrency">Indicates the Contract currency</param>
-        /// <param name="optionStyle">The type of settlement rule that should be applied on the option. AMERICAN: An option that may be exercised at any time prior to its expiry date. EUROPEAN: An option that may only be exercised on its expiry date.</param>
-        /// <param name="referenceId">Identifies the unique identifier of the activity.</param>
-        /// <returns>getActiveOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetActiveOptionTradesResponse> GetActiveOptionTradesAsync(string? tradeStatus, string? lot, string? tradeType, string? syTransactionReference, string? pndSett, string? dxCloseoutPendingId, string? portfolioId, string? instrumentId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? contractCurrency, string? optionStyle, string? referenceId);
+        System.Threading.Tasks.Task<GetBuyOptionTradesResponse> GetBuyOptionTradesAsync(string? tradeStatus = null, string? lot = null, string? tradeType = null, string? syTransactionReference = null, string? pndSett = null, string? dxCloseoutPendingId = null, string? buyOrSell = null, string? portfolioId = null, string? instrumentId = null, string? maturityDate = null, string? strikePrice = null, string? callOrPut = null, string? tradeCurrency = null, string? contractCurrency = null, string? optionStyle = null, string? referenceId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the Derivatives Active trade data details of OPTION type contract</summary>
@@ -148,7 +86,7 @@ namespace DataHub.OperationalDataStore.Holding.TradeDetails
         /// <param name="referenceId">Identifies the unique identifier of the activity.</param>
         /// <returns>getActiveOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetActiveOptionTradesResponse> GetActiveOptionTradesAsync(string? tradeStatus, string? lot, string? tradeType, string? syTransactionReference, string? pndSett, string? dxCloseoutPendingId, string? portfolioId, string? instrumentId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? contractCurrency, string? optionStyle, string? referenceId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetActiveOptionTradesResponse> GetActiveOptionTradesAsync(string? tradeStatus = null, string? lot = null, string? tradeType = null, string? syTransactionReference = null, string? pndSett = null, string? dxCloseoutPendingId = null, string? portfolioId = null, string? instrumentId = null, string? maturityDate = null, string? strikePrice = null, string? callOrPut = null, string? tradeCurrency = null, string? contractCurrency = null, string? optionStyle = null, string? referenceId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

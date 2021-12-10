@@ -15,7 +15,7 @@ public class EosNewSecurityWithoutCashServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExchangeOfSecurity.NewSecurityWithoutCashCompensationService
-            .CreateExchangeOfNewSecurityWithOutCashAsync(null, null, null, null, null, payload)
+            .CreateExchangeOfNewSecurityWithOutCashAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

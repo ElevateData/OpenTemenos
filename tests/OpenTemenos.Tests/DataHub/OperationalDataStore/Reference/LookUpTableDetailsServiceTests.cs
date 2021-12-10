@@ -10,7 +10,7 @@ public class LookUpTableDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetEbLookupsAsync()
     {
-        var result = _client.LookupTableService.GetEbLookupsAsync(null, null).Result;
+        var result = _client.LookupTableService.GetEbLookupsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -23,16 +23,11 @@ namespace DataHub.OperationalDataStore.Reference.Companies
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICompaniesService
     {
-        /// <summary>Retrieves the legal entity details such as company name, mnemonic, language code</summary>
-        /// <returns>List of legal entities defined in systemResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCompaniesResponse> GetCompaniesAsync();
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the legal entity details such as company name, mnemonic, language code</summary>
         /// <returns>List of legal entities defined in systemResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCompaniesResponse> GetCompaniesAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCompaniesResponse> GetCompaniesAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

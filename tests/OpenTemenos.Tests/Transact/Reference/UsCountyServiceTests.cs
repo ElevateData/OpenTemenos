@@ -11,7 +11,7 @@ public class UsCountyServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsCountyListAsync()
     {
-        var result = _client.UsCountyService.GetUsCountyListAsync(StateId, null, null, null, null, null).Result;
+        var result = _client.UsCountyService.GetUsCountyListAsync(StateId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

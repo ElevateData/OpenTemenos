@@ -23,20 +23,6 @@ namespace Transact.Holding.CurrencyPosition
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICurrencyPositionService
     {
-        /// <summary>Retrieves currency positions</summary>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPositionsResponse> GetCurrencyPositionsAsync(string? currency, string? dealerDesk, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves currency positions</summary>
         /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
@@ -50,21 +36,7 @@ namespace Transact.Holding.CurrencyPosition
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPositionsResponse> GetCurrencyPositionsAsync(string? currency, string? dealerDesk, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves currency positions</summary>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CurrencyCalendarPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyCalendarPositionsResponse> GetCurrencyCalendarPositionsAsync(string currencyId, string? currency, string? dealerDesk, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CurrencyPositionsResponse> GetCurrencyPositionsAsync(string? currency = null, string? dealerDesk = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves currency positions</summary>
@@ -79,7 +51,7 @@ namespace Transact.Holding.CurrencyPosition
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CurrencyCalendarPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyCalendarPositionsResponse> GetCurrencyCalendarPositionsAsync(string currencyId, string? currency, string? dealerDesk, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CurrencyCalendarPositionsResponse> GetCurrencyCalendarPositionsAsync(string currencyId, string? currency = null, string? dealerDesk = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

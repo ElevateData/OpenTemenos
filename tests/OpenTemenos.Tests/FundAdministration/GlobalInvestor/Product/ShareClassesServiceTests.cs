@@ -15,7 +15,7 @@ public class ShareClassesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareClassService
-            .PostShareclassesByParentAsync(null, null, null, null, null, payload).Result;
+            .PostShareclassesByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class ShareClassesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareClassService
-            .PostShareclassesAsync(null, null, null, null, null, payload).Result;
+            .PostShareclassesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class ShareClassesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransferAgentFundShareClassService
-            .PutShareclassesAsync(null, null, null, null, null, payload).Result;
+            .PutShareclassesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class ShareClassesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransferAgentFundShareClassService
-            .DeleteShareclassesAsync(null, null, null, null, null, payload).Result;
+            .DeleteShareclassesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class ShareClassesServiceTests : CredentialManagement
     public void GetShareClassesByInternalIdAsync()
     {
         var result = _client.TransferAgentFundShareClassService
-            .GetShareclassesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetShareclassesByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class ShareClassesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareClassService
-            .PutShareclassesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutShareclassesByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class ShareClassesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareClassService
-            .DeleteShareclassesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteShareclassesByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

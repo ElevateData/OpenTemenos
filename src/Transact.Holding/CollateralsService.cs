@@ -23,17 +23,6 @@ namespace Transact.Holding.Collaterals
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICollateralsService
     {
-        /// <summary>Create customer collaterals</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerCollateralsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCollateralsResponse> CreateCustomerCollateralsAsync(CustomerCollaterals payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create customer collaterals</summary>
         /// <param name="payload">body Payload</param>
@@ -44,19 +33,7 @@ namespace Transact.Holding.Collaterals
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerCollateralsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCollateralsResponse> CreateCustomerCollateralsAsync(CustomerCollaterals payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update customer collaterals</summary>
-        /// <param name="collateralId">The identifier of the collateral item</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerCollateralsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCollateralsResponse> UpdateCustomerCollateralsAsync(string collateralId, CustomerCollaterals payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerCollateralsResponse> CreateCustomerCollateralsAsync(CustomerCollaterals payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update customer collaterals</summary>
@@ -69,23 +46,7 @@ namespace Transact.Holding.Collaterals
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerCollateralsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCollateralsResponse> UpdateCustomerCollateralsAsync(string collateralId, CustomerCollaterals payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer collaterals</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="collateralCodeId">The identifier of the collateral type</param>
-        /// <param name="collateralTypeId">Collateral classification Id defined in the system.</param>
-        /// <param name="collateralStatus">Indicates the status of the collateral. Possible values are CUR, LIQ, FWD, EXC</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerCollateralsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCollateralsResponse1> GetCustomerCollateralsAsync(string customerId, string? collateralCodeId, string? collateralTypeId, string? collateralStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerCollateralsResponse> UpdateCustomerCollateralsAsync(string collateralId, CustomerCollaterals payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer collaterals</summary>
@@ -102,7 +63,7 @@ namespace Transact.Holding.Collaterals
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerCollateralsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCollateralsResponse1> GetCustomerCollateralsAsync(string customerId, string? collateralCodeId, string? collateralTypeId, string? collateralStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CustomerCollateralsResponse1> GetCustomerCollateralsAsync(string customerId, string? collateralCodeId = null, string? collateralTypeId = null, string? collateralStatus = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

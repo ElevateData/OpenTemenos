@@ -23,16 +23,6 @@ namespace Transact.Party.OnboardingCustomerX
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IOnboardingCustomerService
     {
-        /// <summary>Customer Information for specific customer.</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnboardingCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnboardingCustomerResponse> GetOnboardingCustomerAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Customer Information for specific customer.</summary>
         /// <param name="customerId">Identifier of the customer</param>
@@ -42,19 +32,7 @@ namespace Transact.Party.OnboardingCustomerX
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnboardingCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnboardingCustomerResponse> GetOnboardingCustomerAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>update the customer information</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnboardingCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnboardingCustomerResponse> UpdateOnboardingCustomerAsync(string customerId, OnboardingCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnboardingCustomerResponse> GetOnboardingCustomerAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>update the customer information</summary>
@@ -67,18 +45,7 @@ namespace Transact.Party.OnboardingCustomerX
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnboardingCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnboardingCustomerResponse> UpdateOnboardingCustomerAsync(string customerId, OnboardingCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create the customer</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OnboardingCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnboardingCustomerResponse> CreateOnboardingCustomerAsync(OnboardingCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OnboardingCustomerResponse> UpdateOnboardingCustomerAsync(string customerId, OnboardingCustomer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create the customer</summary>
@@ -90,7 +57,7 @@ namespace Transact.Party.OnboardingCustomerX
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OnboardingCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OnboardingCustomerResponse> CreateOnboardingCustomerAsync(OnboardingCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<OnboardingCustomerResponse> CreateOnboardingCustomerAsync(OnboardingCustomer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

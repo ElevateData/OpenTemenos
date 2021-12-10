@@ -15,7 +15,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FundEscalationCheckService
-            .PostfundescalationchecksByParentAsync(null, null, null, null, null, payload).Result;
+            .PostfundescalationchecksByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FundEscalationCheckService
-            .PostfundescalationchecksAsync(null, null, null, null, null, payload).Result;
+            .PostfundescalationchecksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FundEscalationCheckService
-            .PutfundescalationchecksAsync(null, null, null, null, null, payload).Result;
+            .PutfundescalationchecksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FundEscalationCheckService
-            .DeletefundescalationchecksAsync(null, null, null, null, null, payload).Result;
+            .DeletefundescalationchecksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
     public void GetFundEscalationChecksByInternalIdAsync()
     {
         var result = _client.FundEscalationCheckService
-            .GetfundescalationchecksByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetfundescalationchecksByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundEscalationCheckService
-            .PutfundescalationchecksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutfundescalationchecksByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class FundEscalationChecksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundEscalationCheckService
-            .DeletefundescalationchecksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletefundescalationchecksByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

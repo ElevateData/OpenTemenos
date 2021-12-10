@@ -10,7 +10,7 @@ public class UsStateListServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsStateListAsync()
     {
-        var result = _client.UsModelBankUsStateService.GetUsStateListAsync(null).Result;
+        var result = _client.UsModelBankUsStateService.GetUsStateListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

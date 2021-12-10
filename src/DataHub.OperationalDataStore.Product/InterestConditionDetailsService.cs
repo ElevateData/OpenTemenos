@@ -23,16 +23,11 @@ namespace DataHub.OperationalDataStore.Product.InterestConditionDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IInterestConditionDetailsService
     {
-        /// <summary>Retrieves all the available interest conditions</summary>
-        /// <returns>getInterestConditionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetInterestConditionsResponse> GetInterestConditionsAsync();
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all the available interest conditions</summary>
         /// <returns>getInterestConditionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetInterestConditionsResponse> GetInterestConditionsAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetInterestConditionsResponse> GetInterestConditionsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

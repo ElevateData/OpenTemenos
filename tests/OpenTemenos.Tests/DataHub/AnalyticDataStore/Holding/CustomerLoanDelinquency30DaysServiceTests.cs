@@ -11,7 +11,7 @@ public class CustomerLoanDelinquency30DaysServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerLoanDelinquency30DaysAsync()
     {
-        var result = _client.CustomerLoanDelinquencyService.GetCustomerLoanDelinquency30DaysAsync(null, null, null)
+        var result = _client.CustomerLoanDelinquencyService.GetCustomerLoanDelinquency30DaysAsync()
             .Result;
         Assert.IsNotNull(result.Data);
     }

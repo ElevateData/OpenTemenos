@@ -23,20 +23,6 @@ namespace Transact.Holding.Customers
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomersService
     {
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <param name="productGroupId">The group, as defined by the institution, that the product belongs to.</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>ArrangementsForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementsForCustomerResponse> GetArrangementsForCustomerAsync(string customerId, string? arrangementId, string? productLineId, string? productGroupId, string? productId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="customerId">Identifier of the customer</param>
         /// <param name="arrangementId">Indicates an unique identifier of an account</param>
@@ -50,21 +36,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>ArrangementsForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementsForCustomerResponse> GetArrangementsForCustomerAsync(string customerId, string? arrangementId, string? productLineId, string? productGroupId, string? productId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="productLineId">The top level product line, which the product is ultimately attached to. May be a Temenos-defined product line such as ACCOUNTS, AGENT, BUNDLE, CONSENT, DEPOSITS, LENDING, REWARDS, etc. or one defined by the institution to manage external products.</param>
-        /// <param name="productGroupId">The group, as defined by the institution, that the product belongs to.</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>ArrangementForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementsForCustomerResponse> GetArrangementForCustomerAsync(string customerId, string arrangementId, string? productLineId, string? productGroupId, string? productId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ArrangementsForCustomerResponse> GetArrangementsForCustomerAsync(string customerId, string? arrangementId = null, string? productLineId = null, string? productGroupId = null, string? productId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="customerId">Identifier of the customer</param>
@@ -79,21 +51,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>ArrangementForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ArrangementsForCustomerResponse> GetArrangementForCustomerAsync(string customerId, string arrangementId, string? productLineId, string? productGroupId, string? productId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="limitReference">Identifies the credit limit reference for the underlying account.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>AccountForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountForCustomerResponse> GetAccountForCustomerAsync(string customerId, string accountId, string? productId, string? currencyId, string? limitReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ArrangementsForCustomerResponse> GetArrangementForCustomerAsync(string customerId, string arrangementId, string? productLineId = null, string? productGroupId = null, string? productId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="customerId">Identifier of the customer</param>
@@ -108,29 +66,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>AccountForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountForCustomerResponse> GetAccountForCustomerAsync(string customerId, string accountId, string? productId, string? currencyId, string? limitReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="transactionId">Unique transaction identifier for retrieving the details of the transaction. For example: FT0102030333 etc.</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="brokerId">The identifier of the broker</param>
-        /// <param name="tradeDate">Standard date field which records trade date of the account</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="depository">Person designated as depository by the company in or pursuant to this Indenture, and, unless otherwise provided with respect to any security, any successor to such person</param>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="deliveryInstruction">Customer's directions to a bank as to the disposition of funds and securities in the customer's account</param>
-        /// <param name="transactionType">Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <param name="stockExchange">The stock exchange identifier</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>OverdueSettlementsByCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OverdueSettlementsByCustomerResponse> GetOverdueSettlementsByCustomerAsync(string customerId, string? transactionId, string? portfolioId, string? brokerId, string? tradeDate, string? valueDate, string? depository, string? currency, string? instrumentId, string? deliveryInstruction, string? transactionType, string? quantity, string? stockExchange, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<AccountForCustomerResponse> GetAccountForCustomerAsync(string customerId, string accountId, string? productId = null, string? currencyId = null, string? limitReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="customerId">Identifier of the customer</param>
@@ -153,23 +89,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>OverdueSettlementsByCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OverdueSettlementsByCustomerResponse> GetOverdueSettlementsByCustomerAsync(string customerId, string? transactionId, string? portfolioId, string? brokerId, string? tradeDate, string? valueDate, string? depository, string? currency, string? instrumentId, string? deliveryInstruction, string? transactionType, string? quantity, string? stockExchange, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="bookingDate">Business date on which the accounting entry was generated.</param>
-        /// <param name="processingDate">The date when payment instruction is processed in system.</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="description">Contains the description of purpose of the payment.</param>
-        /// <param name="reversalMarker">Denotes the flag which is set whenever any credit or reversal debit entries with future exposure dates are processed</param>
-        /// <param name="includeSubAcct">Denotes the flag which needs to be set in order to allow the automatic creation of sub-accounts and the automatic distribution of transactions over sub-accounts</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>AccountTransactionsForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountTransactionsForCustomerResponse> GetAccountTransactionsForCustomerAsync(string customerId, string accountId, string? bookingDate, string? processingDate, string? valueDate, string? description, string? reversalMarker, string? includeSubAcct, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<OverdueSettlementsByCustomerResponse> GetOverdueSettlementsByCustomerAsync(string customerId, string? transactionId = null, string? portfolioId = null, string? brokerId = null, string? tradeDate = null, string? valueDate = null, string? depository = null, string? currency = null, string? instrumentId = null, string? deliveryInstruction = null, string? transactionType = null, string? quantity = null, string? stockExchange = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
@@ -186,29 +106,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>AccountTransactionsForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountTransactionsForCustomerResponse> GetAccountTransactionsForCustomerAsync(string customerId, string accountId, string? bookingDate, string? processingDate, string? valueDate, string? description, string? reversalMarker, string? includeSubAcct, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="transactionId">Unique transaction identifier for retrieving the details of the transaction. For example: FT0102030333 etc.</param>
-        /// <param name="brokerId">The identifier of the broker</param>
-        /// <param name="tradeDate">Standard date field which records trade date of the account</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="depository">Person designated as depository by the company in or pursuant to this Indenture, and, unless otherwise provided with respect to any security, any successor to such person</param>
-        /// <param name="currency">Contains all details of each individual currency, for example, currency name, number of decimal places together with other information such as the buy and sell rates</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="deliveryInstruction">Customer's directions to a bank as to the disposition of funds and securities in the customer's account</param>
-        /// <param name="transactionType">Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <param name="stockExchange">The stock exchange identifier</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>OutstandingSettlementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutstandingSettlementsResponse> GetOutstandingSettlementsAsync(string customerId, string portfolioId, string? transactionId, string? brokerId, string? tradeDate, string? valueDate, string? depository, string? currency, string? instrumentId, string? deliveryInstruction, string? transactionType, string? quantity, string? stockExchange, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<AccountTransactionsForCustomerResponse> GetAccountTransactionsForCustomerAsync(string customerId, string accountId, string? bookingDate = null, string? processingDate = null, string? valueDate = null, string? description = null, string? reversalMarker = null, string? includeSubAcct = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="customerId">Identifier of the customer</param>
@@ -231,21 +129,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>OutstandingSettlementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutstandingSettlementsResponse> GetOutstandingSettlementsAsync(string customerId, string portfolioId, string? transactionId, string? brokerId, string? tradeDate, string? valueDate, string? depository, string? currency, string? instrumentId, string? deliveryInstruction, string? transactionType, string? quantity, string? stockExchange, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="productId">Contains the unique identifier of the product, e.g. the product id of the arrangement account.</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="limitReference">Identifies the credit limit reference for the underlying account.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>AccountsForCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountForCustomerResponse> GetAccountsForCustomerAsync(string customerId, string? accountId, string? productId, string? currencyId, string? limitReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<OutstandingSettlementsResponse> GetOutstandingSettlementsAsync(string customerId, string portfolioId, string? transactionId = null, string? brokerId = null, string? tradeDate = null, string? valueDate = null, string? depository = null, string? currency = null, string? instrumentId = null, string? deliveryInstruction = null, string? transactionType = null, string? quantity = null, string? stockExchange = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="customerId">Identifier of the customer</param>
@@ -260,7 +144,7 @@ namespace Transact.Holding.Customers
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>AccountsForCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AccountForCustomerResponse> GetAccountsForCustomerAsync(string customerId, string? accountId, string? productId, string? currencyId, string? limitReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<AccountForCustomerResponse> GetAccountsForCustomerAsync(string customerId, string? accountId = null, string? productId = null, string? currencyId = null, string? limitReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

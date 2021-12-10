@@ -15,7 +15,7 @@ public class FutureTransactionServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FutureTransactionService
-            .CreateFutureTransactionAsync(null, null, null, null, null, payload).Result;
+            .CreateFutureTransactionAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

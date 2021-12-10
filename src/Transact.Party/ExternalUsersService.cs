@@ -23,21 +23,6 @@ namespace Transact.Party.ExternalUsers
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IExternalUsersService
     {
-        /// <summary>Retrieves the external user details</summary>
-        /// <param name="channelId">Id of the (digital) channel</param>
-        /// <param name="arrangementId">Indicates an unique identifier of an account</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ExternalUserProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserProfileResponse> GetExternalUserProfileAsync(string? channelId, string? arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the external user details</summary>
         /// <param name="channelId">Id of the (digital) channel</param>
@@ -52,21 +37,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ExternalUserProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserProfileResponse> GetExternalUserProfileAsync(string? channelId, string? arrangementId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the external user preferences</summary>
-        /// <param name="externalUserPreferencesId">Denotes the preference identifier for the external user</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ExternalUserPreferencesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferencesResponse> GetExternalUserPreferencesAsync(string? externalUserPreferencesId, string? externalUserPreferencesIdBW, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ExternalUserProfileResponse> GetExternalUserProfileAsync(string? channelId = null, string? arrangementId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the external user preferences</summary>
@@ -81,19 +52,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ExternalUserPreferencesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferencesResponse> GetExternalUserPreferencesAsync(string? externalUserPreferencesId, string? externalUserPreferencesIdBW, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update external user status</summary>
-        /// <param name="externalUserId">Contains the external user identifier for which the consent is created.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalUserStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserStatusResponse> UpdateExternalUserStatusAsync(string externalUserId, ExternalUserStatus payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalUserPreferencesResponse> GetExternalUserPreferencesAsync(string? externalUserPreferencesId = null, string? externalUserPreferencesIdBW = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update external user status</summary>
@@ -106,19 +65,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalUserStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserStatusResponse> UpdateExternalUserStatusAsync(string externalUserId, ExternalUserStatus payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create new external user preferences</summary>
-        /// <param name="externalUserPreferencesId">Denotes the preference identifier for the external user</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalUserPreferenceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> CreateExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalUserStatusResponse> UpdateExternalUserStatusAsync(string externalUserId, ExternalUserStatus payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create new external user preferences</summary>
@@ -131,19 +78,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalUserPreferenceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> CreateExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the external user preferences</summary>
-        /// <param name="externalUserPreferencesId">Denotes the preference identifier for the external user</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalUserPreferenceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> UpdateExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> CreateExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreference payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the external user preferences</summary>
@@ -156,19 +91,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalUserPreferenceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> UpdateExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Remove external user preferences</summary>
-        /// <param name="externalUserPreferencesId">Denotes the preference identifier for the external user</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalUserPreferenceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> DeleteExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreferenceDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> UpdateExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreference payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Remove external user preferences</summary>
@@ -181,17 +104,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalUserPreferenceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> DeleteExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreferenceDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Overview of external user preferences</summary>
-        /// <param name="externalUserPreferencesId">Denotes the preference identifier for the external user</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ExternalUserPreferenceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> GetExternalUserPreferenceAsync(string externalUserPreferencesId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> DeleteExternalUserPreferenceAsync(string externalUserPreferencesId, ExternalUserPreferenceDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Overview of external user preferences</summary>
@@ -202,7 +115,7 @@ namespace Transact.Party.ExternalUsers
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ExternalUserPreferenceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> GetExternalUserPreferenceAsync(string externalUserPreferencesId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ExternalUserPreferenceResponse> GetExternalUserPreferenceAsync(string externalUserPreferencesId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -14,7 +14,7 @@ public class NavServiceTests : CredentialManagement
     public void PostSharePriceAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SharePriceService.PostSharePriceAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SharePriceService.PostSharePriceAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

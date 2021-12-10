@@ -15,7 +15,7 @@ public class ContactHistoryServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ContactHistoryService
-            .PostcontacthistoryByParentAsync(null, null, null, null, null, payload).Result;
+            .PostcontacthistoryByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class ContactHistoryServiceTests : CredentialManagement
     public void PostContactHistoryAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ContactHistoryService.PostcontacthistoryAsync(null, null, null, null, null, payload)
+        var result = _client.ContactHistoryService.PostcontacthistoryAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class ContactHistoryServiceTests : CredentialManagement
     public void PutContactHistoryAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ContactHistoryService.PutcontacthistoryAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ContactHistoryService.PutcontacthistoryAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -43,7 +43,7 @@ public class ContactHistoryServiceTests : CredentialManagement
     public void DeleteContactHistoryAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ContactHistoryService.DeletecontacthistoryAsync(null, null, null, null, null, payload)
+        var result = _client.ContactHistoryService.DeletecontacthistoryAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -52,7 +52,7 @@ public class ContactHistoryServiceTests : CredentialManagement
     public void GetContactHistoryByInternalIdAsync()
     {
         var result = _client.ContactHistoryService
-            .GetcontacthistoryByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetcontacthistoryByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -64,7 +64,7 @@ public class ContactHistoryServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ContactHistoryService
-            .PutcontacthistoryByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutcontacthistoryByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -75,7 +75,7 @@ public class ContactHistoryServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ContactHistoryService
-            .DeletecontacthistoryByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletecontacthistoryByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

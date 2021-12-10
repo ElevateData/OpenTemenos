@@ -13,8 +13,7 @@ public class AlertsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPackageStatementAsync()
     {
-        var result = _client.ArrangementAccountAlertService.GetSubscribedAlertsAsync(ArrangementId, null, null, null,
-                null, null, null, null, null, null, null, null)
+        var result = _client.ArrangementAccountAlertService.GetSubscribedAlertsAsync(ArrangementId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -23,7 +22,7 @@ public class AlertsServiceTests : CredentialManagement
     public void GetEligibleEventsAsync()
     {
         var result = _client.ArrangementAccountAlertService
-            .GetEligibleEventsAsync(AccountId, null, null, null, null, null, null, null, null)
+            .GetEligibleEventsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -32,8 +31,7 @@ public class AlertsServiceTests : CredentialManagement
     [TestMethod]
     public void GetExternalSubscribersAlertRequestsAsync()
     {
-        var result = _client.ArrangementAccountAlertService.GetExternalSubscribersAlertRequestsAsync(null, null, null,
-                null, null, null, null, null, null, null, null, null, null)
+        var result = _client.ArrangementAccountAlertService.GetExternalSubscribersAlertRequestsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +42,7 @@ public class AlertsServiceTests : CredentialManagement
     {
         var payload = new AlertSubscription();
         var result = _client.ArrangementAccountAlertService
-            .CreateAlertSubscriptionAsync(payload, null, null, null, null, null)
+            .CreateAlertSubscriptionAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -56,7 +54,7 @@ public class AlertsServiceTests : CredentialManagement
         var alertRequestId = string.Empty;
         var payload = new AlertSubscription();
         var result = _client.ArrangementAccountAlertService
-            .UpdateAlertSubscriptionAsync(alertRequestId, payload, null, null, null, null, null)
+            .UpdateAlertSubscriptionAsync(alertRequestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

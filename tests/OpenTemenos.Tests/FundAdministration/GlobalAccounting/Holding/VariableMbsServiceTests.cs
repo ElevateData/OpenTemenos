@@ -15,7 +15,7 @@ public class VariableMbsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.VariableMortgageBackedSecurityService
-            .CreateVariableMbsAsync(null, null, null, null, null, payload).Result;
+            .CreateVariableMbsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

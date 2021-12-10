@@ -14,7 +14,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
     public void PostFixedCalendarsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FixedCalendarService.PostFixedcalendarsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.FixedCalendarService.PostFixedcalendarsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
     public void PostFixedCalendarsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FixedCalendarService.PostFixedcalendarsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FixedCalendarService.PostFixedcalendarsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
     public void PutFixedCalendarsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FixedCalendarService.PutFixedcalendarsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.FixedCalendarService.PutFixedcalendarsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
     public void DeleteFixedCalendarsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FixedCalendarService.DeleteFixedcalendarsAsync(null, null, null, null, null, payload)
+        var result = _client.FixedCalendarService.DeleteFixedcalendarsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -51,7 +51,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
     public void GetFixedCalendarsByInternalIdAsync()
     {
         var result = _client.FixedCalendarService
-            .GetFixedcalendarsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetFixedcalendarsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -63,7 +63,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FixedCalendarService
-            .PutFixedcalendarsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFixedcalendarsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -74,7 +74,7 @@ public class FixedCalendarsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FixedCalendarService
-            .DeleteFixedcalendarsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFixedcalendarsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

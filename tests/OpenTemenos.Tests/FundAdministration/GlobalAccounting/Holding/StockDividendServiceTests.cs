@@ -14,7 +14,7 @@ public class StockDividendServiceTests : CredentialManagement
     public void CreateStockDividendAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.StockDividendService.CreateStockDividendAsync(null, null, null, null, null, payload)
+        var result = _client.StockDividendService.CreateStockDividendAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

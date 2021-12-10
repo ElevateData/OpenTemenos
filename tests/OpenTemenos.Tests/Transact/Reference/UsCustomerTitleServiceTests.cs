@@ -10,7 +10,7 @@ public class UsCustomerTitleServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsCustomerTitlesAsync()
     {
-        var result = _client.UsCustomerTitleService.GetUsCustomerTitlesAsync(null, null, null, null, null).Result;
+        var result = _client.UsCustomerTitleService.GetUsCustomerTitlesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

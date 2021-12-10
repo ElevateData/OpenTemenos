@@ -23,31 +23,19 @@ namespace DataHub.OperationalDataStore.Party.ExternalUserDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IExternalUserDetailsService
     {
-        /// <summary>Retrieves the external user details</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getExternalUserResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetExternalUserResponse> GetExternalUserAsync(string recordId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the external user details</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getExternalUserResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetExternalUserResponse> GetExternalUserAsync(string recordId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the external user preferences</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getExternalUserPreferencesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetExternalUserPreferencesResponse> GetExternalUserPreferencesAsync(string? recordId);
+        System.Threading.Tasks.Task<GetExternalUserResponse> GetExternalUserAsync(string recordId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the external user preferences</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getExternalUserPreferencesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetExternalUserPreferencesResponse> GetExternalUserPreferencesAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetExternalUserPreferencesResponse> GetExternalUserPreferencesAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

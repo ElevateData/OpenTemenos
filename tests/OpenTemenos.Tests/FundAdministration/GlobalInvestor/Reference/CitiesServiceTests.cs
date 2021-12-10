@@ -14,7 +14,7 @@ public class CitiesServiceTests : CredentialManagement
     public void CreateSwapPriceAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.TownService.PostCitiesAsync(null, null, null, null, null, body).Result;
+        var result = _client.TownService.PostCitiesAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

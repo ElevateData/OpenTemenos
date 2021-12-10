@@ -23,38 +23,19 @@ namespace Transact.Meta.Screens
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IScreensService
     {
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getScreensResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetScreensResponse> GetScreensAsync(int? page_size, int? page_start, string? page_token);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="page_size">The total number of records per page</param>
         /// <param name="page_start">The record from which the response should be displayed</param>
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getScreensResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetScreensResponse> GetScreensAsync(int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="screenId">The screen identifier</param>
-        /// <returns>getScreenResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetScreenResponse> GetScreenAsync(string screenId);
+        System.Threading.Tasks.Task<GetScreensResponse> GetScreensAsync(int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="screenId">The screen identifier</param>
         /// <returns>getScreenResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetScreenResponse> GetScreenAsync(string screenId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="screenId">The screen identifier</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>createScreenResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateScreenResponse> CreateScreenAsync(string screenId, CreateScreen payload, bool? validate_only);
+        System.Threading.Tasks.Task<GetScreenResponse> GetScreenAsync(string screenId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="screenId">The screen identifier</param>
@@ -62,7 +43,7 @@ namespace Transact.Meta.Screens
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>createScreenResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateScreenResponse> CreateScreenAsync(string screenId, CreateScreen payload, bool? validate_only, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CreateScreenResponse> CreateScreenAsync(string screenId, CreateScreen payload, bool? validate_only = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

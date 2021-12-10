@@ -15,7 +15,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ExceptionCutoffForDistributorService
-            .PostAgentcutoffexceptionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostAgentcutoffexceptionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ExceptionCutoffForDistributorService
-            .PostAgentcutoffexceptionsAsync(null, null, null, null, null, payload).Result;
+            .PostAgentcutoffexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExceptionCutoffForDistributorService
-            .PutAgentcutoffexceptionsAsync(null, null, null, null, null, payload).Result;
+            .PutAgentcutoffexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.ExceptionCutoffForDistributorService
-            .DeleteAgentcutoffexceptionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteAgentcutoffexceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
     public void GetAgentCutoffExceptionsByInternalIdAsync()
     {
         var result = _client.ExceptionCutoffForDistributorService
-            .GetAgentcutoffexceptionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetAgentcutoffexceptionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ExceptionCutoffForDistributorService
-            .PutAgentcutoffexceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutAgentcutoffexceptionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class AgentCutoffExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ExceptionCutoffForDistributorService
-            .DeleteAgentcutoffexceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteAgentcutoffexceptionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -12,7 +12,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
     [TestMethod]
     public void GetUtilizationsAsync()
     {
-        var result = _client.ForexUtilizationService.GetUtilisationsAsync(UtilizationId, null, null, null, null)
+        var result = _client.ForexUtilizationService.GetUtilisationsAsync(UtilizationId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -25,7 +25,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
         var utilisationId = string.Empty;
         var payload = new Utilisations();
         var result = _client.ForexUtilizationService
-            .AddUtilisationsAsync(utilisationId, payload, null, null, null, null, null)
+            .AddUtilisationsAsync(utilisationId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -34,7 +34,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
     [TestMethod]
     public void ApproveUtilisationsAsync()
     {
-        var result = _client.ForexUtilizationService.ApproveUtilisationsAsync(UtilizationId, null, null, null, null)
+        var result = _client.ForexUtilizationService.ApproveUtilisationsAsync(UtilizationId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -43,8 +43,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
     [TestMethod]
     public void GetFxUtilisationRatesAsync()
     {
-        var result = _client.ForexUtilizationService.GetFxUtilisationRatesAsync(null, null, null, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ForexUtilizationService.GetFxUtilisationRatesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

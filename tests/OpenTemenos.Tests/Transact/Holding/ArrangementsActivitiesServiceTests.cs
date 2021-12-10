@@ -15,8 +15,7 @@ public class ArrangementsActivitiesServiceTests : CredentialManagement
     [Obsolete("Flagged by Temenos")]
     public void GetArrangementActivityLogAsync()
     {
-        var result = _client.ArrangementsActivityService.GetArrangementActivityLogAsync(ArrangementId, null, null, null,
-                null, null, null, null, null, null, null, null)
+        var result = _client.ArrangementsActivityService.GetArrangementActivityLogAsync(ArrangementId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

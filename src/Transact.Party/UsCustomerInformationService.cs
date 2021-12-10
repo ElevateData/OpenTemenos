@@ -23,29 +23,6 @@ namespace Transact.Party.UsCustomerInformation
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUsCustomerInformationService
     {
-        /// <summary>Retrieve customer information service required for infinity integration</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="customerName">Name of the customer</param>
-        /// <param name="addressLine1">Indicates first line of the address of the BIC</param>
-        /// <param name="addressCity">The town and/or city component of the base address of a customer</param>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="zipCode">Zip code</param>
-        /// <param name="dateOfBirth">The date of birth of an individual customer</param>
-        /// <param name="lastName">The last name of an individual customer</param>
-        /// <param name="phoneNumber">The phone number of the customer or prospect</param>
-        /// <param name="firstName">Specifies customer's first name</param>
-        /// <param name="email">Email Identifier of the Customer</param>
-        /// <param name="mobilePhoneNumber">Represents the phone number of a customer</param>
-        /// <param name="taxId">Holds the Customer's TAX/SSN Id.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <returns>UsCustomerInformationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsCustomerInformationResponse> GetUsCustomerInformationAsync(string? customerId, string? customerName, string? addressLine1, string? addressCity, string? countryId, string? zipCode, string? dateOfBirth, string? lastName, string? phoneNumber, string? firstName, string? email, string? mobilePhoneNumber, string? taxId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve customer information service required for infinity integration</summary>
         /// <param name="customerId">Identifier of the customer</param>
@@ -68,7 +45,7 @@ namespace Transact.Party.UsCustomerInformation
         /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
         /// <returns>UsCustomerInformationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<UsCustomerInformationResponse> GetUsCustomerInformationAsync(string? customerId, string? customerName, string? addressLine1, string? addressCity, string? countryId, string? zipCode, string? dateOfBirth, string? lastName, string? phoneNumber, string? firstName, string? email, string? mobilePhoneNumber, string? taxId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<UsCustomerInformationResponse> GetUsCustomerInformationAsync(string? customerId = null, string? customerName = null, string? addressLine1 = null, string? addressCity = null, string? countryId = null, string? zipCode = null, string? dateOfBirth = null, string? lastName = null, string? phoneNumber = null, string? firstName = null, string? email = null, string? mobilePhoneNumber = null, string? taxId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

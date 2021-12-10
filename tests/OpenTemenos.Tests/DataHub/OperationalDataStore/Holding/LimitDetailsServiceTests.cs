@@ -12,14 +12,14 @@ public class LimitDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetExpiringLimitsAsync()
     {
-        var result = _client.LimitDetailService.GetExpiringLimitsAsync(null, null).Result;
+        var result = _client.LimitDetailService.GetExpiringLimitsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetLimitsToReviewAsync()
     {
-        var result = _client.LimitDetailService.GetLimitsToReviewAsync(null, null, null).Result;
+        var result = _client.LimitDetailService.GetLimitsToReviewAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -40,14 +40,14 @@ public class LimitDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerLimitMasterGroupsAsync()
     {
-        var result = _client.LimitDetailService.GetCustomerLimitMasterGroupsAsync(null).Result;
+        var result = _client.LimitDetailService.GetCustomerLimitMasterGroupsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetLimitSharingGroupAsync()
     {
-        var result = _client.LimitDetailService.GetLimitSharingGroupAsync(null).Result;
+        var result = _client.LimitDetailService.GetLimitSharingGroupAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

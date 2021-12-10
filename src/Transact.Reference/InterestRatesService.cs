@@ -23,21 +23,6 @@ namespace Transact.Reference.InterestRates
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IInterestRatesService
     {
-        /// <summary>Retrieves details of interest conditions</summary>
-        /// <param name="rateTextId">The basic interest rate ID / name.</param>
-        /// <param name="displayName">Contains the name used for display or enrichment purposes</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>RateTextsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RateTextsResponse> GetRateTextsAsync(string? rateTextId, string? displayName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves details of interest conditions</summary>
         /// <param name="rateTextId">The basic interest rate ID / name.</param>
@@ -52,17 +37,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>RateTextsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RateTextsResponse> GetRateTextsAsync(string? rateTextId, string? displayName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves basic interest rate</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestResponse> GetBasicInterestAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<RateTextsResponse> GetRateTextsAsync(string? rateTextId = null, string? displayName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves basic interest rate</summary>
@@ -73,19 +48,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestResponse> GetBasicInterestAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates basic interest rate record</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestResponse> CreateBasicInterestAsync(string rateId, BasicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestResponse> GetBasicInterestAsync(string rateId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates basic interest rate record</summary>
@@ -98,19 +61,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestResponse> CreateBasicInterestAsync(string rateId, BasicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates basic interest rate</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestResponse> UpdateBasicInterestAsync(string rateId, BasicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestResponse> CreateBasicInterestAsync(string rateId, BasicInterest payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates basic interest rate</summary>
@@ -123,21 +74,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestResponse> UpdateBasicInterestAsync(string rateId, BasicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves effective date of floating rates</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>BasicInterestChangeDatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestChangeDatesResponse> GetBasicInterestChangeDatesAsync(string rateId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<BasicInterestResponse> UpdateBasicInterestAsync(string rateId, BasicInterest payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves effective date of floating rates</summary>
@@ -152,17 +89,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>BasicInterestChangeDatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestChangeDatesResponse> GetBasicInterestChangeDatesAsync(string rateId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves floating rates for a specified date</summary>
-        /// <param name="date">Indicates the date on which activity was performed</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestRateChangesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestRateChangesResponse> GetBasicInterestRateChangesAsync(string date, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestChangeDatesResponse> GetBasicInterestChangeDatesAsync(string rateId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves floating rates for a specified date</summary>
@@ -173,17 +100,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestRateChangesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestRateChangesResponse> GetBasicInterestRateChangesAsync(string date, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves periodic interest details</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> GetPeriodicInterestAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestRateChangesResponse> GetBasicInterestRateChangesAsync(string date, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves periodic interest details</summary>
@@ -194,19 +111,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> GetPeriodicInterestAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates periodic interest details</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> CreatePeriodicInterestAsync(string rateId, PeriodicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicInterestResponse> GetPeriodicInterestAsync(string rateId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates periodic interest details</summary>
@@ -219,19 +124,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> CreatePeriodicInterestAsync(string rateId, PeriodicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates periodic interest details</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> UpdatePeriodicInterestAsync(string rateId, PeriodicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicInterestResponse> CreatePeriodicInterestAsync(string rateId, PeriodicInterest payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates periodic interest details</summary>
@@ -244,21 +137,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> UpdatePeriodicInterestAsync(string rateId, PeriodicInterest payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves periodic rates for a specified date</summary>
-        /// <param name="date">Indicates the date on which activity was performed</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PeriodicRateChangesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateChangesResponse> GetPeriodicRateChangesAsync(string date, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PeriodicInterestResponse> UpdatePeriodicInterestAsync(string rateId, PeriodicInterest payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves periodic rates for a specified date</summary>
@@ -273,17 +152,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PeriodicRateChangesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateChangesResponse> GetPeriodicRateChangesAsync(string date, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves floating rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestNameResponse> GetBasicInterestNameAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicRateChangesResponse> GetPeriodicRateChangesAsync(string date, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves floating rate name</summary>
@@ -294,19 +163,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestNameResponse> GetBasicInterestNameAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates floating rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestNameResponse> CreateBasicInterestNameAsync(string rateId, BasicInterestName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestNameResponse> GetBasicInterestNameAsync(string rateId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates floating rate name</summary>
@@ -319,19 +176,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestNameResponse> CreateBasicInterestNameAsync(string rateId, BasicInterestName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates floating rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BasicInterestNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestNameResponse> UpdateBasicInterestNameAsync(string rateId, BasicInterestName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestNameResponse> CreateBasicInterestNameAsync(string rateId, BasicInterestName payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates floating rate name</summary>
@@ -344,17 +189,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BasicInterestNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BasicInterestNameResponse> UpdateBasicInterestNameAsync(string rateId, BasicInterestName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves periodic rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicRateNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateNameResponse> GetPeriodicRateNameAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BasicInterestNameResponse> UpdateBasicInterestNameAsync(string rateId, BasicInterestName payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves periodic rate name</summary>
@@ -365,19 +200,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicRateNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateNameResponse> GetPeriodicRateNameAsync(string rateId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates periodic rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicRateNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateNameResponse> CreatePeriodicRateNameAsync(string rateId, PeriodicRateName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicRateNameResponse> GetPeriodicRateNameAsync(string rateId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates periodic rate name</summary>
@@ -390,19 +213,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicRateNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateNameResponse> CreatePeriodicRateNameAsync(string rateId, PeriodicRateName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates periodic rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicRateNameResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateNameResponse> UpdatePeriodicRateNameAsync(string rateId, PeriodicRateName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicRateNameResponse> CreatePeriodicRateNameAsync(string rateId, PeriodicRateName payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates periodic rate name</summary>
@@ -415,19 +226,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicRateNameResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicRateNameResponse> UpdatePeriodicRateNameAsync(string rateId, PeriodicRateName payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes periodic rate name</summary>
-        /// <param name="rateId">Identifies the periodic or floating interest rates</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PeriodicInterestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> DeletePeriodicRateNameAsync(string rateId, PeriodicRateNameDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PeriodicRateNameResponse> UpdatePeriodicRateNameAsync(string rateId, PeriodicRateName payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes periodic rate name</summary>
@@ -440,7 +239,7 @@ namespace Transact.Reference.InterestRates
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PeriodicInterestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PeriodicInterestResponse> DeletePeriodicRateNameAsync(string rateId, PeriodicRateNameDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PeriodicInterestResponse> DeletePeriodicRateNameAsync(string rateId, PeriodicRateNameDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

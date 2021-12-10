@@ -16,7 +16,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .PostamlblocksByParentAsync(null, null, null, null, null, payload).Result;
+            .PostamlblocksByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -26,7 +26,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .PostamlblocksAsync(null, null, null, null, null, payload).Result;
+            .PostamlblocksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -36,7 +36,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .PutamlblocksAsync(null, null, null, null, null, payload).Result;
+            .PutamlblocksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -46,7 +46,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .DeleteamlblocksAsync(null, null, null, null, null, payload).Result;
+            .DeleteamlblocksAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -54,7 +54,7 @@ public class AmlBlocksServiceTests : CredentialManagement
     public void GetAmlBlocksByInternalIdAsync()
     {
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .GetamlblocksByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetamlblocksByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -66,7 +66,7 @@ public class AmlBlocksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .PutamlblocksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutamlblocksByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -77,7 +77,7 @@ public class AmlBlocksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.AntiMoneyLaundering.AmlBlocksService
-            .DeleteamlblocksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteamlblocksByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

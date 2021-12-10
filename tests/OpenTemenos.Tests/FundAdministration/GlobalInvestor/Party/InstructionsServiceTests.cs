@@ -15,7 +15,7 @@ public class InstructionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.ReinvestOrPayAllService
-            .PostInstructionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostInstructionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class InstructionsServiceTests : CredentialManagement
     public void PostInstructionsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.ReinvestOrPayAllService.PostInstructionsAsync(null, null, null, null, null, payload)
+        var result = _client.ReinvestOrPayAllService.PostInstructionsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class InstructionsServiceTests : CredentialManagement
     public void PutInstructionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ReinvestOrPayAllService.PutInstructionsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ReinvestOrPayAllService.PutInstructionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -43,7 +43,7 @@ public class InstructionsServiceTests : CredentialManagement
     public void DeleteInstructionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ReinvestOrPayAllService.DeleteInstructionsAsync(null, null, null, null, null, payload)
+        var result = _client.ReinvestOrPayAllService.DeleteInstructionsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -52,7 +52,7 @@ public class InstructionsServiceTests : CredentialManagement
     public void GetInstructionsByInternalIdAsync()
     {
         var result = _client.ReinvestOrPayAllService
-            .GetInstructionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetInstructionsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -64,7 +64,7 @@ public class InstructionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ReinvestOrPayAllService
-            .PutInstructionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutInstructionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -75,7 +75,7 @@ public class InstructionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.ReinvestOrPayAllService
-            .DeleteInstructionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteInstructionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -10,7 +10,7 @@ public class ClientPortfoliosServiceTests : CredentialManagement
     [TestMethod]
     public void GetClientPortfoliosAsync()
     {
-        var result = _client.OwnBookPortfolioService.GetClientPortfoliosAsync(null).Result;
+        var result = _client.OwnBookPortfolioService.GetClientPortfoliosAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

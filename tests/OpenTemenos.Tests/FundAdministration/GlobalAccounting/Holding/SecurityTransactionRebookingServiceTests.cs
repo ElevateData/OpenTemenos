@@ -15,7 +15,7 @@ public class SecurityTransactionRebookingServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.SecurityTransactionRebookingService
-            .SecurityTransactionRebookingAsync(null, null, null, null, null, payload).Result;
+            .SecurityTransactionRebookingAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

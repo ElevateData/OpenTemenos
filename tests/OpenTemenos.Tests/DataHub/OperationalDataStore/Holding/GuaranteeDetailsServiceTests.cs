@@ -11,7 +11,7 @@ public class GuaranteeDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetGuaranteeIssuanceRequestsAsync()
     {
-        var result = _client.GuaranteeDetailService.GetGuaranteeIssuanceRequestsAsync(null, null, null).Result;
+        var result = _client.GuaranteeDetailService.GetGuaranteeIssuanceRequestsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

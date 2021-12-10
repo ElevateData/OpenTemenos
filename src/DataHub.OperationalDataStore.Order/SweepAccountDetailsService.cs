@@ -23,31 +23,19 @@ namespace DataHub.OperationalDataStore.Order.SweepAccountDetails
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ISweepAccountDetailsService
     {
-        /// <summary>Retrieves the account sweep details set for credit</summary>
-        /// <param name="creditAccount">Identifier of the creditAccounts.</param>
-        /// <returns>getSweepCreditAccountDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSweepCreditAccountDetailsResponse> GetSweepCreditAccountDetailsAsync(string creditAccount);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the account sweep details set for credit</summary>
         /// <param name="creditAccount">Identifier of the creditAccounts.</param>
         /// <returns>getSweepCreditAccountDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSweepCreditAccountDetailsResponse> GetSweepCreditAccountDetailsAsync(string creditAccount, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the account sweep details set for debit</summary>
-        /// <param name="debitAccount">Refers to the account which will be debited and funds moved out.</param>
-        /// <returns>getSweepDebitAccountDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSweepDebitAccountDetailsResponse> GetSweepDebitAccountDetailsAsync(string debitAccount);
+        System.Threading.Tasks.Task<GetSweepCreditAccountDetailsResponse> GetSweepCreditAccountDetailsAsync(string creditAccount, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the account sweep details set for debit</summary>
         /// <param name="debitAccount">Refers to the account which will be debited and funds moved out.</param>
         /// <returns>getSweepDebitAccountDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetSweepDebitAccountDetailsResponse> GetSweepDebitAccountDetailsAsync(string debitAccount, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetSweepDebitAccountDetailsResponse> GetSweepDebitAccountDetailsAsync(string debitAccount, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

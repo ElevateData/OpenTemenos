@@ -23,27 +23,13 @@ namespace Transact.Microservice.Metering
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IMeteringService
     {
-        /// <summary>Retrieves metering configuration details for a specified application</summary>
-        /// <param name="applicationId">Indicates unique identifier of an application</param>
-        /// <param name="resourceId">Indicates optional Unique identifier for the resource usage measured in order to filter records</param>
-        /// <returns>Searches and retrieves the metric data logged for the given application</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<MeteringAppConfiguration>> GetAppMetricConfigAsync(string applicationId, string? resourceId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves metering configuration details for a specified application</summary>
         /// <param name="applicationId">Indicates unique identifier of an application</param>
         /// <param name="resourceId">Indicates optional Unique identifier for the resource usage measured in order to filter records</param>
         /// <returns>Searches and retrieves the metric data logged for the given application</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<MeteringAppConfiguration>> GetAppMetricConfigAsync(string applicationId, string? resourceId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates configuration details for  metering an application</summary>
-        /// <param name="applicationId">Indicates Unique identifier of the application</param>
-        /// <param name="body">Request body for the metering app configuration details consisting of resourceId, metricType, statisticsType and additional properties</param>
-        /// <returns>Displays the response object which contains configId, applicationId, metricResourceId and status</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringAppConfigurationResponse> CreateAppMeteringConfigAsync(string applicationId, MeteringAppConfiguration? body);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<MeteringAppConfiguration>> GetAppMetricConfigAsync(string applicationId, string? resourceId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates configuration details for  metering an application</summary>
@@ -51,27 +37,14 @@ namespace Transact.Microservice.Metering
         /// <param name="body">Request body for the metering app configuration details consisting of resourceId, metricType, statisticsType and additional properties</param>
         /// <returns>Displays the response object which contains configId, applicationId, metricResourceId and status</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringAppConfigurationResponse> CreateAppMeteringConfigAsync(string applicationId, MeteringAppConfiguration? body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the metering configuration details of metering application for a specified configuration id.</summary>
-        /// <param name="configurationId">Indicates unique identifier of a configuration of a metered resource in an application</param>
-        /// <returns>Array of metric data logged which consists of configId, resourceId, metricType, statisticsType and addtional properties</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringAppConfiguration> GetApplicationMetricsConfigAsync(string configurationId);
+        System.Threading.Tasks.Task<MeteringAppConfigurationResponse> CreateAppMeteringConfigAsync(string applicationId, MeteringAppConfiguration? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the metering configuration details of metering application for a specified configuration id.</summary>
         /// <param name="configurationId">Indicates unique identifier of a configuration of a metered resource in an application</param>
         /// <returns>Array of metric data logged which consists of configId, resourceId, metricType, statisticsType and addtional properties</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringAppConfiguration> GetApplicationMetricsConfigAsync(string configurationId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates an application Metering Configuration for a specified configuration id</summary>
-        /// <param name="configurationId">Indicates unique identifier of a configuration of a metered resource in an application</param>
-        /// <param name="body">Request body of metering update configuration consisting of applicationId, resourceId, metricType, statisticsType and addtional properties.</param>
-        /// <returns>Response object for Metering App Configuration consisting of configId, applicationId, metricResourceId and the status</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringAppConfigurationResponse> UpdateAppMeteringConfigAsync(string configurationId, MeteringUpdateConfiguration? body);
+        System.Threading.Tasks.Task<MeteringAppConfiguration> GetApplicationMetricsConfigAsync(string configurationId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates an application Metering Configuration for a specified configuration id</summary>
@@ -79,49 +52,25 @@ namespace Transact.Microservice.Metering
         /// <param name="body">Request body of metering update configuration consisting of applicationId, resourceId, metricType, statisticsType and addtional properties.</param>
         /// <returns>Response object for Metering App Configuration consisting of configId, applicationId, metricResourceId and the status</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringAppConfigurationResponse> UpdateAppMeteringConfigAsync(string configurationId, MeteringUpdateConfiguration? body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes an application metric configuration for a specified configuration id</summary>
-        /// <param name="configurationId">Indicates unique identifier of a configuration for a metered resource in an application</param>
-        /// <returns>Response object for Metering Delete Configuration consisting of configurationId and the status</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringDeleteConfigurationResponse> DeleteAppMeteringConfigAsync(string configurationId);
+        System.Threading.Tasks.Task<MeteringAppConfigurationResponse> UpdateAppMeteringConfigAsync(string configurationId, MeteringUpdateConfiguration? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes an application metric configuration for a specified configuration id</summary>
         /// <param name="configurationId">Indicates unique identifier of a configuration for a metered resource in an application</param>
         /// <returns>Response object for Metering Delete Configuration consisting of configurationId and the status</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MeteringDeleteConfigurationResponse> DeleteAppMeteringConfigAsync(string configurationId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves  metrics entries logged for an application</summary>
-        /// <param name="applicationId">Indicates the unique identifier of an application</param>
-        /// <param name="resourceId">Indicates Unique identifier for the resource usage measured</param>
-        /// <param name="metricId">Indicates the identifier to identify the catagory of Metrics data</param>
-        /// <param name="fromDate">Indicates the date from which metric data is requested</param>
-        /// <param name="toDate">Indicates the date upto which metric data is requested</param>
-        /// <returns>Array of metric data logged consisting of resouceId, metricId, meteredDate, usage count and some addtional data</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<MetricDataLog>> GetMetricLogDataAsync(string applicationId, string? resourceId, string? metricId, System.DateTimeOffset fromDate, System.DateTimeOffset toDate);
+        System.Threading.Tasks.Task<MeteringDeleteConfigurationResponse> DeleteAppMeteringConfigAsync(string configurationId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves  metrics entries logged for an application</summary>
         /// <param name="applicationId">Indicates the unique identifier of an application</param>
-        /// <param name="resourceId">Indicates Unique identifier for the resource usage measured</param>
-        /// <param name="metricId">Indicates the identifier to identify the catagory of Metrics data</param>
         /// <param name="fromDate">Indicates the date from which metric data is requested</param>
         /// <param name="toDate">Indicates the date upto which metric data is requested</param>
+        /// <param name="resourceId">Indicates Unique identifier for the resource usage measured</param>
+        /// <param name="metricId">Indicates the identifier to identify the catagory of Metrics data</param>
         /// <returns>Array of metric data logged consisting of resouceId, metricId, meteredDate, usage count and some addtional data</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<MetricDataLog>> GetMetricLogDataAsync(string applicationId, string? resourceId, string? metricId, System.DateTimeOffset fromDate, System.DateTimeOffset toDate, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Add metered meterics data in the Metering service</summary>
-        /// <param name="requestId">Indicates the identifier of request</param>
-        /// <param name="applicationId">Indicates the Unique identifier of an application</param>
-        /// <param name="body">Request body of Metric Data Log consisting of resourceId, metricId, meteredDate, usage count and addittional data</param>
-        /// <returns>Response object of Metric Data Response consisting of applicationId, metricId, resourceId, usage count and status</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AddMetricDataResponse> AddMetricDataAsync(System.Guid requestId, string applicationId, System.Collections.Generic.IEnumerable<MetricDataLog>? body);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<MetricDataLog>> GetMetricLogDataAsync(string applicationId, System.DateTimeOffset fromDate, System.DateTimeOffset toDate, string? resourceId = null, string? metricId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Add metered meterics data in the Metering service</summary>
@@ -130,15 +79,7 @@ namespace Transact.Microservice.Metering
         /// <param name="body">Request body of Metric Data Log consisting of resourceId, metricId, meteredDate, usage count and addittional data</param>
         /// <returns>Response object of Metric Data Response consisting of applicationId, metricId, resourceId, usage count and status</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AddMetricDataResponse> AddMetricDataAsync(System.Guid requestId, string applicationId, System.Collections.Generic.IEnumerable<MetricDataLog>? body, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves statistics report on business values and api usage metrics data.</summary>
-        /// <param name="applicationId">Indicates Unique identifier of the application</param>
-        /// <param name="fromDate">Indicates the date from which metric data is requested</param>
-        /// <param name="toDate">Indicates the date upto which metric data is requested</param>
-        /// <returns>Array of metric statistics data for the given application consisting of applicationId, resourceId, metricId, meteredDate and usage count total</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<UsageStatisticsData>> GetUsageStatisticsAsync(string applicationId, System.DateTimeOffset fromDate, System.DateTimeOffset toDate);
+        System.Threading.Tasks.Task<AddMetricDataResponse> AddMetricDataAsync(System.Guid requestId, string applicationId, System.Collections.Generic.IEnumerable<MetricDataLog>? body = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves statistics report on business values and api usage metrics data.</summary>
@@ -147,15 +88,7 @@ namespace Transact.Microservice.Metering
         /// <param name="toDate">Indicates the date upto which metric data is requested</param>
         /// <returns>Array of metric statistics data for the given application consisting of applicationId, resourceId, metricId, meteredDate and usage count total</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<UsageStatisticsData>> GetUsageStatisticsAsync(string applicationId, System.DateTimeOffset fromDate, System.DateTimeOffset toDate, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves tamper evidence report for a specific applicationid and metric id.</summary>
-        /// <param name="appId">Indicates Unique identifier of the application</param>
-        /// <param name="resourceId">Indicates Unique identifier for the resource usage measured.</param>
-        /// <param name="metricId">Indicates identifier to get the catagory of Metrics data</param>
-        /// <returns>Response object of Evidence consisting of data logs and request logs along with algorithm used and the corresponsing hash.</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<VerifiableDataLog>> GetEvidenceAsync(string appId, string resourceId, string metricId);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<UsageStatisticsData>> GetUsageStatisticsAsync(string applicationId, System.DateTimeOffset fromDate, System.DateTimeOffset toDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves tamper evidence report for a specific applicationid and metric id.</summary>
@@ -164,7 +97,7 @@ namespace Transact.Microservice.Metering
         /// <param name="metricId">Indicates identifier to get the catagory of Metrics data</param>
         /// <returns>Response object of Evidence consisting of data logs and request logs along with algorithm used and the corresponsing hash.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<VerifiableDataLog>> GetEvidenceAsync(string appId, string resourceId, string metricId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<System.Collections.Generic.ICollection<VerifiableDataLog>> GetEvidenceAsync(string appId, string resourceId, string metricId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

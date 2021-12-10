@@ -12,7 +12,7 @@ public class ClientsServiceTests : CredentialManagement
     [TestMethod]
     public void GetClientAsync()
     {
-        var result = _client.InvestorService.GetClientAsync(null, null, null, null, null, null, null, null, null, null)
+        var result = _client.InvestorService.GetClientAsync()
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -22,7 +22,7 @@ public class ClientsServiceTests : CredentialManagement
     public void PostClientAsync()
     {
         var payload = new _0Payload();
-        var result = _client.InvestorService.PostClientAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InvestorService.PostClientAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -31,7 +31,7 @@ public class ClientsServiceTests : CredentialManagement
     public void PutClientAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.InvestorService.PutClientAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InvestorService.PutClientAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -40,7 +40,7 @@ public class ClientsServiceTests : CredentialManagement
     public void DeleteClientAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.InvestorService.DeleteClientAsync(null, null, null, null, null, payload).Result;
+        var result = _client.InvestorService.DeleteClientAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -48,7 +48,7 @@ public class ClientsServiceTests : CredentialManagement
     public void GetClientByClientIdAsync()
     {
         var result = _client.InvestorService
-            .GetClientByClientIdAsync(null, null, null, null, null, null, null, null, null, null, ClientId).Result;
+            .GetClientByClientIdAsync(ClientId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -59,7 +59,7 @@ public class ClientsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestorService
-            .PutClientByinternalIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutClientByinternalIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -70,7 +70,7 @@ public class ClientsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.InvestorService
-            .DeleteClientByClientIDAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteClientByClientIDAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -11,14 +11,14 @@ public class LcDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetIncoTermsAsync()
     {
-        var result = _client.LetterOfCreditService.GetIncoTermsAsync(null).Result;
+        var result = _client.LetterOfCreditService.GetIncoTermsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetLcTenorsAsync()
     {
-        var result = _client.LetterOfCreditService.GetLcTenorsAsync(null).Result;
+        var result = _client.LetterOfCreditService.GetLcTenorsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -14,7 +14,7 @@ public class AdjustmentsServiceTests : CredentialManagement
     public void PostAdjustmentsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.UnderlyingRegAdjustmentService.PostadjustmentsAsync(null, null, null, null, null, payload)
+        var result = _client.UnderlyingRegAdjustmentService.PostadjustmentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

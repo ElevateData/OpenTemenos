@@ -10,7 +10,7 @@ public class QuestionnaireTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetQuestionnaireTypesAsync()
     {
-        var result = _client.QuestionnaireTypeService.GetQuestionnaireTypesAsync(null).Result;
+        var result = _client.QuestionnaireTypeService.GetQuestionnaireTypesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

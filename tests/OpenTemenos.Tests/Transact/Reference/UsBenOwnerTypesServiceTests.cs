@@ -10,7 +10,7 @@ public class UsBenOwnerTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsBeneficialOwnerTypesAsync()
     {
-        var result = _client.UsBenOwnerTypesService.GetUsBeneficialOwnerTypesAsync(null, null, null, null, null).Result;
+        var result = _client.UsBenOwnerTypesService.GetUsBeneficialOwnerTypesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

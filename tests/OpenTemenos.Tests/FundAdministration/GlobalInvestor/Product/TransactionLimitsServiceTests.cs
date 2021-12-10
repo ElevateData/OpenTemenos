@@ -15,7 +15,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransactionLimitService
-            .PostTransactionLimitsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostTransactionLimitsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
     public void PostTransactionLimitsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.TransactionLimitService.PostTransactionLimitsAsync(null, null, null, null, null, payload)
+        var result = _client.TransactionLimitService.PostTransactionLimitsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
     public void PutTransactionLimitsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TransactionLimitService.PutTransactionLimitsAsync(null, null, null, null, null, payload)
+        var result = _client.TransactionLimitService.PutTransactionLimitsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
     public void DeleteTransactionLimitsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TransactionLimitService.DeleteTransactionLimitsAsync(null, null, null, null, null, payload)
+        var result = _client.TransactionLimitService.DeleteTransactionLimitsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -53,7 +53,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
     public void GetTransactionLimitsByInternalIdAsync()
     {
         var result = _client.TransactionLimitService
-            .GetTransactionLimitsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetTransactionLimitsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransactionLimitService
-            .PutTransactionLimitsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutTransactionLimitsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class TransactionLimitsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransactionLimitService
-            .DeleteTransactionLimitsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteTransactionLimitsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

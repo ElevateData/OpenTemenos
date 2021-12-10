@@ -23,20 +23,6 @@ namespace Transact.System.ProcessWorkFlow
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IProcessWorkFlowService
     {
-        /// <summary>Retrieves information on work item assigned to the logged in user.</summary>
-        /// <param name="data">Contains any input parameters/data required for the job</param>
-        /// <param name="processNumber">Identifies the process which involves multiple task for Ex: Enrolling the new customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PendingWorkflowsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PendingWorkflowsResponse> GetPendingWorkflowsAsync(string? data, string? processNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves information on work item assigned to the logged in user.</summary>
         /// <param name="data">Contains any input parameters/data required for the job</param>
@@ -50,24 +36,7 @@ namespace Transact.System.ProcessWorkFlow
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PendingWorkflowsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PendingWorkflowsResponse> GetPendingWorkflowsAsync(string? data, string? processNumber, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve information on which participant's work list the activity is residing currently.</summary>
-        /// <param name="activityTransaction">Process Workflow Activity Transactions</param>
-        /// <param name="user">The user who created the project</param>
-        /// <param name="transactionReference">Transaction reference identifier.</param>
-        /// <param name="process">Process</param>
-        /// <param name="pwActivityStatus">Process workflow activity status  POSSIBLE VALUES: COMPLETED APPROVED AUTHORISED</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>WorkflowPendingActivitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<WorkflowPendingActivitiesResponse> GetWorkflowPendingActivitiesAsync(string? activityTransaction, string? user, string? transactionReference, string? process, string? pwActivityStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PendingWorkflowsResponse> GetPendingWorkflowsAsync(string? data = null, string? processNumber = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve information on which participant's work list the activity is residing currently.</summary>
@@ -85,22 +54,7 @@ namespace Transact.System.ProcessWorkFlow
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>WorkflowPendingActivitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<WorkflowPendingActivitiesResponse> GetWorkflowPendingActivitiesAsync(string? activityTransaction, string? user, string? transactionReference, string? process, string? pwActivityStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Process workflow transactions associated to a role</summary>
-        /// <param name="userRoleQuery">User who initiated the transaction</param>
-        /// <param name="originateProcess">Process Id who initiated the entire workflow of transactions</param>
-        /// <param name="processId">Contains the process identifier</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRoleHeader">User who initiated the transaction</param>
-        /// <returns>TransactionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TransactionsResponse> GetTransactionsAsync(string? userRoleQuery, string? originateProcess, string? processId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRoleHeader);
+        System.Threading.Tasks.Task<WorkflowPendingActivitiesResponse> GetWorkflowPendingActivitiesAsync(string? activityTransaction = null, string? user = null, string? transactionReference = null, string? process = null, string? pwActivityStatus = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Process workflow transactions associated to a role</summary>
@@ -116,20 +70,7 @@ namespace Transact.System.ProcessWorkFlow
         /// <param name="userRoleHeader">User who initiated the transaction</param>
         /// <returns>TransactionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TransactionsResponse> GetTransactionsAsync(string? userRoleQuery, string? originateProcess, string? processId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRoleHeader, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Process workflow transactions not associated to a role</summary>
-        /// <param name="processId">Contains the process identifier</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>RolelessTransactionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TransactionsResponse> GetRolelessTransactionsAsync(string? processId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<TransactionsResponse> GetTransactionsAsync(string? userRoleQuery = null, string? originateProcess = null, string? processId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRoleHeader = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Process workflow transactions not associated to a role</summary>
@@ -143,22 +84,7 @@ namespace Transact.System.ProcessWorkFlow
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>RolelessTransactionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<TransactionsResponse> GetRolelessTransactionsAsync(string? processId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves information related to different participants and the users attached those participants.</summary>
-        /// <param name="participantId">Process Workflow Participant ID</param>
-        /// <param name="accountOfficer">Identifier of Department Account Officer</param>
-        /// <param name="user">The user who created the project</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>WorkflowParticipantsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<WorkflowParticipantsResponse> GetWorkflowParticipantsAsync(string? participantId, string? accountOfficer, string? user, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<TransactionsResponse> GetRolelessTransactionsAsync(string? processId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves information related to different participants and the users attached those participants.</summary>
@@ -174,7 +100,7 @@ namespace Transact.System.ProcessWorkFlow
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>WorkflowParticipantsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<WorkflowParticipantsResponse> GetWorkflowParticipantsAsync(string? participantId, string? accountOfficer, string? user, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<WorkflowParticipantsResponse> GetWorkflowParticipantsAsync(string? participantId = null, string? accountOfficer = null, string? user = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

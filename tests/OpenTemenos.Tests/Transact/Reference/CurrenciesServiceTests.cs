@@ -17,7 +17,7 @@ public class CurrenciesServiceTests : CredentialManagement
     public void GetCurrenciesAsync()
     {
         var result = _client.CurrenciesService
-            .GetCurrenciesAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetCurrenciesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -25,7 +25,7 @@ public class CurrenciesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCurrencyInfoAsync()
     {
-        var result = _client.CurrenciesService.GetCurrencyInfoAsync(CurrencyId, null, null, null, null).Result;
+        var result = _client.CurrenciesService.GetCurrencyInfoAsync(CurrencyId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -36,7 +36,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyId = string.Empty;
         var payload = new CurrencyInfo();
         var result = _client.CurrenciesService
-            .CreateCurrencyInfoAsync(currencyId, payload, null, null, null, null, null).Result;
+            .CreateCurrencyInfoAsync(currencyId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -47,7 +47,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyId = string.Empty;
         var payload = new CurrencyInfo();
         var result = _client.CurrenciesService
-            .UpdateCurrencyInfoAsync(currencyId, payload, null, null, null, null, null).Result;
+            .UpdateCurrencyInfoAsync(currencyId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -58,14 +58,14 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyId = string.Empty;
         var payload = new CurrencyInfoDelete();
         var result = _client.CurrenciesService
-            .DeleteCurrencyInfoAsync(currencyId, payload, null, null, null, null, null).Result;
+            .DeleteCurrencyInfoAsync(currencyId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetCurrencyMarketAsync()
     {
-        var result = _client.CurrenciesService.GetCurrencyMarketAsync(CurrencyMarketId, null, null, null, null).Result;
+        var result = _client.CurrenciesService.GetCurrencyMarketAsync(CurrencyMarketId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyMarketId = string.Empty;
         var payload = new CurrencyMarket();
         var result = _client.CurrenciesService
-            .CreateCurrencyMarketAsync(currencyMarketId, payload, null, null, null, null, null).Result;
+            .CreateCurrencyMarketAsync(currencyMarketId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -87,7 +87,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyMarketId = string.Empty;
         var payload = new CurrencyMarket();
         var result = _client.CurrenciesService
-            .UpdateCurrencyMarketAsync(currencyMarketId, payload, null, null, null, null, null).Result;
+            .UpdateCurrencyMarketAsync(currencyMarketId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -95,7 +95,7 @@ public class CurrenciesServiceTests : CredentialManagement
     public void GetCurrencyFromNumericCodeAsync()
     {
         var result = _client.CurrenciesService
-            .GetCurrencyFromNumericCodeAsync(NumericCurrencyCode, null, null, null, null, null, null, null, null)
+            .GetCurrencyFromNumericCodeAsync(NumericCurrencyCode)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -104,7 +104,7 @@ public class CurrenciesServiceTests : CredentialManagement
     public void GetCurrencyModificationsAsync()
     {
         var result = _client.CurrenciesService
-            .GetCurrencyModificationsAsync(CurrencyId, Year, null, null, null, null, null, null, null, null).Result;
+            .GetCurrencyModificationsAsync(CurrencyId, Year).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -112,14 +112,14 @@ public class CurrenciesServiceTests : CredentialManagement
     public void GetCurrencyForRankAsync()
     {
         var result = _client.CurrenciesService
-            .GetCurrencyForRankAsync(Rank, null, null, null, null, null, null, null, null).Result;
+            .GetCurrencyForRankAsync(Rank).Result;
         Assert.IsNotNull(result.Body);
     }
 
     [TestMethod]
     public void GetCurrencyBasicInfoAsync()
     {
-        var result = _client.CurrenciesService.GetCurrencyBasicInfoAsync(CurrencyId, null, null, null, null).Result;
+        var result = _client.CurrenciesService.GetCurrencyBasicInfoAsync(CurrencyId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -130,7 +130,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyId = string.Empty;
         var payload = new CurrencyBasicInfo();
         var result = _client.CurrenciesService
-            .CreateCurrencyBasicInfoAsync(currencyId, payload, null, null, null, null, null).Result;
+            .CreateCurrencyBasicInfoAsync(currencyId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -141,7 +141,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyId = string.Empty;
         var payload = new CurrencyBasicInfo();
         var result = _client.CurrenciesService
-            .UpdateCurrencyBasicInfoAsync(currencyId, payload, null, null, null, null, null).Result;
+            .UpdateCurrencyBasicInfoAsync(currencyId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -152,7 +152,7 @@ public class CurrenciesServiceTests : CredentialManagement
         var currencyId = string.Empty;
         var payload = new CurrencyBasicInfoDelete();
         var result = _client.CurrenciesService
-            .DeleteCurrencyBasicInfoAsync(currencyId, payload, null, null, null, null, null).Result;
+            .DeleteCurrencyBasicInfoAsync(currencyId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

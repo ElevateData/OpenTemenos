@@ -11,7 +11,7 @@ public class ChequeTypesServiceTests : CredentialManagement
     public void GetChequeTypesAsync()
     {
         var result = _client.ChequeTypesService
-            .GetChequeTypesAsync(null, null, null, null, null, null, null, null, null).Result;
+            .GetChequeTypesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

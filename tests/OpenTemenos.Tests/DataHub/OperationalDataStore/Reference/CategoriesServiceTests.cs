@@ -10,7 +10,7 @@ public class CategoriesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCategoriesAsync()
     {
-        var result = _client.ProductInternalCategoryCodeService.GetCategoriesAsync(null).Result;
+        var result = _client.ProductInternalCategoryCodeService.GetCategoriesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

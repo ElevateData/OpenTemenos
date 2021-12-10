@@ -14,7 +14,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void PostBankAccountsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.BankAccountService.PostbankaccountsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.BankAccountService.PostbankaccountsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void PostBankAccountsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.BankAccountService.PostbankaccountsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.BankAccountService.PostbankaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void PutBankAccountsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.BankAccountService.PutbankaccountsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.BankAccountService.PutbankaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void DeleteBankAccountsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.BankAccountService.DeletebankaccountsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.BankAccountService.DeletebankaccountsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void GetBankAccountsByInternalIdAsync()
     {
         var result = _client.BankAccountService
-            .GetbankaccountsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetbankaccountsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class BankAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.BankAccountService
-            .PutbankaccountsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutbankaccountsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class BankAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.BankAccountService
-            .DeletebankaccountsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletebankaccountsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -82,7 +82,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void PostBankAccountsByParentProdAsync()
     {
         var payload = new _0Payload();
-        var result = _client.BankAccountService.PostbankaccountsByParentProdAsync(null, null, null, null, null, payload)
+        var result = _client.BankAccountService.PostbankaccountsByParentProdAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -92,7 +92,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void PostBankAccountsProdAsync()
     {
         var payload = new _0Payload();
-        var result = _client.BankAccountService.PostbankaccountsProdAsync(null, null, null, null, null, payload).Result;
+        var result = _client.BankAccountService.PostbankaccountsProdAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -101,7 +101,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void PutBankAccountsProdAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.BankAccountService.PutbankaccountsProdAsync(null, null, null, null, null, payload).Result;
+        var result = _client.BankAccountService.PutbankaccountsProdAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -110,7 +110,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void DeleteBankAccountsProdAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.BankAccountService.DeletebankaccountsProdAsync(null, null, null, null, null, payload)
+        var result = _client.BankAccountService.DeletebankaccountsProdAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -119,7 +119,7 @@ public class BankAccountsServiceTests : CredentialManagement
     public void GetBankAccountsByInternalIdProdAsync()
     {
         var result = _client.BankAccountService
-            .GetbankaccountsByInternalIdProdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetbankaccountsByInternalIdProdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -131,7 +131,7 @@ public class BankAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.BankAccountService
-            .PutbankaccountsByIdProdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutbankaccountsByIdProdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -142,7 +142,7 @@ public class BankAccountsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.BankAccountService
-            .DeletebankaccountsByIdProdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletebankaccountsByIdProdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

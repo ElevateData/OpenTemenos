@@ -39,7 +39,7 @@ public class ProductDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetPropertyClassesAsync()
     {
-        var result = _client.ProductDetailService.GetPropertyClassesAsync(null, null, null).Result;
+        var result = _client.ProductDetailService.GetPropertyClassesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

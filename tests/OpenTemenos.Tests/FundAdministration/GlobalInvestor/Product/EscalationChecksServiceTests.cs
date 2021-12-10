@@ -15,7 +15,7 @@ public class EscalationChecksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.EscalationCheckService
-            .PostescalationchecksByParentAsync(null, null, null, null, null, payload).Result;
+            .PostescalationchecksByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class EscalationChecksServiceTests : CredentialManagement
     public void PostEscalationChecksAsync()
     {
         var payload = new _0Payload();
-        var result = _client.EscalationCheckService.PostescalationchecksAsync(null, null, null, null, null, payload)
+        var result = _client.EscalationCheckService.PostescalationchecksAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class EscalationChecksServiceTests : CredentialManagement
     public void PutEscalationChecksAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.EscalationCheckService.PutescalationchecksAsync(null, null, null, null, null, payload)
+        var result = _client.EscalationCheckService.PutescalationchecksAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class EscalationChecksServiceTests : CredentialManagement
     public void DeleteEscalationChecksAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.EscalationCheckService.DeleteescalationchecksAsync(null, null, null, null, null, payload)
+        var result = _client.EscalationCheckService.DeleteescalationchecksAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -53,7 +53,7 @@ public class EscalationChecksServiceTests : CredentialManagement
     public void GetEscalationChecksByInternalIdAsync()
     {
         var result = _client.EscalationCheckService
-            .GetescalationchecksByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetescalationchecksByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class EscalationChecksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.EscalationCheckService
-            .PutescalationchecksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutescalationchecksByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class EscalationChecksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.EscalationCheckService
-            .DeleteescalationchecksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteescalationchecksByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

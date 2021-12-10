@@ -13,7 +13,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
     public void GetCurHolAsync()
     {
         var result = _client.CurrencyHolidayService
-            .GetCurHolAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetCurHolAsync().Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -22,7 +22,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
     public void PostCurrencyholidayAsync()
     {
         var body = new _0Payload();
-        var result = _client.CurrencyHolidayService.PostCurrencyholidayAsync(null, null, null, null, null, body).Result;
+        var result = _client.CurrencyHolidayService.PostCurrencyholidayAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -31,7 +31,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
     public void PutCurrencyholidaysingleAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.CurrencyHolidayService.PutCurrencyholidaysingleAsync(null, null, null, null, null, body)
+        var result = _client.CurrencyHolidayService.PutCurrencyholidaysingleAsync(body)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -41,7 +41,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
     public void DeleteCurHolByAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.CurrencyHolidayService.DeleteCurHolByAsync(null, null, null, null, null, body).Result;
+        var result = _client.CurrencyHolidayService.DeleteCurHolByAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
     {
         var internalId = string.Empty;
         var result = _client.CurrencyHolidayService
-            .GetCurHolByIdAsync(null, null, null, null, null, null, null, null, null, null, internalId).Result;
+            .GetCurHolByIdAsync(internalId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -60,7 +60,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
     {
         var body = new _0Payload();
         var internalId = string.Empty;
-        var result = _client.CurrencyHolidayService.PutCurHolByIdAsync(null, null, null, null, null, internalId, body)
+        var result = _client.CurrencyHolidayService.PutCurHolByIdAsync(internalId, body)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -72,7 +72,7 @@ public class CurrencyHolidaysServiceTests : CredentialManagement
         var body = new _0Payload();
         var internalId = string.Empty;
         var result = _client.CurrencyHolidayService
-            .DeleteCurHolByIdAsync(null, null, null, null, null, internalId, body).Result;
+            .DeleteCurHolByIdAsync(internalId, payload: body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

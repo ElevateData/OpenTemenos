@@ -13,7 +13,7 @@ public class FundGroupCutoffServiceTests : CredentialManagement
     public void PostCutoffByGroupAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.CutoffByFundGroupService.PostCutoffByGroupAsync(null, null, null, null, null, payload)
+        var result = _client.CutoffByFundGroupService.PostCutoffByGroupAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

@@ -20,14 +20,14 @@ public class CustomerDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerKycListAsync()
     {
-        var result = _client.CustomerDetailService.GetCustomerKycListAsync(null).Result;
+        var result = _client.CustomerDetailService.GetCustomerKycListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetCustomerNoKycListAsync()
     {
-        var result = _client.CustomerDetailService.GetCustomerNoKycListAsync(null).Result;
+        var result = _client.CustomerDetailService.GetCustomerNoKycListAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -41,7 +41,7 @@ public class CustomerDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerRelationshipDetailsAsync()
     {
-        var result = _client.CustomerDetailService.GetCustomerRelationshipDetailsAsync(null, null, null, null).Result;
+        var result = _client.CustomerDetailService.GetCustomerRelationshipDetailsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -49,21 +49,21 @@ public class CustomerDetailsServiceTests : CredentialManagement
     public void GetSecureMessagesForCustomerAsync()
     {
         var result = _client.CustomerDetailService
-            .GetSecureMessagesForCustomerAsync(FromCustomerId, null, null, null, null).Result;
+            .GetSecureMessagesForCustomerAsync(FromCustomerId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetSecureMessagesAsync()
     {
-        var result = _client.CustomerDetailService.GetSecureMessagesAsync(null, null, null, null, null).Result;
+        var result = _client.CustomerDetailService.GetSecureMessagesAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetCustomerTravelNotificationsAsync()
     {
-        var result = _client.CustomerDetailService.GetCustomerTravelNotificationsAsync(CutomerId, null, null).Result;
+        var result = _client.CustomerDetailService.GetCustomerTravelNotificationsAsync(CutomerId).Result;
         Assert.IsNotNull(result.Data);
     }
 
@@ -78,7 +78,7 @@ public class CustomerDetailsServiceTests : CredentialManagement
     [Ignore("Invalid request object")]
     public void GetCustomerDeliveryPreferencesAsync()
     {
-        var result = _client.CustomerDetailService.GetCustomerDeliveryPreferencesAsync(new object(), null).Result;
+        var result = _client.CustomerDetailService.GetCustomerDeliveryPreferencesAsync(new object()).Result;
         Assert.IsNotNull(result.Data);
     }
 }

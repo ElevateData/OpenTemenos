@@ -14,7 +14,7 @@ public class OrderNotificationServiceTests : CredentialManagement
     public void PostOrderNotificationAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ErrorInterfaceService.PostordernotificationAsync(null, null, null, null, null, payload)
+        var result = _client.ErrorInterfaceService.PostordernotificationAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

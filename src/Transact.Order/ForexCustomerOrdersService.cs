@@ -23,19 +23,6 @@ namespace Transact.Order.ForexCustomerOrders
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IForexCustomerOrdersService
     {
-        /// <summary>Retrieves forex orders created for customers to buy/sell currencies at desired rates</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerForexLimitOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerForexLimitOrdersResponse> GetCustomerForexLimitOrdersAsync(string limitOrderId, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves forex orders created for customers to buy/sell currencies at desired rates</summary>
         /// <param name="customerId">Identifier of the customer</param>
@@ -48,18 +35,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerForexLimitOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerForexLimitOrdersResponse> GetCustomerForexLimitOrdersAsync(string limitOrderId, string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Cancels an existing forex limit order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ForexLimitOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexLimitOrderResponse> UpdateForexLimitOrderAsync(string limitOrderId, ForexLimitOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerForexLimitOrdersResponse> GetCustomerForexLimitOrdersAsync(string limitOrderId, string? customerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Cancels an existing forex limit order</summary>
@@ -71,18 +47,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ForexLimitOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexLimitOrderResponse> UpdateForexLimitOrderAsync(string limitOrderId, ForexLimitOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates forex limit order for a customer</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ForexLimitOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexLimitOrderResponse1> CreateForexLimitOrderAsync(ForexLimitOrder1 payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ForexLimitOrderResponse> UpdateForexLimitOrderAsync(string limitOrderId, ForexLimitOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates forex limit order for a customer</summary>
@@ -94,20 +59,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ForexLimitOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexLimitOrderResponse1> CreateForexLimitOrderAsync(ForexLimitOrder1 payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the forex deals created out of the forex limit order of the given customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerForexDealsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerForexDealsResponse> GetCustomerForexDealsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ForexLimitOrderResponse1> CreateForexLimitOrderAsync(ForexLimitOrder1 payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the forex deals created out of the forex limit order of the given customer</summary>
@@ -121,21 +73,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerForexDealsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerForexDealsResponse> GetCustomerForexDealsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the open position</summary>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="dealerDeskId">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ForexOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexOrdersResponse> GetForexOrdersAsync(string? currencyId, string? dealerDeskId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerForexDealsResponse> GetCustomerForexDealsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the open position</summary>
@@ -150,18 +88,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ForexOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexOrdersResponse> GetForexOrdersAsync(string? currencyId, string? dealerDeskId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates foreign exchange deal</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ForexOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexOrderResponse> CreateForexOrderAsync(ForexOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ForexOrdersResponse> GetForexOrdersAsync(string? currencyId = null, string? dealerDeskId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates foreign exchange deal</summary>
@@ -173,34 +100,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ForexOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ForexOrderResponse> CreateForexOrderAsync(ForexOrder payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves all the foreign exchange active deals as on today</summary>
-        /// <param name="dealType">Foreign Exchange deal type. Allowed values: - SP(spot) - FW(forward) - SW(Swap)</param>
-        /// <param name="counterparty">The counterparty ID  for the  deal.</param>
-        /// <param name="transactionId">Unique transaction identifier for retrieving the details of the transaction. For example: FT0102030333 etc.</param>
-        /// <param name="swapId">Swap contract identifier</param>
-        /// <param name="settlementDateSell">Settlement date for sell side.</param>
-        /// <param name="settlementDateBuy">Settlement date for buy side.</param>
-        /// <param name="buyCurrency">ISO Currency code for the bought currency.</param>
-        /// <param name="buyAmount">Amount bought in the FX deal.</param>
-        /// <param name="sellCurrency">ISO Currency code for the sold currency.</param>
-        /// <param name="sellAmount">Amount sold in the FX deal.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="accountSell">Contains the account from which the payment is made.</param>
-        /// <param name="accountBuy">Contains the account from which the payment is received.</param>
-        /// <param name="dealerDeskId">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="unevenSwap">Identifier for a FX uneven swap  (the swap base currency amount in near and far leg are not the same).</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>OutstandingForexOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutstandingForexOrdersResponse> GetOutstandingForexOrdersAsync(string? dealType, string? counterparty, string? transactionId, string? swapId, string? settlementDateSell, string? settlementDateBuy, string? buyCurrency, string? buyAmount, string? sellCurrency, string? sellAmount, string? dealDate, string? accountSell, string? accountBuy, string? dealerDeskId, string? unevenSwap, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ForexOrderResponse> CreateForexOrderAsync(ForexOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all the foreign exchange active deals as on today</summary>
@@ -228,7 +128,7 @@ namespace Transact.Order.ForexCustomerOrders
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>OutstandingForexOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutstandingForexOrdersResponse> GetOutstandingForexOrdersAsync(string? dealType, string? counterparty, string? transactionId, string? swapId, string? settlementDateSell, string? settlementDateBuy, string? buyCurrency, string? buyAmount, string? sellCurrency, string? sellAmount, string? dealDate, string? accountSell, string? accountBuy, string? dealerDeskId, string? unevenSwap, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<OutstandingForexOrdersResponse> GetOutstandingForexOrdersAsync(string? dealType = null, string? counterparty = null, string? transactionId = null, string? swapId = null, string? settlementDateSell = null, string? settlementDateBuy = null, string? buyCurrency = null, string? buyAmount = null, string? sellCurrency = null, string? sellAmount = null, string? dealDate = null, string? accountSell = null, string? accountBuy = null, string? dealerDeskId = null, string? unevenSwap = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

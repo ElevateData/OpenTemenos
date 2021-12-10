@@ -15,7 +15,7 @@ public class ShareValuesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareValueService
-            .PostSharevaluesByParentAsync(null, null, null, null, null, payload).Result;
+            .PostSharevaluesByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class ShareValuesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareValueService
-            .PostSharevaluesAsync(null, null, null, null, null, payload).Result;
+            .PostSharevaluesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class ShareValuesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransferAgentFundShareValueService
-            .PutSharevaluesAsync(null, null, null, null, null, payload).Result;
+            .PutSharevaluesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class ShareValuesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransferAgentFundShareValueService
-            .DeleteSharevaluesAsync(null, null, null, null, null, payload).Result;
+            .DeleteSharevaluesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class ShareValuesServiceTests : CredentialManagement
     public void GetShareValuesByInternalIdAsync()
     {
         var result = _client.TransferAgentFundShareValueService
-            .GetSharevaluesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetSharevaluesByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class ShareValuesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareValueService
-            .PutSharevaluesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutSharevaluesByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class ShareValuesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentFundShareValueService
-            .DeleteSharevaluesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteSharevaluesByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

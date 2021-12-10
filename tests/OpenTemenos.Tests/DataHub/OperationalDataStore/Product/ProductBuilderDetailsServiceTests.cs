@@ -18,14 +18,14 @@ public class ProductBuilderDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetProjectsAsync()
     {
-        var result = _client.ProductBuilderService.GetProjectsAsync(null, null, null).Result;
+        var result = _client.ProductBuilderService.GetProjectsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetProductConditionsAsync()
     {
-        var result = _client.ProductBuilderService.GetProductConditionsAsync(null, null).Result;
+        var result = _client.ProductBuilderService.GetProductConditionsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

@@ -15,7 +15,7 @@ public class CommDistributionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransferAgentDistributionCommissionService
-            .PostcommdistributionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostcommdistributionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class CommDistributionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TransferAgentDistributionCommissionService
-            .PostcommdistributionsAsync(null, null, null, null, null, payload).Result;
+            .PostcommdistributionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class CommDistributionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransferAgentDistributionCommissionService
-            .PutcommdistributionsAsync(null, null, null, null, null, payload).Result;
+            .PutcommdistributionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class CommDistributionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TransferAgentDistributionCommissionService
-            .DeletecommdistributionsAsync(null, null, null, null, null, payload).Result;
+            .DeletecommdistributionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class CommDistributionsServiceTests : CredentialManagement
     public void GetCommDistributionsByInternalIdAsync()
     {
         var result = _client.TransferAgentDistributionCommissionService
-            .GetcommdistributionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetcommdistributionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class CommDistributionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentDistributionCommissionService
-            .PutcommdistributionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutcommdistributionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class CommDistributionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentDistributionCommissionService
-            .DeletecommdistributionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletecommdistributionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

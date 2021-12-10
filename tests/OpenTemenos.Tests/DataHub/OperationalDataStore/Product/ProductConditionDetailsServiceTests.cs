@@ -11,21 +11,21 @@ public class ProductConditionDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetProtectionLimitConditionsAsync()
     {
-        var result = _client.ProductConditionService.GetProtectionLimitConditionsAsync(ProductId, null).Result;
+        var result = _client.ProductConditionService.GetProtectionLimitConditionsAsync(ProductId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetAvailabilityConditionsAsync()
     {
-        var result = _client.ProductConditionService.GetAvailabilityConditionsAsync(ProductId, null).Result;
+        var result = _client.ProductConditionService.GetAvailabilityConditionsAsync(ProductId).Result;
         Assert.IsNotNull(result.Data);
     }
 
     [TestMethod]
     public void GetLicensingConditionsAsync()
     {
-        var result = _client.ProductConditionService.GetLicensingConditionsAsync(ProductId, null).Result;
+        var result = _client.ProductConditionService.GetLicensingConditionsAsync(ProductId).Result;
         Assert.IsNotNull(result.Data);
     }
 }

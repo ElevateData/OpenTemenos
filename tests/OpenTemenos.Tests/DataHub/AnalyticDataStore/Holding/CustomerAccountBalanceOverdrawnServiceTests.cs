@@ -12,7 +12,7 @@ public class CustomerAccountBalanceOverdrawnServiceTests : CredentialManagement
     public void GetCustomerAccountBalanceOverdrawnAsync()
     {
         var result = _client.CustomerOverdrawnAccountBalanceService
-            .GetCustomerAccountBalanceOverdrawnAsync(null, null, null, null).Result;
+            .GetCustomerAccountBalanceOverdrawnAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

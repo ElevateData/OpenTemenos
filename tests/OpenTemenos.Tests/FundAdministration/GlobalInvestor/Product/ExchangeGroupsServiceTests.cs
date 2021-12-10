@@ -13,7 +13,7 @@ public class ExchangeGroupsServiceTests : CredentialManagement
     public void PostExchangeGroupByParentAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ExchangeGroupService.PostExchangeGroupAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ExchangeGroupService.PostExchangeGroupAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

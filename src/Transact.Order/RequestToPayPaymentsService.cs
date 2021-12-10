@@ -23,17 +23,6 @@ namespace Transact.Order.RequestToPayPayments
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IRequestToPayPaymentsService
     {
-        /// <summary>Initiate a RTP request</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PaymentRequestsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentRequestsResponse> CreatePaymentRequestsAsync(PaymentRequests payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Initiate a RTP request</summary>
         /// <param name="payload">body Payload</param>
@@ -44,25 +33,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PaymentRequestsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentRequestsResponse> CreatePaymentRequestsAsync(PaymentRequests payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve RTP Requests (Payer side)</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="requestorReference">Contains the reference of the requestor</param>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="endToEndReference">Indicates the end to end reference for the payment. This field can be provided by the person who instructs the payment and this flows through the lifecycle of the payment.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PayersListResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayersListResponse> GetPayersListAsync(string requestId, string? customerId, string? scheme, string? requestorReference, string? currentState, string? endToEndReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PaymentRequestsResponse> CreatePaymentRequestsAsync(PaymentRequests payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve RTP Requests (Payer side)</summary>
@@ -81,19 +52,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PayersListResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayersListResponse> GetPayersListAsync(string requestId, string? customerId, string? scheme, string? requestorReference, string? currentState, string? endToEndReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Accept the RTP request with full amount</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FullPaymentResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FullPaymentResponse> UpdateFullPaymentAsync(string requestId, FullPayment payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PayersListResponse> GetPayersListAsync(string requestId, string? customerId = null, string? scheme = null, string? requestorReference = null, string? currentState = null, string? endToEndReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Accept the RTP request with full amount</summary>
@@ -106,19 +65,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FullPaymentResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FullPaymentResponse> UpdateFullPaymentAsync(string requestId, FullPayment payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Accept the RTP request and pay partially</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PartialPaymentResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartialPaymentResponse> UpdatePartialPaymentAsync(string requestId, PartialPayment payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<FullPaymentResponse> UpdateFullPaymentAsync(string requestId, FullPayment payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Accept the RTP request and pay partially</summary>
@@ -131,19 +78,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PartialPaymentResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartialPaymentResponse> UpdatePartialPaymentAsync(string requestId, PartialPayment payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Decline a RTP request from Payee</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>DeclinePaymentResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeclinePaymentResponse> UpdateDeclinePaymentAsync(string requestId, DeclinePayment payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PartialPaymentResponse> UpdatePartialPaymentAsync(string requestId, PartialPayment payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Decline a RTP request from Payee</summary>
@@ -156,19 +91,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>DeclinePaymentResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeclinePaymentResponse> UpdateDeclinePaymentAsync(string requestId, DeclinePayment payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Send notes/additional information to Payee</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>NotesToRequestorResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NotesToRequestorResponse> UpdateNotesToRequestorAsync(string requestId, NotesToRequestor payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<DeclinePaymentResponse> UpdateDeclinePaymentAsync(string requestId, DeclinePayment payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Send notes/additional information to Payee</summary>
@@ -181,19 +104,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>NotesToRequestorResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NotesToRequestorResponse> UpdateNotesToRequestorAsync(string requestId, NotesToRequestor payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Modify the requested amount in the RTP request</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PaymentAmountResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentAmountResponse> UpdatePaymentAmountAsync(string requestId, PaymentAmount payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<NotesToRequestorResponse> UpdateNotesToRequestorAsync(string requestId, NotesToRequestor payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Modify the requested amount in the RTP request</summary>
@@ -206,19 +117,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PaymentAmountResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PaymentAmountResponse> UpdatePaymentAmountAsync(string requestId, PaymentAmount payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Decline the RTP request and block the Payee</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>DeclineAndBlockResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeclineAndBlockResponse> UpdateDeclineAndBlockAsync(string requestId, DeclineAndBlock payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PaymentAmountResponse> UpdatePaymentAmountAsync(string requestId, PaymentAmount payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Decline the RTP request and block the Payee</summary>
@@ -231,19 +130,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>DeclineAndBlockResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeclineAndBlockResponse> UpdateDeclineAndBlockAsync(string requestId, DeclineAndBlock payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Send notes / additional information to Payer</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>NotesToPayerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NotesToPayerResponse> UpdateNotesToPayerAsync(string requestId, NotesToPayer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<DeclineAndBlockResponse> UpdateDeclineAndBlockAsync(string requestId, DeclineAndBlock payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Send notes / additional information to Payer</summary>
@@ -256,19 +143,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>NotesToPayerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NotesToPayerResponse> UpdateNotesToPayerAsync(string requestId, NotesToPayer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Request extension of the RTP Expiry Date</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>DateExtensionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DateExtensionResponse> UpdateDateExtensionAsync(string requestId, DateExtension payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<NotesToPayerResponse> UpdateNotesToPayerAsync(string requestId, NotesToPayer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Request extension of the RTP Expiry Date</summary>
@@ -281,24 +156,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>DateExtensionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DateExtensionResponse> UpdateDateExtensionAsync(string requestId, DateExtension payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Payee's RTP requests awaiting RTP Expiry date extension approval</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="requestorReference">Contains the reference of the requestor</param>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>RequestorsDateExtensionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RequestorsDateExtensionResponse> GetRequestorsDateExtensionAsync(string requestId, string? customerId, string? scheme, string? requestorReference, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<DateExtensionResponse> UpdateDateExtensionAsync(string requestId, DateExtension payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Payee's RTP requests awaiting RTP Expiry date extension approval</summary>
@@ -316,24 +174,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>RequestorsDateExtensionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RequestorsDateExtensionResponse> GetRequestorsDateExtensionAsync(string requestId, string? customerId, string? scheme, string? requestorReference, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve RTP Requests (Payee side)</summary>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="endToEndReference">Indicates the end to end reference for the payment. This field can be provided by the person who instructs the payment and this flows through the lifecycle of the payment.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>RequestorsOutwardRequestResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RequestorsOutwardRequestResponse> GetRequestorsOutwardRequestAsync(string requestId, string? currentState, string? customerId, string? scheme, string? endToEndReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<RequestorsDateExtensionResponse> GetRequestorsDateExtensionAsync(string requestId, string? customerId = null, string? scheme = null, string? requestorReference = null, string? currentState = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve RTP Requests (Payee side)</summary>
@@ -351,23 +192,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>RequestorsOutwardRequestResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<RequestorsOutwardRequestResponse> GetRequestorsOutwardRequestAsync(string requestId, string? currentState, string? customerId, string? scheme, string? endToEndReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the list of RTP requests of payer</summary>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PayersStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayersStatusResponse> GetPayersStatusAsync(string currentState, string? customerId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<RequestorsOutwardRequestResponse> GetRequestorsOutwardRequestAsync(string requestId, string? currentState = null, string? customerId = null, string? scheme = null, string? endToEndReference = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the list of RTP requests of payer</summary>
@@ -384,23 +209,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PayersStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayersStatusResponse> GetPayersStatusAsync(string currentState, string? customerId, string? scheme, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retreive RTP Requests for which extension is granted</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PayerListWithExtensionGrantedResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayerListWithExtensionGrantedResponse> GetPayerListWithExtensionGrantedAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PayersStatusResponse> GetPayersStatusAsync(string currentState, string? customerId = null, string? scheme = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retreive RTP Requests for which extension is granted</summary>
@@ -417,19 +226,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PayerListWithExtensionGrantedResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayerListWithExtensionGrantedResponse> GetPayerListWithExtensionGrantedAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Approve the expiry date extension requested by the payer</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>GrantExtensionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GrantExtensionResponse> UpdateGrantExtensionAsync(string requestId, GrantExtension payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PayerListWithExtensionGrantedResponse> GetPayerListWithExtensionGrantedAsync(string requestId, string? customerId = null, string? scheme = null, string? currentState = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Approve the expiry date extension requested by the payer</summary>
@@ -442,23 +239,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>GrantExtensionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GrantExtensionResponse> UpdateGrantExtensionAsync(string requestId, GrantExtension payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retreive RTP requests for which the extension is declined</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PayersListWithExtensionDeclinedResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayersListWithExtensionDeclinedResponse> GetPayersListWithExtensionDeclinedAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<GrantExtensionResponse> UpdateGrantExtensionAsync(string requestId, GrantExtension payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retreive RTP requests for which the extension is declined</summary>
@@ -475,19 +256,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PayersListWithExtensionDeclinedResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayersListWithExtensionDeclinedResponse> GetPayersListWithExtensionDeclinedAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Decline the expiry date extension requested by payer</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>DeclineExtensionResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeclineExtensionResponse> UpdateDeclineExtensionAsync(string requestId, DeclineExtension payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PayersListWithExtensionDeclinedResponse> GetPayersListWithExtensionDeclinedAsync(string requestId, string? customerId = null, string? scheme = null, string? currentState = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Decline the expiry date extension requested by payer</summary>
@@ -500,23 +269,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>DeclineExtensionResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeclineExtensionResponse> UpdateDeclineExtensionAsync(string requestId, DeclineExtension payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>RTP Requests sent which are pending to be acknowledged by Payee as payment received</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ApiPendingAckResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApiPendingAckResponse> GetApiPendingAckAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<DeclineExtensionResponse> UpdateDeclineExtensionAsync(string requestId, DeclineExtension payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>RTP Requests sent which are pending to be acknowledged by Payee as payment received</summary>
@@ -533,19 +286,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ApiPendingAckResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ApiPendingAckResponse> GetApiPendingAckAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Enables the Payee to send full acknowledgement to payer when payer has paid full amount and to send partial acknowledgement to payer when payer has paid partial amount</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BillerAcknowledgementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BillerAcknowledgementsResponse> UpdateBillerAcknowledgementsAsync(string requestId, BillerAcknowledgements payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ApiPendingAckResponse> GetApiPendingAckAsync(string requestId, string? customerId = null, string? scheme = null, string? currentState = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Enables the Payee to send full acknowledgement to payer when payer has paid full amount and to send partial acknowledgement to payer when payer has paid partial amount</summary>
@@ -558,23 +299,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BillerAcknowledgementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BillerAcknowledgementsResponse> UpdateBillerAcknowledgementsAsync(string requestId, BillerAcknowledgements payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieve the RTP requests in error status</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="scheme">Represents the scheme (a synonym for the National ID type) under which the National ID is defined</param>
-        /// <param name="currentState">Contains the current state of the transaction</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>OutwardErrorsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutwardErrorsResponse> GetOutwardErrorsAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<BillerAcknowledgementsResponse> UpdateBillerAcknowledgementsAsync(string requestId, BillerAcknowledgements payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieve the RTP requests in error status</summary>
@@ -591,18 +316,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>OutwardErrorsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OutwardErrorsResponse> GetOutwardErrorsAsync(string requestId, string? customerId, string? scheme, string? currentState, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>UK RTP scheme request initiation (RSP - RSP)</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PayUKPaymentRequestsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayUKPaymentRequestsResponse> CreatePayUKPaymentRequestsAsync(PayUKPaymentRequests payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<OutwardErrorsResponse> GetOutwardErrorsAsync(string requestId, string? customerId = null, string? scheme = null, string? currentState = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>UK RTP scheme request initiation (RSP - RSP)</summary>
@@ -614,19 +328,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PayUKPaymentRequestsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayUKPaymentRequestsResponse> CreatePayUKPaymentRequestsAsync(PayUKPaymentRequests payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>UK RTP scheme message exchanges between Biller and Payer (RSP - RSP)</summary>
-        /// <param name="requestId">The guarantees issuance id initiated by internet banking</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PayUKPaymentForRepositoryResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayUKPaymentRequestsResponse> AmendPayUKPaymentForRepositoryAsync(string requestId, PayUKPaymentRequests payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PayUKPaymentRequestsResponse> CreatePayUKPaymentRequestsAsync(PayUKPaymentRequests payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>UK RTP scheme message exchanges between Biller and Payer (RSP - RSP)</summary>
@@ -639,7 +341,7 @@ namespace Transact.Order.RequestToPayPayments
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PayUKPaymentForRepositoryResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PayUKPaymentRequestsResponse> AmendPayUKPaymentForRepositoryAsync(string requestId, PayUKPaymentRequests payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PayUKPaymentRequestsResponse> AmendPayUKPaymentForRepositoryAsync(string requestId, PayUKPaymentRequests payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

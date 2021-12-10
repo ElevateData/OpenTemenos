@@ -15,7 +15,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FrequentExceptionService
-            .PostFrequencyExceptionsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostFrequencyExceptionsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FrequentExceptionService
-            .PostFrequencyExceptionsAsync(null, null, null, null, null, payload).Result;
+            .PostFrequencyExceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -34,7 +34,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
     public void PutFrequencyExceptionsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FrequentExceptionService.PutFrequencyExceptionsAsync(null, null, null, null, null, payload)
+        var result = _client.FrequentExceptionService.PutFrequencyExceptionsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FrequentExceptionService
-            .DeleteFrequencyExceptionsAsync(null, null, null, null, null, payload).Result;
+            .DeleteFrequencyExceptionsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
     public void GetFrequencyExceptionsByInternalIdAsync()
     {
         var result = _client.FrequentExceptionService
-            .GetFrequencyExceptionsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetFrequencyExceptionsByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FrequentExceptionService
-            .PutFrequencyExceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFrequencyExceptionsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class FrequencyExceptionsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FrequentExceptionService
-            .DeleteFrequencyExceptionsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFrequencyExceptionsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

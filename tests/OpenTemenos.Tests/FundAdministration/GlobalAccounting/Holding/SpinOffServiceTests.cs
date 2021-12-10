@@ -14,7 +14,7 @@ public class SpinOffServiceTests : CredentialManagement
     public void CreateSpinOffAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SpinOffService.CreateSpinOffAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SpinOffService.CreateSpinOffAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

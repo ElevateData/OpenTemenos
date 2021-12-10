@@ -23,20 +23,13 @@ namespace DataHub.AnalyticDataStore.Holding.ProductTransactionMetrics
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IProductTransactionMetricsService
     {
-        /// <summary>Retrieves the number of transactions and the total amount of those transactions grouped by the product hierarchy for a specific business date or for the current date</summary>
-        /// <param name="businessDate">Business snapshot date of the source data</param>
-        /// <param name="useCurrentDate">Current Date flag for the Business date</param>
-        /// <returns>Product TransactionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductTransactionMetricsResponse> GetProductTransactionMetricsAsync(string? businessDate, string? useCurrentDate);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the number of transactions and the total amount of those transactions grouped by the product hierarchy for a specific business date or for the current date</summary>
         /// <param name="businessDate">Business snapshot date of the source data</param>
         /// <param name="useCurrentDate">Current Date flag for the Business date</param>
         /// <returns>Product TransactionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetProductTransactionMetricsResponse> GetProductTransactionMetricsAsync(string? businessDate, string? useCurrentDate, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetProductTransactionMetricsResponse> GetProductTransactionMetricsAsync(string? businessDate = null, string? useCurrentDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

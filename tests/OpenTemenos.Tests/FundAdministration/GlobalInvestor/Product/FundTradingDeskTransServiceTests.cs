@@ -15,7 +15,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.FundTradingDeskService
-            .PostFundtradingdesktransByParentAsync(null, null, null, null, null, payload).Result;
+            .PostFundtradingdesktransByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
     public void PostFundTradingDeskTransAsync()
     {
         var payload = new _0Payload();
-        var result = _client.FundTradingDeskService.PostFundtradingdesktransAsync(null, null, null, null, null, payload)
+        var result = _client.FundTradingDeskService.PostFundtradingdesktransAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
     public void PutFundTradingDeskTransAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.FundTradingDeskService.PutFundtradingdesktransAsync(null, null, null, null, null, payload)
+        var result = _client.FundTradingDeskService.PutFundtradingdesktransAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FundTradingDeskService
-            .DeleteFundtradingdesktransAsync(null, null, null, null, null, payload).Result;
+            .DeleteFundtradingdesktransAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
     public void GetFundTradingDeskTransByInternalIdAsync()
     {
         var result = _client.FundTradingDeskService
-            .GetFundtradingdesktransByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetFundtradingdesktransByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundTradingDeskService
-            .PutFundtradingdesktransByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutFundtradingdesktransByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class FundTradingDeskTransServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.FundTradingDeskService
-            .DeleteFundtradingdesktransByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteFundtradingdesktransByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

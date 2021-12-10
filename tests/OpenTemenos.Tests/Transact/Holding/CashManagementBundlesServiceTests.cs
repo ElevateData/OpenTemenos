@@ -14,9 +14,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCashPoolExceptionLogAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetCashPoolExceptionLogAsync(BundleId, null, null,
-                null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetCashPoolExceptionLogAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -25,8 +23,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBundleAccountsAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetBundleAccountsAsync(BundleId, null, null, null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetBundleAccountsAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -35,9 +32,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBundleHistoryDetailsAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetBundleHistoryDetailsAsync(BundleId, null, null,
-                null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetBundleHistoryDetailsAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -46,9 +41,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBundleArrangementsAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetBundleArrangementsAsync(CustomerId, null, null,
-                null,
-                null, null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetBundleArrangementsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -57,8 +50,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBundleBalancesAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetBundleBalancesAsync(BundleId, null, null, null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetBundleBalancesAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -67,9 +59,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetCustomerBundleAccountsAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetCustomerBundleAccountsAsync(CustomerId, null,
-                null, null,
-                null, null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetCustomerBundleAccountsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -78,9 +68,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetDraftArrangementsAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetDraftArrangementsAsync(CustomerId, null, null,
-                null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetDraftArrangementsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -89,8 +77,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetDraftBundleListAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetDraftBundleListAsync(BundleId, null, null, null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetDraftBundleListAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -99,9 +86,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetNonBalanceNettingAccountsAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetNonBalanceNettingAccountsAsync(BundleId, null,
-                null, null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetNonBalanceNettingAccountsAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -110,9 +95,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBundleAccountBalancesAsync()
     {
-        var result = _client.CashManagementBundleArrangementService.GetBundleAccountBalancesAsync(AccountId, null, null,
-                null,
-                null, null, null, null, null)
+        var result = _client.CashManagementBundleArrangementService.GetBundleAccountBalancesAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -122,8 +105,7 @@ public class CashManagementBundlesServiceTests : CredentialManagement
     public void GetBalanceInPreferredCurrencyAsync()
     {
         var result = _client.CashManagementBundleArrangementService.GetBalanceInPreferredCurrencyAsync(BundleId,
-                CurrencyId, null, null, null,
-                null, null, null, null, null, null, null)
+                CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

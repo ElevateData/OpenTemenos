@@ -13,7 +13,7 @@ public class RoundingRuleServiceTests : CredentialManagement
     [TestMethod]
     public void GetRoundingRuleDetailsAsync()
     {
-        var result = _client.RoundingRuleService.GetRoundingRuleDetailsAsync(RuleId, null, null, null, null).Result;
+        var result = _client.RoundingRuleService.GetRoundingRuleDetailsAsync(RuleId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class RoundingRuleServiceTests : CredentialManagement
         var ruleId = string.Empty;
         var payload = new RoundingRuleDetails();
         var result = _client.RoundingRuleService
-            .CreateRoundingRuleDetailsAsync(ruleId, payload, null, null, null, null, null).Result;
+            .CreateRoundingRuleDetailsAsync(ruleId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -35,7 +35,7 @@ public class RoundingRuleServiceTests : CredentialManagement
         var ruleId = string.Empty;
         var payload = new RoundingRuleDetails();
         var result = _client.RoundingRuleService
-            .UpdateRoundingRuleDetailsAsync(ruleId, payload, null, null, null, null, null).Result;
+            .UpdateRoundingRuleDetailsAsync(ruleId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -46,7 +46,7 @@ public class RoundingRuleServiceTests : CredentialManagement
         var ruleId = string.Empty;
         var payload = new RoundingRuleDetailsDelete();
         var result = _client.RoundingRuleService
-            .DeleteRoundingRuleDetailsAsync(ruleId, payload, null, null, null, null, null).Result;
+            .DeleteRoundingRuleDetailsAsync(ruleId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

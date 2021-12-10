@@ -15,7 +15,7 @@ public class FloatOrRateFactorServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.FloatingRateOrFactorLoadService
-            .CreateFloaterRateOrFactorAsync(null, null, null, null, null, payload).Result;
+            .CreateFloaterRateOrFactorAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

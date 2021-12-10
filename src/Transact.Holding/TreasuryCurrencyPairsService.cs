@@ -23,27 +23,6 @@ namespace Transact.Holding.TreasuryCurrencyPairs
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ITreasuryCurrencyPairsService
     {
-        /// <summary>Retrieves position information for the given currency pair</summary>
-        /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
-        /// <param name="companyIdQuery">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="positionType">Identifies the position type. Possible values are CAS(cash position), GAP(Interest mismatch position), FXP(Foreign exchange position)</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="buyDate">Value date of the buy currency.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="positionPeriod">Identifies the period for which position is retrieved. Possible values are SPOT, FORWARD</param>
-        /// <param name="counterpartyName">The counterparty name for the forex deal.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyPairPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairPositionsResponse> GetCurrencyPairPositionsAsync(string currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, System.DateTimeOffset? buyDate, System.DateTimeOffset? dealDate, string? positionPeriod, string? counterpartyName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves position information for the given currency pair</summary>
         /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
@@ -64,33 +43,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyPairPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairPositionsResponse> GetCurrencyPairPositionsAsync(string currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, System.DateTimeOffset? buyDate, System.DateTimeOffset? dealDate, string? positionPeriod, string? counterpartyName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the position details for the given currency pair and calender</summary>
-        /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
-        /// <param name="companyIdQuery">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="positionType">Identifies the position type. Possible values are CAS(cash position), GAP(Interest mismatch position), FXP(Foreign exchange position)</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="buyDate">Value date of the buy currency.</param>
-        /// <param name="buyDateFrom">Contains the from value date in a range while retrieving the position.</param>
-        /// <param name="buyDateTo">Contains the to value date in a range while retrieving the position.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="dealDateFrom">Date on which the deal was agreed.</param>
-        /// <param name="dealDateTo">Date on which the deal was agreed.</param>
-        /// <param name="positionPeriod">Identifies the period for which position is retrieved. Possible values are SPOT, FORWARD</param>
-        /// <param name="counterpartyName">The counterparty name for the forex deal.</param>
-        /// <param name="calendar">Identifies the calendar to be used for the spreading of different position data into different time buckets. Ex: CAL-Standard calendar and DE1-Deutsche calendar</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyPairCalendarPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairCalendarPositionsResponse> GetCurrencyPairCalendarPositionsAsync(string currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, string? buyDate, string? buyDateFrom, string? buyDateTo, string? dealDate, string? dealDateFrom, string? dealDateTo, string? positionPeriod, string? counterpartyName, string? calendar, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairPositionsResponse> GetCurrencyPairPositionsAsync(string currencyPair, string? companyIdQuery = null, string? positionType = null, string? dealerDesk = null, System.DateTimeOffset? buyDate = null, System.DateTimeOffset? dealDate = null, string? positionPeriod = null, string? counterpartyName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the position details for the given currency pair and calender</summary>
@@ -117,27 +70,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyPairCalendarPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairCalendarPositionsResponse> GetCurrencyPairCalendarPositionsAsync(string currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, string? buyDate, string? buyDateFrom, string? buyDateTo, string? dealDate, string? dealDateFrom, string? dealDateTo, string? positionPeriod, string? counterpartyName, string? calendar, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the live market rate from a given rate feed</summary>
-        /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
-        /// <param name="rateSource">The market rates source in general. In the case of currency rate, whether rate is to be sourced from  currency table (front office) or from market rates table (back office).</param>
-        /// <param name="rateProvider">The market rate provider, e.g. Bloomberg, Reuters, etc.</param>
-        /// <param name="assetType">Type of the asset, e.g. FX, equity, etc.</param>
-        /// <param name="dateOrPeriod">Refers to a date or a given period.</param>
-        /// <param name="rateIndicator">Market rate indicator as per the asset class. For currency, it  will be buy rate(B) , sell rate(S) or mid rate(M).</param>
-        /// <param name="interpolationMethod">Identifies whether forward exchange rates are to be interpolated or not. Possible values are 'Blank' - Rate will be interpolated '1' - Takes the next available rate '2' - Takes the closest rate</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyPairMarketRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairMarketRatesResponse> GetCurrencyPairMarketRatesAsync(string currencyPair, string? rateSource, string? rateProvider, string? assetType, string? dateOrPeriod, string? rateIndicator, string? interpolationMethod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairCalendarPositionsResponse> GetCurrencyPairCalendarPositionsAsync(string currencyPair, string? companyIdQuery = null, string? positionType = null, string? dealerDesk = null, string? buyDate = null, string? buyDateFrom = null, string? buyDateTo = null, string? dealDate = null, string? dealDateFrom = null, string? dealDateTo = null, string? positionPeriod = null, string? counterpartyName = null, string? calendar = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the live market rate from a given rate feed</summary>
@@ -158,32 +91,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyPairMarketRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairMarketRatesResponse> GetCurrencyPairMarketRatesAsync(string currencyPair, string? rateSource, string? rateProvider, string? assetType, string? dateOrPeriod, string? rateIndicator, string? interpolationMethod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves position information for the currency pair outstanding deals</summary>
-        /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
-        /// <param name="companyIdQuery">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="positionType">Identifies the position type. Possible values are CAS(cash position), GAP(Interest mismatch position), FXP(Foreign exchange position)</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="buyDate">Value date of the buy currency.</param>
-        /// <param name="buyDateFrom">Contains the from value date in a range while retrieving the position.</param>
-        /// <param name="buyDateTo">Contains the to value date in a range while retrieving the position.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="dealDateFrom">Date on which the deal was agreed.</param>
-        /// <param name="dealDateTo">Date on which the deal was agreed.</param>
-        /// <param name="positionPeriod">Identifies the period for which position is retrieved. Possible values are SPOT, FORWARD</param>
-        /// <param name="counterpartyName">The counterparty name for the forex deal.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AllCurrencyPairPositionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairPositionsResponse> GetAllCurrencyPairPositionsAsync(string? currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, System.DateTimeOffset? buyDate, string? buyDateFrom, string? buyDateTo, System.DateTimeOffset? dealDate, string? dealDateFrom, string? dealDateTo, string? positionPeriod, string? counterpartyName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairMarketRatesResponse> GetCurrencyPairMarketRatesAsync(string currencyPair, string? rateSource = null, string? rateProvider = null, string? assetType = null, string? dateOrPeriod = null, string? rateIndicator = null, string? interpolationMethod = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves position information for the currency pair outstanding deals</summary>
@@ -209,32 +117,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AllCurrencyPairPositionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairPositionsResponse> GetAllCurrencyPairPositionsAsync(string? currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, System.DateTimeOffset? buyDate, string? buyDateFrom, string? buyDateTo, System.DateTimeOffset? dealDate, string? dealDateFrom, string? dealDateTo, string? positionPeriod, string? counterpartyName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the underlying deal responsible for the positions in the given currency pair</summary>
-        /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
-        /// <param name="companyIdQuery">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="positionType">Identifies the position type. Possible values are CAS(cash position), GAP(Interest mismatch position), FXP(Foreign exchange position)</param>
-        /// <param name="dealerDesk">The dealer/desk responsible for monitoring and managing the currency positions.</param>
-        /// <param name="buyDate">Value date of the buy currency.</param>
-        /// <param name="buyDateFrom">Contains the from value date in a range while retrieving the position.</param>
-        /// <param name="buyDateTo">Contains the to value date in a range while retrieving the position.</param>
-        /// <param name="dealDate">Date on which the deal was agreed.</param>
-        /// <param name="dealDateFrom">Date on which the deal was agreed.</param>
-        /// <param name="dealDateTo">Date on which the deal was agreed.</param>
-        /// <param name="positionPeriod">Identifies the period for which position is retrieved. Possible values are SPOT, FORWARD</param>
-        /// <param name="counterpartyName">The counterparty name for the forex deal.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyPairPositionDealsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairPositionDealsResponse> GetCurrencyPairPositionDealsAsync(string currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, string? buyDate, string? buyDateFrom, string? buyDateTo, string? dealDate, string? dealDateFrom, string? dealDateTo, string? positionPeriod, string? counterpartyName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairPositionsResponse> GetAllCurrencyPairPositionsAsync(string? currencyPair = null, string? companyIdQuery = null, string? positionType = null, string? dealerDesk = null, System.DateTimeOffset? buyDate = null, string? buyDateFrom = null, string? buyDateTo = null, System.DateTimeOffset? dealDate = null, string? dealDateFrom = null, string? dealDateTo = null, string? positionPeriod = null, string? counterpartyName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the underlying deal responsible for the positions in the given currency pair</summary>
@@ -260,20 +143,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyPairPositionDealsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairPositionDealsResponse> GetCurrencyPairPositionDealsAsync(string currencyPair, string? companyIdQuery, string? positionType, string? dealerDesk, string? buyDate, string? buyDateFrom, string? buyDateTo, string? dealDate, string? dealDateFrom, string? dealDateTo, string? positionPeriod, string? counterpartyName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves all the currency pairs</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyPairsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairsResponse> GetCurrencyPairsAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairPositionDealsResponse> GetCurrencyPairPositionDealsAsync(string currencyPair, string? companyIdQuery = null, string? positionType = null, string? dealerDesk = null, string? buyDate = null, string? buyDateFrom = null, string? buyDateTo = null, string? dealDate = null, string? dealDateFrom = null, string? dealDateTo = null, string? positionPeriod = null, string? counterpartyName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves all the currency pairs</summary>
@@ -287,21 +157,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyPairsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairsResponse> GetCurrencyPairsAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the given currency pair</summary>
-        /// <param name="currencyPair">Identifies the currency pair. Ex: USDCHF, USDGBP</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CurrencyPairResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairsResponse> GetCurrencyPairAsync(string currencyPair, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairsResponse> GetCurrencyPairsAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the given currency pair</summary>
@@ -316,24 +172,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CurrencyPairResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CurrencyPairsResponse> GetCurrencyPairAsync(string currencyPair, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the exchange rates to be used for portfolio valuation.</summary>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="buyCurrency">ISO Currency code for the bought currency.</param>
-        /// <param name="sellCurrency">ISO Currency code for the sold currency.</param>
-        /// <param name="dateOrPeriod">Refers to a date or a given period.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>FxPortfolioValuationRatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FxPortfolioValuationRatesResponse> GetFxPortfolioValuationRatesAsync(string? portfolioId, string? buyCurrency, string? sellCurrency, string? dateOrPeriod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CurrencyPairsResponse> GetCurrencyPairAsync(string currencyPair, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the exchange rates to be used for portfolio valuation.</summary>
@@ -351,7 +190,7 @@ namespace Transact.Holding.TreasuryCurrencyPairs
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>FxPortfolioValuationRatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FxPortfolioValuationRatesResponse> GetFxPortfolioValuationRatesAsync(string? portfolioId, string? buyCurrency, string? sellCurrency, string? dateOrPeriod, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<FxPortfolioValuationRatesResponse> GetFxPortfolioValuationRatesAsync(string? portfolioId = null, string? buyCurrency = null, string? sellCurrency = null, string? dateOrPeriod = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

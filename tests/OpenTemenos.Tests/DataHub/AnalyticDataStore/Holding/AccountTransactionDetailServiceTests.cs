@@ -11,7 +11,7 @@ public class AccountTransactionDetailsServiceTests : CredentialManagement
     public void GetAccountTransactionDetailsAsync()
     {
         var result = _client.AccountTransactionDetailService
-            .GetAccountTransactionDetailsAsync(null, null)
+            .GetAccountTransactionDetailsAsync()
             .Result;
         Assert.IsNotNull(result.Data);
     }

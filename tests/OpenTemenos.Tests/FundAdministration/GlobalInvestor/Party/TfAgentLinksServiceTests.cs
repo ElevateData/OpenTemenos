@@ -15,7 +15,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TrailerFreeAgentLinkService
-            .PostTfagentlinksByParentAsync(null, null, null, null, null, payload).Result;
+            .PostTfagentlinksByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
     public void PostTfAgentLinksAsync()
     {
         var payload = new _0Payload();
-        var result = _client.TrailerFreeAgentLinkService.PostTfagentlinksAsync(null, null, null, null, null, payload)
+        var result = _client.TrailerFreeAgentLinkService.PostTfagentlinksAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
     public void PutTfAgentLinksAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TrailerFreeAgentLinkService.PutTfagentlinksAsync(null, null, null, null, null, payload)
+        var result = _client.TrailerFreeAgentLinkService.PutTfagentlinksAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -44,7 +44,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
     public void DeleteTfAgentLinksAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TrailerFreeAgentLinkService.DeleteTfagentlinksAsync(null, null, null, null, null, payload)
+        var result = _client.TrailerFreeAgentLinkService.DeleteTfagentlinksAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -53,7 +53,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
     public void GetTfAgentLinksByInternalIdAsync()
     {
         var result = _client.TrailerFreeAgentLinkService
-            .GetTfagentlinksByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetTfagentlinksByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TrailerFreeAgentLinkService
-            .PutTfagentlinksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutTfagentlinksByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class TfAgentLinksServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TrailerFreeAgentLinkService
-            .DeleteTfagentlinksByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteTfagentlinksByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

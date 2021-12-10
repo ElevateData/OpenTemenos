@@ -23,18 +23,12 @@ namespace DataHub.OperationalDataStore.Reference.Countries
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICountriesService
     {
-        /// <summary>Retrieves the country informations such as country Id, country name, short name of the country</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getCountriesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCountriesResponse> GetCountriesAsync(string? recordId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the country informations such as country Id, country name, short name of the country</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getCountriesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCountriesResponse> GetCountriesAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCountriesResponse> GetCountriesAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -23,16 +23,11 @@ namespace DataHub.OperationalDataStore.Holding.Portfolios
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IPortfoliosService
     {
-        /// <summary>Retrieves the portfolio informations such as portfolio Id, security account title, account officer, investment policy, management regime, valuation currency, valuation amount, margin value</summary>
-        /// <returns>getPortfoliosResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPortfoliosResponse> GetPortfoliosAsync();
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the portfolio informations such as portfolio Id, security account title, account officer, investment policy, management regime, valuation currency, valuation amount, margin value</summary>
         /// <returns>getPortfoliosResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetPortfoliosResponse> GetPortfoliosAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetPortfoliosResponse> GetPortfoliosAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

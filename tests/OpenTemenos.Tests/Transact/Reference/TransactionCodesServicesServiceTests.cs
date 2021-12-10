@@ -13,7 +13,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     public void GetTransactionCodeAsync()
     {
         var result = _client.TransactionCodesServicesService
-            .GetTransactionCodeAsync(TransactionCode, null, null, null, null).Result;
+            .GetTransactionCodeAsync(TransactionCode).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
     }
@@ -25,7 +25,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
         var result = _client.TransactionCodesServicesService
-            .CreateTransactionCodeAsync(transactionCode, payload, null, null, null, null, null).Result;
+            .CreateTransactionCodeAsync(transactionCode, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -36,7 +36,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
         var transactionCode = string.Empty;
         var payload = new TransactionCode();
         var result = _client.TransactionCodesServicesService
-            .UpdateTransactionCodeAsync(transactionCode, payload, null, null, null, null, null).Result;
+            .UpdateTransactionCodeAsync(transactionCode, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -44,7 +44,7 @@ public class TransactionCodesServicesServiceTests : CredentialManagement
     public void GetTransactionCodeListAsync()
     {
         var result = _client.TransactionCodesServicesService
-            .GetTransactionCodeListAsync(null, null, null, null, null, null, null, null, null).Result;
+            .GetTransactionCodeListAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

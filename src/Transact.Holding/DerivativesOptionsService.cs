@@ -23,22 +23,6 @@ namespace Transact.Holding.DerivativesOptions
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IDerivativesOptionsService
     {
-        /// <summary>Retrieves sell option trades</summary>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="contractId">The identifier of the contract</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="strikePrice">The price at which the option holder has the right to buy (Call Options) or sell (Put Options) the underlying instrument, or to cash-settle the option if appropriate</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="optionStyle">The type of settlement rule that should be applied on the option. AMERICAN: An option that may be exercised at any time prior to its expiry date. EUROPEAN: An option that may only be exercised on its expiry date.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>SellOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SellOptionTradesResponse> GetSellOptionTradesAsync(string? portfolioId, string? contractId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? currencyId, string? optionStyle, string? referenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves sell option trades</summary>
         /// <param name="portfolioId">Id of the portfolio or security account</param>
@@ -54,14 +38,7 @@ namespace Transact.Holding.DerivativesOptions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>SellOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SellOptionTradesResponse> GetSellOptionTradesAsync(string? portfolioId, string? contractId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? currencyId, string? optionStyle, string? referenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates manual assign contract</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>ManualAssignOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ManualAssignOptionTradesResponse> CreateManualAssignOptionTradesAsync(ManualAssignOptionTrades payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SellOptionTradesResponse> GetSellOptionTradesAsync(string? portfolioId = null, string? contractId = null, string? maturityDate = null, string? strikePrice = null, string? callOrPut = null, string? tradeCurrency = null, string? currencyId = null, string? optionStyle = null, string? referenceId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates manual assign contract</summary>
@@ -69,22 +46,7 @@ namespace Transact.Holding.DerivativesOptions
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>ManualAssignOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ManualAssignOptionTradesResponse> CreateManualAssignOptionTradesAsync(ManualAssignOptionTrades payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves buy option trades</summary>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="strikePrice">The price at which the option holder has the right to buy (Call Options) or sell (Put Options) the underlying instrument, or to cash-settle the option if appropriate</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="optionStyle">The type of settlement rule that should be applied on the option. AMERICAN: An option that may be exercised at any time prior to its expiry date. EUROPEAN: An option that may only be exercised on its expiry date.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>BuyOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BuyOptionTradesResponse> GetBuyOptionTradesAsync(string? portfolioId, string? contactId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? currencyId, string? optionStyle, string? referenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ManualAssignOptionTradesResponse> CreateManualAssignOptionTradesAsync(ManualAssignOptionTrades payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves buy option trades</summary>
@@ -100,14 +62,7 @@ namespace Transact.Holding.DerivativesOptions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>BuyOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BuyOptionTradesResponse> GetBuyOptionTradesAsync(string? portfolioId, string? contactId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? currencyId, string? optionStyle, string? referenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates manual exercise contract</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>ManualExerciseOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ManualExerciseOptionTradesResponse> CreateManualExerciseOptionTradesAsync(ManualExerciseOptionTrades payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<BuyOptionTradesResponse> GetBuyOptionTradesAsync(string? portfolioId = null, string? contactId = null, string? maturityDate = null, string? strikePrice = null, string? callOrPut = null, string? tradeCurrency = null, string? currencyId = null, string? optionStyle = null, string? referenceId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates manual exercise contract</summary>
@@ -115,22 +70,7 @@ namespace Transact.Holding.DerivativesOptions
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>ManualExerciseOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ManualExerciseOptionTradesResponse> CreateManualExerciseOptionTradesAsync(ManualExerciseOptionTrades payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves option trades</summary>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="maturityDate">Indicates maturity date of the contract</param>
-        /// <param name="strikePrice">The price at which the option holder has the right to buy (Call Options) or sell (Put Options) the underlying instrument, or to cash-settle the option if appropriate</param>
-        /// <param name="callOrPut">Indicates whether the transaction is a call or put.  Allowed values: - CALL  - PUT</param>
-        /// <param name="tradeCurrency">The trade currency is the settlement currency for the trade</param>
-        /// <param name="currencyId">Identifier of the currency. This is the 3-letter ISO 4217 code of the currency.</param>
-        /// <param name="optionStyle">The type of settlement rule that should be applied on the option. AMERICAN: An option that may be exercised at any time prior to its expiry date. EUROPEAN: An option that may only be exercised on its expiry date.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <returns>ActiveOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ActiveOptionTradesResponse> GetActiveOptionTradesAsync(string? portfolioId, string? contactId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? currencyId, string? optionStyle, string? referenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ManualExerciseOptionTradesResponse> CreateManualExerciseOptionTradesAsync(ManualExerciseOptionTrades payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves option trades</summary>
@@ -146,14 +86,7 @@ namespace Transact.Holding.DerivativesOptions
         /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
         /// <returns>ActiveOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ActiveOptionTradesResponse> GetActiveOptionTradesAsync(string? portfolioId, string? contactId, string? maturityDate, string? strikePrice, string? callOrPut, string? tradeCurrency, string? currencyId, string? optionStyle, string? referenceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates manual expire contract</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>ManualExpireOptionTradesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ManualExpireOptionTradesResponse> CreateManualExpireOptionTradesAsync(ManualExpireOptionTrades payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<ActiveOptionTradesResponse> GetActiveOptionTradesAsync(string? portfolioId = null, string? contactId = null, string? maturityDate = null, string? strikePrice = null, string? callOrPut = null, string? tradeCurrency = null, string? currencyId = null, string? optionStyle = null, string? referenceId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates manual expire contract</summary>
@@ -161,7 +94,7 @@ namespace Transact.Holding.DerivativesOptions
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>ManualExpireOptionTradesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ManualExpireOptionTradesResponse> CreateManualExpireOptionTradesAsync(ManualExpireOptionTrades payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<ManualExpireOptionTradesResponse> CreateManualExpireOptionTradesAsync(ManualExpireOptionTrades payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

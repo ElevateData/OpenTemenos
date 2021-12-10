@@ -15,7 +15,7 @@ public class DepositsServiceTests : CredentialManagement
     public void GetDepositDetailsAsync()
     {
         var result = _client.DepositService
-            .GetDepositDetailsAsync(DepositId, null, null, null, null, null, null, null, null, null)
+            .GetDepositDetailsAsync(DepositId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

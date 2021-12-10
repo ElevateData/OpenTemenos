@@ -15,7 +15,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.TaxResidenceDocumentService
-            .PostTaxIdDocumentsByParentAsync(null, null, null, null, null, payload).Result;
+            .PostTaxIdDocumentsByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -24,7 +24,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
     public void PostTaxIdDocumentsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.TaxResidenceDocumentService.PostTaxIdDocumentsAsync(null, null, null, null, null, payload)
+        var result = _client.TaxResidenceDocumentService.PostTaxIdDocumentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -34,7 +34,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
     public void PutTaxIdDocumentsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TaxResidenceDocumentService.PutTaxIdDocumentsAsync(null, null, null, null, null, payload)
+        var result = _client.TaxResidenceDocumentService.PutTaxIdDocumentsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.TaxResidenceDocumentService
-            .DeleteTaxIdDocumentsAsync(null, null, null, null, null, payload).Result;
+            .DeleteTaxIdDocumentsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
     public void GetTaxIdDocumentsByInternalIdAsync()
     {
         var result = _client.TaxResidenceDocumentService
-            .GetTaxIdDocumentsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetTaxIdDocumentsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TaxResidenceDocumentService
-            .PutTaxIdDocumentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutTaxIdDocumentsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class TaxIdDocumentsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TaxResidenceDocumentService
-            .DeleteTaxIdDocumentsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteTaxIdDocumentsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

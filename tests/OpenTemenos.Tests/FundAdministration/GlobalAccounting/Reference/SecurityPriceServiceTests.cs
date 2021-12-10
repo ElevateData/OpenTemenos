@@ -13,7 +13,7 @@ public class SecurityPriceServiceTests : CredentialManagement
     public void CreateSecurityPriceAsync()
     {
         var body = new _0BULKPayload();
-        var result = _client.SecurityPriceService.CreateSecurityPriceAsync(null, null, null, null, null, body).Result;
+        var result = _client.SecurityPriceService.CreateSecurityPriceAsync(body).Result;
         Assert.IsNotNull(result.Body);
     }
 }

@@ -23,14 +23,6 @@ namespace DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICorporateLendingProductBalancesService
     {
-        /// <summary>Retrieves the corporate lending product balances</summary>
-        /// <param name="useCurrentDate">Current Date flag for the Business date</param>
-        /// <param name="businessDate">Business snapshot date of the source data</param>
-        /// <param name="accountClass">Indicates if account is commercial; retail or other</param>
-        /// <returns>Coporate Lending productsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCorporateLendingProductBalancesResponse> GetCorporateLendingProductBalancesAsync(string? useCurrentDate, string? businessDate, string? accountClass);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the corporate lending product balances</summary>
         /// <param name="useCurrentDate">Current Date flag for the Business date</param>
@@ -38,7 +30,7 @@ namespace DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances
         /// <param name="accountClass">Indicates if account is commercial; retail or other</param>
         /// <returns>Coporate Lending productsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCorporateLendingProductBalancesResponse> GetCorporateLendingProductBalancesAsync(string? useCurrentDate, string? businessDate, string? accountClass, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCorporateLendingProductBalancesResponse> GetCorporateLendingProductBalancesAsync(string? useCurrentDate = null, string? businessDate = null, string? accountClass = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

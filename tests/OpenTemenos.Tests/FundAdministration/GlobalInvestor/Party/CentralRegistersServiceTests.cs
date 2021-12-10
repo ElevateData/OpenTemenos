@@ -14,7 +14,7 @@ public class CentralRegistersServiceTests : CredentialManagement
     public void PostBankAccountsByParentAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.CentralRegisterService.PostCentralRegistersAsync(null, null, null, null, null, payload)
+        var result = _client.CentralRegisterService.PostCentralRegistersAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }

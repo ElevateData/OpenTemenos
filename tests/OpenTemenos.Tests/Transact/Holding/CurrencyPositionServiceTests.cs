@@ -12,7 +12,7 @@ public class CurrencyPositionServiceTests : CredentialManagement
     public void GetCurrencyPositionsAsync()
     {
         var result = _client.CurrencyPositionService
-            .GetCurrencyPositionsAsync(null, null, null, null, null, null, null, null, null)
+            .GetCurrencyPositionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -22,7 +22,7 @@ public class CurrencyPositionServiceTests : CredentialManagement
     public void GetCurrencyCalendarPositionsAsync()
     {
         var result = _client.CurrencyPositionService
-            .GetCurrencyCalendarPositionsAsync(CurrencyId, null, null, null, null, null, null, null, null, null)
+            .GetCurrencyCalendarPositionsAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

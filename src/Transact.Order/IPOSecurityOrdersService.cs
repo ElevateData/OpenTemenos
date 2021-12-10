@@ -23,38 +23,19 @@ namespace Transact.Order.IPOSecurityOrders
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IIPOSecurityOrdersService
     {
-        /// <summary>Creates the IPO Securities order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>SecuritiesIPOOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> CreateSecuritiesIPOOrderAsync(SecuritiesIPOOrder payload, bool? validate_only, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates the IPO Securities order</summary>
         /// <param name="payload">body Payload</param>
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>SecuritiesIPOOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> CreateSecuritiesIPOOrderAsync(SecuritiesIPOOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the IPO Securities order</summary>
-        /// <returns>SecuritiesIPOOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> GetSecuritiesIPOOrderAsync(string securityOrderId, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> CreateSecuritiesIPOOrderAsync(SecuritiesIPOOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the IPO Securities order</summary>
         /// <returns>SecuritiesIPOOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> GetSecuritiesIPOOrderAsync(string securityOrderId, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the IPO Securities order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>SecuritiesIPOOrderResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> UpdateSecuritiesIPOOrderAsync(string securityOrderId, SecuritiesIPOOrder payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> GetSecuritiesIPOOrderAsync(string securityOrderId, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the IPO Securities order</summary>
@@ -62,7 +43,7 @@ namespace Transact.Order.IPOSecurityOrders
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>SecuritiesIPOOrderResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> UpdateSecuritiesIPOOrderAsync(string securityOrderId, SecuritiesIPOOrder payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<SecuritiesIPOOrderResponse> UpdateSecuritiesIPOOrderAsync(string securityOrderId, SecuritiesIPOOrder payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

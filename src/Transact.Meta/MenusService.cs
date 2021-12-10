@@ -23,27 +23,13 @@ namespace Transact.Meta.Menus
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IMenusService
     {
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getMainMenusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMainMenusResponse> GetMainMenusAsync(int? page_size, int? page_start, string? page_token);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="page_size">The total number of records per page</param>
         /// <param name="page_start">The record from which the response should be displayed</param>
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getMainMenusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMainMenusResponse> GetMainMenusAsync(int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getMainMenuResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMainMenuResponse> GetMainMenuAsync(string menuId, int? page_size, int? page_start, string? page_token);
+        System.Threading.Tasks.Task<GetMainMenusResponse> GetMainMenusAsync(int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="page_size">The total number of records per page</param>
@@ -51,27 +37,14 @@ namespace Transact.Meta.Menus
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getMainMenuResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMainMenuResponse> GetMainMenuAsync(string menuId, int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>createMainMenuResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateMainMenuResponse> CreateMainMenuAsync(string menuId, CreateMainMenu payload, bool? validate_only);
+        System.Threading.Tasks.Task<GetMainMenuResponse> GetMainMenuAsync(string menuId, int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="payload">body Payload</param>
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>createMainMenuResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateMainMenuResponse> CreateMainMenuAsync(string menuId, CreateMainMenu payload, bool? validate_only, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getMenusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMenusResponse> GetMenusAsync(int? page_size, int? page_start, string? page_token);
+        System.Threading.Tasks.Task<CreateMainMenuResponse> CreateMainMenuAsync(string menuId, CreateMainMenu payload, bool? validate_only = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="page_size">The total number of records per page</param>
@@ -79,14 +52,7 @@ namespace Transact.Meta.Menus
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getMenusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMenusResponse> GetMenusAsync(int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
-        /// <returns>getMenuResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMenuResponse> GetMenuAsync(string menuId, int? page_size, int? page_start, string? page_token);
+        System.Threading.Tasks.Task<GetMenusResponse> GetMenusAsync(int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="page_size">The total number of records per page</param>
@@ -94,20 +60,14 @@ namespace Transact.Meta.Menus
         /// <param name="page_token">Random and unique string for each page. Used for security purpose</param>
         /// <returns>getMenuResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetMenuResponse> GetMenuAsync(string menuId, int? page_size, int? page_start, string? page_token, System.Threading.CancellationToken cancellationToken);
-    
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>createMenuResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateMenuResponse> CreateMenuAsync(string menuId, CreateMenu payload, bool? validate_only);
+        System.Threading.Tasks.Task<GetMenuResponse> GetMenuAsync(string menuId, int? page_size = null, int? page_start = null, string? page_token = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <param name="payload">body Payload</param>
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>createMenuResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CreateMenuResponse> CreateMenuAsync(string menuId, CreateMenu payload, bool? validate_only, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<CreateMenuResponse> CreateMenuAsync(string menuId, CreateMenu payload, bool? validate_only = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

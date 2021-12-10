@@ -23,14 +23,6 @@ namespace DataHub.AnalyticDataStore.Holding.CustomerLoanDelinquency30Days
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomerLoanDelinquency30DaysService
     {
-        /// <summary>Retrieves Loan accounts/contracts details with customer information for loans delinquent for more than 30 days for a specific business date or for the current date</summary>
-        /// <param name="businessDate">Business snapshot date of the source data</param>
-        /// <param name="useCurrentDate">Current Date flag for the Business date</param>
-        /// <param name="delinquentDays">Number of Days a loan is delinquent</param>
-        /// <returns>Customer Loan delinquencyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerLoanDelinquency30DaysResponse> GetCustomerLoanDelinquency30DaysAsync(string? businessDate, string? useCurrentDate, string? delinquentDays);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Loan accounts/contracts details with customer information for loans delinquent for more than 30 days for a specific business date or for the current date</summary>
         /// <param name="businessDate">Business snapshot date of the source data</param>
@@ -38,7 +30,7 @@ namespace DataHub.AnalyticDataStore.Holding.CustomerLoanDelinquency30Days
         /// <param name="delinquentDays">Number of Days a loan is delinquent</param>
         /// <returns>Customer Loan delinquencyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetCustomerLoanDelinquency30DaysResponse> GetCustomerLoanDelinquency30DaysAsync(string? businessDate, string? useCurrentDate, string? delinquentDays, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetCustomerLoanDelinquency30DaysResponse> GetCustomerLoanDelinquency30DaysAsync(string? businessDate = null, string? useCurrentDate = null, string? delinquentDays = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

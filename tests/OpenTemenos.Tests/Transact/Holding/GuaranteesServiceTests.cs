@@ -15,7 +15,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetClauseAsync()
     {
-        var result = _client.GuaranteeService.GetClauseAsync(ClauseId, null, null, null, null)
+        var result = _client.GuaranteeService.GetClauseAsync(ClauseId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -27,7 +27,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var clauseId = string.Empty;
         var payload = new Clause();
-        var result = _client.GuaranteeService.CreateClauseAsync(clauseId, payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.CreateClauseAsync(clauseId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -39,7 +39,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var clauseId = string.Empty;
         var payload = new Clause();
-        var result = _client.GuaranteeService.UpdateClauseAsync(clauseId, payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.UpdateClauseAsync(clauseId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -51,7 +51,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var clauseId = string.Empty;
         var payload = new ClauseDelete();
-        var result = _client.GuaranteeService.DeleteClauseAsync(clauseId, payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.DeleteClauseAsync(clauseId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -61,7 +61,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetGuaranteeIssuanceRequestsAsync()
     {
         var result = _client.GuaranteeService
-            .GetGuaranteeIssuanceRequestsAsync(null, null, null, null, null, null, null, null, null, null, null)
+            .GetGuaranteeIssuanceRequestsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -72,7 +72,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void CreateIbRequestAsync()
     {
         var payload = new IbRequest();
-        var result = _client.GuaranteeService.CreateIbRequestAsync(payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.CreateIbRequestAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -81,7 +81,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetIbRequestAsync()
     {
-        var result = _client.GuaranteeService.GetIbRequestAsync(RequestId, null, null, null, null)
+        var result = _client.GuaranteeService.GetIbRequestAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -93,7 +93,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var requestId = string.Empty;
         var payload = new IbRequest();
-        var result = _client.GuaranteeService.UpdateIbRequestAsync(requestId, payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.UpdateIbRequestAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -105,7 +105,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var requestId = string.Empty;
         var payload = new IbRequestDelete();
-        var result = _client.GuaranteeService.DeleteIbRequestAsync(requestId, payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.DeleteIbRequestAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -116,7 +116,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void ApproveGuaranteeAsync()
     {
         var requestId = string.Empty;
-        var result = _client.GuaranteeService.ApproveGuaranteeAsync(requestId, null, null, null, null)
+        var result = _client.GuaranteeService.ApproveGuaranteeAsync(requestId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -127,7 +127,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void RejectGuaranteeAsync()
     {
         var requestId = string.Empty;
-        var result = _client.GuaranteeService.RejectGuaranteeAsync(requestId, null, null, null, null, null, null)
+        var result = _client.GuaranteeService.RejectGuaranteeAsync(requestId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -137,7 +137,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetReceivedGuaranteeHistoryAsync()
     {
         var result = _client.GuaranteeService
-            .GetReceivedGuaranteeHistoryAsync(GuaranteeId, null, null, null, null, null, null, null, null)
+            .GetReceivedGuaranteeHistoryAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -147,7 +147,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetGuaranteeClausesAsync()
     {
         var result = _client.GuaranteeService
-            .GetGuaranteeClausesAsync(null, null, null, null, null, null, null, null, null, null)
+            .GetGuaranteeClausesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -157,7 +157,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetReceivedGuaranteesAmendmentsAsync()
     {
         var result = _client.GuaranteeService
-            .GetReceivedGuaranteesAmendmentsAsync(null, null, null, null, null, null, null, null, null, null, null)
+            .GetReceivedGuaranteesAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -167,7 +167,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetClaimInvocationHistoryAsync()
     {
         var result = _client.GuaranteeService
-            .GetClaimInvocationHistoryAsync(GuaranteeId, null, null, null, null, null, null, null, null)
+            .GetClaimInvocationHistoryAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -177,7 +177,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetReceivedGuaranteeClaimsAsync()
     {
         var result = _client.GuaranteeService
-            .GetReceivedGuaranteeClaimsAsync(null, null, null, null, null, null, null, null, null)
+            .GetReceivedGuaranteeClaimsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -187,7 +187,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetGuaranteeAmendmentsAsync()
     {
         var result = _client.GuaranteeService
-            .GetGuaranteeAmendmentsAsync(null, null, null, null, null, null, null, null, null)
+            .GetGuaranteeAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -197,7 +197,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetIssuedGuaranteesAsync()
     {
         var result = _client.GuaranteeService
-            .GetIssuedGuaranteesAsync(null, null, null, null, null, null, null, null, null)
+            .GetIssuedGuaranteesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -207,7 +207,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetGuaranteeLimitsAsync()
     {
         var result = _client.GuaranteeService
-            .GetClaimInvocationHistoryAsync(null, null, null, null, null, null, null, null, null)
+            .GetClaimInvocationHistoryAsync(null)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -217,7 +217,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetIssuedGuaranteeClaimsAsync()
     {
         var result = _client.GuaranteeService
-            .GetIssuedGuaranteeClaimsAsync(null, null, null, null, null, null, null, null)
+            .GetIssuedGuaranteeClaimsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -227,7 +227,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetGuaranteesAsync()
     {
         var result = _client.GuaranteeService
-            .GetGuaranteesAsync(null, null, null, null, null, null, null, null, null, null, null, null)
+            .GetGuaranteesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -238,7 +238,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void CreateGuaranteeGenericAsync()
     {
         var payload = new GuaranteeGeneric();
-        var result = _client.GuaranteeService.CreateGuaranteeGenericAsync(payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.CreateGuaranteeGenericAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -247,8 +247,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetGuaranteesOutstandingsAsync()
     {
-        var result = _client.GuaranteeService.GetGuaranteesOutstandingsAsync(CustomerId, null, null, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetGuaranteesOutstandingsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -257,8 +256,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetGuaranteeExpiringWithDateAsync()
     {
-        var result = _client.GuaranteeService.GetGuaranteeExpiringWithDateAsync(CustomerId, null, null, null, null,
-                null, null, null, null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetGuaranteeExpiringWithDateAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -267,8 +265,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetClaimOutstandingUnderGuaranteesAsync()
     {
-        var result = _client.GuaranteeService.GetClaimOutstandingUnderGuaranteesAsync(CustomerId, null, null, null,
-                null, null, null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetClaimOutstandingUnderGuaranteesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -277,8 +274,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetGuaranteesReversedAsync()
     {
-        var result = _client.GuaranteeService.GetGuaranteesReversedAsync(CustomerId, null, null, null, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetGuaranteesReversedAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -288,7 +284,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void GetClaimsPaidUnderGuaranteeAsync()
     {
         var result = _client.GuaranteeService
-            .GetClaimsPaidUnderGuaranteeAsync(GuaranteeId, null, null, null, null, null, null, null, null, null)
+            .GetClaimsPaidUnderGuaranteeAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -297,8 +293,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetOutstandingShippingGuaranteesAsync()
     {
-        var result = _client.GuaranteeService.GetOutstandingShippingGuaranteesAsync(GuaranteeId, null, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetOutstandingShippingGuaranteesAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -307,8 +302,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetOutstandingReceivedGuaranteesAsync()
     {
-        var result = _client.GuaranteeService.GetOutstandingReceivedGuaranteesAsync(CustomerId, null, null, null, null,
-                null, null, null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetOutstandingReceivedGuaranteesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -320,7 +314,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var payload = new GuaranteesPerformanceBond();
         var result = _client.GuaranteeService
-            .CreateGuaranteesPerformanceBondAsync(payload, null, null, null, null, null)
+            .CreateGuaranteesPerformanceBondAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -331,7 +325,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void CreateGuaranteesStandbyLCAsync()
     {
         var payload = new GuaranteesStandbyLC();
-        var result = _client.GuaranteeService.CreateGuaranteesStandbyLCAsync(payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.CreateGuaranteesStandbyLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -342,7 +336,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void CreateShippingGuaranteeUnderLCAsync()
     {
         var payload = new ShippingGuaranteeUnderLC();
-        var result = _client.GuaranteeService.CreateShippingGuaranteeUnderLCAsync(payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.CreateShippingGuaranteeUnderLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -354,7 +348,7 @@ public class GuaranteesServiceTests : CredentialManagement
     {
         var payload = new ShippingGuaranteeUnderCollection();
         var result = _client.GuaranteeService
-            .CreateShippingGuaranteeUnderCollectionAsync(payload, null, null, null, null, null)
+            .CreateShippingGuaranteeUnderCollectionAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -367,7 +361,7 @@ public class GuaranteesServiceTests : CredentialManagement
         var guaranteeId = string.Empty;
         var payload = new GuaranteesAmendment();
         var result = _client.GuaranteeService
-            .UpdateGuaranteesAmendmentAsync(guaranteeId, payload, null, null, null, null, null)
+            .UpdateGuaranteesAmendmentAsync(guaranteeId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -380,7 +374,7 @@ public class GuaranteesServiceTests : CredentialManagement
         var guaranteeId = string.Empty;
         var payload = new GuaranteesRejection();
         var result = _client.GuaranteeService
-            .UpdateGuaranteesRejectionAsync(guaranteeId, payload, null, null, null, null, null)
+            .UpdateGuaranteesRejectionAsync(guaranteeId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -389,8 +383,7 @@ public class GuaranteesServiceTests : CredentialManagement
     [TestMethod]
     public void GetInvocationPaidOrCancelledAsync()
     {
-        var result = _client.GuaranteeService.GetInvocationPaidOrCancelledAsync(GuaranteeId, null, null, null, null,
-                null, null, null, null, null, null, null, null, null, null, null, null)
+        var result = _client.GuaranteeService.GetInvocationPaidOrCancelledAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
@@ -401,7 +394,7 @@ public class GuaranteesServiceTests : CredentialManagement
     public void CreateGuarnteeBidBondAsync()
     {
         var payload = new GuarnteeBidBond();
-        var result = _client.GuaranteeService.CreateGuarnteeBidBondAsync(payload, null, null, null, null, null)
+        var result = _client.GuaranteeService.CreateGuarnteeBidBondAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");

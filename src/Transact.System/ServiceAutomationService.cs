@@ -23,18 +23,6 @@ namespace Transact.System.ServiceAutomation
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IServiceAutomationService
     {
-        /// <summary>Create new process in system</summary>
-        /// <param name="processId">Contains the process identifier</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>NewProcessResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewProcessResponse> CreateNewProcessAsync(string processId, NewProcess payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create new process in system</summary>
         /// <param name="processId">Contains the process identifier</param>
@@ -46,19 +34,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>NewProcessResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewProcessResponse> CreateNewProcessAsync(string processId, NewProcess payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update process in system</summary>
-        /// <param name="processId">Contains the process identifier</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>NewProcessResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewProcessResponse> AmendNewProcessAsync(string processId, NewProcess payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<NewProcessResponse> CreateNewProcessAsync(string processId, NewProcess payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update process in system</summary>
@@ -71,24 +47,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>NewProcessResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewProcessResponse> AmendNewProcessAsync(string processId, NewProcess payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the details of a specific service</summary>
-        /// <param name="serviceId">Contains the identifier name of the service that has to be executed.</param>
-        /// <param name="serverName">Contains the name of the Server on which the service will run.</param>
-        /// <param name="serverStatus">Status of Server  POSSIBLE VALUES: ACTIVE: To set the server as active INACTIVE: To set the server as inactive</param>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="processStatus">Contains the current process status. Allowed values: - 0: Ready - 1: Running - 2: Completed successfully - 3: On hold or in error</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AvailableServicesResponse> GetServiceAsync(string serviceId, string? serverName, string? serverStatus, string? workProfileId, string? processStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<NewProcessResponse> AmendNewProcessAsync(string processId, NewProcess payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the details of a specific service</summary>
@@ -106,19 +65,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AvailableServicesResponse> GetServiceAsync(string serviceId, string? serverName, string? serverStatus, string? workProfileId, string? processStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create new service in system</summary>
-        /// <param name="serviceId">Contains the identifier name of the service that has to be executed.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>NewServiceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewServiceResponse> CreateNewServiceAsync(string serviceId, NewService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AvailableServicesResponse> GetServiceAsync(string serviceId, string? serverName = null, string? serverStatus = null, string? workProfileId = null, string? processStatus = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create new service in system</summary>
@@ -131,19 +78,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>NewServiceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewServiceResponse> CreateNewServiceAsync(string serviceId, NewService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update a service in the system</summary>
-        /// <param name="serviceId">Contains the identifier name of the service that has to be executed.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewServiceResponse> AmendServiceAsync(string serviceId, NewService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<NewServiceResponse> CreateNewServiceAsync(string serviceId, NewService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update a service in the system</summary>
@@ -156,22 +91,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<NewServiceResponse> AmendServiceAsync(string serviceId, NewService payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves a specific workload profile</summary>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="agentsRequired">Contains the number of agents required</param>
-        /// <param name="workProfileTime">Contains the time a multithreaded process takes.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceWorkProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AllServiceWorkProfilesResponse> GetServiceWorkProfileAsync(string workProfileId, string? agentsRequired, string? workProfileTime, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<NewServiceResponse> AmendServiceAsync(string serviceId, NewService payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a specific workload profile</summary>
@@ -187,19 +107,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceWorkProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AllServiceWorkProfilesResponse> GetServiceWorkProfileAsync(string workProfileId, string? agentsRequired, string? workProfileTime, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create service work load profile</summary>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceWorkProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceWorkProfileResponse> CreateServiceWorkProfileAsync(string workProfileId, ServiceWorkProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AllServiceWorkProfilesResponse> GetServiceWorkProfileAsync(string workProfileId, string? agentsRequired = null, string? workProfileTime = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create service work load profile</summary>
@@ -212,19 +120,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceWorkProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceWorkProfileResponse> CreateServiceWorkProfileAsync(string workProfileId, ServiceWorkProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update a service work load profile</summary>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceWorkProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceWorkProfileResponse> AmendServiceWorkProfileAsync(string workProfileId, ServiceWorkProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceWorkProfileResponse> CreateServiceWorkProfileAsync(string workProfileId, ServiceWorkProfile payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update a service work load profile</summary>
@@ -237,24 +133,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceWorkProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceWorkProfileResponse> AmendServiceWorkProfileAsync(string workProfileId, ServiceWorkProfile payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves a list of all available services in system.</summary>
-        /// <param name="serviceId">Contains the identifier name of the service that has to be executed.</param>
-        /// <param name="serverName">Contains the name of the Server on which the service will run.</param>
-        /// <param name="serverStatus">Status of Server  POSSIBLE VALUES: ACTIVE: To set the server as active INACTIVE: To set the server as inactive</param>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="processStatus">Contains the current process status. Allowed values: - 0: Ready - 1: Running - 2: Completed successfully - 3: On hold or in error</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AvailableServicesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AvailableServicesResponse> GetAvailableServicesAsync(string? serviceId, string? serverName, string? serverStatus, string? workProfileId, string? processStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceWorkProfileResponse> AmendServiceWorkProfileAsync(string workProfileId, ServiceWorkProfile payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a list of all available services in system.</summary>
@@ -272,20 +151,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AvailableServicesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AvailableServicesResponse> GetAvailableServicesAsync(string? serviceId, string? serverName, string? serverStatus, string? workProfileId, string? processStatus, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves a detailed status of the specified service</summary>
-        /// <param name="serviceId">Contains the identifier name of the service that has to be executed.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceStatusResponse> GetServiceStatusAsync(string serviceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AvailableServicesResponse> GetAvailableServicesAsync(string? serviceId = null, string? serverName = null, string? serverStatus = null, string? workProfileId = null, string? processStatus = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a detailed status of the specified service</summary>
@@ -299,20 +165,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceStatusResponse> GetServiceStatusAsync(string serviceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves  status of all the services</summary>
-        /// <param name="serviceId">Contains the identifier name of the service that has to be executed.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AllServicesStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceStatusResponse> GetAllServicesStatusAsync(string? serviceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceStatusResponse> GetServiceStatusAsync(string serviceId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves  status of all the services</summary>
@@ -326,19 +179,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AllServicesStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceStatusResponse> GetAllServicesStatusAsync(string? serviceId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves a list of all available executed process times in system</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ServiceProcessTimesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceProcessTimesResponse> GetServiceProcessTimesAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceStatusResponse> GetAllServicesStatusAsync(string? serviceId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a list of all available executed process times in system</summary>
@@ -351,21 +192,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ServiceProcessTimesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ServiceProcessTimesResponse> GetServiceProcessTimesAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves a list of elapsed times for reports generated during close of business processing</summary>
-        /// <param name="businessClosureDate">Contains the business closure time and date on which the error occurred.</param>
-        /// <param name="reportName">Contains the name of the process that produces the report</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ReportTimesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ReportTimesResponse> GetReportTimesAsync(string businessClosureDate, string? reportName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ServiceProcessTimesResponse> GetServiceProcessTimesAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves a list of elapsed times for reports generated during close of business processing</summary>
@@ -380,22 +207,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ReportTimesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ReportTimesResponse> GetReportTimesAsync(string businessClosureDate, string? reportName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of all service workload profiles available in system</summary>
-        /// <param name="workProfileId">Contains the reference to the record in service workload profiles for services.</param>
-        /// <param name="agentsRequired">Contains the number of agents required</param>
-        /// <param name="workProfileTime">Contains the time a multithreaded process takes.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>AllServiceWorkProfilesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AllServiceWorkProfilesResponse> GetAllServiceWorkProfilesAsync(string? workProfileId, string? agentsRequired, string? workProfileTime, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ReportTimesResponse> GetReportTimesAsync(string businessClosureDate, string? reportName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of all service workload profiles available in system</summary>
@@ -411,21 +223,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>AllServiceWorkProfilesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AllServiceWorkProfilesResponse> GetAllServiceWorkProfilesAsync(string? workProfileId, string? agentsRequired, string? workProfileTime, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves any logged error messages for a company during the Close of Business processing</summary>
-        /// <param name="companyIdPath">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="businessClosureDate">Contains the business closure time and date on which the error occurred.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyIdHeader">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BusinessClosureErrorForCompanyResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BusinessClosureErrorForCompanyResponse> GetBusinessClosureErrorForCompanyAsync(string companyIdPath, string? businessClosureDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<AllServiceWorkProfilesResponse> GetAllServiceWorkProfilesAsync(string? workProfileId = null, string? agentsRequired = null, string? workProfileTime = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves any logged error messages for a company during the Close of Business processing</summary>
@@ -440,19 +238,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BusinessClosureErrorForCompanyResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BusinessClosureErrorForCompanyResponse> GetBusinessClosureErrorForCompanyAsync(string companyIdPath, string? businessClosureDate, int? page_size, int? page_start, string? page_token, string? credentials, string? companyIdHeader, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the status metrics of the Close of Business process</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from t24 on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CobProgressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CobProgressResponse> GetCobProgressAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<BusinessClosureErrorForCompanyResponse> GetBusinessClosureErrorForCompanyAsync(string companyIdPath, string? businessClosureDate = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyIdHeader = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the status metrics of the Close of Business process</summary>
@@ -465,19 +251,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CobProgressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CobProgressResponse> GetCobProgressAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the resolution date of the logged error messages for the  Close of Business processing to continue</summary>
-        /// <param name="errorDetailId">Contains the unique identifier to the records on the table which logs the error messages for the close of business processing</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">The identifier of the underlying Entity/Company/Branch.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>BusinessClosureErrorResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BusinessClosureErrorResponse> AmendBusinessClosureErrorAsync(string errorDetailId, BusinessClosureError payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CobProgressResponse> GetCobProgressAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the resolution date of the logged error messages for the  Close of Business processing to continue</summary>
@@ -490,7 +264,7 @@ namespace Transact.System.ServiceAutomation
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>BusinessClosureErrorResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<BusinessClosureErrorResponse> AmendBusinessClosureErrorAsync(string errorDetailId, BusinessClosureError payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<BusinessClosureErrorResponse> AmendBusinessClosureErrorAsync(string errorDetailId, BusinessClosureError payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

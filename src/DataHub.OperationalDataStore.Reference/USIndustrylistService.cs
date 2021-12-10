@@ -23,18 +23,12 @@ namespace DataHub.OperationalDataStore.Reference.USIndustrylist
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IUSIndustrylistService
     {
-        /// <summary>Retrieves US industry classification or NAICS codes</summary>
-        /// <param name="recordId">Unique identifier of an entity</param>
-        /// <returns>getUSIndustrylistResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUSIndustrylistResponse> GetUSIndustrylistAsync(string? recordId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves US industry classification or NAICS codes</summary>
         /// <param name="recordId">Unique identifier of an entity</param>
         /// <returns>getUSIndustrylistResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<GetUSIndustrylistResponse> GetUSIndustrylistAsync(string? recordId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<GetUSIndustrylistResponse> GetUSIndustrylistAsync(string? recordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

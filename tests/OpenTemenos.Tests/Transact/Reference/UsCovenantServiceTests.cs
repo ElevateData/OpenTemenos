@@ -10,7 +10,7 @@ public class UsCovenantServiceTests : CredentialManagement
     [TestMethod]
     public void GetUsCovenantListAsync()
     {
-        var result = _client.UsCovenantService.GetUsCovenantListAsync(null, null, null, null, null, null).Result;
+        var result = _client.UsCovenantService.GetUsCovenantListAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

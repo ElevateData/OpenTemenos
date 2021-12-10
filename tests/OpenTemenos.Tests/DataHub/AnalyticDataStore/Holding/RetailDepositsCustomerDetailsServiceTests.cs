@@ -11,7 +11,7 @@ public class RetailDepositsCustomerDetailsServiceTests : CredentialManagement
     [TestMethod]
     public void GetRetailDepositsCustomerDetailsAsync()
     {
-        var result = _client.DepositCustomerBalanceService.GetRetailDepositsCustomerDetailsAsync(null, null).Result;
+        var result = _client.DepositCustomerBalanceService.GetRetailDepositsCustomerDetailsAsync().Result;
         Assert.IsNotNull(result.Data);
     }
 }

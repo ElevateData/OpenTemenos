@@ -23,41 +23,20 @@ namespace Transact.Order.FiduciaryOrders
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface IFiduciaryOrdersService
     {
-        /// <summary>Creates a fiduciary order</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>FiduciaryOrderInitiationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> CreateFiduciaryOrderInitiationAsync(FiduciaryOrderInitiation payload, bool? validate_only, string? credentials, string? companyId);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates a fiduciary order</summary>
         /// <param name="payload">body Payload</param>
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>FiduciaryOrderInitiationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> CreateFiduciaryOrderInitiationAsync(FiduciaryOrderInitiation payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the fiduciary order</summary>
-        /// <param name="fiduciaryOrderId">Key or Identifier of the Fiduciary Order</param>
-        /// <returns>FiduciaryOrderInitiationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> GetFiduciaryOrderInitiationAsync(string fiduciaryOrderId, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> CreateFiduciaryOrderInitiationAsync(FiduciaryOrderInitiation payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the fiduciary order</summary>
         /// <param name="fiduciaryOrderId">Key or Identifier of the Fiduciary Order</param>
         /// <returns>FiduciaryOrderInitiationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> GetFiduciaryOrderInitiationAsync(string fiduciaryOrderId, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the fiduciary order</summary>
-        /// <param name="fiduciaryOrderId">Key or Identifier of the Fiduciary Order</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>FiduciaryOrderInitiationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> UpdateFiduciaryOrderInitiationAsync(string fiduciaryOrderId, FiduciaryOrderInitiation payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> GetFiduciaryOrderInitiationAsync(string fiduciaryOrderId, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the fiduciary order</summary>
@@ -66,15 +45,7 @@ namespace Transact.Order.FiduciaryOrders
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>FiduciaryOrderInitiationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> UpdateFiduciaryOrderInitiationAsync(string fiduciaryOrderId, FiduciaryOrderInitiation payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates the fiduciary order</summary>
-        /// <param name="fiduciaryOrderId">Key or Identifier of the Fiduciary Order</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <returns>FiduciaryOrderMaturityResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderMaturityResponse> UpdateFiduciaryOrderMaturityAsync(string fiduciaryOrderId, FiduciaryOrderMaturity payload, bool? validate_only, string? credentials, string? companyId);
+        System.Threading.Tasks.Task<FiduciaryOrderInitiationResponse> UpdateFiduciaryOrderInitiationAsync(string fiduciaryOrderId, FiduciaryOrderInitiation payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates the fiduciary order</summary>
@@ -83,7 +54,7 @@ namespace Transact.Order.FiduciaryOrders
         /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
         /// <returns>FiduciaryOrderMaturityResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FiduciaryOrderMaturityResponse> UpdateFiduciaryOrderMaturityAsync(string fiduciaryOrderId, FiduciaryOrderMaturity payload, bool? validate_only, string? credentials, string? companyId, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<FiduciaryOrderMaturityResponse> UpdateFiduciaryOrderMaturityAsync(string fiduciaryOrderId, FiduciaryOrderMaturity payload, bool? validate_only = null, string? credentials = null, string? companyId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

@@ -11,9 +11,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetUnapprovedArrangementsDepositsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsDepositsAsync(ProductLine, null,
-                null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -22,9 +20,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetUnapprovedArrangementsLoansAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsLoansAsync(ProductLine, null,
-                null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsLoansAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -33,9 +29,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetUnapprovedArrangementsAccountsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsAccountsAsync(ProductLine, null,
-                null, null,
-                null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -44,9 +38,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetAAPendingArrangementAccountsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetAAPendingArrangementAccountsAsync(ProductLine, null,
-                null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetAAPendingArrangementAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -55,9 +47,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetAAPendingArrangementDepositsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetAAPendingArrangementDepositsAsync(ProductLine, null,
-                null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetAAPendingArrangementDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -66,9 +56,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetAAPendingArrangementLoansAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetAAPendingArrangementLoansAsync(ProductLine, null, null,
-                null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetAAPendingArrangementLoansAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -77,8 +65,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetApprovedAccountsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetApprovedAccountsAsync(ProductLine, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetApprovedAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -87,8 +74,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetApprovedDepositsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetApprovedDepositsAsync(ProductLine, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetApprovedDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -97,8 +83,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetApprovedLoansAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetApprovedLoansAsync(ProductLine, null, null, null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetApprovedLoansAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -107,9 +92,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetClosedMaturedAccountsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetClosedMaturedAccountsAsync(ProductLine, null, null,
-                null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetClosedMaturedAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -118,9 +101,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetClosedMaturedDepositsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetClosedMaturedDepositsAsync(ProductLine, null, null,
-                null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetClosedMaturedDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -129,9 +110,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetClosedMaturedLendingAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetClosedMaturedLendingAsync(ProductLine, null, null,
-                null,
-                null, null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetClosedMaturedLendingAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -140,8 +119,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetSimulatedAccountsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetSimulatedAccountsAsync(ProductLine, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetSimulatedAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -150,8 +128,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetSimulatedDepositsAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetSimulatedDepositsAsync(ProductLine, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetSimulatedDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
@@ -160,8 +137,7 @@ public class ArrangementsProductLinesServiceTests : CredentialManagement
     [TestMethod]
     public void GetSimulatedLendingAsync()
     {
-        var result = _client.ArrangementForProductLineService.GetSimulatedLendingAsync(ProductLine, null, null, null,
-                null, null, null, null, null, null)
+        var result = _client.ArrangementForProductLineService.GetSimulatedLendingAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");

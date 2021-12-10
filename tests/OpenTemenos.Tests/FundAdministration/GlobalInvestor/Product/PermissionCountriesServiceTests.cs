@@ -15,7 +15,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.PermissionCountryService
-            .PostPermissionCountriesByParentAsync(null, null, null, null, null, payload).Result;
+            .PostPermissionCountriesByParentAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -25,7 +25,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
     {
         var payload = new _0Payload();
         var result = _client.PermissionCountryService
-            .PostPermissionCountriesAsync(null, null, null, null, null, payload).Result;
+            .PostPermissionCountriesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -34,7 +34,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
     public void PutPermissionCountriesAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.PermissionCountryService.PutPermissionCountriesAsync(null, null, null, null, null, payload)
+        var result = _client.PermissionCountryService.PutPermissionCountriesAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -45,7 +45,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
     {
         var payload = new _0BULKPayload();
         var result = _client.PermissionCountryService
-            .DeletePermissionCountriesAsync(null, null, null, null, null, payload).Result;
+            .DeletePermissionCountriesAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -53,7 +53,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
     public void GetPermissionCountriesByInternalIdAsync()
     {
         var result = _client.PermissionCountryService
-            .GetPermissionCountriesByInternalIdAsync(null, null, null, null, null, null, null, null, null, null,
+            .GetPermissionCountriesByInternalIdAsync(
                 InternalId).Result;
         Assert.IsNotNull(result.Body);
     }
@@ -65,7 +65,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.PermissionCountryService
-            .PutPermissionCountriesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutPermissionCountriesByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -76,7 +76,7 @@ public class PermissionCountriesServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.PermissionCountryService
-            .DeletePermissionCountriesByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeletePermissionCountriesByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

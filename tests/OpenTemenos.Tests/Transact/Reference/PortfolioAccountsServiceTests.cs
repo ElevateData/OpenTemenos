@@ -12,7 +12,7 @@ public class PortfolioAccountsServiceTests : CredentialManagement
     public void GetPortfolioAccountsAsync()
     {
         var result = _client.PortfolioAccountsService
-            .GetPortfolioAccountsAsync(PortfolioId, null, null, null, null, null, null).Result;
+            .GetPortfolioAccountsAsync(PortfolioId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }

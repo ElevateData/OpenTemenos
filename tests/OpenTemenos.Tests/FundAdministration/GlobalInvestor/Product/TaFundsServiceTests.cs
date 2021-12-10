@@ -13,7 +13,7 @@ public class TaFundsServiceTests : CredentialManagement
     public void GetTaFundAsync()
     {
         var result = _client.TransferAgentFundService
-            .GetTAfundAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetTAfundAsync().Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -22,7 +22,7 @@ public class TaFundsServiceTests : CredentialManagement
     public void PostTaFundAsync()
     {
         var payload = new _0Payload();
-        var result = _client.TransferAgentFundService.PostTAfundAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TransferAgentFundService.PostTAfundAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -31,7 +31,7 @@ public class TaFundsServiceTests : CredentialManagement
     public void PutTaFundAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TransferAgentFundService.PutTAfundAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TransferAgentFundService.PutTAfundAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -40,7 +40,7 @@ public class TaFundsServiceTests : CredentialManagement
     public void DeleteTaFundAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.TransferAgentFundService.DeleteTAfundAsync(null, null, null, null, null, payload).Result;
+        var result = _client.TransferAgentFundService.DeleteTAfundAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -48,7 +48,7 @@ public class TaFundsServiceTests : CredentialManagement
     public void GetTaFundByFundIdAsync()
     {
         var result = _client.TransferAgentFundService
-            .GetTAfundByFundIdAsync(null, null, null, null, null, null, null, null, null, null, FundId).Result;
+            .GetTAfundByFundIdAsync(FundId).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -59,7 +59,7 @@ public class TaFundsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentFundService
-            .PutTAfundByFundIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutTAfundByFundIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -70,7 +70,7 @@ public class TaFundsServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.TransferAgentFundService
-            .DeleteTAfundByFundIDAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteTAfundByFundIDAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

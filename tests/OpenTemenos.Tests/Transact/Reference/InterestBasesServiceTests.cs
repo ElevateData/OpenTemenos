@@ -13,7 +13,7 @@ public class InterestBasesServiceTests : CredentialManagement
     public void GetInterestBasesAsync()
     {
         var result = _client.InterestBasesService
-            .GetInterestBasesAsync(null, null, null, null, null, null, null, null, null, null).Result;
+            .GetInterestBasesAsync().Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -22,7 +22,7 @@ public class InterestBasesServiceTests : CredentialManagement
     public void GetInterestDayBasisDetailsAsync()
     {
         var result = _client.InterestBasesService
-            .GetInterestDayBasisDetailsAsync(InterestBasisId, null, null, null, null, null, null, null, null).Result;
+            .GetInterestDayBasisDetailsAsync(InterestBasisId).Result;
         Assert.IsNotNull(result.Body);
         Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
     }
@@ -34,7 +34,7 @@ public class InterestBasesServiceTests : CredentialManagement
         var interestBasisId = string.Empty;
         var payload = new InterestDayBasis();
         var result = _client.InterestBasesService
-            .CreateInterestDayBasisAsync(interestBasisId, payload, null, null, null, null, null).Result;
+            .CreateInterestDayBasisAsync(interestBasisId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -45,7 +45,7 @@ public class InterestBasesServiceTests : CredentialManagement
         var interestBasisId = string.Empty;
         var payload = new InterestDayBasis();
         var result = _client.InterestBasesService
-            .UpdateInterestDayBasisAsync(interestBasisId, payload, null, null, null, null, null).Result;
+            .UpdateInterestDayBasisAsync(interestBasisId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -56,7 +56,7 @@ public class InterestBasesServiceTests : CredentialManagement
         var interestBasisId = string.Empty;
         var payload = new InterestDayBasisDelete();
         var result = _client.InterestBasesService
-            .DeleteInterestDayBasisAsync(interestBasisId, payload, null, null, null, null, null).Result;
+            .DeleteInterestDayBasisAsync(interestBasisId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

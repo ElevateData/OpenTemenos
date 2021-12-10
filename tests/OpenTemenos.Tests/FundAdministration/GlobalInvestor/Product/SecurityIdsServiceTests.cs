@@ -14,7 +14,7 @@ public class SecurityIdServiceTests : CredentialManagement
     public void PostSecurityIdsByParentAsync()
     {
         var payload = new _0Payload();
-        var result = _client.SecurityIdService.PostSecurityidsByParentAsync(null, null, null, null, null, payload)
+        var result = _client.SecurityIdService.PostSecurityidsByParentAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -24,7 +24,7 @@ public class SecurityIdServiceTests : CredentialManagement
     public void PostSecurityIdsAsync()
     {
         var payload = new _0Payload();
-        var result = _client.SecurityIdService.PostSecurityidsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SecurityIdService.PostSecurityidsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -33,7 +33,7 @@ public class SecurityIdServiceTests : CredentialManagement
     public void PutSecurityIdsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SecurityIdService.PutSecurityidsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SecurityIdService.PutSecurityidsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -42,7 +42,7 @@ public class SecurityIdServiceTests : CredentialManagement
     public void DeleteSecurityIdsAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.SecurityIdService.DeleteSecurityidsAsync(null, null, null, null, null, payload).Result;
+        var result = _client.SecurityIdService.DeleteSecurityidsAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -50,7 +50,7 @@ public class SecurityIdServiceTests : CredentialManagement
     public void GetSecurityIdsByInternalIdAsync()
     {
         var result = _client.SecurityIdService
-            .GetSecurityidsByInternalIdAsync(null, null, null, null, null, null, null, null, null, null, InternalId)
+            .GetSecurityidsByInternalIdAsync(InternalId)
             .Result;
         Assert.IsNotNull(result.Body);
     }
@@ -62,7 +62,7 @@ public class SecurityIdServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SecurityIdService
-            .PutSecurityidsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .PutSecurityidsByIdAsync(internalId, payload).Result;
         Assert.IsNotNull(result.Body);
     }
 
@@ -73,7 +73,7 @@ public class SecurityIdServiceTests : CredentialManagement
         var internalId = string.Empty;
         var payload = new _0Payload();
         var result = _client.SecurityIdService
-            .DeleteSecurityidsByIdAsync(null, null, null, null, null, internalId, payload).Result;
+            .DeleteSecurityidsByIdAsync(internalId, payload: payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }

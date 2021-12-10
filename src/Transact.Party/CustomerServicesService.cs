@@ -23,16 +23,6 @@ namespace Transact.Party.CustomerServices
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.14.5.0 (NJsonSchema v10.5.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial interface ICustomerServicesService
     {
-        /// <summary>Retrieves list of customer details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerResponse> GetCustomerAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
-    
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of customer details</summary>
         /// <param name="customerId">Identifier of the customer</param>
@@ -42,19 +32,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerResponse> GetCustomerAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update customer details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerResponse> UpdateCustomerAsync(string customerId, Customer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerResponse> GetCustomerAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update customer details</summary>
@@ -67,128 +45,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerResponse> UpdateCustomerAsync(string customerId, Customer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of customer basic details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="customerIdCT">Indicates the criteria for the contains operation on the customer Id</param>
-        /// <param name="customerIdBW">Indicates the criteria for the between operation on the customer Id</param>
-        /// <param name="customerIdMT">Indicates the criteria for the matches operation on the customer Id</param>
-        /// <param name="customerName">Name of the customer</param>
-        /// <param name="customerNameCT">Indicates the criteria for the contains operation on the customer name</param>
-        /// <param name="customerNameBW">Indicates the criteria for the between operation on the customer name</param>
-        /// <param name="customerNameMT">Indicates the criteria for the matches operation on the customer name</param>
-        /// <param name="street">Contains the first line of customer's base address, example building number, street number etc.</param>
-        /// <param name="streetCT">Indicates the criteria for the contains operation on the street</param>
-        /// <param name="streetBW">Indicates the criteria for the between operation on the street</param>
-        /// <param name="streetMT">Indicates the criteria for the matches operation on the street</param>
-        /// <param name="addressCity">The town and/or city component of the base address of a customer</param>
-        /// <param name="addressCityCT">Indicates the criteria for the contains operation on the town country</param>
-        /// <param name="addressCityBW">Indicates the criteria for the between operation on the town country</param>
-        /// <param name="addressCityMT">Indicates the criteria for the matches operation on the town country</param>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="countryIdCT">Indicates the criteria for the contains operation on the country</param>
-        /// <param name="countryIdBW">Indicates the criteria for the between operation on the country</param>
-        /// <param name="countryIdMT">Indicates the criteria for the matches operation on the country</param>
-        /// <param name="postCode">Identifies the address postal code for the customer.</param>
-        /// <param name="postCodeCT">Indicates the criteria for the contains operation on the post code</param>
-        /// <param name="postCodeBW">Indicates the criteria for the between operation on the post code</param>
-        /// <param name="postCodeMT">Indicates the criteria for the matches operation on the post code</param>
-        /// <param name="dateOfBirth">The date of birth of an individual customer</param>
-        /// <param name="dateOfBirthCT">Indicates the criteria for the contains operation on the date of birth</param>
-        /// <param name="dateOfBirthBW">Indicates the criteria for the between operation on the date of birth</param>
-        /// <param name="dateOfBirthMT">Indicates the criteria for the matches operation on the date of birth</param>
-        /// <param name="customerStatus">The internal bank status of a customer</param>
-        /// <param name="customerStatusCT">Indicates the criteria for the contains operation on the customer status</param>
-        /// <param name="customerStatusBW">Indicates the criteria for the between operation on the customer status</param>
-        /// <param name="customerStatusMT">Indicates the criteria for the matches operation on the customer status</param>
-        /// <param name="sectorId">An institution-defined identifier of the type of customer</param>
-        /// <param name="sectorIdCT">Indicates the criteria for the contains operation on the sector</param>
-        /// <param name="sectorIdBW">Indicates the criteria for the between operation on the sector</param>
-        /// <param name="sectorIdMT">Indicates the criteria for the matches operation on the sector</param>
-        /// <param name="accountOfficerId">The identifier of the department head or specific account officer responsible for the customer</param>
-        /// <param name="accountOfficerIdBW">Indicates the criteria for the between operation on the account officer</param>
-        /// <param name="accountOfficerIdCT">Indicates the criteria for the contains operation on the account officer</param>
-        /// <param name="accountOfficerIdMT">Indicates the criteria for the matches operation on the account officer</param>
-        /// <param name="industryId">An institution-defined identifier of the industry in which the customer is trading, operating or is associated with</param>
-        /// <param name="industryIdBW">Indicates the criteria for the between operation on the industry</param>
-        /// <param name="industryIdCT">Indicates the criteria for the contains operation on the industry</param>
-        /// <param name="industryIdMT">Indicates the criteria for the matches operation on the industry</param>
-        /// <param name="nationalityId">The identifier of the nationality of a customer</param>
-        /// <param name="nationalityIdBW">Indicates the criteria for the between operation on the nationality</param>
-        /// <param name="nationalityIdCT">Indicates the criteria for the contains operation on the nationality</param>
-        /// <param name="nationalityIdMT">Indicates the criteria for the matches operation on the nationality</param>
-        /// <param name="residenceId">The identifier of the country of residence of a customer</param>
-        /// <param name="residenceIdMT">Indicates the criteria for the matches operation on the residence</param>
-        /// <param name="residenceIdCT">Indicates the criteria for the contains operation on the residence</param>
-        /// <param name="residenceIdBW">Indicates the criteria for the between operation on the residence</param>
-        /// <param name="lastName">The last name of an individual customer</param>
-        /// <param name="lastNameCT">Indicates the criteria for the contains operation on the family name</param>
-        /// <param name="lastNameBW">Indicates the criteria for the between operation on the family name</param>
-        /// <param name="lastNameMT">Indicates the criteria for the matches operation on the family name</param>
-        /// <param name="phoneNumber">The phone number of the customer or prospect</param>
-        /// <param name="phoneNumberCT">Indicates the criteria for the contains operation on the phone number</param>
-        /// <param name="phoneNumberMT">Indicates the criteria for the matches operation on the phone number</param>
-        /// <param name="phoneNumberBW">Indicates the criteria for the between operation on the phone number</param>
-        /// <param name="customerMnemonic">Specifies an alternative easy means of referencing the Customer</param>
-        /// <param name="customerMnemonicCT">Indicates the criteria for the contains operation on the customer mnemonic</param>
-        /// <param name="customerMnemonicBW">Indicates the criteria for the between operation on the customer mnemonic</param>
-        /// <param name="customerMnemonicMT">Indicates the criteria for the matches operation on the customer mnemonic</param>
-        /// <param name="firstName">Specifies customer's first name</param>
-        /// <param name="firstNameBW">Indicates the criteria for the between operation on the first name</param>
-        /// <param name="firstNameMT">Indicates the criteria for the matches operation on the first name</param>
-        /// <param name="firstNameCT">Indicates the criteria for the contains operation on the first name</param>
-        /// <param name="customerType">Contains the type of customer, for example ACTIVE, PROSPECT.</param>
-        /// <param name="customerTypeCT">Indicates the criteria for the contains operation on the customer type</param>
-        /// <param name="customerTypeBW">Indicates the criteria for the between operation on the customer type</param>
-        /// <param name="customerTypeMT">Indicates the criteria for the matches operation on the customer type</param>
-        /// <param name="email">Email Identifier of the Customer</param>
-        /// <param name="emailCT">Indicates the criteria for the contains operation on the emails</param>
-        /// <param name="emailMT">Indicates the criteria for the matches operation on the emails</param>
-        /// <param name="emailBW">Indicates the criteria for the between operation on the emails</param>
-        /// <param name="mobilePhoneNumber">Represents the phone number of a customer</param>
-        /// <param name="mobilePhoneNumberCT">Indicates the criteria for the contains operation on the mobile numbers</param>
-        /// <param name="mobilePhoneNumberBW">Indicates the criteria for the between operation on the mobile numbers</param>
-        /// <param name="mobilePhoneNumberMT">Indicates the criteria for the matches operation on the mobile numbers</param>
-        /// <param name="taxId">Holds the Customer's TAX/SSN Id.</param>
-        /// <param name="taxIdCT">Indicates the criteria for the contains operation on the tax Id</param>
-        /// <param name="taxIdBW">Indicates the criteria for the between operation on the tax Id</param>
-        /// <param name="taxIdMT">Indicates the criteria for the matches operation on the tax Id</param>
-        /// <param name="shortName">Contains the name of the account, basically the short title of the account.</param>
-        /// <param name="shortNameCT">Indicates the criteria for the contains operation on the short name</param>
-        /// <param name="shortNameBW">Indicates the criteria for the between operation on the short name</param>
-        /// <param name="shortNameMT">Indicates the criteria for the matches operation on the short name</param>
-        /// <param name="officePhoneNumber">The office phone number of the customer</param>
-        /// <param name="officePhoneNumberCT">Indicates the criteria for the contains operation on the office phone numbers</param>
-        /// <param name="officePhoneNumberBW">Indicates the criteria for the between operation on the office phone numbers</param>
-        /// <param name="officePhoneNumberMT">Indicates the criteria for the matches operation on the office phone numbers</param>
-        /// <param name="faxId">The fax (facsimile) number of the customer</param>
-        /// <param name="faxIdBW">Indicates the criteria for the between operation on the fax Id</param>
-        /// <param name="faxIdCT">Indicates the criteria for the contains operation on the fax Id</param>
-        /// <param name="faxIdMT">Indicates the criteria for the matches operation on the fax Id</param>
-        /// <param name="address">Communication Address of the Customer</param>
-        /// <param name="addressCT">Indicates the criteria for the contains operation on the address</param>
-        /// <param name="addressBW">Indicates the criteria for the between operation on the address</param>
-        /// <param name="addressMT">Indicates the criteria for the matches operation on the address</param>
-        /// <param name="relCustomer">Customers linked or related to the arrangement owner</param>
-        /// <param name="relCustomerBW">Indicates the criteria for the between operation on the related customer Id</param>
-        /// <param name="relCustomerCT">Indicates the criteria for the contains operation on the related customer Id</param>
-        /// <param name="relCustomerMT">Indicates the criteria for the matches operation on the related customer Id</param>
-        /// <param name="relationshipCode">Relationship identifier between the partyType and relatedPartyType</param>
-        /// <param name="relationshipCodeBW">Indicates the criteria for the between operation on the relationship code</param>
-        /// <param name="relationshipCodeMT">Indicates the criteria for the matches operation on the relationship code</param>
-        /// <param name="relationshipCodeCT">Indicates the criteria for the contains operation on the relationship code</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerInformationResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerInformationResponse> GetCustomerInformationAsync(string? customerId, string? customerIdCT, string? customerIdBW, string? customerIdMT, string? customerName, string? customerNameCT, string? customerNameBW, string? customerNameMT, string? street, string? streetCT, string? streetBW, string? streetMT, string? addressCity, string? addressCityCT, string? addressCityBW, string? addressCityMT, string? countryId, string? countryIdCT, string? countryIdBW, string? countryIdMT, string? postCode, string? postCodeCT, string? postCodeBW, string? postCodeMT, string? dateOfBirth, string? dateOfBirthCT, string? dateOfBirthBW, string? dateOfBirthMT, string? customerStatus, string? customerStatusCT, string? customerStatusBW, string? customerStatusMT, string? sectorId, string? sectorIdCT, string? sectorIdBW, string? sectorIdMT, string? accountOfficerId, string? accountOfficerIdBW, string? accountOfficerIdCT, string? accountOfficerIdMT, string? industryId, string? industryIdBW, string? industryIdCT, string? industryIdMT, string? nationalityId, string? nationalityIdBW, string? nationalityIdCT, string? nationalityIdMT, string? residenceId, string? residenceIdMT, string? residenceIdCT, string? residenceIdBW, string? lastName, string? lastNameCT, string? lastNameBW, string? lastNameMT, string? phoneNumber, string? phoneNumberCT, string? phoneNumberMT, string? phoneNumberBW, string? customerMnemonic, string? customerMnemonicCT, string? customerMnemonicBW, string? customerMnemonicMT, string? firstName, string? firstNameBW, string? firstNameMT, string? firstNameCT, string? customerType, string? customerTypeCT, string? customerTypeBW, string? customerTypeMT, string? email, string? emailCT, string? emailMT, string? emailBW, string? mobilePhoneNumber, string? mobilePhoneNumberCT, string? mobilePhoneNumberBW, string? mobilePhoneNumberMT, string? taxId, string? taxIdCT, string? taxIdBW, string? taxIdMT, string? shortName, string? shortNameCT, string? shortNameBW, string? shortNameMT, string? officePhoneNumber, string? officePhoneNumberCT, string? officePhoneNumberBW, string? officePhoneNumberMT, string? faxId, string? faxIdBW, string? faxIdCT, string? faxIdMT, string? address, string? addressCT, string? addressBW, string? addressMT, string? relCustomer, string? relCustomerBW, string? relCustomerCT, string? relCustomerMT, string? relationshipCode, string? relationshipCodeBW, string? relationshipCodeMT, string? relationshipCodeCT, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerResponse> UpdateCustomerAsync(string customerId, Customer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of customer basic details</summary>
@@ -310,18 +167,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerInformationResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerInformationResponse> GetCustomerInformationAsync(string? customerId, string? customerIdCT, string? customerIdBW, string? customerIdMT, string? customerName, string? customerNameCT, string? customerNameBW, string? customerNameMT, string? street, string? streetCT, string? streetBW, string? streetMT, string? addressCity, string? addressCityCT, string? addressCityBW, string? addressCityMT, string? countryId, string? countryIdCT, string? countryIdBW, string? countryIdMT, string? postCode, string? postCodeCT, string? postCodeBW, string? postCodeMT, string? dateOfBirth, string? dateOfBirthCT, string? dateOfBirthBW, string? dateOfBirthMT, string? customerStatus, string? customerStatusCT, string? customerStatusBW, string? customerStatusMT, string? sectorId, string? sectorIdCT, string? sectorIdBW, string? sectorIdMT, string? accountOfficerId, string? accountOfficerIdBW, string? accountOfficerIdCT, string? accountOfficerIdMT, string? industryId, string? industryIdBW, string? industryIdCT, string? industryIdMT, string? nationalityId, string? nationalityIdBW, string? nationalityIdCT, string? nationalityIdMT, string? residenceId, string? residenceIdMT, string? residenceIdCT, string? residenceIdBW, string? lastName, string? lastNameCT, string? lastNameBW, string? lastNameMT, string? phoneNumber, string? phoneNumberCT, string? phoneNumberMT, string? phoneNumberBW, string? customerMnemonic, string? customerMnemonicCT, string? customerMnemonicBW, string? customerMnemonicMT, string? firstName, string? firstNameBW, string? firstNameMT, string? firstNameCT, string? customerType, string? customerTypeCT, string? customerTypeBW, string? customerTypeMT, string? email, string? emailCT, string? emailMT, string? emailBW, string? mobilePhoneNumber, string? mobilePhoneNumberCT, string? mobilePhoneNumberBW, string? mobilePhoneNumberMT, string? taxId, string? taxIdCT, string? taxIdBW, string? taxIdMT, string? shortName, string? shortNameCT, string? shortNameBW, string? shortNameMT, string? officePhoneNumber, string? officePhoneNumberCT, string? officePhoneNumberBW, string? officePhoneNumberMT, string? faxId, string? faxIdBW, string? faxIdCT, string? faxIdMT, string? address, string? addressCT, string? addressBW, string? addressMT, string? relCustomer, string? relCustomerBW, string? relCustomerCT, string? relCustomerMT, string? relationshipCode, string? relationshipCodeBW, string? relationshipCodeMT, string? relationshipCodeCT, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create a customer</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerResponse> CreateCustomerAsync(Customer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerInformationResponse> GetCustomerInformationAsync(string? customerId = null, string? customerIdCT = null, string? customerIdBW = null, string? customerIdMT = null, string? customerName = null, string? customerNameCT = null, string? customerNameBW = null, string? customerNameMT = null, string? street = null, string? streetCT = null, string? streetBW = null, string? streetMT = null, string? addressCity = null, string? addressCityCT = null, string? addressCityBW = null, string? addressCityMT = null, string? countryId = null, string? countryIdCT = null, string? countryIdBW = null, string? countryIdMT = null, string? postCode = null, string? postCodeCT = null, string? postCodeBW = null, string? postCodeMT = null, string? dateOfBirth = null, string? dateOfBirthCT = null, string? dateOfBirthBW = null, string? dateOfBirthMT = null, string? customerStatus = null, string? customerStatusCT = null, string? customerStatusBW = null, string? customerStatusMT = null, string? sectorId = null, string? sectorIdCT = null, string? sectorIdBW = null, string? sectorIdMT = null, string? accountOfficerId = null, string? accountOfficerIdBW = null, string? accountOfficerIdCT = null, string? accountOfficerIdMT = null, string? industryId = null, string? industryIdBW = null, string? industryIdCT = null, string? industryIdMT = null, string? nationalityId = null, string? nationalityIdBW = null, string? nationalityIdCT = null, string? nationalityIdMT = null, string? residenceId = null, string? residenceIdMT = null, string? residenceIdCT = null, string? residenceIdBW = null, string? lastName = null, string? lastNameCT = null, string? lastNameBW = null, string? lastNameMT = null, string? phoneNumber = null, string? phoneNumberCT = null, string? phoneNumberMT = null, string? phoneNumberBW = null, string? customerMnemonic = null, string? customerMnemonicCT = null, string? customerMnemonicBW = null, string? customerMnemonicMT = null, string? firstName = null, string? firstNameBW = null, string? firstNameMT = null, string? firstNameCT = null, string? customerType = null, string? customerTypeCT = null, string? customerTypeBW = null, string? customerTypeMT = null, string? email = null, string? emailCT = null, string? emailMT = null, string? emailBW = null, string? mobilePhoneNumber = null, string? mobilePhoneNumberCT = null, string? mobilePhoneNumberBW = null, string? mobilePhoneNumberMT = null, string? taxId = null, string? taxIdCT = null, string? taxIdBW = null, string? taxIdMT = null, string? shortName = null, string? shortNameCT = null, string? shortNameBW = null, string? shortNameMT = null, string? officePhoneNumber = null, string? officePhoneNumberCT = null, string? officePhoneNumberBW = null, string? officePhoneNumberMT = null, string? faxId = null, string? faxIdBW = null, string? faxIdCT = null, string? faxIdMT = null, string? address = null, string? addressCT = null, string? addressBW = null, string? addressMT = null, string? relCustomer = null, string? relCustomerBW = null, string? relCustomerCT = null, string? relCustomerMT = null, string? relationshipCode = null, string? relationshipCodeBW = null, string? relationshipCodeMT = null, string? relationshipCodeCT = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create a customer</summary>
@@ -333,24 +179,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerResponse> CreateCustomerAsync(Customer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of customer relationships</summary>
-        /// <param name="customerRelationGroupId">Identifies the key to Customer Relationship Group to form a relation</param>
-        /// <param name="partyId">Allows capturing of customers or person entities to be part of the relationship. If partyType is selected as Customer, then the system will allow only customer Ids to be captured into this field. If partyType is selected as Person or Entity, then system will allow only personEntity Ids to be captured into this field.</param>
-        /// <param name="relatedPartyId">Identifier of the Related Party</param>
-        /// <param name="relationId">Identifier of the Customer Relationship and Party Relationship</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerRelationshipResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipResponse1> GetCustomerRelationshipAsync(string? customerRelationGroupId, string? partyId, string? relatedPartyId, string? relationId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerResponse> CreateCustomerAsync(Customer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of customer relationships</summary>
@@ -368,18 +197,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerRelationshipResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipResponse1> GetCustomerRelationshipAsync(string? customerRelationGroupId, string? partyId, string? relatedPartyId, string? relationId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create customer relationship with other customers</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerRelationshipResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipResponse> CreateCustomerRelationshipAsync(CustomerRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerRelationshipResponse1> GetCustomerRelationshipAsync(string? customerRelationGroupId = null, string? partyId = null, string? relatedPartyId = null, string? relationId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create customer relationship with other customers</summary>
@@ -391,19 +209,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerRelationshipResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipResponse> CreateCustomerRelationshipAsync(CustomerRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update customer relationship</summary>
-        /// <param name="relationId">Identifier of the Customer Relationship and Party Relationship</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerRelationshipResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipResponse> UpdateCustomerRelationshipAsync(string relationId, CustomerRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerRelationshipResponse> CreateCustomerRelationshipAsync(CustomerRelationship payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update customer relationship</summary>
@@ -416,21 +222,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerRelationshipResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipResponse> UpdateCustomerRelationshipAsync(string relationId, CustomerRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves reporting status of the customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerReportingStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerReportingStatusResponse> GetCustomerReportingStatusAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerRelationshipResponse> UpdateCustomerRelationshipAsync(string relationId, CustomerRelationship payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves reporting status of the customer</summary>
@@ -445,21 +237,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerReportingStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerReportingStatusResponse> GetCustomerReportingStatusAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves account sweep details of the specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerSweepsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerSweepsResponse> GetCustomerSweepsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerReportingStatusResponse> GetCustomerReportingStatusAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves account sweep details of the specific customer</summary>
@@ -474,21 +252,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerSweepsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerSweepsResponse> GetCustomerSweepsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves delivery preferences of the customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerDeliveryOptionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerDeliveryOptionsResponse> GetCustomerDeliveryOptionsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerSweepsResponse> GetCustomerSweepsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves delivery preferences of the customer</summary>
@@ -503,22 +267,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerDeliveryOptionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerDeliveryOptionsResponse> GetCustomerDeliveryOptionsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of message channels</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="channelName">Name of the (digital) channel registered by the Customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerDigitalChannelsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerDigitalChannelsResponse> GetCustomerDigitalChannelsAsync(string customerId, string? channelName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerDeliveryOptionsResponse> GetCustomerDeliveryOptionsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of message channels</summary>
@@ -534,18 +283,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerDigitalChannelsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerDigitalChannelsResponse> GetCustomerDigitalChannelsAsync(string customerId, string? channelName, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create a new secure message for a customer</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>MessagesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MessagesResponse> CreateMessagesAsync(Messages payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerDigitalChannelsResponse> GetCustomerDigitalChannelsAsync(string customerId, string? channelName = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create a new secure message for a customer</summary>
@@ -557,21 +295,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>MessagesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<MessagesResponse> CreateMessagesAsync(Messages payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves joint customer details for a specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>JointCustomerDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<JointCustomerDetailsResponse> GetJointCustomerDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<MessagesResponse> CreateMessagesAsync(Messages payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves joint customer details for a specific customer</summary>
@@ -586,21 +310,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>JointCustomerDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<JointCustomerDetailsResponse> GetJointCustomerDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves KYC details for a specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerKYCDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerKYCDetailsResponse> GetCustomerKYCDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<JointCustomerDetailsResponse> GetJointCustomerDetailsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves KYC details for a specific customer</summary>
@@ -615,21 +325,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerKYCDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerKYCDetailsResponse> GetCustomerKYCDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves Personal details of customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerPersonalDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPersonalDetailsResponse> GetCustomerPersonalDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerKYCDetailsResponse> GetCustomerKYCDetailsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves Personal details of customer</summary>
@@ -644,21 +340,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerPersonalDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPersonalDetailsResponse> GetCustomerPersonalDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves posting restriction details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerPostingRestrictionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPostingRestrictionsResponse> GetCustomerPostingRestrictionsAsync(string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerPersonalDetailsResponse> GetCustomerPersonalDetailsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves posting restriction details</summary>
@@ -673,19 +355,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerPostingRestrictionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPostingRestrictionsResponse> GetCustomerPostingRestrictionsAsync(string? customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create party relationship details</summary>
-        /// <param name="relationId">Identifier of the Customer Relationship and Party Relationship</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PartyRelationshipResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyRelationshipResponse> CreatePartyRelationshipAsync(string relationId, PartyRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPostingRestrictionsResponse> GetCustomerPostingRestrictionsAsync(string? customerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create party relationship details</summary>
@@ -698,19 +368,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PartyRelationshipResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyRelationshipResponse> CreatePartyRelationshipAsync(string relationId, PartyRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update party relationship details</summary>
-        /// <param name="relationId">Identifier of the Customer Relationship and Party Relationship</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>PartyRelationshipResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyRelationshipResponse> UpdatePartyRelationshipAsync(string relationId, PartyRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PartyRelationshipResponse> CreatePartyRelationshipAsync(string relationId, PartyRelationship payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update party relationship details</summary>
@@ -723,21 +381,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>PartyRelationshipResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyRelationshipResponse> UpdatePartyRelationshipAsync(string relationId, PartyRelationship payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves card details of a customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerCreditCardsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCreditCardsResponse> GetCustomerCreditCardsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PartyRelationshipResponse> UpdatePartyRelationshipAsync(string relationId, PartyRelationship payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves card details of a customer</summary>
@@ -752,24 +396,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerCreditCardsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerCreditCardsResponse> GetCustomerCreditCardsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves standing instruction details of a customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="standingOrderId">The unique standing order identifier</param>
-        /// <param name="accountId">Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN &amp; BBAN</param>
-        /// <param name="orderingCustomerId">Indicates the customer id for the ordering customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>StandingOrdersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<StandingOrdersResponse> GetStandingOrdersAsync(string customerId, string? standingOrderId, string? accountId, string? orderingCustomerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerCreditCardsResponse> GetCustomerCreditCardsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves standing instruction details of a customer</summary>
@@ -787,22 +414,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>StandingOrdersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<StandingOrdersResponse> GetStandingOrdersAsync(string customerId, string? standingOrderId, string? accountId, string? orderingCustomerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves direct debits details of a customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="directDebitId">The unique identifier of the direct debit mandate.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>DirectDebitsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DirectDebitsResponse> GetDirectDebitsAsync(string customerId, string? directDebitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<StandingOrdersResponse> GetStandingOrdersAsync(string customerId, string? standingOrderId = null, string? accountId = null, string? orderingCustomerId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves direct debits details of a customer</summary>
@@ -818,19 +430,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>DirectDebitsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DirectDebitsResponse> GetDirectDebitsAsync(string customerId, string? directDebitId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create customer delivery preferences</summary>
-        /// <param name="deliveryPreferenceId">Identifier of the customer delivery preferences</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>DeliveryPreferenceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeliveryPreferenceResponse> CreateDeliveryPreferenceAsync(string deliveryPreferenceId, DeliveryPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<DirectDebitsResponse> GetDirectDebitsAsync(string customerId, string? directDebitId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create customer delivery preferences</summary>
@@ -843,19 +443,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>DeliveryPreferenceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeliveryPreferenceResponse> CreateDeliveryPreferenceAsync(string deliveryPreferenceId, DeliveryPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update customer deliver preferences</summary>
-        /// <param name="deliveryPreferenceId">Identifier of the customer delivery preferences</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>DeliveryPreferenceResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeliveryPreferenceResponse> UpdateDeliveryPreferenceAsync(string deliveryPreferenceId, DeliveryPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<DeliveryPreferenceResponse> CreateDeliveryPreferenceAsync(string deliveryPreferenceId, DeliveryPreference payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update customer deliver preferences</summary>
@@ -868,19 +456,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>DeliveryPreferenceResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<DeliveryPreferenceResponse> UpdateDeliveryPreferenceAsync(string deliveryPreferenceId, DeliveryPreference payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update credit limit details for customer</summary>
-        /// <param name="limitId">The identifier of credit limit</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>LimitResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitResponse> UpdateLimitAsync(string limitId, Limit payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<DeliveryPreferenceResponse> UpdateDeliveryPreferenceAsync(string deliveryPreferenceId, DeliveryPreference payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update credit limit details for customer</summary>
@@ -893,21 +469,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>LimitResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<LimitResponse> UpdateLimitAsync(string limitId, Limit payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer exit status details of customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerExitStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusResponse> GetCustomerExitStatusAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<LimitResponse> UpdateLimitAsync(string limitId, Limit payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer exit status details of customer</summary>
@@ -922,19 +484,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerExitStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusResponse> GetCustomerExitStatusAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update customer exit status details of customers</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerExitStatusResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusResponse1> UpdateCustomerExitStatusAsync(string customerId, CustomerExitStatus payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerExitStatusResponse> GetCustomerExitStatusAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update customer exit status details of customers</summary>
@@ -947,22 +497,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerExitStatusResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusResponse1> UpdateCustomerExitStatusAsync(string customerId, CustomerExitStatus payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves conditions to update customer exit status of customer</summary>
-        /// <param name="customerExitStatusId">The field reflects the exit status ID of a customer or prospect from the parameterization table CUSTOMER.EXIT.STATUS</param>
-        /// <param name="customerType">Contains the type of customer, for example ACTIVE, PROSPECT.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerExitStatusParamResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusParamResponse> GetCustomerExitStatusParamAsync(string customerExitStatusId, string? customerType, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerExitStatusResponse1> UpdateCustomerExitStatusAsync(string customerId, CustomerExitStatus payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves conditions to update customer exit status of customer</summary>
@@ -978,19 +513,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerExitStatusParamResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusParamResponse> GetCustomerExitStatusParamAsync(string customerExitStatusId, string? customerType, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create conditions to update customer exit status of customer</summary>
-        /// <param name="customerExitStatusId">The field reflects the exit status ID of a customer or prospect from the parameterization table CUSTOMER.EXIT.STATUS</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerExitStatusParamResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusParamResponse1> CreateCustomerExitStatusParamAsync(string customerExitStatusId, CustomerExitStatusParam payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerExitStatusParamResponse> GetCustomerExitStatusParamAsync(string customerExitStatusId, string? customerType = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create conditions to update customer exit status of customer</summary>
@@ -1003,19 +526,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerExitStatusParamResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusParamResponse1> CreateCustomerExitStatusParamAsync(string customerExitStatusId, CustomerExitStatusParam payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create conditions to update customer exit status of customer</summary>
-        /// <param name="customerExitStatusId">The field reflects the exit status ID of a customer or prospect from the parameterization table CUSTOMER.EXIT.STATUS</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerExitStatusParamResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusParamResponse1> UpdateCustomerExitStatusParamAsync(string customerExitStatusId, CustomerExitStatusParam payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerExitStatusParamResponse1> CreateCustomerExitStatusParamAsync(string customerExitStatusId, CustomerExitStatusParam payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create conditions to update customer exit status of customer</summary>
@@ -1028,23 +539,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerExitStatusParamResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerExitStatusParamResponse1> UpdateCustomerExitStatusParamAsync(string customerExitStatusId, CustomerExitStatusParam payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves structured/ unstructured address format of customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="addressOption">It reflects the preference for the customer address format, respective structured, unstructured or both</param>
-        /// <param name="addressOutputFormat">It identifies the address output format for the unstructured address</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerAddressOutputResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerAddressOutputResponse> GetCustomerAddressOutputAsync(string customerId, string? addressOption, string? addressOutputFormat, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerExitStatusParamResponse1> UpdateCustomerExitStatusParamAsync(string customerExitStatusId, CustomerExitStatusParam payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves structured/ unstructured address format of customer</summary>
@@ -1061,17 +556,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerAddressOutputResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerAddressOutputResponse> GetCustomerAddressOutputAsync(string customerId, string? addressOption, string? addressOutputFormat, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer short name</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerShortNamesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerShortNamesResponse> GetCustomerShortNamesAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerAddressOutputResponse> GetCustomerAddressOutputAsync(string customerId, string? addressOption = null, string? addressOutputFormat = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer short name</summary>
@@ -1082,17 +567,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerShortNamesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerShortNamesResponse> GetCustomerShortNamesAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves mandate instruction applicable for the requested customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerMandatesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerMandatesResponse> GetCustomerMandatesAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerShortNamesResponse> GetCustomerShortNamesAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves mandate instruction applicable for the requested customer</summary>
@@ -1103,17 +578,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerMandatesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerMandatesResponse> GetCustomerMandatesAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the customer legal document details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerLegalDocumentsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLegalDocumentsResponse> GetCustomerLegalDocumentsAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerMandatesResponse> GetCustomerMandatesAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the customer legal document details</summary>
@@ -1124,16 +589,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerLegalDocumentsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerLegalDocumentsResponse> GetCustomerLegalDocumentsAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves profile details of the requested customer</summary>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerProfileResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerProfileResponse> GetCustomerProfileAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerLegalDocumentsResponse> GetCustomerLegalDocumentsAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves profile details of the requested customer</summary>
@@ -1143,21 +599,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerProfileResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerProfileResponse> GetCustomerProfileAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer id for the given alternate reference</summary>
-        /// <param name="alternateReference">If the new Account to be created is a shadow of another Account already exisitng in another system, then the Account reference of that system can be specified here. The value given in this field will be mapped to ALTERNATE.ID field in arrangement activity and ensure that this Account doesn't already exist in T24 with another reference (because ALTERNATE.ID would be configured to be unique across T24).</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerIdResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerIdResponse> GetCustomerIdAsync(string alternateReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerProfileResponse> GetCustomerProfileAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer id for the given alternate reference</summary>
@@ -1172,16 +614,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerIdResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerIdResponse> GetCustomerIdAsync(string alternateReference, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the restriction details</summary>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerRestrictionsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRestrictionsResponse> GetCustomerRestrictionsAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerIdResponse> GetCustomerIdAsync(string alternateReference, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the restriction details</summary>
@@ -1191,21 +624,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerRestrictionsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRestrictionsResponse> GetCustomerRestrictionsAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the customer contact details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerContactsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerContactsResponse> GetCustomerContactsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerRestrictionsResponse> GetCustomerRestrictionsAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the customer contact details</summary>
@@ -1220,16 +639,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerContactsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerContactsResponse> GetCustomerContactsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the relation customers</summary>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerRelationshipsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipsResponse> GetCustomerRelationshipsAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerContactsResponse> GetCustomerContactsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the relation customers</summary>
@@ -1239,21 +649,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerRelationshipsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRelationshipsResponse> GetCustomerRelationshipsAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer details required for payment processing</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PartyBasicDetailsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyBasicDetailsResponse> GetPartyBasicDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerRelationshipsResponse> GetCustomerRelationshipsAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer details required for payment processing</summary>
@@ -1268,22 +664,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PartyBasicDetailsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyBasicDetailsResponse> GetPartyBasicDetailsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the SWIFT address details for the customer.</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="addressId">Reference Id of address record</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerSwiftAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerSwiftAddressResponse> GetCustomerSwiftAddressAsync(string customerId, string addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<PartyBasicDetailsResponse> GetPartyBasicDetailsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the SWIFT address details for the customer.</summary>
@@ -1299,21 +680,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerSwiftAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerSwiftAddressResponse> GetCustomerSwiftAddressAsync(string customerId, string addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves list of party relationship details</summary>
-        /// <param name="partyId">Allows capturing of customers or person entities to be part of the relationship. If partyType is selected as Customer, then the system will allow only customer Ids to be captured into this field. If partyType is selected as Person or Entity, then system will allow only personEntity Ids to be captured into this field.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>PartyRelationshipResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyRelationshipResponse1> GetPartyRelationshipAsync(string partyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerSwiftAddressResponse> GetCustomerSwiftAddressAsync(string customerId, string addressId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves list of party relationship details</summary>
@@ -1328,17 +695,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>PartyRelationshipResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PartyRelationshipResponse1> GetPartyRelationshipAsync(string partyId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer charge for a specific customer.</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerChargeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerChargeResponse> GetCustomerChargeAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<PartyRelationshipResponse1> GetPartyRelationshipAsync(string partyId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer charge for a specific customer.</summary>
@@ -1349,19 +706,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerChargeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerChargeResponse> GetCustomerChargeAsync(string customerId, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates customer charge for a specific customer.</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerChargeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerChargeResponse> CreateCustomerChargeAsync(string customerId, CustomerCharge payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerChargeResponse> GetCustomerChargeAsync(string customerId, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates customer charge for a specific customer.</summary>
@@ -1374,19 +719,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerChargeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerChargeResponse> CreateCustomerChargeAsync(string customerId, CustomerCharge payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates customer charge for a specific customer.</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerChargeResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerChargeResponse> UpdateCustomerChargeAsync(string customerId, CustomerCharge payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerChargeResponse> CreateCustomerChargeAsync(string customerId, CustomerCharge payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates customer charge for a specific customer.</summary>
@@ -1399,22 +732,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerChargeResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerChargeResponse> UpdateCustomerChargeAsync(string customerId, CustomerCharge payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves available list of customer sms communication addresses</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="addressId">Reference Id of address record</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerPhoneAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse> GetCustomerPhoneAddressAsync(string customerId, string? addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerChargeResponse> UpdateCustomerChargeAsync(string customerId, CustomerCharge payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves available list of customer sms communication addresses</summary>
@@ -1430,19 +748,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerPhoneAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse> GetCustomerPhoneAddressAsync(string customerId, string? addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates customer sms communication address</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerPhoneAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> CreateCustomerPhoneAddressAsync(string customerId, CustomerPhoneAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPhoneAddressResponse> GetCustomerPhoneAddressAsync(string customerId, string? addressId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates customer sms communication address</summary>
@@ -1455,22 +761,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerPhoneAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> CreateCustomerPhoneAddressAsync(string customerId, CustomerPhoneAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves available list of customer email communication addresses</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="addressId">Reference Id of address record</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerEmailAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse> GetCustomerEmailAddressAsync(string customerId, string? addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> CreateCustomerPhoneAddressAsync(string customerId, CustomerPhoneAddress payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves available list of customer email communication addresses</summary>
@@ -1486,19 +777,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerEmailAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse> GetCustomerEmailAddressAsync(string customerId, string? addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates customer email communication address</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerEmailAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> CreateCustomerEmailAddressAsync(string customerId, CustomerEmailAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerEmailAddressResponse> GetCustomerEmailAddressAsync(string customerId, string? addressId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates customer email communication address</summary>
@@ -1511,22 +790,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerEmailAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> CreateCustomerEmailAddressAsync(string customerId, CustomerEmailAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves available list of customer print communication addresses</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="addressId">Reference Id of address record</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerPrintAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse> GetCustomerPrintAddressAsync(string customerId, string? addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> CreateCustomerEmailAddressAsync(string customerId, CustomerEmailAddress payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves available list of customer print communication addresses</summary>
@@ -1542,19 +806,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerPrintAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse> GetCustomerPrintAddressAsync(string customerId, string? addressId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Creates customer print communication address</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerPrintAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> CreateCustomerPrintAddressAsync(string customerId, CustomerPrintAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPrintAddressResponse> GetCustomerPrintAddressAsync(string customerId, string? addressId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Creates customer print communication address</summary>
@@ -1567,19 +819,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerPrintAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> CreateCustomerPrintAddressAsync(string customerId, CustomerPrintAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates customer sms communication address</summary>
-        /// <param name="customerAddressId">Identifier of the customer address table.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerPhoneAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> UpdateCustomerPhoneAddressAsync(string customerAddressId, CustomerPhoneAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> CreateCustomerPrintAddressAsync(string customerId, CustomerPrintAddress payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates customer sms communication address</summary>
@@ -1592,19 +832,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerPhoneAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> UpdateCustomerPhoneAddressAsync(string customerAddressId, CustomerPhoneAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes customer sms communication address</summary>
-        /// <param name="customerAddressId">Identifier of the customer address table.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerPhoneAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> DeleteCustomerPhoneAddressAsync(string customerAddressId, CustomerPhoneAddressDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> UpdateCustomerPhoneAddressAsync(string customerAddressId, CustomerPhoneAddress payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes customer sms communication address</summary>
@@ -1617,19 +845,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerPhoneAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> DeleteCustomerPhoneAddressAsync(string customerAddressId, CustomerPhoneAddressDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates customer email communication address</summary>
-        /// <param name="customerAddressId">Identifier of the customer address table.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerEmailAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> UpdateCustomerEmailAddressAsync(string customerAddressId, CustomerEmailAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPhoneAddressResponse1> DeleteCustomerPhoneAddressAsync(string customerAddressId, CustomerPhoneAddressDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates customer email communication address</summary>
@@ -1642,19 +858,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerEmailAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> UpdateCustomerEmailAddressAsync(string customerAddressId, CustomerEmailAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes customer email communication address</summary>
-        /// <param name="customerAddressId">Identifier of the customer address table.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerEmailAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> DeleteCustomerEmailAddressAsync(string customerAddressId, CustomerEmailAddressDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> UpdateCustomerEmailAddressAsync(string customerAddressId, CustomerEmailAddress payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes customer email communication address</summary>
@@ -1667,19 +871,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerEmailAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> DeleteCustomerEmailAddressAsync(string customerAddressId, CustomerEmailAddressDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Updates customer print communication address</summary>
-        /// <param name="customerAddressId">Identifier of the customer address table.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerPrintAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> UpdateCustomerPrintAddressAsync(string customerAddressId, CustomerPrintAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerEmailAddressResponse1> DeleteCustomerEmailAddressAsync(string customerAddressId, CustomerEmailAddressDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Updates customer print communication address</summary>
@@ -1692,19 +884,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerPrintAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> UpdateCustomerPrintAddressAsync(string customerAddressId, CustomerPrintAddress payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Deletes customer print communication address</summary>
-        /// <param name="customerAddressId">Identifier of the customer address table.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>CustomerPrintAddressResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> DeleteCustomerPrintAddressAsync(string customerAddressId, CustomerPrintAddressDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> UpdateCustomerPrintAddressAsync(string customerAddressId, CustomerPrintAddress payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Deletes customer print communication address</summary>
@@ -1717,22 +897,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>CustomerPrintAddressResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> DeleteCustomerPrintAddressAsync(string customerAddressId, CustomerPrintAddressDelete? payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves customer consents details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="propertyClassId">The identifier of a condition that is used to build a product</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerConsentsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerConsentsResponse> GetCustomerConsentsAsync(string customerId, string? propertyClassId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerPrintAddressResponse1> DeleteCustomerPrintAddressAsync(string customerAddressId, CustomerPrintAddressDelete? payload = null, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves customer consents details</summary>
@@ -1748,19 +913,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerConsentsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerConsentsResponse> GetCustomerConsentsAsync(string customerId, string? propertyClassId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create FATCA customer supplementary information details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FatcaCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FatcaCustomerResponse> CreateFatcaCustomerAsync(string customerId, FatcaCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerConsentsResponse> GetCustomerConsentsAsync(string customerId, string? propertyClassId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create FATCA customer supplementary information details</summary>
@@ -1773,19 +926,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FatcaCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FatcaCustomerResponse> CreateFatcaCustomerAsync(string customerId, FatcaCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update FATCA customer supplementary information details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>FatcaCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FatcaCustomerResponse> UpdateFatcaCustomerAsync(string customerId, FatcaCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<FatcaCustomerResponse> CreateFatcaCustomerAsync(string customerId, FatcaCustomer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update FATCA customer supplementary information details</summary>
@@ -1798,33 +939,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>FatcaCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FatcaCustomerResponse> UpdateFatcaCustomerAsync(string customerId, FatcaCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Get overdue settlement</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="portfolioId">Id of the portfolio or security account</param>
-        /// <param name="transactionId">Unique transaction identifier for retrieving the details of the transaction. For example: FT0102030333 etc.</param>
-        /// <param name="brokerId">The identifier of the broker</param>
-        /// <param name="tradeDate">Standard date field which records trade date of the account</param>
-        /// <param name="valueDate">Indicates the value date on which the underlying accounting entry is to be given value (for interest purposes)</param>
-        /// <param name="depository">Person designated as depository by the company in or pursuant to this Indenture, and, unless otherwise provided with respect to any security, any successor to such person</param>
-        /// <param name="currency">Identifies the currency. E.g. USD, GBP etc</param>
-        /// <param name="instrumentId">The identifier of the instrument</param>
-        /// <param name="deliveryInstruction">Customer's directions to a bank as to the disposition of funds and securities in the customer's account</param>
-        /// <param name="transactionType">Identifies the transaction type applicable to the transaction being processed, i.e. outward or inward payment. For example: ACPX, OTPX etc.</param>
-        /// <param name="quantity">The nominal quantity</param>
-        /// <param name="stockExchange">The stock exchange identifier</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>OverdueSettlementsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OverdueSettlementsResponse> GetOverdueSettlementsAsync(string customerId, string portfolioId, string? transactionId, string? brokerId, string? tradeDate, string? valueDate, string? depository, string? currency, string? instrumentId, string? deliveryInstruction, string? transactionType, string? quantity, string? stockExchange, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<FatcaCustomerResponse> UpdateFatcaCustomerAsync(string customerId, FatcaCustomer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Get overdue settlement</summary>
@@ -1851,25 +966,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>OverdueSettlementsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OverdueSettlementsResponse> GetOverdueSettlementsAsync(string customerId, string portfolioId, string? transactionId, string? brokerId, string? tradeDate, string? valueDate, string? depository, string? currency, string? instrumentId, string? deliveryInstruction, string? transactionType, string? quantity, string? stockExchange, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves other banks to connect to details</summary>
-        /// <param name="openBankingId">Identifies the open banking number of the customer</param>
-        /// <param name="countryId">ISO country code of the financial institution.</param>
-        /// <param name="setActive">Flag to set the connection status to active</param>
-        /// <param name="status">Contains status of the data rights request.Allowed values are INITIATED, INPROGESS, EXTENDED, COMPLETED, REJECTED.</param>
-        /// <param name="extSourceProvider">Contains the name of the external source provider for the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>OtherBanksToConnectToResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OtherBanksToConnectToResponse> GetOtherBanksToConnectToAsync(string? openBankingId, string? countryId, string? setActive, string? status, string? extSourceProvider, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<OverdueSettlementsResponse> GetOverdueSettlementsAsync(string customerId, string portfolioId, string? transactionId = null, string? brokerId = null, string? tradeDate = null, string? valueDate = null, string? depository = null, string? currency = null, string? instrumentId = null, string? deliveryInstruction = null, string? transactionType = null, string? quantity = null, string? stockExchange = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves other banks to connect to details</summary>
@@ -1888,20 +985,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>OtherBanksToConnectToResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<OtherBanksToConnectToResponse> GetOtherBanksToConnectToAsync(string? openBankingId, string? countryId, string? setActive, string? status, string? extSourceProvider, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves prospect customer details of a customer</summary>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>ProspectCustomersResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProspectCustomersResponse> GetProspectCustomersAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<OtherBanksToConnectToResponse> GetOtherBanksToConnectToAsync(string? openBankingId = null, string? countryId = null, string? setActive = null, string? status = null, string? extSourceProvider = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves prospect customer details of a customer</summary>
@@ -1915,18 +999,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>ProspectCustomersResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProspectCustomersResponse> GetProspectCustomersAsync(int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Create a prospect customer</summary>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ProspectCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProspectCustomerResponse> CreateProspectCustomerAsync(ProspectCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<ProspectCustomersResponse> GetProspectCustomersAsync(int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Create a prospect customer</summary>
@@ -1938,21 +1011,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ProspectCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProspectCustomerResponse> CreateProspectCustomerAsync(ProspectCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves the sales opportunities for specific customers</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerOpportunitiesResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerOpportunitiesResponse> GetCustomerOpportunitiesAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ProspectCustomerResponse> CreateProspectCustomerAsync(ProspectCustomer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves the sales opportunities for specific customers</summary>
@@ -1967,21 +1026,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerOpportunitiesResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerOpportunitiesResponse> GetCustomerOpportunitiesAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves process workflows for a specific customer</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>CustomerRequestsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRequestsResponse> GetCustomerRequestsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<CustomerOpportunitiesResponse> GetCustomerOpportunitiesAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves process workflows for a specific customer</summary>
@@ -1996,19 +1041,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>CustomerRequestsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CustomerRequestsResponse> GetCustomerRequestsAsync(string customerId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Update the details of the prospect customer</summary>
-        /// <param name="prospectId">Indicates the status of an onboarding customer. Status can be PROSPECT while onboarding and ACTIVE when the prospect becomes a Customer.</param>
-        /// <param name="payload">body Payload</param>
-        /// <param name="validate_only">The identifier to indicate if it is set to only validate or not.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <returns>ProspectCustomerResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProspectCustomerResponse> UpdateProspectCustomerAsync(string prospectId, ProspectCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole);
+        System.Threading.Tasks.Task<CustomerRequestsResponse> GetCustomerRequestsAsync(string customerId, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Update the details of the prospect customer</summary>
@@ -2021,24 +1054,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="userRole">User who initiated the transaction</param>
         /// <returns>ProspectCustomerResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ProspectCustomerResponse> UpdateProspectCustomerAsync(string prospectId, ProspectCustomer payload, bool? validate_only, string? credentials, string? companyId, string? deviceId, string? userRole, System.Threading.CancellationToken cancellationToken);
-    
-        /// <summary>Retrieves alert requests details</summary>
-        /// <param name="customerId">Identifier of the customer</param>
-        /// <param name="contractReference">Contains the contract reference</param>
-        /// <param name="subscribe">Enables an alert service</param>
-        /// <param name="alertRequestId">The unique identifier of the alert request.</param>
-        /// <param name="page_size">The total number of records per page</param>
-        /// <param name="page_start">The record from which the response should be displayed</param>
-        /// <param name="page_token">Unique id expected to get as part of response from Transact on every enquiry request.</param>
-        /// <param name="credentials">Username and password to authenticate the API against core-banking.</param>
-        /// <param name="companyId">Identifier of the lead company of the underlying Entity/Company/Branch for the respective contract for customer data protection purposes. Example US0010001.</param>
-        /// <param name="deviceId">Identifies the device type</param>
-        /// <param name="userRole">User who initiated the transaction</param>
-        /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
-        /// <returns>AlertRequestsResponse</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlertRequestsResponse> GetAlertRequestsAsync(string customerId, string? contractReference, string? subscribe, string? alertRequestId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination);
+        System.Threading.Tasks.Task<ProspectCustomerResponse> UpdateProspectCustomerAsync(string prospectId, ProspectCustomer payload, bool? validate_only = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Retrieves alert requests details</summary>
@@ -2056,7 +1072,7 @@ namespace Transact.Party.CustomerServices
         /// <param name="disablePagination">Indicates the pagination header attributes availability. If set to 'true', it fetches all the data</param>
         /// <returns>AlertRequestsResponse</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlertRequestsResponse> GetAlertRequestsAsync(string customerId, string? contractReference, string? subscribe, string? alertRequestId, int? page_size, int? page_start, string? page_token, string? credentials, string? companyId, string? deviceId, string? userRole, bool? disablePagination, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<AlertRequestsResponse> GetAlertRequestsAsync(string customerId, string? contractReference = null, string? subscribe = null, string? alertRequestId = null, int? page_size = null, int? page_start = null, string? page_token = null, string? credentials = null, string? companyId = null, string? deviceId = null, string? userRole = null, bool? disablePagination = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
     }
 

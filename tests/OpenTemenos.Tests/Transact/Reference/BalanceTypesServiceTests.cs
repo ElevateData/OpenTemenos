@@ -10,7 +10,7 @@ public class BalanceTypesServiceTests : CredentialManagement
     [TestMethod]
     public void GetBalanceTypesAsync()
     {
-        var result = _client.BalanceTypesService.GetBalanceTypesAsync(null, null, null, null, null).Result;
+        var result = _client.BalanceTypesService.GetBalanceTypesAsync().Result;
         Assert.IsNotNull(result.Body);
     }
 }

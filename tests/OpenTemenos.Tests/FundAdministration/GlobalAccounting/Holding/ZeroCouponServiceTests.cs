@@ -14,7 +14,7 @@ public class ZeroCouponServiceTests : CredentialManagement
     public void CreateZeroCouponAsync()
     {
         var payload = new _0BULKPayload();
-        var result = _client.ZeroCouponService.CreateZeroCouponAsync(null, null, null, null, null, payload).Result;
+        var result = _client.ZeroCouponService.CreateZeroCouponAsync(payload).Result;
         Assert.IsNotNull(result.Body);
     }
 }
