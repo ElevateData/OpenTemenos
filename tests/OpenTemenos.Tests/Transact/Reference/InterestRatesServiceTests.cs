@@ -8,7 +8,7 @@ public class InterestRatesServiceTests : CredentialManagement
 {
     private const string RateId = "1";
     private const string Date = "20201209";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetRateTextsAsync()

@@ -10,7 +10,7 @@ public class EnterpriseProductPricingServiceTests : CredentialManagement
     private const string ArrangementId = "";
     private const string PackageId = "";
     private const string PartyId = "";
-    private readonly IEnterpriseClient _client = new EnterpriseClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IEnterpriseClient _client = new EnterpriseClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetPackageStatementAsync()

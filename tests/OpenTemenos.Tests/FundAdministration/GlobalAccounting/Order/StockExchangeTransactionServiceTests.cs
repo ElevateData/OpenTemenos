@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Order;
 [TestClass]
 public class StockExchangeTransactionServiceTests : CredentialManagement
 {
-    private readonly IOrderClient _client = new OrderClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
 
 
     [TestMethod]

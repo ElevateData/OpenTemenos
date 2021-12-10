@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Reference;
 [TestClass]
 public class BalanceTypesServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetBalanceTypesAsync()

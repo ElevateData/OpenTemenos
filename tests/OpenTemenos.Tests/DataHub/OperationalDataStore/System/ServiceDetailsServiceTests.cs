@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.System;
 public class ServiceDetailsServiceTests : CredentialManagement
 {
     private readonly DateTimeOffset _batchDate = DateTimeOffset.Now.AddDays(-1);
-    private readonly ISystemClient _client = new SystemClient(HttpClient){ ReadResponseAsString = true };
+    private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetAllReportTimesAsync()

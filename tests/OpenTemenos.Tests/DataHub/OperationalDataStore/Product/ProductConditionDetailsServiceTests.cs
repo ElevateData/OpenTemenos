@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 public class ProductConditionDetailsServiceTests : CredentialManagement
 {
     private const string ProductId = "";
-    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetProtectionLimitConditionsAsync()

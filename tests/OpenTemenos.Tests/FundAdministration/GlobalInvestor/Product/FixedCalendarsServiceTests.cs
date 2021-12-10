@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 public class FixedCalendarsServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
-    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("POST method")]

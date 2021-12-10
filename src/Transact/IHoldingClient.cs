@@ -7,9 +7,12 @@ using Transact.Holding.ArrangementsProductLines;
 using Transact.Holding.Cards;
 using Transact.Holding.CashManagementBundles;
 using Transact.Holding.Collaterals;
+using Transact.Holding.CreateNonDeliverableForwards;
+using Transact.Holding.CurrencyPosition;
 using Transact.Holding.CustomerArrangements;
 using Transact.Holding.Customers;
 using Transact.Holding.Dashboards;
+using Transact.Holding.Deposits;
 using Transact.Holding.DerivativesOptions;
 using Transact.Holding.Entitlements;
 using Transact.Holding.ForexUtilizations;
@@ -39,7 +42,9 @@ public interface IHoldingClient
     public IEntitlementsService CorporateActionEventManagementService { get; }
     //public ICreditAgreementsApiService CorporateCreditAgreementsService {get;}
     public IDashboardsService CorporateDashboardService { get; }
+    public IDepositsService DepositService { get; }
     //public ILoansArrangementsService LoanCreationService {get;}
+    public ICurrencyPositionService CurrencyPositionService { get; }
     //public IAccountsArrangementsService CustomerArrangementAccountService { get; }
     public ICustomerArrangementsService CustomerArrangementService { get; }
     public ICustomersService CustomerHoldingService { get; }
@@ -54,6 +59,7 @@ public interface IHoldingClient
     [Obsolete("All methods are obsolete")]
     public IArrangementsBalancesService ArrangementAccountDocumentService { get; }
     public ICollateralsService CustomerCollateralService { get; }
+    public ICreateNonDeliverableForwardsService CreateNonDeliverableForwardService { get; }
     public IForexUtilizationsService ForexUtilizationService { get; }
     public IGuaranteesService GuaranteeService { get; }
     public ILetterOfCreditService LetterOfCreditService { get; }

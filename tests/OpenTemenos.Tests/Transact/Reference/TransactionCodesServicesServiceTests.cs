@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class TransactionCodesServicesServiceTests : CredentialManagement
 {
     private const string TransactionCode = "1";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetTransactionCodeAsync()

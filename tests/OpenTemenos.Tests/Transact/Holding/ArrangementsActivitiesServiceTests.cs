@@ -1,4 +1,5 @@
-﻿using Transact;
+﻿using System;
+using Transact;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
@@ -7,11 +8,11 @@ namespace OpenTemenos.Tests.Transact.Holding;
 public class ArrangementsActivitiesServiceTests : CredentialManagement
 {
     private const string ArrangementId = "";
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("Obsolete")]
-    [global::System.Obsolete("Flagged by Temenos")]
+    [Obsolete("Flagged by Temenos")]
     public void GetArrangementActivityLogAsync()
     {
         var result = _client.ArrangementsActivityService.GetArrangementActivityLogAsync(ArrangementId, null, null, null,

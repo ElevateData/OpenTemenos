@@ -7,7 +7,7 @@ public class ArrangementsDetailsServiceTests : CredentialManagement
 {
     private const string CustomerId = "";
     private const string RecordId = "";
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetArrangementsForCustomersAsync()

@@ -5,5 +5,26 @@ namespace OpenTemenos.Tests.Transact.Holding;
 [TestClass]
 public class CurrencyPositionServiceTests : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
+    private const string CurrencyId = "USD";
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
+
+    [TestMethod]
+    public void GetCurrencyPositionsAsync()
+    {
+        var result = _client.CurrencyPositionService
+            .GetCurrencyPositionsAsync(null, null, null, null, null, null, null, null, null)
+            .Result;
+        Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+    }
+
+    [TestMethod]
+    public void GetCurrencyCalendarPositionsAsync()
+    {
+        var result = _client.CurrencyPositionService
+            .GetCurrencyCalendarPositionsAsync(CurrencyId, null, null, null, null, null, null, null, null, null)
+            .Result;
+        Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+    }
 }

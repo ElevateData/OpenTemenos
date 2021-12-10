@@ -3,7 +3,7 @@
 namespace OpenTemenos.Tests.Transact.Holding;
 
 [TestClass]
-public class ReportsServiceTests : CredentialManagement
+public class HoldingServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 }

@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Reference;
 [TestClass]
 public class SwapsPriceServiceTests : CredentialManagement
 {
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("POST method")]

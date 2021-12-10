@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 public class CommDistributionsServiceTests : CredentialManagement
 {
     private const string InternalId = "1";
-    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     [Ignore("POST method")]

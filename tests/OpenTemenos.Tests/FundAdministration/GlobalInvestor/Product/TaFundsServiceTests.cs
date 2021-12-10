@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 public class TaFundsServiceTests : CredentialManagement
 {
     private const string FundId = "1";
-    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetTaFundAsync()

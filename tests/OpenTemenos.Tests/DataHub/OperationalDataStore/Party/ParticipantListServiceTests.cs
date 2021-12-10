@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Party;
 [TestClass]
 public class ParticipantListServiceTests : CredentialManagement
 {
-    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 
 
     [TestMethod]

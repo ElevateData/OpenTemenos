@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Holding;
 [TestClass]
 public class CustomerLoanDelinquency30DaysServiceTests : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
 
     [TestMethod]

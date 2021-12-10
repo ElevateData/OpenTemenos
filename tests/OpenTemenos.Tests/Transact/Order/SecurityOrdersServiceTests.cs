@@ -5,5 +5,5 @@ namespace OpenTemenos.Tests.Transact.Order;
 [TestClass]
 public class SecurityOrdersServiceTests : CredentialManagement
 {
-    private readonly IOrderClient _client = new OrderClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
 }

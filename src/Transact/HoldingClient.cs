@@ -7,9 +7,12 @@ using Transact.Holding.ArrangementsProductLines;
 using Transact.Holding.Cards;
 using Transact.Holding.CashManagementBundles;
 using Transact.Holding.Collaterals;
+using Transact.Holding.CreateNonDeliverableForwards;
+using Transact.Holding.CurrencyPosition;
 using Transact.Holding.CustomerArrangements;
 using Transact.Holding.Customers;
 using Transact.Holding.Dashboards;
+using Transact.Holding.Deposits;
 using Transact.Holding.DerivativesOptions;
 using Transact.Holding.Entitlements;
 using Transact.Holding.ForexUtilizations;
@@ -49,6 +52,10 @@ public class HoldingClient : IHoldingClient
     public IEntitlementsService CorporateActionEventManagementService => new EntitlementsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IDashboardsService CorporateDashboardService => new DashboardsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    [Obsolete("All methods are obsolete")]
+    public IDepositsService DepositService => new DepositsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public ICurrencyPositionService CurrencyPositionService => new CurrencyPositionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ICustomerArrangementsService CustomerArrangementService => new CustomerArrangementsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
@@ -67,6 +74,8 @@ public class HoldingClient : IHoldingClient
     public IArrangementsBalancesService ArrangementAccountDocumentService => new ArrangementsBalancesService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public ICollateralsService CustomerCollateralService => new CollateralsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public ICreateNonDeliverableForwardsService CreateNonDeliverableForwardService => new CreateNonDeliverableForwardsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IForexUtilizationsService ForexUtilizationService => new ForexUtilizationsService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 

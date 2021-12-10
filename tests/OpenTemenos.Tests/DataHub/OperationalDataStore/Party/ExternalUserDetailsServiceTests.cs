@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Party;
 public class ExternalUserDetailsServiceTests : CredentialManagement
 {
     private const string RecordId = "";
-    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetExternalUserAsync()

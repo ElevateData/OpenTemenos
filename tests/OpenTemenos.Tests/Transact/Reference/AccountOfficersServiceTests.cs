@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class AccountOfficersServiceTests : CredentialManagement
 {
     private const string AccountOfficerId = "1";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetAccountOfficersAsync()

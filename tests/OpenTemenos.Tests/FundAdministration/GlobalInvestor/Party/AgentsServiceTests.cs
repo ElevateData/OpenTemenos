@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 public class AgentsServiceTests : CredentialManagement
 {
     private const string AgentId = "1";
-    private readonly IPartyClient _client = new PartyClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetAgentAsync()

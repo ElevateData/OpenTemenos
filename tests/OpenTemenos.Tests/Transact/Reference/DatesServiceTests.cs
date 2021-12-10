@@ -8,7 +8,7 @@ public class DatesServiceTests : CredentialManagement
 {
     private const string CompanyIdPath = "US0010001";
     private const string HolidayId = "";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetDatesAsync()

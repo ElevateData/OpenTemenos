@@ -6,7 +6,7 @@ namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Holding;
 public class AccountTransactionMetricsServiceTests
     : CredentialManagement
 {
-    private readonly IHoldingClient _client = new HoldingClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetAccountTransactionMetricsAsync()

@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 public class SecurityServiceTests : CredentialManagement
 {
     private const string SecId = "1";
-    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetSecurityAsync()

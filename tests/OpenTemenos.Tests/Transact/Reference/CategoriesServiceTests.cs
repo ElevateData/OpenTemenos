@@ -7,7 +7,7 @@ namespace OpenTemenos.Tests.Transact.Reference;
 public class CategoriesServiceTests : CredentialManagement
 {
     private const string CategoryId = "1000";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetCategoriesAsync()

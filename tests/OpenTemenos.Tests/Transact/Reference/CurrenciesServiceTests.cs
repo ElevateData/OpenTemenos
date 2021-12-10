@@ -11,7 +11,7 @@ public class CurrenciesServiceTests : CredentialManagement
     private const string NumericCurrencyCode = "";
     private const string Year = "2020";
     private const string Rank = "1";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetCurrenciesAsync()

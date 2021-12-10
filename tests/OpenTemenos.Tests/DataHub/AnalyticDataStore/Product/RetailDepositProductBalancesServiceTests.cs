@@ -5,7 +5,7 @@ namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Product;
 [TestClass]
 public class RetailDepositProductBalancesServiceTests : CredentialManagement
 {
-    private readonly IProductClient _client = new ProductClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
 
     [TestMethod]

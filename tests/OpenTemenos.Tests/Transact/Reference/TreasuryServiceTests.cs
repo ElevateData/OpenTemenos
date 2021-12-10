@@ -9,7 +9,7 @@ public class TreasuryServiceTests : CredentialManagement
     private const string DealMethodId = "";
     private const string RevaluationTypeId = "";
     private const string CurrencyOrPair = "Currency";
-    private readonly IReferenceClient _client = new ReferenceClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
     public void GetForexAgreementTypesAsync()

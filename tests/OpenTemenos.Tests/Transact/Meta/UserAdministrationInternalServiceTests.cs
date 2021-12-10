@@ -5,5 +5,5 @@ namespace OpenTemenos.Tests.Transact.Meta;
 [TestClass]
 public class UserAdministrationInternalServiceTests : CredentialManagement
 {
-    private readonly IMetaClient _client = new MetaClient(HttpClient){ ReadResponseAsString = true };
+    private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };
 }
