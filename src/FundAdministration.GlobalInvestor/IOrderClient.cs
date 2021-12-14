@@ -1,22 +1,22 @@
-﻿using FundAdministration.GlobalInvestor.Order.Adjustments;
-using FundAdministration.GlobalInvestor.Order.Announcements;
-using FundAdministration.GlobalInvestor.Order.ContractChanges;
-using FundAdministration.GlobalInvestor.Order.ContractHistories;
-using FundAdministration.GlobalInvestor.Order.DividendRates;
-using FundAdministration.GlobalInvestor.Order.ExchangeRates;
-using FundAdministration.GlobalInvestor.Order.Instructions;
-using FundAdministration.GlobalInvestor.Order.Navs;
-using FundAdministration.GlobalInvestor.Order.OrderCancelReverses;
-using FundAdministration.GlobalInvestor.Order.OrderNotifications;
-using FundAdministration.GlobalInvestor.Order.Orders;
-using FundAdministration.GlobalInvestor.Order.PaymentAmendments;
-using FundAdministration.GlobalInvestor.Order.PaymentLogProcesses;
-using FundAdministration.GlobalInvestor.Order.Payments;
-using FundAdministration.GlobalInvestor.Order.Receipts;
-using FundAdministration.GlobalInvestor.Order.SecurityPriceUpdates;
-using FundAdministration.GlobalInvestor.Order.TradingDeskRates;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Adjustments;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Announcements;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.ContractChanges;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.ContractHistories;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.DividendRates;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.ExchangeRates;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Instructions;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Navs;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.OrderCancelReverses;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.OrderNotifications;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Orders;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.PaymentAmendments;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.PaymentLogProcesses;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Payments;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Receipts;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.SecurityPriceUpdates;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.TradingDeskRates;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface IOrderClient
 {

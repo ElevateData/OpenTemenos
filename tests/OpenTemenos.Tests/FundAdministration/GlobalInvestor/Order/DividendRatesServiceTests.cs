@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Order.DividendRates;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.DividendRates;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class DividendRateServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

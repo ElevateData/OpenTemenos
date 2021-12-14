@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class NationalIdServiceTests : CredentialManagement
 {
     private const string LeiId = "";
@@ -18,7 +19,7 @@ public class NationalIdServiceTests : CredentialManagement
     {
         var result = _client.NationalIdService.GetBICFromLEIAsync(LeiId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class NationalIdServiceTests : CredentialManagement
         var result = _client.NationalIdService
             .GetBICsFromNationalIdAsync(NationalIdRef).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -36,7 +37,7 @@ public class NationalIdServiceTests : CredentialManagement
         var result = _client.NationalIdService
             .GetNationalIdDetailsAsync(NationalIdRef).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -44,7 +45,7 @@ public class NationalIdServiceTests : CredentialManagement
     {
         var result = _client.NationalIdService.GetNationalIdsFromBicAsync(BicId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -53,7 +54,7 @@ public class NationalIdServiceTests : CredentialManagement
         var result = _client.NationalIdService
             .ValidateNationalIdAsync(NationalIdRef).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -62,6 +63,6 @@ public class NationalIdServiceTests : CredentialManagement
         var result = _client.NationalIdService.GetParticipantDetailsAsync(ParticipantId, CountryId, CurrencyCode)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.System.DataEventStreamings;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.System.DataEventStreamings;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class DataEventStreamingServiceTests : CredentialManagement
 {
     private const string CompanyMnemonic = "1";
@@ -17,7 +18,7 @@ public class DataEventStreamingServiceTests : CredentialManagement
         var result = _client.DataEventStreamingService.GetFileNamesAsync(CompanyMnemonic, ApplicationName, PatternType)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -29,7 +30,7 @@ public class DataEventStreamingServiceTests : CredentialManagement
         var result = _client.DataEventStreamingService.ConfigureDESAsync(settingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -41,7 +42,7 @@ public class DataEventStreamingServiceTests : CredentialManagement
         var result = _client.DataEventStreamingService.EnableCommitCaptureAsync(settingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -50,7 +51,7 @@ public class DataEventStreamingServiceTests : CredentialManagement
         var result = _client.DataEventStreamingService.GetCommitCaptureEnabledAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -59,6 +60,6 @@ public class DataEventStreamingServiceTests : CredentialManagement
         var result = _client.DataEventStreamingService.GetUnprocessedCountAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

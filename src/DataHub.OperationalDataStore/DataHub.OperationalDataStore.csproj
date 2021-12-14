@@ -1,29 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>netstandard2.1</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.DataHubs.OperationalDataStore</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
-	    <PrivateAssets>all</PrivateAssets>
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	  </PackageReference>
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-	  <PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
-	    <PrivateAssets>all</PrivateAssets>
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	  </PackageReference>
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\DataHub.OperationalDataStore.Holding\DataHub.OperationalDataStore.Holding.csproj" />
-	  <ProjectReference Include="..\DataHub.OperationalDataStore.Order\DataHub.OperationalDataStore.Order.csproj" />
-	  <ProjectReference Include="..\DataHub.OperationalDataStore.Party\DataHub.OperationalDataStore.Party.csproj" />
-	  <ProjectReference Include="..\DataHub.OperationalDataStore.Product\DataHub.OperationalDataStore.Product.csproj" />
-	  <ProjectReference Include="..\DataHub.OperationalDataStore.Reference\DataHub.OperationalDataStore.Reference.csproj" />
-	  <ProjectReference Include="..\DataHub.OperationalDataStore.System\DataHub.OperationalDataStore.System.csproj" />
-	  <ProjectReference Include="..\Shared\Shared.csproj" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Holding\DataHub.OperationalDataStore.Holding.csproj" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Order\DataHub.OperationalDataStore.Order.csproj" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Party\DataHub.OperationalDataStore.Party.csproj" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Product\DataHub.OperationalDataStore.Product.csproj" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Reference\DataHub.OperationalDataStore.Reference.csproj" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.System\DataHub.OperationalDataStore.System.csproj" />
+		<ProjectReference Include="..\Shared\Shared.csproj" />
 	</ItemGroup>
 
 </Project>

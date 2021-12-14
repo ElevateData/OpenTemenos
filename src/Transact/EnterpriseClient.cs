@@ -1,7 +1,7 @@
-﻿using Transact.Enterprise;
-using Transact.Enterprise.Pricings;
+﻿using OpenTemenos.Transacts.Enterprise;
+using OpenTemenos.Transacts.Enterprise.Pricings;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public class EnterpriseClient : IEnterpriseClient
 {

@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class SwapNpvRevaluationServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
@@ -13,7 +14,7 @@ public class SwapNpvRevaluationServiceTests : CredentialManagement
         var result = _client.SwapNpvRevaluationService.GetSwapNPVRevaluationsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -22,7 +23,7 @@ public class SwapNpvRevaluationServiceTests : CredentialManagement
         var result = _client.SwapNpvRevaluationService.GetSwapNPVDetailsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -31,6 +32,6 @@ public class SwapNpvRevaluationServiceTests : CredentialManagement
         var result = _client.SwapNpvRevaluationService.GetSwapNPVCurrencyRevaluationsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

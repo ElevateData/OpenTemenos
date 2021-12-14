@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.CustomersContactHistories;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.CustomersContactHistories;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CustomersContactHistoryServiceTests : CredentialManagement
 {
     private const string ContactHistoryId = "1000";
@@ -18,7 +19,7 @@ public class CustomersContactHistoryServiceTests : CredentialManagement
         var result = _client.CustomersContactHistoryService.CreateCustomerContactLogAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class CustomersContactHistoryServiceTests : CredentialManagement
         var result = _client.CustomersContactHistoryService.GetCustomerContactLogAsync(ContactHistoryId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,7 +40,7 @@ public class CustomersContactHistoryServiceTests : CredentialManagement
         var result = _client.CustomersContactHistoryService.UpdateCustomerContactLogAsync(contactHistoryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -48,6 +49,6 @@ public class CustomersContactHistoryServiceTests : CredentialManagement
         var result = _client.CustomersContactHistoryService.GetCustomerContactHistoryAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

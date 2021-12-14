@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Product.FundTradingDeskTrans;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundTradingDeskTrans;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class FundTradingDeskTranServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

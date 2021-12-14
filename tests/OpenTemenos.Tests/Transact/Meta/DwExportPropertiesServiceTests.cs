@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Meta.DwExportProperties;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Meta.DwExportProperties;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class DwExportPropertyServiceTests : CredentialManagement
 {
     private readonly IMetaClient _client = new MetaClient(HttpClient) { ReadResponseAsString = true };
@@ -17,7 +18,7 @@ public class DwExportPropertyServiceTests : CredentialManagement
         var result = _client.DwExportPropertyService.UpdateDWExportPropertiesAsync(dataWarehouseExportId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,6 +27,6 @@ public class DwExportPropertyServiceTests : CredentialManagement
         var result = _client.DwExportPropertyService.GetDWExportPropertiesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

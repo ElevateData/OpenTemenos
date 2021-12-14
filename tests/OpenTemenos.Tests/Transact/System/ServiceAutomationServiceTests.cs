@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.System.ServiceAutomations;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.System.ServiceAutomations;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ServiceAutomationServiceTests : CredentialManagement
 {
     private const string BusinessClosureDate = "20200101";
@@ -21,7 +22,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.CreateNewProcessAsync(processId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -33,7 +34,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.AmendNewProcessAsync(processId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -42,7 +43,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetServiceAsync(ServiceId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -54,7 +55,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.CreateNewServiceAsync(serviceId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -66,7 +67,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.AmendServiceAsync(serviceId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -75,7 +76,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetServiceWorkProfileAsync(WorkProfileId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -87,7 +88,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.CreateServiceWorkProfileAsync(workProfileId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -99,7 +100,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.AmendServiceWorkProfileAsync(workProfileId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -108,7 +109,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetAvailableServicesAsync(ServiceId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -117,7 +118,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetAllServicesStatusAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -126,7 +127,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetServiceProcessTimesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -135,7 +136,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetReportTimesAsync(BusinessClosureDate)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -144,7 +145,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetAllServiceWorkProfilesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -153,7 +154,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetBusinessClosureErrorForCompanyAsync(CompanyIdPath)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -162,7 +163,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetAvailableServicesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -171,7 +172,7 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.GetCobProgressAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -183,6 +184,6 @@ public class ServiceAutomationServiceTests : CredentialManagement
         var result = _client.ServiceAutomationService.AmendBusinessClosureErrorAsync(errorDetailId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

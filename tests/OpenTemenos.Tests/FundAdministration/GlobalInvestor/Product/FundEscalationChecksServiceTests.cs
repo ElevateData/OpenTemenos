@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Product.FundEscalationChecks;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundEscalationChecks;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class FundEscalationCheckServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

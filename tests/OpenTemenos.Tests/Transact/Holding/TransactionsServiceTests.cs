@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class TransactionServiceTests : CredentialManagement
 {
     private const string TransactionId = "";
@@ -15,7 +16,7 @@ public class TransactionServiceTests : CredentialManagement
         var result = _client.TransactionService.GetTransactionDetailsAsync(TransactionId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class TransactionServiceTests : CredentialManagement
         var result = _client.TransactionService.GetStatementForTransactionAsync(TransactionReferenceId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -33,6 +34,6 @@ public class TransactionServiceTests : CredentialManagement
         var result = _client.TransactionService.GetAccountTransactionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

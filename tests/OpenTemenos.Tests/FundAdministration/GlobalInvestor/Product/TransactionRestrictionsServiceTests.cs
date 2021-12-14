@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Product.TransactionRestrictions;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.TransactionRestrictions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class TransactionRestrictionServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Order.Payments;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Order.Payments;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Order;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class PaymentServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };

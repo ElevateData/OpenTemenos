@@ -1,12 +1,13 @@
-﻿using Transact;
-using Transact.Product.ExternalProducts;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Product.ExternalProducts;
 
 namespace OpenTemenos.Tests.Transact.Product;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ExternalProductServiceTests : CredentialManagement
 {
-    private const string ProductId = "1";
+    private const string ProductId = "CURRENT.ACCOUNT";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
@@ -15,7 +16,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.GetExternalMortgageProductAsync(ProductId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.CreateExternalMortgageProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,7 +40,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.UpdateExternalMortgageProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -48,7 +49,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.GetExternalCurrentAccountProductAsync(ProductId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -60,7 +61,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.CreateExternalCurrentAccountProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -72,7 +73,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.UpdateExternalCurrentAccountProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -81,7 +82,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.GetExternalSavingsAccountProductAsync(ProductId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -93,7 +94,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.CreateExternalSavingsAccountProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -105,7 +106,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.UpdateExternalSavingsAccountProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -117,7 +118,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.CreateExternalDepositProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -129,7 +130,7 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.UpdateExternalDepositProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -138,6 +139,6 @@ public class ExternalProductServiceTests : CredentialManagement
         var result = _client.ExternalProductService.GetExternalDepositProductAsync(ProductId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

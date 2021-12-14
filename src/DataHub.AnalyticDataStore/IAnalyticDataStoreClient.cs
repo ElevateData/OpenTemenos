@@ -1,4 +1,4 @@
-﻿namespace DataHub.AnalyticDataStore;
+﻿namespace OpenTemenos.DataHubs.AnalyticDataStore;
 
 public interface IAnalyticDataStoreClient
 {

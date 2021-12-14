@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.ForexCustomerOrders;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.ForexCustomerOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ForexCustomerOrderServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -16,7 +17,7 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.GetCustomerForexLimitOrdersAsync(LimitOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -28,7 +29,7 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.UpdateForexLimitOrderAsync(limitOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,7 +40,7 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.CreateForexLimitOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -48,7 +49,7 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.GetCustomerForexDealsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -57,7 +58,7 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.GetForexOrdersAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -68,7 +69,7 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.CreateForexOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -77,6 +78,6 @@ public class ForexCustomerOrderServiceTests : CredentialManagement
         var result = _client.TreasuryForexOrderService.GetOutstandingForexOrdersAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

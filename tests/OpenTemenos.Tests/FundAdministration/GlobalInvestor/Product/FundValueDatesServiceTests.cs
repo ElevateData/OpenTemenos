@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Product.FundValueDates;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundValueDates;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Product;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class FundValueDateServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

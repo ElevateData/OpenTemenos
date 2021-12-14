@@ -1,10 +1,11 @@
 ﻿using System;
-using Transact;
-using Transact.Order.PaymentsConfigurations;
+using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.PaymentsConfigurations;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class PaymentsConfigurationServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
@@ -18,7 +19,7 @@ public class PaymentsConfigurationServiceTests : CredentialManagement
         var result = _client.PaymentConfigurationService.UpdateLocalClearingAsync(systemId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -31,7 +32,7 @@ public class PaymentsConfigurationServiceTests : CredentialManagement
         var result = _client.PaymentConfigurationService.UpdatePaymentOrderParameterAsync(companyIdPath, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -44,6 +45,6 @@ public class PaymentsConfigurationServiceTests : CredentialManagement
         var result = _client.PaymentConfigurationService.UpdatePaymentOrderProductAsync(productId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

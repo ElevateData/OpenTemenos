@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.TermDepositTransactions;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.TermDepositTransactions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalAccounting")]
 public class TermDepositTransactionServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

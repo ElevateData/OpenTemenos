@@ -1,5 +1,5 @@
-﻿using Transact;
-using Transact.Holding.Accounts;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.Accounts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
@@ -9,7 +9,7 @@ public class AccountServiceTests : CredentialManagement
     private const string AccountId = "101125";
     private const string BookingDate = "20201209";
     private const string CurrencyId = "USD";
-    private const string ValueDate = "20201209";
+    private const string ValueDate = "2020-12-09";
     private const string AccountCompany = "";
     private const string PaymentCurrency = "";
     private const string AccountSwitch = "";
@@ -20,9 +20,11 @@ public class AccountServiceTests : CredentialManagement
     [TestMethod]
     public void GetPackageStatementAsync()
     {
+        //var accountId = _accounts.First(a => a.AccountStatus)
         var result = _client.AccountManagementService.GetAccountClosureAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -34,6 +36,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService
             .UpdateAccountClosureAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -42,14 +45,17 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService.GetAccountTransactionsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
     public void GetAccountCardsAsync()
     {
-        var result = _client.AccountManagementService.GetAccountCardsAsync(AccountId)
+        var accountId = "104728";
+        var result = _client.AccountManagementService.GetAccountCardsAsync(accountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,7 +64,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService.GetAccountBalanceTodayAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -68,6 +74,7 @@ public class AccountServiceTests : CredentialManagement
             .GetAccountBalanceMovementAsync(AccountId, BookingDate)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -77,6 +84,7 @@ public class AccountServiceTests : CredentialManagement
             .GetAccountEmergencyBlockAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -88,6 +96,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService
             .UpdateAccountEmergencyBlockAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -97,6 +106,7 @@ public class AccountServiceTests : CredentialManagement
             .GetAccountFundsAuthStatusAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -108,6 +118,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService
             .UpdateAccountFundsAuthStatusAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -119,6 +130,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService
             .CreateFundsDiversionAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -130,15 +142,17 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService
             .UpdateFundsDiversionAsync(accountId, payload).Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
     public void GetNostroForwardBalancesAsync()
     {
         var result = _client.AccountManagementService
-            .GetNostroForwardBalancesAsync(ValueDate)
+            .GetNostroForwardBalancesAsync(ValueDate, accountId: AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -148,7 +162,7 @@ public class AccountServiceTests : CredentialManagement
             .GetNostroBalancesAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -158,6 +172,7 @@ public class AccountServiceTests : CredentialManagement
             .GetNostroCurrencyPositionsAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -167,6 +182,7 @@ public class AccountServiceTests : CredentialManagement
             .GetNostroPositionsAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -175,6 +191,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService.GetReservedFundsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -184,6 +201,7 @@ public class AccountServiceTests : CredentialManagement
             .GetAccountDetailsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -193,7 +211,7 @@ public class AccountServiceTests : CredentialManagement
             .GetActiveProxyIdentifierAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -204,6 +222,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService.CreateProxyIdentifierAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -216,6 +235,7 @@ public class AccountServiceTests : CredentialManagement
             .UpdateProxyIdentifierAsync(proxyIdentifierId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -225,6 +245,7 @@ public class AccountServiceTests : CredentialManagement
                 PaymentCurrency, AccountSwitch, BeneficialCustomer)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -233,6 +254,7 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService.GetAccountsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -242,7 +264,7 @@ public class AccountServiceTests : CredentialManagement
             .GetContractBalancesAsync(ContractBalanceId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -255,6 +277,7 @@ public class AccountServiceTests : CredentialManagement
             .UpdateSynchronizationErrorAsync(accountId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -264,6 +287,7 @@ public class AccountServiceTests : CredentialManagement
             .GetExpiringAccountSwitchesAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -273,6 +297,7 @@ public class AccountServiceTests : CredentialManagement
             .GetAccountSwitchDetailsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -285,6 +310,7 @@ public class AccountServiceTests : CredentialManagement
             .UpdateAccountSwitchDetailsAsync(accountId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -294,6 +320,7 @@ public class AccountServiceTests : CredentialManagement
             .GetAccountSwitchPaymentDetailsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -304,5 +331,6 @@ public class AccountServiceTests : CredentialManagement
         var result = _client.AccountManagementService.ApproveAccountClosureAsync(accountId)
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

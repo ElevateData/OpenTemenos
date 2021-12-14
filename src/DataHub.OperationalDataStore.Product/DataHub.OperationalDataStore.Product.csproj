@@ -1,44 +1,46 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.DataHubs.OperationalDataStore.Product</RootNamespace>
+	</PropertyGroup>
 	<ItemGroup>
 		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getProductBuilderDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getProductBuilderDetails-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ProductBuilderDetailService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductBuilderDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ProductBuilderDetailService.cs /ContractsNamespace:OpenTemenos.DataHubs.OperationalDataStore.Product.ProductBuilderDetails /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ProductBuilderDetailService.cs</OutputPath>
 			<ClassName>ProductBuilderDetailService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getprodConditionDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getprodConditionDetails-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ProductConditionDetailService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductConditionDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ProductConditionDetailService.cs /ContractsNamespace:OpenTemenos.DataHubs.OperationalDataStore.Product.ProductConditionDetails /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ProductConditionDetailService.cs</OutputPath>
 			<ClassName>ProductConditionDetailService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getProductDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getProductDetails-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ProductDetailService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ProductDetailService.cs /ContractsNamespace:OpenTemenos.DataHubs.OperationalDataStore.Product.ProductDetails /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ProductDetailService.cs</OutputPath>
 			<ClassName>ProductDetailService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getInterestCatalog-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getInterestCatalog-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:InterestCatalogService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.InterestCatalogs /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:InterestCatalogService.cs /ContractsNamespace:OpenTemenos.DataHubs.OperationalDataStore.Product.InterestCatalogs /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>InterestCatalogService.cs</OutputPath>
 			<ClassName>InterestCatalogService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getInterestConditionDetails-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getInterestConditionDetails-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:InterestConditionDetailService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.InterestConditionDetails /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:InterestConditionDetailService.cs /ContractsNamespace:OpenTemenos.DataHubs.OperationalDataStore.Product.InterestConditionDetails /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>InterestConditionDetailService.cs</OutputPath>
 			<ClassName>InterestConditionDetailService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\operational data store\getProductMarketingCatalogue-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/operational%20data%20store/getProductMarketingCatalogue-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ProductMarketingCatalogueService.cs /ContractsNamespace:DataHub.OperationalDataStore.Product.ProductMarketingCatalogues /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ProductMarketingCatalogueService.cs /ContractsNamespace:OpenTemenos.DataHubs.OperationalDataStore.Product.ProductMarketingCatalogues /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ProductMarketingCatalogueService.cs</OutputPath>
 			<ClassName>ProductMarketingCatalogueService</ClassName>
 		</OpenApiReference>
@@ -51,10 +53,12 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
-		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Shared\Shared.csproj" />

@@ -1,8 +1,10 @@
-﻿using Payment.StandingOrders;
+﻿using OpenTemenos.Payments;
+using OpenTemenos.Payments.StandingOrders;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass, TestCategory("Payments")]
+[TestClass]
+[TestCategory("Payments")]
 public class StandingOrderServiceTests : CredentialManagement
 {
     private readonly IPaymentClient _client = new PaymentClient(HttpClient) { ReadResponseAsString = true };
@@ -13,7 +15,7 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.GetFailedTransactionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -22,7 +24,7 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.GetStandingOrdersAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -34,7 +36,7 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.CreateStandingOrderAsync(standingOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,7 +48,7 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.UpdateStandingOrderAsync(standingOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,7 +60,7 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.DeleteStandingOrderAsync(standingOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -69,7 +71,7 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.ApproveStandingOrderAsync(standingOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -81,6 +83,6 @@ public class StandingOrderServiceTests : CredentialManagement
         var result = _client.StandingOrderService.RejectStandingOrderAsync(standingOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

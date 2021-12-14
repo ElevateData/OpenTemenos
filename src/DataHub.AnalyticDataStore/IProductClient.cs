@@ -1,8 +1,8 @@
-﻿using DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances;
-using DataHub.AnalyticDataStore.Product.RetailDepositProductBalances;
-using DataHub.AnalyticDataStore.Product.RetailLendingProductBalances;
+﻿using OpenTemenos.DataHubs.AnalyticDataStore.Product.CorporateLendingProductBalances;
+using OpenTemenos.DataHubs.AnalyticDataStore.Product.RetailDepositProductBalances;
+using OpenTemenos.DataHubs.AnalyticDataStore.Product.RetailLendingProductBalances;
 
-namespace DataHub.AnalyticDataStore;
+namespace OpenTemenos.DataHubs.AnalyticDataStore;
 
 public interface IProductClient
 {

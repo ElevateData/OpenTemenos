@@ -1,8 +1,10 @@
-﻿using Payment.RequestToPayPayments;
+﻿using OpenTemenos.Payments;
+using OpenTemenos.Payments.RequestToPayPayments;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass, TestCategory("Payments")]
+[TestClass]
+[TestCategory("Payments")]
 public class RequestToPayPaymentServiceTests : CredentialManagement
 {
     private const string CurrentState = "1";
@@ -17,7 +19,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.CreatePaymentRequestsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +28,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetPayersListAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,7 +40,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateFullPaymentAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -50,7 +52,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdatePartialPaymentAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -62,7 +64,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateDeclinePaymentAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -74,7 +76,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateNotesToRequestorAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -86,7 +88,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdatePaymentAmountAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -98,7 +100,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateDeclineAndBlockAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -110,7 +112,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateNotesToPayerAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -122,7 +124,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateDateExtensionAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -131,7 +133,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetRequestorsDateExtensionAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -140,7 +142,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetRequestorsOutwardRequestAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -149,7 +151,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetPayersStatusAsync(CurrentState)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -158,7 +160,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetPayerListWithExtensionGrantedAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -170,7 +172,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateGrantExtensionAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -179,7 +181,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetPayersListWithExtensionDeclinedAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -191,7 +193,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateDeclineExtensionAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -200,7 +202,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetApiPendingAckAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -212,7 +214,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.UpdateBillerAcknowledgementsAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -221,7 +223,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.GetOutwardErrorsAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -232,7 +234,7 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.CreatePayUKPaymentRequestsAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -244,6 +246,6 @@ public class RequestToPayPaymentServiceTests : CredentialManagement
         var result = _client.RequestToPaymentService.AmendPayUKPaymentForRepositoryAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.ExternalUsers;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.ExternalUsers;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ExternalUserServiceTests : CredentialManagement
 {
     private const string ExternalUserPreferencesId = "1";
@@ -15,7 +16,7 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.GetExternalUserProfileAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.GetExternalUserPreferencesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -36,7 +37,7 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.UpdateExternalUserStatusAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -48,7 +49,7 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.CreateExternalUserPreferenceAsync(externalUserPreferencesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -60,7 +61,7 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.UpdateExternalUserPreferenceAsync(externalUserPreferencesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -72,7 +73,7 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.DeleteExternalUserPreferenceAsync(externalUserPreferencesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -81,6 +82,6 @@ public class ExternalUserServiceTests : CredentialManagement
         var result = _client.ExternalUserService.GetExternalUserPreferenceAsync(ExternalUserPreferencesId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

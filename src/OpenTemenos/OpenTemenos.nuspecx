@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Elevate Data</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/ElevateData/OpenTemenos</projectUrl>
+    <description>A http client/proxy for Temenos APIs managed by Elevate Data built off the OpenAPI specs provided by Temenos.</description>
+    <releaseNotes>A very early build of the OpenTemenos client use at your own risk as only 211/719 of the GET endpoints are working. None of the POST, PUT, or DELETE are tested.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>OpenAPI Temenos ElevateData Elevate Data finance financial bank banking</tags>
+    <dependencies>
+      <dependency "Newtonsoft.Json" version="13.0.1" />
+    </dependencies>
+  </metadata>
+</package>

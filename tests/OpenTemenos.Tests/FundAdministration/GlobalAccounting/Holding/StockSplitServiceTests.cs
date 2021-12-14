@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.StockSplits;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.StockSplits;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalAccounting")]
 public class StockSplitServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

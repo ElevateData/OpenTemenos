@@ -1,13 +1,13 @@
-﻿using Payment.DirectDebit;
-using Payment.PaymentOrders;
-using Payment.PaymentOrdersConfigurations;
-using Payment.Payments;
-using Payment.PaymentStops;
-using Payment.RequestToPayPayments;
-using Payment.StandingOrders;
-using Payment.TransactionStops;
+﻿using OpenTemenos.Payments.DirectDebit;
+using OpenTemenos.Payments.PaymentOrders;
+using OpenTemenos.Payments.PaymentOrdersConfigurations;
+using OpenTemenos.Payments.Payments;
+using OpenTemenos.Payments.PaymentStops;
+using OpenTemenos.Payments.RequestToPayPayments;
+using OpenTemenos.Payments.StandingOrders;
+using OpenTemenos.Payments.TransactionStops;
 
-namespace OpenTemenos;
+namespace OpenTemenos.Payments;
 
 /// <summary>
 /// Payments APIs

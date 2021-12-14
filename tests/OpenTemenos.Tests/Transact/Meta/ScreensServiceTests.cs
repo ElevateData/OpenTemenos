@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Meta.Screens;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Meta.Screens;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ScreenServiceTests : CredentialManagement
 {
     private const string ScreenId = "1";
@@ -15,7 +16,7 @@ public class ScreenServiceTests : CredentialManagement
         var result = _client.ScreenService.GetScreensAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class ScreenServiceTests : CredentialManagement
         var result = _client.ScreenService.GetScreenAsync(ScreenId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -36,6 +37,6 @@ public class ScreenServiceTests : CredentialManagement
         var result = _client.ScreenService.CreateScreenAsync(screenId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

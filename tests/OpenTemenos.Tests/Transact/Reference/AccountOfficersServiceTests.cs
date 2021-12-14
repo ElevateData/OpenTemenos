@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.AccountOfficers;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.AccountOfficers;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class AccountOfficerServiceTests : CredentialManagement
 {
     private const string AccountOfficerId = "1";
@@ -15,7 +16,7 @@ public class AccountOfficerServiceTests : CredentialManagement
         var result = _client.AccountOfficerService
             .GetAccountOfficersAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class AccountOfficerServiceTests : CredentialManagement
         var result = _client.AccountOfficerService
             .GetAccountOfficerDetailsAsync(AccountOfficerId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -55,7 +56,7 @@ public class AccountOfficerServiceTests : CredentialManagement
         var result = _client.AccountOfficerService
             .GetAccountOfficerAlertSubscriptionAsync(AccountOfficerId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

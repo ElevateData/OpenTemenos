@@ -1,11 +1,11 @@
-﻿using Transact.Product;
-using Transact.Product.Customers;
-using Transact.Product.ExternalProducts;
-using Transact.Product.LimitProducts;
-using Transact.Product.MarketingCatalogues;
-using Transact.Product.UserAdmins;
+﻿using OpenTemenos.Transacts.Product;
+using OpenTemenos.Transacts.Product.Customers;
+using OpenTemenos.Transacts.Product.ExternalProducts;
+using OpenTemenos.Transacts.Product.LimitProducts;
+using OpenTemenos.Transacts.Product.MarketingCatalogues;
+using OpenTemenos.Transacts.Product.UserAdmins;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public class ProductClient : IProductClient
 {

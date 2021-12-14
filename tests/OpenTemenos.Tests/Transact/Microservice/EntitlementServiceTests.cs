@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Microservice.Entitlements;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Microservice.Entitlements;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class EntitlementServiceTests : CredentialManagement
 {
     private const string UserId = "1";
@@ -16,7 +17,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.GetEntitlementsAsync(UserId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -25,7 +26,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.GetUserEntitlementsAsync(UserId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -34,7 +35,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.GetEntitlementsWithActionsAsync(UserId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -47,7 +48,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.AddEntitlementsAsync(userId, resourceId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -56,7 +57,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.GetUserEntitlementsOnResourceAsync(UserId, ResourceId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -69,7 +70,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.UpdateEntitlementsAsync(userId, resourceId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -81,7 +82,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.DeleteEntitlementsAsync(userId, resourceId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -93,7 +94,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.AddEntitlementsByResourceAsync(resourceId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -105,7 +106,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.UpdateEntitlementsByResourceAsync(resourceId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -116,7 +117,7 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.DeleteEntitlementsByResourceAsync(resourceId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -125,6 +126,6 @@ public class EntitlementServiceTests : CredentialManagement
         var result = _client.EntitlementService.GetEntitlementsByResourceAsync(ResourceId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 }

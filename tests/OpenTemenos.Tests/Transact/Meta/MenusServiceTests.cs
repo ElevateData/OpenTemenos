@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Meta.Menus;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Meta.Menus;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class MenuServiceTests : CredentialManagement
 {
     private const string MenuId = "1";
@@ -15,7 +16,7 @@ public class MenuServiceTests : CredentialManagement
         var result = _client.MenuService.GetMainMenusAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class MenuServiceTests : CredentialManagement
         var result = _client.MenuService.GetMainMenuAsync(MenuId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -36,7 +37,7 @@ public class MenuServiceTests : CredentialManagement
         var result = _client.MenuService.CreateMainMenuAsync(menuId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -45,7 +46,7 @@ public class MenuServiceTests : CredentialManagement
         var result = _client.MenuService.GetMenusAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -54,6 +55,6 @@ public class MenuServiceTests : CredentialManagement
         var result = _client.MenuService.GetMenuAsync(MenuId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,8 +1,9 @@
-﻿using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class ProductBuilderDetailServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };

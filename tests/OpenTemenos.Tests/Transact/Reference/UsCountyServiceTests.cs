@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class UsCountyServiceTests : CredentialManagement
 {
     private const string StateId = "HI";
@@ -13,6 +14,6 @@ public class UsCountyServiceTests : CredentialManagement
     {
         var result = _client.UsCountyService.GetUsCountyListAsync(StateId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

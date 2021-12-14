@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.CustomerOpenBankingConnections;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.CustomerOpenBankingConnections;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -18,7 +19,7 @@ public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
             .CreateOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -31,7 +32,7 @@ public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
             .RemoveOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -44,7 +45,7 @@ public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
             .ReconnectOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -57,7 +58,7 @@ public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
             .RefreshOpenBankingConnectionAsync(connectionId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -66,6 +67,6 @@ public class CustomerOpenBankingConnectionServiceTests : CredentialManagement
         var result = _client.CustomerOpenBankingConnectionService.GetThirdPartyProviderConsentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

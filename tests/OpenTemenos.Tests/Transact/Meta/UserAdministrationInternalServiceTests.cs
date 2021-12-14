@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class UserAdministrationInternalServiceTests : CredentialManagement
 {
     private const string UserId = "1";
@@ -14,6 +15,6 @@ public class UserAdministrationInternalServiceTests : CredentialManagement
         var result = _client.UserAdministrationInternalService.GetTokenForUserAsync(UserId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

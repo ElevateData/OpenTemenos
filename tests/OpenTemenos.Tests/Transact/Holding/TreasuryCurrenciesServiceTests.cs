@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class TreasuryCurrencyServiceTests : CredentialManagement
 {
     private const string CurrencyId = "USD";
@@ -14,7 +15,7 @@ public class TreasuryCurrencyServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyService.GetCurrencyMarketRatesAsync(CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -23,6 +24,6 @@ public class TreasuryCurrencyServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyService.GetCurrencyRevaluationRatesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

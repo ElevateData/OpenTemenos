@@ -1,10 +1,11 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Reference.Messages;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Reference.Messages;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Reference;
 
 //TODO: the documented URL is pointed to localhost:8080. Figure out the correct base url
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class MessageServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.UserAdmins;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.UserAdmins;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class UserAdminServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -18,7 +19,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.CreateExternalUserCustomerAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.GetExternalUserAsync(ExternalUserId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,7 +40,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.CreateExternalUserAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -51,7 +52,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.UpdateExternalUserAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -63,7 +64,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.DeleteExternalUserAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -74,7 +75,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.InitiateExternalUserAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -86,7 +87,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.AmendExternalUserAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -97,7 +98,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.ApproveExternalUserAsync(externalUserId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -109,7 +110,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.RejectExternalUserAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -121,7 +122,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.InitiateExternalUserDeleteAsync(externalUserId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -130,7 +131,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.GetExternalUserApprovalsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -139,7 +140,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.GetCustomerExternalUsersAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -148,7 +149,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.GetExternalUsersAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -157,7 +158,7 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.GetCustomerRelationsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -166,6 +167,6 @@ public class UserAdminServiceTests : CredentialManagement
         var result = _client.UserAdminService.GetUserProfileAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

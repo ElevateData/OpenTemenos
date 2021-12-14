@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.PortfolioSettlements;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.PortfolioSettlements;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class PortfolioSettlementServiceTests : CredentialManagement
 {
     private const string PortfolioId = "1";
@@ -16,7 +17,7 @@ public class PortfolioSettlementServiceTests : CredentialManagement
         var result = _client.SecuritySettlementService.GetOverdueSettlementsByPortfolioAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -25,7 +26,7 @@ public class PortfolioSettlementServiceTests : CredentialManagement
         var result = _client.SecuritySettlementService.GetSecuritySettlementsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -34,7 +35,7 @@ public class PortfolioSettlementServiceTests : CredentialManagement
         var result = _client.SecuritySettlementService.GetFullSettlementsAsync(SecuritySettlementsId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,7 +47,7 @@ public class PortfolioSettlementServiceTests : CredentialManagement
         var result = _client.SecuritySettlementService.UpdateFullSettlementsAsync(securitySettlementsId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -55,7 +56,7 @@ public class PortfolioSettlementServiceTests : CredentialManagement
         var result = _client.SecuritySettlementService.GetPartialSettlementsAsync(SecuritySettlementsId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -67,6 +68,6 @@ public class PortfolioSettlementServiceTests : CredentialManagement
         var result = _client.SecuritySettlementService.UpdatePartialSettlementsAsync(securitySettlementsId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

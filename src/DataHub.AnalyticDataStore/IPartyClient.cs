@@ -1,6 +1,6 @@
-﻿using DataHub.AnalyticDataStore.Party.AllCustomerSegmentationDetails;
+﻿using OpenTemenos.DataHubs.AnalyticDataStore.Party.AllCustomerSegmentationDetails;
 
-namespace DataHub.AnalyticDataStore;
+namespace OpenTemenos.DataHubs.AnalyticDataStore;
 
 public interface IPartyClient
 {

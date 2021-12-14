@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.OrganizationStructures;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.OrganizationStructures;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class OrganizationStructureServiceTests : CredentialManagement
 {
     private const string OrganizationId = "";
@@ -47,7 +48,7 @@ public class OrganizationStructureServiceTests : CredentialManagement
         var result = _client.OrganizationStructureService
             .GetChildOrganizationsAsync(OrganizationId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

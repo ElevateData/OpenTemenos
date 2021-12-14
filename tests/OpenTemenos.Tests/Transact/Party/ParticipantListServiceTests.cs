@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ParticipantListServiceTests : CredentialManagement
 {
     private readonly IPartyClient _client = new PartyClient(HttpClient) { ReadResponseAsString = true };
@@ -13,6 +14,6 @@ public class ParticipantListServiceTests : CredentialManagement
         var result = _client.ParticipantListService.GetParticipantListAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

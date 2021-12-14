@@ -1,4 +1,4 @@
-﻿namespace Shared.Data;
+﻿namespace OpenTemenos.Shared.Data;
 
 public static class DefaultConfig
 {

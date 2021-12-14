@@ -1,6 +1,6 @@
-﻿using FundAdministration.GlobalAccounting.Order.StockExchangeTransactions;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting.Order.StockExchangeTransactions;
 
-namespace FundAdministration.GlobalAccounting;
+namespace OpenTemenos.FundAdministrations.GlobalAccounting;
 
 public interface IOrderClient
 {

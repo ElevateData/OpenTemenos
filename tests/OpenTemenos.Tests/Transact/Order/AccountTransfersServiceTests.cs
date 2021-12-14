@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.AccountTransfers;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.AccountTransfers;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class AccountTransferServiceTests : CredentialManagement
 {
     private const string BulkTransferId = "1";
@@ -17,7 +18,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.GetAccountTransfersAsync(DebitAccountId, CreditAccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.GetBulkTransfersAsync(BulkTransferId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -37,7 +38,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.CreateInwardTransferAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -49,7 +50,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.UpdateInwardTransferAsync(fundsTransferId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,7 +59,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.GetInwardTransfersAsync(DebitAccountId, CreditAccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -69,7 +70,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.CreateOutwardTransferAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -81,7 +82,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.UpdateOutwardTransferAsync(fundsTransferId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -90,7 +91,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.GetOutwardTransfersAsync(DebitAccountId, CreditAccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -101,7 +102,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.CreateAccountTransferAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -113,7 +114,7 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.UpdateAccountTransferAsync(fundsTransferId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -125,6 +126,6 @@ public class AccountTransferServiceTests : CredentialManagement
         var result = _client.AccountFundTransferService.DeleteAccountTransferAsync(fundsTransferId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

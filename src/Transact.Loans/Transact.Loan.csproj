@@ -1,45 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-	<ItemGroup><!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-calculatePayoff-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/loans-calculatePayoff-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CalculatePayoffService.cs /ContractsNamespace:Transact.Loan.CalculatePayoffs /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>CalculatePayoffService.cs</OutputPath>
-			<ClassName>CalculatePayoffService</ClassName>
-		</OpenApiReference>
--->
-		<!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-updatePaymentHoliday-simulation-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/loans-updatePaymentHoliday-simulation-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:UpdatePaymentHolidaySimulationService.cs /ContractsNamespace:Transact.Loan.UpdatePaymentHolidaySimulations /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>UpdatePaymentHolidaySimulationService.cs</OutputPath>
-			<ClassName>UpdatePaymentHolidaySimulationService</ClassName>
-		</OpenApiReference>
-		-->
-		<!--
-		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\loans-updatePaymentHoliday-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/loans-updatePaymentHoliday-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:UpdatePaymentHolidayService.cs /ContractsNamespace:Transact.Loan.UpdatePaymentHolidays /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>UpdatePaymentHolidayService.cs</OutputPath>
-			<ClassName>UpdatePaymentHolidayService</ClassName>
-		</OpenApiReference>
--->
-	</ItemGroup>
-		<ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.Transacts.Loan</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Shared\Shared.csproj" />

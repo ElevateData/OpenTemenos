@@ -1,4 +1,4 @@
-﻿namespace Transact;
+﻿namespace OpenTemenos.Transacts;
 
 public interface ILoanClient
 {

@@ -1,20 +1,82 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<LangVersion>10.0</LangVersion>
+		<SignAssembly>False</SignAssembly>
+		<VersionPrefix>0.1.3-beta</VersionPrefix>
+		<Company>Elevate Data</Company>
+		<Authors>Elevate Data</Authors>
+		<Product>ElevateData.OpenTemenos</Product>
+		<PackageId>OpenTemenos</PackageId>
+		<Description>A http client/proxy for Temenos APIs managed by Elevate Data built off the OpenAPI specs provided by Temenos.</Description>
+		<RepositoryUrl>https://github.com/ElevateData/OpenTemenos</RepositoryUrl>
+		<PackageTags>OpenAPI;Temenos;ElevateData;Elevate Data;finance;financial;core banking;banking</PackageTags>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DataHub.AnalyticDataStore\DataHub.AnalyticDataStore.csproj" />
-    <ProjectReference Include="..\DataHub.OperationalDataStore\DataHub.OperationalDataStore.csproj" />
-    <ProjectReference Include="..\FinancialCrimeMitigation\FinancialCrimeMitigation.csproj" />
-    <ProjectReference Include="..\FundAdministration.GlobalAccounting\FundAdministration.GlobalAccounting.csproj" />
-    <ProjectReference Include="..\FundAdministration.GlobalInvestor\FundAdministration.GlobalInvestor.csproj" />
-    <ProjectReference Include="..\Payment\Payment.csproj" />
-    <ProjectReference Include="..\PortfolioManagement\PortfolioManagement.csproj" />
-    <ProjectReference Include="..\Transact\Transact.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+	</ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\DataHub.AnalyticDataStore.Holding\DataHub.AnalyticDataStore.Holding.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.AnalyticDataStore.Party\DataHub.AnalyticDataStore.Party.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.AnalyticDataStore.Product\DataHub.AnalyticDataStore.Product.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.AnalyticDataStore\DataHub.AnalyticDataStore.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Holding\DataHub.OperationalDataStore.Holding.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Order\DataHub.OperationalDataStore.Order.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Party\DataHub.OperationalDataStore.Party.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Product\DataHub.OperationalDataStore.Product.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.Reference\DataHub.OperationalDataStore.Reference.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore.System\DataHub.OperationalDataStore.System.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.OperationalDataStore\DataHub.OperationalDataStore.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FinancialCrimeMitigation\FinancialCrimeMitigation.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalAccounting.Holding\FundAdministration.GlobalAccounting.Holding.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalAccounting.Order\FundAdministration.GlobalAccounting.Order.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalAccounting.Reference\FundAdministration.GlobalAccounting.Reference.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalAccounting\FundAdministration.GlobalAccounting.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Order\FundAdministration.GlobalInvestor.Order.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Party\FundAdministration.GlobalInvestor.Party.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Product\FundAdministration.GlobalInvestor.Product.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.Reference\FundAdministration.GlobalInvestor.Reference.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor.System\FundAdministration.GlobalInvestor.System.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\FundAdministration.GlobalInvestor\FundAdministration.GlobalInvestor.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Payment\Payment.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\PortfolioManagement\PortfolioManagement.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Shared\Shared.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Enterprise\Transact.Enterprise.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Holding\Transact.Holding.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Loans\Transact.Loan.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Meta\Transact.Meta.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Microservice\Transact.Microservice.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Order\Transact.Order.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Party\Transact.Party.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Product\Transact.Product.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.Reference\Transact.Reference.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact.System\Transact.System.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Transact\Transact.csproj" PrivateAssets="All" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+		<ItemGroup>
+			<!-- Filter out unnecessary files -->
+			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+		</ItemGroup>
+
+		<!-- Print batches for debug purposes -->
+		<Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
+
+		<ItemGroup>
+			<!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
+			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+		</ItemGroup>
+	</Target>
 </Project>

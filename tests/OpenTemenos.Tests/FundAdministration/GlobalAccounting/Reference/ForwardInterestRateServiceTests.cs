@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Reference.ForwardInterestRates;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ForwardInterestRates;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Reference;
 
-[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalAccounting")]
 public class ForwardInterestRateServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };

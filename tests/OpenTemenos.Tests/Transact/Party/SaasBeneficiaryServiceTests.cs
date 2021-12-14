@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.SaasBeneficiaries;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.SaasBeneficiaries;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class SaasBeneficiaryServiceTests : CredentialManagement
 {
     private const string BeneficiaryId = "1";
@@ -17,7 +18,7 @@ public class SaasBeneficiaryServiceTests : CredentialManagement
         var result = _client.SaasBeneficiaryService.CreatePaymentsBeneficiaryAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class SaasBeneficiaryServiceTests : CredentialManagement
         var result = _client.SaasBeneficiaryService.GetBeneficiaryAsync(BeneficiaryId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,7 +39,7 @@ public class SaasBeneficiaryServiceTests : CredentialManagement
         var result = _client.SaasBeneficiaryService.UpdatePaymentsBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -50,6 +51,6 @@ public class SaasBeneficiaryServiceTests : CredentialManagement
         var result = _client.SaasBeneficiaryService.DeletePaymentsBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

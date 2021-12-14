@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.Guarantees;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.Guarantees;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class GuaranteeServiceTests : CredentialManagement
 {
     private const string ClauseId = "";
@@ -18,7 +19,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetClauseAsync(ClauseId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -30,7 +31,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.CreateClauseAsync(clauseId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -42,7 +43,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.UpdateClauseAsync(clauseId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -54,7 +55,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.DeleteClauseAsync(clauseId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -64,7 +65,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetGuaranteeIssuanceRequestsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -75,7 +76,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.CreateIbRequestAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -84,7 +85,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetIbRequestAsync(RequestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -96,7 +97,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.UpdateIbRequestAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -108,7 +109,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.DeleteIbRequestAsync(requestId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -119,7 +120,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.ApproveGuaranteeAsync(requestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -130,7 +131,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.RejectGuaranteeAsync(requestId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -140,7 +141,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetReceivedGuaranteeHistoryAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -150,7 +151,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetGuaranteeClausesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -160,7 +161,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetReceivedGuaranteesAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -170,7 +171,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetClaimInvocationHistoryAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -180,7 +181,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetReceivedGuaranteeClaimsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -190,7 +191,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetGuaranteeAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -200,17 +201,17 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetIssuedGuaranteesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
     public void GetGuaranteeLimitsAsync()
     {
         var result = _client.GuaranteeService
-            .GetClaimInvocationHistoryAsync(null)
+            .GetClaimInvocationHistoryAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -220,7 +221,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetIssuedGuaranteeClaimsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -230,7 +231,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetGuaranteesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -241,7 +242,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.CreateGuaranteeGenericAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -250,7 +251,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetGuaranteesOutstandingsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -259,7 +260,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetGuaranteeExpiringWithDateAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -268,7 +269,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetClaimOutstandingUnderGuaranteesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -277,7 +278,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetGuaranteesReversedAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -287,7 +288,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .GetClaimsPaidUnderGuaranteeAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -296,7 +297,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetOutstandingShippingGuaranteesAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -305,7 +306,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetOutstandingReceivedGuaranteesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -317,7 +318,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .CreateGuaranteesPerformanceBondAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -328,7 +329,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.CreateGuaranteesStandbyLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -339,7 +340,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.CreateShippingGuaranteeUnderLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -351,7 +352,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .CreateShippingGuaranteeUnderCollectionAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -364,7 +365,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .UpdateGuaranteesAmendmentAsync(guaranteeId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -377,7 +378,7 @@ public class GuaranteeServiceTests : CredentialManagement
             .UpdateGuaranteesRejectionAsync(guaranteeId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -386,7 +387,7 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.GetInvocationPaidOrCancelledAsync(GuaranteeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -397,6 +398,6 @@ public class GuaranteeServiceTests : CredentialManagement
         var result = _client.GuaranteeService.CreateGuarnteeBidBondAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

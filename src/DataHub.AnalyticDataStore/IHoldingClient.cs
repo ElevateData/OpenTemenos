@@ -1,16 +1,16 @@
-﻿using DataHub.AnalyticDataStore.Holding.AccountTransactionDetails;
-using DataHub.AnalyticDataStore.Holding.AccountTransactionMetrics;
-using DataHub.AnalyticDataStore.Holding.AllCustomerProductBalances;
-using DataHub.AnalyticDataStore.Holding.AllCustomerProfitabilityMetrics;
-using DataHub.AnalyticDataStore.Holding.AllCustomerTransactionCounts;
-using DataHub.AnalyticDataStore.Holding.CustomerAccountBalanceOverdrawns;
-using DataHub.AnalyticDataStore.Holding.CustomerDepositMaturity30Days;
-using DataHub.AnalyticDataStore.Holding.CustomerLoanDelinquency30Days;
-using DataHub.AnalyticDataStore.Holding.ProductTransactionMetrics;
-using DataHub.AnalyticDataStore.Holding.RetailDepositsCustomerDetails;
-using DataHub.AnalyticDataStore.Holding.RetailLendingCustomerDetails;
+﻿using OpenTemenos.DataHubs.AnalyticDataStore.Holding.AccountTransactionDetails;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.AccountTransactionMetrics;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.AllCustomerProductBalances;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.AllCustomerProfitabilityMetrics;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.AllCustomerTransactionCounts;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.CustomerAccountBalanceOverdrawns;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.CustomerDepositMaturity30Days;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.CustomerLoanDelinquency30Days;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.ProductTransactionMetrics;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.RetailDepositsCustomerDetails;
+using OpenTemenos.DataHubs.AnalyticDataStore.Holding.RetailLendingCustomerDetails;
 
-namespace DataHub.AnalyticDataStore;
+namespace OpenTemenos.DataHubs.AnalyticDataStore;
 
 public interface IHoldingClient
 {

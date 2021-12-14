@@ -1,14 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>netstandard2.1</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.DataHubs.AnalyticDataStore</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\DataHub.AnalyticDataStore.Holding\DataHub.AnalyticDataStore.Holding.csproj" />
-	  <ProjectReference Include="..\DataHub.AnalyticDataStore.Party\DataHub.AnalyticDataStore.Party.csproj" />
-	  <ProjectReference Include="..\DataHub.AnalyticDataStore.Product\DataHub.AnalyticDataStore.Product.csproj" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DataHub.AnalyticDataStore.Holding\DataHub.AnalyticDataStore.Holding.csproj"
+		                  PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.AnalyticDataStore.Party\DataHub.AnalyticDataStore.Party.csproj"
+		                  PrivateAssets="All" />
+		<ProjectReference Include="..\DataHub.AnalyticDataStore.Product\DataHub.AnalyticDataStore.Product.csproj"
+		                  PrivateAssets="All" />
 	</ItemGroup>
 </Project>

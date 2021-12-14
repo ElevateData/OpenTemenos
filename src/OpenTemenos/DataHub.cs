@@ -1,5 +1,5 @@
-﻿using DataHub.AnalyticDataStore;
-using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.AnalyticDataStore;
+using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos;
 

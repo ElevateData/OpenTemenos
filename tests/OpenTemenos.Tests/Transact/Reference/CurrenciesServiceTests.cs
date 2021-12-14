@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.Currencies;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.Currencies;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CurrencyServiceTests : CredentialManagement
 {
     private const string CurrencyId = "USD";
@@ -19,7 +20,7 @@ public class CurrencyServiceTests : CredentialManagement
         var result = _client.CurrencyService
             .GetCurrenciesAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

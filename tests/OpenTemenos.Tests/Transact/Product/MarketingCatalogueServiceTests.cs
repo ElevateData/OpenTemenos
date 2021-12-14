@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Product;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class MarketingCatalogueServiceTests : CredentialManagement
 {
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
@@ -13,7 +14,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetProductMarketingCatalogueAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -22,7 +23,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetSavingsAccountCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -31,7 +32,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetCurrentAccountCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -40,7 +41,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetTermDepositsCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -49,7 +50,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetShortTermFinanceCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,7 +59,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetPersonalLoanCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -67,7 +68,7 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetMortgageCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -76,6 +77,6 @@ public class MarketingCatalogueServiceTests : CredentialManagement
         var result = _client.MarketingCatalogueService.GetHomePurchaseCatalogAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

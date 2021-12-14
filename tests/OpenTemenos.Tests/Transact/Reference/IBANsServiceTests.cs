@@ -1,22 +1,23 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class IBANServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };
-    private readonly string AccountId = "";
+    private readonly string AccountId = "100005";
     private readonly string BankId = "";
     private readonly string CountryId = "US";
-    private readonly string IbanId = "";
+    private readonly string IbanId = "GB63DEMO60161300100005";
 
     [TestMethod]
     public void GetBICfromIBANAsync()
     {
         var result = _client.IBANService.GetBICfromIBANAsync(IbanId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -32,7 +33,7 @@ public class IBANServiceTests : CredentialManagement
         var result = _client.IBANService
             .GetIBANFromBBANAsync(IbanId, CountryId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -42,7 +43,7 @@ public class IBANServiceTests : CredentialManagement
             .GetIBANNumberGeneratedAsync(AccountId, BankId, CountryId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,6 +59,6 @@ public class IBANServiceTests : CredentialManagement
     {
         var result = _client.IBANService.ValidateIBANAsync(IbanId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

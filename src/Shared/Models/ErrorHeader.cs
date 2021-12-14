@@ -1,19 +1,12 @@
-﻿namespace Shared.Models;
+﻿namespace OpenTemenos.Shared.Models;
 
 public class ErrorHeader
 {
-    public ErrorHeader(Audit audit, string status)
-    {
-        Audit = audit;
-        Status = status;
-    }
-
-    [System.Text.Json.Serialization.JsonPropertyName("audit")]
-    public Audit Audit { get; set; }
+    [Newtonsoft.Json.JsonProperty("audit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+    public Audit? Audit { get; set; } = default!;
 
     /// <summary>Status of the API(success/failed)</summary>
-    [System.Text.Json.Serialization.JsonPropertyName("status")]
-    public string Status { get; set; }
-
+    [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+    public string? Status { get; set; } = default!;
 
 }

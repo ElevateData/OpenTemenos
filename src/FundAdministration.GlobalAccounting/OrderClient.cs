@@ -1,17 +1,22 @@
-﻿using FundAdministration.GlobalAccounting.Order;
-using FundAdministration.GlobalAccounting.Order.StockExchangeTransactions;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting.Order;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Order.StockExchangeTransactions;
+using OpenTemenos.Shared.Data;
 
-namespace FundAdministration.GlobalAccounting;
+namespace OpenTemenos.FundAdministrations.GlobalAccounting;
 
 public class OrderClient : IOrderClient
 {
     private readonly HttpClient _httpClient;
-    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
-    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public OrderClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public IStockExchangeTransactionService StockExchangeTransactionBookingService => new StockExchangeTransactionService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public string BaseUrl { get; set; } = DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = DefaultConfig.ReadResponseAsString;
+
+    public IStockExchangeTransactionService StockExchangeTransactionBookingService =>
+        new StockExchangeTransactionService(_httpClient)
+            { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

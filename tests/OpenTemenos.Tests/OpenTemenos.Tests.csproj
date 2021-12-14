@@ -15,6 +15,8 @@
     </PackageReference>
     <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Reflection" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +26,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\OpenTemenos\OpenTemenos.csproj" />
+    <ProjectReference Include="..\..\src\DataHub.AnalyticDataStore.Holding\DataHub.AnalyticDataStore.Holding.csproj" />
+    <ProjectReference Include="..\..\src\DataHub.AnalyticDataStore.Party\DataHub.AnalyticDataStore.Party.csproj" />
+    <ProjectReference Include="..\..\src\DataHub.AnalyticDataStore.Product\DataHub.AnalyticDataStore.Product.csproj" />
+    <ProjectReference Include="..\..\src\DataHub.AnalyticDataStore\DataHub.AnalyticDataStore.csproj" />
+    <ProjectReference Include="..\..\src\DataHub.OperationalDataStore\DataHub.OperationalDataStore.csproj" />
+    <ProjectReference Include="..\..\src\FinancialCrimeMitigation\FinancialCrimeMitigation.csproj" />
+    <ProjectReference Include="..\..\src\FundAdministration.GlobalAccounting\FundAdministration.GlobalAccounting.csproj" />
+    <ProjectReference Include="..\..\src\FundAdministration.GlobalInvestor\FundAdministration.GlobalInvestor.csproj" />
+    <ProjectReference Include="..\..\src\Payment\Payment.csproj" />
+    <ProjectReference Include="..\..\src\PortfolioManagement\PortfolioManagement.csproj" />
+    <ProjectReference Include="..\..\src\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\src\Transact\Transact.csproj" />
   </ItemGroup>
 
   <ItemGroup>

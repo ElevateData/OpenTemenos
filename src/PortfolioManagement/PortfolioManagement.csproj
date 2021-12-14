@@ -1,66 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-	<ItemGroup>
-		<!--
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\meta-inventory-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/meta-inventory-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:MetaInventoryService.cs /ContractsNamespace:PortfolioManagement.MetaInventories /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>MetaInventoryService.cs</OutputPath>
-			<ClassName>MetaInventoryService</ClassName>
-		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\meta-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/meta-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:MetaService.cs /ContractsNamespace:PortfolioManagement.Metas /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>MetaService.cs</OutputPath>
-			<ClassName>MetaService</ClassName>
-		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\tap-holdings-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/tap-holdings-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:HoldingService.cs /ContractsNamespace:PortfolioManagement.Holdings /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>HoldingService.cs</OutputPath>
-			<ClassName>HoldingService</ClassName>
-		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\tap-order-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/tap-order-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:OrderService.cs /ContractsNamespace:PortfolioManagement.Orders /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>OrderService.cs</OutputPath>
-			<ClassName>OrderService</ClassName>
-		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\tap-party-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/tap-party-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:PartyService.cs /ContractsNamespace:PortfolioManagement.Parties /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>PartyService.cs</OutputPath>
-			<ClassName>PartyService</ClassName>
-		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\tap-reference-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/tap-reference-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:ReferenceService.cs /ContractsNamespace:PortfolioManagement.References /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>ReferenceService.cs</OutputPath>
-			<ClassName>ReferenceService</ClassName>
-		</OpenApiReference>
-		<OpenApiReference Include="..\..\OpenApis\portfolio management\tap-system-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
-			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/portfolio%20management/tap-system-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:SystemService.cs /ContractsNamespace:PortfolioManagement.Systems /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
-			<OutputPath>SystemService.cs</OutputPath>
-			<ClassName>SystemService</ClassName>
-		</OpenApiReference>
--->
-	</ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.PortfolioManagement</RootNamespace>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Shared\Shared.csproj" />

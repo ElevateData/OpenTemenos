@@ -1,13 +1,14 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Enterprise;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class EnterpriseProductPricingServiceTests : CredentialManagement
 {
-    private const string BaseContractReference = "";
-    private const string ProductId = "";
-    private const string ArrangementId = "";
+    private const string BaseContractReference = "101125";
+    private const string ProductId = "CURRENT.ACCOUNT";
+    private const string ArrangementId = "AA21082XK3KZ";
     private const string PackageId = "";
     private const string PartyId = "";
     private readonly IEnterpriseClient _client = new EnterpriseClient(HttpClient) { ReadResponseAsString = true };

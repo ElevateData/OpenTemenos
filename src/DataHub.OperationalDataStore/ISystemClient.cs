@@ -1,6 +1,6 @@
-﻿using DataHub.OperationalDataStore.System.ServiceDetails;
+﻿using OpenTemenos.DataHubs.OperationalDataStore.System.ServiceDetails;
 
-namespace DataHub.OperationalDataStore;
+namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public interface ISystemClient
 {

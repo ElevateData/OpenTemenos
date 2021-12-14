@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.Collaterals;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.Collaterals;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CollateralServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -39,6 +40,6 @@ public class CollateralServiceTests : CredentialManagement
             .GetCustomerCollateralsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

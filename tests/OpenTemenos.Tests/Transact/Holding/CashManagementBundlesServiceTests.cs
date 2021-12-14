@@ -1,11 +1,12 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CashManagementBundleServiceTests : CredentialManagement
 {
-    private const string AccountId = "";
+    private const string AccountId = "100005";
     private const string BundleId = "";
     private const string CurrencyId = "USD";
     private const string CustomerId = "100282";
@@ -17,7 +18,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetCashPoolExceptionLogAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetBundleAccountsAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -35,7 +36,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetBundleHistoryDetailsAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -44,7 +45,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetBundleArrangementsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -53,7 +54,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetBundleBalancesAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -62,7 +63,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetCustomerBundleAccountsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -71,7 +72,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetDraftArrangementsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -80,7 +81,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetDraftBundleListAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -89,7 +90,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetNonBalanceNettingAccountsAsync(BundleId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -98,7 +99,7 @@ public class CashManagementBundleServiceTests : CredentialManagement
         var result = _client.CashManagementBundleArrangementService.GetBundleAccountBalancesAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -108,6 +109,6 @@ public class CashManagementBundleServiceTests : CredentialManagement
                 CurrencyId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.CustomerAdverts;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.CustomerAdverts;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CustomerAdvertServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -15,7 +16,7 @@ public class CustomerAdvertServiceTests : CredentialManagement
         var result = _client.CustomerAdvertService.GetCustomerAdvertsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class CustomerAdvertServiceTests : CredentialManagement
         var result = _client.CustomerAdvertService.UpdateAdvertAsync(advertId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,6 +39,6 @@ public class CustomerAdvertServiceTests : CredentialManagement
         var result = _client.CustomerAdvertService.CreateAdvertAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

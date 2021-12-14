@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.Agents;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Party.Agents;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class AgentServiceTests : CredentialManagement
 {
     private const string AgentId = "1";
@@ -15,7 +16,8 @@ public class AgentServiceTests : CredentialManagement
         var result = _client.DistributorService
             .GetAgentAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.Records!.First())}");
+        Debug.WriteLine(
+            $@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body.Records!.First())}");
     }
 
     [TestMethod]

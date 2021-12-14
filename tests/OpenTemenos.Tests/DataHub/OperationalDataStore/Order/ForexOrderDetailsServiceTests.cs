@@ -1,8 +1,9 @@
-﻿using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Order;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class ForexOrderDetailServiceTests : CredentialManagement
 {
     private const string CounterPartyId = "";

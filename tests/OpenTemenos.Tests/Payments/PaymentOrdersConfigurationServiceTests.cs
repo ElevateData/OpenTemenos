@@ -1,6 +1,9 @@
-﻿namespace OpenTemenos.Tests.Payments;
+﻿using OpenTemenos.Payments;
 
-[TestClass, TestCategory("Payments")]
+namespace OpenTemenos.Tests.Payments;
+
+[TestClass]
+[TestCategory("Payments")]
 public class PaymentOrdersConfigurationServiceTests : CredentialManagement
 {
     private readonly IPaymentClient _client = new PaymentClient(HttpClient) { ReadResponseAsString = true };
@@ -11,16 +14,17 @@ public class PaymentOrdersConfigurationServiceTests : CredentialManagement
         var result = _client.PaymentOrderConfigurationService.GetPaymentOrderPurposesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
+    //TODO: String 'NO' was not recognized as a valid DateTime
     public void GetPaymentOrderProductsAsync()
     {
         var result = _client.PaymentOrderConfigurationService.GetPaymentOrderProductsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -29,7 +33,7 @@ public class PaymentOrdersConfigurationServiceTests : CredentialManagement
         var result = _client.PaymentOrderConfigurationService.GetPaymentOrderCountryRulesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,6 +42,6 @@ public class PaymentOrdersConfigurationServiceTests : CredentialManagement
         var result = _client.PaymentOrderConfigurationService.GetISOClearingCodesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

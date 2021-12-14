@@ -1,8 +1,9 @@
-﻿using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class InterestCatalogServiceTests : CredentialManagement
 {
     private const string RecordId = "";

@@ -1,17 +1,21 @@
-﻿using FundAdministration.GlobalInvestor.System;
-using FundAdministration.GlobalInvestor.System.Triggers;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.System;
+using OpenTemenos.FundAdministrations.GlobalInvestor.System.Triggers;
+using OpenTemenos.Shared.Data;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public class SystemClient : ISystemClient
 {
     private readonly HttpClient _httpClient;
-    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
-    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public SystemClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
-    public ITriggerService OutboundTriggerService => new TriggerService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+
+    public string BaseUrl { get; set; } = DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = DefaultConfig.ReadResponseAsString;
+
+    public ITriggerService OutboundTriggerService => new TriggerService(_httpClient)
+        { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

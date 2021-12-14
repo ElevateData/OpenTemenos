@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.System.CloudServiceElasticities;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.System.CloudServiceElasticities;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CloudServiceElasticityServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };
@@ -17,7 +18,7 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.CreateServiceElasticCleanupAsync(serverId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -29,7 +30,7 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.AmendServiceElasticParameterAsync(settingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -41,7 +42,7 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.CreateServiceElasticProfileAsync(workProfileId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -53,7 +54,7 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.AmendServiceElasticProfileAsync(workProfileId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -65,7 +66,7 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.AmendSystemParameterElasticAsync(settingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -74,7 +75,7 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.GetAgentElasticCheckAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -83,6 +84,6 @@ public class CloudServiceElasticityServiceTests : CredentialManagement
         var result = _client.CloudServiceElasticityService.GetAgentElasticCheckDetailsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

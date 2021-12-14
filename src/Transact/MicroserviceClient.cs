@@ -1,12 +1,12 @@
-﻿using Transact.Microservice;
-using Transact.Microservice.CallbackRegistries;
-using Transact.Microservice.Entitlements;
-using Transact.Microservice.GenericConfigs;
-using Transact.Microservice.Meterings;
-using Transact.Microservice.ServiceOrchestrators;
-using Transact.Microservice.Traceabilities;
+﻿using OpenTemenos.Transacts.Microservice;
+using OpenTemenos.Transacts.Microservice.CallbackRegistries;
+using OpenTemenos.Transacts.Microservice.Entitlements;
+using OpenTemenos.Transacts.Microservice.GenericConfigs;
+using OpenTemenos.Transacts.Microservice.Meterings;
+using OpenTemenos.Transacts.Microservice.ServiceOrchestrators;
+using OpenTemenos.Transacts.Microservice.Traceabilities;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public class MicroserviceClient : IMicroserviceClient
 {

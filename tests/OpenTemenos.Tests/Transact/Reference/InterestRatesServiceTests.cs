@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.InterestRates;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.InterestRates;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class InterestRateServiceTests : CredentialManagement
 {
     private const string RateId = "1";
@@ -16,7 +17,7 @@ public class InterestRateServiceTests : CredentialManagement
         var result = _client.InterestRateService
             .GetRateTextsAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -54,7 +55,7 @@ public class InterestRateServiceTests : CredentialManagement
         var result = _client.InterestRateService
             .GetBasicInterestChangeDatesAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -100,7 +101,7 @@ public class InterestRateServiceTests : CredentialManagement
         var result = _client.InterestRateService
             .GetPeriodicRateChangesAsync(Date).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -108,7 +109,7 @@ public class InterestRateServiceTests : CredentialManagement
     {
         var result = _client.InterestRateService.GetBasicInterestNameAsync(RateId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

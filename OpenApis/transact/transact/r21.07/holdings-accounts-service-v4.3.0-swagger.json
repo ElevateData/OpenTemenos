@@ -4227,24 +4227,29 @@
             "maxLength" : 3
           },
           "balance1" : {
-            "type" : "number",
-            "description" : "Balance corresponding to first day."
+            "type" : "string",
+            "description" : "Balance corresponding to first day.",
+            "maxLength" : 20
           },
           "balance2" : {
-            "type" : "number",
-            "description" : "Balance corresponding to second day."
+            "type" : "string",
+            "description" : "Balance corresponding to second day.",
+            "maxLength" : 20
           },
           "balance3" : {
-            "type" : "number",
-            "description" : "Balance corresponding to third day."
+            "type" : "string",
+            "description" : "Balance corresponding to third day.",
+            "maxLength" : 20
           },
           "balance4" : {
-            "type" : "number",
-            "description" : "Balance corresponding to fourth day."
+            "type" : "string",
+            "description" : "Balance corresponding to fourth day.",
+            "maxLength" : 20
           },
           "balance5" : {
-            "type" : "number",
-            "description" : "Balance corresponding to fifth day."
+            "type" : "string",
+            "description" : "Balance corresponding to fifth day.",
+            "maxLength" : 20
           }
         }
       }
@@ -4275,24 +4280,29 @@
             "description" : "Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN & BBAN"
           },
           "balance1" : {
-            "type" : "number",
-            "description" : "Balance corresponding to first day."
+            "type" : "string",
+            "description" : "Balance corresponding to first day.",
+            "maxLength" : 20
           },
           "balance2" : {
-            "type" : "number",
-            "description" : "Balance corresponding to second day."
+            "type" : "string",
+            "description" : "Balance corresponding to second day.",
+            "maxLength" : 20
           },
           "balance3" : {
-            "type" : "number",
-            "description" : "Balance corresponding to third day."
+            "type" : "string",
+            "description" : "Balance corresponding to third day.",
+            "maxLength" : 20
           },
           "balance4" : {
-            "type" : "number",
-            "description" : "Balance corresponding to fourth day."
+            "type" : "string",
+            "description" : "Balance corresponding to fourth day.",
+            "maxLength" : 20
           },
           "balance5" : {
-            "type" : "number",
-            "description" : "Balance corresponding to fifth day."
+            "type" : "string",
+            "description" : "Balance corresponding to fifth day.",
+            "maxLength" : 20
           }
         }
       }

@@ -1,18 +1,21 @@
-﻿using DataHub.OperationalDataStore.System;
-using DataHub.OperationalDataStore.System.ServiceDetails;
+﻿using OpenTemenos.DataHubs.OperationalDataStore.System;
+using OpenTemenos.DataHubs.OperationalDataStore.System.ServiceDetails;
+using OpenTemenos.Shared.Data;
 
-namespace DataHub.OperationalDataStore;
+namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public class SystemClient : ISystemClient
 {
     private readonly HttpClient _httpClient;
-    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
-    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public SystemClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
-    public IServiceDetailService ServiceAutomationService => new ServiceDetailService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+    public string BaseUrl { get; set; } = DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = DefaultConfig.ReadResponseAsString;
+
+    public IServiceDetailService ServiceAutomationService => new ServiceDetailService(_httpClient)
+        { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Microservice.ServiceOrchestrators;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Microservice.ServiceOrchestrators;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ServiceOrchestratorServiceTests : CredentialManagement
 {
     private const string SequenceId = "1";
@@ -17,7 +18,7 @@ public class ServiceOrchestratorServiceTests : CredentialManagement
         var result = _client.ServiceOrchestratorService.CreateSequenceAsync(body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class ServiceOrchestratorServiceTests : CredentialManagement
         var result = _client.ServiceOrchestratorService.GetSequenceAsync()
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -35,7 +36,7 @@ public class ServiceOrchestratorServiceTests : CredentialManagement
         var result = _client.ServiceOrchestratorService.GetSequenceByIdAsync(SequenceId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -45,6 +46,6 @@ public class ServiceOrchestratorServiceTests : CredentialManagement
         var result = _client.ServiceOrchestratorService.CancelSequenceAsync(SequenceId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 }

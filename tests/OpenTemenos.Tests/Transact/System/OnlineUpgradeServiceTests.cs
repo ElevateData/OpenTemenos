@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.System.OnlineUpgrades;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.System.OnlineUpgrades;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class OnlineUpgradeServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };
@@ -16,7 +17,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.AddServerOnlineupgradeAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.StopRestructureServiceAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,7 +39,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.StartRestructureFeederAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -49,7 +50,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.StopRestructureFeederAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -60,7 +61,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.StartPrimaryDatareleaseAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -71,7 +72,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.StartSecondaryDatareleaseAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -80,7 +81,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeCriticalRecordAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -89,7 +90,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeNonCriticalRecordsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -98,7 +99,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeRestructureFilelistAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -107,7 +108,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeFeederDrilldownAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -116,7 +117,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeFeederDrilldownChannelAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -125,7 +126,7 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeJobTimesPrimaryAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -134,6 +135,6 @@ public class OnlineUpgradeServiceTests : CredentialManagement
         var result = _client.OnlineUpgradeService.GetOnlineUpgradeJobTimesSecondaryAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

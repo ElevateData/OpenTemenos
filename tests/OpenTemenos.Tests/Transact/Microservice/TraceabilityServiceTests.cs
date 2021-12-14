@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Microservice.Traceabilities;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Microservice.Traceabilities;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class TraceabilityServiceTests : CredentialManagement
 {
     private const string Category = "Test";
@@ -16,7 +17,7 @@ public class TraceabilityServiceTests : CredentialManagement
         var result = _client.TraceabilityService.GetTraceLogAsync(Category, TraceType)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class TraceabilityServiceTests : CredentialManagement
         var result = _client.TraceabilityService.GetSignatureAsync(message, mode)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -36,7 +37,7 @@ public class TraceabilityServiceTests : CredentialManagement
         var result = _client.TraceabilityService.GetEvidenceAsync(Category, TraceType)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -48,6 +49,6 @@ public class TraceabilityServiceTests : CredentialManagement
         var result = _client.TraceabilityService.CreateTraceLogsAsync(traceLogId, traceType)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Meta.Queries;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Meta.Queries;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class QueryServiceTests : CredentialManagement
 {
     private const string QueryId = "1";
@@ -15,7 +16,7 @@ public class QueryServiceTests : CredentialManagement
         var result = _client.QueryService.GetQueriesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class QueryServiceTests : CredentialManagement
         var result = _client.QueryService.GetQueryAsync(QueryId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -36,6 +37,6 @@ public class QueryServiceTests : CredentialManagement
         var result = _client.QueryService.CreateQueryAsync(queryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

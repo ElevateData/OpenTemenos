@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class SecurityPositionServiceTests : CredentialManagement
 {
     private const string InstrumentId = "1";
@@ -15,7 +16,7 @@ public class SecurityPositionServiceTests : CredentialManagement
         var result = _client.SecurityPositionService.GetPortfoliosTransactionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class SecurityPositionServiceTests : CredentialManagement
         var result = _client.SecurityPositionService.GetSecurityInventoryPositionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -33,7 +34,7 @@ public class SecurityPositionServiceTests : CredentialManagement
         var result = _client.SecurityPositionService.GetPortfolioTransactionsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -42,7 +43,7 @@ public class SecurityPositionServiceTests : CredentialManagement
         var result = _client.SecurityPositionService.GetInstrumentPositionsAsync(InstrumentId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -51,7 +52,7 @@ public class SecurityPositionServiceTests : CredentialManagement
         var result = _client.SecurityPositionService.GetPortfolioSecurityPositionsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -60,6 +61,6 @@ public class SecurityPositionServiceTests : CredentialManagement
         var result = _client.SecurityPositionService.GetPortfoliosTransactionsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

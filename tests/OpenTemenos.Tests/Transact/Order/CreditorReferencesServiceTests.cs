@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CreditorReferenceServiceTests : CredentialManagement
 {
     private const string CreditorReference = "";
@@ -16,6 +17,6 @@ public class CreditorReferenceServiceTests : CredentialManagement
             .GetStructuredCreditorReferenceAsync(CreditorReference, GenerateOrValidateOption)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

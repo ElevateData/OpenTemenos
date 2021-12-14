@@ -1,8 +1,9 @@
-﻿using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class GuaranteeDetailServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

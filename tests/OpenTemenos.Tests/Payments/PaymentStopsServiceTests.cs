@@ -1,8 +1,10 @@
-﻿using Payment.PaymentStops;
+﻿using OpenTemenos.Payments;
+using OpenTemenos.Payments.PaymentStops;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass, TestCategory("Payments")]
+[TestClass]
+[TestCategory("Payments")]
 public class PaymentStopServiceTests : CredentialManagement
 {
     private const string AccountId = "23701";
@@ -14,7 +16,7 @@ public class PaymentStopServiceTests : CredentialManagement
         var result = _client.PaymentStopService.GetPaymentStopAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +28,7 @@ public class PaymentStopServiceTests : CredentialManagement
         var result = _client.PaymentStopService.CreatePaymentStopAsync(accountId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,7 +40,7 @@ public class PaymentStopServiceTests : CredentialManagement
         var result = _client.PaymentStopService.UpdatePaymentStopAsync(accountId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -47,6 +49,6 @@ public class PaymentStopServiceTests : CredentialManagement
         var result = _client.PaymentStopService.GetPaymentStopsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

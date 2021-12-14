@@ -1,4 +1,4 @@
-﻿namespace FundAdministration.GlobalAccounting;
+﻿namespace OpenTemenos.FundAdministrations.GlobalAccounting;
 
 public interface IGlobalAccountingClient
 {

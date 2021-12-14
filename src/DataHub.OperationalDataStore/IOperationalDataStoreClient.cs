@@ -1,4 +1,4 @@
-﻿namespace DataHub.OperationalDataStore;
+﻿namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public interface IOperationalDataStoreClient
 {

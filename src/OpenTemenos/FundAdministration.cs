@@ -1,5 +1,5 @@
-﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalInvestor;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting;
+using OpenTemenos.FundAdministrations.GlobalInvestor;
 
 namespace OpenTemenos;
 

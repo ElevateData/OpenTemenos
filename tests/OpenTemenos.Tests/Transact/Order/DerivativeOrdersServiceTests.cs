@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.DerivativeOrders;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.DerivativeOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class DerivativeOrderServiceTests : CredentialManagement
 {
     private const string DerivativeOrderId = "1";
@@ -15,7 +16,7 @@ public class DerivativeOrderServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOrderService.GetOTCDerivativeOrdersAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class DerivativeOrderServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOrderService.GetETDDerivativeOrdersAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -35,7 +36,7 @@ public class DerivativeOrderServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOrderService.CreateDerivativesOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -44,7 +45,7 @@ public class DerivativeOrderServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOrderService.GetDerivativesOrderAsync(DerivativeOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -56,6 +57,6 @@ public class DerivativeOrderServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOrderService.UpdateDerivativesOrderAsync(derivativeOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,8 +1,10 @@
-﻿using Payment.TransactionStops;
+﻿using OpenTemenos.Payments;
+using OpenTemenos.Payments.TransactionStops;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass, TestCategory("Payments")]
+[TestClass]
+[TestCategory("Payments")]
 public class TransactionStopServiceTests : CredentialManagement
 {
     private const string TransactionStopId = "1";
@@ -16,7 +18,7 @@ public class TransactionStopServiceTests : CredentialManagement
         var result = _client.TransactionStopService.CreateTransactionStopAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -25,7 +27,7 @@ public class TransactionStopServiceTests : CredentialManagement
         var result = _client.TransactionStopService.GetStopInstructionsAsync(TransactionStopId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -37,7 +39,7 @@ public class TransactionStopServiceTests : CredentialManagement
         var result = _client.TransactionStopService.UpdateTransactionStopAsync(transactionStopId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,7 +48,7 @@ public class TransactionStopServiceTests : CredentialManagement
         var result = _client.TransactionStopService.GetInvestigationItemsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,6 +60,6 @@ public class TransactionStopServiceTests : CredentialManagement
         var result = _client.TransactionStopService.UpdateTransactionStopInvestigationsAsync(transactionStopId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

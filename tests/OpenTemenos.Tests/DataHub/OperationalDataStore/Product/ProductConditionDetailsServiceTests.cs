@@ -1,11 +1,12 @@
-﻿using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Product;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class ProductConditionDetailServiceTests : CredentialManagement
 {
-    private const string ProductId = "";
+    private const string ProductId = "SMALL.BUSINESS.LOAN";
     private readonly IProductClient _client = new ProductClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]

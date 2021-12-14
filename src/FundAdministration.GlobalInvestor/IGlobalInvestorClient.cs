@@ -1,4 +1,4 @@
-﻿namespace FundAdministration.GlobalInvestor;
+﻿namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface IGlobalInvestorClient
 {

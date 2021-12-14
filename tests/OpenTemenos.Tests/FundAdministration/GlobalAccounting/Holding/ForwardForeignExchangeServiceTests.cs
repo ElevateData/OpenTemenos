@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Holding.ForwardForeignExchanges;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.ForwardForeignExchanges;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Holding;
 
-[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalAccounting")]
 public class ForwardForeignExchangeServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

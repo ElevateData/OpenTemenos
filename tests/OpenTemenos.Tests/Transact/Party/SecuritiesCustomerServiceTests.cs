@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.SecuritiesCustomers;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.SecuritiesCustomers;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class SecuritiesCustomerServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -15,7 +16,7 @@ public class SecuritiesCustomerServiceTests : CredentialManagement
         var result = _client.SecuritiesCustomerService.GetSecuritiesCustomerAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class SecuritiesCustomerServiceTests : CredentialManagement
         var result = _client.SecuritiesCustomerService.CreateSecuritiesCustomerAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,6 +40,6 @@ public class SecuritiesCustomerServiceTests : CredentialManagement
         var result = _client.SecuritiesCustomerService.UpdateSecuritiesCustomerAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

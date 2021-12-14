@@ -1,12 +1,12 @@
-﻿using FundAdministration.GlobalAccounting.Reference.ExchangeRates;
-using FundAdministration.GlobalAccounting.Reference.ForwardExchangeRates;
-using FundAdministration.GlobalAccounting.Reference.ForwardInterestRates;
-using FundAdministration.GlobalAccounting.Reference.InterestRateTypes;
-using FundAdministration.GlobalAccounting.Reference.SecurityPrices;
-using FundAdministration.GlobalAccounting.Reference.SwapInterestRates;
-using FundAdministration.GlobalAccounting.Reference.SwapsPrices;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ExchangeRates;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ForwardExchangeRates;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ForwardInterestRates;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.InterestRateTypes;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SecurityPrices;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SwapInterestRates;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SwapsPrices;
 
-namespace FundAdministration.GlobalAccounting;
+namespace OpenTemenos.FundAdministrations.GlobalAccounting;
 
 public interface IReferenceClient
 {

@@ -1,23 +1,23 @@
-﻿using Transact.Party.Beneficiaries;
-using Transact.Party.CustomerAdverts;
-using Transact.Party.CustomerArrangements;
-using Transact.Party.CustomerDeliveryPreferences;
-using Transact.Party.CustomerMandates;
-using Transact.Party.CustomerOpenBankingConnections;
-using Transact.Party.Customers;
-using Transact.Party.CustomersContactHistories;
-using Transact.Party.CustomersDocuments;
-using Transact.Party.CustomersMiFIDs;
-using Transact.Party.ExternalUsers;
-using Transact.Party.OnboardingCustomers;
-using Transact.Party.ParticipantLists;
-using Transact.Party.SaasBeneficiaries;
-using Transact.Party.SecuritiesCustomers;
-using Transact.Party.TravelNotifications;
-using Transact.Party.UsCustomerInformations;
-using Transact.Party.UserAdmins;
+﻿using OpenTemenos.Transacts.Party.Beneficiaries;
+using OpenTemenos.Transacts.Party.CustomerAdverts;
+using OpenTemenos.Transacts.Party.CustomerArrangements;
+using OpenTemenos.Transacts.Party.CustomerDeliveryPreferences;
+using OpenTemenos.Transacts.Party.CustomerMandates;
+using OpenTemenos.Transacts.Party.CustomerOpenBankingConnections;
+using OpenTemenos.Transacts.Party.Customers;
+using OpenTemenos.Transacts.Party.CustomersContactHistories;
+using OpenTemenos.Transacts.Party.CustomersDocuments;
+using OpenTemenos.Transacts.Party.CustomersMiFIDs;
+using OpenTemenos.Transacts.Party.ExternalUsers;
+using OpenTemenos.Transacts.Party.OnboardingCustomers;
+using OpenTemenos.Transacts.Party.ParticipantLists;
+using OpenTemenos.Transacts.Party.SaasBeneficiaries;
+using OpenTemenos.Transacts.Party.SecuritiesCustomers;
+using OpenTemenos.Transacts.Party.TravelNotifications;
+using OpenTemenos.Transacts.Party.UsCustomerInformations;
+using OpenTemenos.Transacts.Party.UserAdmins;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 //TODO: Rename Transact.IPartyClient methods
 public interface IPartyClient

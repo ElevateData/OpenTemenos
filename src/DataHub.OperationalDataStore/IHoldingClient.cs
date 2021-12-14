@@ -1,14 +1,14 @@
-﻿using DataHub.OperationalDataStore.Holding.AccountLists;
-using DataHub.OperationalDataStore.Holding.ArrangementsDetails;
-using DataHub.OperationalDataStore.Holding.GuaranteeDetails;
-using DataHub.OperationalDataStore.Holding.LcDetails;
-using DataHub.OperationalDataStore.Holding.LimitDetails;
-using DataHub.OperationalDataStore.Holding.PaymentStops;
-using DataHub.OperationalDataStore.Holding.Portfolios;
-using DataHub.OperationalDataStore.Holding.RepurchaseAgreements;
-using DataHub.OperationalDataStore.Holding.TradeDetails;
+﻿using OpenTemenos.DataHubs.OperationalDataStore.Holding.AccountLists;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.ArrangementsDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.GuaranteeDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.LcDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.LimitDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.PaymentStops;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.Portfolios;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.RepurchaseAgreements;
+using OpenTemenos.DataHubs.OperationalDataStore.Holding.TradeDetails;
 
-namespace DataHub.OperationalDataStore;
+namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public interface IHoldingClient
 {
@@ -21,5 +21,4 @@ public interface IHoldingClient
     public IPaymentStopService PaymentStopService { get; }
     public IPortfolioService PortfolioDetailService { get; }
     public IRepurchaseAgreementService RepurchaseAgreementService { get; }
-
 }

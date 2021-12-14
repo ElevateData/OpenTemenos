@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalAccounting;
-using FundAdministration.GlobalAccounting.Reference.SwapInterestRates;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SwapInterestRates;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalAccounting.Reference;
 
-[TestClass, TestCategory("FundAdministration/GlobalAccounting")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalAccounting")]
 public class SwapInterestRateServiceTests : CredentialManagement
 {
     private readonly IReferenceClient _client = new ReferenceClient(HttpClient) { ReadResponseAsString = true };

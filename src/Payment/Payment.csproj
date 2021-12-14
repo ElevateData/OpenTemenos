@@ -1,56 +1,58 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.Payments</RootNamespace>
+	</PropertyGroup>
 	<ItemGroup>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-directDebits-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-directDebits-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:DirectDebitService.cs /ContractsNamespace:Payment.DirectDebit /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:DirectDebitService.cs /ContractsNamespace:OpenTemenos.Payments.DirectDebit /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>DirectDebitService.cs</OutputPath>
 			<ClassName>DirectDebitService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-paymentOrdersConfiguration-service-v3.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-paymentOrdersConfiguration-service-v3.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:PaymentOrdersConfigurationService.cs /ContractsNamespace:Payment.PaymentOrdersConfigurations /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:PaymentOrdersConfigurationService.cs /ContractsNamespace:OpenTemenos.Payments.PaymentOrdersConfigurations /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>PaymentOrdersConfigurationService.cs</OutputPath>
 			<ClassName>PaymentOrdersConfigurationService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-paymentOrders-service-v3.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-paymentOrders-service-v3.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:PaymentOrderService.cs /ContractsNamespace:Payment.PaymentOrders /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:PaymentOrderService.cs /ContractsNamespace:OpenTemenos.Payments.PaymentOrders /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>PaymentOrderService.cs</OutputPath>
 			<ClassName>PaymentOrderService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-payments-service-v3.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-payments-service-v3.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:PaymentService.cs /ContractsNamespace:Payment.Payments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:PaymentService.cs /ContractsNamespace:OpenTemenos.Payments.Payments /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>PaymentService.cs</OutputPath>
 			<ClassName>PaymentService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-paymentStops-service-v2.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-paymentStops-service-v2.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:PaymentStopService.cs /ContractsNamespace:Payment.PaymentStops /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:PaymentStopService.cs /ContractsNamespace:OpenTemenos.Payments.PaymentStops /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>PaymentStopService.cs</OutputPath>
 			<ClassName>PaymentStopService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\RequestToPayPayments-v1.1.1-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/RequestToPayPayments-v1.1.1-swagger.json</SourceUri>
-			<Options>/ContractsOutput:RequestToPayPaymentService.cs /ContractsNamespace:Payment.RequestToPayPayments /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:RequestToPayPaymentService.cs /ContractsNamespace:OpenTemenos.Payments.RequestToPayPayments /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>RequestToPayPaymentService.cs</OutputPath>
 			<ClassName>RequestToPayPaymentService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-standingOrders-service-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-standingOrders-service-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:StandingOrderService.cs /ContractsNamespace:Payment.StandingOrders /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:StandingOrderService.cs /ContractsNamespace:OpenTemenos.Payments.StandingOrders /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>StandingOrderService.cs</OutputPath>
 			<ClassName>StandingOrderService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\transact\transact\r21.07\order-transactionstop-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/transact/transact/r21.07/order-transactionstop-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:TransactionStopService.cs /ContractsNamespace:Payment.TransactionStops /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:TransactionStopService.cs /ContractsNamespace:OpenTemenos.Payments.TransactionStops /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>TransactionStopService.cs</OutputPath>
 			<ClassName>TransactionStopService</ClassName>
 		</OpenApiReference>
@@ -58,15 +60,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="3.0.0">
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.0.5">
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Shared\Shared.csproj" />

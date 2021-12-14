@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.ForexUtilizations;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.ForexUtilizations;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ForexUtilizationServiceTests : CredentialManagement
 {
     private const string UtilizationId = "";
@@ -15,7 +16,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
         var result = _client.ForexUtilizationService.GetUtilisationsAsync(UtilizationId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -28,7 +29,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
             .AddUtilisationsAsync(utilisationId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -37,7 +38,7 @@ public class ForexUtilizationServiceTests : CredentialManagement
         var result = _client.ForexUtilizationService.ApproveUtilisationsAsync(UtilizationId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,6 +47,6 @@ public class ForexUtilizationServiceTests : CredentialManagement
         var result = _client.ForexUtilizationService.GetFxUtilisationRatesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

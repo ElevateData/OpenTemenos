@@ -1,11 +1,12 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class UsDashboardServiceTests : CredentialManagement
 {
-    private const string AccountId = "1";
+    private const string AccountId = "100005";
     private const string CustomerId = "100282";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
@@ -15,7 +16,7 @@ public class UsDashboardServiceTests : CredentialManagement
         var result = _client.UsModelBank.HoldingSummaryService.GetUsCustomerHoldingsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class UsDashboardServiceTests : CredentialManagement
         var result = _client.UsModelBank.HoldingSummaryService.GetUsDepositsDashboardAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -33,7 +34,7 @@ public class UsDashboardServiceTests : CredentialManagement
         var result = _client.UsModelBank.HoldingSummaryService.GetUsAccountsHoldingsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -42,6 +43,6 @@ public class UsDashboardServiceTests : CredentialManagement
         var result = _client.UsModelBank.HoldingSummaryService.GetUsAccountsDashboardAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

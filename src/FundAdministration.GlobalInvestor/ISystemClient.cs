@@ -1,6 +1,6 @@
-﻿using FundAdministration.GlobalInvestor.System.Triggers;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.System.Triggers;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface ISystemClient
 {

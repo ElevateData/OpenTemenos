@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.TransactionCodes;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.TransactionCodes;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class TransactionCodeServiceTests : CredentialManagement
 {
     private const string TransactionCode = "1";
@@ -15,7 +16,7 @@ public class TransactionCodeServiceTests : CredentialManagement
         var result = _client.TransactionCodeService
             .GetTransactionCodeAsync(TransactionCode).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,6 +47,6 @@ public class TransactionCodeServiceTests : CredentialManagement
         var result = _client.TransactionCodeService
             .GetTransactionCodeListAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

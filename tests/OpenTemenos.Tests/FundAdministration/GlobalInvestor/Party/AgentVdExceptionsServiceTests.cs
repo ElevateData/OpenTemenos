@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.AgentVdExceptions;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Party.AgentVdExceptions;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class AgentVdExceptionServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

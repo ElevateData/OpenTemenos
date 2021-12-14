@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.CreateNonDeliverableForwards;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.CreateNonDeliverableForwards;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CreateNonDeliverableForwardServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };

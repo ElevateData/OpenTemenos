@@ -1,11 +1,12 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ArrangementsProductLineServiceTests : CredentialManagement
 {
-    private const string ProductLine = "2";
+    private const string ProductLine = "3";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
@@ -14,7 +15,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -23,7 +24,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsLoansAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -32,7 +33,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetUnapprovedArrangementsAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -41,7 +42,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetAAPendingArrangementAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -50,7 +51,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetAAPendingArrangementDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -59,7 +60,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetAAPendingArrangementLoansAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -68,7 +69,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetApprovedAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -77,7 +78,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetApprovedDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -86,7 +87,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetApprovedLoansAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -95,7 +96,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetClosedMaturedAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -104,7 +105,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetClosedMaturedDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -113,7 +114,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetClosedMaturedLendingAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -122,7 +123,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetSimulatedAccountsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -131,7 +132,7 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetSimulatedDepositsAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -140,6 +141,6 @@ public class ArrangementsProductLineServiceTests : CredentialManagement
         var result = _client.ArrangementForProductLineService.GetSimulatedLendingAsync(ProductLine)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

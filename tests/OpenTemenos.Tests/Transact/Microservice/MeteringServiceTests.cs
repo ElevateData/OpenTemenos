@@ -1,10 +1,11 @@
 ﻿using System;
-using Transact;
-using Transact.Microservice.Meterings;
+using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Microservice.Meterings;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class MeteringServiceTests : CredentialManagement
 {
     private const string ApplicationId = "1";
@@ -19,7 +20,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.GetAppMetricConfigAsync(ApplicationId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -31,7 +32,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.CreateAppMeteringConfigAsync(applicationId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -40,7 +41,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.GetApplicationMetricsConfigAsync(ConfigurationId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -52,7 +53,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.UpdateAppMeteringConfigAsync(configurationId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -63,7 +64,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.DeleteAppMeteringConfigAsync(configurationId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -74,7 +75,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.GetMetricLogDataAsync(ApplicationId, fromDate, toDate)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -87,7 +88,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.AddMetricDataAsync(requestId, applicationId, body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -98,7 +99,7 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.GetUsageStatisticsAsync(ApplicationId, fromDate, toDate)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -107,6 +108,6 @@ public class MeteringServiceTests : CredentialManagement
         var result = _client.ApplicationMeteringService.GetEvidenceAsync(ApplicationId, ResourceId, MetricId)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.PrivateEquityOrders;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.PrivateEquityOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class PrivateEquityOrderServiceTests : CredentialManagement
 {
     private const string PrivateEquityOrderId = "1";
@@ -15,7 +16,7 @@ public class PrivateEquityOrderServiceTests : CredentialManagement
         var result = _client.PrivateEquityOrderService.GetPrivateEquityOrderAsync(PrivateEquityOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class PrivateEquityOrderServiceTests : CredentialManagement
         var result = _client.PrivateEquityOrderService.CreatePrivateEquityOrderAsync(privateEquityOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,6 +40,6 @@ public class PrivateEquityOrderServiceTests : CredentialManagement
         var result = _client.PrivateEquityOrderService.UpdatePrivateEquityOrderAsync(privateEquityOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

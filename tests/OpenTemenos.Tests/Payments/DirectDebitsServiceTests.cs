@@ -1,8 +1,10 @@
-﻿using Payment.DirectDebit;
+﻿using OpenTemenos.Payments;
+using OpenTemenos.Payments.DirectDebit;
 
 namespace OpenTemenos.Tests.Payments;
 
-[TestClass, TestCategory("Payments")]
+[TestClass]
+[TestCategory("Payments")]
 public class DirectDebitServiceTests : CredentialManagement
 {
     private readonly IPaymentClient _client = new PaymentClient(HttpClient) { ReadResponseAsString = true };
@@ -13,7 +15,7 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.GetAccountDirectDebitsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -25,7 +27,7 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.CreateDirectDebitsAsync(directDebitId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -37,7 +39,7 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.UpdateDirectDebitsAsync(directDebitId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,7 +48,7 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.GetRejectedCollectionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -55,7 +57,7 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.GetDebtorDirectDebitMandatesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -67,7 +69,7 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.UpdateDebtorDirectDebitMandatesAsync(directDebitId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -79,6 +81,6 @@ public class DirectDebitServiceTests : CredentialManagement
         var result = _client.DirectDebitManagementService.CancelDebtorDirectDebitMandatesAsync(directDebitId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace OpenTemenos;
+﻿using OpenTemenos.Payments;
+
+namespace OpenTemenos;
 
 public class OpenTemenosClient : IOpenTemenosClient
 {

@@ -1,14 +1,14 @@
-﻿using Transact.Meta.Apis;
-using Transact.Meta.DwExportProperties;
-using Transact.Meta.Menus;
-using Transact.Meta.Payments;
-using Transact.Meta.Queries;
-using Transact.Meta.Screens;
-using Transact.Meta.Tables;
-using Transact.Meta.UserAdministrationInternals;
-using Transact.Meta.VirtualTables;
+﻿using OpenTemenos.Transacts.Meta.Apis;
+using OpenTemenos.Transacts.Meta.DwExportProperties;
+using OpenTemenos.Transacts.Meta.Menus;
+using OpenTemenos.Transacts.Meta.Payments;
+using OpenTemenos.Transacts.Meta.Queries;
+using OpenTemenos.Transacts.Meta.Screens;
+using OpenTemenos.Transacts.Meta.Tables;
+using OpenTemenos.Transacts.Meta.UserAdministrationInternals;
+using OpenTemenos.Transacts.Meta.VirtualTables;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public interface IMetaClient
 {

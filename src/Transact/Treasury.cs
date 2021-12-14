@@ -1,13 +1,13 @@
-﻿using Transact.Holding;
-using Transact.Holding.CreateNonDeliverableForwards;
-using Transact.Holding.CurrencyPositions;
-using Transact.Holding.Positions;
-using Transact.Holding.Reports;
-using Transact.Holding.SwapNpvRevaluations;
-using Transact.Holding.TreasuryCurrencies;
-using Transact.Holding.TreasuryCurrencyPairs;
+﻿using OpenTemenos.Transacts.Holding;
+using OpenTemenos.Transacts.Holding.CreateNonDeliverableForwards;
+using OpenTemenos.Transacts.Holding.CurrencyPositions;
+using OpenTemenos.Transacts.Holding.Positions;
+using OpenTemenos.Transacts.Holding.Reports;
+using OpenTemenos.Transacts.Holding.SwapNpvRevaluations;
+using OpenTemenos.Transacts.Holding.TreasuryCurrencies;
+using OpenTemenos.Transacts.Holding.TreasuryCurrencyPairs;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public class Treasury : ITreasury
 {

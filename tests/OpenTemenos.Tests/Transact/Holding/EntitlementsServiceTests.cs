@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.Entitlements;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.Entitlements;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class EntitlementServiceTests : CredentialManagement
 {
     private const string EntitlementId = "";
@@ -16,7 +17,7 @@ public class EntitlementServiceTests : CredentialManagement
             .GetPendingEntitlementsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class EntitlementServiceTests : CredentialManagement
             .GetSecurityEntitlementsAsync(EntitlementId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -48,7 +49,7 @@ public class EntitlementServiceTests : CredentialManagement
             .GetEntitlementBuySellRightsAsync(EntitlementId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -70,6 +71,6 @@ public class EntitlementServiceTests : CredentialManagement
             .GetEntitlementApprovalsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

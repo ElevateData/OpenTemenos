@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.Categories;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.Categories;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CategoryServiceTests : CredentialManagement
 {
     private const string CategoryId = "1000";
@@ -15,7 +16,7 @@ public class CategoryServiceTests : CredentialManagement
         var result = _client.CategoryService
             .GetCategoriesAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -23,7 +24,7 @@ public class CategoryServiceTests : CredentialManagement
     {
         var result = _client.CategoryService.GetCategoryDetailsAsync(CategoryId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

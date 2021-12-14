@@ -1,9 +1,9 @@
-﻿using DataHub.OperationalDataStore.Party.CustomerDetails;
-using DataHub.OperationalDataStore.Party.ExternalUserDetails;
-using DataHub.OperationalDataStore.Party.ParticipantLists;
-using DataHub.OperationalDataStore.Party.UsCustomerDetails;
+﻿using OpenTemenos.DataHubs.OperationalDataStore.Party.CustomerDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Party.ExternalUserDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Party.ParticipantLists;
+using OpenTemenos.DataHubs.OperationalDataStore.Party.UsCustomerDetails;
 
-namespace DataHub.OperationalDataStore;
+namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public interface IPartyClient
 {

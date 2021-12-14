@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.Party.FatcaCrsSubStatuses;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Party.FatcaCrsSubStatuses;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.Party;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class FatcaCrsSubStatuseServiceTests : CredentialManagement
 {
     private const string InternalId = "1";

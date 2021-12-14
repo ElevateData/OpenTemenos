@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.PositionTransferOrdersRequests;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.PositionTransferOrdersRequests;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class PositionTransferOrdersRequestServiceTests : CredentialManagement
 {
     private readonly IOrderClient _client = new OrderClient(HttpClient) { ReadResponseAsString = true };
@@ -17,7 +18,7 @@ public class PositionTransferOrdersRequestServiceTests : CredentialManagement
             .CreateSecurityPositionTransferOrdersInitiationAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -30,7 +31,7 @@ public class PositionTransferOrdersRequestServiceTests : CredentialManagement
             .UpdateSecurityPositionTransferOrdersInitiationAsync(positionTransferOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -43,7 +44,7 @@ public class PositionTransferOrdersRequestServiceTests : CredentialManagement
             .DeleteSecurityPositionTransferOrdersInitiationAsync(positionTransferOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -55,6 +56,6 @@ public class PositionTransferOrdersRequestServiceTests : CredentialManagement
             .ApprovePositionTransferRequestAsync(positionTransferOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

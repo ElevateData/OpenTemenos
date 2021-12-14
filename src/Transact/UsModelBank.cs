@@ -1,8 +1,8 @@
-﻿using Transact.Holding;
-using Transact.Holding.UsDashboards;
-using Transact.Holding.UsSafeDeposits;
+﻿using OpenTemenos.Transacts.Holding;
+using OpenTemenos.Transacts.Holding.UsDashboards;
+using OpenTemenos.Transacts.Holding.UsSafeDeposits;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public class UsModelBank : IUsModelBank
 {

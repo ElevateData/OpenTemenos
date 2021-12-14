@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Microservice.CallbackRegistries;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Microservice.CallbackRegistries;
 
 namespace OpenTemenos.Tests.Transact.Microservice;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CallbackRegistryServiceTests : CredentialManagement
 {
     private readonly IMicroserviceClient _client = new MicroserviceClient(HttpClient) { ReadResponseAsString = true };
@@ -16,7 +17,7 @@ public class CallbackRegistryServiceTests : CredentialManagement
         var result = _client.CallbackRegistryService.CreateCallbackAsync(body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 
     [TestMethod]
@@ -27,6 +28,6 @@ public class CallbackRegistryServiceTests : CredentialManagement
         var result = _client.CallbackRegistryService.AcceptEventAsync(body)
             .Result;
         Assert.IsNotNull(result);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result)}");
     }
 }

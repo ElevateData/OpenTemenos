@@ -1,11 +1,11 @@
-﻿using FundAdministration.GlobalAccounting.Holding.EosCashCompensations;
-using FundAdministration.GlobalAccounting.Holding.EosMultipleSecurities;
-using FundAdministration.GlobalAccounting.Holding.EosNewSecurityWithoutCash;
-using FundAdministration.GlobalAccounting.Holding.EosSameSecurities;
-using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflows;
-using FundAdministration.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashOutflows;
+﻿using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.EosCashCompensations;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.EosMultipleSecurities;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.EosNewSecurityWithoutCash;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.EosSameSecurities;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashInflows;
+using OpenTemenos.FundAdministrations.GlobalAccounting.Holding.ExchangeOfNewSecurityWithCashOutflows;
 
-namespace FundAdministration.GlobalAccounting;
+namespace OpenTemenos.FundAdministrations.GlobalAccounting;
 
 public interface IExchangeOfSecurity
 {
@@ -15,5 +15,4 @@ public interface IExchangeOfSecurity
     public IEosCashCompensationService NewSecurityWithCashCompensationService { get; }
     public IEosSameSecurityService SameSecurityService { get; }
     public IEosMultipleSecurityService MultipleSecurityService { get; }
-
 }

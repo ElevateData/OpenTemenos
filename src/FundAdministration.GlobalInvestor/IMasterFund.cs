@@ -1,9 +1,9 @@
-﻿using FundAdministration.GlobalInvestor.Product.MinDivPayments;
-using FundAdministration.GlobalInvestor.Product.Securities;
-using FundAdministration.GlobalInvestor.Product.SecurityDescs;
-using FundAdministration.GlobalInvestor.Product.ShareValues;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.Product.MinDivPayments;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.Securities;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.SecurityDescs;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.ShareValues;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface IMasterFund
 {

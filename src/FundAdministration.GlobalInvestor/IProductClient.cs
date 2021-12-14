@@ -1,41 +1,41 @@
-﻿using FundAdministration.GlobalInvestor.Product.AdlDealingDetails;
-using FundAdministration.GlobalInvestor.Product.ApproExproDefinitions;
-using FundAdministration.GlobalInvestor.Product.CommissionGroups;
-using FundAdministration.GlobalInvestor.Product.DelayDays;
-using FundAdministration.GlobalInvestor.Product.EscalationChecks;
-using FundAdministration.GlobalInvestor.Product.ExchangeGroups;
-using FundAdministration.GlobalInvestor.Product.FixedCalendars;
-using FundAdministration.GlobalInvestor.Product.FrequencyExceptionDays;
-using FundAdministration.GlobalInvestor.Product.FrequencyExceptions;
-using FundAdministration.GlobalInvestor.Product.FundCutoffTimes;
-using FundAdministration.GlobalInvestor.Product.FundEscalationChecks;
-using FundAdministration.GlobalInvestor.Product.FundGroupCutoffs;
-using FundAdministration.GlobalInvestor.Product.FundManagers;
-using FundAdministration.GlobalInvestor.Product.FundOfFunds;
-using FundAdministration.GlobalInvestor.Product.FundPromoters;
-using FundAdministration.GlobalInvestor.Product.FundTradingDeskTrans;
-using FundAdministration.GlobalInvestor.Product.FundValueDates;
-using FundAdministration.GlobalInvestor.Product.FxDetails;
-using FundAdministration.GlobalInvestor.Product.HoldingLimits;
-using FundAdministration.GlobalInvestor.Product.Holidays;
-using FundAdministration.GlobalInvestor.Product.InitialSubscriptions;
-using FundAdministration.GlobalInvestor.Product.MinDivPayments;
-using FundAdministration.GlobalInvestor.Product.PerformanceFeeSetups;
-using FundAdministration.GlobalInvestor.Product.PermissionCountries;
-using FundAdministration.GlobalInvestor.Product.Securities;
-using FundAdministration.GlobalInvestor.Product.SecurityDescs;
-using FundAdministration.GlobalInvestor.Product.SecurityIds;
-using FundAdministration.GlobalInvestor.Product.ShareClasses;
-using FundAdministration.GlobalInvestor.Product.ShareValues;
-using FundAdministration.GlobalInvestor.Product.SimulationCalendars;
-using FundAdministration.GlobalInvestor.Product.SoftClosures;
-using FundAdministration.GlobalInvestor.Product.StpCounterParts;
-using FundAdministration.GlobalInvestor.Product.TaFunds;
-using FundAdministration.GlobalInvestor.Product.TradeDateExceptions;
-using FundAdministration.GlobalInvestor.Product.TransactionLimits;
-using FundAdministration.GlobalInvestor.Product.TransactionRestrictions;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.Product.AdlDealingDetails;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.ApproExproDefinitions;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.CommissionGroups;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.DelayDays;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.EscalationChecks;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.ExchangeGroups;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FixedCalendars;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FrequencyExceptionDays;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FrequencyExceptions;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundCutoffTimes;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundEscalationChecks;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundGroupCutoffs;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundManagers;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundOfFunds;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundPromoters;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundTradingDeskTrans;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FundValueDates;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.FxDetails;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.HoldingLimits;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.Holidays;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.InitialSubscriptions;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.MinDivPayments;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.PerformanceFeeSetups;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.PermissionCountries;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.Securities;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.SecurityDescs;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.SecurityIds;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.ShareClasses;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.ShareValues;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.SimulationCalendars;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.SoftClosures;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.StpCounterParts;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.TaFunds;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.TradeDateExceptions;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.TransactionLimits;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Product.TransactionRestrictions;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface IProductClient
 {
@@ -76,6 +76,7 @@ public interface IProductClient
     public ITaFundService TransferAgentFundService { get; }
     public IShareClasseService TransferAgentFundShareClasService { get; }
     public IShareValueService TransferAgentFundShareValueService { get; }
+
     public ITradeDateExceptionService TradeDateExceptionService { get; }
     //public ITfcService TrustFundCompanyService { get; }
 }

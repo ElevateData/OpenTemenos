@@ -1,27 +1,32 @@
-﻿using DataHub.AnalyticDataStore.Product;
-using DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances;
-using DataHub.AnalyticDataStore.Product.RetailDepositProductBalances;
-using DataHub.AnalyticDataStore.Product.RetailLendingProductBalances;
+﻿using OpenTemenos.DataHubs.AnalyticDataStore.Product;
+using OpenTemenos.DataHubs.AnalyticDataStore.Product.CorporateLendingProductBalances;
+using OpenTemenos.DataHubs.AnalyticDataStore.Product.RetailDepositProductBalances;
+using OpenTemenos.DataHubs.AnalyticDataStore.Product.RetailLendingProductBalances;
+using OpenTemenos.Shared.Data;
 
-namespace DataHub.AnalyticDataStore;
+namespace OpenTemenos.DataHubs.AnalyticDataStore;
 
 public class ProductClient : IProductClient
 {
     private readonly HttpClient _httpClient;
-    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
-    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
 
     public ProductClient(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
+    public string BaseUrl { get; set; } = DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = DefaultConfig.ReadResponseAsString;
+
     public ICorporateLendingProductBalanceService CorporateLendingProductService =>
-        new CorporateLendingProductBalanceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+        new CorporateLendingProductBalanceService(_httpClient)
+            { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IRetailDepositProductBalanceService RetailDepositProductBalanceService =>
-        new RetailDepositProductBalanceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+        new RetailDepositProductBalanceService(_httpClient)
+            { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IRetailLendingProductBalanceService RetailLendingProductBalanceService =>
-        new RetailLendingProductBalanceService(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
+        new RetailLendingProductBalanceService(_httpClient)
+            { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 }

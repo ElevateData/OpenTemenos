@@ -1,8 +1,8 @@
-﻿using FundAdministration.GlobalInvestor.Party.FatcaCrsDocuments;
-using FundAdministration.GlobalInvestor.Party.FatcaCrsStatuses;
-using FundAdministration.GlobalInvestor.Party.FatcaCrsSubStatuses;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.Party.FatcaCrsDocuments;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Party.FatcaCrsStatuses;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Party.FatcaCrsSubStatuses;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface IFatcaCrs
 {

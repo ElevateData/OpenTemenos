@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class PortfolioAccountServiceTests : CredentialManagement
 {
     private const string PortfolioId = "";
@@ -14,6 +15,6 @@ public class PortfolioAccountServiceTests : CredentialManagement
         var result = _client.PortfolioAccountService
             .GetPortfolioAccountsAsync(PortfolioId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

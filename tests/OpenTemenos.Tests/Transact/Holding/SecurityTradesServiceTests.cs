@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class SecurityTradeServiceTests : CredentialManagement
 {
     private const string SecurityTradeId = "1";
@@ -14,6 +15,6 @@ public class SecurityTradeServiceTests : CredentialManagement
         var result = _client.SecurityTradeService.GetSecurityTradesAsync(SecurityTradeId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

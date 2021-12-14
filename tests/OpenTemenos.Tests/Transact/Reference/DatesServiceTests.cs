@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.Dates;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.Dates;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class DateServiceTests : CredentialManagement
 {
     private const string CompanyIdPath = "US0010001";
@@ -16,7 +17,7 @@ public class DateServiceTests : CredentialManagement
         var result = _client.DateService
             .GetDatesAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

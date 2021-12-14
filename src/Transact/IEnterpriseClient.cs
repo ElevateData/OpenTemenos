@@ -1,6 +1,6 @@
-﻿using Transact.Enterprise.Pricings;
+﻿using OpenTemenos.Transacts.Enterprise.Pricings;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 /// <summary>
 /// Enterprise product pricing

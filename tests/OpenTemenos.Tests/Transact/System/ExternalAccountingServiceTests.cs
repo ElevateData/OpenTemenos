@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.System.ExternalAccountings;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.System.ExternalAccountings;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class ExternalAccountingServiceTests : CredentialManagement
 {
     private const string SettingId = "1";
@@ -15,7 +16,7 @@ public class ExternalAccountingServiceTests : CredentialManagement
         var result = _client.ExternalAccountingService.GetExternalAccountingSystemSettingsAsync(SettingId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,6 +28,6 @@ public class ExternalAccountingServiceTests : CredentialManagement
         var result = _client.ExternalAccountingService.CreateExternalAccountingSystemSettingsAsync(settingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

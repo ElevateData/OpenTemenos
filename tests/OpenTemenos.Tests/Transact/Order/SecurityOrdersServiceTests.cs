@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.SecurityOrders;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.SecurityOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class SecurityOrderServiceTests : CredentialManagement
 {
     private const string SecurityOrderId = "1";
@@ -17,7 +18,7 @@ public class SecurityOrderServiceTests : CredentialManagement
         var result = _client.SecurityOrderService.CreateSecurityOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class SecurityOrderServiceTests : CredentialManagement
         var result = _client.SecurityOrderService.GetSecurityOrderAsync(SecurityOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -38,7 +39,7 @@ public class SecurityOrderServiceTests : CredentialManagement
         var result = _client.SecurityOrderService.UpdateSecurityOrderAsync(securityOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -54,7 +55,7 @@ public class SecurityOrderServiceTests : CredentialManagement
             .GetPeriodicFeeEstimatesAsync(customerId, portfolioId, instrumentId, tradeCurrency, quantity, amount)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -65,7 +66,7 @@ public class SecurityOrderServiceTests : CredentialManagement
         var result = _client.SecurityOrderService.CreateStopPriceOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -76,6 +77,6 @@ public class SecurityOrderServiceTests : CredentialManagement
         var result = _client.SecurityOrderService.CreateStopPriceLimitOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

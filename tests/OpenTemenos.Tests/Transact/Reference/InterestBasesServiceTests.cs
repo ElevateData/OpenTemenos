@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.InterestBases;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.InterestBases;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class InterestBaseServiceTests : CredentialManagement
 {
     private const string InterestBasisId = "A";
@@ -15,7 +16,7 @@ public class InterestBaseServiceTests : CredentialManagement
         var result = _client.InterestBaseService
             .GetInterestBasesAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -24,7 +25,7 @@ public class InterestBaseServiceTests : CredentialManagement
         var result = _client.InterestBaseService
             .GetInterestDayBasisDetailsAsync(InterestBasisId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

@@ -1,19 +1,19 @@
-﻿using Transact.Order.AccountTransfers;
-using Transact.Order.CashManagementSweeps;
-using Transact.Order.CreditorReferences;
-using Transact.Order.DerivativeOrders;
-using Transact.Order.FiduciaryOrders;
-using Transact.Order.ForexCustomerOrders;
-using Transact.Order.IPOSecurityOrders;
-using Transact.Order.OrderSimulations;
-using Transact.Order.PaymentsConfigurations;
-using Transact.Order.PositionTransferOrdersRequests;
-using Transact.Order.PrivateEquityOrders;
-using Transact.Order.SecurityOrders;
-using Transact.Order.SecurityTransferOrders;
-using Transact.Order.Sweeps;
+﻿using OpenTemenos.Transacts.Order.AccountTransfers;
+using OpenTemenos.Transacts.Order.CashManagementSweeps;
+using OpenTemenos.Transacts.Order.CreditorReferences;
+using OpenTemenos.Transacts.Order.DerivativeOrders;
+using OpenTemenos.Transacts.Order.FiduciaryOrders;
+using OpenTemenos.Transacts.Order.ForexCustomerOrders;
+using OpenTemenos.Transacts.Order.IPOSecurityOrders;
+using OpenTemenos.Transacts.Order.OrderSimulations;
+using OpenTemenos.Transacts.Order.PaymentsConfigurations;
+using OpenTemenos.Transacts.Order.PositionTransferOrdersRequests;
+using OpenTemenos.Transacts.Order.PrivateEquityOrders;
+using OpenTemenos.Transacts.Order.SecurityOrders;
+using OpenTemenos.Transacts.Order.SecurityTransferOrders;
+using OpenTemenos.Transacts.Order.Sweeps;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public interface IOrderClient
 {

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.Portfolios;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.Portfolios;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class PortfolioServiceTests : CredentialManagement
 {
     private const string PortfolioId = "1";
@@ -19,7 +20,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.UpdatePortfolioClosureAsync(portfolioId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -31,7 +32,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.UpdatePortfolioDelinkAccountAsync(portfolioId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -40,7 +41,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioValuationsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -49,7 +50,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioLTVAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -58,7 +59,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetOwnBookPortfoliosAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -67,7 +68,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioAccountsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -76,7 +77,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfoliosAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -85,7 +86,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -97,7 +98,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.UpdatePortfolioAsync(portfolioId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -109,7 +110,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.ReversePortfolioAsync(portfolioId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -120,7 +121,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.CreatePortfolioAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -129,7 +130,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioOrderBlotterAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -138,7 +139,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioTransactionDetailsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -147,7 +148,7 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioDetailsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -156,6 +157,6 @@ public class PortfolioServiceTests : CredentialManagement
         var result = _client.PortfolioService.GetPortfolioHoldingsAsync(PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
-using Transact;
+using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 [Ignore("All methods are flagged as obsolete")]
 public class ArrangementsActivityServiceTests : CredentialManagement
 {
@@ -18,6 +19,6 @@ public class ArrangementsActivityServiceTests : CredentialManagement
         var result = _client.ArrangementsActivityService.GetArrangementActivityLogAsync(ArrangementId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

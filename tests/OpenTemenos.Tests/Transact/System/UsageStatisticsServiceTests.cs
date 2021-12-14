@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.System;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class UsageStatisticServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };
@@ -13,6 +14,6 @@ public class UsageStatisticServiceTests : CredentialManagement
         var result = _client.UsageStatisticService.GetUsageStatsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

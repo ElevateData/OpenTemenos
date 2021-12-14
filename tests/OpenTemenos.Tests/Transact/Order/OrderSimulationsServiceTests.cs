@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.OrderSimulations;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.OrderSimulations;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class OrderSimulationServiceTests : CredentialManagement
 {
     private const string OrderSimulationId = "1";
@@ -15,7 +16,7 @@ public class OrderSimulationServiceTests : CredentialManagement
         var result = _client.SecurityOrderSimulationService.GetSecurityOrderSimulationAsync(OrderSimulationId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -28,6 +29,6 @@ public class OrderSimulationServiceTests : CredentialManagement
             .CreateSecurityOrderSimulationAsync(orderSimulationId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

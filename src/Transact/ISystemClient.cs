@@ -1,14 +1,14 @@
-﻿using Transact.System.CloudServiceElasticities;
-using Transact.System.DataEventStreamings;
-using Transact.System.DocumentRequireds;
-using Transact.System.ExternalAccountings;
-using Transact.System.OnlineUpgrades;
-using Transact.System.ProcessWorkFlows;
-using Transact.System.ServiceAutomations;
-using Transact.System.SPFInformations;
-using Transact.System.UsageStatistics;
+﻿using OpenTemenos.Transacts.System.CloudServiceElasticities;
+using OpenTemenos.Transacts.System.DataEventStreamings;
+using OpenTemenos.Transacts.System.DocumentRequireds;
+using OpenTemenos.Transacts.System.ExternalAccountings;
+using OpenTemenos.Transacts.System.OnlineUpgrades;
+using OpenTemenos.Transacts.System.ProcessWorkFlows;
+using OpenTemenos.Transacts.System.ServiceAutomations;
+using OpenTemenos.Transacts.System.SPFInformations;
+using OpenTemenos.Transacts.System.UsageStatistics;
 
-namespace Transact;
+namespace OpenTemenos.Transacts;
 
 public interface ISystemClient
 {

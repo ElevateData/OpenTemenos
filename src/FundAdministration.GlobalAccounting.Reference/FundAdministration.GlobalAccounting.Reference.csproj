@@ -1,51 +1,53 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.FundAdministrations.GlobalAccounting.Reference</RootNamespace>
+	</PropertyGroup>
 	<ItemGroup>
 
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-exchangerate-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-exchangerate-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:ExchangeRateService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.ExchangeRates /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ExchangeRateService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ExchangeRates /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ExchangeRateService.cs</OutputPath>
 			<ClassName>ExchangeRateService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-forwardexchangerate-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-forwardexchangerate-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:ForwardExchangeRateService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.ForwardExchangeRates /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ForwardExchangeRateService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ForwardExchangeRates /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ForwardExchangeRateService.cs</OutputPath>
 			<ClassName>ForwardExchangeRateService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-forwardinterestrate-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-forwardinterestrate-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:ForwardInterestRateService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.ForwardInterestRates /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:ForwardInterestRateService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.ForwardInterestRates /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>ForwardInterestRateService.cs</OutputPath>
 			<ClassName>ForwardInterestRateService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-interestratetype-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-interestratetype-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:InterestRateTypeService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.InterestRateTypes /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:InterestRateTypeService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.InterestRateTypes /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>InterestRateTypeService.cs</OutputPath>
 			<ClassName>InterestRateTypeService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-securityprice-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-securityprice-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:SecurityPriceService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.SecurityPrices /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:SecurityPriceService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SecurityPrices /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>SecurityPriceService.cs</OutputPath>
 			<ClassName>SecurityPriceService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-swapinterestrate-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-swapinterestrate-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:SwapInterestRateService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.SwapInterestRates /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:SwapInterestRateService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SwapInterestRates /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>SwapInterestRateService.cs</OutputPath>
 			<ClassName>SwapInterestRateService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\fund administration\global accounting\multifonds-esb-swapsprice-screen-swagger-v1.0.0.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/fund%20administration/global%20accounting/multifonds-esb-swapsprice-screen-swagger-v1.0.0.json</SourceUri>
-			<Options>/ContractsOutput:SwapsPriceService.cs /ContractsNamespace:FundAdministration.GlobalAccounting.Reference.SwapsPrices /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:SwapsPriceService.cs /ContractsNamespace:OpenTemenos.FundAdministrations.GlobalAccounting.Reference.SwapsPrices /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>SwapsPriceService.cs</OutputPath>
 			<ClassName>SwapsPriceService</ClassName>
 		</OpenApiReference>
@@ -56,10 +58,11 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Shared\Shared.csproj" />

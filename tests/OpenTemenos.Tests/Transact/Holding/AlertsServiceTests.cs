@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.Alerts;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.Alerts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class AlertServiceTests : CredentialManagement
 {
     private const string ArrangementId = "1";
@@ -25,7 +26,7 @@ public class AlertServiceTests : CredentialManagement
             .GetEligibleEventsAsync(AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -34,6 +35,7 @@ public class AlertServiceTests : CredentialManagement
         var result = _client.ArrangementAccountAlertService.GetExternalSubscribersAlertRequestsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

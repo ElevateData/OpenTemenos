@@ -14,7 +14,7 @@
     "apiKey" : [ ]
   } ],
   "paths" : {
-    "/reference/balanceTypes" : {
+    "/reference/balancetypes" : {
       "get" : {
         "summary" : "Retrieves the details of all the available Balance types",
         "description" : "Retrieves the details of all the available Balance types",

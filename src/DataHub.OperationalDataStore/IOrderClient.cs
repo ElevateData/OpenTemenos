@@ -1,12 +1,12 @@
-﻿using DataHub.OperationalDataStore.Order.AccountHoldDetails;
-using DataHub.OperationalDataStore.Order.ForexOrderDetails;
-using DataHub.OperationalDataStore.Order.FundsTransferDetails;
-using DataHub.OperationalDataStore.Order.InvestigationItems;
-using DataHub.OperationalDataStore.Order.PaymentDetails;
-using DataHub.OperationalDataStore.Order.RejectedCollections;
-using DataHub.OperationalDataStore.Order.SweepAccountDetails;
+﻿using OpenTemenos.DataHubs.OperationalDataStore.Order.AccountHoldDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Order.ForexOrderDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Order.FundsTransferDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Order.InvestigationItems;
+using OpenTemenos.DataHubs.OperationalDataStore.Order.PaymentDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Order.RejectedCollections;
+using OpenTemenos.DataHubs.OperationalDataStore.Order.SweepAccountDetails;
 
-namespace DataHub.OperationalDataStore;
+namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public interface IOrderClient
 {

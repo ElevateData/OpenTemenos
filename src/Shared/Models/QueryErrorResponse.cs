@@ -1,19 +1,12 @@
-﻿namespace Shared.Models;
+﻿namespace OpenTemenos.Shared.Models;
 
 /// <summary>QueryErrorResponse</summary>
 public class QueryErrorResponse
 {
-    public QueryErrorResponse(ErrorHeader header, QueryErrorResponseBody error)
-    {
-        Header = header;
-        Error = error;
-    }
+    [Newtonsoft.Json.JsonProperty("header", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+    public ErrorHeader? Header { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("header")]
-    public ErrorHeader Header { get; set; }
-
-    [System.Text.Json.Serialization.JsonPropertyName("error")]
-    public QueryErrorResponseBody Error { get; set; }
-
+    [Newtonsoft.Json.JsonProperty("error", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+    public QueryErrorResponseBody? Error { get; set; } = default!;
 
 }

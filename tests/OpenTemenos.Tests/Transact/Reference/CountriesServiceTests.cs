@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Reference.Countries;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Reference.Countries;
 
 namespace OpenTemenos.Tests.Transact.Reference;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CountryServiceTests : CredentialManagement
 {
     private const string CountryId = "US";
@@ -17,7 +18,7 @@ public class CountryServiceTests : CredentialManagement
         var result = _client.CountryService.GetCountriesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class CountryServiceTests : CredentialManagement
         var result = _client.CountryService
             .GetCountryCodesAsync(CountryId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -34,7 +35,7 @@ public class CountryServiceTests : CredentialManagement
     {
         var result = _client.CountryService.GetCountryDetailsAsync(CountryId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -64,7 +65,7 @@ public class CountryServiceTests : CredentialManagement
     {
         var result = _client.CountryService.GetCountryGroupAsync(GroupId).Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -106,7 +107,7 @@ public class CountryServiceTests : CredentialManagement
         var result = _client.CountryService
             .GetCountryGroupListAsync().Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

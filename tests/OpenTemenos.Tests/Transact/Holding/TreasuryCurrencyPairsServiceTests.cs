@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class TreasuryCurrencyPairServiceTests : CredentialManagement
 {
     private const string CurrencyPair = "GBPUSD";
@@ -14,7 +15,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetCurrencyPairPositionsAsync(CurrencyPair)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -23,7 +24,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetCurrencyPairCalendarPositionsAsync(CurrencyPair)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -32,7 +33,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetCurrencyPairMarketRatesAsync(CurrencyPair)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -41,7 +42,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetAllCurrencyPairPositionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -50,7 +51,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetCurrencyPairPositionDealsAsync(CurrencyPair)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -59,7 +60,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetCurrencyPairsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -68,7 +69,7 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetCurrencyPairAsync(CurrencyPair)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -77,6 +78,6 @@ public class TreasuryCurrencyPairServiceTests : CredentialManagement
         var result = _client.TreasuryCurrencyPairService.GetFxPortfolioValuationRatesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

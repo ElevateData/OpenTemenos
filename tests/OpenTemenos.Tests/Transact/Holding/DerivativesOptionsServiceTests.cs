@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.DerivativesOptions;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.DerivativesOptions;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class DerivativesOptionServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
@@ -14,7 +15,7 @@ public class DerivativesOptionServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOperationService.GetSellOptionTradesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -34,7 +35,7 @@ public class DerivativesOptionServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOperationService.GetBuyOptionTradesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -54,7 +55,7 @@ public class DerivativesOptionServiceTests : CredentialManagement
         var result = _client.DerivativeInstrumentOperationService.GetActiveOptionTradesAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]

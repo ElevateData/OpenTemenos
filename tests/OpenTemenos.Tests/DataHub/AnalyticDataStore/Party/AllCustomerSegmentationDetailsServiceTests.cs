@@ -1,4 +1,4 @@
-﻿using DataHub.AnalyticDataStore;
+﻿using OpenTemenos.DataHubs.AnalyticDataStore;
 
 namespace OpenTemenos.Tests.DataHub.AnalyticDataStore.Party;
 

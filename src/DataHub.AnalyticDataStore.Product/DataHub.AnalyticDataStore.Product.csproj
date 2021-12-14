@@ -1,27 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
+		<RootNamespace>OpenTemenos.DataHubs.AnalyticDataStore.Product</RootNamespace>
+	</PropertyGroup>
 	<ItemGroup>
 
 		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getCorporateLendingProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getCorporateLendingProductBalances-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:CorporateLendingProductBalanceService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Product.CorporateLendingProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:CorporateLendingProductBalanceService.cs /ContractsNamespace:OpenTemenos.DataHubs.AnalyticDataStore.Product.CorporateLendingProductBalances /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>CorporateLendingProductBalanceService.cs</OutputPath>
 			<ClassName>CorporateLendingProductBalanceService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailDepositProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getRetailDepositProductBalances-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:RetailDepositProductBalanceService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Product.RetailDepositProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:RetailDepositProductBalanceService.cs /ContractsNamespace:OpenTemenos.DataHubs.AnalyticDataStore.Product.RetailDepositProductBalances /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>RetailDepositProductBalanceService.cs</OutputPath>
 			<ClassName>RetailDepositProductBalanceService</ClassName>
 		</OpenApiReference>
 		<OpenApiReference Include="..\..\OpenApis\datahub\analytics data store\getRetailLendingProductBalances-v1.0.0-swagger.json" CodeGenerator="NSwagCSharp">
 			<SourceUri>https://raw.githubusercontent.com/temenos/APIs/master/datahub/analytics%20data%20store/getRetailLendingProductBalances-v1.0.0-swagger.json</SourceUri>
-			<Options>/ContractsOutput:RetailLendingProductBalanceService.cs /ContractsNamespace:DataHub.AnalyticDataStore.Product.RetailLendingProductBalances /GenerateClientInterfaces:true /JsonLibrary:SystemTextJson /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:Shared.Models /GenerateOptionalParameters:true </Options>
+			<Options>/ContractsOutput:RetailLendingProductBalanceService.cs /ContractsNamespace:OpenTemenos.DataHubs.AnalyticDataStore.Product.RetailLendingProductBalances /GenerateClientInterfaces:true /GenerateNullableReferenceTypes:true /AdditionalNamespaceUsages:OpenTemenos.Shared.Models /GenerateExceptionClasses:false /ExcludedTypeNames:ErrorHeader,QueryErrorResponse,QueryErrorResponseBody,Audit /GenerateContractsOutput:true /AdditionalContractNamespaceUsages:OpenTemenos.Shared.Models /GenerateOptionalParameters:true </Options>
 			<OutputPath>RetailLendingProductBalanceService.cs</OutputPath>
 			<ClassName>RetailLendingProductBalanceService</ClassName>
 		</OpenApiReference>
@@ -32,10 +34,12 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
-		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.0">
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.15.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

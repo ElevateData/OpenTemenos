@@ -1,9 +1,9 @@
-﻿using FundAdministration.GlobalInvestor.Reference.Cities;
-using FundAdministration.GlobalInvestor.Reference.CountryHolidays;
-using FundAdministration.GlobalInvestor.Reference.CurrencyHolidays;
-using FundAdministration.GlobalInvestor.Reference.Messages;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor.Reference.Cities;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Reference.CountryHolidays;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Reference.CurrencyHolidays;
+using OpenTemenos.FundAdministrations.GlobalInvestor.Reference.Messages;
 
-namespace FundAdministration.GlobalInvestor;
+namespace OpenTemenos.FundAdministrations.GlobalInvestor;
 
 public interface IReferenceClient
 {

@@ -1,8 +1,9 @@
-﻿using DataHub.OperationalDataStore;
+﻿using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.Holding;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class AccountListServiceTests : CredentialManagement
 {
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
@@ -13,7 +14,7 @@ public class AccountListServiceTests : CredentialManagement
     {
         var result = _client.NostroVostroAccountListService.GetNostroAccountListAsync().Result;
         Assert.IsNotNull(result.Data);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Data)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Data)}");
     }
 
     [TestMethod]
@@ -21,6 +22,6 @@ public class AccountListServiceTests : CredentialManagement
     {
         var result = _client.NostroVostroAccountListService.GetVostroAccountListAsync().Result;
         Assert.IsNotNull(result.Data);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Data)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Data)}");
     }
 }

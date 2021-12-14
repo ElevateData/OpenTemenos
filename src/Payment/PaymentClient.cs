@@ -1,20 +1,20 @@
-﻿using Payment;
-using Payment.DirectDebit;
-using Payment.PaymentOrders;
-using Payment.PaymentOrdersConfigurations;
-using Payment.Payments;
-using Payment.PaymentStops;
-using Payment.RequestToPayPayments;
-using Payment.StandingOrders;
-using Payment.TransactionStops;
+﻿using OpenTemenos.Payments.DirectDebit;
+using OpenTemenos.Payments.PaymentOrders;
+using OpenTemenos.Payments.PaymentOrdersConfigurations;
+using OpenTemenos.Payments.Payments;
+using OpenTemenos.Payments.PaymentStops;
+using OpenTemenos.Payments.RequestToPayPayments;
+using OpenTemenos.Payments.StandingOrders;
+using OpenTemenos.Payments.TransactionStops;
+using OpenTemenos.Shared.Data;
 
-namespace OpenTemenos;
+namespace OpenTemenos.Payments;
 
 public class PaymentClient : IPaymentClient
 {
     private readonly HttpClient _httpClient;
-    public string BaseUrl { get; set; } = Shared.Data.DefaultConfig.BaseUrl;
-    public bool ReadResponseAsString { get; set; } = Shared.Data.DefaultConfig.ReadResponseAsString;
+    public string BaseUrl { get; set; } = DefaultConfig.BaseUrl;
+    public bool ReadResponseAsString { get; set; } = DefaultConfig.ReadResponseAsString;
 
     public PaymentClient(HttpClient httpClient)
     {

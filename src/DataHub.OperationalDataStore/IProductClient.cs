@@ -1,11 +1,11 @@
-﻿using DataHub.OperationalDataStore.Product.InterestCatalogs;
-using DataHub.OperationalDataStore.Product.InterestConditionDetails;
-using DataHub.OperationalDataStore.Product.ProductBuilderDetails;
-using DataHub.OperationalDataStore.Product.ProductConditionDetails;
-using DataHub.OperationalDataStore.Product.ProductDetails;
-using DataHub.OperationalDataStore.Product.ProductMarketingCatalogues;
+﻿using OpenTemenos.DataHubs.OperationalDataStore.Product.InterestCatalogs;
+using OpenTemenos.DataHubs.OperationalDataStore.Product.InterestConditionDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Product.ProductBuilderDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Product.ProductConditionDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Product.ProductDetails;
+using OpenTemenos.DataHubs.OperationalDataStore.Product.ProductMarketingCatalogues;
 
-namespace DataHub.OperationalDataStore;
+namespace OpenTemenos.DataHubs.OperationalDataStore;
 
 public interface IProductClient
 {

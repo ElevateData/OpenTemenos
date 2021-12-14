@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.Beneficiaries;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.Beneficiaries;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class BeneficiaryServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -18,7 +19,7 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.UpdateBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -30,7 +31,7 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.DeleteBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -41,7 +42,7 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.CreateBeneficiaryAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -52,7 +53,7 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.ApproveBeneficiaryAsync(beneficiaryId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -64,7 +65,7 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.RejectBeneficiaryAsync(beneficiaryId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -73,7 +74,7 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.GetCustomerBeneficiaryAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -82,6 +83,6 @@ public class BeneficiaryServiceTests : CredentialManagement
         var result = _client.BeneficiaryService.GetCustomerBeneficiariesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Holding.LetterOfCredits;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Holding.LetterOfCredits;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class LetterOfCreditServiceTests : CredentialManagement
 {
     private const string ClausesId = "1";
@@ -11,7 +12,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
     private const string DocumentId = "1";
     private const string DrawingId = "1";
     private const string LcAmendmentId = "1";
-    private const string LetterOfCreditId = "";
+    private const string LetterOfCreditId = "TF2107816028";
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
@@ -23,7 +24,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateDrawingAsync(drawingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -32,7 +33,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetDrawingAsync(DrawingId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -44,7 +45,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateDrawingAsync(drawingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -56,7 +57,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.DeleteDrawingAsync(drawingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -67,7 +68,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.ApproveDrawingAsync(drawingId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -76,7 +77,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLcDocumentAsync(DocumentId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -88,7 +89,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateLcDocumentAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -100,7 +101,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateLcDocumentAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -112,7 +113,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.DeleteLcDocumentAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -124,7 +125,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateLcAmendmentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -133,7 +134,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLCAmendmentsAsync(LetterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -145,7 +146,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateLcAmendmentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -157,7 +158,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.DeleteLcAmendmentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -168,7 +169,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.ApproveLcAmendmentAsync(letterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -177,7 +178,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLcClauseAsync(ClausesId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -189,7 +190,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateLcClauseAsync(clausesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -201,7 +202,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateLcClauseAsync(clausesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -213,7 +214,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.DeleteLcClauseAsync(clausesId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -222,7 +223,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetDrawingsAsync(LetterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -231,7 +232,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLCDocumentsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -240,7 +241,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLCClausesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -249,7 +250,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetIncoTermsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -258,7 +259,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLetterOfCreditsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -267,7 +268,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetExportDrawingsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -276,7 +277,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetExportLCAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -285,7 +286,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetExportLcAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -294,7 +295,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetImportDrawingsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -303,7 +304,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetImportLCAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -312,7 +313,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetImportLcAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -321,7 +322,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetOutwardCollectionDocumentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -330,7 +331,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetInwardCollectionsAmendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -339,7 +340,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetInwardCollectionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -348,7 +349,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLcTenorsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -357,7 +358,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetOutwardCollectionAmdendmentsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -366,7 +367,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetOutwardCollectionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -375,7 +376,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLcLimitsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -387,7 +388,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.RejectDrawingAsync(drawingId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -399,7 +400,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.RejectLcAmendmentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -408,7 +409,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetApprovedOutwardCollectionsAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -417,7 +418,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLcAmendmentAsync(LcAmendmentId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -428,7 +429,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateLetterOfCreditAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -440,7 +441,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateLetterOfCreditAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -449,7 +450,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetLcAmendmentAsync(LetterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -461,7 +462,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateExternalAmendmentToAnLCAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -473,7 +474,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.DeleteLetterOfCreditAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -484,7 +485,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.ApproveLetterOfCreditAsync(letterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -496,7 +497,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.RejectLetterOfCreditAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -507,7 +508,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateExportLetterOfCreditAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -519,7 +520,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateExportLetterOfCreditAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -530,7 +531,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfSightPaymentLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -541,7 +542,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfUsanceLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -552,7 +553,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfNegotiationLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -563,7 +564,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfMixedPaymentLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -574,7 +575,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfStandbyLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -585,7 +586,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfPreAdviseImportLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -596,7 +597,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfBackToBackLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -607,7 +608,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.CreateIssuanceOfTransferableLCAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -620,7 +621,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
             .UpdateAmendmentSeekingBeneficiaryConsentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -632,7 +633,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateDecisionOnAmendmentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -644,7 +645,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateCancellationOfLCAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -656,7 +657,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateDecisionOnExportLCAmendmentAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -668,7 +669,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.UpdateCancellationOfExportLCAsync(letterOfCreditId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -677,7 +678,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetImportLcsOutstandingAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -686,7 +687,7 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetImportLcsExpiringButOutstandingAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -695,6 +696,6 @@ public class LetterOfCreditServiceTests : CredentialManagement
         var result = _client.LetterOfCreditService.GetExportlcsOutstandingAsync(LetterOfCreditId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

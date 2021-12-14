@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Order.IPOSecurityOrders;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Order.IPOSecurityOrders;
 
 namespace OpenTemenos.Tests.Transact.Order;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class IPOSecurityOrderServiceTests : CredentialManagement
 {
     private const string SecurityOrderId = "1";
@@ -17,7 +18,7 @@ public class IPOSecurityOrderServiceTests : CredentialManagement
         var result = _client.InitialPublicOfferingSecurityOrderService.CreateSecuritiesIPOOrderAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -26,7 +27,7 @@ public class IPOSecurityOrderServiceTests : CredentialManagement
         var result = _client.InitialPublicOfferingSecurityOrderService.GetSecuritiesIPOOrderAsync(SecurityOrderId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,6 +40,6 @@ public class IPOSecurityOrderServiceTests : CredentialManagement
             .UpdateSecuritiesIPOOrderAsync(securityOrderId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

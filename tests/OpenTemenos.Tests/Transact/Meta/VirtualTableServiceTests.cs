@@ -1,8 +1,9 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Meta;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class VirtualTableServiceTests : CredentialManagement
 {
     private const string VirtualTableName = "1099C";
@@ -14,6 +15,6 @@ public class VirtualTableServiceTests : CredentialManagement
         var result = _client.VirtualTableService.GetVirtualTableDataAsync(VirtualTableName)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

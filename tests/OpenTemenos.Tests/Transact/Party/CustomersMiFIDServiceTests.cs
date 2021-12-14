@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.CustomersMiFIDs;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.CustomersMiFIDs;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CustomersMiFIDServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -15,7 +16,7 @@ public class CustomersMiFIDServiceTests : CredentialManagement
         var result = _client.CustomersMiFIDService.GetMiFIDClientInformationAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class CustomersMiFIDServiceTests : CredentialManagement
         var result = _client.CustomersMiFIDService.CreateMiFIDClientInformationAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -39,6 +40,6 @@ public class CustomersMiFIDServiceTests : CredentialManagement
         var result = _client.CustomersMiFIDService.UpdateMiFIDClientInformationAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

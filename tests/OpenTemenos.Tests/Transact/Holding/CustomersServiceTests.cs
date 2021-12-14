@@ -1,11 +1,12 @@
-﻿using Transact;
+﻿using OpenTemenos.Transacts;
 
 namespace OpenTemenos.Tests.Transact.Holding;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CustomerServiceTests : CredentialManagement
 {
-    private const string AccountId = "";
+    private const string AccountId = "100005";
     private const string ArrangementId = "";
     private const string CustomerId = "100282";
     private const string PortfolioId = "";
@@ -18,7 +19,7 @@ public class CustomerServiceTests : CredentialManagement
             .GetArrangementsForCustomerAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -27,7 +28,7 @@ public class CustomerServiceTests : CredentialManagement
         var result = _client.CustomerHoldingService.GetArrangementForCustomerAsync(CustomerId, ArrangementId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -37,7 +38,7 @@ public class CustomerServiceTests : CredentialManagement
             .GetAccountForCustomerAsync(CustomerId, AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -46,7 +47,7 @@ public class CustomerServiceTests : CredentialManagement
         var result = _client.CustomerHoldingService.GetOverdueSettlementsByCustomerAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -55,7 +56,7 @@ public class CustomerServiceTests : CredentialManagement
         var result = _client.CustomerHoldingService.GetAccountTransactionsForCustomerAsync(CustomerId, AccountId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -64,7 +65,7 @@ public class CustomerServiceTests : CredentialManagement
         var result = _client.CustomerHoldingService.GetOutstandingSettlementsAsync(CustomerId, PortfolioId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -74,6 +75,6 @@ public class CustomerServiceTests : CredentialManagement
             .GetAccountsForCustomerAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body.First())}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }

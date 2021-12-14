@@ -1,9 +1,10 @@
 ﻿using System;
-using DataHub.OperationalDataStore;
+using OpenTemenos.DataHubs.OperationalDataStore;
 
 namespace OpenTemenos.Tests.DataHub.OperationalDataStore.System;
 
-[TestClass, TestCategory("DataHub.OperationalDataStore")]
+[TestClass]
+[TestCategory("DataHub.OperationalDataStore")]
 public class ServiceDetailServiceTests : CredentialManagement
 {
     private readonly DateTimeOffset _batchDate = DateTimeOffset.Now.AddDays(-1);

@@ -1,9 +1,10 @@
-﻿using FundAdministration.GlobalInvestor;
-using FundAdministration.GlobalInvestor.System.Triggers;
+﻿using OpenTemenos.FundAdministrations.GlobalInvestor;
+using OpenTemenos.FundAdministrations.GlobalInvestor.System.Triggers;
 
 namespace OpenTemenos.Tests.FundAdministration.GlobalInvestor.System;
 
-[TestClass, TestCategory("FundAdministration/GlobalInvestor")]
+[TestClass]
+[TestCategory("FundAdministration/GlobalInvestor")]
 public class TriggerServiceTests : CredentialManagement
 {
     private readonly ISystemClient _client = new SystemClient(HttpClient) { ReadResponseAsString = true };

@@ -1,9 +1,10 @@
-﻿using Transact;
-using Transact.Party.CustomersDocuments;
+﻿using OpenTemenos.Transacts;
+using OpenTemenos.Transacts.Party.CustomersDocuments;
 
 namespace OpenTemenos.Tests.Transact.Party;
 
-[TestClass, TestCategory("Transact")]
+[TestClass]
+[TestCategory("Transact")]
 public class CustomersDocumentServiceTests : CredentialManagement
 {
     private const string CustomerId = "100282";
@@ -18,7 +19,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.GetDocumentImageAsync(CustomerId, ImageId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -31,7 +32,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.UpdateDocumentImageAsync(customerId, imageId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -40,7 +41,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.GetCustomerImagesAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -52,7 +53,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.CreateDocumentImageAsync(customerId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -61,7 +62,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.GetCustomerDocumentAsync(CustomerDocumentId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -73,7 +74,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.CreateCustomerDocumentAsync(customerDocumentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -85,7 +86,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.AmendCustomerDocumentAsync(customerDocumentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -97,7 +98,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.DeleteCustomerDocumentAsync(customerDocumentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -106,7 +107,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.GetCustomerDocumentsAsync(CustomerId)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -115,7 +116,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.GetDocumentsLocationAsync()
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -124,7 +125,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.GetDocumentandImagesAsync(ImageReference)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -136,7 +137,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.CreateProfilePictureUploadAsync(uploadId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -148,7 +149,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.UpdateProfilePictureUploadAsync(uploadId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -160,7 +161,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.DeleteProfilePictureUploadAsync(uploadId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -171,7 +172,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.CreateDocumentandImageAsync(payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -183,7 +184,7 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.UpdateDocumentandImageAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 
     [TestMethod]
@@ -195,6 +196,6 @@ public class CustomersDocumentServiceTests : CredentialManagement
         var result = _client.CustomersDocumentService.DeleteDocumentandImageAsync(documentId, payload)
             .Result;
         Assert.IsNotNull(result.Body);
-        Debug.WriteLine($@"Sample: {JsonSerializer.Serialize(result.Body)}");
+        Debug.WriteLine($@"{MethodBase.GetCurrentMethod()?.Name}: {JsonSerializer.Serialize(result.Body)}");
     }
 }
