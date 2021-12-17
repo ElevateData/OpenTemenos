@@ -48,17 +48,6 @@
 		<ProjectReference Include="..\Payment\Payment.csproj" PrivateAssets="All" />
 		<ProjectReference Include="..\PortfolioManagement\PortfolioManagement.csproj" PrivateAssets="All" />
 		<ProjectReference Include="..\Shared\Shared.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Enterprise\Transact.Enterprise.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Holding\Transact.Holding.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Loans\Transact.Loan.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Meta\Transact.Meta.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Microservice\Transact.Microservice.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Order\Transact.Order.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Party\Transact.Party.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Product\Transact.Product.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.Reference\Transact.Reference.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact.System\Transact.System.csproj" PrivateAssets="All" />
-		<ProjectReference Include="..\Transact\Transact.csproj" PrivateAssets="All" />
 	</ItemGroup>
 
 	<PropertyGroup>

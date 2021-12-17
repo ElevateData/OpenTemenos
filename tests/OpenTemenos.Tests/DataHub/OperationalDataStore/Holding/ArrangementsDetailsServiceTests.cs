@@ -42,6 +42,7 @@ public class ArrangementsDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetArrangementActivitiesAsync()
     {
         var result = _client.ArrangementsDetailService.GetArrangementActivitiesAsync().Result;
@@ -49,6 +50,7 @@ public class ArrangementsDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetPendingArrangementActivityAsync()
     {
         var result = _client.ArrangementsDetailService.GetPendingArrangementActivityAsync().Result;
@@ -56,6 +58,7 @@ public class ArrangementsDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetPendingBundleArrangementAsync()
     {
         var result = _client.ArrangementsDetailService.GetPendingBundleArrangementAsync().Result;
@@ -63,6 +66,7 @@ public class ArrangementsDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetPendingDepositArrangementAsync()
     {
         var result = _client.ArrangementsDetailService.GetPendingDepositArrangementAsync().Result;
@@ -70,6 +74,7 @@ public class ArrangementsDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetPendingLoanArrangementAsync()
     {
         var result = _client.ArrangementsDetailService.GetPendingLoanArrangementAsync().Result;
@@ -77,6 +82,7 @@ public class ArrangementsDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetPendingConsentArrangementAsync()
     {
         var result = _client.ArrangementsDetailService.GetPendingConsentArrangementAsync().Result;

@@ -10,6 +10,7 @@ public class AllCustomerProductBalanceServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetAllCustomerProductBalancesAsync()
     {
         var result = _client.CustomerProductBalanceService

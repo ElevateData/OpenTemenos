@@ -10,6 +10,7 @@ public class AllCustomerTransactionCountServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetAllCustomerTransactionCountAsync()
     {
         var result = _client.CustomerTransactionClassificationService.GetAllCustomerTransactionCountAsync().Result;

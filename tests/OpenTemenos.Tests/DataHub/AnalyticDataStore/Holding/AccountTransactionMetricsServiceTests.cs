@@ -10,6 +10,7 @@ public class AccountTransactionMetricServiceTests
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetAccountTransactionMetricsAsync()
     {
         var result = _client.AccountTransactionService

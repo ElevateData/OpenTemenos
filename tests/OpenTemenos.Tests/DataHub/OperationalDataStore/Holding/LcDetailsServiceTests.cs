@@ -10,6 +10,7 @@ public class LcDetailServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetIncoTermsAsync()
     {
         var result = _client.LetterOfCreditService.GetIncoTermsAsync().Result;
@@ -17,6 +18,7 @@ public class LcDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetLcTenorsAsync()
     {
         var result = _client.LetterOfCreditService.GetLcTenorsAsync().Result;

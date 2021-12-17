@@ -10,6 +10,7 @@ public class GuaranteeDetailServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetGuaranteeIssuanceRequestsAsync()
     {
         var result = _client.GuaranteeDetailService.GetGuaranteeIssuanceRequestsAsync().Result;

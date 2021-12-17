@@ -10,6 +10,7 @@ public class CustomerAccountBalanceOverdrawnServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetCustomerAccountBalanceOverdrawnAsync()
     {
         var result = _client.CustomerOverdrawnAccountBalanceService

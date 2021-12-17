@@ -10,6 +10,7 @@ public class CustomerDepositMaturity30DayServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetCustomerDepositMaturity30DaysAsync()
     {
         var result = _client.CustomerDepositService.GetCustomerDepositMaturity30DaysAsync().Result;

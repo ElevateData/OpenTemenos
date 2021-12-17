@@ -17,8 +17,6 @@ public class OpenTemenosClient : IOpenTemenosClient
 
     public IFinancialCrimeMitigation FinancialCrimeMitigation => throw new NotImplementedException();
 
-    public ITransact Transact => new Transact(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
-
     public IFundAdministration FundAdministration => new FundAdministration(_httpClient) { BaseUrl = BaseUrl, ReadResponseAsString = ReadResponseAsString };
 
     public IPortfolioManagement PortfolioManagement => throw new NotImplementedException();

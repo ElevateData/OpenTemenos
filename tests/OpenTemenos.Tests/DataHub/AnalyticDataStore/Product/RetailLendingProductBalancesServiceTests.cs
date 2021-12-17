@@ -10,6 +10,7 @@ public class RetailLendingProductBalanceServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetRetailLendingProductBalancesAsync()
     {
         var result = _client.RetailLendingProductBalanceService.GetRetailLendingProductBalancesAsync()

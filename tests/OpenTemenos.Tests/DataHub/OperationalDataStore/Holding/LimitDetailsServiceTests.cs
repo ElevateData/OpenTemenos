@@ -11,6 +11,7 @@ public class LimitDetailServiceTests : CredentialManagement
     private readonly IHoldingClient _client = new HoldingClient(HttpClient) { ReadResponseAsString = true };
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetExpiringLimitsAsync()
     {
         var result = _client.LimitDetailService.GetExpiringLimitsAsync().Result;
@@ -18,6 +19,7 @@ public class LimitDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetLimitsToReviewAsync()
     {
         var result = _client.LimitDetailService.GetLimitsToReviewAsync().Result;
@@ -39,6 +41,7 @@ public class LimitDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetCustomerLimitMasterGroupsAsync()
     {
         var result = _client.LimitDetailService.GetCustomerLimitMasterGroupsAsync().Result;
@@ -46,6 +49,7 @@ public class LimitDetailServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetLimitSharingGroupAsync()
     {
         var result = _client.LimitDetailService.GetLimitSharingGroupAsync().Result;

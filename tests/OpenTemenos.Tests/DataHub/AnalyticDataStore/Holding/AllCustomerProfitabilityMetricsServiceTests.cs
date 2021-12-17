@@ -10,6 +10,7 @@ public class AllCustomerProfitabilityMetricServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetAllCustomerProfitabilityMetricsAsync()
     {
         var result = _client.CustomerProfitabilityService.GetAllCustomerProfitabilityMetricsAsync().Result;

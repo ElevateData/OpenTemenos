@@ -10,6 +10,7 @@ public class ProductTransactionMetricServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetProductTransactionMetricsAsync()
     {
         var result = _client.ProductTransactionService.GetProductTransactionMetricsAsync().Result;

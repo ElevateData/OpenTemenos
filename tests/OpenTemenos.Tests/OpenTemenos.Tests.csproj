@@ -37,7 +37,6 @@
     <ProjectReference Include="..\..\src\Payment\Payment.csproj" />
     <ProjectReference Include="..\..\src\PortfolioManagement\PortfolioManagement.csproj" />
     <ProjectReference Include="..\..\src\Shared\Shared.csproj" />
-    <ProjectReference Include="..\..\src\Transact\Transact.csproj" />
   </ItemGroup>
 
   <ItemGroup>

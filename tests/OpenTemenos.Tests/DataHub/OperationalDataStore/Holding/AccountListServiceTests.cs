@@ -10,6 +10,7 @@ public class AccountListServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetNostroAccountListAsync()
     {
         var result = _client.NostroVostroAccountListService.GetNostroAccountListAsync().Result;
@@ -18,6 +19,7 @@ public class AccountListServiceTests : CredentialManagement
     }
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetVostroAccountListAsync()
     {
         var result = _client.NostroVostroAccountListService.GetVostroAccountListAsync().Result;

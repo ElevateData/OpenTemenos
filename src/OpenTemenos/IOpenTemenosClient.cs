@@ -7,7 +7,6 @@ public interface IOpenTemenosClient
     public IDataHub DataHub { get; }
     [Obsolete]
     public IFinancialCrimeMitigation FinancialCrimeMitigation { get; }
-    public ITransact Transact { get; }
     public IFundAdministration FundAdministration { get; }
     [Obsolete]
     public IPortfolioManagement PortfolioManagement { get; }

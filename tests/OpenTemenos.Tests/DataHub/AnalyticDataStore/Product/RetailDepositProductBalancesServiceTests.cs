@@ -10,6 +10,7 @@ public class RetailDepositProductBalanceServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetRetailDepositProductBalancesAsync()
     {
         var result = _client.RetailDepositProductBalanceService.GetRetailDepositProductBalancesAsync().Result;

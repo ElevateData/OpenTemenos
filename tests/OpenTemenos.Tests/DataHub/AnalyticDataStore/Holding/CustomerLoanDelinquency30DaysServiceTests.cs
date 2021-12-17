@@ -10,6 +10,7 @@ public class CustomerLoanDelinquency30DayServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetCustomerLoanDelinquency30DaysAsync()
     {
         var result = _client.CustomerLoanDelinquencyService.GetCustomerLoanDelinquency30DaysAsync()

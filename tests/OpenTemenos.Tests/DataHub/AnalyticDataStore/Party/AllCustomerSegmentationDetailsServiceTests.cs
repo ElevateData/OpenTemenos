@@ -10,6 +10,7 @@ public class AllCustomerSegmentationDetailServiceTests : CredentialManagement
 
 
     [TestMethod]
+    [TestCategory("Parameter-less Method")]
     public void GetAllCustomerSegmentationDetailsAsync()
     {
         var result = _client.CustomerSegmentationService.GetAllCustomerSegmentationDetailsAsync().Result;
